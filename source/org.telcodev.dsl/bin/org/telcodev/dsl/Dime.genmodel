@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.telcodev.dsl/src-gen"
+    editDirectory="/org.telcodev.dsl.edit/src" editorDirectory="/org.telcodev.dsl.editor/src"
+    modelPluginID="org.telcodev.dsl" forceOverwrite="true" modelName="Dime" updateClasspath="false"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" complianceLevel="5.0"
+    copyrightFields="false" editPluginID="org.telcodev.dsl.edit" editorPluginID="org.telcodev.dsl.editor">
+  <genPackages prefix="Dime" basePackage="org.telcodev.dsl" disposableProviderFactory="true"
+      ecorePackage="Dime.ecore#/">
+    <genClasses ecoreClass="Dime.ecore#//Document">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Document/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Document/states"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Document/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Document/sta"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//AbstractElement"/>
+    <genClasses ecoreClass="Dime.ecore#//Statement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Statement/com"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//StateAbstractElement"/>
+    <genClasses ecoreClass="Dime.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//State/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//State/times"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//State/timeout"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//State/stms"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//VoiceTag"/>
+    <genClasses ecoreClass="Dime.ecore#//Dial">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Dial/to"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Play">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Play/file"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Record">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Record/time"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Record/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Record/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Reject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Reject/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Hangup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Hangup/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//GetDigits">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//GetDigits/numDigits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//GetDigits/question"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//GetDigits/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Ask">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Ask/question"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Ask/choices"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Ask/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Send">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Send/params"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Send/url"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//SendBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//SendBlock/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//SendBlock/stms"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//NotPrimaryParam">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//NotPrimaryParam/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Param">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Param/paramName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Param/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Say">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Say/that"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Transition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dime.ecore#//Transition/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Transition/event"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//IfExp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//IfExp/block"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//IfExp/blocks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//IfExp/defaultBlock"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Block">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Block/stms"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//CondBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//CondBlock/cond"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//CondBlock/action"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//IfStateExp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//IfStateExp/block"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//IfStateExp/blocks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//IfStateExp/defaultBlock"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//CondStateBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//CondStateBlock/cond"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//CondStateBlock/action"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//BlockState">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//BlockState/sta"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//BoolExpression"/>
+    <genClasses ecoreClass="Dime.ecore#//Brackets">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Brackets/open"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Brackets/obj"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Brackets/close"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//CompareExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//CompareExpression/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//CompareExpression/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//CompareExpression/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//NegExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//NegExpression/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//NegExpression/obj"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//MathExpression"/>
+    <genClasses ecoreClass="Dime.ecore#//MathBrackets">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//MathBrackets/open"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//MathBrackets/obj"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//MathBrackets/close"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//ConcatenationExpression"/>
+    <genClasses ecoreClass="Dime.ecore#//ConcatenationBrackets">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//ConcatenationBrackets/open"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//ConcatenationBrackets/obj"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//ConcatenationBrackets/close"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//StringVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//StringVariable/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//StringVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//NumVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//NumVariable/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//NumVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//BoolVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//BoolVariable/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//BoolVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Assigment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dime.ecore#//Assigment/va"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Assigment/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Vars"/>
+    <genClasses ecoreClass="Dime.ecore#//LiteralAbs"/>
+    <genClasses ecoreClass="Dime.ecore#//Literal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dime.ecore#//Literal/v"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Literal/nul"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Literal/ses"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//BoolLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//BoolLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//NumLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//NumLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//StringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//StringLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//OperationBool">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//OperationBool/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//OperationBool/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//OperationBool/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Operation/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Operation/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Operation/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Concatenation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Concatenation/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Concatenation/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Concatenation/right"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
