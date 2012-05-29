@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <description name="Dime v1.0" url="http://www.gsi.dit.upm.es/~lssii/dime/dime_updatesite/">
-      DSL for voice applications
-   </description>
-   <feature url="features/dime_dsl_1.0.0.201205141910.jar" id="dime_dsl" version="1.0.0.201205141910"/>
-   <feature url="features/dime_test_1.0.0.201205141910.jar" id="dime_test" version="1.0.0.201205141910"/>
-   <feature url="features/dime_ui_1.0.0.201205141910.jar" id="dime_ui" version="1.0.0.201205141910"/>
-</site>
