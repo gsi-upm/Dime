@@ -1,0 +1,191 @@
+grammar org.telcodev.dsl.Dime with org.eclipse.xtext.common.Terminals
+
+generate dime "http://www.telcodev.org/dsl/Dime"
+
+Document:
+	'application' name=ID
+	elements+=Statement*
+	sta+=State*;
+
+Statement:
+	NumVariable | StringVariable | BoolVariable | VoiceTag | Assigment | com=ML_COMMENT;
+
+AbstractElement:
+	Statement | Transition | IfExp;
+
+State:
+	'state' name=ID ('times' times=INT)? & ('timeout' timeout=INT)? '{'
+	stms+=AbstractElement*
+	'}';
+
+VoiceTag:
+	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call;
+
+Call:
+	'call' to=ConcatenationExpression ';';
+
+Dial:
+	'dialTo' to=ConcatenationExpression ';';
+
+Play:
+	'play' file=ConcatenationExpression ';';
+
+Record:
+	'record' time=INT 'seconds' 'in' action=ConcatenationExpression ('->' name=ID)? ';';
+
+Reject:
+	name='reject;';
+
+Hangup:
+	name='hangUp;';
+
+GetDigits:
+	'get' numDigits=INT 'digits' question=ConcatenationExpression '->' name=ID ';';
+
+Ask:
+	'ask' question=ConcatenationExpression  '->' name=ID ';';
+
+Send:
+	'send' params=SendBlock 'to' url=ConcatenationExpression ';';
+
+SendBlock:
+	{SendBlock}
+	'{'
+	value=Param
+	stms+=NotPrimaryParam*
+	'}';
+
+NotPrimaryParam:
+	',' value=Param;
+
+Param:
+	paramName=STRING '=>' value=ConcatenationExpression;
+
+Say:
+	'say' that=ConcatenationExpression ';';
+
+Transition:
+	'goTo' target=[State] 'when' event=EventEnum ';';
+
+	// Estructures.
+IfExp:
+	block=CondBlock ('else' blocks+=CondBlock)* ('else' defaultBlock=Block)?;
+
+CondBlock:
+	'if' cond=TerminalBoolExpression action=Block;
+
+Block:
+	{Block}
+	'{'
+	sta+=AbstractElement*
+	'}';
+
+	// Expression
+BoolExpression:
+	(TerminalBoolExpression ({OperationBool.left=current}
+	op=LOGIC_WORD right=BoolExpression)?);
+
+TerminalBoolExpression returns BoolExpression:
+	BoolLiteral | CompareExpression | NegExpression | Literal | Brackets;
+
+Brackets:
+	open=OBRACKET obj=BoolExpression close=CBRACKET;
+
+CompareExpression:
+	(left=LiteralAbs op=COMPARE right=LiteralAbs);
+
+NegExpression:
+	op=NEGATION obj=TerminalBoolExpression;
+
+MathExpression:
+	MathTerminal ({Operation.left=current}
+	op=MATH right=MathExpression)?;
+
+MathTerminal returns MathExpression:
+	MathBrackets | Literal | NumLiteral;
+
+MathBrackets:
+	open=OBRACKET obj=MathExpression close=CBRACKET;
+
+	// Concatenation expression
+ConcatenationExpression:
+	ConcatenationTerminal ({Concatenation.left=current}
+	op=CONCATENATION right=ConcatenationExpression)?;
+
+ConcatenationTerminal returns ConcatenationExpression:
+	ConcatenationBrackets | LiteralAbs;
+
+ConcatenationBrackets:
+	open=OBRACKET obj=ConcatenationExpression close=CBRACKET;
+
+	// Variable
+StringVariable:
+	'varString' name=ID ('=' value=ConcatenationExpression)? ';';
+
+NumVariable:
+	'varNum' name=ID ('=' value=MathExpression)? ';';
+
+BoolVariable:
+	'varBool' name=ID ('=' value=BoolExpression)? ';';
+
+Assigment:
+	va=[Vars] '=' right=MathExpression ';';
+
+Vars:
+	StringVariable | Ask | NumVariable | BoolVariable | GetDigits;
+	// Literals
+LiteralAbs:
+	Literal | StringLiteral | BoolLiteral | NumLiteral;
+
+Literal:
+	v=[Vars] | nul=NULL | ses=SESSION;
+
+BoolLiteral:
+	{BoolLiteral} value=BOOL;
+
+NumLiteral:
+	{NumLiteral} value=Number;
+
+StringLiteral:
+	{StringLiteral} value=STRING;
+
+Number:
+	DOUBLE | INT;
+
+	// Terminals
+terminal EventEnum:
+	'hangup' | 'completed' | 'error' | 'times' | 'timeout';
+
+terminal SESSION:
+	'caller' | 'lastState' | 'time' | 'called';
+
+terminal DOUBLE:
+	INT '.' INT;
+
+terminal NULL:
+	'null';
+
+terminal BOOL:
+	'true' | 'false';
+
+terminal LOGIC_WORD:
+	'&&' | '||';
+
+terminal COMPARE:
+	'<' | '==' | '>' | '<=' | '>=' | '!=';
+
+terminal MATH:
+	'*' | '/' | '-' | '+';
+
+terminal CONCATENATION:
+	'.';
+
+	//terminal LOOPSTATEMENT: 'break' | 'continue' ;
+terminal NEGATION:
+	'!';
+
+terminal OBRACKET:
+	'(';
+
+terminal CBRACKET:
+	')';

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?> 
+<config>
+<language>tropo</language> 
+<scriptlanguage>php</scriptlanguage> 
+<url>http://www.gsi.dit.upm.es/~rjimenez/app/transition.php</url>
+<tropo>
+<voice>leonor</voice>
+</tropo>
+<twilio>
+<language>en</language>
+<voice>man</voice>
+</twilio>
+</config>
+
