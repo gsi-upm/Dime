@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime.impl;
 
@@ -85,6 +82,9 @@ public class DimeFactoryImpl extends EFactoryImpl implements DimeFactory
       case DimePackage.NOT_PRIMARY_PARAM: return createNotPrimaryParam();
       case DimePackage.PARAM: return createParam();
       case DimePackage.SAY: return createSay();
+      case DimePackage.SMS: return createSms();
+      case DimePackage.EMAIL: return createEmail();
+      case DimePackage.TWEET: return createTweet();
       case DimePackage.TRANSITION: return createTransition();
       case DimePackage.IF_EXP: return createIfExp();
       case DimePackage.COND_BLOCK: return createCondBlock();
@@ -100,13 +100,17 @@ public class DimeFactoryImpl extends EFactoryImpl implements DimeFactory
       case DimePackage.STRING_VARIABLE: return createStringVariable();
       case DimePackage.NUM_VARIABLE: return createNumVariable();
       case DimePackage.BOOL_VARIABLE: return createBoolVariable();
-      case DimePackage.ASSIGMENT: return createAssigment();
+      case DimePackage.CONSTANT: return createConstant();
+      case DimePackage.PRIMITIVE: return createPrimitive();
       case DimePackage.VARS: return createVars();
       case DimePackage.LITERAL_ABS: return createLiteralAbs();
       case DimePackage.LITERAL: return createLiteral();
       case DimePackage.BOOL_LITERAL: return createBoolLiteral();
       case DimePackage.NUM_LITERAL: return createNumLiteral();
       case DimePackage.STRING_LITERAL: return createStringLiteral();
+      case DimePackage.EVENT: return createEVENT();
+      case DimePackage.SESSION: return createSESSION();
+      case DimePackage.CALLSTATUS: return createCALLSTATUS();
       case DimePackage.OPERATION_BOOL: return createOperationBool();
       case DimePackage.OPERATION: return createOperation();
       case DimePackage.CONCATENATION: return createConcatenation();
@@ -318,6 +322,39 @@ public class DimeFactoryImpl extends EFactoryImpl implements DimeFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Sms createSms()
+  {
+    SmsImpl sms = new SmsImpl();
+    return sms;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Email createEmail()
+  {
+    EmailImpl email = new EmailImpl();
+    return email;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Tweet createTweet()
+  {
+    TweetImpl tweet = new TweetImpl();
+    return tweet;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Transition createTransition()
   {
     TransitionImpl transition = new TransitionImpl();
@@ -483,10 +520,21 @@ public class DimeFactoryImpl extends EFactoryImpl implements DimeFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Assigment createAssigment()
+  public Constant createConstant()
   {
-    AssigmentImpl assigment = new AssigmentImpl();
-    return assigment;
+    ConstantImpl constant = new ConstantImpl();
+    return constant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Primitive createPrimitive()
+  {
+    PrimitiveImpl primitive = new PrimitiveImpl();
+    return primitive;
   }
 
   /**
@@ -553,6 +601,39 @@ public class DimeFactoryImpl extends EFactoryImpl implements DimeFactory
   {
     StringLiteralImpl stringLiteral = new StringLiteralImpl();
     return stringLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EVENT createEVENT()
+  {
+    EVENTImpl event = new EVENTImpl();
+    return event;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SESSION createSESSION()
+  {
+    SESSIONImpl session = new SESSIONImpl();
+    return session;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CALLSTATUS createCALLSTATUS()
+  {
+    CALLSTATUSImpl callstatus = new CALLSTATUSImpl();
+    return callstatus;
   }
 
   /**

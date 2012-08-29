@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime.impl;
 
@@ -14,7 +11,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.telcodev.dsl.dime.AbstractElement;
 import org.telcodev.dsl.dime.Ask;
-import org.telcodev.dsl.dime.Assigment;
 import org.telcodev.dsl.dime.Block;
 import org.telcodev.dsl.dime.BoolExpression;
 import org.telcodev.dsl.dime.BoolLiteral;
@@ -26,10 +22,12 @@ import org.telcodev.dsl.dime.Concatenation;
 import org.telcodev.dsl.dime.ConcatenationBrackets;
 import org.telcodev.dsl.dime.ConcatenationExpression;
 import org.telcodev.dsl.dime.CondBlock;
+import org.telcodev.dsl.dime.Constant;
 import org.telcodev.dsl.dime.Dial;
 import org.telcodev.dsl.dime.DimeFactory;
 import org.telcodev.dsl.dime.DimePackage;
 import org.telcodev.dsl.dime.Document;
+import org.telcodev.dsl.dime.Email;
 import org.telcodev.dsl.dime.GetDigits;
 import org.telcodev.dsl.dime.Hangup;
 import org.telcodev.dsl.dime.IfExp;
@@ -45,16 +43,19 @@ import org.telcodev.dsl.dime.Operation;
 import org.telcodev.dsl.dime.OperationBool;
 import org.telcodev.dsl.dime.Param;
 import org.telcodev.dsl.dime.Play;
+import org.telcodev.dsl.dime.Primitive;
 import org.telcodev.dsl.dime.Record;
 import org.telcodev.dsl.dime.Reject;
 import org.telcodev.dsl.dime.Say;
 import org.telcodev.dsl.dime.Send;
 import org.telcodev.dsl.dime.SendBlock;
+import org.telcodev.dsl.dime.Sms;
 import org.telcodev.dsl.dime.State;
 import org.telcodev.dsl.dime.Statement;
 import org.telcodev.dsl.dime.StringLiteral;
 import org.telcodev.dsl.dime.StringVariable;
 import org.telcodev.dsl.dime.Transition;
+import org.telcodev.dsl.dime.Tweet;
 import org.telcodev.dsl.dime.Vars;
 import org.telcodev.dsl.dime.VoiceTag;
 
@@ -197,6 +198,27 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass smsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass emailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tweetEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass transitionEClass = null;
 
   /**
@@ -302,7 +324,14 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass assigmentEClass = null;
+  private EClass constantEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass primitiveEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -345,6 +374,27 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * @generated
    */
   private EClass stringLiteralEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass eventEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sessionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass callstatusEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -565,6 +615,16 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getVoiceTag_Name()
+  {
+    return (EAttribute)voiceTagEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getCall()
   {
     return callEClass;
@@ -655,7 +715,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRecord_Name()
+  public EAttribute getRecord_Vari()
   {
     return (EAttribute)recordEClass.getEStructuralFeatures().get(2);
   }
@@ -675,29 +735,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getReject_Name()
-  {
-    return (EAttribute)rejectEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getHangup()
   {
     return hangupEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getHangup_Name()
-  {
-    return (EAttribute)hangupEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -735,7 +775,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGetDigits_Name()
+  public EAttribute getGetDigits_Vari()
   {
     return (EAttribute)getDigitsEClass.getEStructuralFeatures().get(2);
   }
@@ -765,7 +805,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getAsk_Name()
+  public EAttribute getAsk_Vari()
   {
     return (EAttribute)askEClass.getEStructuralFeatures().get(1);
   }
@@ -865,7 +905,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getParam_ParamName()
+  public EAttribute getParam_Name()
   {
     return (EAttribute)paramEClass.getEStructuralFeatures().get(0);
   }
@@ -905,6 +945,106 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getSms()
+  {
+    return smsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSms_Value()
+  {
+    return (EReference)smsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSms_To()
+  {
+    return (EReference)smsEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEmail()
+  {
+    return emailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEmail_Title()
+  {
+    return (EReference)emailEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEmail_From()
+  {
+    return (EReference)emailEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEmail_Value()
+  {
+    return (EReference)emailEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEmail_To()
+  {
+    return (EReference)emailEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTweet()
+  {
+    return tweetEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTweet_Value()
+  {
+    return (EReference)tweetEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTransition()
   {
     return transitionEClass;
@@ -915,9 +1055,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTransition_Target()
+  public EAttribute getTransition_Name()
   {
-    return (EReference)transitionEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)transitionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -925,9 +1065,19 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTransition_Event()
+  public EReference getTransition_Target()
   {
-    return (EAttribute)transitionEClass.getEStructuralFeatures().get(1);
+    return (EReference)transitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTransition_Event()
+  {
+    return (EReference)transitionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -985,9 +1135,19 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getCondBlock_Name()
+  {
+    return (EAttribute)condBlockEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getCondBlock_Cond()
   {
-    return (EReference)condBlockEClass.getEStructuralFeatures().get(0);
+    return (EReference)condBlockEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -997,7 +1157,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    */
   public EReference getCondBlock_Action()
   {
-    return (EReference)condBlockEClass.getEStructuralFeatures().get(1);
+    return (EReference)condBlockEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1015,9 +1175,19 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getBlock_Name()
+  {
+    return (EAttribute)blockEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getBlock_Sta()
   {
-    return (EReference)blockEClass.getEStructuralFeatures().get(0);
+    return (EReference)blockEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1335,9 +1505,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getAssigment()
+  public EClass getConstant()
   {
-    return assigmentEClass;
+    return constantEClass;
   }
 
   /**
@@ -1345,9 +1515,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAssigment_Va()
+  public EAttribute getConstant_Name()
   {
-    return (EReference)assigmentEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)constantEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1355,9 +1525,29 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAssigment_Right()
+  public EReference getConstant_Value()
   {
-    return (EReference)assigmentEClass.getEStructuralFeatures().get(1);
+    return (EReference)constantEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPrimitive()
+  {
+    return primitiveEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPrimitive_Value()
+  {
+    return (EAttribute)primitiveEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1415,29 +1605,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getLiteral_Ses()
-  {
-    return (EAttribute)literalEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getBoolLiteral()
   {
     return boolLiteralEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getBoolLiteral_Value()
-  {
-    return (EAttribute)boolLiteralEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1455,16 +1625,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNumLiteral_Value()
-  {
-    return (EAttribute)numLiteralEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getStringLiteral()
   {
     return stringLiteralEClass;
@@ -1475,9 +1635,59 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStringLiteral_Value()
+  public EClass getEVENT()
   {
-    return (EAttribute)stringLiteralEClass.getEStructuralFeatures().get(0);
+    return eventEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEVENT_Name()
+  {
+    return (EAttribute)eventEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSESSION()
+  {
+    return sessionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSESSION_Name()
+  {
+    return (EAttribute)sessionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCALLSTATUS()
+  {
+    return callstatusEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCALLSTATUS_Name()
+  {
+    return (EAttribute)callstatusEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1647,6 +1857,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     createEReference(stateEClass, STATE__STMS);
 
     voiceTagEClass = createEClass(VOICE_TAG);
+    createEAttribute(voiceTagEClass, VOICE_TAG__NAME);
 
     callEClass = createEClass(CALL);
     createEReference(callEClass, CALL__TO);
@@ -1660,22 +1871,20 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     recordEClass = createEClass(RECORD);
     createEAttribute(recordEClass, RECORD__TIME);
     createEReference(recordEClass, RECORD__ACTION);
-    createEAttribute(recordEClass, RECORD__NAME);
+    createEAttribute(recordEClass, RECORD__VARI);
 
     rejectEClass = createEClass(REJECT);
-    createEAttribute(rejectEClass, REJECT__NAME);
 
     hangupEClass = createEClass(HANGUP);
-    createEAttribute(hangupEClass, HANGUP__NAME);
 
     getDigitsEClass = createEClass(GET_DIGITS);
     createEAttribute(getDigitsEClass, GET_DIGITS__NUM_DIGITS);
     createEReference(getDigitsEClass, GET_DIGITS__QUESTION);
-    createEAttribute(getDigitsEClass, GET_DIGITS__NAME);
+    createEAttribute(getDigitsEClass, GET_DIGITS__VARI);
 
     askEClass = createEClass(ASK);
     createEReference(askEClass, ASK__QUESTION);
-    createEAttribute(askEClass, ASK__NAME);
+    createEAttribute(askEClass, ASK__VARI);
 
     sendEClass = createEClass(SEND);
     createEReference(sendEClass, SEND__PARAMS);
@@ -1689,15 +1898,29 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     createEReference(notPrimaryParamEClass, NOT_PRIMARY_PARAM__VALUE);
 
     paramEClass = createEClass(PARAM);
-    createEAttribute(paramEClass, PARAM__PARAM_NAME);
+    createEAttribute(paramEClass, PARAM__NAME);
     createEReference(paramEClass, PARAM__VALUE);
 
     sayEClass = createEClass(SAY);
     createEReference(sayEClass, SAY__THAT);
 
+    smsEClass = createEClass(SMS);
+    createEReference(smsEClass, SMS__VALUE);
+    createEReference(smsEClass, SMS__TO);
+
+    emailEClass = createEClass(EMAIL);
+    createEReference(emailEClass, EMAIL__TITLE);
+    createEReference(emailEClass, EMAIL__FROM);
+    createEReference(emailEClass, EMAIL__VALUE);
+    createEReference(emailEClass, EMAIL__TO);
+
+    tweetEClass = createEClass(TWEET);
+    createEReference(tweetEClass, TWEET__VALUE);
+
     transitionEClass = createEClass(TRANSITION);
+    createEAttribute(transitionEClass, TRANSITION__NAME);
     createEReference(transitionEClass, TRANSITION__TARGET);
-    createEAttribute(transitionEClass, TRANSITION__EVENT);
+    createEReference(transitionEClass, TRANSITION__EVENT);
 
     ifExpEClass = createEClass(IF_EXP);
     createEReference(ifExpEClass, IF_EXP__BLOCK);
@@ -1705,10 +1928,12 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     createEReference(ifExpEClass, IF_EXP__DEFAULT_BLOCK);
 
     condBlockEClass = createEClass(COND_BLOCK);
+    createEAttribute(condBlockEClass, COND_BLOCK__NAME);
     createEReference(condBlockEClass, COND_BLOCK__COND);
     createEReference(condBlockEClass, COND_BLOCK__ACTION);
 
     blockEClass = createEClass(BLOCK);
+    createEAttribute(blockEClass, BLOCK__NAME);
     createEReference(blockEClass, BLOCK__STA);
 
     boolExpressionEClass = createEClass(BOOL_EXPRESSION);
@@ -1753,9 +1978,12 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     createEAttribute(boolVariableEClass, BOOL_VARIABLE__NAME);
     createEReference(boolVariableEClass, BOOL_VARIABLE__VALUE);
 
-    assigmentEClass = createEClass(ASSIGMENT);
-    createEReference(assigmentEClass, ASSIGMENT__VA);
-    createEReference(assigmentEClass, ASSIGMENT__RIGHT);
+    constantEClass = createEClass(CONSTANT);
+    createEAttribute(constantEClass, CONSTANT__NAME);
+    createEReference(constantEClass, CONSTANT__VALUE);
+
+    primitiveEClass = createEClass(PRIMITIVE);
+    createEAttribute(primitiveEClass, PRIMITIVE__VALUE);
 
     varsEClass = createEClass(VARS);
 
@@ -1764,16 +1992,21 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     literalEClass = createEClass(LITERAL);
     createEReference(literalEClass, LITERAL__V);
     createEAttribute(literalEClass, LITERAL__NUL);
-    createEAttribute(literalEClass, LITERAL__SES);
 
     boolLiteralEClass = createEClass(BOOL_LITERAL);
-    createEAttribute(boolLiteralEClass, BOOL_LITERAL__VALUE);
 
     numLiteralEClass = createEClass(NUM_LITERAL);
-    createEAttribute(numLiteralEClass, NUM_LITERAL__VALUE);
 
     stringLiteralEClass = createEClass(STRING_LITERAL);
-    createEAttribute(stringLiteralEClass, STRING_LITERAL__VALUE);
+
+    eventEClass = createEClass(EVENT);
+    createEAttribute(eventEClass, EVENT__NAME);
+
+    sessionEClass = createEClass(SESSION);
+    createEAttribute(sessionEClass, SESSION__NAME);
+
+    callstatusEClass = createEClass(CALLSTATUS);
+    createEAttribute(callstatusEClass, CALLSTATUS__NAME);
 
     operationBoolEClass = createEClass(OPERATION_BOOL);
     createEReference(operationBoolEClass, OPERATION_BOOL__LEFT);
@@ -1821,7 +2054,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
 
     // Add supertypes to classes
     statementEClass.getESuperTypes().add(this.getAbstractElement());
-    voiceTagEClass.getESuperTypes().add(this.getStatement());
+    voiceTagEClass.getESuperTypes().add(this.getAbstractElement());
     callEClass.getESuperTypes().add(this.getVoiceTag());
     dialEClass.getESuperTypes().add(this.getVoiceTag());
     playEClass.getESuperTypes().add(this.getVoiceTag());
@@ -1834,6 +2067,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     askEClass.getESuperTypes().add(this.getVars());
     sendEClass.getESuperTypes().add(this.getVoiceTag());
     sayEClass.getESuperTypes().add(this.getVoiceTag());
+    smsEClass.getESuperTypes().add(this.getVoiceTag());
+    emailEClass.getESuperTypes().add(this.getVoiceTag());
+    tweetEClass.getESuperTypes().add(this.getVoiceTag());
     transitionEClass.getESuperTypes().add(this.getAbstractElement());
     ifExpEClass.getESuperTypes().add(this.getAbstractElement());
     bracketsEClass.getESuperTypes().add(this.getBoolExpression());
@@ -1847,16 +2083,21 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     numVariableEClass.getESuperTypes().add(this.getVars());
     boolVariableEClass.getESuperTypes().add(this.getStatement());
     boolVariableEClass.getESuperTypes().add(this.getVars());
-    assigmentEClass.getESuperTypes().add(this.getStatement());
+    constantEClass.getESuperTypes().add(this.getStatement());
+    constantEClass.getESuperTypes().add(this.getVars());
+    primitiveEClass.getESuperTypes().add(this.getLiteralAbs());
     literalAbsEClass.getESuperTypes().add(this.getConcatenationExpression());
     literalEClass.getESuperTypes().add(this.getBoolExpression());
     literalEClass.getESuperTypes().add(this.getMathExpression());
     literalEClass.getESuperTypes().add(this.getLiteralAbs());
     boolLiteralEClass.getESuperTypes().add(this.getBoolExpression());
-    boolLiteralEClass.getESuperTypes().add(this.getLiteralAbs());
+    boolLiteralEClass.getESuperTypes().add(this.getPrimitive());
+    boolLiteralEClass.getESuperTypes().add(this.getCALLSTATUS());
     numLiteralEClass.getESuperTypes().add(this.getMathExpression());
-    numLiteralEClass.getESuperTypes().add(this.getLiteralAbs());
-    stringLiteralEClass.getESuperTypes().add(this.getLiteralAbs());
+    numLiteralEClass.getESuperTypes().add(this.getPrimitive());
+    stringLiteralEClass.getESuperTypes().add(this.getPrimitive());
+    sessionEClass.getESuperTypes().add(this.getLiteral());
+    callstatusEClass.getESuperTypes().add(this.getBoolExpression());
     operationBoolEClass.getESuperTypes().add(this.getBoolExpression());
     operationEClass.getESuperTypes().add(this.getMathExpression());
     concatenationEClass.getESuperTypes().add(this.getConcatenationExpression());
@@ -1879,6 +2120,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     initEReference(getState_Stms(), this.getAbstractElement(), null, "stms", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(voiceTagEClass, VoiceTag.class, "VoiceTag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getVoiceTag_Name(), ecorePackage.getEString(), "name", null, 0, 1, VoiceTag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(callEClass, Call.class, "Call", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCall_To(), this.getConcatenationExpression(), null, "to", null, 0, 1, Call.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1892,22 +2134,20 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     initEClass(recordEClass, Record.class, "Record", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRecord_Time(), ecorePackage.getEInt(), "time", null, 0, 1, Record.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRecord_Action(), this.getConcatenationExpression(), null, "action", null, 0, 1, Record.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRecord_Name(), ecorePackage.getEString(), "name", null, 0, 1, Record.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRecord_Vari(), ecorePackage.getEString(), "vari", null, 0, 1, Record.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rejectEClass, Reject.class, "Reject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getReject_Name(), ecorePackage.getEString(), "name", null, 0, 1, Reject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(hangupEClass, Hangup.class, "Hangup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getHangup_Name(), ecorePackage.getEString(), "name", null, 0, 1, Hangup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(getDigitsEClass, GetDigits.class, "GetDigits", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGetDigits_NumDigits(), ecorePackage.getEInt(), "numDigits", null, 0, 1, GetDigits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGetDigits_Question(), this.getConcatenationExpression(), null, "question", null, 0, 1, GetDigits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGetDigits_Name(), ecorePackage.getEString(), "name", null, 0, 1, GetDigits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGetDigits_Vari(), ecorePackage.getEString(), "vari", null, 0, 1, GetDigits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(askEClass, Ask.class, "Ask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAsk_Question(), this.getConcatenationExpression(), null, "question", null, 0, 1, Ask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAsk_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAsk_Vari(), ecorePackage.getEString(), "vari", null, 0, 1, Ask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(sendEClass, Send.class, "Send", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSend_Params(), this.getSendBlock(), null, "params", null, 0, 1, Send.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1921,15 +2161,29 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     initEReference(getNotPrimaryParam_Value(), this.getParam(), null, "value", null, 0, 1, NotPrimaryParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(paramEClass, Param.class, "Param", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getParam_ParamName(), ecorePackage.getEString(), "paramName", null, 0, 1, Param.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getParam_Name(), ecorePackage.getEString(), "name", null, 0, 1, Param.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getParam_Value(), this.getConcatenationExpression(), null, "value", null, 0, 1, Param.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(sayEClass, Say.class, "Say", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSay_That(), this.getConcatenationExpression(), null, "that", null, 0, 1, Say.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(smsEClass, Sms.class, "Sms", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSms_Value(), this.getConcatenationExpression(), null, "value", null, 0, 1, Sms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSms_To(), this.getConcatenationExpression(), null, "to", null, 0, 1, Sms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(emailEClass, Email.class, "Email", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getEmail_Title(), this.getConcatenationExpression(), null, "title", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEmail_From(), this.getConcatenationExpression(), null, "from", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEmail_Value(), this.getConcatenationExpression(), null, "value", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEmail_To(), this.getConcatenationExpression(), null, "to", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(tweetEClass, Tweet.class, "Tweet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTweet_Value(), this.getConcatenationExpression(), null, "value", null, 0, 1, Tweet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTransition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTransition_Target(), this.getState(), null, "target", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTransition_Event(), ecorePackage.getEString(), "event", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTransition_Event(), this.getEVENT(), null, "event", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(ifExpEClass, IfExp.class, "IfExp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getIfExp_Block(), this.getCondBlock(), null, "block", null, 0, 1, IfExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1937,10 +2191,12 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     initEReference(getIfExp_DefaultBlock(), this.getBlock(), null, "defaultBlock", null, 0, 1, IfExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(condBlockEClass, CondBlock.class, "CondBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCondBlock_Name(), ecorePackage.getEString(), "name", null, 0, 1, CondBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCondBlock_Cond(), this.getBoolExpression(), null, "cond", null, 0, 1, CondBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCondBlock_Action(), this.getBlock(), null, "action", null, 0, 1, CondBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(blockEClass, Block.class, "Block", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBlock_Name(), ecorePackage.getEString(), "name", null, 0, 1, Block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBlock_Sta(), this.getAbstractElement(), null, "sta", null, 0, -1, Block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(boolExpressionEClass, BoolExpression.class, "BoolExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1985,9 +2241,12 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     initEAttribute(getBoolVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, BoolVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBoolVariable_Value(), this.getBoolExpression(), null, "value", null, 0, 1, BoolVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(assigmentEClass, Assigment.class, "Assigment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAssigment_Va(), this.getVars(), null, "va", null, 0, 1, Assigment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAssigment_Right(), this.getMathExpression(), null, "right", null, 0, 1, Assigment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(constantEClass, Constant.class, "Constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getConstant_Name(), ecorePackage.getEString(), "name", null, 0, 1, Constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConstant_Value(), this.getPrimitive(), null, "value", null, 0, 1, Constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(primitiveEClass, Primitive.class, "Primitive", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPrimitive_Value(), ecorePackage.getEString(), "value", null, 0, 1, Primitive.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(varsEClass, Vars.class, "Vars", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1996,16 +2255,21 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLiteral_V(), this.getVars(), null, "v", null, 0, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLiteral_Nul(), ecorePackage.getEString(), "nul", null, 0, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getLiteral_Ses(), ecorePackage.getEString(), "ses", null, 0, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(boolLiteralEClass, BoolLiteral.class, "BoolLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBoolLiteral_Value(), ecorePackage.getEString(), "value", null, 0, 1, BoolLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(numLiteralEClass, NumLiteral.class, "NumLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNumLiteral_Value(), ecorePackage.getEString(), "value", null, 0, 1, NumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stringLiteralEClass, StringLiteral.class, "StringLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStringLiteral_Value(), ecorePackage.getEString(), "value", null, 0, 1, StringLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(eventEClass, org.telcodev.dsl.dime.EVENT.class, "EVENT", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEVENT_Name(), ecorePackage.getEString(), "name", null, 0, 1, org.telcodev.dsl.dime.EVENT.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sessionEClass, org.telcodev.dsl.dime.SESSION.class, "SESSION", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSESSION_Name(), ecorePackage.getEString(), "name", null, 0, 1, org.telcodev.dsl.dime.SESSION.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(callstatusEClass, org.telcodev.dsl.dime.CALLSTATUS.class, "CALLSTATUS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCALLSTATUS_Name(), ecorePackage.getEString(), "name", null, 0, 1, org.telcodev.dsl.dime.CALLSTATUS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(operationBoolEClass, OperationBool.class, "OperationBool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getOperationBool_Left(), this.getBoolExpression(), null, "left", null, 0, 1, OperationBool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

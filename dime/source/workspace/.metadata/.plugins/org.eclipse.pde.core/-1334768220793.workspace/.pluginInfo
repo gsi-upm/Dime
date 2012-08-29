@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map>
-	<bundle bundleID="546" localization="OSGI-INF/l10n/bundle" name="org.telcodev.dsl" project="org.telcodev.dsl" provider="GSI ETSIT UPM"/>
-	<bundle bundleID="548" class="org.telcodev.dsl.ui.internal.DimeActivator" localization="OSGI-INF/l10n/bundle" name="org.telcodev.dsl.ui" project="org.telcodev.dsl.ui" provider="GSI ETSIT UPM"/>
-	<bundle bundleID="547" localization="OSGI-INF/l10n/bundle" name="org.telcodev.dsl.tests" project="org.telcodev.dsl.tests" provider="My Company"/>
-</map>

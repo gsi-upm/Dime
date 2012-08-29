@@ -1,0 +1,13 @@
+application Dial
+
+
+state start {
+	if(RINGING){
+		
+		dialTo "+34925314422";
+		
+	}
+	
+}
+
+ 

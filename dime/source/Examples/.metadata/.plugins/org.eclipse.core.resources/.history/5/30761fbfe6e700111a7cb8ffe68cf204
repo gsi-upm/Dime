@@ -1,0 +1,6 @@
+application HelloWorld
+const GREETING="HELLO"
+ state start {
+ 	Say GREETING+" world!"; 
+ }
+          

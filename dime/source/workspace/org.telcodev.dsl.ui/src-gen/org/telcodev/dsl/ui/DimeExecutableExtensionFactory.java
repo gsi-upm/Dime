@@ -8,6 +8,8 @@ import org.osgi.framework.Bundle;
 
 import com.google.inject.Injector;
 
+import org.telcodev.dsl.ui.internal.DimeActivator;
+
 /**
  * This class was generated. Customizations should only happen in a newly
  * introduced subclass. 
@@ -16,12 +18,12 @@ public class DimeExecutableExtensionFactory extends AbstractGuiceAwareExecutable
 
 	@Override
 	protected Bundle getBundle() {
-		return org.telcodev.dsl.ui.internal.DimeActivator.getInstance().getBundle();
+		return DimeActivator.getInstance().getBundle();
 	}
 	
 	@Override
 	protected Injector getInjector() {
-		return org.telcodev.dsl.ui.internal.DimeActivator.getInstance().getInjector("org.telcodev.dsl.Dime");
+		return DimeActivator.getInstance().getInjector(DimeActivator.ORG_TELCODEV_DSL_DIME);
 	}
 	
 }

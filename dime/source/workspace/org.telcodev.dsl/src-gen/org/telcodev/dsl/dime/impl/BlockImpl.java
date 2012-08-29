@@ -1,12 +1,10 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -14,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -30,6 +29,7 @@ import org.telcodev.dsl.dime.DimePackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.telcodev.dsl.dime.impl.BlockImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.BlockImpl#getSta <em>Sta</em>}</li>
  * </ul>
  * </p>
@@ -38,6 +38,26 @@ import org.telcodev.dsl.dime.DimePackage;
  */
 public class BlockImpl extends MinimalEObjectImpl.Container implements Block
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getSta() <em>Sta</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -67,6 +87,29 @@ public class BlockImpl extends MinimalEObjectImpl.Container implements Block
   protected EClass eStaticClass()
   {
     return DimePackage.Literals.BLOCK;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.BLOCK__NAME, oldName, name));
   }
 
   /**
@@ -109,6 +152,8 @@ public class BlockImpl extends MinimalEObjectImpl.Container implements Block
   {
     switch (featureID)
     {
+      case DimePackage.BLOCK__NAME:
+        return getName();
       case DimePackage.BLOCK__STA:
         return getSta();
     }
@@ -126,6 +171,9 @@ public class BlockImpl extends MinimalEObjectImpl.Container implements Block
   {
     switch (featureID)
     {
+      case DimePackage.BLOCK__NAME:
+        setName((String)newValue);
+        return;
       case DimePackage.BLOCK__STA:
         getSta().clear();
         getSta().addAll((Collection<? extends AbstractElement>)newValue);
@@ -144,6 +192,9 @@ public class BlockImpl extends MinimalEObjectImpl.Container implements Block
   {
     switch (featureID)
     {
+      case DimePackage.BLOCK__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case DimePackage.BLOCK__STA:
         getSta().clear();
         return;
@@ -161,10 +212,29 @@ public class BlockImpl extends MinimalEObjectImpl.Container implements Block
   {
     switch (featureID)
     {
+      case DimePackage.BLOCK__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case DimePackage.BLOCK__STA:
         return sta != null && !sta.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //BlockImpl

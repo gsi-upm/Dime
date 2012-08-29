@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime.util;
 
@@ -108,7 +105,6 @@ public class DimeSwitch<T> extends Switch<T>
       {
         VoiceTag voiceTag = (VoiceTag)theEObject;
         T result = caseVoiceTag(voiceTag);
-        if (result == null) result = caseStatement(voiceTag);
         if (result == null) result = caseAbstractElement(voiceTag);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -118,7 +114,6 @@ public class DimeSwitch<T> extends Switch<T>
         Call call = (Call)theEObject;
         T result = caseCall(call);
         if (result == null) result = caseVoiceTag(call);
-        if (result == null) result = caseStatement(call);
         if (result == null) result = caseAbstractElement(call);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -128,7 +123,6 @@ public class DimeSwitch<T> extends Switch<T>
         Dial dial = (Dial)theEObject;
         T result = caseDial(dial);
         if (result == null) result = caseVoiceTag(dial);
-        if (result == null) result = caseStatement(dial);
         if (result == null) result = caseAbstractElement(dial);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -138,7 +132,6 @@ public class DimeSwitch<T> extends Switch<T>
         Play play = (Play)theEObject;
         T result = casePlay(play);
         if (result == null) result = caseVoiceTag(play);
-        if (result == null) result = caseStatement(play);
         if (result == null) result = caseAbstractElement(play);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -148,7 +141,6 @@ public class DimeSwitch<T> extends Switch<T>
         Record record = (Record)theEObject;
         T result = caseRecord(record);
         if (result == null) result = caseVoiceTag(record);
-        if (result == null) result = caseStatement(record);
         if (result == null) result = caseAbstractElement(record);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -158,7 +150,6 @@ public class DimeSwitch<T> extends Switch<T>
         Reject reject = (Reject)theEObject;
         T result = caseReject(reject);
         if (result == null) result = caseVoiceTag(reject);
-        if (result == null) result = caseStatement(reject);
         if (result == null) result = caseAbstractElement(reject);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -168,7 +159,6 @@ public class DimeSwitch<T> extends Switch<T>
         Hangup hangup = (Hangup)theEObject;
         T result = caseHangup(hangup);
         if (result == null) result = caseVoiceTag(hangup);
-        if (result == null) result = caseStatement(hangup);
         if (result == null) result = caseAbstractElement(hangup);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -179,7 +169,6 @@ public class DimeSwitch<T> extends Switch<T>
         T result = caseGetDigits(getDigits);
         if (result == null) result = caseVoiceTag(getDigits);
         if (result == null) result = caseVars(getDigits);
-        if (result == null) result = caseStatement(getDigits);
         if (result == null) result = caseAbstractElement(getDigits);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -190,7 +179,6 @@ public class DimeSwitch<T> extends Switch<T>
         T result = caseAsk(ask);
         if (result == null) result = caseVoiceTag(ask);
         if (result == null) result = caseVars(ask);
-        if (result == null) result = caseStatement(ask);
         if (result == null) result = caseAbstractElement(ask);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -200,7 +188,6 @@ public class DimeSwitch<T> extends Switch<T>
         Send send = (Send)theEObject;
         T result = caseSend(send);
         if (result == null) result = caseVoiceTag(send);
-        if (result == null) result = caseStatement(send);
         if (result == null) result = caseAbstractElement(send);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -231,8 +218,34 @@ public class DimeSwitch<T> extends Switch<T>
         Say say = (Say)theEObject;
         T result = caseSay(say);
         if (result == null) result = caseVoiceTag(say);
-        if (result == null) result = caseStatement(say);
         if (result == null) result = caseAbstractElement(say);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DimePackage.SMS:
+      {
+        Sms sms = (Sms)theEObject;
+        T result = caseSms(sms);
+        if (result == null) result = caseVoiceTag(sms);
+        if (result == null) result = caseAbstractElement(sms);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DimePackage.EMAIL:
+      {
+        Email email = (Email)theEObject;
+        T result = caseEmail(email);
+        if (result == null) result = caseVoiceTag(email);
+        if (result == null) result = caseAbstractElement(email);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DimePackage.TWEET:
+      {
+        Tweet tweet = (Tweet)theEObject;
+        T result = caseTweet(tweet);
+        if (result == null) result = caseVoiceTag(tweet);
+        if (result == null) result = caseAbstractElement(tweet);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -357,12 +370,22 @@ public class DimeSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DimePackage.ASSIGMENT:
+      case DimePackage.CONSTANT:
       {
-        Assigment assigment = (Assigment)theEObject;
-        T result = caseAssigment(assigment);
-        if (result == null) result = caseStatement(assigment);
-        if (result == null) result = caseAbstractElement(assigment);
+        Constant constant = (Constant)theEObject;
+        T result = caseConstant(constant);
+        if (result == null) result = caseStatement(constant);
+        if (result == null) result = caseVars(constant);
+        if (result == null) result = caseAbstractElement(constant);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DimePackage.PRIMITIVE:
+      {
+        Primitive primitive = (Primitive)theEObject;
+        T result = casePrimitive(primitive);
+        if (result == null) result = caseLiteralAbs(primitive);
+        if (result == null) result = caseConcatenationExpression(primitive);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -396,6 +419,8 @@ public class DimeSwitch<T> extends Switch<T>
       {
         BoolLiteral boolLiteral = (BoolLiteral)theEObject;
         T result = caseBoolLiteral(boolLiteral);
+        if (result == null) result = casePrimitive(boolLiteral);
+        if (result == null) result = caseCALLSTATUS(boolLiteral);
         if (result == null) result = caseBoolExpression(boolLiteral);
         if (result == null) result = caseLiteralAbs(boolLiteral);
         if (result == null) result = caseConcatenationExpression(boolLiteral);
@@ -407,6 +432,7 @@ public class DimeSwitch<T> extends Switch<T>
         NumLiteral numLiteral = (NumLiteral)theEObject;
         T result = caseNumLiteral(numLiteral);
         if (result == null) result = caseMathExpression(numLiteral);
+        if (result == null) result = casePrimitive(numLiteral);
         if (result == null) result = caseLiteralAbs(numLiteral);
         if (result == null) result = caseConcatenationExpression(numLiteral);
         if (result == null) result = defaultCase(theEObject);
@@ -416,8 +442,36 @@ public class DimeSwitch<T> extends Switch<T>
       {
         StringLiteral stringLiteral = (StringLiteral)theEObject;
         T result = caseStringLiteral(stringLiteral);
+        if (result == null) result = casePrimitive(stringLiteral);
         if (result == null) result = caseLiteralAbs(stringLiteral);
         if (result == null) result = caseConcatenationExpression(stringLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DimePackage.EVENT:
+      {
+        EVENT event = (EVENT)theEObject;
+        T result = caseEVENT(event);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DimePackage.SESSION:
+      {
+        SESSION session = (SESSION)theEObject;
+        T result = caseSESSION(session);
+        if (result == null) result = caseLiteral(session);
+        if (result == null) result = caseBoolExpression(session);
+        if (result == null) result = caseMathExpression(session);
+        if (result == null) result = caseLiteralAbs(session);
+        if (result == null) result = caseConcatenationExpression(session);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DimePackage.CALLSTATUS:
+      {
+        CALLSTATUS callstatus = (CALLSTATUS)theEObject;
+        T result = caseCALLSTATUS(callstatus);
+        if (result == null) result = caseBoolExpression(callstatus);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -738,6 +792,54 @@ public class DimeSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Sms</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sms</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSms(Sms object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Email</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Email</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEmail(Email object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Tweet</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Tweet</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTweet(Tweet object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Transition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -978,17 +1080,33 @@ public class DimeSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Assigment</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Constant</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Assigment</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Constant</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAssigment(Assigment object)
+  public T caseConstant(Constant object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Primitive</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Primitive</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePrimitive(Primitive object)
   {
     return null;
   }
@@ -1085,6 +1203,54 @@ public class DimeSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseStringLiteral(StringLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>EVENT</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>EVENT</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEVENT(EVENT object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SESSION</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SESSION</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSESSION(SESSION object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CALLSTATUS</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CALLSTATUS</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCALLSTATUS(CALLSTATUS object)
   {
     return null;
   }

@@ -1,0 +1,12 @@
+Application Dial
+
+
+State start {
+	
+		
+		DialTo "sip:9996163038@sip.tropo.com";
+
+	
+}
+
+ 

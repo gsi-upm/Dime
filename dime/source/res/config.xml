@@ -1,8 +1,8 @@
 <?xml version="1.0" ?> 
 <config>
-	<language>tropo</language> 
+	<language>twilio</language>
 	<scriptlanguage>php</scriptlanguage> 
-	<url>http://www.gsi.dit.upm.es/~rjimenez/app/transition.php</url>
+	<url>http://www.gsi.dit.upm.es/~rjimenez/app/index.php</url>
 	<tropo>
 		<voice>leonor</voice>
 	</tropo>

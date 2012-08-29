@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime;
 
@@ -188,6 +185,33 @@ public interface DimeFactory extends EFactory
   Say createSay();
 
   /**
+   * Returns a new object of class '<em>Sms</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sms</em>'.
+   * @generated
+   */
+  Sms createSms();
+
+  /**
+   * Returns a new object of class '<em>Email</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Email</em>'.
+   * @generated
+   */
+  Email createEmail();
+
+  /**
+   * Returns a new object of class '<em>Tweet</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tweet</em>'.
+   * @generated
+   */
+  Tweet createTweet();
+
+  /**
    * Returns a new object of class '<em>Transition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -323,13 +347,22 @@ public interface DimeFactory extends EFactory
   BoolVariable createBoolVariable();
 
   /**
-   * Returns a new object of class '<em>Assigment</em>'.
+   * Returns a new object of class '<em>Constant</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Assigment</em>'.
+   * @return a new object of class '<em>Constant</em>'.
    * @generated
    */
-  Assigment createAssigment();
+  Constant createConstant();
+
+  /**
+   * Returns a new object of class '<em>Primitive</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Primitive</em>'.
+   * @generated
+   */
+  Primitive createPrimitive();
 
   /**
    * Returns a new object of class '<em>Vars</em>'.
@@ -384,6 +417,33 @@ public interface DimeFactory extends EFactory
    * @generated
    */
   StringLiteral createStringLiteral();
+
+  /**
+   * Returns a new object of class '<em>EVENT</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>EVENT</em>'.
+   * @generated
+   */
+  EVENT createEVENT();
+
+  /**
+   * Returns a new object of class '<em>SESSION</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>SESSION</em>'.
+   * @generated
+   */
+  SESSION createSESSION();
+
+  /**
+   * Returns a new object of class '<em>CALLSTATUS</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>CALLSTATUS</em>'.
+   * @generated
+   */
+  CALLSTATUS createCALLSTATUS();
 
   /**
    * Returns a new object of class '<em>Operation Bool</em>'.

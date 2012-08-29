@@ -1,0 +1,141 @@
+Application Restaurant  
+
+String  hour;
+String day;
+String month;  
+String people;			
+
+State start  {
+	
+	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	GoTo isClient when COMPLETED;
+	
+} 
+
+State isclient times 3 {
+
+	Ask 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto?' -> client;
+	
+	if(client=="yes"){
+		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		GoTo askPeople when COMPLETED;
+	}else{
+		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
+		HangUp;
+	}
+	GoTo tooattempts when TIMES;
+	// INCOMPLETE
+	GoTo wrongchoice when ERROR;
+	GoTo hanguperror when ERROR;
+}
+
+State askpeople times 3 {
+	Ask "Diga el numero de comensales" -> people;
+	
+	GoTo askday when COMPLETED;
+	GoTo tooattempts when TIMES;
+	GoTo wrongchoice when ERROR;
+	GoTo hanguperror when ERROR;
+}
+
+State askday times 3 {
+	Ask "En que dia lo desea?" -> people;
+	
+	GoTo askmonth when COMPLETED;
+	GoTo tooattempts when TIMES;
+	GoTo wrongchoice when ERROR;
+	GoTo hanguperror when ERROR;
+}
+
+State askmonth times 3 {
+	Ask "En que mes desea realizar dicha reserva?" -> people;
+	
+	GoTo askhour when COMPLETED;
+	GoTo tooattempts when TIMES;
+	GoTo wrongchoice when ERROR;
+	GoTo hanguperror when ERROR;
+}
+
+
+State askhour times 3 {
+	Ask "A que hora le conviene?" -> people;
+	
+	GoTo askdone when COMPLETED;
+	GoTo tooattempts when TIMES;
+	GoTo wrongchoice when ERROR;
+	GoTo hanguperror when ERROR;
+}
+State askdone times 3 {
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Ask "Esta totalmente de acuerdo con dicha solicitud?" choices "si,no" -> isDone;
+	if(isDone=="yes"){
+		GoTo hangup when COMPLETED;
+	}else{
+		GoTo modification when COMPLETED;
+	}
+	GoTo tooattempts when TIMES;
+	GoTo wrongchoice when ERROR;
+	GoTo hanguperror when ERROR;
+}
+
+state modification times 3 {
+	ask "Que dato desea modificar?" choices "numero de comensales, mes, dia, hora" -> toModify;
+	if(toModify=="numero de comensales"){
+		goTo askPeople when complete;
+	}else if(toModify=="dia"){
+		goTo askDay when complete;
+	}
+	else if(toModify=="hora"){
+		goTo askHour when complete;
+	}else{
+		goTo askMonth when complete;
+	}
+	
+	goTo tooAttempts when attemptsLimit;
+	goTo wrongChoice when incomplete;
+	goTo hangUpError when error;
+}
+
+state tooAttempts {
+	say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo m‡s tarde";
+}
+
+state hangUpError {
+	say "Ha ocurrido un error, disculpe las molestias.";
+}
+
+state wrongChoice{
+	if(lastState=="askDay"){
+		say  "Lo siento, no le hemos entendido. Tiene que decir un dia del mes";
+		goTo askDay when complete;
+	}else if(lastState=="askHour"){
+		say "Lo siento, no le hemos entendido. Diga la hora a la que quiere hacer la reserva. Solo es posible hacer una reserva a las horas en punto o y media entre la una y las 11 y media de la noche.";
+		goTo askHour when complete;
+	}
+	else if(lastState=="askPeople"){
+		say "Lo siento, no le hemos entendido. Sepa ademas que el numero maximo de comensales es 10";
+		goTo askPeople when complete;
+	}else if (lastState=="askMonth"){
+		goTo askMonth when complete;
+	}else if(lastState=="askDone"){
+		say "Perdone, no le hemos entendido";
+		goTo askDone when complete;
+	}else if(lastState=="confirmation"){
+		say "Lo siento, no le hemos entendido. Los datos a modificar son: numero de comensales, mes, dia y hora de la reserva";
+		goTo modification when complete;
+		
+	}else{ 
+		say "Perdone, no le hemos entendido";
+		goTo isClient when complete;
+	}
+}    
+ 
+state hangUp {
+	say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.".day;
+	varString reservation= "caller=".caller." ,"." day=".day.","." hour=".hour.","." month=".month;
+	
+	send { "caller"=>caller, "day"=>day, "hour"=> hour, "month"=> month, "people"=>people} to "http://www.restaurant.com";
+	
+	
+	hangUp;
+}

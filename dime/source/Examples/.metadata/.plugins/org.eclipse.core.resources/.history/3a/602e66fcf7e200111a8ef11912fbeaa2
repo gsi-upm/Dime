@@ -1,0 +1,14 @@
+application Globals
+
+String greeting="Hello ";
+const role="customer";
+state start{
+	say greeting.role;
+	String greeting="Bye!";
+	goTo end when COMPLETED;
+}
+
+state end{
+	say greeting.role;  
+	hangUp;
+}

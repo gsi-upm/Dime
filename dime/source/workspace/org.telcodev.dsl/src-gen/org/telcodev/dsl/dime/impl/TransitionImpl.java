@@ -1,11 +1,9 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -13,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.telcodev.dsl.dime.DimePackage;
+import org.telcodev.dsl.dime.EVENT;
 import org.telcodev.dsl.dime.State;
 import org.telcodev.dsl.dime.Transition;
 
@@ -23,6 +22,7 @@ import org.telcodev.dsl.dime.Transition;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.telcodev.dsl.dime.impl.TransitionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.TransitionImpl#getTarget <em>Target</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.TransitionImpl#getEvent <em>Event</em>}</li>
  * </ul>
@@ -32,6 +32,26 @@ import org.telcodev.dsl.dime.Transition;
  */
 public class TransitionImpl extends AbstractElementImpl implements Transition
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
    * <!-- begin-user-doc -->
@@ -43,24 +63,14 @@ public class TransitionImpl extends AbstractElementImpl implements Transition
   protected State target;
 
   /**
-   * The default value of the '{@link #getEvent() <em>Event</em>}' attribute.
+   * The cached value of the '{@link #getEvent() <em>Event</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getEvent()
    * @generated
    * @ordered
    */
-  protected static final String EVENT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getEvent() <em>Event</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEvent()
-   * @generated
-   * @ordered
-   */
-  protected String event = EVENT_EDEFAULT;
+  protected EVENT event;
 
   /**
    * <!-- begin-user-doc -->
@@ -81,6 +91,29 @@ public class TransitionImpl extends AbstractElementImpl implements Transition
   protected EClass eStaticClass()
   {
     return DimePackage.Literals.TRANSITION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.TRANSITION__NAME, oldName, name));
   }
 
   /**
@@ -131,7 +164,7 @@ public class TransitionImpl extends AbstractElementImpl implements Transition
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getEvent()
+  public EVENT getEvent()
   {
     return event;
   }
@@ -141,12 +174,53 @@ public class TransitionImpl extends AbstractElementImpl implements Transition
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEvent(String newEvent)
+  public NotificationChain basicSetEvent(EVENT newEvent, NotificationChain msgs)
   {
-    String oldEvent = event;
+    EVENT oldEvent = event;
     event = newEvent;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.TRANSITION__EVENT, oldEvent, event));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DimePackage.TRANSITION__EVENT, oldEvent, newEvent);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setEvent(EVENT newEvent)
+  {
+    if (newEvent != event)
+    {
+      NotificationChain msgs = null;
+      if (event != null)
+        msgs = ((InternalEObject)event).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DimePackage.TRANSITION__EVENT, null, msgs);
+      if (newEvent != null)
+        msgs = ((InternalEObject)newEvent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DimePackage.TRANSITION__EVENT, null, msgs);
+      msgs = basicSetEvent(newEvent, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.TRANSITION__EVENT, newEvent, newEvent));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case DimePackage.TRANSITION__EVENT:
+        return basicSetEvent(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -159,6 +233,8 @@ public class TransitionImpl extends AbstractElementImpl implements Transition
   {
     switch (featureID)
     {
+      case DimePackage.TRANSITION__NAME:
+        return getName();
       case DimePackage.TRANSITION__TARGET:
         if (resolve) return getTarget();
         return basicGetTarget();
@@ -178,11 +254,14 @@ public class TransitionImpl extends AbstractElementImpl implements Transition
   {
     switch (featureID)
     {
+      case DimePackage.TRANSITION__NAME:
+        setName((String)newValue);
+        return;
       case DimePackage.TRANSITION__TARGET:
         setTarget((State)newValue);
         return;
       case DimePackage.TRANSITION__EVENT:
-        setEvent((String)newValue);
+        setEvent((EVENT)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -198,11 +277,14 @@ public class TransitionImpl extends AbstractElementImpl implements Transition
   {
     switch (featureID)
     {
+      case DimePackage.TRANSITION__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case DimePackage.TRANSITION__TARGET:
         setTarget((State)null);
         return;
       case DimePackage.TRANSITION__EVENT:
-        setEvent(EVENT_EDEFAULT);
+        setEvent((EVENT)null);
         return;
     }
     super.eUnset(featureID);
@@ -218,10 +300,12 @@ public class TransitionImpl extends AbstractElementImpl implements Transition
   {
     switch (featureID)
     {
+      case DimePackage.TRANSITION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case DimePackage.TRANSITION__TARGET:
         return target != null;
       case DimePackage.TRANSITION__EVENT:
-        return EVENT_EDEFAULT == null ? event != null : !EVENT_EDEFAULT.equals(event);
+        return event != null;
     }
     return super.eIsSet(featureID);
   }
@@ -237,8 +321,8 @@ public class TransitionImpl extends AbstractElementImpl implements Transition
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (event: ");
-    result.append(event);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }

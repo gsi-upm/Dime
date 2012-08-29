@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime.impl;
 
@@ -26,6 +23,7 @@ import org.telcodev.dsl.dime.DimePackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.telcodev.dsl.dime.impl.CondBlockImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.CondBlockImpl#getCond <em>Cond</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.CondBlockImpl#getAction <em>Action</em>}</li>
  * </ul>
@@ -35,6 +33,26 @@ import org.telcodev.dsl.dime.DimePackage;
  */
 public class CondBlockImpl extends MinimalEObjectImpl.Container implements CondBlock
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getCond() <em>Cond</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -74,6 +92,29 @@ public class CondBlockImpl extends MinimalEObjectImpl.Container implements CondB
   protected EClass eStaticClass()
   {
     return DimePackage.Literals.COND_BLOCK;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.COND_BLOCK__NAME, oldName, name));
   }
 
   /**
@@ -200,6 +241,8 @@ public class CondBlockImpl extends MinimalEObjectImpl.Container implements CondB
   {
     switch (featureID)
     {
+      case DimePackage.COND_BLOCK__NAME:
+        return getName();
       case DimePackage.COND_BLOCK__COND:
         return getCond();
       case DimePackage.COND_BLOCK__ACTION:
@@ -218,6 +261,9 @@ public class CondBlockImpl extends MinimalEObjectImpl.Container implements CondB
   {
     switch (featureID)
     {
+      case DimePackage.COND_BLOCK__NAME:
+        setName((String)newValue);
+        return;
       case DimePackage.COND_BLOCK__COND:
         setCond((BoolExpression)newValue);
         return;
@@ -238,6 +284,9 @@ public class CondBlockImpl extends MinimalEObjectImpl.Container implements CondB
   {
     switch (featureID)
     {
+      case DimePackage.COND_BLOCK__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case DimePackage.COND_BLOCK__COND:
         setCond((BoolExpression)null);
         return;
@@ -258,12 +307,31 @@ public class CondBlockImpl extends MinimalEObjectImpl.Container implements CondB
   {
     switch (featureID)
     {
+      case DimePackage.COND_BLOCK__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case DimePackage.COND_BLOCK__COND:
         return cond != null;
       case DimePackage.COND_BLOCK__ACTION:
         return action != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //CondBlockImpl

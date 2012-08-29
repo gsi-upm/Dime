@@ -1,0 +1,107 @@
+<?php
+			
+// Required Tropo files
+
+require 'res/tropo.class.php';
+
+// Limonade files for states simulation. More information in 
+
+require 'res/lib/limonade.php';
+
+// Defining constants
+
+
+// Declaration of the states
+
+// State start implementation
+
+dispatch_post('/start', 'app_start');
+function app_start() {
+	
+	// Creates a Tropo session and getting its parameters
+	
+	$session = new Session();
+	$from = $session->getFrom();
+	$sessionID = $session->getId();
+	$caller = $from["id"]; 
+	$to = $session->getTo();
+	$called = $to["id"]; 
+	$_SESSION['caller']=$caller;
+	$_SESSION['called']=$called;
+	$_SESSION['sessionID']=$sessionID;
+	
+	// Initialitation of the global variables
+	
+	$company="google";
+	$_SESSION['company']=$company;
+	
+	// Inicialize the tropo aplication
+	
+	$tropo = new Tropo();
+	
+	// Update of the value of the global constants and variables, and the session params.
+	
+	if(isset($_SESSION['company'])){
+		$company=$_SESSION['company'];
+	} 
+	if(isset($_SESSION['caller'])){
+		$caller=$_SESSION['caller'];
+	}
+	if(isset($_SESSION['called'])){
+		$called=$_SESSION['called'];
+	}
+	if(isset($_SESSION['sessionID'])){
+		$sessionID=$_SESSION['sessionID'];
+	}
+	if(isset($_SESSION['lastState'])){
+		$lastState=$_SESSION['lastState'];
+	}
+	
+	
+	// Declaration of the statements of the state.
+	
+	define("GREETING","Hello");
+	$tropo->say("Thanks for calling to".$company.GREETING, array("voice"=>"susan", "allowSignals"=>array("timeExceededstart", "attemptsLimit")));
+	$tropo->say("http://myfile.com", array("allowSignals"=>array("timeExceeded", "attemptsLimit")));
+	$company=$tropo->ask("question?",array("choices"=>"[5 DIGITS]", "terminator" => "#", "name"=>"get", "voice"=>"susan", "allowSignals"=>array("timeExceededstart", "attemptsLimit")));
+	$tropo->record( array("say" => "What the fuck?",  "voice"=>"susan", "allowSignals"=>array("timeExceededstart", "attemptsLimit")));
+	$tropo->transfer("+34656422095", array( "allowSignals"=>array("timeExceededstart", "attemptsLimit")));
+	$tropo->call("roberto", array( "allowSignals"=>array("timeExceededstart", "attemptsLimit")));
+	$hola=$caller."";
+	$b=($callStatus=="DISCONNECTED");
+	$d=1;
+	// Send implementation for HTTP GET with cURL.
+		
+				$url = "http://yourhost.com"+"?"+"caller="+$caller+"&"+"hola="+$hola;
+				$curl_handle=curl_init();
+				curl_setopt($curl_handle,CURLOPT_URL,$url);
+				curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
+				curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
+				curl_exec($curl_handle);
+				curl_close($curl_handle);
+	if((($callStatus=="ANSWERING"| $callStatus=="ANSWERED"))){
+		$tropo->on(array("event" => "continue", "next" =>"states.php?uri=start"));
+	$tropo->on(array("event" => "", "next" =>"states.php?uri=start"));
+	$tropo->on(array("event" => "", "next" =>"states.php?uri=start"));
+	$tropo->on(array("event" => "timeExceeattemptsLimitded", "next" =>"states.php?uri=start"));
+	$tropo->on(array("event" => "timeExceeded", "next" =>"states.php?uri=start"));
+			}
+	else if((($callStatus=="FAILED"))){
+		$tropo->say($lastState, array("voice"=>"susan", "allowSignals"=>array("timeExceededstart", "attemptsLimit")));
+			}
+	else {
+		$tropo->say(GREETING, array("voice"=>"susan", "allowSignals"=>array("timeExceededstart", "attemptsLimit")));
+			}
+	$d="hola";
+	$tropo->hangup();
+	$tropo->reject();
+	
+	// Update the global variables and the session params.
+	
+	$_SESSION['company']=$company;   
+	$_SESSION['lastState']='start';
+	return $tropo->RenderJson();
+}
+
+run(); 
+?>

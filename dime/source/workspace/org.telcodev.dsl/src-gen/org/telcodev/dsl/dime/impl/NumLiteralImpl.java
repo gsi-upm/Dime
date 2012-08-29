@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime.impl;
 
@@ -11,8 +8,11 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.telcodev.dsl.dime.ConcatenationExpression;
 import org.telcodev.dsl.dime.DimePackage;
+import org.telcodev.dsl.dime.LiteralAbs;
 import org.telcodev.dsl.dime.NumLiteral;
+import org.telcodev.dsl.dime.Primitive;
 
 /**
  * <!-- begin-user-doc -->
@@ -157,6 +157,72 @@ public class NumLiteralImpl extends MathExpressionImpl implements NumLiteral
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == ConcatenationExpression.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == LiteralAbs.class)
+    {
+      switch (derivedFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == Primitive.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case DimePackage.NUM_LITERAL__VALUE: return DimePackage.PRIMITIVE__VALUE;
+        default: return -1;
+      }
+    }
+    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == ConcatenationExpression.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == LiteralAbs.class)
+    {
+      switch (baseFeatureID)
+      {
+        default: return -1;
+      }
+    }
+    if (baseClass == Primitive.class)
+    {
+      switch (baseFeatureID)
+      {
+        case DimePackage.PRIMITIVE__VALUE: return DimePackage.NUM_LITERAL__VALUE;
+        default: return -1;
+      }
+    }
+    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
   /**

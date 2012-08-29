@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime.impl;
 
@@ -25,7 +22,6 @@ import org.telcodev.dsl.dime.Vars;
  * <ul>
  *   <li>{@link org.telcodev.dsl.dime.impl.LiteralImpl#getV <em>V</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.LiteralImpl#getNul <em>Nul</em>}</li>
- *   <li>{@link org.telcodev.dsl.dime.impl.LiteralImpl#getSes <em>Ses</em>}</li>
  * </ul>
  * </p>
  *
@@ -62,26 +58,6 @@ public class LiteralImpl extends BoolExpressionImpl implements Literal
    * @ordered
    */
   protected String nul = NUL_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getSes() <em>Ses</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSes()
-   * @generated
-   * @ordered
-   */
-  protected static final String SES_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getSes() <em>Ses</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSes()
-   * @generated
-   * @ordered
-   */
-  protected String ses = SES_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -175,29 +151,6 @@ public class LiteralImpl extends BoolExpressionImpl implements Literal
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getSes()
-  {
-    return ses;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSes(String newSes)
-  {
-    String oldSes = ses;
-    ses = newSes;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.LITERAL__SES, oldSes, ses));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -208,8 +161,6 @@ public class LiteralImpl extends BoolExpressionImpl implements Literal
         return basicGetV();
       case DimePackage.LITERAL__NUL:
         return getNul();
-      case DimePackage.LITERAL__SES:
-        return getSes();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -229,9 +180,6 @@ public class LiteralImpl extends BoolExpressionImpl implements Literal
         return;
       case DimePackage.LITERAL__NUL:
         setNul((String)newValue);
-        return;
-      case DimePackage.LITERAL__SES:
-        setSes((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -253,9 +201,6 @@ public class LiteralImpl extends BoolExpressionImpl implements Literal
       case DimePackage.LITERAL__NUL:
         setNul(NUL_EDEFAULT);
         return;
-      case DimePackage.LITERAL__SES:
-        setSes(SES_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -274,8 +219,6 @@ public class LiteralImpl extends BoolExpressionImpl implements Literal
         return v != null;
       case DimePackage.LITERAL__NUL:
         return NUL_EDEFAULT == null ? nul != null : !NUL_EDEFAULT.equals(nul);
-      case DimePackage.LITERAL__SES:
-        return SES_EDEFAULT == null ? ses != null : !SES_EDEFAULT.equals(ses);
     }
     return super.eIsSet(featureID);
   }
@@ -293,8 +236,6 @@ public class LiteralImpl extends BoolExpressionImpl implements Literal
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (nul: ");
     result.append(nul);
-    result.append(", ses: ");
-    result.append(ses);
     result.append(')');
     return result.toString();
   }

@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime.impl;
 
@@ -25,7 +22,7 @@ import org.telcodev.dsl.dime.DimePackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.telcodev.dsl.dime.impl.AskImpl#getQuestion <em>Question</em>}</li>
- *   <li>{@link org.telcodev.dsl.dime.impl.AskImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.telcodev.dsl.dime.impl.AskImpl#getVari <em>Vari</em>}</li>
  * </ul>
  * </p>
  *
@@ -44,24 +41,24 @@ public class AskImpl extends VoiceTagImpl implements Ask
   protected ConcatenationExpression question;
 
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getVari() <em>Vari</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getVari()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String VARI_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getVari() <em>Vari</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getVari()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String vari = VARI_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -137,9 +134,9 @@ public class AskImpl extends VoiceTagImpl implements Ask
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public String getVari()
   {
-    return name;
+    return vari;
   }
 
   /**
@@ -147,12 +144,12 @@ public class AskImpl extends VoiceTagImpl implements Ask
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setVari(String newVari)
   {
-    String oldName = name;
-    name = newName;
+    String oldVari = vari;
+    vari = newVari;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.ASK__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.ASK__VARI, oldVari, vari));
   }
 
   /**
@@ -183,8 +180,8 @@ public class AskImpl extends VoiceTagImpl implements Ask
     {
       case DimePackage.ASK__QUESTION:
         return getQuestion();
-      case DimePackage.ASK__NAME:
-        return getName();
+      case DimePackage.ASK__VARI:
+        return getVari();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -202,8 +199,8 @@ public class AskImpl extends VoiceTagImpl implements Ask
       case DimePackage.ASK__QUESTION:
         setQuestion((ConcatenationExpression)newValue);
         return;
-      case DimePackage.ASK__NAME:
-        setName((String)newValue);
+      case DimePackage.ASK__VARI:
+        setVari((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -222,8 +219,8 @@ public class AskImpl extends VoiceTagImpl implements Ask
       case DimePackage.ASK__QUESTION:
         setQuestion((ConcatenationExpression)null);
         return;
-      case DimePackage.ASK__NAME:
-        setName(NAME_EDEFAULT);
+      case DimePackage.ASK__VARI:
+        setVari(VARI_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -241,8 +238,8 @@ public class AskImpl extends VoiceTagImpl implements Ask
     {
       case DimePackage.ASK__QUESTION:
         return question != null;
-      case DimePackage.ASK__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case DimePackage.ASK__VARI:
+        return VARI_EDEFAULT == null ? vari != null : !VARI_EDEFAULT.equals(vari);
     }
     return super.eIsSet(featureID);
   }
@@ -258,8 +255,8 @@ public class AskImpl extends VoiceTagImpl implements Ask
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (vari: ");
+    result.append(vari);
     result.append(')');
     return result.toString();
   }

@@ -1,0 +1,11 @@
+Application SendData
+
+State start{
+	
+	Send {"caller": CALLER} to "http://yourhostsite.com/index.php";
+	Say "Damn it";
+	HangUp;   
+}
+
+
+  

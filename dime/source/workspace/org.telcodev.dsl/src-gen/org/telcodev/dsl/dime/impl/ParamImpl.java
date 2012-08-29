@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime.impl;
 
@@ -25,7 +22,7 @@ import org.telcodev.dsl.dime.Param;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.telcodev.dsl.dime.impl.ParamImpl#getParamName <em>Param Name</em>}</li>
+ *   <li>{@link org.telcodev.dsl.dime.impl.ParamImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.ParamImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
@@ -35,24 +32,24 @@ import org.telcodev.dsl.dime.Param;
 public class ParamImpl extends MinimalEObjectImpl.Container implements Param
 {
   /**
-   * The default value of the '{@link #getParamName() <em>Param Name</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getParamName()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String PARAM_NAME_EDEFAULT = null;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getParamName() <em>Param Name</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getParamName()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected String paramName = PARAM_NAME_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
@@ -90,9 +87,9 @@ public class ParamImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getParamName()
+  public String getName()
   {
-    return paramName;
+    return name;
   }
 
   /**
@@ -100,12 +97,12 @@ public class ParamImpl extends MinimalEObjectImpl.Container implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setParamName(String newParamName)
+  public void setName(String newName)
   {
-    String oldParamName = paramName;
-    paramName = newParamName;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.PARAM__PARAM_NAME, oldParamName, paramName));
+      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.PARAM__NAME, oldName, name));
   }
 
   /**
@@ -182,8 +179,8 @@ public class ParamImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case DimePackage.PARAM__PARAM_NAME:
-        return getParamName();
+      case DimePackage.PARAM__NAME:
+        return getName();
       case DimePackage.PARAM__VALUE:
         return getValue();
     }
@@ -200,8 +197,8 @@ public class ParamImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case DimePackage.PARAM__PARAM_NAME:
-        setParamName((String)newValue);
+      case DimePackage.PARAM__NAME:
+        setName((String)newValue);
         return;
       case DimePackage.PARAM__VALUE:
         setValue((ConcatenationExpression)newValue);
@@ -220,8 +217,8 @@ public class ParamImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case DimePackage.PARAM__PARAM_NAME:
-        setParamName(PARAM_NAME_EDEFAULT);
+      case DimePackage.PARAM__NAME:
+        setName(NAME_EDEFAULT);
         return;
       case DimePackage.PARAM__VALUE:
         setValue((ConcatenationExpression)null);
@@ -240,8 +237,8 @@ public class ParamImpl extends MinimalEObjectImpl.Container implements Param
   {
     switch (featureID)
     {
-      case DimePackage.PARAM__PARAM_NAME:
-        return PARAM_NAME_EDEFAULT == null ? paramName != null : !PARAM_NAME_EDEFAULT.equals(paramName);
+      case DimePackage.PARAM__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case DimePackage.PARAM__VALUE:
         return value != null;
     }
@@ -259,8 +256,8 @@ public class ParamImpl extends MinimalEObjectImpl.Container implements Param
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (paramName: ");
-    result.append(paramName);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }

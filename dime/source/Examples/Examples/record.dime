@@ -1,0 +1,8 @@
+Application RecordIt
+
+
+State start{
+	Record 5 seconds in "http://shannon.gsi.dit.upm.es/roberto/getParams.php?caller=roberto";
+	
+	
+}

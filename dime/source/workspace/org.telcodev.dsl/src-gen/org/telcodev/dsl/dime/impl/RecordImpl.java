@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime.impl;
 
@@ -26,7 +23,7 @@ import org.telcodev.dsl.dime.Record;
  * <ul>
  *   <li>{@link org.telcodev.dsl.dime.impl.RecordImpl#getTime <em>Time</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.RecordImpl#getAction <em>Action</em>}</li>
- *   <li>{@link org.telcodev.dsl.dime.impl.RecordImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.telcodev.dsl.dime.impl.RecordImpl#getVari <em>Vari</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,24 +62,24 @@ public class RecordImpl extends VoiceTagImpl implements Record
   protected ConcatenationExpression action;
 
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getVari() <em>Vari</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getVari()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String VARI_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getVari() <em>Vari</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getVari()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String vari = VARI_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -181,9 +178,9 @@ public class RecordImpl extends VoiceTagImpl implements Record
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public String getVari()
   {
-    return name;
+    return vari;
   }
 
   /**
@@ -191,12 +188,12 @@ public class RecordImpl extends VoiceTagImpl implements Record
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setVari(String newVari)
   {
-    String oldName = name;
-    name = newName;
+    String oldVari = vari;
+    vari = newVari;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.RECORD__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.RECORD__VARI, oldVari, vari));
   }
 
   /**
@@ -229,8 +226,8 @@ public class RecordImpl extends VoiceTagImpl implements Record
         return getTime();
       case DimePackage.RECORD__ACTION:
         return getAction();
-      case DimePackage.RECORD__NAME:
-        return getName();
+      case DimePackage.RECORD__VARI:
+        return getVari();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -251,8 +248,8 @@ public class RecordImpl extends VoiceTagImpl implements Record
       case DimePackage.RECORD__ACTION:
         setAction((ConcatenationExpression)newValue);
         return;
-      case DimePackage.RECORD__NAME:
-        setName((String)newValue);
+      case DimePackage.RECORD__VARI:
+        setVari((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -274,8 +271,8 @@ public class RecordImpl extends VoiceTagImpl implements Record
       case DimePackage.RECORD__ACTION:
         setAction((ConcatenationExpression)null);
         return;
-      case DimePackage.RECORD__NAME:
-        setName(NAME_EDEFAULT);
+      case DimePackage.RECORD__VARI:
+        setVari(VARI_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -295,8 +292,8 @@ public class RecordImpl extends VoiceTagImpl implements Record
         return time != TIME_EDEFAULT;
       case DimePackage.RECORD__ACTION:
         return action != null;
-      case DimePackage.RECORD__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case DimePackage.RECORD__VARI:
+        return VARI_EDEFAULT == null ? vari != null : !VARI_EDEFAULT.equals(vari);
     }
     return super.eIsSet(featureID);
   }
@@ -314,8 +311,8 @@ public class RecordImpl extends VoiceTagImpl implements Record
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (time: ");
     result.append(time);
-    result.append(", name: ");
-    result.append(name);
+    result.append(", vari: ");
+    result.append(vari);
     result.append(')');
     return result.toString();
   }

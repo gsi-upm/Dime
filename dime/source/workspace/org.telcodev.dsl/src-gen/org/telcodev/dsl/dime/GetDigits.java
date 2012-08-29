@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime;
 
@@ -16,7 +13,7 @@ package org.telcodev.dsl.dime;
  * <ul>
  *   <li>{@link org.telcodev.dsl.dime.GetDigits#getNumDigits <em>Num Digits</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.GetDigits#getQuestion <em>Question</em>}</li>
- *   <li>{@link org.telcodev.dsl.dime.GetDigits#getName <em>Name</em>}</li>
+ *   <li>{@link org.telcodev.dsl.dime.GetDigits#getVari <em>Vari</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,29 +76,29 @@ public interface GetDigits extends VoiceTag, Vars
   void setQuestion(ConcatenationExpression value);
 
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Vari</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Vari</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see org.telcodev.dsl.dime.DimePackage#getGetDigits_Name()
+   * @return the value of the '<em>Vari</em>' attribute.
+   * @see #setVari(String)
+   * @see org.telcodev.dsl.dime.DimePackage#getGetDigits_Vari()
    * @model
    * @generated
    */
-  String getName();
+  String getVari();
 
   /**
-   * Sets the value of the '{@link org.telcodev.dsl.dime.GetDigits#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.telcodev.dsl.dime.GetDigits#getVari <em>Vari</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
+   * @param value the new value of the '<em>Vari</em>' attribute.
+   * @see #getVari()
    * @generated
    */
-  void setName(String value);
+  void setVari(String value);
 
 } // GetDigits

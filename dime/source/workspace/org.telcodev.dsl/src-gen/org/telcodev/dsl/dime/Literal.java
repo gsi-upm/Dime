@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime;
 
@@ -16,7 +13,6 @@ package org.telcodev.dsl.dime;
  * <ul>
  *   <li>{@link org.telcodev.dsl.dime.Literal#getV <em>V</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.Literal#getNul <em>Nul</em>}</li>
- *   <li>{@link org.telcodev.dsl.dime.Literal#getSes <em>Ses</em>}</li>
  * </ul>
  * </p>
  *
@@ -77,31 +73,5 @@ public interface Literal extends BoolExpression, MathExpression, LiteralAbs
    * @generated
    */
   void setNul(String value);
-
-  /**
-   * Returns the value of the '<em><b>Ses</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Ses</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Ses</em>' attribute.
-   * @see #setSes(String)
-   * @see org.telcodev.dsl.dime.DimePackage#getLiteral_Ses()
-   * @model
-   * @generated
-   */
-  String getSes();
-
-  /**
-   * Sets the value of the '{@link org.telcodev.dsl.dime.Literal#getSes <em>Ses</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ses</em>' attribute.
-   * @see #getSes()
-   * @generated
-   */
-  void setSes(String value);
 
 } // Literal

@@ -1,0 +1,11 @@
+Application SendData
+
+State start{
+	
+	Send {"caller": CALLER} to "http://shannon.gsi.dit.upm.es/roberto/getParams.php";
+	Say "Damn it";
+	HangUp;   
+}
+
+
+  

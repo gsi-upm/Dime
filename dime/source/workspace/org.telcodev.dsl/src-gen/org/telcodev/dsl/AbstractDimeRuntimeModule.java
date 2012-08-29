@@ -41,12 +41,12 @@ public abstract class AbstractDimeRuntimeModule extends DefaultRuntimeModule {
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
 	public Class<? extends org.eclipse.xtext.serializer.sequencer.ISemanticSequencer> bindISemanticSequencer() {
-		return org.telcodev.dsl.serializer.AbstractDimeSemanticSequencer.class;
+		return org.telcodev.dsl.serializer.DimeSemanticSequencer.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
 	public Class<? extends org.eclipse.xtext.serializer.sequencer.ISyntacticSequencer> bindISyntacticSequencer() {
-		return org.telcodev.dsl.serializer.AbstractDimeSyntacticSequencer.class;
+		return org.telcodev.dsl.serializer.DimeSyntacticSequencer.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment

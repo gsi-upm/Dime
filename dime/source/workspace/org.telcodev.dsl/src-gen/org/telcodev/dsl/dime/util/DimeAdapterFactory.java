@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.telcodev.dsl.dime.util;
 
@@ -168,6 +165,21 @@ public class DimeAdapterFactory extends AdapterFactoryImpl
         return createSayAdapter();
       }
       @Override
+      public Adapter caseSms(Sms object)
+      {
+        return createSmsAdapter();
+      }
+      @Override
+      public Adapter caseEmail(Email object)
+      {
+        return createEmailAdapter();
+      }
+      @Override
+      public Adapter caseTweet(Tweet object)
+      {
+        return createTweetAdapter();
+      }
+      @Override
       public Adapter caseTransition(Transition object)
       {
         return createTransitionAdapter();
@@ -243,9 +255,14 @@ public class DimeAdapterFactory extends AdapterFactoryImpl
         return createBoolVariableAdapter();
       }
       @Override
-      public Adapter caseAssigment(Assigment object)
+      public Adapter caseConstant(Constant object)
       {
-        return createAssigmentAdapter();
+        return createConstantAdapter();
+      }
+      @Override
+      public Adapter casePrimitive(Primitive object)
+      {
+        return createPrimitiveAdapter();
       }
       @Override
       public Adapter caseVars(Vars object)
@@ -276,6 +293,21 @@ public class DimeAdapterFactory extends AdapterFactoryImpl
       public Adapter caseStringLiteral(StringLiteral object)
       {
         return createStringLiteralAdapter();
+      }
+      @Override
+      public Adapter caseEVENT(EVENT object)
+      {
+        return createEVENTAdapter();
+      }
+      @Override
+      public Adapter caseSESSION(SESSION object)
+      {
+        return createSESSIONAdapter();
+      }
+      @Override
+      public Adapter caseCALLSTATUS(CALLSTATUS object)
+      {
+        return createCALLSTATUSAdapter();
       }
       @Override
       public Adapter caseOperationBool(OperationBool object)
@@ -585,6 +617,51 @@ public class DimeAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.Sms <em>Sms</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.telcodev.dsl.dime.Sms
+   * @generated
+   */
+  public Adapter createSmsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.Email <em>Email</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.telcodev.dsl.dime.Email
+   * @generated
+   */
+  public Adapter createEmailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.Tweet <em>Tweet</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.telcodev.dsl.dime.Tweet
+   * @generated
+   */
+  public Adapter createTweetAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.Transition <em>Transition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -810,16 +887,31 @@ public class DimeAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.Assigment <em>Assigment</em>}'.
+   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.Constant <em>Constant</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.telcodev.dsl.dime.Assigment
+   * @see org.telcodev.dsl.dime.Constant
    * @generated
    */
-  public Adapter createAssigmentAdapter()
+  public Adapter createConstantAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.Primitive <em>Primitive</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.telcodev.dsl.dime.Primitive
+   * @generated
+   */
+  public Adapter createPrimitiveAdapter()
   {
     return null;
   }
@@ -910,6 +1002,51 @@ public class DimeAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createStringLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.EVENT <em>EVENT</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.telcodev.dsl.dime.EVENT
+   * @generated
+   */
+  public Adapter createEVENTAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.SESSION <em>SESSION</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.telcodev.dsl.dime.SESSION
+   * @generated
+   */
+  public Adapter createSESSIONAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.CALLSTATUS <em>CALLSTATUS</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.telcodev.dsl.dime.CALLSTATUS
+   * @generated
+   */
+  public Adapter createCALLSTATUSAdapter()
   {
     return null;
   }

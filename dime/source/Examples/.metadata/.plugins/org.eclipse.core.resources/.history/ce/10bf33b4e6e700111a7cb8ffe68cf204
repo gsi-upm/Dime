@@ -1,0 +1,6 @@
+application HelloWorld
+
+ state start {
+ 	say "Hello world!"; 
+ }
+          

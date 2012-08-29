@@ -1,0 +1,82 @@
+<?php 
+			
+// Required Twilio files
+
+require "res/Slim/Slim.php";
+
+// Slim files for states simulation. More information in 
+
+require "res/Service/Twilio.php";
+
+
+$app= new Slim();
+
+// Defining constants
+
+
+
+// Declaration of the states
+
+// State start implementation
+
+$app->post('/start', 'app_start');
+function app_start() {
+	
+	
+	
+	
+	
+	
+	// Times signal appears when the param reached the atribute times of the state
+	
+	
+	
+	// Update of the value of the global constants and variables, and the session params.
+	
+	
+	
+	// Declaration of the statements of the state.
+	echo "<Response>";
+	define("GREETING","Hello");
+	echo "<Say voice=\"man\" language=\"en\">"."Thanks for calling to".$company.GREETING."</Say>\n" ;
+	echo "<Play>"."http://myfile.com"".</Play>\n" ;
+	$_REQUEST['get']="Digits";
+			echo "<Gather action=\"\" numDigits=\"5\" > <Say>". "question?"."</Say> </Gather>";
+	$_REQUEST['hola']="TranscriptionText";
+			echo "<Record transcribe=\"true\" transcribeCallback=\"\" /> \n";
+	echo "<Dial callerId=\"".$caller."\">\n <Number>"."+34656422095"."</Number> \n </Dial> \n";
+	echo "<Dial callerId=\"".$caller."\">\n <Number>"."roberto"."</Number> \n </Dial> \n";
+	$hola=$caller."";
+	$b=($callStatus=="DISCONNECTED");
+	$d=1;
+	// Send implementation for HTTP GET with cURL.
+		
+				$url = "http://yourhost.com"+"?"+"caller="+$caller+"&"+"hola="+$hola;
+				$curl_handle=curl_init();
+				curl_setopt($curl_handle,CURLOPT_URL,$url);
+				curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
+				curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
+				curl_exec($curl_handle);
+				curl_close($curl_handle);
+	if((($callStatus=="ANSWERING"| $callStatus=="ANSWERED"))){
+			}
+	else if((($callStatus=="FAILED"))){
+			echo "<Say voice=\"man\" language=\"en\">".$lastState."</Say>\n" ;
+			}
+	else {
+			echo "<Say voice=\"man\" language=\"en\">".GREETING."</Say>\n" ;
+			}
+	$d="hola";
+	echo "<Hangup /> \n" ;
+	echo "<Reject /> \n" ;
+	
+	
+	// Update the global variables and the session params.
+	
+	
+	echo "<//Response>;"
+}
+
+$app->run();
+
+?>

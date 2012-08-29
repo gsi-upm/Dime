@@ -1,0 +1,14 @@
+application State
+
+state start{
+	
+	say "This is the start state";
+	goTo end when COMPLETED;
+} 
+
+state end{ 
+	say "You application has reached the end state";
+	hangUp;
+}
+  
+   
