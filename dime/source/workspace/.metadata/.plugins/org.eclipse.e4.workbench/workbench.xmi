@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_xEF_8d_kEeG9_7ZRCRfLXA" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_xEF_8t_kEeG9_7ZRCRfLXA" bindingContexts="_xEF_-9_kEeG9_7ZRCRfLXA">
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_xEF_8t_kEeG9_7ZRCRfLXA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_xT-PAt_kEeG9_7ZRCRfLXA" label="%trimmedwindow.label.eclipseSDK" x="294" y="22" width="1440" height="787">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_xEF_8t_kEeG9_7ZRCRfLXA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_xT-PAt_kEeG9_7ZRCRfLXA" label="%trimmedwindow.label.eclipseSDK" x="294" y="22" width="1440" height="789">
     <tags>topLevel</tags>
     <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_xT-PAt_kEeG9_7ZRCRfLXA" selectedElement="_xT-2EN_kEeG9_7ZRCRfLXA" horizontal="true">
@@ -124,19 +124,14 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_xazPwN_kEeG9_7ZRCRfLXA" elementId="org.eclipse.ui.editorss" selectedElement="_0KAhIeX8EeGHQKzyRWQI_Q">
-      <children xsi:type="basic:PartStack" xmi:id="_0KAhIeX8EeGHQKzyRWQI_Q" elementId="PartStack@778ccfe9" selectedElement="_Q4wuoOc8EeGEp_DOdnmqaA">
-        <children xsi:type="basic:Part" xmi:id="_IxpfQOYYEeGdwby02zFnrg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="DimeJavaValidator.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="org.telcodev.dsl/src/org/telcodev/dsl/validation/DimeJavaValidator.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.telcodev.dsl/src/org/telcodev/dsl/validation/DimeJavaValidator.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;971&quot; selectionTopPixel=&quot;1195&quot;/>&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-        </children>
+      <children xsi:type="basic:PartStack" xmi:id="_0KAhIeX8EeGHQKzyRWQI_Q" elementId="PartStack@778ccfe9" selectedElement="_ieyL0OYYEeGdwby02zFnrg">
         <children xsi:type="basic:Part" xmi:id="_ieyL0OYYEeGdwby02zFnrg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Twilio_php_generator.xtend" iconURI="platform:/plugin/org.eclipse.xtend.ide/icons/xtend_file.png" tooltip="org.telcodev.dsl/src/org/telcodev/dsl/generator/Twilio_php_generator.xtend" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.telcodev.dsl/src/org/telcodev/dsl/generator/Twilio_php_generator.xtend&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;14296&quot; selectionTopPixel=&quot;3174&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.telcodev.dsl/src/org/telcodev/dsl/generator/Twilio_php_generator.xtend&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;14061&quot; selectionTopPixel=&quot;2935&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_rWRJ4OYYEeGdwby02zFnrg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Tropo_php_generator.xtend" iconURI="platform:/plugin/org.eclipse.xtend.ide/icons/xtend_file.png" tooltip="org.telcodev.dsl/src/org/telcodev/dsl/generator/Tropo_php_generator.xtend" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.telcodev.dsl/src/org/telcodev/dsl/generator/Tropo_php_generator.xtend&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;17356&quot; selectionTopPixel=&quot;7758&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.telcodev.dsl/src/org/telcodev/dsl/generator/Tropo_php_generator.xtend&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;18446&quot; selectionTopPixel=&quot;6640&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
         </children>

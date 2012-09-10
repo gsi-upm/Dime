@@ -1,14 +1,14 @@
-application State
+Application STATE
 
-state start{
+State start{
 	
-	say "This is the start state";
-	goTo end when COMPLETED;
+	Say "This is the start state";
+	GoTo end when COMPLETED;
 } 
 
-state end{ 
-	say "You application has reached the end state";
-	hangUp;
+State end{ 
+	Say "You application has reached the end state";
+	HangUp; 
 }
-  
-   
+     
+       

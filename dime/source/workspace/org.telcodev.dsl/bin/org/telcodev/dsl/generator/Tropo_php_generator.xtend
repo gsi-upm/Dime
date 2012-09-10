@@ -642,7 +642,7 @@ $tropo->say(«declareConcatenation(elem.value)»)'''
 	}
 	 
 	def static declareTransition(Transition elem){
-		if(elem.event.equals("ERROR")){
+		if(elem.event.name.equals("ERROR")){
 				'''$tropo->on(array("event" => "incomplete", "next" =>"«appName».php?uri=«elem.target.name»"));
 $tropo->on(array("event" => "error", "next" =>"«appName».php?uri=«elem.target.name»"));'''
 			

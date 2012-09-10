@@ -1404,23 +1404,24 @@ public class Tropo_php_generator {
   public static CharSequence declareTransition(final Transition elem) {
     CharSequence _xifexpression = null;
     EVENT _event = elem.getEvent();
-    boolean _equals = _event.equals("ERROR");
+    String _name = _event.getName();
+    boolean _equals = _name.equals("ERROR");
     if (_equals) {
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("$tropo->on(array(\"event\" => \"incomplete\", \"next\" =>\"");
       _builder.append(Tropo_php_generator.appName, "");
       _builder.append(".php?uri=");
       State _target = elem.getTarget();
-      String _name = _target.getName();
-      _builder.append(_name, "");
+      String _name_1 = _target.getName();
+      _builder.append(_name_1, "");
       _builder.append("\"));");
       _builder.newLineIfNotEmpty();
       _builder.append("$tropo->on(array(\"event\" => \"error\", \"next\" =>\"");
       _builder.append(Tropo_php_generator.appName, "");
       _builder.append(".php?uri=");
       State _target_1 = elem.getTarget();
-      String _name_1 = _target_1.getName();
-      _builder.append(_name_1, "");
+      String _name_2 = _target_1.getName();
+      _builder.append(_name_2, "");
       _builder.append("\"));");
       _xifexpression = _builder;
     } else {
@@ -1433,8 +1434,8 @@ public class Tropo_php_generator {
       _builder_1.append(Tropo_php_generator.appName, "");
       _builder_1.append(".php?uri=");
       State _target_2 = elem.getTarget();
-      String _name_2 = _target_2.getName();
-      _builder_1.append(_name_2, "");
+      String _name_3 = _target_2.getName();
+      _builder_1.append(_name_3, "");
       _builder_1.append("\"));");
       _xifexpression = _builder_1;
     }

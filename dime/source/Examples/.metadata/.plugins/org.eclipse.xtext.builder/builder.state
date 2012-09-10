@@ -39,8 +39,8 @@
     <exportedObjects xsi:type="builderState:EObjectDescription" name="10:CallCenter5:start" fragment="//@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:CallCenter5:start7:Reject;" fragment="//@sta.0/@stms.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Reject"/>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:CallCenter5:start7:HangUp;" fragment="//@sta.0/@stms.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
     </exportedObjects>
     <exportedObjects xsi:type="builderState:EObjectDescription" name="10:CallCenter5:start3:Say" fragment="//@sta.0/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
@@ -75,28 +75,42 @@
     </exportedObjects>
   </builderState:ResourceDescription>
   <builderState:ResourceDescription URI="platform:/resource/Examples/state.dime">
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:State" fragment="/">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE" fragment="/">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:State5:start" fragment="//@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE5:start" fragment="//@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:State5:start3:say" fragment="//@sta.0/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE5:start3:Say" fragment="//@sta.0/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:State5:start4:goTo" fragment="//@sta.0/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE5:start4:GoTo" fragment="//@sta.0/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:State5:start4:goTo9:COMPLETED" fragment="//@sta.0/@stms.1/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE5:start4:GoTo9:COMPLETED" fragment="//@sta.0/@stms.1/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:State3:end" fragment="//@sta.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE3:end" fragment="//@sta.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:State3:end3:say" fragment="//@sta.1/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE3:end3:Say" fragment="//@sta.1/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:State3:end7:hangUp;" fragment="//@sta.1/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE3:end7:HangUp;" fragment="//@sta.1/@stms.1">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Examples/email.dime">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL" fragment="/">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL5:start" fragment="//@sta.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL5:start5:Email" fragment="//@sta.0/@stms.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Email"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL5:start7:HangUp;" fragment="//@sta.0/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
     </exportedObjects>
   </builderState:ResourceDescription>
@@ -122,25 +136,131 @@
     <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States5:start4:GoTo5:ERROR" fragment="//@sta.0/@stms.1/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States5:start4:GoTo" fragment="//@sta.0/@stms.2">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States5:start4:GoTo5:TIMES" fragment="//@sta.0/@stms.2/@event">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
+    </exportedObjects>
     <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end" fragment="//@sta.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Say" fragment="//@sta.1/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end8:GREETING" fragment="//@sta.1/@stms.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Constant"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Say" fragment="//@sta.1/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-  </builderState:ResourceDescription>
-  <builderState:ResourceDescription URI="platform:/resource/Examples/email.dime">
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL" fragment="/">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:Play" fragment="//@sta.1/@stms.2">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Play"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL5:start" fragment="//@sta.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Get" fragment="//@sta.1/@stms.3">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//GetDigits"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL5:start5:Email" fragment="//@sta.0/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Ask" fragment="//@sta.1/@stms.4">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Ask"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end6:DialTo" fragment="//@sta.1/@stms.5">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Dial"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:Call" fragment="//@sta.1/@stms.6">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Call"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:hola" fragment="//@sta.1/@stms.7">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:hola6:CALLER" fragment="//@sta.1/@stms.7/@value/@left">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end1:b" fragment="//@sta.1/@stms.8">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//BoolVariable"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end1:b12:DISCONNECTED" fragment="//@sta.1/@stms.8/@value">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//CALLSTATUS"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end1:d" fragment="//@sta.1/@stms.9">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//NumVariable"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if" fragment="//@sta.1/@stms.10/@block">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//CondBlock"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if11:IN-PROGRESS" fragment="//@sta.1/@stms.10/@block/@cond/@obj">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//CALLSTATUS"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{" fragment="//@sta.1/@stms.10/@block/@action">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Block"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{4:GoTo" fragment="//@sta.1/@stms.10/@block/@action/@sta.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{4:GoTo9:COMPLETED" fragment="//@sta.1/@stms.10/@block/@action/@sta.0/@event">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{4:GoTo" fragment="//@sta.1/@stms.10/@block/@action/@sta.1">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{4:GoTo5:ERROR" fragment="//@sta.1/@stms.10/@block/@action/@sta.1/@event">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{4:GoTo" fragment="//@sta.1/@stms.10/@block/@action/@sta.2">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{4:GoTo6:HANGUP" fragment="//@sta.1/@stms.10/@block/@action/@sta.2/@event">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{4:GoTo" fragment="//@sta.1/@stms.10/@block/@action/@sta.3">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{4:GoTo5:TIMES" fragment="//@sta.1/@stms.10/@block/@action/@sta.3/@event">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{4:GoTo" fragment="//@sta.1/@stms.10/@block/@action/@sta.4">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{4:GoTo7:TIMEOUT" fragment="//@sta.1/@stms.10/@block/@action/@sta.4/@event">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if" fragment="//@sta.1/@stms.10/@blocks.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//CondBlock"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if6:FAILED" fragment="//@sta.1/@stms.10/@blocks.0/@cond/@obj">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//CALLSTATUS"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{" fragment="//@sta.1/@stms.10/@blocks.0/@action">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Block"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{3:Say" fragment="//@sta.1/@stms.10/@blocks.0/@action/@sta.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end2:if1:{3:Say9:LASTSTATE" fragment="//@sta.1/@stms.10/@blocks.0/@action/@sta.0/@that">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end1:{" fragment="//@sta.1/@stms.10/@defaultBlock">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Block"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end1:{3:Say" fragment="//@sta.1/@stms.10/@defaultBlock/@sta.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end1:d" fragment="//@sta.1/@stms.11">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end5:Tweet" fragment="//@sta.1/@stms.12">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Tweet"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Sms" fragment="//@sta.1/@stms.13">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Sms"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end5:Email" fragment="//@sta.1/@stms.14">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Email"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL5:start7:HangUp;" fragment="//@sta.0/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end7:HangUp;" fragment="//@sta.1/@stms.15">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end7:Reject;" fragment="//@sta.1/@stms.16">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Reject"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Say" fragment="//@sta.1/@stms.17">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
   </builderState:ResourceDescription>
   <builderState:ResourceDescription URI="platform:/resource/Examples/restaurant.dime">
@@ -622,6 +742,11 @@
     <importedNames>6:client</importedNames>
     <importedNames>6:isdone</importedNames>
   </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Examples/globals.dime">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="11:application" fragment="/">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
   <builderState:ResourceDescription URI="platform:/resource/Examples/sms.dime">
     <exportedObjects xsi:type="builderState:EObjectDescription" name="3:SMS" fragment="/">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
@@ -633,41 +758,6 @@
       <eClass href="http://www.telcodev.org/dsl/Dime#//Sms"/>
     </exportedObjects>
     <exportedObjects xsi:type="builderState:EObjectDescription" name="3:SMS5:start7:HangUp;" fragment="//@sta.0/@stms.1">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
-    </exportedObjects>
-  </builderState:ResourceDescription>
-  <builderState:ResourceDescription URI="platform:/resource/Examples/globals.dime">
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="7:Globals" fragment="/">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="7:Globals8:greeting" fragment="//@elements.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="7:Globals4:role" fragment="//@elements.1">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Constant"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="7:Globals5:start" fragment="//@sta.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="7:Globals5:start3:say" fragment="//@sta.0/@stms.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="7:Globals5:start8:greeting" fragment="//@sta.0/@stms.1">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="7:Globals5:start4:goTo" fragment="//@sta.0/@stms.2">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="7:Globals5:start4:goTo9:COMPLETED" fragment="//@sta.0/@stms.2/@event">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="7:Globals3:end" fragment="//@sta.1">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="7:Globals3:end3:say" fragment="//@sta.1/@stms.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="7:Globals3:end7:hangUp;" fragment="//@sta.1/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
     </exportedObjects>
   </builderState:ResourceDescription>
@@ -711,17 +801,6 @@
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
     </exportedObjects>
   </builderState:ResourceDescription>
-  <builderState:ResourceDescription URI="platform:/resource/Examples/record.dime">
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt" fragment="/">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt5:start" fragment="//@sta.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt5:start6:Record" fragment="//@sta.0/@stms.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Record"/>
-    </exportedObjects>
-  </builderState:ResourceDescription>
   <builderState:ResourceDescription URI="platform:/resource/Examples/dial.dime">
     <exportedObjects xsi:type="builderState:EObjectDescription" name="4:Dial" fragment="/">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
@@ -731,6 +810,20 @@
     </exportedObjects>
     <exportedObjects xsi:type="builderState:EObjectDescription" name="4:Dial5:start6:DialTo" fragment="//@sta.0/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Dial"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Examples/record.dime">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt" fragment="/">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt8:GREETING" fragment="//@elements.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Constant"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt5:start" fragment="//@sta.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt5:start6:Record" fragment="//@sta.0/@stms.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Record"/>
     </exportedObjects>
   </builderState:ResourceDescription>
 </xmi:XMI>

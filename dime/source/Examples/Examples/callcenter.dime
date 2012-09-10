@@ -2,6 +2,6 @@ Application CallCenter
 
 
 State start{
-	Reject;
+	HangUp;
 	Say "Wrong";
-} 
+}    

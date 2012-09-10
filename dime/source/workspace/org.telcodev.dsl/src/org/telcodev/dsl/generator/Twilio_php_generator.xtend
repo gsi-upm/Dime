@@ -86,34 +86,34 @@ class Twilio_php_generator {
 	System::out.println("Generating resources folder.");
 		//FALTAN ARCHIVOS DE LAS SIGNALS SI REALMENTE SE NECESITAN
 		
-		//Copy important Slim files to the new directory
-		 		
-		fsa.generateFile('res/Slim/Environment.php', CopyFile::readFile('res/twilio_php/Slim/Environment.php'))
-		fsa.generateFile('res/Slim/Log.php', CopyFile::readFile('res/twilio_php/Slim/Log.php'))
-		fsa.generateFile('res/Slim/LogWriter.php', CopyFile::readFile('res/twilio_php/Slim/LogWriter.php'))
-		fsa.generateFile('res/Slim/Middleware.php', CopyFile::readFile('res/twilio_php/Slim/Middleware.php'))
-		fsa.generateFile('res/Slim/Route.php', CopyFile::readFile('res/twilio_php/Slim/Route.php'))
-		fsa.generateFile('res/Slim/Router.php', CopyFile::readFile('res/twilio_php/Slim/Router.php'))
-		fsa.generateFile('res/Slim/Slim.php', CopyFile::readFile('res/twilio_php/Slim/Slim.php'))
-		fsa.generateFile('res/Slim/View.php', CopyFile::readFile('res/twilio_php/Slim/View.php'))
-		
-		fsa.generateFile('res/Slim/Exception/Pass.php', CopyFile::readFile('res/twilio_php/Slim/Exception/Pass.php'))
-		fsa.generateFile('res/Slim/Exception/RequestSlash.php', CopyFile::readFile('res/twilio_php/Slim/Exception/RequestSlash.php'))
-		fsa.generateFile('res/Slim/Exception/Stop.php', CopyFile::readFile('res/twilio_php/Slim/Exception/Stop.php'))
-
-		fsa.generateFile('res/Slim/Http/Headers.php', CopyFile::readFile('res/twilio_php/Slim/Http/Headers.php'))
-		fsa.generateFile('res/Slim/Http/Request.php', CopyFile::readFile('res/twilio_php/Slim/Http/Request.php'))
-		fsa.generateFile('res/Slim/Http/Response.php', CopyFile::readFile('res/twilio_php/Slim/Http/Response.php'))
-		fsa.generateFile('res/Slim/Http/Util.php', CopyFile::readFile('res/twilio_php/Slim/Http/Util.php'))
-
-		fsa.generateFile('res/Slim/Middleware/ContentTypes.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/ContentTypes.php'))
-		fsa.generateFile('res/Slim/Middleware/Flash.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/Flash.php'))
-		fsa.generateFile('res/Slim/Middleware/MethodOverride.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/MethodOverride.php'))
-		fsa.generateFile('res/Slim/Middleware/PrettyExceptions.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/PrettyExceptions.php'))
-		fsa.generateFile('res/Slim/Middleware/SessionCookie.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/SessionCookie.php'))
-
-		
-	
+//		//Copy important Slim files to the new directory
+//		 		
+//		fsa.generateFile('res/Slim/Environment.php', CopyFile::readFile('res/twilio_php/Slim/Environment.php'))
+//		fsa.generateFile('res/Slim/Log.php', CopyFile::readFile('res/twilio_php/Slim/Log.php'))
+//		fsa.generateFile('res/Slim/LogWriter.php', CopyFile::readFile('res/twilio_php/Slim/LogWriter.php'))
+//		fsa.generateFile('res/Slim/Middleware.php', CopyFile::readFile('res/twilio_php/Slim/Middleware.php'))
+//		fsa.generateFile('res/Slim/Route.php', CopyFile::readFile('res/twilio_php/Slim/Route.php'))
+//		fsa.generateFile('res/Slim/Router.php', CopyFile::readFile('res/twilio_php/Slim/Router.php'))
+//		fsa.generateFile('res/Slim/Slim.php', CopyFile::readFile('res/twilio_php/Slim/Slim.php'))
+//		fsa.generateFile('res/Slim/View.php', CopyFile::readFile('res/twilio_php/Slim/View.php'))
+//		
+//		fsa.generateFile('res/Slim/Exception/Pass.php', CopyFile::readFile('res/twilio_php/Slim/Exception/Pass.php'))
+//		fsa.generateFile('res/Slim/Exception/RequestSlash.php', CopyFile::readFile('res/twilio_php/Slim/Exception/RequestSlash.php'))
+//		fsa.generateFile('res/Slim/Exception/Stop.php', CopyFile::readFile('res/twilio_php/Slim/Exception/Stop.php'))
+//
+//		fsa.generateFile('res/Slim/Http/Headers.php', CopyFile::readFile('res/twilio_php/Slim/Http/Headers.php'))
+//		fsa.generateFile('res/Slim/Http/Request.php', CopyFile::readFile('res/twilio_php/Slim/Http/Request.php'))
+//		fsa.generateFile('res/Slim/Http/Response.php', CopyFile::readFile('res/twilio_php/Slim/Http/Response.php'))
+//		fsa.generateFile('res/Slim/Http/Util.php', CopyFile::readFile('res/twilio_php/Slim/Http/Util.php'))
+//
+//		fsa.generateFile('res/Slim/Middleware/ContentTypes.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/ContentTypes.php'))
+//		fsa.generateFile('res/Slim/Middleware/Flash.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/Flash.php'))
+//		fsa.generateFile('res/Slim/Middleware/MethodOverride.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/MethodOverride.php'))
+//		fsa.generateFile('res/Slim/Middleware/PrettyExceptions.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/PrettyExceptions.php'))
+//		fsa.generateFile('res/Slim/Middleware/SessionCookie.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/SessionCookie.php'))
+//
+//		
+//	
 	
 		//Copy important Twilio files to the new directory
 		
@@ -179,7 +179,13 @@ class Twilio_php_generator {
 		
 		System::out.println("Creating "+"index"+".php file");
 		
-		fsa.generateFile("index.php", Twilio_php_generator::toTwilioPHP(resource.contents.head as Document, resource))
+		fsa.generateFile("globals.php", toTwilioPHP(resource.contents.head as Document, resource))
+		
+		
+		for(state :( resource.contents.head as Document).sta){
+			fsa.generateFile(state.name+".php",declareState(state))
+			
+		}
 		
 		System::out.println("Success.");
 		System::out.println("");
@@ -191,34 +197,19 @@ class Twilio_php_generator {
 	}
 	
 	
-//IMPORTAR SLIM
+//FALTAN LAS GLOBALES
+
 	def static toTwilioPHP(Document sm, Resource resource) {
 	
 			'''<?php 
-			
-// Required Twilio files
 
-require "res/Slim/Slim.php";
-
-// Slim files for states simulation. More information in 
-
-require "res/Service/Twilio.php";
-
-
-$app= new Slim();
-
-// Defining constants
+// Defining global constants and variables
 
 «FOR c : sm.elements»«declareGlobalStatement(c)»
 «ENDFOR»
 
 
-// Declaration of the states
 
-«FOR c : sm.sta»«declareState(c)»
-«ENDFOR»
-
-$app->run();
 
 ?>'''
 		
@@ -233,108 +224,155 @@ $app->run();
 	 '''«declareStatement(elem)»'''
 	}
 	
-	//POSIBLE ERROR CUANDO SÓLO DECLARAMOS ARRIBA Y NO INICIALIZAMOS
 	def static dispatch declareGlobalStatement(BoolVariable elem){
 		variablesId.add(elem.name)
 		variables.put(elem.name, declareBoolExpression(elem.value))
-		''''''
+		'''$«elem.name»=«declareBoolExpression(elem.value)»;'''
 	}
 	
 	def static dispatch declareGlobalStatement(StringVariable elem){
 			variablesId.add(elem.name)
 			variables.put(elem.name, declareConcatenation(elem.value))
-			''''''
+		'''$«elem.name»=«declareConcatenation(elem.value)»;'''
 	}
 	
 	def static dispatch declareGlobalStatement(NumVariable elem){
 			variablesId.add(elem.name)
 			variables.put(elem.name, declareMathExpression(elem.value))
-			''''''
+			
+			'''$«elem.name»=«declareMathExpression(elem.value)»;'''
 	}
 	
 // States declaration:
 	
-		
-	
-
-	
-	
 	
 	def  static declareState(State elem){
-		var result=true
-		name=elem.name
+		var result=false
+	
+		System::out.println("Generating "+elem.name.toUpperCase+" state.");
 		
-		System::out.println("Generating "+name+" state.");
 		
-		
-'''// State «elem.name» implementation
+'''
+<?php
 
-$app->post('/«elem.name»', 'app_«elem.name»');
-function app_«elem.name»() {
-	
+require "res/Services/Twilio.php";
+require "globals.php";
+
+// State «elem.name» implementation
+
+
 	header("content-type: text/xml");
-	«IF hangupRedirect!=null &&false»
-	if($status=="hangup"){
-		echo "<Redirect>«hangupRedirect»</Redirect>";
-		
-	}«ENDIF»
-	
-	«IF errorRedirect!=null && false»
-	if($status=="fail"){
-		echo "<Redirect>«errorRedirect»</Redirect>";
-	}«ENDIF»
-	
-	
-	«IF elem.name.equals("start")&&false»
-	
-	
-	«ENDIF»
-	«IF elem.times!=0» 
-	
-	// Times signal appears when the param reached the atribute times of the state
-	
-	«ENDIF»
-	
-	«IF elem.timeout!=0 » 	
-	
-	// Timeout signal appears when the timeout atribute of the state is reached.
-	
-	«ENDIF»
+
 	
 	// Update of the value of the global constants and variables, and the session params.
 	
+	«FOR d: variablesId»
+	«declareStateGlobalVariable(d)» 
+	«ENDFOR»
 	
-	 
-	// Declaration of the statements of the state.
-	echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
-	echo "<Response>";
-	«FOR c : elem.stms»
+	if($_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing" ){
+		
+	«IF elem.name.equals("start")»
+	
+		// Initialitation of the global variables
+		«FOR d: variablesId»
+	«inicializeGlobalVariable(d)» 
+	«ENDFOR»
+	
+	«ENDIF»
+	
+		// Declaration of the statements of the state.
+		echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
+		echo "<Response>";
+		«FOR c : elem.stms»
 	«declareAbstractElement(c)»
 	«ENDFOR»
 	
 	
-	// Update the global variables and the session params.
+		// Update the global variables and the session params.
 	
 	
-	«IF completedRedirect!=null && result»echo "<Redirect>«completedRedirect»</Redirect>";«ENDIF»
-	«IF errorRedirect!=null»echo "<Redirect>«hangupRedirect»</Redirect>";«ENDIF»
-	echo "</Response>";
-}'''
+		«IF completedRedirect!=null && !result»echo "<Redirect>«completedRedirect»</Redirect>";«ENDIF»
+		«IF errorRedirect!=null»echo "<Redirect>«hangupRedirect»</Redirect>";«ENDIF»
+		echo "</Response>";
+		«FOR d: variablesId»
+	«saveGlobalVariable(d)» 
+	«ENDFOR»
 	}
 	
+	«IF hangupRedirect!=null»
+	else if($status=="hangup"){
+		echo "<Redirect>«hangupRedirect»</Redirect>";
+		
+	}«ENDIF»
 	
-	//ESTA REPETIDO
+	«IF errorRedirect!=null»
+	else if($status=="fail"){
+		echo "<Redirect>«errorRedirect»</Redirect>";
+	}«ENDIF»
+	
+«IF elem.times!=0&& timesRedirect!=null» 
+	
+	// Times signal appears when the param reached the atribute times of the state
+	
+	if(isset($_REQUEST['times']){
+	$attempts=$_REQUEST['times'];
+		if($attempts==«elem.times»){
+			echo "<Redirect>«timesRedirect»</Redirect>";
+		}else{
+			$attempts++;
+		}
+	}else{
+		$_REQUEST['times']=1;
+	}
+	«ENDIF»
+	
+	«IF elem.timeout!=0 && timeoutRedirect!=null» 	
+	
+	// Timeout signal appears when the timeout atribute of the state is reached.
+	
+	«ENDIF»
+	$_REQUEST['lastState']='«elem.name»';
+	«errorRedirect=null»«completedRedirect=null»«hangupRedirect=null»«timesRedirect=null»«timeoutRedirect=null»
+	
+?>'''
+
+
+	
+	}
+	
+
+	
+	
+
+	
+	
 	
 	// Auxiliar functions for state
 	
-	def static dispatch declareGlobalVariable(String elem){
+	
+	// AQUI HE HECHO UNA GILIPOLLEZ ENORME
+	
+	def static  declareStateGlobalVariable(String elem){
 		
 		'''$«elem»=$_REQUEST['«elem»'];
-		if($«elem»=="Digits"){
-			$«elem»= $_REQUEST['Digits'];
-		}else if($«elem»=="TranscriptionText"){
-			$«elem»= $_REQUEST['TranscriptionText'];
-		}'''
+if($«elem»=="Digits"){
+	$«elem»= $_REQUEST['Digits'];
+}else if($«elem»=="TranscriptionText"){
+	$«elem»= $_REQUEST['TranscriptionText'];
+}'''
+	}
+	
+		
+	def static saveGlobalVariable(String elem){
+		'''$_REQUEST['«elem»']=$«elem»;  '''
+	}
+	
+	
+	def static inicializeGlobalVariable(String elem){
+		'''$«elem»=«variables.get(elem)»;
+$_REQUEST['«elem»']=$«elem»;
+		'''
 	}
 
 // Abstract elements
@@ -537,9 +575,9 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 
  	def static dispatch declareLiteral(SESSION elem){
  		if(elem.name.equals('CALLER')){
- 			'''$caller'''
+ 			'''$_REQUEST['From']'''
  		}else if(elem.name.equals('CALLED')){
- 			'''$called'''
+ 			'''$_REQUEST['To']'''
  		}
  		else if(elem.name.equals('LASTSTATE')){
  			'''$lastState'''
@@ -622,10 +660,10 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		echo "<Gather action=\"«completedRedirect»\" numDigits=\"«elem.numDigits»\" > <Say>". «declareConcatenation(elem.question)»."</Say> </Gather>"'''
 	}
 	def static dispatch declareVoiceTag( Dial elem){
-		'''echo "<Dial callerId=\"".$caller."\">\n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n"'''
+		'''echo "<Dial callerId=\"".$_REQUEST['From']."\">\n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n"'''
 	}
 	def static dispatch declareVoiceTag( Call elem){
-		'''echo "<Dial callerId=\"".$caller."\">\n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n"'''
+		'''echo "<Dial callerId=\"".$_REQUEST['From']."\">\n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n"'''
 	} 
 
 
@@ -639,7 +677,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		'''mail(«declareConcatenation(elem.to)», «declareConcatenation(elem.title)»,«declareConcatenation(elem.value)», "From: <".«declareConcatenation(elem.from)»."> \r\n") '''
 	}  
 	def static dispatch declareVoiceTag( Sms elem){
-		'''echo "<Sms from=/"".$caller./"." to=/«declareConcatenation(elem.to)»."/">".«declareConcatenation(elem.value)»."</Sms>"'''
+		'''echo "<Sms from=\"".$_REQUEST['From']."\" "." to=\«declareConcatenation(elem.to)»."\">".«declareConcatenation(elem.value)»."</Sms>"'''
 	} 
 	// Statements
 	
@@ -649,7 +687,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	}
 	def static dispatch declareStatement(NumVariable elem){
 		'''«declareVariable(elem)»;'''
-	} 
+	}  
 	//def static dispatch declareStatement(Assigment elem){
 	//	'''«declareAssigment(elem)»;'''
 	//}
@@ -669,20 +707,24 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	}
 	
 	def static declareTransition(Transition elem){
-		if(elem.event.equals("error")){
-			errorRedirect=appName+".php?uri="+elem.target.name
+		if(elem.event.name.equals("ERROR")){
+			errorRedirect=url+elem.target.name+".php";
 			
-		}else if(elem.event.equals("hangup")){
-			hangupRedirect=appName+".php?uri="+elem.target.name
-		}else if(elem.event.equals("completed")){
-			completedRedirect=appName+".php?uri="+elem.target.name
-		}else if(elem.event.equals("attemptsLimit")){
-			timesRedirect=appName+".php?uri="+elem.target.name
-		}else if(elem.event.equals("timeout")){
-			timeoutRedirect=appName+".php?uri="+elem.target.name
+		}else if(elem.event.name.equals("HANGUP")){
+			hangupRedirect=url+elem.target.name+".php";
+		}else if(elem.event.name.equals("COMPLETED")){
+			completedRedirect=url+elem.target.name+".php";
+		}else if(elem.event.name.equals("TIMES")){
+			timesRedirect=url+elem.target.name+".php";
+		}else if(elem.event.name.equals("TIMEOUT")){
+			timeoutRedirect=url+elem.target.name+".php";
 		}else {
 			
 		}
+		System::out.println("url:  "+url+elem.target.name+".php");
+		System::out.println("url:  "+completedRedirect);
+		
+		
 		''''''
 		
 	}

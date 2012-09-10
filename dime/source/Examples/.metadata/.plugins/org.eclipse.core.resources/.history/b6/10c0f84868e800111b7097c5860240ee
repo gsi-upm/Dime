@@ -1,6 +1,0 @@
-Application SMS
-
-State start{
-	Sms "hola" to "SIP:totemteleko@ekiga.net";
-	HangUp;
-}

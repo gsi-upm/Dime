@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 13 resources" deleteContents="false" description="Delete 13 resources" element1="/Examples/src-gen/res" element10="/Examples/src-gen/sms.php" element11="/Examples/src-gen/sound.php" element12="/Examples/src-gen/start.php" element13="/Examples/src-gen/states.php" element2="/Examples/src-gen/callcenter.php" element3="/Examples/src-gen/caller.php" element4="/Examples/src-gen/dial.php" element5="/Examples/src-gen/email.php" element6="/Examples/src-gen/globals.php" element7="/Examples/src-gen/helloworld.php" element8="/Examples/src-gen/outboundcall.php" element9="/Examples/src-gen/send_data.php" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="13" stamp="1346314754456"/>
+</session>
