@@ -12,27 +12,25 @@ require "globals.php";
 	// Update of the value of the global constants and variables, and the session params.
 	
 	
-	if($_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing" ){
+	if($_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing"|| $_REQUEST["CallStatus"]=="queued"){
 		
-	
-		// Initialitation of the global variables
-	
+
 	
 		// Declaration of the statements of the state.
 		echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
 		echo "<Response>";
-echo "<Dial callerId=\"".$_REQUEST['From']."\">\n <Number>"."+34656422095"."</Number> \n </Dial> \n";
+		echo "<Play>"."http://shannon.gsi.dit.upm.es/roberto/lion2.wav"."</Play>\n" ;
+		echo "<Hangup /> \n" ;
 	
 	
 		// Update the global variables and the session params.
 	
 	
+	
 		echo "</Response>";
 	}
 	
+
 	
-	
-	
-	$_REQUEST['lastState']='start';
 	
 ?>

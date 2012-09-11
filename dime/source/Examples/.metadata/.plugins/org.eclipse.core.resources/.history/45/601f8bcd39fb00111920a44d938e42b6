@@ -1,0 +1,12 @@
+Application Dial
+
+
+State start {
+	
+		
+		DialTo "+34656422095";
+
+	
+}
+
+   

@@ -69,6 +69,7 @@ class Twilio_php_generator {
 	private static HashMap variables
 	private static HashMap constants
 	private static Set<String> constantsId
+	private static String number;
 	
 	def static void generateTwilioPhp(Resource resource, IFileSystemAccess fsa, Config config){
 		//Setting parameters
@@ -77,6 +78,7 @@ class Twilio_php_generator {
 		twilioLanguage= config.twilio.language
 		url= config.url
 		language=config.language
+		number= config.twilio.number
 		
 				System::out.println("")
 	System::out.println("*****************************************************************************************")
@@ -220,27 +222,40 @@ class Twilio_php_generator {
 
 	def static dispatch declareGlobalStatement(Constant elem){
 			constantsId.add(elem.name)
-		constants.put(elem.name, declarePrimitive(elem.value))
+			if(elem.value!=null){
+					constants.put(elem.name, declarePrimitive(elem.value))
+			}
+	
+		
 	 '''«declareStatement(elem)»'''
 	}
 	
 	def static dispatch declareGlobalStatement(BoolVariable elem){
 		variablesId.add(elem.name)
-		variables.put(elem.name, declareBoolExpression(elem.value))
-		'''$«elem.name»=«declareBoolExpression(elem.value)»;'''
+		if(elem.value!=null){
+			variables.put(elem.name, declareBoolExpression(elem.value))
+		}
+		
+		''''''
 	}
 	
 	def static dispatch declareGlobalStatement(StringVariable elem){
 			variablesId.add(elem.name)
+			if(elem.value!=null){
 			variables.put(elem.name, declareConcatenation(elem.value))
-		'''$«elem.name»=«declareConcatenation(elem.value)»;'''
+		}
+			
+		''''''
 	}
 	
 	def static dispatch declareGlobalStatement(NumVariable elem){
 			variablesId.add(elem.name)
-			variables.put(elem.name, declareMathExpression(elem.value))
+				if(elem.value!=null){
+					variables.put(elem.name, declareMathExpression(elem.value))
+				}
 			
-			'''$«elem.name»=«declareMathExpression(elem.value)»;'''
+			
+			''''''
 	}
 	
 // States declaration:
@@ -248,6 +263,7 @@ class Twilio_php_generator {
 	
 	def  static declareState(State elem){
 		var result=false
+		var first=true;
 	
 		System::out.println("Generating "+elem.name.toUpperCase+" state.");
 		
@@ -265,52 +281,43 @@ require "globals.php";
 
 	
 	// Update of the value of the global constants and variables, and the session params.
-	
 	«FOR d: variablesId»
 	«declareStateGlobalVariable(d)» 
 	«ENDFOR»
+	«IF hangupRedirect!=null»
 	
-	if($_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing" ){
+	if($_REQUEST["CallStatus"]=="hangup"){
+		echo "<Redirect>«hangupRedirect»?".«saveGlobalVariable()»"</Redirect>";
+	}«ENDIF»
+	
+	«IF errorRedirect!=null»
+	«IF !first»else «ENDIF»if($_REQUEST["CallStatus"]=="fail"){
+		echo "<Redirect>«errorRedirect»?".«saveGlobalVariable()»"</Redirect>";
+	}«ENDIF»
+	
+	«IF !first»else «ENDIF»if($_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing"|| $_REQUEST["CallStatus"]=="queued"){
 		
 	«IF elem.name.equals("start")»
-	
-		// Initialitation of the global variables
-		«FOR d: variablesId»
-	«inicializeGlobalVariable(d)» 
-	«ENDFOR»
-	
+
 	«ENDIF»
 	
 		// Declaration of the statements of the state.
 		echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
 		echo "<Response>";
 		«FOR c : elem.stms»
-	«declareAbstractElement(c)»
+		«declareAbstractElement(c)»
 	«ENDFOR»
 	
 	
 		// Update the global variables and the session params.
 	
 	
-		«IF completedRedirect!=null && !result»echo "<Redirect>«completedRedirect»</Redirect>";«ENDIF»
-		«IF errorRedirect!=null»echo "<Redirect>«hangupRedirect»</Redirect>";«ENDIF»
+		«IF completedRedirect!=null && !result»echo "<Redirect>«completedRedirect»?".«saveGlobalVariable()»"?lastState=«elem.name»</Redirect>";«ENDIF»
+	
 		echo "</Response>";
-		«FOR d: variablesId»
-	«saveGlobalVariable(d)» 
-	«ENDFOR»
 	}
 	
-	«IF hangupRedirect!=null»
-	else if($status=="hangup"){
-		echo "<Redirect>«hangupRedirect»</Redirect>";
-		
-	}«ENDIF»
-	
-	«IF errorRedirect!=null»
-	else if($status=="fail"){
-		echo "<Redirect>«errorRedirect»</Redirect>";
-	}«ENDIF»
-	
+
 «IF elem.times!=0&& timesRedirect!=null» 
 	
 	// Times signal appears when the param reached the atribute times of the state
@@ -318,7 +325,7 @@ require "globals.php";
 	if(isset($_REQUEST['times']){
 	$attempts=$_REQUEST['times'];
 		if($attempts==«elem.times»){
-			echo "<Redirect>«timesRedirect»</Redirect>";
+			echo "<Redirect>«timesRedirect»?".«saveGlobalVariable()»"</Redirect>";
 		}else{
 			$attempts++;
 		}
@@ -332,7 +339,6 @@ require "globals.php";
 	// Timeout signal appears when the timeout atribute of the state is reached.
 	
 	«ENDIF»
-	$_REQUEST['lastState']='«elem.name»';
 	«errorRedirect=null»«completedRedirect=null»«hangupRedirect=null»«timesRedirect=null»«timeoutRedirect=null»
 	
 ?>'''
@@ -341,8 +347,12 @@ require "globals.php";
 	
 	}
 	
-
-	
+//
+//	if($«elem»=="Digits"){
+//	$«elem»= $_REQUEST['Digits'];
+//}else if($«elem»=="TranscriptionText"){
+//	$«elem»= $_REQUEST['TranscriptionText'];
+//}
 	
 
 	
@@ -352,28 +362,22 @@ require "globals.php";
 	
 	
 	// AQUI HE HECHO UNA GILIPOLLEZ ENORME
-	
+
 	def static  declareStateGlobalVariable(String elem){
 		
-		'''$«elem»=$_REQUEST['«elem»'];
-if($«elem»=="Digits"){
-	$«elem»= $_REQUEST['Digits'];
-}else if($«elem»=="TranscriptionText"){
-	$«elem»= $_REQUEST['TranscriptionText'];
-}'''
+		'''$«elem»=$_GET['«elem»'];'''
 	}
 	
 		
-	def static saveGlobalVariable(String elem){
-		'''$_REQUEST['«elem»']=$«elem»;  '''
+	def static saveGlobalVariable(){
+		
+		var N = variablesId.size();
+		
+		'''«FOR n: variablesId»«IF (N=N-1)==0»"«n»=".urlencode($«n»).«ELSE»"«n»=".urlencode($«n»)."&".«ENDIF»«ENDFOR»'''
 	}
 	
 	
-	def static inicializeGlobalVariable(String elem){
-		'''$«elem»=«variables.get(elem)»;
-$_REQUEST['«elem»']=$«elem»;
-		'''
-	}
+
 
 // Abstract elements
 
@@ -660,10 +664,10 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		echo "<Gather action=\"«completedRedirect»\" numDigits=\"«elem.numDigits»\" > <Say>". «declareConcatenation(elem.question)»."</Say> </Gather>"'''
 	}
 	def static dispatch declareVoiceTag( Dial elem){
-		'''echo "<Dial callerId=\"".$_REQUEST['From']."\">\n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n"'''
+		'''echo "<Dial callerId=\""."«number»"."\">\n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n"'''
 	}
 	def static dispatch declareVoiceTag( Call elem){
-		'''echo "<Dial callerId=\"".$_REQUEST['From']."\">\n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n"'''
+		'''echo "<Dial callerId=\""."«number»"."\">\n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n"'''
 	} 
 
 
@@ -677,7 +681,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		'''mail(«declareConcatenation(elem.to)», «declareConcatenation(elem.title)»,«declareConcatenation(elem.value)», "From: <".«declareConcatenation(elem.from)»."> \r\n") '''
 	}  
 	def static dispatch declareVoiceTag( Sms elem){
-		'''echo "<Sms from=\"".$_REQUEST['From']."\" "." to=\«declareConcatenation(elem.to)»."\">".«declareConcatenation(elem.value)»."</Sms>"'''
+		'''echo "<Sms from=\""."«number»"."\" "." to=\«declareConcatenation(elem.to)»."\">".«declareConcatenation(elem.value)»."</Sms>"'''
 	} 
 	// Statements
 	

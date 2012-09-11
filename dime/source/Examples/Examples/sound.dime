@@ -2,7 +2,7 @@ Application Sound
 
 State start{
 	
-	Play "http://shannon.gsi.dit.upm.es/roberto/birds_sing.mp3";
+	Play "http://shannon.gsi.dit.upm.es/roberto/lion2.wav";
 	HangUp;
-	Say "FUCK OFF";
+	
 }

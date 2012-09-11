@@ -3572,72 +3572,66 @@ ruleCALLSTATUS returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(((
-    {
-        $current = forceCreateModelElement(
-            grammarAccess.getCALLSTATUSAccess().getBoolLiteralAction_0_0(),
-            $current);
-    }
-)(
+((
 (
-		lv_name_1_0=	'RINGING' 
+		lv_name_0_0=	'RINGING' 
     {
-        newLeafNode(lv_name_1_0, grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_1_0());
+        newLeafNode(lv_name_0_0, grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getCALLSTATUSRule());
 	        }
-       		setWithLastConsumed($current, "name", lv_name_1_0, "RINGING");
-	    }
-
-)
-))
-    |(
-(
-		lv_name_2_0=	'IN-PROGRESS' 
-    {
-        newLeafNode(lv_name_2_0, grammarAccess.getCALLSTATUSAccess().getNameINPROGRESSKeyword_1_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getCALLSTATUSRule());
-	        }
-       		setWithLastConsumed($current, "name", lv_name_2_0, "IN-PROGRESS");
+       		setWithLastConsumed($current, "name", lv_name_0_0, "RINGING");
 	    }
 
 )
 )
     |(
 (
-		lv_name_3_0=	'DISCONNECTED' 
+		lv_name_1_0=	'IN-PROGRESS' 
     {
-        newLeafNode(lv_name_3_0, grammarAccess.getCALLSTATUSAccess().getNameDISCONNECTEDKeyword_2_0());
+        newLeafNode(lv_name_1_0, grammarAccess.getCALLSTATUSAccess().getNameINPROGRESSKeyword_1_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getCALLSTATUSRule());
 	        }
-       		setWithLastConsumed($current, "name", lv_name_3_0, "DISCONNECTED");
+       		setWithLastConsumed($current, "name", lv_name_1_0, "IN-PROGRESS");
 	    }
 
 )
 )
     |(
 (
-		lv_name_4_0=	'FAILED' 
+		lv_name_2_0=	'DISCONNECTED' 
     {
-        newLeafNode(lv_name_4_0, grammarAccess.getCALLSTATUSAccess().getNameFAILEDKeyword_3_0());
+        newLeafNode(lv_name_2_0, grammarAccess.getCALLSTATUSAccess().getNameDISCONNECTEDKeyword_2_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getCALLSTATUSRule());
 	        }
-       		setWithLastConsumed($current, "name", lv_name_4_0, "FAILED");
+       		setWithLastConsumed($current, "name", lv_name_2_0, "DISCONNECTED");
+	    }
+
+)
+)
+    |(
+(
+		lv_name_3_0=	'FAILED' 
+    {
+        newLeafNode(lv_name_3_0, grammarAccess.getCALLSTATUSAccess().getNameFAILEDKeyword_3_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getCALLSTATUSRule());
+	        }
+       		setWithLastConsumed($current, "name", lv_name_3_0, "FAILED");
 	    }
 
 )

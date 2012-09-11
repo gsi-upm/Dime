@@ -419,9 +419,8 @@ public class DimeSwitch<T> extends Switch<T>
       {
         BoolLiteral boolLiteral = (BoolLiteral)theEObject;
         T result = caseBoolLiteral(boolLiteral);
-        if (result == null) result = casePrimitive(boolLiteral);
-        if (result == null) result = caseCALLSTATUS(boolLiteral);
         if (result == null) result = caseBoolExpression(boolLiteral);
+        if (result == null) result = casePrimitive(boolLiteral);
         if (result == null) result = caseLiteralAbs(boolLiteral);
         if (result == null) result = caseConcatenationExpression(boolLiteral);
         if (result == null) result = defaultCase(theEObject);

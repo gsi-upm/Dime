@@ -159,6 +159,8 @@ Primitive:
 //AssigmentBool:
 //	vab=[Vars] '=' (rightb=BoolExpression)';';
 //	
+
+// FALLO CONSTANT TIENE QUE IR EN LITERAL NO EN VARS
 Vars:
 	StringVariable | Ask | NumVariable | BoolVariable | GetDigits | Constant;
 	// Literals
@@ -189,7 +191,7 @@ SESSION:
 	name='CALLER' | name='LASTSTATE' | name='TIME' | name='CALLED';
 
 CALLSTATUS:
-	{BoolLiteral} name='RINGING' | name='IN-PROGRESS' | name='DISCONNECTED' | name='FAILED';
+	 name='RINGING' | name='IN-PROGRESS' | name='DISCONNECTED' | name='FAILED';
 
 terminal DOUBLE:
 	INT '.' INT;

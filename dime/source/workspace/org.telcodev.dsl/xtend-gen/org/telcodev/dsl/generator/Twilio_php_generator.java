@@ -98,6 +98,8 @@ public class Twilio_php_generator {
   
   private static Set<String> constantsId;
   
+  private static String number;
+  
   public static void generateTwilioPhp(final Resource resource, final IFileSystemAccess fsa, final Config config) {
     Twilio _twilio = config.getTwilio();
     String _voice = _twilio.getVoice();
@@ -109,6 +111,9 @@ public class Twilio_php_generator {
     Twilio_php_generator.url = _url;
     String _language_1 = config.getLanguage();
     Twilio_php_generator.language = _language_1;
+    Twilio _twilio_2 = config.getTwilio();
+    String _number = _twilio_2.getNumber();
+    Twilio_php_generator.number = _number;
     System.out.println("");
     System.out.println("*****************************************************************************************");
     System.out.println("");
@@ -281,10 +286,14 @@ public class Twilio_php_generator {
     {
       String _name = elem.getName();
       Twilio_php_generator.constantsId.add(_name);
-      String _name_1 = elem.getName();
       Primitive _value = elem.getValue();
-      CharSequence _declarePrimitive = Twilio_php_generator.declarePrimitive(_value);
-      Twilio_php_generator.constants.put(_name_1, _declarePrimitive);
+      boolean _notEquals = (!Objects.equal(_value, null));
+      if (_notEquals) {
+        String _name_1 = elem.getName();
+        Primitive _value_1 = elem.getValue();
+        CharSequence _declarePrimitive = Twilio_php_generator.declarePrimitive(_value_1);
+        Twilio_php_generator.constants.put(_name_1, _declarePrimitive);
+      }
       StringConcatenation _builder = new StringConcatenation();
       CharSequence _declareStatement = Twilio_php_generator.declareStatement(elem);
       _builder.append(_declareStatement, "");
@@ -298,19 +307,15 @@ public class Twilio_php_generator {
     {
       String _name = elem.getName();
       Twilio_php_generator.variablesId.add(_name);
-      String _name_1 = elem.getName();
       BoolExpression _value = elem.getValue();
-      CharSequence _declareBoolExpression = Twilio_php_generator.declareBoolExpression(_value);
-      Twilio_php_generator.variables.put(_name_1, _declareBoolExpression);
+      boolean _notEquals = (!Objects.equal(_value, null));
+      if (_notEquals) {
+        String _name_1 = elem.getName();
+        BoolExpression _value_1 = elem.getValue();
+        CharSequence _declareBoolExpression = Twilio_php_generator.declareBoolExpression(_value_1);
+        Twilio_php_generator.variables.put(_name_1, _declareBoolExpression);
+      }
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("$");
-      String _name_2 = elem.getName();
-      _builder.append(_name_2, "");
-      _builder.append("=");
-      BoolExpression _value_1 = elem.getValue();
-      CharSequence _declareBoolExpression_1 = Twilio_php_generator.declareBoolExpression(_value_1);
-      _builder.append(_declareBoolExpression_1, "");
-      _builder.append(";");
       _xblockexpression = (_builder);
     }
     return _xblockexpression;
@@ -321,19 +326,15 @@ public class Twilio_php_generator {
     {
       String _name = elem.getName();
       Twilio_php_generator.variablesId.add(_name);
-      String _name_1 = elem.getName();
       ConcatenationExpression _value = elem.getValue();
-      CharSequence _declareConcatenation = Twilio_php_generator.declareConcatenation(_value);
-      Twilio_php_generator.variables.put(_name_1, _declareConcatenation);
+      boolean _notEquals = (!Objects.equal(_value, null));
+      if (_notEquals) {
+        String _name_1 = elem.getName();
+        ConcatenationExpression _value_1 = elem.getValue();
+        CharSequence _declareConcatenation = Twilio_php_generator.declareConcatenation(_value_1);
+        Twilio_php_generator.variables.put(_name_1, _declareConcatenation);
+      }
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("$");
-      String _name_2 = elem.getName();
-      _builder.append(_name_2, "");
-      _builder.append("=");
-      ConcatenationExpression _value_1 = elem.getValue();
-      CharSequence _declareConcatenation_1 = Twilio_php_generator.declareConcatenation(_value_1);
-      _builder.append(_declareConcatenation_1, "");
-      _builder.append(";");
       _xblockexpression = (_builder);
     }
     return _xblockexpression;
@@ -344,19 +345,15 @@ public class Twilio_php_generator {
     {
       String _name = elem.getName();
       Twilio_php_generator.variablesId.add(_name);
-      String _name_1 = elem.getName();
       MathExpression _value = elem.getValue();
-      CharSequence _declareMathExpression = Twilio_php_generator.declareMathExpression(_value);
-      Twilio_php_generator.variables.put(_name_1, _declareMathExpression);
+      boolean _notEquals = (!Objects.equal(_value, null));
+      if (_notEquals) {
+        String _name_1 = elem.getName();
+        MathExpression _value_1 = elem.getValue();
+        CharSequence _declareMathExpression = Twilio_php_generator.declareMathExpression(_value_1);
+        Twilio_php_generator.variables.put(_name_1, _declareMathExpression);
+      }
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("$");
-      String _name_2 = elem.getName();
-      _builder.append(_name_2, "");
-      _builder.append("=");
-      MathExpression _value_1 = elem.getValue();
-      CharSequence _declareMathExpression_1 = Twilio_php_generator.declareMathExpression(_value_1);
-      _builder.append(_declareMathExpression_1, "");
-      _builder.append(";");
       _xblockexpression = (_builder);
     }
     return _xblockexpression;
@@ -366,6 +363,7 @@ public class Twilio_php_generator {
     CharSequence _xblockexpression = null;
     {
       boolean result = false;
+      boolean first = true;
       String _name = elem.getName();
       String _upperCase = _name.toUpperCase();
       String _plus = ("Generating " + _upperCase);
@@ -396,8 +394,6 @@ public class Twilio_php_generator {
       _builder.append("\t");
       _builder.append("// Update of the value of the global constants and variables, and the session params.");
       _builder.newLine();
-      _builder.append("\t");
-      _builder.newLine();
       {
         for(final String d : Twilio_php_generator.variablesId) {
           _builder.append("\t");
@@ -407,32 +403,73 @@ public class Twilio_php_generator {
           _builder.newLineIfNotEmpty();
         }
       }
+      {
+        boolean _notEquals = (!Objects.equal(Twilio_php_generator.hangupRedirect, null));
+        if (_notEquals) {
+          _builder.append("\t");
+          _builder.newLine();
+          _builder.append("\t");
+          _builder.append("if($_REQUEST[\"CallStatus\"]==\"hangup\"){");
+          _builder.newLine();
+          _builder.append("\t");
+          _builder.append("\t");
+          _builder.append("echo \"<Redirect>");
+          _builder.append(Twilio_php_generator.hangupRedirect, "		");
+          _builder.append("?\".");
+          CharSequence _saveGlobalVariable = Twilio_php_generator.saveGlobalVariable();
+          _builder.append(_saveGlobalVariable, "		");
+          _builder.append("\"</Redirect>\";");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t");
+          _builder.append("}");
+        }
+      }
+      _builder.newLineIfNotEmpty();
+      _builder.append("\t");
+      _builder.newLine();
+      {
+        boolean _notEquals_1 = (!Objects.equal(Twilio_php_generator.errorRedirect, null));
+        if (_notEquals_1) {
+          _builder.append("\t");
+          {
+            boolean _not = (!first);
+            if (_not) {
+              _builder.append("else ");
+            }
+          }
+          _builder.append("if($_REQUEST[\"CallStatus\"]==\"fail\"){");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t");
+          _builder.append("\t");
+          _builder.append("echo \"<Redirect>");
+          _builder.append(Twilio_php_generator.errorRedirect, "		");
+          _builder.append("?\".");
+          CharSequence _saveGlobalVariable_1 = Twilio_php_generator.saveGlobalVariable();
+          _builder.append(_saveGlobalVariable_1, "		");
+          _builder.append("\"</Redirect>\";");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t");
+          _builder.append("}");
+        }
+      }
+      _builder.newLineIfNotEmpty();
       _builder.append("\t");
       _builder.newLine();
       _builder.append("\t");
-      _builder.append("if($_REQUEST[\"CallStatus\"]==\"in-progress\"|| $_REQUEST[\"CallStatus\"]==\"ringing\" ){");
-      _builder.newLine();
+      {
+        boolean _not_1 = (!first);
+        if (_not_1) {
+          _builder.append("else ");
+        }
+      }
+      _builder.append("if($_REQUEST[\"CallStatus\"]==\"in-progress\"|| $_REQUEST[\"CallStatus\"]==\"ringing\"|| $_REQUEST[\"CallStatus\"]==\"queued\"){");
+      _builder.newLineIfNotEmpty();
       _builder.append("\t\t");
       _builder.newLine();
       {
         String _name_2 = elem.getName();
         boolean _equals = _name_2.equals("start");
         if (_equals) {
-          _builder.append("\t");
-          _builder.newLine();
-          _builder.append("\t");
-          _builder.append("\t");
-          _builder.append("// Initialitation of the global variables");
-          _builder.newLine();
-          {
-            for(final String d_1 : Twilio_php_generator.variablesId) {
-              CharSequence _inicializeGlobalVariable = Twilio_php_generator.inicializeGlobalVariable(d_1);
-              _builder.append(_inicializeGlobalVariable, "");
-              _builder.append(" ");
-              _builder.newLineIfNotEmpty();
-            }
-          }
-          _builder.append("\t");
           _builder.newLine();
         }
       }
@@ -450,8 +487,9 @@ public class Twilio_php_generator {
       {
         EList<AbstractElement> _stms = elem.getStms();
         for(final AbstractElement c : _stms) {
+          _builder.append("\t\t");
           CharSequence _declareAbstractElement = Twilio_php_generator.declareAbstractElement(c);
-          _builder.append(_declareAbstractElement, "");
+          _builder.append(_declareAbstractElement, "		");
           _builder.newLineIfNotEmpty();
         }
       }
@@ -469,96 +507,46 @@ public class Twilio_php_generator {
       _builder.append("\t\t");
       {
         boolean _and = false;
-        boolean _notEquals = (!Objects.equal(Twilio_php_generator.completedRedirect, null));
-        if (!_notEquals) {
+        boolean _notEquals_2 = (!Objects.equal(Twilio_php_generator.completedRedirect, null));
+        if (!_notEquals_2) {
           _and = false;
         } else {
-          boolean _not = (!result);
-          _and = (_notEquals && _not);
+          boolean _not_2 = (!result);
+          _and = (_notEquals_2 && _not_2);
         }
         if (_and) {
           _builder.append("echo \"<Redirect>");
           _builder.append(Twilio_php_generator.completedRedirect, "		");
+          _builder.append("?\".");
+          CharSequence _saveGlobalVariable_2 = Twilio_php_generator.saveGlobalVariable();
+          _builder.append(_saveGlobalVariable_2, "		");
+          _builder.append("\"?lastState=");
+          String _name_3 = elem.getName();
+          _builder.append(_name_3, "		");
           _builder.append("</Redirect>\";");
         }
       }
       _builder.newLineIfNotEmpty();
-      _builder.append("\t\t");
-      {
-        boolean _notEquals_1 = (!Objects.equal(Twilio_php_generator.errorRedirect, null));
-        if (_notEquals_1) {
-          _builder.append("echo \"<Redirect>");
-          _builder.append(Twilio_php_generator.hangupRedirect, "		");
-          _builder.append("</Redirect>\";");
-        }
-      }
-      _builder.newLineIfNotEmpty();
+      _builder.append("\t");
+      _builder.newLine();
       _builder.append("\t\t");
       _builder.append("echo \"</Response>\";");
       _builder.newLine();
-      {
-        for(final String d_2 : Twilio_php_generator.variablesId) {
-          CharSequence _saveGlobalVariable = Twilio_php_generator.saveGlobalVariable(d_2);
-          _builder.append(_saveGlobalVariable, "");
-          _builder.append(" ");
-          _builder.newLineIfNotEmpty();
-        }
-      }
       _builder.append("\t");
       _builder.append("}");
       _builder.newLine();
       _builder.append("\t");
       _builder.newLine();
-      {
-        boolean _notEquals_2 = (!Objects.equal(Twilio_php_generator.hangupRedirect, null));
-        if (_notEquals_2) {
-          _builder.append("\t");
-          _builder.append("else if($status==\"hangup\"){");
-          _builder.newLine();
-          _builder.append("\t");
-          _builder.append("\t");
-          _builder.append("echo \"<Redirect>");
-          _builder.append(Twilio_php_generator.hangupRedirect, "		");
-          _builder.append("</Redirect>\";");
-          _builder.newLineIfNotEmpty();
-          _builder.append("\t");
-          _builder.append("\t");
-          _builder.newLine();
-          _builder.append("\t");
-          _builder.append("}");
-        }
-      }
-      _builder.newLineIfNotEmpty();
-      _builder.append("\t");
-      _builder.newLine();
-      {
-        boolean _notEquals_3 = (!Objects.equal(Twilio_php_generator.errorRedirect, null));
-        if (_notEquals_3) {
-          _builder.append("\t");
-          _builder.append("else if($status==\"fail\"){");
-          _builder.newLine();
-          _builder.append("\t");
-          _builder.append("\t");
-          _builder.append("echo \"<Redirect>");
-          _builder.append(Twilio_php_generator.errorRedirect, "		");
-          _builder.append("</Redirect>\";");
-          _builder.newLineIfNotEmpty();
-          _builder.append("\t");
-          _builder.append("}");
-        }
-      }
-      _builder.newLineIfNotEmpty();
-      _builder.append("\t");
       _builder.newLine();
       {
         boolean _and_1 = false;
         int _times = elem.getTimes();
-        boolean _notEquals_4 = (_times != 0);
-        if (!_notEquals_4) {
+        boolean _notEquals_3 = (_times != 0);
+        if (!_notEquals_3) {
           _and_1 = false;
         } else {
-          boolean _notEquals_5 = (!Objects.equal(Twilio_php_generator.timesRedirect, null));
-          _and_1 = (_notEquals_4 && _notEquals_5);
+          boolean _notEquals_4 = (!Objects.equal(Twilio_php_generator.timesRedirect, null));
+          _and_1 = (_notEquals_3 && _notEquals_4);
         }
         if (_and_1) {
           _builder.newLine();
@@ -578,7 +566,10 @@ public class Twilio_php_generator {
           _builder.append("\t\t");
           _builder.append("echo \"<Redirect>");
           _builder.append(Twilio_php_generator.timesRedirect, "		");
-          _builder.append("</Redirect>\";");
+          _builder.append("?\".");
+          CharSequence _saveGlobalVariable_3 = Twilio_php_generator.saveGlobalVariable();
+          _builder.append(_saveGlobalVariable_3, "		");
+          _builder.append("\"</Redirect>\";");
           _builder.newLineIfNotEmpty();
           _builder.append("\t");
           _builder.append("}else{");
@@ -603,12 +594,12 @@ public class Twilio_php_generator {
       {
         boolean _and_2 = false;
         int _timeout = elem.getTimeout();
-        boolean _notEquals_6 = (_timeout != 0);
-        if (!_notEquals_6) {
+        boolean _notEquals_5 = (_timeout != 0);
+        if (!_notEquals_5) {
           _and_2 = false;
         } else {
-          boolean _notEquals_7 = (!Objects.equal(Twilio_php_generator.timeoutRedirect, null));
-          _and_2 = (_notEquals_6 && _notEquals_7);
+          boolean _notEquals_6 = (!Objects.equal(Twilio_php_generator.timeoutRedirect, null));
+          _and_2 = (_notEquals_5 && _notEquals_6);
         }
         if (_and_2) {
           _builder.append("\t");
@@ -620,12 +611,6 @@ public class Twilio_php_generator {
           _builder.newLine();
         }
       }
-      _builder.append("\t");
-      _builder.append("$_REQUEST[\'lastState\']=\'");
-      String _name_3 = elem.getName();
-      _builder.append(_name_3, "	");
-      _builder.append("\';");
-      _builder.newLineIfNotEmpty();
       _builder.append("\t");
       String _errorRedirect = Twilio_php_generator.errorRedirect = null;
       _builder.append(_errorRedirect, "	");
@@ -650,58 +635,42 @@ public class Twilio_php_generator {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("$");
     _builder.append(elem, "");
-    _builder.append("=$_REQUEST[\'");
+    _builder.append("=$_GET[\'");
     _builder.append(elem, "");
     _builder.append("\'];");
-    _builder.newLineIfNotEmpty();
-    _builder.append("if($");
-    _builder.append(elem, "");
-    _builder.append("==\"Digits\"){");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("$");
-    _builder.append(elem, "	");
-    _builder.append("= $_REQUEST[\'Digits\'];");
-    _builder.newLineIfNotEmpty();
-    _builder.append("}else if($");
-    _builder.append(elem, "");
-    _builder.append("==\"TranscriptionText\"){");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("$");
-    _builder.append(elem, "	");
-    _builder.append("= $_REQUEST[\'TranscriptionText\'];");
-    _builder.newLineIfNotEmpty();
-    _builder.append("}");
     return _builder;
   }
   
-  public static CharSequence saveGlobalVariable(final String elem) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("$_REQUEST[\'");
-    _builder.append(elem, "");
-    _builder.append("\']=$");
-    _builder.append(elem, "");
-    _builder.append(";  ");
-    return _builder;
-  }
-  
-  public static CharSequence inicializeGlobalVariable(final String elem) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("$");
-    _builder.append(elem, "");
-    _builder.append("=");
-    Object _get = Twilio_php_generator.variables.get(elem);
-    _builder.append(_get, "");
-    _builder.append(";");
-    _builder.newLineIfNotEmpty();
-    _builder.append("$_REQUEST[\'");
-    _builder.append(elem, "");
-    _builder.append("\']=$");
-    _builder.append(elem, "");
-    _builder.append(";");
-    _builder.newLineIfNotEmpty();
-    return _builder;
+  public static CharSequence saveGlobalVariable() {
+    CharSequence _xblockexpression = null;
+    {
+      int N = Twilio_php_generator.variablesId.size();
+      StringConcatenation _builder = new StringConcatenation();
+      {
+        for(final String n : Twilio_php_generator.variablesId) {
+          {
+            int _minus = (N - 1);
+            int _N = N = _minus;
+            boolean _equals = (_N == 0);
+            if (_equals) {
+              _builder.append("\"");
+              _builder.append(n, "");
+              _builder.append("=\".urlencode($");
+              _builder.append(n, "");
+              _builder.append(").");
+            } else {
+              _builder.append("\"");
+              _builder.append(n, "");
+              _builder.append("=\".urlencode($");
+              _builder.append(n, "");
+              _builder.append(").\"&\".");
+            }
+          }
+        }
+      }
+      _xblockexpression = (_builder);
+    }
+    return _xblockexpression;
   }
   
   protected static CharSequence _declareAbstractElement(final VoiceTag elem) {
@@ -1355,7 +1324,9 @@ public class Twilio_php_generator {
   
   protected static CharSequence _declareVoiceTag(final Dial elem) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("echo \"<Dial callerId=\\\"\".$_REQUEST[\'From\'].\"\\\">\\n <Number>\".");
+    _builder.append("echo \"<Dial callerId=\\\"\".\"");
+    _builder.append(Twilio_php_generator.number, "");
+    _builder.append("\".\"\\\">\\n <Number>\".");
     ConcatenationExpression _to = elem.getTo();
     CharSequence _declareConcatenation = Twilio_php_generator.declareConcatenation(_to);
     _builder.append(_declareConcatenation, "");
@@ -1365,7 +1336,9 @@ public class Twilio_php_generator {
   
   protected static CharSequence _declareVoiceTag(final Call elem) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("echo \"<Dial callerId=\\\"\".$_REQUEST[\'From\'].\"\\\">\\n <Number>\".");
+    _builder.append("echo \"<Dial callerId=\\\"\".\"");
+    _builder.append(Twilio_php_generator.number, "");
+    _builder.append("\".\"\\\">\\n <Number>\".");
     ConcatenationExpression _to = elem.getTo();
     CharSequence _declareConcatenation = Twilio_php_generator.declareConcatenation(_to);
     _builder.append(_declareConcatenation, "");
@@ -1402,7 +1375,9 @@ public class Twilio_php_generator {
   
   protected static CharSequence _declareVoiceTag(final Sms elem) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("echo \"<Sms from=\\\"\".$_REQUEST[\'From\'].\"\\\" \".\" to=\\");
+    _builder.append("echo \"<Sms from=\\\"\".\"");
+    _builder.append(Twilio_php_generator.number, "");
+    _builder.append("\".\"\\\" \".\" to=\\");
     ConcatenationExpression _to = elem.getTo();
     CharSequence _declareConcatenation = Twilio_php_generator.declareConcatenation(_to);
     _builder.append(_declareConcatenation, "");

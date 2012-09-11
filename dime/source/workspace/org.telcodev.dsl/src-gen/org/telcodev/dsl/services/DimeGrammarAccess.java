@@ -1978,10 +1978,8 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	public class CALLSTATUSElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CALLSTATUS");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Action cBoolLiteralAction_0_0 = (Action)cGroup_0.eContents().get(0);
-		private final Assignment cNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final Keyword cNameRINGINGKeyword_0_1_0 = (Keyword)cNameAssignment_0_1.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final Keyword cNameRINGINGKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final Keyword cNameINPROGRESSKeyword_1_0 = (Keyword)cNameAssignment_1.eContents().get(0);
 		private final Assignment cNameAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
@@ -1990,23 +1988,17 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameFAILEDKeyword_3_0 = (Keyword)cNameAssignment_3.eContents().get(0);
 		
 		//CALLSTATUS:
-		//	{BoolLiteral} name="RINGING" | name="IN-PROGRESS" | name="DISCONNECTED" | name="FAILED";
+		//	name="RINGING" | name="IN-PROGRESS" | name="DISCONNECTED" | name="FAILED";
 		public ParserRule getRule() { return rule; }
 
-		//{BoolLiteral} name="RINGING" | name="IN-PROGRESS" | name="DISCONNECTED" | name="FAILED"
+		//name="RINGING" | name="IN-PROGRESS" | name="DISCONNECTED" | name="FAILED"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//{BoolLiteral} name="RINGING"
-		public Group getGroup_0() { return cGroup_0; }
-
-		//{BoolLiteral}
-		public Action getBoolLiteralAction_0_0() { return cBoolLiteralAction_0_0; }
-
 		//name="RINGING"
-		public Assignment getNameAssignment_0_1() { return cNameAssignment_0_1; }
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
 		//"RINGING"
-		public Keyword getNameRINGINGKeyword_0_1_0() { return cNameRINGINGKeyword_0_1_0; }
+		public Keyword getNameRINGINGKeyword_0_0() { return cNameRINGINGKeyword_0_0; }
 
 		//name="IN-PROGRESS"
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -2647,7 +2639,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CALLSTATUS:
-	//	{BoolLiteral} name="RINGING" | name="IN-PROGRESS" | name="DISCONNECTED" | name="FAILED";
+	//	name="RINGING" | name="IN-PROGRESS" | name="DISCONNECTED" | name="FAILED";
 	public CALLSTATUSElements getCALLSTATUSAccess() {
 		return (pCALLSTATUS != null) ? pCALLSTATUS : (pCALLSTATUS = new CALLSTATUSElements());
 	}

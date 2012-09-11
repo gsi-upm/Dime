@@ -13,6 +13,6 @@ package org.telcodev.dsl.dime;
  * @model
  * @generated
  */
-public interface BoolLiteral extends BoolExpression, Primitive, CALLSTATUS
+public interface BoolLiteral extends BoolExpression, Primitive
 {
 } // BoolLiteral

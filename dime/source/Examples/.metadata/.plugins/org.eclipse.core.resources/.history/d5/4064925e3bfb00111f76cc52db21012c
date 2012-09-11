@@ -1,0 +1,13 @@
+Application Dial
+
+
+State start {
+	
+		
+		DialTo "+34656422095";
+if(RINGING){
+	Say "hello";
+} 
+}
+
+   

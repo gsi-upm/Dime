@@ -158,29 +158,41 @@ run();
 
 	def static dispatch declareGlobalStatement(Constant elem){
 			constantsId.add(elem.name)
-		constants.put(elem.name, declarePrimitive(elem.value))
+			if(elem.value!=null){
+					constants.put(elem.name, declarePrimitive(elem.value))
+			}
+	
+		
 	 '''«declareStatement(elem)»'''
 	}
 	
-	//POSIBLE ERROR CUANDO SÓLO DECLARAMOS ARRIBA Y NO INICIALIZAMOS
 	def static dispatch declareGlobalStatement(BoolVariable elem){
 		variablesId.add(elem.name)
-		variables.put(elem.name, declareBoolExpression(elem.value))
+		if(elem.value!=null){
+			variables.put(elem.name, declareBoolExpression(elem.value))
+		}
+		
 		''''''
 	}
 	
 	def static dispatch declareGlobalStatement(StringVariable elem){
 			variablesId.add(elem.name)
+			if(elem.value!=null){
 			variables.put(elem.name, declareConcatenation(elem.value))
-			''''''
+		}
+			
+		''''''
 	}
 	
 	def static dispatch declareGlobalStatement(NumVariable elem){
 			variablesId.add(elem.name)
-			variables.put(elem.name, declareMathExpression(elem.value))
+				if(elem.value!=null){
+					variables.put(elem.name, declareMathExpression(elem.value))
+				}
+			
+			
 			''''''
 	}
-	
 	
 	
 	

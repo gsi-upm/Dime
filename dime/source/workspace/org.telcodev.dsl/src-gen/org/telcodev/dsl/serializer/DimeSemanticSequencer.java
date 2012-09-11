@@ -82,23 +82,16 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case DimePackage.BOOL_LITERAL:
-				if(context == grammarAccess.getBoolLiteralRule() ||
+				if(context == grammarAccess.getBoolExpressionRule() ||
+				   context == grammarAccess.getBoolExpressionAccess().getOperationBoolLeftAction_1_0() ||
+				   context == grammarAccess.getBoolLiteralRule() ||
 				   context == grammarAccess.getConcatenationExpressionRule() ||
 				   context == grammarAccess.getConcatenationExpressionAccess().getConcatenationLeftAction_1_0() ||
 				   context == grammarAccess.getConcatenationTerminalRule() ||
 				   context == grammarAccess.getLiteralAbsRule() ||
-				   context == grammarAccess.getPrimitiveRule()) {
-					sequence_BoolLiteral(context, (BoolLiteral) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getBoolExpressionRule() ||
-				   context == grammarAccess.getBoolExpressionAccess().getOperationBoolLeftAction_1_0() ||
+				   context == grammarAccess.getPrimitiveRule() ||
 				   context == grammarAccess.getTerminalBoolExpressionRule()) {
-					sequence_BoolLiteral_CALLSTATUS_TerminalBoolExpression(context, (BoolLiteral) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getCALLSTATUSRule()) {
-					sequence_CALLSTATUS(context, (BoolLiteral) semanticObject); 
+					sequence_BoolLiteral(context, (BoolLiteral) semanticObject); 
 					return; 
 				}
 				else break;
@@ -490,16 +483,14 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     value=BOOL
 	 */
 	protected void sequence_BoolLiteral(EObject context, BoolLiteral semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (value=BOOL | name='RINGING')
-	 */
-	protected void sequence_BoolLiteral_CALLSTATUS_TerminalBoolExpression(EObject context, BoolLiteral semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.PRIMITIVE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.PRIMITIVE__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getBoolLiteralAccess().getValueBOOLTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	
@@ -536,16 +527,7 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     name='RINGING'
-	 */
-	protected void sequence_CALLSTATUS(EObject context, BoolLiteral semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name='IN-PROGRESS' | name='DISCONNECTED' | name='FAILED')
+	 *     (name='RINGING' | name='IN-PROGRESS' | name='DISCONNECTED' | name='FAILED')
 	 */
 	protected void sequence_CALLSTATUS(EObject context, CALLSTATUS semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

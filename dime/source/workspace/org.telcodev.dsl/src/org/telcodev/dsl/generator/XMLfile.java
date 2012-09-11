@@ -36,7 +36,7 @@ public class XMLfile {
 
 			}else{
 				tropo= new Tropo();
-				twilio = new Twilio(getTextVoiceValue(docEle, "voice", language), getTextVoiceValue(docEle, "language", language));
+				twilio = new Twilio(getTextVoiceValue(docEle, "voice", language), getTextVoiceValue(docEle, "language", language), getTextVoiceValue(docEle, "number", language));
 			}
 
 			Config conf = new Config(language, scriptlanguage, url, tropo,

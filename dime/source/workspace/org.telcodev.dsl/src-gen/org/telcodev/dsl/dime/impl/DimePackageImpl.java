@@ -2092,7 +2092,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     literalEClass.getESuperTypes().add(this.getLiteralAbs());
     boolLiteralEClass.getESuperTypes().add(this.getBoolExpression());
     boolLiteralEClass.getESuperTypes().add(this.getPrimitive());
-    boolLiteralEClass.getESuperTypes().add(this.getCALLSTATUS());
     numLiteralEClass.getESuperTypes().add(this.getMathExpression());
     numLiteralEClass.getESuperTypes().add(this.getPrimitive());
     stringLiteralEClass.getESuperTypes().add(this.getPrimitive());

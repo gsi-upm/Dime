@@ -8681,22 +8681,22 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCALLSTATUS"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3571:1: ruleCALLSTATUS returns [EObject current=null] : ( ( () ( (lv_name_1_0= 'RINGING' ) ) ) | ( (lv_name_2_0= 'IN-PROGRESS' ) ) | ( (lv_name_3_0= 'DISCONNECTED' ) ) | ( (lv_name_4_0= 'FAILED' ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3571:1: ruleCALLSTATUS returns [EObject current=null] : ( ( (lv_name_0_0= 'RINGING' ) ) | ( (lv_name_1_0= 'IN-PROGRESS' ) ) | ( (lv_name_2_0= 'DISCONNECTED' ) ) | ( (lv_name_3_0= 'FAILED' ) ) ) ;
     public final EObject ruleCALLSTATUS() throws RecognitionException {
         EObject current = null;
 
+        Token lv_name_0_0=null;
         Token lv_name_1_0=null;
         Token lv_name_2_0=null;
         Token lv_name_3_0=null;
-        Token lv_name_4_0=null;
 
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3574:28: ( ( ( () ( (lv_name_1_0= 'RINGING' ) ) ) | ( (lv_name_2_0= 'IN-PROGRESS' ) ) | ( (lv_name_3_0= 'DISCONNECTED' ) ) | ( (lv_name_4_0= 'FAILED' ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3575:1: ( ( () ( (lv_name_1_0= 'RINGING' ) ) ) | ( (lv_name_2_0= 'IN-PROGRESS' ) ) | ( (lv_name_3_0= 'DISCONNECTED' ) ) | ( (lv_name_4_0= 'FAILED' ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3574:28: ( ( ( (lv_name_0_0= 'RINGING' ) ) | ( (lv_name_1_0= 'IN-PROGRESS' ) ) | ( (lv_name_2_0= 'DISCONNECTED' ) ) | ( (lv_name_3_0= 'FAILED' ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3575:1: ( ( (lv_name_0_0= 'RINGING' ) ) | ( (lv_name_1_0= 'IN-PROGRESS' ) ) | ( (lv_name_2_0= 'DISCONNECTED' ) ) | ( (lv_name_3_0= 'FAILED' ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3575:1: ( ( () ( (lv_name_1_0= 'RINGING' ) ) ) | ( (lv_name_2_0= 'IN-PROGRESS' ) ) | ( (lv_name_3_0= 'DISCONNECTED' ) ) | ( (lv_name_4_0= 'FAILED' ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3575:1: ( ( (lv_name_0_0= 'RINGING' ) ) | ( (lv_name_1_0= 'IN-PROGRESS' ) ) | ( (lv_name_2_0= 'DISCONNECTED' ) ) | ( (lv_name_3_0= 'FAILED' ) ) )
             int alt34=4;
             switch ( input.LA(1) ) {
             case 70:
@@ -8728,41 +8728,24 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             switch (alt34) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3575:2: ( () ( (lv_name_1_0= 'RINGING' ) ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3575:2: ( (lv_name_0_0= 'RINGING' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3575:2: ( () ( (lv_name_1_0= 'RINGING' ) ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3575:3: () ( (lv_name_1_0= 'RINGING' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3575:2: ( (lv_name_0_0= 'RINGING' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3576:1: (lv_name_0_0= 'RINGING' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3575:3: ()
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3576:5: 
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3576:1: (lv_name_0_0= 'RINGING' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3577:3: lv_name_0_0= 'RINGING'
                     {
+                    lv_name_0_0=(Token)match(input,70,FOLLOW_70_in_ruleCALLSTATUS8135); 
 
-                            current = forceCreateModelElement(
-                                grammarAccess.getCALLSTATUSAccess().getBoolLiteralAction_0_0(),
-                                current);
-                        
-
-                    }
-
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3581:2: ( (lv_name_1_0= 'RINGING' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3582:1: (lv_name_1_0= 'RINGING' )
-                    {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3582:1: (lv_name_1_0= 'RINGING' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3583:3: lv_name_1_0= 'RINGING'
-                    {
-                    lv_name_1_0=(Token)match(input,70,FOLLOW_70_in_ruleCALLSTATUS8145); 
-
-                            newLeafNode(lv_name_1_0, grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_1_0());
+                            newLeafNode(lv_name_0_0, grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getCALLSTATUSRule());
                     	        }
-                           		setWithLastConsumed(current, "name", lv_name_1_0, "RINGING");
+                           		setWithLastConsumed(current, "name", lv_name_0_0, "RINGING");
                     	    
-
-                    }
-
 
                     }
 
@@ -8773,23 +8756,23 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3597:6: ( (lv_name_2_0= 'IN-PROGRESS' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3591:6: ( (lv_name_1_0= 'IN-PROGRESS' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3597:6: ( (lv_name_2_0= 'IN-PROGRESS' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3598:1: (lv_name_2_0= 'IN-PROGRESS' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3591:6: ( (lv_name_1_0= 'IN-PROGRESS' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3592:1: (lv_name_1_0= 'IN-PROGRESS' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3598:1: (lv_name_2_0= 'IN-PROGRESS' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3599:3: lv_name_2_0= 'IN-PROGRESS'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3592:1: (lv_name_1_0= 'IN-PROGRESS' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3593:3: lv_name_1_0= 'IN-PROGRESS'
                     {
-                    lv_name_2_0=(Token)match(input,71,FOLLOW_71_in_ruleCALLSTATUS8183); 
+                    lv_name_1_0=(Token)match(input,71,FOLLOW_71_in_ruleCALLSTATUS8172); 
 
-                            newLeafNode(lv_name_2_0, grammarAccess.getCALLSTATUSAccess().getNameINPROGRESSKeyword_1_0());
+                            newLeafNode(lv_name_1_0, grammarAccess.getCALLSTATUSAccess().getNameINPROGRESSKeyword_1_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getCALLSTATUSRule());
                     	        }
-                           		setWithLastConsumed(current, "name", lv_name_2_0, "IN-PROGRESS");
+                           		setWithLastConsumed(current, "name", lv_name_1_0, "IN-PROGRESS");
                     	    
 
                     }
@@ -8801,23 +8784,23 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3613:6: ( (lv_name_3_0= 'DISCONNECTED' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3607:6: ( (lv_name_2_0= 'DISCONNECTED' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3613:6: ( (lv_name_3_0= 'DISCONNECTED' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3614:1: (lv_name_3_0= 'DISCONNECTED' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3607:6: ( (lv_name_2_0= 'DISCONNECTED' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3608:1: (lv_name_2_0= 'DISCONNECTED' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3614:1: (lv_name_3_0= 'DISCONNECTED' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3615:3: lv_name_3_0= 'DISCONNECTED'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3608:1: (lv_name_2_0= 'DISCONNECTED' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3609:3: lv_name_2_0= 'DISCONNECTED'
                     {
-                    lv_name_3_0=(Token)match(input,72,FOLLOW_72_in_ruleCALLSTATUS8220); 
+                    lv_name_2_0=(Token)match(input,72,FOLLOW_72_in_ruleCALLSTATUS8209); 
 
-                            newLeafNode(lv_name_3_0, grammarAccess.getCALLSTATUSAccess().getNameDISCONNECTEDKeyword_2_0());
+                            newLeafNode(lv_name_2_0, grammarAccess.getCALLSTATUSAccess().getNameDISCONNECTEDKeyword_2_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getCALLSTATUSRule());
                     	        }
-                           		setWithLastConsumed(current, "name", lv_name_3_0, "DISCONNECTED");
+                           		setWithLastConsumed(current, "name", lv_name_2_0, "DISCONNECTED");
                     	    
 
                     }
@@ -8829,23 +8812,23 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3629:6: ( (lv_name_4_0= 'FAILED' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3623:6: ( (lv_name_3_0= 'FAILED' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3629:6: ( (lv_name_4_0= 'FAILED' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3630:1: (lv_name_4_0= 'FAILED' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3623:6: ( (lv_name_3_0= 'FAILED' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3624:1: (lv_name_3_0= 'FAILED' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3630:1: (lv_name_4_0= 'FAILED' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3631:3: lv_name_4_0= 'FAILED'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3624:1: (lv_name_3_0= 'FAILED' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3625:3: lv_name_3_0= 'FAILED'
                     {
-                    lv_name_4_0=(Token)match(input,73,FOLLOW_73_in_ruleCALLSTATUS8257); 
+                    lv_name_3_0=(Token)match(input,73,FOLLOW_73_in_ruleCALLSTATUS8246); 
 
-                            newLeafNode(lv_name_4_0, grammarAccess.getCALLSTATUSAccess().getNameFAILEDKeyword_3_0());
+                            newLeafNode(lv_name_3_0, grammarAccess.getCALLSTATUSAccess().getNameFAILEDKeyword_3_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getCALLSTATUSRule());
                     	        }
-                           		setWithLastConsumed(current, "name", lv_name_4_0, "FAILED");
+                           		setWithLastConsumed(current, "name", lv_name_3_0, "FAILED");
                     	    
 
                     }
@@ -9246,9 +9229,9 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_69_in_ruleSESSION8033 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCALLSTATUS_in_entryRuleCALLSTATUS8082 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCALLSTATUS8092 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_ruleCALLSTATUS8145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_ruleCALLSTATUS8183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_ruleCALLSTATUS8220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleCALLSTATUS8257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_ruleCALLSTATUS8135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_ruleCALLSTATUS8172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_ruleCALLSTATUS8209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_ruleCALLSTATUS8246 = new BitSet(new long[]{0x0000000000000002L});
 
 }

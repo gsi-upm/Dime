@@ -1,0 +1,8 @@
+Application Sound
+
+State start{
+	
+	Play "http://shannon.gsi.dit.upm.es/roberto/birds_sing.mp3";
+	HangUp;
+	Say "FUCK OFF";
+}

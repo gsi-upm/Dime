@@ -2002,9 +2002,9 @@ rule__CALLSTATUS__Alternatives
     }
 :
 (
-{ before(grammarAccess.getCALLSTATUSAccess().getGroup_0()); }
-(rule__CALLSTATUS__Group_0__0)
-{ after(grammarAccess.getCALLSTATUSAccess().getGroup_0()); }
+{ before(grammarAccess.getCALLSTATUSAccess().getNameAssignment_0()); }
+(rule__CALLSTATUS__NameAssignment_0)
+{ after(grammarAccess.getCALLSTATUSAccess().getNameAssignment_0()); }
 )
 
     |(
@@ -7156,69 +7156,6 @@ finally {
 
 
 
-rule__CALLSTATUS__Group_0__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__CALLSTATUS__Group_0__0__Impl
-	rule__CALLSTATUS__Group_0__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__CALLSTATUS__Group_0__0__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getCALLSTATUSAccess().getBoolLiteralAction_0_0()); }
-(
-
-)
-{ after(grammarAccess.getCALLSTATUSAccess().getBoolLiteralAction_0_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__CALLSTATUS__Group_0__1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__CALLSTATUS__Group_0__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__CALLSTATUS__Group_0__1__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getCALLSTATUSAccess().getNameAssignment_0_1()); }
-(rule__CALLSTATUS__NameAssignment_0_1)
-{ after(grammarAccess.getCALLSTATUSAccess().getNameAssignment_0_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
-
-
 
 rule__State__UnorderedGroup
     @init {
@@ -9033,22 +8970,22 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__CALLSTATUS__NameAssignment_0_1
+rule__CALLSTATUS__NameAssignment_0
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_1_0()); }
+{ before(grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_0()); }
 (
-{ before(grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_1_0()); }
+{ before(grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_0()); }
 
 	'RINGING' 
 
-{ after(grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_1_0()); }
+{ after(grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_0()); }
 )
 
-{ after(grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_1_0()); }
+{ after(grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_0()); }
 )
 
 ;

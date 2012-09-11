@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.telcodev.dsl.dime.BoolLiteral;
-import org.telcodev.dsl.dime.CALLSTATUS;
 import org.telcodev.dsl.dime.ConcatenationExpression;
 import org.telcodev.dsl.dime.DimePackage;
 import org.telcodev.dsl.dime.LiteralAbs;
@@ -23,7 +22,6 @@ import org.telcodev.dsl.dime.Primitive;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.telcodev.dsl.dime.impl.BoolLiteralImpl#getValue <em>Value</em>}</li>
- *   <li>{@link org.telcodev.dsl.dime.impl.BoolLiteralImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,26 +48,6 @@ public class BoolLiteralImpl extends BoolExpressionImpl implements BoolLiteral
    * @ordered
    */
   protected String value = VALUE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -120,29 +98,6 @@ public class BoolLiteralImpl extends BoolExpressionImpl implements BoolLiteral
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.BOOL_LITERAL__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -150,8 +105,6 @@ public class BoolLiteralImpl extends BoolExpressionImpl implements BoolLiteral
     {
       case DimePackage.BOOL_LITERAL__VALUE:
         return getValue();
-      case DimePackage.BOOL_LITERAL__NAME:
-        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -168,9 +121,6 @@ public class BoolLiteralImpl extends BoolExpressionImpl implements BoolLiteral
     {
       case DimePackage.BOOL_LITERAL__VALUE:
         setValue((String)newValue);
-        return;
-      case DimePackage.BOOL_LITERAL__NAME:
-        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -189,9 +139,6 @@ public class BoolLiteralImpl extends BoolExpressionImpl implements BoolLiteral
       case DimePackage.BOOL_LITERAL__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
-      case DimePackage.BOOL_LITERAL__NAME:
-        setName(NAME_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -208,8 +155,6 @@ public class BoolLiteralImpl extends BoolExpressionImpl implements BoolLiteral
     {
       case DimePackage.BOOL_LITERAL__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-      case DimePackage.BOOL_LITERAL__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
@@ -241,14 +186,6 @@ public class BoolLiteralImpl extends BoolExpressionImpl implements BoolLiteral
       switch (derivedFeatureID)
       {
         case DimePackage.BOOL_LITERAL__VALUE: return DimePackage.PRIMITIVE__VALUE;
-        default: return -1;
-      }
-    }
-    if (baseClass == CALLSTATUS.class)
-    {
-      switch (derivedFeatureID)
-      {
-        case DimePackage.BOOL_LITERAL__NAME: return DimePackage.CALLSTATUS__NAME;
         default: return -1;
       }
     }
@@ -285,14 +222,6 @@ public class BoolLiteralImpl extends BoolExpressionImpl implements BoolLiteral
         default: return -1;
       }
     }
-    if (baseClass == CALLSTATUS.class)
-    {
-      switch (baseFeatureID)
-      {
-        case DimePackage.CALLSTATUS__NAME: return DimePackage.BOOL_LITERAL__NAME;
-        default: return -1;
-      }
-    }
     return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
@@ -309,8 +238,6 @@ public class BoolLiteralImpl extends BoolExpressionImpl implements BoolLiteral
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (value: ");
     result.append(value);
-    result.append(", name: ");
-    result.append(name);
     result.append(')');
     return result.toString();
   }

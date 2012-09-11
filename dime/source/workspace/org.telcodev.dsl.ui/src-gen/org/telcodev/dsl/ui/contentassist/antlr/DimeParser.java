@@ -102,7 +102,6 @@ public class DimeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBoolLiteralAccess().getGroup(), "rule__BoolLiteral__Group__0");
 					put(grammarAccess.getNumLiteralAccess().getGroup(), "rule__NumLiteral__Group__0");
 					put(grammarAccess.getStringLiteralAccess().getGroup(), "rule__StringLiteral__Group__0");
-					put(grammarAccess.getCALLSTATUSAccess().getGroup_0(), "rule__CALLSTATUS__Group_0__0");
 					put(grammarAccess.getDocumentAccess().getNameAssignment_1(), "rule__Document__NameAssignment_1");
 					put(grammarAccess.getDocumentAccess().getElementsAssignment_2(), "rule__Document__ElementsAssignment_2");
 					put(grammarAccess.getDocumentAccess().getStaAssignment_3(), "rule__Document__StaAssignment_3");
@@ -203,7 +202,7 @@ public class DimeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSESSIONAccess().getNameAssignment_1(), "rule__SESSION__NameAssignment_1");
 					put(grammarAccess.getSESSIONAccess().getNameAssignment_2(), "rule__SESSION__NameAssignment_2");
 					put(grammarAccess.getSESSIONAccess().getNameAssignment_3(), "rule__SESSION__NameAssignment_3");
-					put(grammarAccess.getCALLSTATUSAccess().getNameAssignment_0_1(), "rule__CALLSTATUS__NameAssignment_0_1");
+					put(grammarAccess.getCALLSTATUSAccess().getNameAssignment_0(), "rule__CALLSTATUS__NameAssignment_0");
 					put(grammarAccess.getCALLSTATUSAccess().getNameAssignment_1(), "rule__CALLSTATUS__NameAssignment_1");
 					put(grammarAccess.getCALLSTATUSAccess().getNameAssignment_2(), "rule__CALLSTATUS__NameAssignment_2");
 					put(grammarAccess.getCALLSTATUSAccess().getNameAssignment_3(), "rule__CALLSTATUS__NameAssignment_3");

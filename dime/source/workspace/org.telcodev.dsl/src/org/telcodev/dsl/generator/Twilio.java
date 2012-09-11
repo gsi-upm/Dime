@@ -4,8 +4,17 @@ public class Twilio {
 
 	private String voice;
 	private String language;
+	private String number;
 
 	
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
 	public String getLanguage() {
 		return language;
 	}
@@ -22,10 +31,11 @@ public class Twilio {
 		this.voice = voice;
 	}
 
-	public Twilio(String voice, String language) {
+	public Twilio(String voice, String language, String number) {
 		super();
 		this.voice = voice;
 		this.language= language;
+		this.number=number;
 	}
 
 	public Twilio() {

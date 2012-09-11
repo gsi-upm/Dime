@@ -1,6 +1,6 @@
 Application SMS
 
 State start{
-	Sms "hola" to "sip:totemteleko@ekiga.net";
+	Sms "Dime is cool" to "+34656422095";
 	HangUp;
-}
+} 

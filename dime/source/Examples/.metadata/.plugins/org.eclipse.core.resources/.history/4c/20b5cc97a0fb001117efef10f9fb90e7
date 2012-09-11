@@ -1,0 +1,37 @@
+<?php
+
+require "res/Services/Twilio.php";
+require "globals.php";
+
+// State start implementation
+
+
+	header("content-type: text/xml");
+
+	
+	// Update of the value of the global constants and variables, and the session params.
+	
+	
+	else if($_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing"|| $_REQUEST["CallStatus"]=="queued"){
+		
+
+		// Declaration of the statements of the state.
+		echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
+		echo "<Response>";
+$greeting="Dime is cool";
+echo "<Say voice=\"man\" language=\"en\">"."This is the start state"."</Say>\n" ;
+	
+	
+		// Update the global variables and the session params.
+	
+	
+		echo "<Redirect>http://shannon.gsi.dit.upm.es/roberto/end.php?</Redirect>";
+	
+		echo "</Response>";
+	}
+	
+
+	
+	$_REQUEST['lastState']='start';
+	
+?>

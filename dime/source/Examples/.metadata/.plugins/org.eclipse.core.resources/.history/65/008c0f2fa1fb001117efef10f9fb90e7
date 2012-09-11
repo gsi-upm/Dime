@@ -1,0 +1,16 @@
+Application STATE
+
+String greeting;
+State start{
+	String greeting="Dime is cool";
+	Say "This is the start state";
+	GoTo end when COMPLETED;
+} 
+
+State end{ 
+	Say "You application has reached the end state";
+	 
+	HangUp; 
+}
+     
+        

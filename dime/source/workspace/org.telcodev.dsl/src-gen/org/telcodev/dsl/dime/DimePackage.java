@@ -1647,22 +1647,13 @@ public interface DimePackage extends EPackage
   int BOOL_LITERAL__VALUE = BOOL_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOL_LITERAL__NAME = BOOL_EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
    * The number of structural features of the '<em>Bool Literal</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BOOL_LITERAL_FEATURE_COUNT = BOOL_EXPRESSION_FEATURE_COUNT + 2;
+  int BOOL_LITERAL_FEATURE_COUNT = BOOL_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.telcodev.dsl.dime.impl.NumLiteralImpl <em>Num Literal</em>}' class.

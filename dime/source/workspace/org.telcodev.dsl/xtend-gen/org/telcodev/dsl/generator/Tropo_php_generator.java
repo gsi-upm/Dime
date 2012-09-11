@@ -210,10 +210,14 @@ public class Tropo_php_generator {
     {
       String _name = elem.getName();
       Tropo_php_generator.constantsId.add(_name);
-      String _name_1 = elem.getName();
       Primitive _value = elem.getValue();
-      CharSequence _declarePrimitive = Tropo_php_generator.declarePrimitive(_value);
-      Tropo_php_generator.constants.put(_name_1, _declarePrimitive);
+      boolean _notEquals = (!Objects.equal(_value, null));
+      if (_notEquals) {
+        String _name_1 = elem.getName();
+        Primitive _value_1 = elem.getValue();
+        CharSequence _declarePrimitive = Tropo_php_generator.declarePrimitive(_value_1);
+        Tropo_php_generator.constants.put(_name_1, _declarePrimitive);
+      }
       StringConcatenation _builder = new StringConcatenation();
       CharSequence _declareStatement = Tropo_php_generator.declareStatement(elem);
       _builder.append(_declareStatement, "");
@@ -227,10 +231,14 @@ public class Tropo_php_generator {
     {
       String _name = elem.getName();
       Tropo_php_generator.variablesId.add(_name);
-      String _name_1 = elem.getName();
       BoolExpression _value = elem.getValue();
-      CharSequence _declareBoolExpression = Tropo_php_generator.declareBoolExpression(_value);
-      Tropo_php_generator.variables.put(_name_1, _declareBoolExpression);
+      boolean _notEquals = (!Objects.equal(_value, null));
+      if (_notEquals) {
+        String _name_1 = elem.getName();
+        BoolExpression _value_1 = elem.getValue();
+        CharSequence _declareBoolExpression = Tropo_php_generator.declareBoolExpression(_value_1);
+        Tropo_php_generator.variables.put(_name_1, _declareBoolExpression);
+      }
       StringConcatenation _builder = new StringConcatenation();
       _xblockexpression = (_builder);
     }
@@ -242,10 +250,14 @@ public class Tropo_php_generator {
     {
       String _name = elem.getName();
       Tropo_php_generator.variablesId.add(_name);
-      String _name_1 = elem.getName();
       ConcatenationExpression _value = elem.getValue();
-      CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_value);
-      Tropo_php_generator.variables.put(_name_1, _declareConcatenation);
+      boolean _notEquals = (!Objects.equal(_value, null));
+      if (_notEquals) {
+        String _name_1 = elem.getName();
+        ConcatenationExpression _value_1 = elem.getValue();
+        CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_value_1);
+        Tropo_php_generator.variables.put(_name_1, _declareConcatenation);
+      }
       StringConcatenation _builder = new StringConcatenation();
       _xblockexpression = (_builder);
     }
@@ -257,10 +269,14 @@ public class Tropo_php_generator {
     {
       String _name = elem.getName();
       Tropo_php_generator.variablesId.add(_name);
-      String _name_1 = elem.getName();
       MathExpression _value = elem.getValue();
-      CharSequence _declareMathExpression = Tropo_php_generator.declareMathExpression(_value);
-      Tropo_php_generator.variables.put(_name_1, _declareMathExpression);
+      boolean _notEquals = (!Objects.equal(_value, null));
+      if (_notEquals) {
+        String _name_1 = elem.getName();
+        MathExpression _value_1 = elem.getValue();
+        CharSequence _declareMathExpression = Tropo_php_generator.declareMathExpression(_value_1);
+        Tropo_php_generator.variables.put(_name_1, _declareMathExpression);
+      }
       StringConcatenation _builder = new StringConcatenation();
       _xblockexpression = (_builder);
     }
