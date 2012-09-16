@@ -1158,7 +1158,7 @@ public class Tropo_php_generator {
     _builder.append("curl_exec($curl_handle);");
     _builder.newLine();
     _builder.append("\t\t\t");
-    _builder.append("curl_close($curl_handle)");
+    _builder.append("curl_close($curl_handle);");
     return _builder;
   }
   
@@ -1626,15 +1626,13 @@ public class Tropo_php_generator {
     }
   }
   
-  public static CharSequence declareVoiceTag(final VoiceTag elem) {
+  public static CharSequence declareVoiceTag(final EObject elem) {
     if (elem instanceof Ask) {
       return _declareVoiceTag((Ask)elem);
     } else if (elem instanceof Call) {
       return _declareVoiceTag((Call)elem);
     } else if (elem instanceof Dial) {
       return _declareVoiceTag((Dial)elem);
-    } else if (elem instanceof Email) {
-      return _declareVoiceTag((Email)elem);
     } else if (elem instanceof GetDigits) {
       return _declareVoiceTag((GetDigits)elem);
     } else if (elem instanceof Hangup) {
@@ -1651,6 +1649,8 @@ public class Tropo_php_generator {
       return _declareVoiceTag((Send)elem);
     } else if (elem instanceof Sms) {
       return _declareVoiceTag((Sms)elem);
+    } else if (elem instanceof Email) {
+      return _declareVoiceTag((Email)elem);
     } else if (elem instanceof Tweet) {
       return _declareVoiceTag((Tweet)elem);
     } else {

@@ -73,12 +73,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Sms/to"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//Email">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Email/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Email/title"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Email/from"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Email/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Email/to"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//Tweet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Tweet/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Tweet/value"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//Transition">

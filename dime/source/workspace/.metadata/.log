@@ -508,3 +508,367 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/media
 
 !ENTRY org.eclipse.core.net 1 0 2012-09-10 22:00:33.939
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-11 13:09:26.703 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -keyring /Users/media/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/media/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 13:09:34.021
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.osgi 2 0 2012-09-11 13:27:07.357
+!MESSAGE While loading class "org.eclipse.jdt.internal.debug.ui.MemberActionFilter", thread "Thread[Worker-20,5,main]" timed out waiting (5006ms) for thread "Thread[main,6,main]" to finish starting bundle "org.eclipse.jdt.debug.ui_3.6.100.v20120530-1425 [147]". To avoid deadlock, thread "Thread[Worker-20,5,main]" is proceeding but "org.eclipse.jdt.internal.debug.ui.MemberActionFilter" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/org.eclipse.jdt.debug.ui_3.6.100.v20120530-1425.jar" by thread "main".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at org.eclipse.jdt.internal.debug.ui.ActionFilterAdapterFactory.getAdapter(ActionFilterAdapterFactory.java:42)
+	at org.eclipse.core.internal.runtime.AdapterManager.getAdapter(AdapterManager.java:295)
+	at org.eclipse.core.runtime.PlatformObject.getAdapter(PlatformObject.java:66)
+	at org.eclipse.ui.internal.util.Util.getAdapter(Util.java:110)
+	at org.eclipse.ui.internal.ActionExpression$ObjectStateExpression.getActionFilter(ActionExpression.java:471)
+	at org.eclipse.ui.internal.ActionExpression$ObjectStateExpression.preciselyMatches(ActionExpression.java:524)
+	at org.eclipse.ui.internal.ActionExpression$ObjectStateExpression.isEnabledFor(ActionExpression.java:499)
+	at org.eclipse.ui.internal.ActionExpression$SingleExpression.isEnabledFor(ActionExpression.java:743)
+	at org.eclipse.ui.internal.ActionExpression.isEnabledFor(ActionExpression.java:1053)
+	at org.eclipse.ui.internal.decorators.DecoratorDefinition.isEnabledFor(DecoratorDefinition.java:281)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.getDecoratorsFor(DecoratorManager.java:382)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecoratorsFor(LightweightDecoratorManager.java:315)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:340)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 29 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at org.eclipse.jdt.internal.debug.ui.ActionFilterAdapterFactory.getAdapter(ActionFilterAdapterFactory.java:42)
+	at org.eclipse.core.internal.runtime.AdapterManager.getAdapter(AdapterManager.java:295)
+	at org.eclipse.core.runtime.PlatformObject.getAdapter(PlatformObject.java:66)
+	at org.eclipse.ui.internal.util.Util.getAdapter(Util.java:110)
+	at org.eclipse.ui.internal.ActionExpression$ObjectStateExpression.getActionFilter(ActionExpression.java:471)
+	at org.eclipse.ui.internal.ActionExpression$ObjectStateExpression.preciselyMatches(ActionExpression.java:524)
+	at org.eclipse.ui.internal.ActionExpression$ObjectStateExpression.isEnabledFor(ActionExpression.java:499)
+	at org.eclipse.ui.internal.ActionExpression$SingleExpression.isEnabledFor(ActionExpression.java:743)
+	at org.eclipse.ui.internal.ActionExpression.isEnabledFor(ActionExpression.java:1053)
+	at org.eclipse.ui.internal.decorators.DecoratorDefinition.isEnabledFor(DecoratorDefinition.java:281)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.getDecoratorsFor(DecoratorManager.java:382)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecoratorsFor(LightweightDecoratorManager.java:315)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:340)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.apache.log4j 2 0 2012-09-11 14:41:12.198
+!MESSAGE org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess  - Couldn't resolve java object for root type org.telcodev.dsl.generator.CallIt and fragment 'org
+
+!STACK 0
+java.lang.Exception
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.resolveJavaObject(IndexedJvmTypeAccess.java:119)
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.resolveJavaObject(IndexedJvmTypeAccess.java:123)
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.resolveJavaObject(IndexedJvmTypeAccess.java:123)
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.resolveJavaObject(IndexedJvmTypeAccess.java:123)
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.resolveJavaObject(IndexedJvmTypeAccess.java:123)
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.getIndexedJvmType(IndexedJvmTypeAccess.java:72)
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.getIndexedJvmType(IndexedJvmTypeAccess.java:53)
+	at org.eclipse.xtext.common.types.access.jdt.JdtTypeProvider.findTypeByName(JdtTypeProvider.java:87)
+	at org.eclipse.xtext.common.types.xtext.AbstractTypeScope.getSingleElement(AbstractTypeScope.java:54)
+	at org.eclipse.xtext.common.types.xtext.AbstractTypeScope.getElements(AbstractTypeScope.java:68)
+	at org.eclipse.xtext.scoping.impl.AbstractScope$2.get(AbstractScope.java:135)
+	at org.eclipse.xtext.scoping.impl.AbstractScope$2.get(AbstractScope.java:1)
+	at org.eclipse.xtext.scoping.impl.AbstractScope$ParentIterable.iterator(AbstractScope.java:59)
+	at com.google.common.collect.Iterables$3.next(Iterables.java:505)
+	at com.google.common.collect.Iterables$3.next(Iterables.java:498)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:540)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at org.eclipse.xtext.scoping.impl.ImportScope.getLocalElementsByName(ImportScope.java:154)
+	at org.eclipse.xtend.core.scoping.XtendImportedNamespaceScopeProvider$1.getLocalElementsByName(XtendImportedNamespaceScopeProvider.java:157)
+	at org.eclipse.xtext.scoping.impl.ImportScope.getSingleLocalElementByName(ImportScope.java:140)
+	at org.eclipse.xtend.core.scoping.XtendImportedNamespaceScopeProvider$1.getSingleLocalElementByName(XtendImportedNamespaceScopeProvider.java:150)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:102)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:105)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:105)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:105)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:179)
+	at org.eclipse.xtext.xbase.resource.XbaseResource.access$0(XbaseResource.java:1)
+	at org.eclipse.xtext.xbase.resource.XbaseResource$2.exec(XbaseResource.java:239)
+	at org.eclipse.xtext.xbase.resource.XbaseResource$2.exec(XbaseResource.java:1)
+	at org.eclipse.xtext.util.OnChangeEvictingCache.execWithoutCacheClear(OnChangeEvictingCache.java:124)
+	at org.eclipse.xtext.xbase.resource.XbaseResource.getEObject(XbaseResource.java:237)
+	at org.eclipse.xtend.core.resource.XtendResource.getEObject(XtendResource.java:88)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getEObject(ResourceSetImpl.java:223)
+	at org.eclipse.emf.ecore.util.EcoreUtil.resolve(EcoreUtil.java:197)
+	at org.eclipse.emf.ecore.util.EcoreUtil.resolve(EcoreUtil.java:257)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eResolveProxy(BasicEObjectImpl.java:1473)
+	at org.eclipse.xtext.common.types.impl.JvmTypeReferenceImplCustom.eResolveProxy(JvmTypeReferenceImplCustom.java:37)
+	at org.eclipse.xtext.common.types.impl.JvmParameterizedTypeReferenceImpl.getType(JvmParameterizedTypeReferenceImpl.java:110)
+	at org.eclipse.xtext.common.types.util.Primitives.isPrimitive(Primitives.java:111)
+	at org.eclipse.xtext.common.types.util.Primitives.asWrapperTypeIfPrimitive(Primitives.java:72)
+	at org.eclipse.xtend.core.dispatch.DispatchingSupport.getMaxDistanceToObject(DispatchingSupport.java:191)
+	at org.eclipse.xtend.core.dispatch.DispatchingSupport.compare(DispatchingSupport.java:177)
+	at org.eclipse.xtend.core.dispatch.DispatchingSupport$5.compare(DispatchingSupport.java:166)
+	at org.eclipse.xtend.core.dispatch.DispatchingSupport$5.compare(DispatchingSupport.java:1)
+	at java.util.Arrays.mergeSort(Arrays.java:1270)
+	at java.util.Arrays.mergeSort(Arrays.java:1282)
+	at java.util.Arrays.mergeSort(Arrays.java:1282)
+	at java.util.Arrays.sort(Arrays.java:1210)
+	at java.util.Collections.sort(Collections.java:159)
+	at org.eclipse.xtend.core.dispatch.DispatchingSupport.sort(DispatchingSupport.java:164)
+	at org.eclipse.xtend.core.jvmmodel.XtendJvmModelInferrer.appendSyntheticDispatchMethods(XtendJvmModelInferrer.java:325)
+	at org.eclipse.xtend.core.jvmmodel.XtendJvmModelInferrer.initialize(XtendJvmModelInferrer.java:178)
+	at org.eclipse.xtend.core.jvmmodel.XtendJvmModelInferrer$1.apply(XtendJvmModelInferrer.java:135)
+	at org.eclipse.xtend.core.jvmmodel.XtendJvmModelInferrer$1.apply(XtendJvmModelInferrer.java:1)
+	at org.eclipse.xtext.xbase.jvmmodel.JvmModelAssociator.installDerivedState(JvmModelAssociator.java:234)
+	at org.eclipse.xtext.resource.DerivedStateAwareResource.installDerivedState(DerivedStateAwareResource.java:125)
+	at org.eclipse.xtext.resource.DerivedStateAwareResource.getContents(DerivedStateAwareResource.java:48)
+	at org.eclipse.xtend.ide.highlighting.XtendHighlightingCalculator.doProvideHighlightingFor(XtendHighlightingCalculator.java:79)
+	at org.eclipse.xtext.xbase.ui.highlighting.XbaseHighlightingCalculator.provideHighlightingFor(XbaseHighlightingCalculator.java:92)
+	at org.eclipse.xtext.ui.editor.syntaxcoloring.MergingHighlightedPositionAcceptor.provideHighlightingFor(MergingHighlightedPositionAcceptor.java:51)
+	at org.eclipse.xtext.ui.editor.syntaxcoloring.HighlightingReconciler.reconcilePositions(HighlightingReconciler.java:88)
+	at org.eclipse.xtext.ui.editor.syntaxcoloring.HighlightingReconciler.modelChanged(HighlightingReconciler.java:281)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.notifyModelListeners(XtextDocument.java:118)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.afterModify(XtextDocument.java:172)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.afterModify(XtextDocument.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.modify(AbstractReadWriteAcces.java:50)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.modify(XtextDocument.java:181)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.internalModify(XtextDocument.java:90)
+	at org.eclipse.xtext.ui.editor.reconciler.XtextDocumentReconcileStrategy.reconcile(XtextDocumentReconcileStrategy.java:44)
+	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler.run(XtextReconciler.java:254)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.apache.log4j 2 0 2012-09-11 14:41:12.412
+!MESSAGE org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess  - Couldn't resolve java object for root type org.telcodev.dsl.generator.CallIt and fragment 'org
+
+!STACK 0
+java.lang.Exception
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.resolveJavaObject(IndexedJvmTypeAccess.java:119)
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.resolveJavaObject(IndexedJvmTypeAccess.java:123)
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.resolveJavaObject(IndexedJvmTypeAccess.java:123)
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.resolveJavaObject(IndexedJvmTypeAccess.java:123)
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.resolveJavaObject(IndexedJvmTypeAccess.java:123)
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.getIndexedJvmType(IndexedJvmTypeAccess.java:72)
+	at org.eclipse.xtext.common.types.access.impl.IndexedJvmTypeAccess.getIndexedJvmType(IndexedJvmTypeAccess.java:53)
+	at org.eclipse.xtext.common.types.access.jdt.JdtTypeProvider.findTypeByName(JdtTypeProvider.java:87)
+	at org.eclipse.xtext.common.types.xtext.AbstractTypeScope.getSingleElement(AbstractTypeScope.java:54)
+	at org.eclipse.xtext.common.types.xtext.AbstractTypeScope.getElements(AbstractTypeScope.java:68)
+	at org.eclipse.xtext.scoping.impl.AbstractScope$2.get(AbstractScope.java:135)
+	at org.eclipse.xtext.scoping.impl.AbstractScope$2.get(AbstractScope.java:1)
+	at org.eclipse.xtext.scoping.impl.AbstractScope$ParentIterable.iterator(AbstractScope.java:59)
+	at com.google.common.collect.Iterables$3.next(Iterables.java:505)
+	at com.google.common.collect.Iterables$3.next(Iterables.java:498)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:540)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at com.google.common.collect.Iterators$7.computeNext(Iterators.java:643)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:539)
+	at org.eclipse.xtext.scoping.impl.ImportScope.getLocalElementsByName(ImportScope.java:154)
+	at org.eclipse.xtend.core.scoping.XtendImportedNamespaceScopeProvider$1.getLocalElementsByName(XtendImportedNamespaceScopeProvider.java:157)
+	at org.eclipse.xtext.scoping.impl.ImportScope.getSingleLocalElementByName(ImportScope.java:140)
+	at org.eclipse.xtend.core.scoping.XtendImportedNamespaceScopeProvider$1.getSingleLocalElementByName(XtendImportedNamespaceScopeProvider.java:150)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:102)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:105)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:105)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:105)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:179)
+	at org.eclipse.xtext.xbase.resource.XbaseResource.access$0(XbaseResource.java:1)
+	at org.eclipse.xtext.xbase.resource.XbaseResource$2.exec(XbaseResource.java:239)
+	at org.eclipse.xtext.xbase.resource.XbaseResource$2.exec(XbaseResource.java:1)
+	at org.eclipse.xtext.util.OnChangeEvictingCache.execWithoutCacheClear(OnChangeEvictingCache.java:124)
+	at org.eclipse.xtext.xbase.resource.XbaseResource.getEObject(XbaseResource.java:237)
+	at org.eclipse.xtend.core.resource.XtendResource.getEObject(XtendResource.java:88)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getEObject(ResourceSetImpl.java:223)
+	at org.eclipse.emf.ecore.util.EcoreUtil.resolve(EcoreUtil.java:197)
+	at org.eclipse.emf.ecore.util.EcoreUtil.resolve(EcoreUtil.java:257)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eResolveProxy(BasicEObjectImpl.java:1473)
+	at org.eclipse.xtext.common.types.impl.JvmTypeReferenceImplCustom.eResolveProxy(JvmTypeReferenceImplCustom.java:37)
+	at org.eclipse.xtext.common.types.impl.JvmParameterizedTypeReferenceImpl.getType(JvmParameterizedTypeReferenceImpl.java:110)
+	at org.eclipse.xtext.common.types.impl.JvmParameterizedTypeReferenceImpl.eGet(JvmParameterizedTypeReferenceImpl.java:172)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.xtext.EcoreUtil2.getAllReferencedObjects(EcoreUtil2.java:414)
+	at org.eclipse.xtext.xbase.ui.highlighting.XbaseHighlightingCalculator.computeReferencedJvmTypeHighlighting(XbaseHighlightingCalculator.java:140)
+	at org.eclipse.xtext.xbase.ui.highlighting.XbaseHighlightingCalculator.searchAndHighlightElements(XbaseHighlightingCalculator.java:131)
+	at org.eclipse.xtext.xbase.ui.highlighting.XbaseHighlightingCalculator.doProvideHighlightingFor(XbaseHighlightingCalculator.java:115)
+	at org.eclipse.xtend.ide.highlighting.XtendHighlightingCalculator.doProvideHighlightingFor(XtendHighlightingCalculator.java:103)
+	at org.eclipse.xtext.xbase.ui.highlighting.XbaseHighlightingCalculator.provideHighlightingFor(XbaseHighlightingCalculator.java:92)
+	at org.eclipse.xtext.ui.editor.syntaxcoloring.MergingHighlightedPositionAcceptor.provideHighlightingFor(MergingHighlightedPositionAcceptor.java:51)
+	at org.eclipse.xtext.ui.editor.syntaxcoloring.HighlightingReconciler.reconcilePositions(HighlightingReconciler.java:88)
+	at org.eclipse.xtext.ui.editor.syntaxcoloring.HighlightingReconciler.modelChanged(HighlightingReconciler.java:281)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.notifyModelListeners(XtextDocument.java:118)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.afterModify(XtextDocument.java:172)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.afterModify(XtextDocument.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.modify(AbstractReadWriteAcces.java:50)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.modify(XtextDocument.java:181)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.internalModify(XtextDocument.java:90)
+	at org.eclipse.xtext.ui.editor.reconciler.XtextDocumentReconcileStrategy.reconcile(XtextDocumentReconcileStrategy.java:44)
+	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler.run(XtextReconciler.java:254)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2012-09-11 17:28:16.510 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -keyring /Users/media/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/media/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 17:30:35.988
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-11 22:51:44.397 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -keyring /Users/media/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/media/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 22:51:52.773
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 02:36:49.196 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -keyring /Users/media/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/media/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 02:36:55.555
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 13:11:00.412 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -keyring /Users/media/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/media/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 13:11:07.837
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-13 11:04:08.419 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -keyring /Users/media/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/media/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-13 11:04:17.104
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-15 18:35:34.080 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -keyring /Users/media/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/media/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-15 18:35:40.667
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-16 01:57:58.750 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -keyring /Users/media/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -data /Users/media/Dime/Dime/dime/source/workspace -keyring /Users/media/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-16 01:58:03.928
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-16 19:05:51.175 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -keyring /Users/media/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/media/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-16 19:06:01.900
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

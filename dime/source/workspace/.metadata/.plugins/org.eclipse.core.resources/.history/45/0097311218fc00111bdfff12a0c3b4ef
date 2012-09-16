@@ -1,0 +1,11 @@
+package org.telcodev.dsl.generator;
+import org.telcodev.dsl.dime.Concatenation;
+
+public class CallIntent {
+	private String called;
+	private Concatenation next;
+	
+	
+	
+	
+}

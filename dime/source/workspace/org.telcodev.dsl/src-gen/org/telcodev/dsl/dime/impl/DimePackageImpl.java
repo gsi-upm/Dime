@@ -985,9 +985,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEmail_Title()
+  public EAttribute getEmail_Name()
   {
-    return (EReference)emailEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)emailEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -995,7 +995,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEmail_From()
+  public EReference getEmail_Title()
   {
     return (EReference)emailEClass.getEStructuralFeatures().get(1);
   }
@@ -1005,7 +1005,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEmail_Value()
+  public EReference getEmail_From()
   {
     return (EReference)emailEClass.getEStructuralFeatures().get(2);
   }
@@ -1015,9 +1015,19 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEmail_To()
+  public EReference getEmail_Value()
   {
     return (EReference)emailEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEmail_To()
+  {
+    return (EReference)emailEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1035,9 +1045,19 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getTweet_Name()
+  {
+    return (EAttribute)tweetEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getTweet_Value()
   {
-    return (EReference)tweetEClass.getEStructuralFeatures().get(0);
+    return (EReference)tweetEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1909,12 +1929,14 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     createEReference(smsEClass, SMS__TO);
 
     emailEClass = createEClass(EMAIL);
+    createEAttribute(emailEClass, EMAIL__NAME);
     createEReference(emailEClass, EMAIL__TITLE);
     createEReference(emailEClass, EMAIL__FROM);
     createEReference(emailEClass, EMAIL__VALUE);
     createEReference(emailEClass, EMAIL__TO);
 
     tweetEClass = createEClass(TWEET);
+    createEAttribute(tweetEClass, TWEET__NAME);
     createEReference(tweetEClass, TWEET__VALUE);
 
     transitionEClass = createEClass(TRANSITION);
@@ -2068,8 +2090,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     sendEClass.getESuperTypes().add(this.getVoiceTag());
     sayEClass.getESuperTypes().add(this.getVoiceTag());
     smsEClass.getESuperTypes().add(this.getVoiceTag());
-    emailEClass.getESuperTypes().add(this.getVoiceTag());
-    tweetEClass.getESuperTypes().add(this.getVoiceTag());
     transitionEClass.getESuperTypes().add(this.getAbstractElement());
     ifExpEClass.getESuperTypes().add(this.getAbstractElement());
     bracketsEClass.getESuperTypes().add(this.getBoolExpression());
@@ -2171,12 +2191,14 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     initEReference(getSms_To(), this.getConcatenationExpression(), null, "to", null, 0, 1, Sms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(emailEClass, Email.class, "Email", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEmail_Name(), ecorePackage.getEString(), "name", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEmail_Title(), this.getConcatenationExpression(), null, "title", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEmail_From(), this.getConcatenationExpression(), null, "from", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEmail_Value(), this.getConcatenationExpression(), null, "value", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEmail_To(), this.getConcatenationExpression(), null, "to", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tweetEClass, Tweet.class, "Tweet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTweet_Name(), ecorePackage.getEString(), "name", null, 0, 1, Tweet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTweet_Value(), this.getConcatenationExpression(), null, "value", null, 0, 1, Tweet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

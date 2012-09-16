@@ -235,8 +235,6 @@ public class DimeSwitch<T> extends Switch<T>
       {
         Email email = (Email)theEObject;
         T result = caseEmail(email);
-        if (result == null) result = caseVoiceTag(email);
-        if (result == null) result = caseAbstractElement(email);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -244,8 +242,6 @@ public class DimeSwitch<T> extends Switch<T>
       {
         Tweet tweet = (Tweet)theEObject;
         T result = caseTweet(tweet);
-        if (result == null) result = caseVoiceTag(tweet);
-        if (result == null) result = caseAbstractElement(tweet);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

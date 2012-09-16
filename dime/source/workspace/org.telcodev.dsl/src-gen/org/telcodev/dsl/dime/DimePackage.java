@@ -803,7 +803,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EMAIL__NAME = VOICE_TAG__NAME;
+  int EMAIL__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Title</b></em>' containment reference.
@@ -812,7 +812,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EMAIL__TITLE = VOICE_TAG_FEATURE_COUNT + 0;
+  int EMAIL__TITLE = 1;
 
   /**
    * The feature id for the '<em><b>From</b></em>' containment reference.
@@ -821,7 +821,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EMAIL__FROM = VOICE_TAG_FEATURE_COUNT + 1;
+  int EMAIL__FROM = 2;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -830,7 +830,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EMAIL__VALUE = VOICE_TAG_FEATURE_COUNT + 2;
+  int EMAIL__VALUE = 3;
 
   /**
    * The feature id for the '<em><b>To</b></em>' containment reference.
@@ -839,7 +839,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EMAIL__TO = VOICE_TAG_FEATURE_COUNT + 3;
+  int EMAIL__TO = 4;
 
   /**
    * The number of structural features of the '<em>Email</em>' class.
@@ -848,7 +848,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EMAIL_FEATURE_COUNT = VOICE_TAG_FEATURE_COUNT + 4;
+  int EMAIL_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link org.telcodev.dsl.dime.impl.TweetImpl <em>Tweet</em>}' class.
@@ -867,7 +867,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int TWEET__NAME = VOICE_TAG__NAME;
+  int TWEET__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -876,7 +876,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int TWEET__VALUE = VOICE_TAG_FEATURE_COUNT + 0;
+  int TWEET__VALUE = 1;
 
   /**
    * The number of structural features of the '<em>Tweet</em>' class.
@@ -885,7 +885,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int TWEET_FEATURE_COUNT = VOICE_TAG_FEATURE_COUNT + 1;
+  int TWEET_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.telcodev.dsl.dime.impl.TransitionImpl <em>Transition</em>}' class.
@@ -2483,6 +2483,17 @@ public interface DimePackage extends EPackage
   EClass getEmail();
 
   /**
+   * Returns the meta object for the attribute '{@link org.telcodev.dsl.dime.Email#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.telcodev.dsl.dime.Email#getName()
+   * @see #getEmail()
+   * @generated
+   */
+  EAttribute getEmail_Name();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.telcodev.dsl.dime.Email#getTitle <em>Title</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2535,6 +2546,17 @@ public interface DimePackage extends EPackage
    * @generated
    */
   EClass getTweet();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.telcodev.dsl.dime.Tweet#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.telcodev.dsl.dime.Tweet#getName()
+   * @see #getTweet()
+   * @generated
+   */
+  EAttribute getTweet_Name();
 
   /**
    * Returns the meta object for the containment reference '{@link org.telcodev.dsl.dime.Tweet#getValue <em>Value</em>}'.
@@ -3829,6 +3851,14 @@ public interface DimePackage extends EPackage
     EClass EMAIL = eINSTANCE.getEmail();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EMAIL__NAME = eINSTANCE.getEmail_Name();
+
+    /**
      * The meta object literal for the '<em><b>Title</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3869,6 +3899,14 @@ public interface DimePackage extends EPackage
      * @generated
      */
     EClass TWEET = eINSTANCE.getTweet();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TWEET__NAME = eINSTANCE.getTweet_Name();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.

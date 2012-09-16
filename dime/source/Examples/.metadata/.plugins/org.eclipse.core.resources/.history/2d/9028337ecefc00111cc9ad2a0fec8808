@@ -1,0 +1,46 @@
+<?php
+
+require "res/Services/Twilio.php";
+require "globals_dime.php";
+
+// State start implementation
+
+
+	header("content-type: text/xml");
+	
+	// Update of the value of the global constants and variables, and the session params.
+	$greeting=$_GET['greeting']; 
+	
+	
+	if((!isset($_REQUEST['CallStatus'])||$_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing"|| $_REQUEST["CallStatus"]=="queued"){
+		
+	
+
+	
+		// Declaration of the statements of the state.
+		echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
+		echo "<Response>";
+		$greeting="Dime is cool";
+		echo "<Say voice=\"man\" language=\"en\">"."This is the start state"."</Say>\n"; 
+		$completedurl_dime=http://shannon.gsi.dit.upm.es/roberto/end.php
+	
+		$url=$completedurl_dime."?"."greeting=".urlencode($greeting)."&laststate_dime=start";
+		if(isset($hangupurl_dime){
+			$url=$url."&hangupurl_dime=".urlencode($hangupurl_dime);
+		}
+		if(isset($errorurl_dime){
+			$url=$url."&errorurl_dime=".urlencode($errorurl_dime);
+		}
+		if(isset($timesurl_dime){
+			$url=$url_dime."&timesurl_dime=".urlencode($timesurl_dime);
+		}
+		
+		echo "<Redirect>".$url."</Redirect>";
+	
+		echo "</Response>";
+	}
+	
+
+
+	
+?>

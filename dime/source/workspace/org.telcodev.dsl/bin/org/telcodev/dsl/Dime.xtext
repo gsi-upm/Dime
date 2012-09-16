@@ -20,7 +20,7 @@ State:
 	'}';
  
 VoiceTag:
-	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms | Email | Tweet;
+	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms ;//| Email | Tweet;
 
 Call:
 	name='Call' to=ConcatenationExpression ';';

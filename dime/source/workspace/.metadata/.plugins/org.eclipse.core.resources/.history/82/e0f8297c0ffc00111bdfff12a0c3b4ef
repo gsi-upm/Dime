@@ -1,0 +1,7 @@
+package org.telcodev.dsl.generator;
+
+public class CallIntent {
+	private String called;
+	private String next;
+	
+}

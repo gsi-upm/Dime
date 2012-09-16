@@ -84,7 +84,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//ConcatenationExpression"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Email" eSuperTypes="#//VoiceTag">
+  <eClassifiers xsi:type="ecore:EClass" name="Email">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="title" eType="#//ConcatenationExpression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//ConcatenationExpression"
@@ -94,7 +95,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//ConcatenationExpression"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Tweet" eSuperTypes="#//VoiceTag">
+  <eClassifiers xsi:type="ecore:EClass" name="Tweet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//ConcatenationExpression"
         containment="true"/>
   </eClassifiers>

@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.telcodev.dsl.dime.ConcatenationExpression;
 import org.telcodev.dsl.dime.DimePackage;
@@ -21,14 +22,35 @@ import org.telcodev.dsl.dime.Tweet;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.telcodev.dsl.dime.impl.TweetImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.TweetImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class TweetImpl extends VoiceTagImpl implements Tweet
+public class TweetImpl extends MinimalEObjectImpl.Container implements Tweet
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -58,6 +80,29 @@ public class TweetImpl extends VoiceTagImpl implements Tweet
   protected EClass eStaticClass()
   {
     return DimePackage.Literals.TWEET;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.TWEET__NAME, oldName, name));
   }
 
   /**
@@ -134,6 +179,8 @@ public class TweetImpl extends VoiceTagImpl implements Tweet
   {
     switch (featureID)
     {
+      case DimePackage.TWEET__NAME:
+        return getName();
       case DimePackage.TWEET__VALUE:
         return getValue();
     }
@@ -150,6 +197,9 @@ public class TweetImpl extends VoiceTagImpl implements Tweet
   {
     switch (featureID)
     {
+      case DimePackage.TWEET__NAME:
+        setName((String)newValue);
+        return;
       case DimePackage.TWEET__VALUE:
         setValue((ConcatenationExpression)newValue);
         return;
@@ -167,6 +217,9 @@ public class TweetImpl extends VoiceTagImpl implements Tweet
   {
     switch (featureID)
     {
+      case DimePackage.TWEET__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case DimePackage.TWEET__VALUE:
         setValue((ConcatenationExpression)null);
         return;
@@ -184,10 +237,29 @@ public class TweetImpl extends VoiceTagImpl implements Tweet
   {
     switch (featureID)
     {
+      case DimePackage.TWEET__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case DimePackage.TWEET__VALUE:
         return value != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //TweetImpl

@@ -190,9 +190,7 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case DimePackage.EMAIL:
-				if(context == grammarAccess.getAbstractElementRule() ||
-				   context == grammarAccess.getEmailRule() ||
-				   context == grammarAccess.getVoiceTagRule()) {
+				if(context == grammarAccess.getEmailRule()) {
 					sequence_Email(context, (Email) semanticObject); 
 					return; 
 				}
@@ -414,9 +412,7 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case DimePackage.TWEET:
-				if(context == grammarAccess.getAbstractElementRule() ||
-				   context == grammarAccess.getTweetRule() ||
-				   context == grammarAccess.getVoiceTagRule()) {
+				if(context == grammarAccess.getTweetRule()) {
 					sequence_Tweet(context, (Tweet) semanticObject); 
 					return; 
 				}
@@ -693,8 +689,8 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_Email(EObject context, Email semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.VOICE_TAG__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.VOICE_TAG__NAME));
+			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.EMAIL__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.EMAIL__NAME));
 			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.EMAIL__TITLE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.EMAIL__TITLE));
 			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.EMAIL__FROM) == ValueTransient.YES)
@@ -1100,8 +1096,8 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_Tweet(EObject context, Tweet semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.VOICE_TAG__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.VOICE_TAG__NAME));
+			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.TWEET__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.TWEET__NAME));
 			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.TWEET__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.TWEET__VALUE));
 		}

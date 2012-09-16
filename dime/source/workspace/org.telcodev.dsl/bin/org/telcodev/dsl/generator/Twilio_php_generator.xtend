@@ -44,7 +44,6 @@ import org.telcodev.dsl.dime.Param
 import org.telcodev.dsl.dime.MathBrackets
 import org.telcodev.dsl.dime.ConcatenationBrackets
 import org.telcodev.dsl.dime.Call
-import java.util.HashMap
 import org.telcodev.dsl.dime.Primitive
 import org.telcodev.dsl.dime.Constant
 import org.telcodev.dsl.dime.SESSION
@@ -52,6 +51,8 @@ import org.telcodev.dsl.dime.CALLSTATUS
 import org.telcodev.dsl.dime.Tweet
 import org.telcodev.dsl.dime.Email
 import org.telcodev.dsl.dime.Sms
+import org.telcodev.dsl.dime.ConcatenationExpression
+import org.telcodev.dsl.dime.AbstractElement
 
 class Twilio_php_generator {
 	private static String appName
@@ -60,16 +61,20 @@ class Twilio_php_generator {
 	private static String name
 	private static String language
 	private static String twilioLanguage
+	private static String token
+	private static String sid
+	private static String number;
+	
 	private static String errorRedirect
 	private static String completedRedirect
 	private static String hangupRedirect
 	private static String timesRedirect
 	private static String timeoutRedirect
 	private static Set<String> variablesId
-	private static HashMap variables
-	private static HashMap constants
 	private static Set<String> constantsId
-	private static String number;
+	
+	
+	
 	
 	def static void generateTwilioPhp(Resource resource, IFileSystemAccess fsa, Config config){
 		//Setting parameters
@@ -79,6 +84,9 @@ class Twilio_php_generator {
 		url= config.url
 		language=config.language
 		number= config.twilio.number
+		sid= config.twilio.accountSid
+		token= config.twilio.token
+		
 		
 				System::out.println("")
 	System::out.println("*****************************************************************************************")
@@ -86,36 +94,8 @@ class Twilio_php_generator {
 	System::out.println("Creating Twilio-Php "+ (resource.contents.head as Document).name+" application.");
 	
 	System::out.println("Generating resources folder.");
-		//FALTAN ARCHIVOS DE LAS SIGNALS SI REALMENTE SE NECESITAN
-		
-//		//Copy important Slim files to the new directory
-//		 		
-//		fsa.generateFile('res/Slim/Environment.php', CopyFile::readFile('res/twilio_php/Slim/Environment.php'))
-//		fsa.generateFile('res/Slim/Log.php', CopyFile::readFile('res/twilio_php/Slim/Log.php'))
-//		fsa.generateFile('res/Slim/LogWriter.php', CopyFile::readFile('res/twilio_php/Slim/LogWriter.php'))
-//		fsa.generateFile('res/Slim/Middleware.php', CopyFile::readFile('res/twilio_php/Slim/Middleware.php'))
-//		fsa.generateFile('res/Slim/Route.php', CopyFile::readFile('res/twilio_php/Slim/Route.php'))
-//		fsa.generateFile('res/Slim/Router.php', CopyFile::readFile('res/twilio_php/Slim/Router.php'))
-//		fsa.generateFile('res/Slim/Slim.php', CopyFile::readFile('res/twilio_php/Slim/Slim.php'))
-//		fsa.generateFile('res/Slim/View.php', CopyFile::readFile('res/twilio_php/Slim/View.php'))
-//		
-//		fsa.generateFile('res/Slim/Exception/Pass.php', CopyFile::readFile('res/twilio_php/Slim/Exception/Pass.php'))
-//		fsa.generateFile('res/Slim/Exception/RequestSlash.php', CopyFile::readFile('res/twilio_php/Slim/Exception/RequestSlash.php'))
-//		fsa.generateFile('res/Slim/Exception/Stop.php', CopyFile::readFile('res/twilio_php/Slim/Exception/Stop.php'))
-//
-//		fsa.generateFile('res/Slim/Http/Headers.php', CopyFile::readFile('res/twilio_php/Slim/Http/Headers.php'))
-//		fsa.generateFile('res/Slim/Http/Request.php', CopyFile::readFile('res/twilio_php/Slim/Http/Request.php'))
-//		fsa.generateFile('res/Slim/Http/Response.php', CopyFile::readFile('res/twilio_php/Slim/Http/Response.php'))
-//		fsa.generateFile('res/Slim/Http/Util.php', CopyFile::readFile('res/twilio_php/Slim/Http/Util.php'))
-//
-//		fsa.generateFile('res/Slim/Middleware/ContentTypes.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/ContentTypes.php'))
-//		fsa.generateFile('res/Slim/Middleware/Flash.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/Flash.php'))
-//		fsa.generateFile('res/Slim/Middleware/MethodOverride.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/MethodOverride.php'))
-//		fsa.generateFile('res/Slim/Middleware/PrettyExceptions.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/PrettyExceptions.php'))
-//		fsa.generateFile('res/Slim/Middleware/SessionCookie.php', CopyFile::readFile('res/twilio_php/Slim/Middleware/SessionCookie.php'))
-//
-//		
-//	
+	
+	System::out.println("Generating Twilio folder.");
 	
 		//Copy important Twilio files to the new directory
 		
@@ -173,15 +153,20 @@ class Twilio_php_generator {
 		fsa.generateFile('res/Services/Twilio/Rest/Transcriptions.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Transcriptions.php'))
 		
 		
-		variables= new  HashMap()
-		constants= new  HashMap()
+		
 		appName=className(resource) 
 		variablesId= new HashSet<String>()
 		constantsId= new HashSet<String>()
 		
-		System::out.println("Creating "+"index"+".php file");
 		
-		fsa.generateFile("globals.php", toTwilioPHP(resource.contents.head as Document, resource))
+		
+		System::out.println("Creating "+"globals_dime"+".php file");
+		
+		fsa.generateFile("globals_dime.php", toTwilioPHP(resource.contents.head as Document, resource))
+		
+		System::out.println("Creating "+"call_dime"+".php file");
+		
+		fsa.generateFile("call_dime.php",declareCall())
 		
 		
 		for(state :( resource.contents.head as Document).sta){
@@ -199,7 +184,7 @@ class Twilio_php_generator {
 	}
 	
 	
-//FALTAN LAS GLOBALES
+
 
 	def static toTwilioPHP(Document sm, Resource resource) {
 	
@@ -222,10 +207,7 @@ class Twilio_php_generator {
 
 	def static dispatch declareGlobalStatement(Constant elem){
 			constantsId.add(elem.name)
-			if(elem.value!=null){
-					constants.put(elem.name, declarePrimitive(elem.value))
-			}
-	
+			
 		
 	 '''«declareStatement(elem)»'''
 	}
@@ -233,52 +215,61 @@ class Twilio_php_generator {
 	def static dispatch declareGlobalStatement(BoolVariable elem){
 		variablesId.add(elem.name)
 		if(elem.value!=null){
-			variables.put(elem.name, declareBoolExpression(elem.value))
+		
+			'''$«elem.name»=«declareBoolExpression(elem.value)»;'''
+		}else{
+			''''''
 		}
 		
-		''''''
+		
 	}
 	
 	def static dispatch declareGlobalStatement(StringVariable elem){
 			variablesId.add(elem.name)
 			if(elem.value!=null){
-			variables.put(elem.name, declareConcatenation(elem.value))
-		}
 			
-		''''''
+			'''$«elem.name»=«declareConcatenation(elem.value)»;'''
+		}
+			else{
+				''''''
+			}
 	}
 	
 	def static dispatch declareGlobalStatement(NumVariable elem){
 			variablesId.add(elem.name)
 				if(elem.value!=null){
-					variables.put(elem.name, declareMathExpression(elem.value))
+					
+					'''$«elem.name»=«declareMathExpression(elem.value)»;'''
 				}
 			
-			
-			''''''
+			else{
+					''''''
+			}
+		
 	}
 	
 // States declaration:
+
 	
 	
 	def  static declareState(State elem){
 		var result=false
 		var first=true;
-	
+		name=elem.name;
 		System::out.println("Generating "+elem.name.toUpperCase+" state.");
 		
 		
+			
 '''
 <?php
 
 require "res/Services/Twilio.php";
-require "globals.php";
+require "globals_dime.php";
 
 // State «elem.name» implementation
 
 
 	header("content-type: text/xml");
-
 	
 	// Update of the value of the global constants and variables, and the session params.
 	«FOR d: variablesId»
@@ -286,17 +277,48 @@ require "globals.php";
 	«ENDFOR»
 	«IF hangupRedirect!=null»
 	
-	if($_REQUEST["CallStatus"]=="hangup"){
-		echo "<Redirect>«hangupRedirect»?".«saveGlobalVariable()»"</Redirect>";
+	«IF !first»else «ENDIF»if($_REQUEST["CallStatus"]=="hangup"){
+		if(isset($_GET['hangupurl_dime']){
+			$url=$_GET['hangupurl_dime']."?"laststate_dime=«name»";
+			«IF !variablesId.isEmpty()»«saveGlobalVariableXML("url")»«ENDIF»
+			echo "<Redirect>".$url."</Redirect>";
+		}
 	}«ENDIF»
 	
 	«IF errorRedirect!=null»
 	«IF !first»else «ENDIF»if($_REQUEST["CallStatus"]=="fail"){
-		echo "<Redirect>«errorRedirect»?".«saveGlobalVariable()»"</Redirect>";
+		if(isset($_GET['errorurl_dime']){
+			$url=$_GET['errorurl_dime']."?"laststate_dime=«name»";
+			«IF !variablesId.isEmpty()»«saveGlobalVariableXML("url")»«ENDIF»
+			echo "<Redirect>".$url."</Redirect>";
+		}
 	}«ENDIF»
 	
-	«IF !first»else «ENDIF»if($_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing"|| $_REQUEST["CallStatus"]=="queued"){
+	«IF !first»else «ENDIF»if((!isset($_REQUEST['CallStatus']))||$_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing"|| $_REQUEST["CallStatus"]=="queued"){
 		
+	«IF elem.times!=0&& timesRedirect!=null» 
+	
+	// Times signal appears when the param reached the atribute times of the state
+	
+	if(isset($_GET['times_dime']&&isset($_GET['timesurl_dime'])){
+		if($_GET['times_dime']==«elem.times»){
+			$url=$_GET['timesurl_dime']."?laststate_dime=«name»";
+			«IF !variablesId.isEmpty()»«saveGlobalVariableXML("url")»«ENDIF»
+			echo "<Redirect>".$url."</Redirect>";
+			
+		}else{
+			$times_dime=$_GET['times_dime']+1;
+		}
+	}else{
+		$times_dime=1;
+	}
+	«ENDIF»
+	
+	«IF elem.timeout!=0 && timeoutRedirect!=null» 	
+	
+	// Timeout signal appears when the timeout atribute of the state is reached.
+	
+	«ENDIF»
 	«IF elem.name.equals("start")»
 
 	«ENDIF»
@@ -308,37 +330,26 @@ require "globals.php";
 		«declareAbstractElement(c)»
 	«ENDFOR»
 	
-	
-		// Update the global variables and the session params.
-	
-	
-		«IF completedRedirect!=null && !result»echo "<Redirect>«completedRedirect»?".«saveGlobalVariable()»"?lastState=«elem.name»</Redirect>";«ENDIF»
+		«IF completedRedirect!=null && !result»
+		$url=$completedurl_dime."?"."laststate_dime=«elem.name»";
+		«IF !variablesId.isEmpty()»«saveGlobalVariableXML("url")»«ENDIF»
+		if(isset($hangupurl_dime)){
+			$url=$url."&amp;hangupurl_dime=".urlencode($hangupurl_dime);
+		}
+		if(isset($errorurl_dime)){
+			$url=$url."&amp;errorurl_dime=".urlencode($errorurl_dime);
+		}
+		if(isset($timesurl_dime)){
+			$url=$url_dime."&amp;timesurl_dime=".urlencode($timesurl_dime);
+		}
+		
+		echo "<Redirect>".$url."</Redirect>";«ENDIF»
 	
 		echo "</Response>";
 	}
 	
 
-«IF elem.times!=0&& timesRedirect!=null» 
-	
-	// Times signal appears when the param reached the atribute times of the state
-	
-	if(isset($_REQUEST['times']){
-	$attempts=$_REQUEST['times'];
-		if($attempts==«elem.times»){
-			echo "<Redirect>«timesRedirect»?".«saveGlobalVariable()»"</Redirect>";
-		}else{
-			$attempts++;
-		}
-	}else{
-		$_REQUEST['times']=1;
-	}
-	«ENDIF»
-	
-	«IF elem.timeout!=0 && timeoutRedirect!=null» 	
-	
-	// Timeout signal appears when the timeout atribute of the state is reached.
-	
-	«ENDIF»
+
 	«errorRedirect=null»«completedRedirect=null»«hangupRedirect=null»«timesRedirect=null»«timeoutRedirect=null»
 	
 ?>'''
@@ -365,24 +376,33 @@ require "globals.php";
 
 	def static  declareStateGlobalVariable(String elem){
 		
-		'''$«elem»=$_GET['«elem»'];'''
+		'''if(isset($_GET['«elem»'])){
+	$«elem»=$_GET['«elem»'];
+}'''
 	}
 	
 		
-	def static saveGlobalVariable(){
+	def static saveGlobalVariable(String elem){
+	
 		
-		var N = variablesId.size();
-		
-		'''«FOR n: variablesId»«IF (N=N-1)==0»"«n»=".urlencode($«n»).«ELSE»"«n»=".urlencode($«n»)."&".«ENDIF»«ENDFOR»'''
+		'''«FOR n: variablesId»if(isset($«n»)){
+	$«elem»=$«elem»."&«n»=".urlencode($«n»);
+}«ENDFOR»'''
 	}
+	def static saveGlobalVariableXML(String elem){
 	
-	
+		
+		'''«FOR n: variablesId»if(isset($«n»)){
+	$«elem»=$«elem»."&amp;«n»=".urlencode($«n»);
+}«ENDFOR»'''
+	}
+	 
 
 
 // Abstract elements
 
 def static dispatch declareAbstractElement(VoiceTag elem){
-		'''«declareVoiceTag(elem)»;'''
+		'''«declareVoiceTag(elem)»'''
 	}
 	
 	
@@ -607,7 +627,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 			curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
 			curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 			curl_exec($curl_handle);
-			curl_close($curl_handle)'''
+			curl_close($curl_handle);'''
 	}
 	
 	def static declareSendBlock(SendBlock elem){
@@ -632,44 +652,109 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	
 	
 	def static dispatch declareVoiceTag( Say elem){
-		'''echo "<Say voice=\"«voice»\" language=\"«twilioLanguage»\">".«declareConcatenation(elem.that)»."</Say>\n" '''
+		'''echo "<Say voice=\"«voice»\" language=\"«twilioLanguage»\">".«declareConcatenation(elem.that)»."</Say>\n"; '''
 	}
 	//FALTA HACER LA PREGUNTA
 	
 	def static dispatch declareVoiceTag( Ask elem){
-		'''$_REQUEST['«elem.vari»']="TranscriptionText";
-		echo "<Record transcribe=\"true\" transcribeCallback=\"«completedRedirect»\" /> \n"'''
+		
+		'''if(isset($_GET['completedurl_dime'])){
+			$_GET['«elem.vari»']="TranscriptionText";
+			echo "<Record transcribe=\"true\" transcribeCallback=\"".$_GET['completedurl_dime']."\" /> \n";
+			}
+			'''
 	}
 	
 	
 	def static dispatch declareVoiceTag( Play elem){
-		'''echo "<Play>".«declareConcatenation(elem.file)»."</Play>\n" '''
+		'''echo "<Play>".«declareConcatenation(elem.file)»."</Play>\n"; '''
 	}
 	
 	
 	def static dispatch declareVoiceTag( Record elem){
-		'''echo "<Record action=\"«completedRedirect»\" method=\"GET\" maxLength=\"«elem.time»\" finishOnKey=\"*\" /> \n"'''
+		
+		'''
+		if(isset($completedurl_dime)){
+			$url_dime=$completedurl_dime."?laststate_dime=«name»";
+			«saveGlobalVariableXML("url_dime")».
+			echo "<Record action=\"".$url_dime."\" method=\"GET\" maxLength=\"«elem.time»\" finishOnKey=\"*\" /> \n";
+		}
+		'''
 	}
 	def static dispatch declareVoiceTag( Reject elem){
-		'''echo "<Reject /> \n" '''
+		'''echo "<Reject /> \n"; '''
 	}
 	def static dispatch declareVoiceTag( Hangup elem){
-		'''echo "<Hangup /> \n" '''
+		'''echo "<Hangup /> \n"; '''
 	}
 	
 	//FALTA DECLARAR LA VOICETAG SAYa
 	// twilio envia a la direccion.
 	def static dispatch declareVoiceTag( GetDigits elem){
-		'''$_REQUEST['«elem.name»']="Digits";
-		echo "<Gather action=\"«completedRedirect»\" numDigits=\"«elem.numDigits»\" > <Say>". «declareConcatenation(elem.question)»."</Say> </Gather>"'''
+		
+		'''if(isset($_GET['completedurl_dime'])){
+	$_REQUEST['«elem.name»']="Digits";
+	echo "<Gather action=\"«completedRedirect»\" numDigits=\"«elem.numDigits»\" > <Say>". «declareConcatenation(elem.question)»."</Say> </Gather>";
+	}
+	'''
 	}
 	def static dispatch declareVoiceTag( Dial elem){
-		'''echo "<Dial callerId=\""."«number»"."\">\n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n"'''
+		'''echo "<Dial callerId=\""."«number»"."\">\n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n";'''
 	}
 	def static dispatch declareVoiceTag( Call elem){
-		'''echo "<Dial callerId=\""."«number»"."\">\n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n"'''
+		
+		'''«declareCallSignal(elem.to,name)»'''  
 	} 
+	
+	def static declareCallSignal(ConcatenationExpression elem, String next){
+		'''//  HTTP GET with cURL to activate the call.
+if(!isset($_REQUEST['CallStatus'])){
+	$curl_handle=curl_init();
+	$url_dime="«url»call_dime.php?number_dime=".urlencode(«declareConcatenation(elem)»)."&next_dime="."«next»&laststate_dime=«name»";
+	«IF !variablesId.isEmpty()»«saveGlobalVariable("url_dime")»«ENDIF»
+	curl_setopt($curl_handle,CURLOPT_URL, $url_dime);
+	curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,20);
+	curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
+	curl_exec($curl_handle);
+	curl_close($curl_handle);
+}
+	'''
+	}
+	def static declareCall(){
+		'''
+<?php
+	// Include the Twilio PHP library
+	require 'res/Services/Twilio.php';
+	sleep(15);
+	// Twilio REST API version
+	$version = "2010-04-01";
 
+	// Set our Account SID and AuthToken
+	$sid = "«sid»";
+	$token = '«token»';
+	
+	// A phone number you have previously validated with Twilio
+	$phonenumber = '«number»';
+
+	// Instantiate a new Twilio Rest Client
+	$client = new Services_Twilio($sid, $token, $version);
+
+	try {
+		$url="«url»".$_GET['next_dime'].".php?laststate_dime=".$_GET['laststate_dime'];
+		«IF !variablesId.isEmpty()»«saveGlobalVariable("url")»«ENDIF»
+		// Initiate a new outbound call
+		$call = $client->account->calls->create(
+			$phonenumber, // The number of the phone initiating the call
+			$_GET['number_dime'], // The number of the phone receiving call
+			$url // The URL Twilio will request when the call is answered
+		);
+		echo 'Started call: ' . $call->sid;
+	} catch (Exception $e) {
+		echo 'Error: ' . $e->getMessage();
+	}
+		?>
+		'''
+	}
 
 //FALTAN POR IMPLEMENTAR
 	
@@ -678,10 +763,10 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	} 
 
 	def static dispatch declareVoiceTag( Email elem){
-		'''mail(«declareConcatenation(elem.to)», «declareConcatenation(elem.title)»,«declareConcatenation(elem.value)», "From: <".«declareConcatenation(elem.from)»."> \r\n") '''
+		'''mail(«declareConcatenation(elem.to)», «declareConcatenation(elem.title)»,«declareConcatenation(elem.value)», "From: <".«declareConcatenation(elem.from)»."> \r\n"); '''
 	}  
 	def static dispatch declareVoiceTag( Sms elem){
-		'''echo "<Sms from=\""."«number»"."\" "." to=\«declareConcatenation(elem.to)»."\">".«declareConcatenation(elem.value)»."</Sms>"'''
+		'''echo "<Sms from=\""."«number»"."\" "." to=\«declareConcatenation(elem.to)»."\">".«declareConcatenation(elem.value)»."</Sms>";'''
 	} 
 	// Statements
 	
@@ -713,23 +798,24 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	def static declareTransition(Transition elem){
 		if(elem.event.name.equals("ERROR")){
 			errorRedirect=url+elem.target.name+".php";
-			
+				'''$errorurl_dime="«errorRedirect»";'''
 		}else if(elem.event.name.equals("HANGUP")){
 			hangupRedirect=url+elem.target.name+".php";
+				'''$hangupurl_dime="«hangupRedirect»";'''
 		}else if(elem.event.name.equals("COMPLETED")){
 			completedRedirect=url+elem.target.name+".php";
+				'''$completedurl_dime="«completedRedirect»";'''
 		}else if(elem.event.name.equals("TIMES")){
 			timesRedirect=url+elem.target.name+".php";
+				'''$timesurl_dime="«timesRedirect»";'''
 		}else if(elem.event.name.equals("TIMEOUT")){
 			timeoutRedirect=url+elem.target.name+".php";
+				'''$timeouturl_dime="«timeoutRedirect»";'''
 		}else {
-			
+				''''''
 		}
-		System::out.println("url:  "+url+elem.target.name+".php");
-		System::out.println("url:  "+completedRedirect);
 		
 		
-		''''''
 		
 	}
 	

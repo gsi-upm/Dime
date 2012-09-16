@@ -4547,3 +4547,450 @@ Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Di
 
 !ENTRY org.eclipse.core.net 1 0 2012-09-11 02:40:03.210
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-11 13:46:45.978 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-11 13:46:48.027
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 13:46:51.921
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-11 15:41:36.299 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 15:41:41.101
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-11 15:45:51.670 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 15:45:56.374
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-11 15:47:51.284 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 15:47:55.895
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-11 15:48:57.860
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/call_Dime.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/call_Dime.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:251)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-11 15:48:57.862
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/call_Dime.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-11 15:48:57.863
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/call_Dime.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:251)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-11 15:48:57.864
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/call_Dime.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-11 15:48:57.864
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/call_Dime.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-11 15:48:57.867
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-11 15:48:57.867
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/call_Dime.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:251)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-11 15:48:57.867
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/call_Dime.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-11 15:48:57.867
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/call_Dime.php'.
+!SESSION 2012-09-11 16:00:05.900 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 16:00:10.869
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-11 16:06:34.555 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 16:06:39.199
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-11 23:22:20.839 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 23:22:25.381
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-11 23:29:21.537 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-11 23:29:23.465
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 23:29:26.096
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-11 23:37:44.097 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 23:37:48.547
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-11 23:38:09.755
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - Unhandled parameter types: [org.telcodev.dsl.dime.impl.CallImpl@3c5ae487 (name: Call)]
+
+!STACK 0
+java.lang.IllegalArgumentException: Unhandled parameter types: [org.telcodev.dsl.dime.impl.CallImpl@3c5ae487 (name: Call)]
+	at org.telcodev.dsl.generator.Twilio_php_generator.declareStatement(Twilio_php_generator.java:1935)
+	at org.telcodev.dsl.generator.Twilio_php_generator.declareState(Twilio_php_generator.java:432)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:258)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2012-09-11 23:50:37.223 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 23:50:41.843
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-11 23:51:23.961
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - Unhandled parameter types: [org.telcodev.dsl.dime.impl.SayImpl@6d2a3e06 (name: Say)]
+
+!STACK 0
+java.lang.IllegalArgumentException: Unhandled parameter types: [org.telcodev.dsl.dime.impl.SayImpl@6d2a3e06 (name: Say)]
+	at org.telcodev.dsl.generator.Twilio_php_generator.callIntent(Twilio_php_generator.java:1771)
+	at org.telcodev.dsl.generator.Twilio_php_generator.declareState(Twilio_php_generator.java:420)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:256)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2012-09-11 23:53:11.568 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-11 23:53:16.152
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 00:57:22.672 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 00:57:27.217
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 13:39:10.505 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-12 13:39:12.620
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 13:39:16.623
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 13:53:57.472 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 13:54:01.997
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 14:01:36.862 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 14:01:41.418
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-12 14:01:55.118
+!MESSAGE org.telcodev.dsl.ui.DimeExecutableExtensionFactory  - com.google.inject.ProvisionException: Guice provision errors:
+
+1) Error injecting constructor, java.lang.Error: Unresolved compilation problems: 
+	The import org.telcodev.dsl.generator.Twilio_php_generator cannot be resolved
+	Twilio_php_generator cannot be resolved
+
+  at org.telcodev.dsl.generator.DimeGenerator.<init>(Unknown Source)
+  while locating org.telcodev.dsl.generator.DimeGenerator
+  while locating org.eclipse.xtext.generator.IGenerator
+    for field at org.eclipse.xtext.builder.BuilderParticipant.generator(Unknown Source)
+  while locating org.eclipse.xtext.builder.BuilderParticipant
+  while locating org.eclipse.xtext.builder.IXtextBuilderParticipant
+
+1 error
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-12 14:01:55.120
+!MESSAGE org.eclipse.xtext.builder.impl.RegistryBuilderParticipant$BuilderParticipantReader  - Plugin org.telcodev.dsl.ui, extension org.eclipse.xtext.builder.participant
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-12 14:01:55.120
+!MESSAGE org.eclipse.xtext.builder.impl.RegistryBuilderParticipant$BuilderParticipantReader  - Guice provision errors:
+
+1) Error injecting constructor, java.lang.Error: Unresolved compilation problems: 
+	The import org.telcodev.dsl.generator.Twilio_php_generator cannot be resolved
+	Twilio_php_generator cannot be resolved
+
+  at org.telcodev.dsl.generator.DimeGenerator.<init>(Unknown Source)
+  while locating org.telcodev.dsl.generator.DimeGenerator
+  while locating org.eclipse.xtext.generator.IGenerator
+    for field at org.eclipse.xtext.builder.BuilderParticipant.generator(Unknown Source)
+  while locating org.eclipse.xtext.builder.BuilderParticipant
+  while locating org.eclipse.xtext.builder.IXtextBuilderParticipant
+
+1 error ExtensionFactory: org.telcodev.dsl.ui.DimeExecutableExtensionFactory
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-12 14:01:55.121
+!MESSAGE org.eclipse.xtext.builder.impl.RegistryBuilderParticipant$BuilderParticipantReader  - Plugin org.telcodev.dsl.ui, extension org.eclipse.xtext.builder.participant
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-12 14:01:55.121
+!MESSAGE org.eclipse.xtext.builder.impl.RegistryBuilderParticipant$BuilderParticipantReader  - Error processing extension: org.eclipse.core.internal.registry.ConfigurationElementHandle@294e
+
+!SESSION 2012-09-12 14:12:52.300 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 14:12:56.870
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 14:18:01.598 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 14:18:06.137
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 14:23:32.629 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 14:23:37.248
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 14:25:02.298 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 14:25:06.962
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 14:26:11.817 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 14:26:16.482
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 14:40:35.822 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 14:40:40.468
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 16:34:13.353 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 16:34:18.093
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-12 16:48:53.644 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_33
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-12 16:48:58.174
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

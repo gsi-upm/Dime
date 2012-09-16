@@ -221,14 +221,13 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cHangupParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cCallParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
 		private final RuleCall cSmsParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cEmailParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cTweetParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
 		
+		////| Email | Tweet;
 		//VoiceTag:
-		//	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms | Email | Tweet;
+		//	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms;
 		public ParserRule getRule() { return rule; }
 
-		//Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms | Email | Tweet
+		//Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Say
@@ -263,12 +262,6 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Sms
 		public RuleCall getSmsParserRuleCall_10() { return cSmsParserRuleCall_10; }
-
-		//Email
-		public RuleCall getEmailParserRuleCall_11() { return cEmailParserRuleCall_11; }
-
-		//Tweet
-		public RuleCall getTweetParserRuleCall_12() { return cTweetParserRuleCall_12; }
 	}
 
 	public class CallElements extends AbstractParserRuleElementFinder {
@@ -1700,6 +1693,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		////AssigmentBool:
 		////	vab=[Vars] '=' (rightb=BoolExpression)';';
 		////	
+		//// FALLO CONSTANT TIENE QUE IR EN LITERAL NO EN VARS
 		//Vars:
 		//	StringVariable | Ask | NumVariable | BoolVariable | GetDigits | Constant;
 		public ParserRule getRule() { return rule; }
@@ -2161,8 +2155,9 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		return getStateAccess().getRule();
 	}
 
+	////| Email | Tweet;
 	//VoiceTag:
-	//	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms | Email | Tweet;
+	//	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms;
 	public VoiceTagElements getVoiceTagAccess() {
 		return (pVoiceTag != null) ? pVoiceTag : (pVoiceTag = new VoiceTagElements());
 	}
@@ -2545,6 +2540,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	////AssigmentBool:
 	////	vab=[Vars] '=' (rightb=BoolExpression)';';
 	////	
+	//// FALLO CONSTANT TIENE QUE IR EN LITERAL NO EN VARS
 	//Vars:
 	//	StringVariable | Ask | NumVariable | BoolVariable | GetDigits | Constant;
 	public VarsElements getVarsAccess() {
