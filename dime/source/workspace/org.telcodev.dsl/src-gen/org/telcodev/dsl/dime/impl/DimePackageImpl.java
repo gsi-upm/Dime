@@ -55,7 +55,6 @@ import org.telcodev.dsl.dime.Statement;
 import org.telcodev.dsl.dime.StringLiteral;
 import org.telcodev.dsl.dime.StringVariable;
 import org.telcodev.dsl.dime.Transition;
-import org.telcodev.dsl.dime.Tweet;
 import org.telcodev.dsl.dime.Vars;
 import org.telcodev.dsl.dime.VoiceTag;
 
@@ -206,13 +205,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * @generated
    */
   private EClass emailEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass tweetEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -705,26 +697,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRecord_Action()
-  {
-    return (EReference)recordEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getRecord_Vari()
-  {
-    return (EAttribute)recordEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getReject()
   {
     return rejectEClass;
@@ -765,26 +737,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getGetDigits_Question()
-  {
-    return (EReference)getDigitsEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getGetDigits_Vari()
-  {
-    return (EAttribute)getDigitsEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getAsk()
   {
     return askEClass;
@@ -798,16 +750,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
   public EReference getAsk_Question()
   {
     return (EReference)askEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getAsk_Vari()
-  {
-    return (EAttribute)askEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -985,19 +927,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEmail_Name()
-  {
-    return (EAttribute)emailEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getEmail_Title()
   {
-    return (EReference)emailEClass.getEStructuralFeatures().get(1);
+    return (EReference)emailEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1007,7 +939,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    */
   public EReference getEmail_From()
   {
-    return (EReference)emailEClass.getEStructuralFeatures().get(2);
+    return (EReference)emailEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1017,7 +949,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    */
   public EReference getEmail_Value()
   {
-    return (EReference)emailEClass.getEStructuralFeatures().get(3);
+    return (EReference)emailEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1027,37 +959,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    */
   public EReference getEmail_To()
   {
-    return (EReference)emailEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getTweet()
-  {
-    return tweetEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getTweet_Name()
-  {
-    return (EAttribute)tweetEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getTweet_Value()
-  {
-    return (EReference)tweetEClass.getEStructuralFeatures().get(1);
+    return (EReference)emailEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1155,19 +1057,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCondBlock_Name()
-  {
-    return (EAttribute)condBlockEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getCondBlock_Cond()
   {
-    return (EReference)condBlockEClass.getEStructuralFeatures().get(1);
+    return (EReference)condBlockEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1177,7 +1069,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    */
   public EReference getCondBlock_Action()
   {
-    return (EReference)condBlockEClass.getEStructuralFeatures().get(2);
+    return (EReference)condBlockEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1195,19 +1087,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBlock_Name()
-  {
-    return (EAttribute)blockEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getBlock_Sta()
   {
-    return (EReference)blockEClass.getEStructuralFeatures().get(1);
+    return (EReference)blockEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1890,8 +1772,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
 
     recordEClass = createEClass(RECORD);
     createEAttribute(recordEClass, RECORD__TIME);
-    createEReference(recordEClass, RECORD__ACTION);
-    createEAttribute(recordEClass, RECORD__VARI);
 
     rejectEClass = createEClass(REJECT);
 
@@ -1899,12 +1779,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
 
     getDigitsEClass = createEClass(GET_DIGITS);
     createEAttribute(getDigitsEClass, GET_DIGITS__NUM_DIGITS);
-    createEReference(getDigitsEClass, GET_DIGITS__QUESTION);
-    createEAttribute(getDigitsEClass, GET_DIGITS__VARI);
 
     askEClass = createEClass(ASK);
     createEReference(askEClass, ASK__QUESTION);
-    createEAttribute(askEClass, ASK__VARI);
 
     sendEClass = createEClass(SEND);
     createEReference(sendEClass, SEND__PARAMS);
@@ -1929,15 +1806,10 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     createEReference(smsEClass, SMS__TO);
 
     emailEClass = createEClass(EMAIL);
-    createEAttribute(emailEClass, EMAIL__NAME);
     createEReference(emailEClass, EMAIL__TITLE);
     createEReference(emailEClass, EMAIL__FROM);
     createEReference(emailEClass, EMAIL__VALUE);
     createEReference(emailEClass, EMAIL__TO);
-
-    tweetEClass = createEClass(TWEET);
-    createEAttribute(tweetEClass, TWEET__NAME);
-    createEReference(tweetEClass, TWEET__VALUE);
 
     transitionEClass = createEClass(TRANSITION);
     createEAttribute(transitionEClass, TRANSITION__NAME);
@@ -1950,12 +1822,10 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     createEReference(ifExpEClass, IF_EXP__DEFAULT_BLOCK);
 
     condBlockEClass = createEClass(COND_BLOCK);
-    createEAttribute(condBlockEClass, COND_BLOCK__NAME);
     createEReference(condBlockEClass, COND_BLOCK__COND);
     createEReference(condBlockEClass, COND_BLOCK__ACTION);
 
     blockEClass = createEClass(BLOCK);
-    createEAttribute(blockEClass, BLOCK__NAME);
     createEReference(blockEClass, BLOCK__STA);
 
     boolExpressionEClass = createEClass(BOOL_EXPRESSION);
@@ -2084,12 +1954,11 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     rejectEClass.getESuperTypes().add(this.getVoiceTag());
     hangupEClass.getESuperTypes().add(this.getVoiceTag());
     getDigitsEClass.getESuperTypes().add(this.getVoiceTag());
-    getDigitsEClass.getESuperTypes().add(this.getVars());
     askEClass.getESuperTypes().add(this.getVoiceTag());
-    askEClass.getESuperTypes().add(this.getVars());
     sendEClass.getESuperTypes().add(this.getVoiceTag());
     sayEClass.getESuperTypes().add(this.getVoiceTag());
     smsEClass.getESuperTypes().add(this.getVoiceTag());
+    emailEClass.getESuperTypes().add(this.getVoiceTag());
     transitionEClass.getESuperTypes().add(this.getAbstractElement());
     ifExpEClass.getESuperTypes().add(this.getAbstractElement());
     bracketsEClass.getESuperTypes().add(this.getBoolExpression());
@@ -2152,8 +2021,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
 
     initEClass(recordEClass, Record.class, "Record", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRecord_Time(), ecorePackage.getEInt(), "time", null, 0, 1, Record.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRecord_Action(), this.getConcatenationExpression(), null, "action", null, 0, 1, Record.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getRecord_Vari(), ecorePackage.getEString(), "vari", null, 0, 1, Record.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rejectEClass, Reject.class, "Reject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2161,12 +2028,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
 
     initEClass(getDigitsEClass, GetDigits.class, "GetDigits", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGetDigits_NumDigits(), ecorePackage.getEInt(), "numDigits", null, 0, 1, GetDigits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGetDigits_Question(), this.getConcatenationExpression(), null, "question", null, 0, 1, GetDigits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGetDigits_Vari(), ecorePackage.getEString(), "vari", null, 0, 1, GetDigits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(askEClass, Ask.class, "Ask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAsk_Question(), this.getConcatenationExpression(), null, "question", null, 0, 1, Ask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAsk_Vari(), ecorePackage.getEString(), "vari", null, 0, 1, Ask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(sendEClass, Send.class, "Send", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSend_Params(), this.getSendBlock(), null, "params", null, 0, 1, Send.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2191,15 +2055,10 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     initEReference(getSms_To(), this.getConcatenationExpression(), null, "to", null, 0, 1, Sms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(emailEClass, Email.class, "Email", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEmail_Name(), ecorePackage.getEString(), "name", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEmail_Title(), this.getConcatenationExpression(), null, "title", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEmail_From(), this.getConcatenationExpression(), null, "from", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEmail_Value(), this.getConcatenationExpression(), null, "value", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEmail_To(), this.getConcatenationExpression(), null, "to", null, 0, 1, Email.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(tweetEClass, Tweet.class, "Tweet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTweet_Name(), ecorePackage.getEString(), "name", null, 0, 1, Tweet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTweet_Value(), this.getConcatenationExpression(), null, "value", null, 0, 1, Tweet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTransition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2212,12 +2071,10 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     initEReference(getIfExp_DefaultBlock(), this.getBlock(), null, "defaultBlock", null, 0, 1, IfExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(condBlockEClass, CondBlock.class, "CondBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCondBlock_Name(), ecorePackage.getEString(), "name", null, 0, 1, CondBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCondBlock_Cond(), this.getBoolExpression(), null, "cond", null, 0, 1, CondBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCondBlock_Action(), this.getBlock(), null, "action", null, 0, 1, CondBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(blockEClass, Block.class, "Block", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBlock_Name(), ecorePackage.getEString(), "name", null, 0, 1, Block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBlock_Sta(), this.getAbstractElement(), null, "sta", null, 0, -1, Block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(boolExpressionEClass, BoolExpression.class, "BoolExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

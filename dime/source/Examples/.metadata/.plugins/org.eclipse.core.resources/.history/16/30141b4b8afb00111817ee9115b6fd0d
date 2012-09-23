@@ -1,6 +1,0 @@
-Application SMS
-
-State start{
-	Sms "Dime is cool" to "+34656422095";
-	HangUp;
-}

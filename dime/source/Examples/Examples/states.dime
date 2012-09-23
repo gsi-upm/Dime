@@ -8,21 +8,36 @@ State start times 3{
 	GoTo end when COMPLETED;
 	GoTo start when ERROR;
 	GoTo start when TIMES;
+	GoTo end when HANGUP;
+	GoTo end when TIMEOUT;
+	
 } 
   
   
 State end times 3{
 	 
-	Const GREETING="Hello";
-	Say "Thanks for calling to"+company+GREETING; 
+	Const LANGUAGE="Dime";
+	String hola="Hello".LANGUAGE;  
+	Bool b= false; 
+	Num d=1+LANGUAGE; 
+	
+	
+	
+	Say "Thanks for calling to"; 
+	 
 	Play "http://myfile.com";
-	Get 5 digits "question?" ->  company;
-	Ask "What the fuck?" ->  hola;
-	DialTo "+34656422095";
-	Call "roberto";    
-	String hola=CALLER+"";  
-	Bool b= DISCONNECTED; 
-	Num d=1; 
+	
+	
+	Get 5 digits;
+	
+	Ask "Do you like Dime?" ;
+	
+	DialTo "+34655412095";
+	
+	Call "+34655412095";   
+	
+	 
+	
 	 
 	if(IN-PROGRESS)  {
 		GoTo start when COMPLETED;
@@ -33,11 +48,10 @@ State end times 3{
 	}else if(FAILED){
 		Say LASTSTATE;
 	}else{
-		Say GREETING;
+		Say LANGUAGE;
 	}
 	String d  = "hola";
 	
-    Tweet "@regaliiz es una ladrona";
     
    Sms "what the fuck" to "+656240934";
 	

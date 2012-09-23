@@ -36,19 +36,14 @@
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//Record">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Record/time"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Record/action"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Record/vari"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//Reject"/>
     <genClasses ecoreClass="Dime.ecore#//Hangup"/>
     <genClasses ecoreClass="Dime.ecore#//GetDigits">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//GetDigits/numDigits"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//GetDigits/question"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//GetDigits/vari"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//Ask">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Ask/question"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Ask/vari"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//Send">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Send/params"/>
@@ -73,15 +68,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Sms/to"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//Email">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Email/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Email/title"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Email/from"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Email/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Email/to"/>
-    </genClasses>
-    <genClasses ecoreClass="Dime.ecore#//Tweet">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Tweet/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Tweet/value"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//Transition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Transition/name"/>
@@ -94,12 +84,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//IfExp/defaultBlock"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//CondBlock">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//CondBlock/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//CondBlock/cond"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//CondBlock/action"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//Block">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Block/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Block/sta"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//BoolExpression"/>

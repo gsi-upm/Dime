@@ -48,7 +48,6 @@ import org.telcodev.dsl.dime.Primitive
 import org.telcodev.dsl.dime.Constant
 import org.telcodev.dsl.dime.SESSION
 import org.telcodev.dsl.dime.CALLSTATUS
-import org.telcodev.dsl.dime.Tweet
 import org.telcodev.dsl.dime.Email
 import org.telcodev.dsl.dime.Sms
 import org.telcodev.dsl.dime.ConcatenationExpression
@@ -158,7 +157,7 @@ class Twilio_php_generator {
 		variablesId= new HashSet<String>()
 		constantsId= new HashSet<String>()
 		
-		
+		variablesId.add("times_dime")
 		
 		System::out.println("Creating "+"globals_dime"+".php file");
 		
@@ -281,7 +280,11 @@ require "globals_dime.php";
 		if(isset($_GET['hangupurl_dime']){
 			$url=$_GET['hangupurl_dime']."?"laststate_dime=«name»";
 			«IF !variablesId.isEmpty()»«saveGlobalVariableXML("url")»«ENDIF»
+			echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
+			echo "<Response>";
 			echo "<Redirect>".$url."</Redirect>";
+			echo "</Response>";
+			exit();
 		}
 	}«ENDIF»
 	
@@ -290,21 +293,33 @@ require "globals_dime.php";
 		if(isset($_GET['errorurl_dime']){
 			$url=$_GET['errorurl_dime']."?"laststate_dime=«name»";
 			«IF !variablesId.isEmpty()»«saveGlobalVariableXML("url")»«ENDIF»
+			echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
+			echo "<Response>";
 			echo "<Redirect>".$url."</Redirect>";
+			echo "</Response>";
+			exit();
 		}
 	}«ENDIF»
 	
 	«IF !first»else «ENDIF»if((!isset($_REQUEST['CallStatus']))||$_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing"|| $_REQUEST["CallStatus"]=="queued"){
-		
-	«IF elem.times!=0&& timesRedirect!=null» 
+	
+	«IF elem.times!=0» 
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_GET['times_dime']&&isset($_GET['timesurl_dime'])){
+	if(isset($_GET['times_dime'])){
 		if($_GET['times_dime']==«elem.times»){
+			
+			if(isset($_GET['timesurl_dime'])){
 			$url=$_GET['timesurl_dime']."?laststate_dime=«name»";
+			$times_url=null;
 			«IF !variablesId.isEmpty()»«saveGlobalVariableXML("url")»«ENDIF»
+			echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
+			echo "<Response>";
 			echo "<Redirect>".$url."</Redirect>";
+			echo "</Response>";
+			exit();
+			}
 			
 		}else{
 			$times_dime=$_GET['times_dime']+1;
@@ -324,8 +339,9 @@ require "globals_dime.php";
 	«ENDIF»
 	
 		// Declaration of the statements of the state.
-		echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
-		echo "<Response>";
+		
+	echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
+	echo "<Response>";	
 		«FOR c : elem.stms»
 		«declareAbstractElement(c)»
 	«ENDFOR»
@@ -340,7 +356,7 @@ require "globals_dime.php";
 			$url=$url."&amp;errorurl_dime=".urlencode($errorurl_dime);
 		}
 		if(isset($timesurl_dime)){
-			$url=$url_dime."&amp;timesurl_dime=".urlencode($timesurl_dime);
+			$url=$url."&amp;timesurl_dime=".urlencode($timesurl_dime);
 		}
 		
 		echo "<Redirect>".$url."</Redirect>";«ENDIF»
@@ -515,7 +531,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	}
 
 	def static dispatch declareVars(StringVariable elem){
-		'''$«elem.name»'''
+		'''$«elem.name»''' 
 	}
 	
 	def static dispatch declareVars(BoolVariable elem){
@@ -525,12 +541,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	def static dispatch declareVars(NumVariable elem){
 		'''$«elem.name»'''
 	}
-	def static dispatch declareVars(Ask elem){
-		'''$«elem.vari»'''
-	}
-	def static dispatch declareVars(GetDigits elem){
-		'''$«elem.vari»'''
-	}
+	
 	def static dispatch declareVars(Constant elem){
 		'''«elem.name»'''
 	}
@@ -604,8 +615,21 @@ def static dispatch declareAbstractElement(VoiceTag elem){
  			'''$_REQUEST['To']'''
  		}
  		else if(elem.name.equals('LASTSTATE')){
- 			'''$lastState'''
- 		} 	else if(elem.name.equals('TIME')){
+ 			'''$_GET['laststate_dime']'''
+ 		
+ 		} else if(elem.name.equals('ANSWER')){
+ 			'''$_REQUEST['TranscriptionText']'''
+ 		
+ 		} else if(elem.name.equals('RECORD')){
+ 			'''$_REQUEST['RecordingUrl']'''
+ 		
+ 		} else if(elem.name.equals('DIGITS')){
+ 			'''$_REQUEST['Digits']'''
+ 		
+ 		} 	
+ 		
+ 		
+ 		else if(elem.name.equals('TIME')){
  			'''$time'''
  		} 	
  		
@@ -658,10 +682,11 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	
 	def static dispatch declareVoiceTag( Ask elem){
 		
-		'''if(isset($_GET['completedurl_dime'])){
-			$_GET['«elem.vari»']="TranscriptionText";
-			echo "<Record transcribe=\"true\" transcribeCallback=\"".$_GET['completedurl_dime']."\" /> \n";
-			}
+		'''if(isset($completedurl_dime)){
+$url_dime=$completedurl_dime."?laststate_dime=«name»";
+«saveGlobalVariableXML("url_dime")»
+echo "<Record transcribe=\"true\" transcribeCallback=\"".$url_dime."\" /> \n";
+}
 			'''
 	}
 	
@@ -676,7 +701,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		'''
 		if(isset($completedurl_dime)){
 			$url_dime=$completedurl_dime."?laststate_dime=«name»";
-			«saveGlobalVariableXML("url_dime")».
+			«saveGlobalVariableXML("url_dime")»
 			echo "<Record action=\"".$url_dime."\" method=\"GET\" maxLength=\"«elem.time»\" finishOnKey=\"*\" /> \n";
 		}
 		'''
@@ -690,12 +715,15 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	
 	//FALTA DECLARAR LA VOICETAG SAYa
 	// twilio envia a la direccion.
+	
+	//
 	def static dispatch declareVoiceTag( GetDigits elem){
 		
-		'''if(isset($_GET['completedurl_dime'])){
-	$_REQUEST['«elem.name»']="Digits";
-	echo "<Gather action=\"«completedRedirect»\" numDigits=\"«elem.numDigits»\" > <Say>". «declareConcatenation(elem.question)»."</Say> </Gather>";
-	}
+		'''if(isset($completedurl_dime)){
+	$url_dime=$completedurl_dime."?laststate_dime=«name»";
+	«saveGlobalVariableXML("url_dime")»
+	echo "<Gather action=\"".$url_dime."\"  numDigits=\"«elem.numDigits»\" ></Gather>";
+}
 	'''
 	}
 	def static dispatch declareVoiceTag( Dial elem){
@@ -717,6 +745,7 @@ if(!isset($_REQUEST['CallStatus'])){
 	curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 	curl_exec($curl_handle);
 	curl_close($curl_handle);
+	exit();
 }
 	'''
 	}
@@ -756,14 +785,14 @@ if(!isset($_REQUEST['CallStatus'])){
 		'''
 	}
 
-//FALTAN POR IMPLEMENTAR
-	
-	def static dispatch declareVoiceTag( Tweet elem){
-		''''''
-	} 
+
 
 	def static dispatch declareVoiceTag( Email elem){
-		'''mail(«declareConcatenation(elem.to)», «declareConcatenation(elem.title)»,«declareConcatenation(elem.value)», "From: <".«declareConcatenation(elem.from)»."> \r\n"); '''
+		
+		'''
+		// Email implementation
+		
+		mail(«declareConcatenation(elem.to)», «declareConcatenation(elem.title)»,«declareConcatenation(elem.value)», "From: <".«declareConcatenation(elem.from)»."> \r\n"); '''
 	}  
 	def static dispatch declareVoiceTag( Sms elem){
 		'''echo "<Sms from=\""."«number»"."\" "." to=\«declareConcatenation(elem.to)»."\">".«declareConcatenation(elem.value)»."</Sms>";'''

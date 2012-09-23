@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.telcodev.dsl.dime.CondBlock"/>
+<fullyQualifiedTypeName name="org.telcodev.dsl.dime.IfExp"/>
+<fullyQualifiedTypeName name="org.telcodev.dsl.dime.DimePackage"/>
+<fullyQualifiedTypeName name="org.telcodev.dsl.dime.Block"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.EObject"/>
+<fullyQualifiedTypeName name="org.telcodev.dsl.dime.Say"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.ui.editor.outline.IOutlineNode"/>
+<fullyQualifiedTypeName name="org.telcodev.dsl.dime.StringVariable"/>
+<fullyQualifiedTypeName name="org.telcodev.dsl.dime.NumVariable"/>
+<fullyQualifiedTypeName name="org.telcodev.dsl.dime.Constant"/>
+<fullyQualifiedTypeName name="org.telcodev.dsl.dime.BoolVariable"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.resource.IEObjectDescription"/>
+<fullyQualifiedTypeName name="org.telcodev.dsl.ui.labeling.DimeDescriptionLabelProvider"/>
+</qualifiedTypeNameHistroy>

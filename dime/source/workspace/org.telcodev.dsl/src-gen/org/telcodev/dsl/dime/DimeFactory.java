@@ -203,15 +203,6 @@ public interface DimeFactory extends EFactory
   Email createEmail();
 
   /**
-   * Returns a new object of class '<em>Tweet</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Tweet</em>'.
-   * @generated
-   */
-  Tweet createTweet();
-
-  /**
    * Returns a new object of class '<em>Transition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

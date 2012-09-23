@@ -55,7 +55,6 @@ import org.telcodev.dsl.dime.Statement;
 import org.telcodev.dsl.dime.StringLiteral;
 import org.telcodev.dsl.dime.StringVariable;
 import org.telcodev.dsl.dime.Transition;
-import org.telcodev.dsl.dime.Tweet;
 import org.telcodev.dsl.services.DimeGrammarAccess;
 
 @SuppressWarnings("all")
@@ -69,7 +68,6 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DimePackage.ASK:
 				if(context == grammarAccess.getAbstractElementRule() ||
 				   context == grammarAccess.getAskRule() ||
-				   context == grammarAccess.getVarsRule() ||
 				   context == grammarAccess.getVoiceTagRule()) {
 					sequence_Ask(context, (Ask) semanticObject); 
 					return; 
@@ -190,7 +188,9 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case DimePackage.EMAIL:
-				if(context == grammarAccess.getEmailRule()) {
+				if(context == grammarAccess.getAbstractElementRule() ||
+				   context == grammarAccess.getEmailRule() ||
+				   context == grammarAccess.getVoiceTagRule()) {
 					sequence_Email(context, (Email) semanticObject); 
 					return; 
 				}
@@ -198,7 +198,6 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DimePackage.GET_DIGITS:
 				if(context == grammarAccess.getAbstractElementRule() ||
 				   context == grammarAccess.getGetDigitsRule() ||
-				   context == grammarAccess.getVarsRule() ||
 				   context == grammarAccess.getVoiceTagRule()) {
 					sequence_GetDigits(context, (GetDigits) semanticObject); 
 					return; 
@@ -411,19 +410,13 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case DimePackage.TWEET:
-				if(context == grammarAccess.getTweetRule()) {
-					sequence_Tweet(context, (Tweet) semanticObject); 
-					return; 
-				}
-				else break;
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
 	
 	/**
 	 * Constraint:
-	 *     (name='Ask' question=ConcatenationExpression vari=ID)
+	 *     (name='Ask' question=ConcatenationExpression)
 	 */
 	protected void sequence_Ask(EObject context, Ask semanticObject) {
 		if(errorAcceptor != null) {
@@ -431,21 +424,18 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.VOICE_TAG__NAME));
 			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.ASK__QUESTION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.ASK__QUESTION));
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.ASK__VARI) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.ASK__VARI));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getAskAccess().getNameAskKeyword_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getAskAccess().getQuestionConcatenationExpressionParserRuleCall_1_0(), semanticObject.getQuestion());
-		feeder.accept(grammarAccess.getAskAccess().getVariIDTerminalRuleCall_3_0(), semanticObject.getVari());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name='{' sta+=AbstractElement*)
+	 *     (sta+=AbstractElement*)
 	 */
 	protected void sequence_Block(EObject context, Block semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -595,7 +585,7 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (left=ConcatenationExpression_Concatenation_1_0 op='+' right=ConcatenationExpression)
+	 *     (left=ConcatenationExpression_Concatenation_1_0 op=CONCATENATION right=ConcatenationExpression)
 	 */
 	protected void sequence_ConcatenationExpression(EObject context, Concatenation semanticObject) {
 		if(errorAcceptor != null) {
@@ -609,7 +599,7 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getConcatenationExpressionAccess().getConcatenationLeftAction_1_0(), semanticObject.getLeft());
-		feeder.accept(grammarAccess.getConcatenationExpressionAccess().getOpPlusSignKeyword_1_1_0(), semanticObject.getOp());
+		feeder.accept(grammarAccess.getConcatenationExpressionAccess().getOpCONCATENATIONTerminalRuleCall_1_1_0(), semanticObject.getOp());
 		feeder.accept(grammarAccess.getConcatenationExpressionAccess().getRightConcatenationExpressionParserRuleCall_1_2_0(), semanticObject.getRight());
 		feeder.finish();
 	}
@@ -617,12 +607,10 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name='if' cond=TerminalBoolExpression action=Block)
+	 *     (cond=TerminalBoolExpression action=Block)
 	 */
 	protected void sequence_CondBlock(EObject context, CondBlock semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.COND_BLOCK__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.COND_BLOCK__NAME));
 			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.COND_BLOCK__COND) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.COND_BLOCK__COND));
 			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.COND_BLOCK__ACTION) == ValueTransient.YES)
@@ -630,7 +618,6 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getCondBlockAccess().getNameIfKeyword_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getCondBlockAccess().getCondTerminalBoolExpressionParserRuleCall_1_0(), semanticObject.getCond());
 		feeder.accept(grammarAccess.getCondBlockAccess().getActionBlockParserRuleCall_2_0(), semanticObject.getAction());
 		feeder.finish();
@@ -689,8 +676,8 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_Email(EObject context, Email semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.EMAIL__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.EMAIL__NAME));
+			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.VOICE_TAG__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.VOICE_TAG__NAME));
 			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.EMAIL__TITLE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.EMAIL__TITLE));
 			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.EMAIL__FROM) == ValueTransient.YES)
@@ -705,15 +692,15 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getEmailAccess().getNameEmailKeyword_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getEmailAccess().getTitleConcatenationExpressionParserRuleCall_4_0(), semanticObject.getTitle());
 		feeder.accept(grammarAccess.getEmailAccess().getFromConcatenationExpressionParserRuleCall_8_0(), semanticObject.getFrom());
-		feeder.accept(grammarAccess.getEmailAccess().getValueConcatenationExpressionParserRuleCall_10_0(), semanticObject.getValue());
-		feeder.accept(grammarAccess.getEmailAccess().getToConcatenationExpressionParserRuleCall_13_0(), semanticObject.getTo());
+		feeder.accept(grammarAccess.getEmailAccess().getValueConcatenationExpressionParserRuleCall_12_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getEmailAccess().getToConcatenationExpressionParserRuleCall_15_0(), semanticObject.getTo());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name='Get' numDigits=INT question=ConcatenationExpression vari=ID)
+	 *     (name='Get' numDigits=INT)
 	 */
 	protected void sequence_GetDigits(EObject context, GetDigits semanticObject) {
 		if(errorAcceptor != null) {
@@ -721,17 +708,11 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.VOICE_TAG__NAME));
 			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.GET_DIGITS__NUM_DIGITS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.GET_DIGITS__NUM_DIGITS));
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.GET_DIGITS__QUESTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.GET_DIGITS__QUESTION));
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.GET_DIGITS__VARI) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.GET_DIGITS__VARI));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getGetDigitsAccess().getNameGetKeyword_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getGetDigitsAccess().getNumDigitsINTTerminalRuleCall_1_0(), semanticObject.getNumDigits());
-		feeder.accept(grammarAccess.getGetDigitsAccess().getQuestionConcatenationExpressionParserRuleCall_3_0(), semanticObject.getQuestion());
-		feeder.accept(grammarAccess.getGetDigitsAccess().getVariIDTerminalRuleCall_5_0(), semanticObject.getVari());
 		feeder.finish();
 	}
 	
@@ -914,10 +895,20 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name='Record' time=INT action=ConcatenationExpression vari=ID?)
+	 *     (name='Record' time=INT)
 	 */
 	protected void sequence_Record(EObject context, Record semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.VOICE_TAG__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.VOICE_TAG__NAME));
+			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.RECORD__TIME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.RECORD__TIME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getRecordAccess().getNameRecordKeyword_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getRecordAccess().getTimeINTTerminalRuleCall_1_0(), semanticObject.getTime());
+		feeder.finish();
 	}
 	
 	
@@ -939,7 +930,15 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name='CALLER' | name='LASTSTATE' | name='TIME' | name='CALLED')
+	 *     (
+	 *         name='CALLER' | 
+	 *         name='LASTSTATE' | 
+	 *         name='TIME' | 
+	 *         name='CALLED' | 
+	 *         name='ANSWER' | 
+	 *         name='DIGITS' | 
+	 *         name='RECORD'
+	 *     )
 	 */
 	protected void sequence_SESSION(EObject context, SESSION semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1086,25 +1085,6 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getTransitionAccess().getNameGoToKeyword_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getTransitionAccess().getTargetStateIDTerminalRuleCall_1_0_1(), semanticObject.getTarget());
 		feeder.accept(grammarAccess.getTransitionAccess().getEventEVENTParserRuleCall_3_0(), semanticObject.getEvent());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name='Tweet' value=ConcatenationExpression)
-	 */
-	protected void sequence_Tweet(EObject context, Tweet semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.TWEET__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.TWEET__NAME));
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.TWEET__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.TWEET__VALUE));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTweetAccess().getNameTweetKeyword_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getTweetAccess().getValueConcatenationExpressionParserRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 }

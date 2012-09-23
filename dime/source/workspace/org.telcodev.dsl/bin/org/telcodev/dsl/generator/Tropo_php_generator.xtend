@@ -53,13 +53,15 @@ import org.telcodev.dsl.dime.Constant
 import org.telcodev.dsl.dime.EVENT
 import org.telcodev.dsl.dime.SESSION
 import org.telcodev.dsl.dime.CALLSTATUS
-import org.telcodev.dsl.dime.Tweet
 import org.telcodev.dsl.dime.Email
 import org.telcodev.dsl.dime.Sms
 
 class Tropo_php_generator {
 	private static String appName
 	
+	private static String user
+	private static String password
+	private static String token
 	private static String voice
 	private static String url
 	private static String name
@@ -72,6 +74,9 @@ class Tropo_php_generator {
 		//Setting parameters
 		
 		voice=config.tropo.voice 
+		password=config.tropo.password 
+		user=config.tropo.user 
+		token=config.tropo.token 
 		url= config.url
 		System::out.println("")
 	System::out.println("*****************************************************************************************")
@@ -116,7 +121,8 @@ class Tropo_php_generator {
 		System::out.println("Creating "+appName+".php file");
 		
 		fsa.generateFile(appName+".php", Tropo_php_generator::toTropoPHP(resource.contents.head as Document, resource))
-		
+		fsa.generateFile("res/signals.php", declareSignal)
+		fsa.generateFile("res/transcription.php", transcription)
 		System::out.println("Success.");
 		System::out.println("Success.");
 	}
@@ -125,7 +131,35 @@ class Tropo_php_generator {
 		var name = res.URI.lastSegment
 		return name.substring(0, name.indexOf('.'))
 	}
+	def static declareSignal(){
+		'''<?php
+	if(isset($_GET['sessionID_dime'])&& isset($_GET['signal_dime'])){
+		
+		$urltimes = "https://api.tropo.com/1.0/sessions/".$_GET['sessionID']."/signals?action=signal&value=".$_GET['signal_dime'];
+		$curl_handle=curl_init();
+		curl_setopt($curl_handle,CURLOPT_URL,$urltimes);
+		curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
+		curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
+		curl_exec($curl_handle);
+		curl_close($curl_handle);
 
+		
+		
+	}
+
+		?>'''
+	}
+	
+	def static transcription(){
+		'''<?php 
+$file = fopen('transcription.txt', 'w'); 
+
+$data = file_get_contents('php://input'); 
+fwrite($file, $data); 
+
+fclose($file); 
+?> '''
+	}
 	def static toTropoPHP(Document sm, Resource resource) {
 		
 
@@ -200,15 +234,7 @@ run();
 	
 	
 
-//	// Initialitation of the global constants
-//	
-//	«FOR d: constantsId»
-//	«inicializeGlobalConstant(d)» 
-//	«ENDFOR»
-//	«ENDIF»«IF false» 
-//	
 
-//FALTA RESULT PARA SACAR CALLSTATUS
 
 	def  static declareState(State elem){
 		
@@ -222,30 +248,33 @@ function app_«elem.name»() {
 	«IF name.equals("start")»
 	
 	// Creates a Tropo session and getting its parameters
-	
-	$session = new Session();
-	$from = $session->getFrom();
-	$sessionID = $session->getId();
-	$caller = $from["id"]; 
-	$to = $session->getTo();
-	$called = $to["id"]; 
-	$_SESSION['caller']=$caller;
-	$_SESSION['called']=$called;
-	$_SESSION['sessionID']=$sessionID;
+	if(!isset($_SESSION['caller'])){
+	$session_dime = new Session();
+	$from_dime = $session_dime->getFrom();
+	$sessionID = $session_dime->getId();
+	$caller_dime = $from_dime["id"]; 
+	$to_dime = $session_dime->getTo();
+	$called_dime = $to_dime["id"]; 
+	$_SESSION['caller_dime']=$caller_dime;
+	$_SESSION['called_dime']=$called_dime;
+	$_SESSION['sessionID_dime']=$sessionID_dime;
+	}
 	
 	// Initialitation of the global variables
 	
 	«FOR d: variablesId»
 	«inicializeGlobalVariable(d)» 
 	«ENDFOR»«ENDIF»	
+	
 	«IF elem.times!=0»
 
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times']){
-	$attempts=$_SESSION['times'];
+	if(isset($_SESSION['times_«elem.name»_dime'])){
+	$attempts=intval($_SESSION['times_«elem.name»_dime']);
 		if($attempts==«elem.times»){
-			$urltimes = "«url»/res/signals.php?uri=times&sessionID=".$sessionID."&state=«elem.name»";
+			$_SESSION['times_«elem.name»_dime']=0;
+			$urltimes = "«url»res/signals.php?signal_dime=attemptsLimit&sessionID_dime=".$_SESSION['sessionID_dime'];
 			$curl_handle=curl_init();
 			curl_setopt($curl_handle,CURLOPT_URL,$urltimes);
 			curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
@@ -254,15 +283,16 @@ function app_«elem.name»() {
 			curl_close($curl_handle);
 		}else{
 			$attempts++;
+			$_SESSION['times_«elem.name»_dime']=$attempts;
 		}
 	}else{
-		$_SESSION['times']=1;
+		$_SESSION['times_«elem.name»_dime']=1;
 	}
 	«ENDIF»«IF false» 	
 	
 	// Timeout signal appears when the timeout atribute of the state is reached.
 	
-	$url = "«url»/res/signals.php?uri=timeout&sessionID=".$sessionID."&state=«elem.name»&timeout=«elem.timeout»";
+	$url = "«url»res/signals.php?uri=timeout&sessionID=".$sessionID."&state=«elem.name»&timeout=«elem.timeout»";
 	$curl_handle=curl_init();
 	curl_setopt($curl_handle,CURLOPT_URL,$url);
 	curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
@@ -275,24 +305,14 @@ function app_«elem.name»() {
 	
 	$tropo = new Tropo();
 	
+	«IF !name.equals("start") »
+		@$result_dime=new Result();
+	«ENDIF»
 	// Update of the value of the global constants and variables, and the session params.
 	
 	«FOR d: variablesId»
 	«declareStateGlobalVariable(d)» 
 	«ENDFOR»
-	if(isset($_SESSION['caller'])){
-		$caller=$_SESSION['caller'];
-	}
-	if(isset($_SESSION['called'])){
-		$called=$_SESSION['called'];
-	}
-	if(isset($_SESSION['sessionID'])){
-		$sessionID=$_SESSION['sessionID'];
-	}
-	if(isset($_SESSION['lastState'])){
-		$lastState=$_SESSION['lastState'];
-	}
-	
 	
 	// Declaration of the statements of the state.
 	
@@ -305,7 +325,7 @@ function app_«elem.name»() {
 	«FOR d: variablesId»
 	«saveGlobalVariable(d)» 
 	«ENDFOR»
-	$_SESSION['lastState']='«elem.name»';
+	$_SESSION['lastState_dime']='«elem.name»';
 	return $tropo->RenderJson();
 }'''
 	}
@@ -456,12 +476,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	def static dispatch declareVars(NumVariable elem){
 		'''$«elem.name»'''
 	}
-	def static dispatch declareVars(Ask elem){
-		'''$«elem.vari»'''
-	}
-	def static dispatch declareVars(GetDigits elem){
-		'''$«elem.vari»'''
-	}
+	
 	def static dispatch declareVars(Constant elem){
 		'''«elem.name»'''
 	}
@@ -492,6 +507,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	def static declareVariable(BoolVariable elem){
 		 '''$«elem.name»«IF elem.value!=null»=«declareBoolExpression(elem.value)»«ENDIF»''' 	
 	}
+	
 	
 // Literals
 	
@@ -530,14 +546,26 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 
  	def static dispatch declareLiteral(SESSION elem){
  		if(elem.name.equals('CALLER')){
- 			'''$caller'''
+ 			'''$_SESSION['caller_dime']'''
  		}else if(elem.name.equals('CALLED')){
- 			'''$called'''
+ 			'''$_SESSION['called_dime']'''
  		}
  		else if(elem.name.equals('LASTSTATE')){
- 			'''$lastState'''
- 		} 	else if(elem.name.equals('TIME')){
- 			'''$time'''
+ 			'''$_SESSION['lastState_dime']'''
+ 		} else if(elem.name.equals('ANSWER')){
+ 			'''$result_dime->getValue()'''
+ 		
+ 		} else if(elem.name.equals('RECORD')){
+ 			'''"ftp://«user»:«password»@ftp.tropo.com/recordings/record_".$_REQUEST['lastState_dime'].".mp3"'''
+ 		
+ 		} else if(elem.name.equals('DIGITS')){
+ 			'''$result_dime->getValue()'''
+ 		
+ 		} 	
+ 		
+ 		
+ 		else if(elem.name.equals('TIME')){
+ 			'''$result_dime->getSessionDuration()'''
  		} 	
  		
  		else{
@@ -595,7 +623,17 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	
 	
 	def static dispatch declareVoiceTag( Record elem){
-		'''$tropo->record(array('url' => «declareConcatenation(elem.action)»,'terminator' => '#'«IF elem.time!=null»,'timeout' =>«elem.time»)«ENDIF», "allowSignals"=>array("timeExceeded«name»", "attemptsLimit")))'''
+	//	'''$tropo->record(array('url' => «declareConcatenation(elem.action)»,'terminator' => '#'«IF elem.time!=null»,'timeout' =>«elem.time»)«ENDIF», "allowSignals"=>array("timeExceeded«name»", "attemptsLimit")))'''
+	'''$tropo->record(array(
+    'name' => 'recording',
+    'say' => 'Please leave a message.',
+   	'url' => 'ftp://«user»:«password»@ftp.tropo.com/recordings/record_«name».mp3',
+    'terminator' => '#',
+    'timeout' => 10,
+    'maxSilence' => 3,
+    'maxTime' => 10,
+    'format' => 'audio/mp3',
+  ));'''
 	}
 	def static dispatch declareVoiceTag( Reject elem){
 		'''$tropo->reject()'''
@@ -604,7 +642,8 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		'''$tropo->hangup()'''
 	}
 	def static dispatch declareVoiceTag( GetDigits elem){
-		'''$«elem.vari»=$tropo->ask(«declareConcatenation(elem.question)»,array("choices"=>"[«elem.numDigits» DIGITS]", "terminator" => "#", "name"=>"«elem.name»", "voice"=>"«voice»", "allowSignals"=>array("timeExceeded«name»", "attemptsLimit")))'''
+	'''$tropo->ask("",array("choices"=>"[«elem.numDigits» DIGIT«IF elem.numDigits>1»S«ENDIF»]", "terminator" => "#", "name"=>"«elem.name»", "voice"=>"«voice»", "allowSignals"=>array("timeExceeded«name»", "attemptsLimit")))'''
+	
 	}
 	def static dispatch declareVoiceTag( Dial elem){
 		'''$tropo->transfer(«declareConcatenation(elem.to)», array( "allowSignals"=>array("timeExceeded«name»", "attemptsLimit")))'''
@@ -613,14 +652,14 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		'''$tropo->call(«declareConcatenation(elem.to)», array( "allowSignals"=>array("timeExceeded«name»", "attemptsLimit")))'''
 	} 
 	
-	//FALTAN POR IMPLEMENTAR
+
 	
-	def static dispatch declareVoiceTag( Tweet elem){
-		''''''
-	} 
 
 	def static dispatch declareVoiceTag( Email elem){
-		'''mail(«declareConcatenation(elem.to)», «declareConcatenation(elem.title)»,«declareConcatenation(elem.value)», "From: <".«declareConcatenation(elem.from)»."> \r\n") '''
+		'''
+		// Email implementation
+		
+		mail(«declareConcatenation(elem.to)», «declareConcatenation(elem.title)»,«declareConcatenation(elem.value)», "From: <".«declareConcatenation(elem.from)»."> \r\n") '''
 	} 
 	def static dispatch declareVoiceTag( Sms elem){
 		'''$tropo->call(«declareConcatenation(elem.to)», array('network'=>'SMS'));
@@ -671,7 +710,7 @@ $tropo->on(array("event" => "error", "next" =>"«appName».php?uri=«elem.target
 		 }else if(elem.name.equals("TIMEOUT")){
 		 	'''timeExceeded'''
 		 	}else if(elem.name.equals("TIMES")){
-		 	'''timeExceeattemptsLimit'''
+		 	'''attemptsLimit'''
 		 	}
 		 	else{
 		 	''''''

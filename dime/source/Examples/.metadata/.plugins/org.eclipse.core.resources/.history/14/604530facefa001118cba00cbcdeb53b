@@ -1,7 +1,0 @@
-Application CallCenter
-
-
-State start{
-	Reject;
-	Say "Wrong";
-}  

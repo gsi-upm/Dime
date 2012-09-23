@@ -3,6 +3,6 @@ Application HelloWorld
 Const GREETING="HELLO";
 
 State start {
- 	Say GREETING+" world!"; 
+ 	Say GREETING." world!"; 
  }
              

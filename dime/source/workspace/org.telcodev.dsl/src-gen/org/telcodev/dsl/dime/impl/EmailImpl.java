@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.telcodev.dsl.dime.ConcatenationExpression;
 import org.telcodev.dsl.dime.DimePackage;
@@ -22,7 +21,6 @@ import org.telcodev.dsl.dime.Email;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.telcodev.dsl.dime.impl.EmailImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.EmailImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.EmailImpl#getFrom <em>From</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.EmailImpl#getValue <em>Value</em>}</li>
@@ -32,28 +30,8 @@ import org.telcodev.dsl.dime.Email;
  *
  * @generated
  */
-public class EmailImpl extends MinimalEObjectImpl.Container implements Email
+public class EmailImpl extends VoiceTagImpl implements Email
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getTitle() <em>Title</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -113,29 +91,6 @@ public class EmailImpl extends MinimalEObjectImpl.Container implements Email
   protected EClass eStaticClass()
   {
     return DimePackage.Literals.EMAIL;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.EMAIL__NAME, oldName, name));
   }
 
   /**
@@ -362,8 +317,6 @@ public class EmailImpl extends MinimalEObjectImpl.Container implements Email
   {
     switch (featureID)
     {
-      case DimePackage.EMAIL__NAME:
-        return getName();
       case DimePackage.EMAIL__TITLE:
         return getTitle();
       case DimePackage.EMAIL__FROM:
@@ -386,9 +339,6 @@ public class EmailImpl extends MinimalEObjectImpl.Container implements Email
   {
     switch (featureID)
     {
-      case DimePackage.EMAIL__NAME:
-        setName((String)newValue);
-        return;
       case DimePackage.EMAIL__TITLE:
         setTitle((ConcatenationExpression)newValue);
         return;
@@ -415,9 +365,6 @@ public class EmailImpl extends MinimalEObjectImpl.Container implements Email
   {
     switch (featureID)
     {
-      case DimePackage.EMAIL__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case DimePackage.EMAIL__TITLE:
         setTitle((ConcatenationExpression)null);
         return;
@@ -444,8 +391,6 @@ public class EmailImpl extends MinimalEObjectImpl.Container implements Email
   {
     switch (featureID)
     {
-      case DimePackage.EMAIL__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case DimePackage.EMAIL__TITLE:
         return title != null;
       case DimePackage.EMAIL__FROM:
@@ -456,23 +401,6 @@ public class EmailImpl extends MinimalEObjectImpl.Container implements Email
         return to != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //EmailImpl

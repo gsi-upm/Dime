@@ -168,7 +168,6 @@ public class DimeSwitch<T> extends Switch<T>
         GetDigits getDigits = (GetDigits)theEObject;
         T result = caseGetDigits(getDigits);
         if (result == null) result = caseVoiceTag(getDigits);
-        if (result == null) result = caseVars(getDigits);
         if (result == null) result = caseAbstractElement(getDigits);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -178,7 +177,6 @@ public class DimeSwitch<T> extends Switch<T>
         Ask ask = (Ask)theEObject;
         T result = caseAsk(ask);
         if (result == null) result = caseVoiceTag(ask);
-        if (result == null) result = caseVars(ask);
         if (result == null) result = caseAbstractElement(ask);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -235,13 +233,8 @@ public class DimeSwitch<T> extends Switch<T>
       {
         Email email = (Email)theEObject;
         T result = caseEmail(email);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DimePackage.TWEET:
-      {
-        Tweet tweet = (Tweet)theEObject;
-        T result = caseTweet(tweet);
+        if (result == null) result = caseVoiceTag(email);
+        if (result == null) result = caseAbstractElement(email);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -814,22 +807,6 @@ public class DimeSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseEmail(Email object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Tweet</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Tweet</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTweet(Tweet object)
   {
     return null;
   }

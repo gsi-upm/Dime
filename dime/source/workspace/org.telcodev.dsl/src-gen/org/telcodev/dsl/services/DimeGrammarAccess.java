@@ -221,13 +221,13 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cHangupParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cCallParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
 		private final RuleCall cSmsParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cEmailParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
 		
-		////| Email | Tweet;
 		//VoiceTag:
-		//	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms;
+		//	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms | Email;
 		public ParserRule getRule() { return rule; }
 
-		//Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms
+		//Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms | Email
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Say
@@ -262,6 +262,9 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Sms
 		public RuleCall getSmsParserRuleCall_10() { return cSmsParserRuleCall_10; }
+
+		//Email
+		public RuleCall getEmailParserRuleCall_11() { return cEmailParserRuleCall_11; }
 	}
 
 	public class CallElements extends AbstractParserRuleElementFinder {
@@ -368,20 +371,13 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTimeAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cTimeINTTerminalRuleCall_1_0 = (RuleCall)cTimeAssignment_1.eContents().get(0);
 		private final Keyword cSecondsKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cInKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cActionAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cActionConcatenationExpressionParserRuleCall_4_0 = (RuleCall)cActionAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cSpaceHyphenMinusGreaterThanSignSpaceKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cVariAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cVariIDTerminalRuleCall_5_1_0 = (RuleCall)cVariAssignment_5_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Record:
-		//	name="Record" time=INT "seconds" "in" action=ConcatenationExpression (" -> " vari=ID)? ";";
+		//	name="Record" time=INT "seconds" ";";
 		public ParserRule getRule() { return rule; }
 
-		//name="Record" time=INT "seconds" "in" action=ConcatenationExpression (" -> " vari=ID)? ";"
+		//name="Record" time=INT "seconds" ";"
 		public Group getGroup() { return cGroup; }
 
 		//name="Record"
@@ -399,29 +395,8 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		//"seconds"
 		public Keyword getSecondsKeyword_2() { return cSecondsKeyword_2; }
 
-		//"in"
-		public Keyword getInKeyword_3() { return cInKeyword_3; }
-
-		//action=ConcatenationExpression
-		public Assignment getActionAssignment_4() { return cActionAssignment_4; }
-
-		//ConcatenationExpression
-		public RuleCall getActionConcatenationExpressionParserRuleCall_4_0() { return cActionConcatenationExpressionParserRuleCall_4_0; }
-
-		//(" -> " vari=ID)?
-		public Group getGroup_5() { return cGroup_5; }
-
-		//" -> "
-		public Keyword getSpaceHyphenMinusGreaterThanSignSpaceKeyword_5_0() { return cSpaceHyphenMinusGreaterThanSignSpaceKeyword_5_0; }
-
-		//vari=ID
-		public Assignment getVariAssignment_5_1() { return cVariAssignment_5_1; }
-
-		//ID
-		public RuleCall getVariIDTerminalRuleCall_5_1_0() { return cVariIDTerminalRuleCall_5_1_0; }
-
 		//";"
-		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class RejectElements extends AbstractParserRuleElementFinder {
@@ -464,18 +439,13 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNumDigitsAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNumDigitsINTTerminalRuleCall_1_0 = (RuleCall)cNumDigitsAssignment_1.eContents().get(0);
 		private final Keyword cDigitsKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cQuestionAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cQuestionConcatenationExpressionParserRuleCall_3_0 = (RuleCall)cQuestionAssignment_3.eContents().get(0);
-		private final Keyword cSpaceHyphenMinusGreaterThanSignSpaceKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cVariAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cVariIDTerminalRuleCall_5_0 = (RuleCall)cVariAssignment_5.eContents().get(0);
-		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//GetDigits:
-		//	name="Get" numDigits=INT "digits" question=ConcatenationExpression " -> " vari=ID ";";
+		//	name="Get" numDigits=INT "digits" ";";
 		public ParserRule getRule() { return rule; }
 
-		//name="Get" numDigits=INT "digits" question=ConcatenationExpression " -> " vari=ID ";"
+		//name="Get" numDigits=INT "digits" ";"
 		public Group getGroup() { return cGroup; }
 
 		//name="Get"
@@ -493,23 +463,8 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		//"digits"
 		public Keyword getDigitsKeyword_2() { return cDigitsKeyword_2; }
 
-		//question=ConcatenationExpression
-		public Assignment getQuestionAssignment_3() { return cQuestionAssignment_3; }
-
-		//ConcatenationExpression
-		public RuleCall getQuestionConcatenationExpressionParserRuleCall_3_0() { return cQuestionConcatenationExpressionParserRuleCall_3_0; }
-
-		//" -> "
-		public Keyword getSpaceHyphenMinusGreaterThanSignSpaceKeyword_4() { return cSpaceHyphenMinusGreaterThanSignSpaceKeyword_4; }
-
-		//vari=ID
-		public Assignment getVariAssignment_5() { return cVariAssignment_5; }
-
-		//ID
-		public RuleCall getVariIDTerminalRuleCall_5_0() { return cVariIDTerminalRuleCall_5_0; }
-
 		//";"
-		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class AskElements extends AbstractParserRuleElementFinder {
@@ -519,16 +474,13 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameAskKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Assignment cQuestionAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cQuestionConcatenationExpressionParserRuleCall_1_0 = (RuleCall)cQuestionAssignment_1.eContents().get(0);
-		private final Keyword cSpaceHyphenMinusGreaterThanSignSpaceKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cVariAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cVariIDTerminalRuleCall_3_0 = (RuleCall)cVariAssignment_3.eContents().get(0);
-		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Ask:
-		//	name="Ask" question=ConcatenationExpression " -> " vari=ID ";";
+		//	name="Ask" question=ConcatenationExpression ";";
 		public ParserRule getRule() { return rule; }
 
-		//name="Ask" question=ConcatenationExpression " -> " vari=ID ";"
+		//name="Ask" question=ConcatenationExpression ";"
 		public Group getGroup() { return cGroup; }
 
 		//name="Ask"
@@ -543,17 +495,8 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		//ConcatenationExpression
 		public RuleCall getQuestionConcatenationExpressionParserRuleCall_1_0() { return cQuestionConcatenationExpressionParserRuleCall_1_0; }
 
-		//" -> "
-		public Keyword getSpaceHyphenMinusGreaterThanSignSpaceKeyword_2() { return cSpaceHyphenMinusGreaterThanSignSpaceKeyword_2; }
-
-		//vari=ID
-		public Assignment getVariAssignment_3() { return cVariAssignment_3; }
-
-		//ID
-		public RuleCall getVariIDTerminalRuleCall_3_0() { return cVariIDTerminalRuleCall_3_0; }
-
 		//";"
-		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class SendElements extends AbstractParserRuleElementFinder {
@@ -788,21 +731,23 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cFromAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cFromConcatenationExpressionParserRuleCall_8_0 = (RuleCall)cFromAssignment_8.eContents().get(0);
 		private final Keyword cCommaKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cValueAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cValueConcatenationExpressionParserRuleCall_10_0 = (RuleCall)cValueAssignment_10.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Keyword cToKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Assignment cToAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cToConcatenationExpressionParserRuleCall_13_0 = (RuleCall)cToAssignment_13.eContents().get(0);
-		private final Keyword cSemicolonKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Keyword cMessageKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cColonKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cValueAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cValueConcatenationExpressionParserRuleCall_12_0 = (RuleCall)cValueAssignment_12.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Keyword cToKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Assignment cToAssignment_15 = (Assignment)cGroup.eContents().get(15);
+		private final RuleCall cToConcatenationExpressionParserRuleCall_15_0 = (RuleCall)cToAssignment_15.eContents().get(0);
+		private final Keyword cSemicolonKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
 		//Email:
-		//	name="Email" "{" "subject" ":" title=ConcatenationExpression "," "from" ":" from=ConcatenationExpression ","
-		//	value=ConcatenationExpression "}" "to" to=ConcatenationExpression ";";
+		//	name="Email" "{" "subject" ":" title=ConcatenationExpression "," "from" ":" from=ConcatenationExpression "," "message"
+		//	":" value=ConcatenationExpression "}" "to" to=ConcatenationExpression ";";
 		public ParserRule getRule() { return rule; }
 
-		//name="Email" "{" "subject" ":" title=ConcatenationExpression "," "from" ":" from=ConcatenationExpression ","
-		//value=ConcatenationExpression "}" "to" to=ConcatenationExpression ";"
+		//name="Email" "{" "subject" ":" title=ConcatenationExpression "," "from" ":" from=ConcatenationExpression "," "message"
+		//":" value=ConcatenationExpression "}" "to" to=ConcatenationExpression ";"
 		public Group getGroup() { return cGroup; }
 
 		//name="Email"
@@ -844,58 +789,32 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		//","
 		public Keyword getCommaKeyword_9() { return cCommaKeyword_9; }
 
+		//"message"
+		public Keyword getMessageKeyword_10() { return cMessageKeyword_10; }
+
+		//":"
+		public Keyword getColonKeyword_11() { return cColonKeyword_11; }
+
 		//value=ConcatenationExpression
-		public Assignment getValueAssignment_10() { return cValueAssignment_10; }
+		public Assignment getValueAssignment_12() { return cValueAssignment_12; }
 
 		//ConcatenationExpression
-		public RuleCall getValueConcatenationExpressionParserRuleCall_10_0() { return cValueConcatenationExpressionParserRuleCall_10_0; }
+		public RuleCall getValueConcatenationExpressionParserRuleCall_12_0() { return cValueConcatenationExpressionParserRuleCall_12_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
+		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
 
 		//"to"
-		public Keyword getToKeyword_12() { return cToKeyword_12; }
+		public Keyword getToKeyword_14() { return cToKeyword_14; }
 
 		//to=ConcatenationExpression
-		public Assignment getToAssignment_13() { return cToAssignment_13; }
+		public Assignment getToAssignment_15() { return cToAssignment_15; }
 
 		//ConcatenationExpression
-		public RuleCall getToConcatenationExpressionParserRuleCall_13_0() { return cToConcatenationExpressionParserRuleCall_13_0; }
+		public RuleCall getToConcatenationExpressionParserRuleCall_15_0() { return cToConcatenationExpressionParserRuleCall_15_0; }
 
 		//";"
-		public Keyword getSemicolonKeyword_14() { return cSemicolonKeyword_14; }
-	}
-
-	public class TweetElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Tweet");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameTweetKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueConcatenationExpressionParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		
-		//Tweet:
-		//	name="Tweet" value=ConcatenationExpression ";";
-		public ParserRule getRule() { return rule; }
-
-		//name="Tweet" value=ConcatenationExpression ";"
-		public Group getGroup() { return cGroup; }
-
-		//name="Tweet"
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//"Tweet"
-		public Keyword getNameTweetKeyword_0_0() { return cNameTweetKeyword_0_0; }
-
-		//value=ConcatenationExpression
-		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
-
-		//ConcatenationExpression
-		public RuleCall getValueConcatenationExpressionParserRuleCall_1_0() { return cValueConcatenationExpressionParserRuleCall_1_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+		public Keyword getSemicolonKeyword_16() { return cSemicolonKeyword_16; }
 	}
 
 	public class TransitionElements extends AbstractParserRuleElementFinder {
@@ -1002,25 +921,21 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	public class CondBlockElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CondBlock");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameIfKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cIfKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cCondAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cCondTerminalBoolExpressionParserRuleCall_1_0 = (RuleCall)cCondAssignment_1.eContents().get(0);
 		private final Assignment cActionAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cActionBlockParserRuleCall_2_0 = (RuleCall)cActionAssignment_2.eContents().get(0);
 		
 		//CondBlock:
-		//	name="if" cond=TerminalBoolExpression action=Block;
+		//	"if" cond=TerminalBoolExpression action=Block;
 		public ParserRule getRule() { return rule; }
 
-		//name="if" cond=TerminalBoolExpression action=Block
+		//"if" cond=TerminalBoolExpression action=Block
 		public Group getGroup() { return cGroup; }
 
-		//name="if"
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
 		//"if"
-		public Keyword getNameIfKeyword_0_0() { return cNameIfKeyword_0_0; }
+		public Keyword getIfKeyword_0() { return cIfKeyword_0; }
 
 		//cond=TerminalBoolExpression
 		public Assignment getCondAssignment_1() { return cCondAssignment_1; }
@@ -1039,27 +954,23 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Block");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cBlockAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cNameLeftCurlyBracketKeyword_1_0 = (Keyword)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cStaAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cStaAbstractElementParserRuleCall_2_0 = (RuleCall)cStaAssignment_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Block:
-		//	{Block} name="{" sta+=AbstractElement* "}";
+		//	{Block} "{" sta+=AbstractElement* "}";
 		public ParserRule getRule() { return rule; }
 
-		//{Block} name="{" sta+=AbstractElement* "}"
+		//{Block} "{" sta+=AbstractElement* "}"
 		public Group getGroup() { return cGroup; }
 
 		//{Block}
 		public Action getBlockAction_0() { return cBlockAction_0; }
 
-		//name="{"
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
 		//"{"
-		public Keyword getNameLeftCurlyBracketKeyword_1_0() { return cNameLeftCurlyBracketKeyword_1_0; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
 		//sta+=AbstractElement*
 		public Assignment getStaAssignment_2() { return cStaAssignment_2; }
@@ -1355,32 +1266,32 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Action cConcatenationLeftAction_1_0 = (Action)cGroup_1.eContents().get(0);
 		private final Assignment cOpAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final Keyword cOpPlusSignKeyword_1_1_0 = (Keyword)cOpAssignment_1_1.eContents().get(0);
+		private final RuleCall cOpCONCATENATIONTerminalRuleCall_1_1_0 = (RuleCall)cOpAssignment_1_1.eContents().get(0);
 		private final Assignment cRightAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cRightConcatenationExpressionParserRuleCall_1_2_0 = (RuleCall)cRightAssignment_1_2.eContents().get(0);
 		
 		//// Concatenation expression
 		//ConcatenationExpression:
-		//	ConcatenationTerminal ({Concatenation.left=current} op="+" right=ConcatenationExpression)?;
+		//	ConcatenationTerminal ({Concatenation.left=current} op=CONCATENATION right=ConcatenationExpression)?;
 		public ParserRule getRule() { return rule; }
 
-		//ConcatenationTerminal ({Concatenation.left=current} op="+" right=ConcatenationExpression)?
+		//ConcatenationTerminal ({Concatenation.left=current} op=CONCATENATION right=ConcatenationExpression)?
 		public Group getGroup() { return cGroup; }
 
 		//ConcatenationTerminal
 		public RuleCall getConcatenationTerminalParserRuleCall_0() { return cConcatenationTerminalParserRuleCall_0; }
 
-		//({Concatenation.left=current} op="+" right=ConcatenationExpression)?
+		//({Concatenation.left=current} op=CONCATENATION right=ConcatenationExpression)?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//{Concatenation.left=current}
 		public Action getConcatenationLeftAction_1_0() { return cConcatenationLeftAction_1_0; }
 
-		//op="+"
+		//op=CONCATENATION
 		public Assignment getOpAssignment_1_1() { return cOpAssignment_1_1; }
 
-		//"+"
-		public Keyword getOpPlusSignKeyword_1_1_0() { return cOpPlusSignKeyword_1_1_0; }
+		//CONCATENATION
+		public RuleCall getOpCONCATENATIONTerminalRuleCall_1_1_0() { return cOpCONCATENATIONTerminalRuleCall_1_1_0; }
 
 		//right=ConcatenationExpression
 		public Assignment getRightAssignment_1_2() { return cRightAssignment_1_2; }
@@ -1678,11 +1589,9 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Vars");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cStringVariableParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cAskParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cNumVariableParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cBoolVariableParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cGetDigitsParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cConstantParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cNumVariableParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cBoolVariableParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cConstantParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		////AssigmentString:
 		////	vas=[Vars] '=' (rights=ConcatenationExpression)';';
@@ -1695,29 +1604,23 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		////	
 		//// FALLO CONSTANT TIENE QUE IR EN LITERAL NO EN VARS
 		//Vars:
-		//	StringVariable | Ask | NumVariable | BoolVariable | GetDigits | Constant;
+		//	StringVariable | NumVariable | BoolVariable | Constant;
 		public ParserRule getRule() { return rule; }
 
-		//StringVariable | Ask | NumVariable | BoolVariable | GetDigits | Constant
+		//StringVariable | NumVariable | BoolVariable | Constant
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//StringVariable
 		public RuleCall getStringVariableParserRuleCall_0() { return cStringVariableParserRuleCall_0; }
 
-		//Ask
-		public RuleCall getAskParserRuleCall_1() { return cAskParserRuleCall_1; }
-
 		//NumVariable
-		public RuleCall getNumVariableParserRuleCall_2() { return cNumVariableParserRuleCall_2; }
+		public RuleCall getNumVariableParserRuleCall_1() { return cNumVariableParserRuleCall_1; }
 
 		//BoolVariable
-		public RuleCall getBoolVariableParserRuleCall_3() { return cBoolVariableParserRuleCall_3; }
-
-		//GetDigits
-		public RuleCall getGetDigitsParserRuleCall_4() { return cGetDigitsParserRuleCall_4; }
+		public RuleCall getBoolVariableParserRuleCall_2() { return cBoolVariableParserRuleCall_2; }
 
 		//Constant
-		public RuleCall getConstantParserRuleCall_5() { return cConstantParserRuleCall_5; }
+		public RuleCall getConstantParserRuleCall_3() { return cConstantParserRuleCall_3; }
 	}
 
 	public class LiteralAbsElements extends AbstractParserRuleElementFinder {
@@ -1936,12 +1839,18 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameTIMEKeyword_2_0 = (Keyword)cNameAssignment_2.eContents().get(0);
 		private final Assignment cNameAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
 		private final Keyword cNameCALLEDKeyword_3_0 = (Keyword)cNameAssignment_3.eContents().get(0);
+		private final Assignment cNameAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
+		private final Keyword cNameANSWERKeyword_4_0 = (Keyword)cNameAssignment_4.eContents().get(0);
+		private final Assignment cNameAssignment_5 = (Assignment)cAlternatives.eContents().get(5);
+		private final Keyword cNameDIGITSKeyword_5_0 = (Keyword)cNameAssignment_5.eContents().get(0);
+		private final Assignment cNameAssignment_6 = (Assignment)cAlternatives.eContents().get(6);
+		private final Keyword cNameRECORDKeyword_6_0 = (Keyword)cNameAssignment_6.eContents().get(0);
 		
 		//SESSION:
-		//	name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED";
+		//	name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED" | name="ANSWER" | name="DIGITS" | name="RECORD";
 		public ParserRule getRule() { return rule; }
 
-		//name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED"
+		//name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED" | name="ANSWER" | name="DIGITS" | name="RECORD"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//name="CALLER"
@@ -1967,6 +1876,24 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"CALLED"
 		public Keyword getNameCALLEDKeyword_3_0() { return cNameCALLEDKeyword_3_0; }
+
+		//name="ANSWER"
+		public Assignment getNameAssignment_4() { return cNameAssignment_4; }
+
+		//"ANSWER"
+		public Keyword getNameANSWERKeyword_4_0() { return cNameANSWERKeyword_4_0; }
+
+		//name="DIGITS"
+		public Assignment getNameAssignment_5() { return cNameAssignment_5; }
+
+		//"DIGITS"
+		public Keyword getNameDIGITSKeyword_5_0() { return cNameDIGITSKeyword_5_0; }
+
+		//name="RECORD"
+		public Assignment getNameAssignment_6() { return cNameAssignment_6; }
+
+		//"RECORD"
+		public Keyword getNameRECORDKeyword_6_0() { return cNameRECORDKeyword_6_0; }
 	}
 
 	public class CALLSTATUSElements extends AbstractParserRuleElementFinder {
@@ -2034,7 +1961,6 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	private SayElements pSay;
 	private SmsElements pSms;
 	private EmailElements pEmail;
-	private TweetElements pTweet;
 	private TransitionElements pTransition;
 	private IfExpElements pIfExp;
 	private CondBlockElements pCondBlock;
@@ -2155,9 +2081,8 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		return getStateAccess().getRule();
 	}
 
-	////| Email | Tweet;
 	//VoiceTag:
-	//	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms;
+	//	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms | Email;
 	public VoiceTagElements getVoiceTagAccess() {
 		return (pVoiceTag != null) ? pVoiceTag : (pVoiceTag = new VoiceTagElements());
 	}
@@ -2197,7 +2122,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Record:
-	//	name="Record" time=INT "seconds" "in" action=ConcatenationExpression (" -> " vari=ID)? ";";
+	//	name="Record" time=INT "seconds" ";";
 	public RecordElements getRecordAccess() {
 		return (pRecord != null) ? pRecord : (pRecord = new RecordElements());
 	}
@@ -2227,7 +2152,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//GetDigits:
-	//	name="Get" numDigits=INT "digits" question=ConcatenationExpression " -> " vari=ID ";";
+	//	name="Get" numDigits=INT "digits" ";";
 	public GetDigitsElements getGetDigitsAccess() {
 		return (pGetDigits != null) ? pGetDigits : (pGetDigits = new GetDigitsElements());
 	}
@@ -2237,7 +2162,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Ask:
-	//	name="Ask" question=ConcatenationExpression " -> " vari=ID ";";
+	//	name="Ask" question=ConcatenationExpression ";";
 	public AskElements getAskAccess() {
 		return (pAsk != null) ? pAsk : (pAsk = new AskElements());
 	}
@@ -2307,24 +2232,14 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Email:
-	//	name="Email" "{" "subject" ":" title=ConcatenationExpression "," "from" ":" from=ConcatenationExpression ","
-	//	value=ConcatenationExpression "}" "to" to=ConcatenationExpression ";";
+	//	name="Email" "{" "subject" ":" title=ConcatenationExpression "," "from" ":" from=ConcatenationExpression "," "message"
+	//	":" value=ConcatenationExpression "}" "to" to=ConcatenationExpression ";";
 	public EmailElements getEmailAccess() {
 		return (pEmail != null) ? pEmail : (pEmail = new EmailElements());
 	}
 	
 	public ParserRule getEmailRule() {
 		return getEmailAccess().getRule();
-	}
-
-	//Tweet:
-	//	name="Tweet" value=ConcatenationExpression ";";
-	public TweetElements getTweetAccess() {
-		return (pTweet != null) ? pTweet : (pTweet = new TweetElements());
-	}
-	
-	public ParserRule getTweetRule() {
-		return getTweetAccess().getRule();
 	}
 
 	//Transition:
@@ -2349,7 +2264,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CondBlock:
-	//	name="if" cond=TerminalBoolExpression action=Block;
+	//	"if" cond=TerminalBoolExpression action=Block;
 	public CondBlockElements getCondBlockAccess() {
 		return (pCondBlock != null) ? pCondBlock : (pCondBlock = new CondBlockElements());
 	}
@@ -2359,7 +2274,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Block:
-	//	{Block} name="{" sta+=AbstractElement* "}";
+	//	{Block} "{" sta+=AbstractElement* "}";
 	public BlockElements getBlockAccess() {
 		return (pBlock != null) ? pBlock : (pBlock = new BlockElements());
 	}
@@ -2451,7 +2366,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// Concatenation expression
 	//ConcatenationExpression:
-	//	ConcatenationTerminal ({Concatenation.left=current} op="+" right=ConcatenationExpression)?;
+	//	ConcatenationTerminal ({Concatenation.left=current} op=CONCATENATION right=ConcatenationExpression)?;
 	public ConcatenationExpressionElements getConcatenationExpressionAccess() {
 		return (pConcatenationExpression != null) ? pConcatenationExpression : (pConcatenationExpression = new ConcatenationExpressionElements());
 	}
@@ -2542,7 +2457,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	////	
 	//// FALLO CONSTANT TIENE QUE IR EN LITERAL NO EN VARS
 	//Vars:
-	//	StringVariable | Ask | NumVariable | BoolVariable | GetDigits | Constant;
+	//	StringVariable | NumVariable | BoolVariable | Constant;
 	public VarsElements getVarsAccess() {
 		return (pVars != null) ? pVars : (pVars = new VarsElements());
 	}
@@ -2625,7 +2540,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SESSION:
-	//	name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED";
+	//	name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED" | name="ANSWER" | name="DIGITS" | name="RECORD";
 	public SESSIONElements getSESSIONAccess() {
 		return (pSESSION != null) ? pSESSION : (pSESSION = new SESSIONElements());
 	}

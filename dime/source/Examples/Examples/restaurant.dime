@@ -8,56 +8,55 @@ String people;
 State start  {
 	
 	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	Ask 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto?';
 	GoTo isclient when COMPLETED;
+	
 	
 } 
 
 State isclient times 3 {
 
-	Ask 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto?' -> client;
-	
-	if(client=="yes"){
+	if(ANSWER=="yes"){
 		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		
 		GoTo askpeople when COMPLETED;
 	}else{
 		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
 		HangUp;
 	}
 	GoTo tooattempts when TIMES;
-	GoTo wrongchoice when ERROR;
 	GoTo hanguperror when ERROR;
 }
 
 State askpeople times 3 {
-	Ask "Diga el numero de comensales" -> people;
-	
+	Ask "Diga el numero de comensales";
 	GoTo askday when COMPLETED;
 	GoTo tooattempts when TIMES;
-	GoTo wrongchoice when ERROR;
 	GoTo hanguperror when ERROR;
 }
 
 State askday times 3 {
-	Ask "En que dia lo desea?" -> people;
+	String people=ANSWER;
+	Ask "En que dia lo desea?" ;
 	
 	GoTo askmonth when COMPLETED;
 	GoTo tooattempts when TIMES;
-	GoTo wrongchoice when ERROR;
 	GoTo hanguperror when ERROR;
 }
 
 State askmonth times 3 {
-	Ask "En que mes desea realizar dicha reserva?" -> people;
+	String day=ANSWER;
+	Ask "En que mes desea realizar dicha reserva?" ;
 	
 	GoTo askhour when COMPLETED;
 	GoTo tooattempts when TIMES;
-	GoTo wrongchoice when ERROR;
 	GoTo hanguperror when ERROR;
 }
 
 
 State askhour times 3 {
-	Ask "A que hora le conviene?" -> people;
+	String month=ANSWER;
+	Ask "A que hora le conviene?" ;
 	
 	GoTo askdone when COMPLETED;
 	GoTo tooattempts when TIMES;
@@ -65,26 +64,27 @@ State askhour times 3 {
 	GoTo hanguperror when ERROR;
 }
 State askdone times 3 {
-	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '+day+'de'+month+'de'+"2012"+'a las '+hour+" para"+people+' personas.';
-	Ask "Esta totalmente de acuerdo con dicha solicitud?" -> isDone;
-	if(isDone=="yes"){
+	String hour=ANSWER;
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Ask "Esta totalmente de acuerdo con dicha solicitud?";
+	if(ANSWER=="yes"){
 		GoTo hangup when COMPLETED;
 	}else{
 		GoTo modification when COMPLETED;
 	}
 	GoTo tooattempts when TIMES;
-	GoTo wrongchoice when ERROR;
+	
 	GoTo hanguperror when ERROR;
 }
 
 State modification times 3 {
-	Ask "Que dato desea modificar?" -> toModify;
-	if(toModify=="numero de comensales"){
+	Ask "Que dato desea modificar?" ;
+	if(ANSWER=="numero de comensales"){
 		GoTo askpeople when COMPLETED;
-	}else if(toModify=="dia"){
+	}else if(ANSWER=="dia"){
 		GoTo askday when COMPLETED;
 	}
-	else if(toModify=="hora"){
+	else if(ANSWER=="hora"){
 		GoTo askhour when COMPLETED;
 	}else{
 		GoTo askmonth when COMPLETED;
@@ -130,9 +130,13 @@ State wrongchoice{
 }    
  
 State hangup {
-	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo."+day;
+	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
 	
 	
 	Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people} to "http://www.restaurant.com";
+	Email{subject : "Reservation",
+		from :"restaurant@dime.com",
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas'
+	} to "user@dime.com";
 	HangUp;
 }

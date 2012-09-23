@@ -79,7 +79,7 @@ public class DimeSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '=' | ' = '
+	 *     ' = ' | '='
 	 */
 	protected void emit_Constant_EqualsSignKeyword_2_0_or_SpaceEqualsSignSpaceKeyword_2_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -119,7 +119,7 @@ public class DimeSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '=' | ' = '
+	 *     ' = ' | '='
 	 */
 	protected void emit_StringVariable_EqualsSignKeyword_2_0_0_or_SpaceEqualsSignSpaceKeyword_2_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

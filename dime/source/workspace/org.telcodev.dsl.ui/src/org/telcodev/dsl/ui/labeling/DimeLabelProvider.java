@@ -3,8 +3,16 @@
 */
 package org.telcodev.dsl.ui.labeling;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
+import org.telcodev.dsl.dime.Block;
+import org.telcodev.dsl.dime.BoolVariable;
+import org.telcodev.dsl.dime.CondBlock;
+import org.telcodev.dsl.dime.Constant;
+import org.telcodev.dsl.dime.IfExp;
+import org.telcodev.dsl.dime.NumVariable;
+import org.telcodev.dsl.dime.StringVariable;
 
 import com.google.inject.Inject;
 
@@ -31,4 +39,29 @@ public class DimeLabelProvider extends DefaultEObjectLabelProvider {
       return "MyModel.gif";
     }
 */
+	
+	String text(CondBlock ele) {
+        return "If";
+      }
+	String text(IfExp ele) {
+        return "";
+      }
+	String text(Block ele) {
+        return "";
+      }
+	String text(StringVariable ele) {
+        return "String "+ele.getName();
+      }
+	String text(NumVariable ele) {
+        return "Num "+ele.getName();
+      }
+	String text(Constant ele) {
+        return "Constant "+ele.getName();
+      }
+	String text(BoolVariable ele) {
+        return "Bool "+ele.getName();
+      }
+	
+  
+	
 }

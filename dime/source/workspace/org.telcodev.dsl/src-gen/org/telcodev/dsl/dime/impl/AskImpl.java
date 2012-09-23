@@ -22,7 +22,6 @@ import org.telcodev.dsl.dime.DimePackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.telcodev.dsl.dime.impl.AskImpl#getQuestion <em>Question</em>}</li>
- *   <li>{@link org.telcodev.dsl.dime.impl.AskImpl#getVari <em>Vari</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,26 +38,6 @@ public class AskImpl extends VoiceTagImpl implements Ask
    * @ordered
    */
   protected ConcatenationExpression question;
-
-  /**
-   * The default value of the '{@link #getVari() <em>Vari</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVari()
-   * @generated
-   * @ordered
-   */
-  protected static final String VARI_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getVari() <em>Vari</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVari()
-   * @generated
-   * @ordered
-   */
-  protected String vari = VARI_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -134,29 +113,6 @@ public class AskImpl extends VoiceTagImpl implements Ask
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getVari()
-  {
-    return vari;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setVari(String newVari)
-  {
-    String oldVari = vari;
-    vari = newVari;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.ASK__VARI, oldVari, vari));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -180,8 +136,6 @@ public class AskImpl extends VoiceTagImpl implements Ask
     {
       case DimePackage.ASK__QUESTION:
         return getQuestion();
-      case DimePackage.ASK__VARI:
-        return getVari();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -198,9 +152,6 @@ public class AskImpl extends VoiceTagImpl implements Ask
     {
       case DimePackage.ASK__QUESTION:
         setQuestion((ConcatenationExpression)newValue);
-        return;
-      case DimePackage.ASK__VARI:
-        setVari((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -219,9 +170,6 @@ public class AskImpl extends VoiceTagImpl implements Ask
       case DimePackage.ASK__QUESTION:
         setQuestion((ConcatenationExpression)null);
         return;
-      case DimePackage.ASK__VARI:
-        setVari(VARI_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -238,27 +186,8 @@ public class AskImpl extends VoiceTagImpl implements Ask
     {
       case DimePackage.ASK__QUESTION:
         return question != null;
-      case DimePackage.ASK__VARI:
-        return VARI_EDEFAULT == null ? vari != null : !VARI_EDEFAULT.equals(vari);
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (vari: ");
-    result.append(vari);
-    result.append(')');
-    return result.toString();
   }
 
 } //AskImpl

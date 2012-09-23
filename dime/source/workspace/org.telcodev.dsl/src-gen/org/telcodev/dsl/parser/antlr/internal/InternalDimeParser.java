@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalDimeParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_ML_COMMENT", "RULE_INT", "RULE_STRING", "RULE_LOGIC_WORD", "RULE_OBRACKET", "RULE_CBRACKET", "RULE_COMPARE", "RULE_NEGATION", "RULE_MATH", "RULE_NULL", "RULE_BOOL", "RULE_DOUBLE", "RULE_CONCATENATION", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Application'", "'State'", "'times'", "'timeout'", "'{'", "'}'", "'Call'", "';'", "'DialTo'", "'Play'", "'Record'", "'seconds'", "'in'", "' -> '", "'Reject;'", "'HangUp;'", "'Get'", "'digits'", "'Ask'", "'Send'", "'to'", "','", "':'", "'Say'", "'Sms'", "'GoTo'", "'when'", "'else'", "'if'", "'+'", "'String'", "'='", "' = '", "'Num'", "'Bool'", "'Const'", "'HANGUP'", "'COMPLETED'", "'ERROR'", "'TIMES'", "'TIMEOUT'", "'CALLER'", "'LASTSTATE'", "'TIME'", "'CALLED'", "'RINGING'", "'IN-PROGRESS'", "'DISCONNECTED'", "'FAILED'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_ML_COMMENT", "RULE_INT", "RULE_STRING", "RULE_LOGIC_WORD", "RULE_OBRACKET", "RULE_CBRACKET", "RULE_COMPARE", "RULE_NEGATION", "RULE_MATH", "RULE_CONCATENATION", "RULE_NULL", "RULE_BOOL", "RULE_DOUBLE", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Application'", "'State'", "'times'", "'timeout'", "'{'", "'}'", "'Call'", "';'", "'DialTo'", "'Play'", "'Record'", "'seconds'", "'Reject;'", "'HangUp;'", "'Get'", "'digits'", "'Ask'", "'Send'", "'to'", "','", "':'", "'Say'", "'Sms'", "'Email'", "'subject'", "'from'", "'message'", "'GoTo'", "'when'", "'else'", "'if'", "'String'", "'='", "' = '", "'Num'", "'Bool'", "'Const'", "'HANGUP'", "'COMPLETED'", "'ERROR'", "'TIMES'", "'TIMEOUT'", "'CALLER'", "'LASTSTATE'", "'TIME'", "'CALLED'", "'ANSWER'", "'DIGITS'", "'RECORD'", "'RINGING'", "'IN-PROGRESS'", "'DISCONNECTED'", "'FAILED'"
     };
     public static final int T__68=68;
     public static final int T__69=69;
@@ -43,7 +43,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
     public static final int T__22=22;
     public static final int RULE_ANY_OTHER=20;
     public static final int T__21=21;
-    public static final int RULE_BOOL=15;
+    public static final int RULE_BOOL=16;
     public static final int T__61=61;
     public static final int EOF=-1;
     public static final int T__60=60;
@@ -55,7 +55,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
     public static final int T__52=52;
     public static final int T__53=53;
     public static final int T__54=54;
-    public static final int RULE_CONCATENATION=17;
+    public static final int RULE_CONCATENATION=14;
     public static final int T__59=59;
     public static final int RULE_INT=6;
     public static final int RULE_COMPARE=11;
@@ -73,22 +73,26 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
     public static final int T__49=49;
     public static final int RULE_NEGATION=12;
     public static final int RULE_SL_COMMENT=18;
-    public static final int RULE_DOUBLE=16;
-    public static final int RULE_NULL=14;
+    public static final int RULE_DOUBLE=17;
+    public static final int RULE_NULL=15;
     public static final int RULE_ML_COMMENT=5;
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int RULE_STRING=7;
     public static final int T__32=32;
+    public static final int T__71=71;
     public static final int T__33=33;
+    public static final int T__72=72;
     public static final int T__34=34;
     public static final int RULE_LOGIC_WORD=8;
     public static final int T__35=35;
+    public static final int T__70=70;
     public static final int T__36=36;
     public static final int T__37=37;
     public static final int T__38=38;
     public static final int T__39=39;
     public static final int RULE_WS=19;
+    public static final int T__73=73;
     public static final int RULE_MATH=13;
 
     // delegates
@@ -222,7 +226,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==RULE_ML_COMMENT||LA1_0==51||(LA1_0>=54 && LA1_0<=56)) ) {
+                if ( (LA1_0==RULE_ML_COMMENT||LA1_0==52||(LA1_0>=55 && LA1_0<=57)) ) {
                     alt1=1;
                 }
 
@@ -394,22 +398,22 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
             // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:159:1: (this_NumVariable_0= ruleNumVariable | this_StringVariable_1= ruleStringVariable | this_BoolVariable_2= ruleBoolVariable | this_Constant_3= ruleConstant | ( (lv_com_4_0= RULE_ML_COMMENT ) ) )
             int alt3=5;
             switch ( input.LA(1) ) {
-            case 54:
+            case 55:
                 {
                 alt3=1;
                 }
                 break;
-            case 51:
+            case 52:
                 {
                 alt3=2;
                 }
                 break;
-            case 55:
+            case 56:
                 {
                 alt3=3;
                 }
                 break;
-            case 56:
+            case 57:
                 {
                 alt3=4;
                 }
@@ -611,20 +615,20 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
             int alt4=4;
             switch ( input.LA(1) ) {
             case RULE_ML_COMMENT:
-            case 51:
-            case 54:
+            case 52:
             case 55:
             case 56:
+            case 57:
                 {
                 alt4=1;
                 }
                 break;
-            case 46:
+            case 48:
                 {
                 alt4=2;
                 }
                 break;
-            case 49:
+            case 51:
                 {
                 alt4=3;
                 }
@@ -633,13 +637,14 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
             case 29:
             case 30:
             case 31:
+            case 33:
+            case 34:
             case 35:
-            case 36:
             case 37:
-            case 39:
-            case 40:
+            case 38:
+            case 42:
+            case 43:
             case 44:
-            case 45:
                 {
                 alt4=4;
                 }
@@ -1057,7 +1062,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
             	        int alt7=2;
             	        int LA7_0 = input.LA(1);
 
-            	        if ( (LA7_0==RULE_ML_COMMENT||LA7_0==27||(LA7_0>=29 && LA7_0<=31)||(LA7_0>=35 && LA7_0<=37)||(LA7_0>=39 && LA7_0<=40)||(LA7_0>=44 && LA7_0<=46)||LA7_0==49||LA7_0==51||(LA7_0>=54 && LA7_0<=56)) ) {
+            	        if ( (LA7_0==RULE_ML_COMMENT||LA7_0==27||(LA7_0>=29 && LA7_0<=31)||(LA7_0>=33 && LA7_0<=35)||(LA7_0>=37 && LA7_0<=38)||(LA7_0>=42 && LA7_0<=44)||LA7_0==48||(LA7_0>=51 && LA7_0<=52)||(LA7_0>=55 && LA7_0<=57)) ) {
             	            alt7=1;
             	        }
 
@@ -1201,7 +1206,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVoiceTag"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:448:1: ruleVoiceTag returns [EObject current=null] : (this_Say_0= ruleSay | this_Dial_1= ruleDial | this_Play_2= rulePlay | this_Record_3= ruleRecord | this_GetDigits_4= ruleGetDigits | this_Ask_5= ruleAsk | this_Send_6= ruleSend | this_Reject_7= ruleReject | this_Hangup_8= ruleHangup | this_Call_9= ruleCall | this_Sms_10= ruleSms ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:448:1: ruleVoiceTag returns [EObject current=null] : (this_Say_0= ruleSay | this_Dial_1= ruleDial | this_Play_2= rulePlay | this_Record_3= ruleRecord | this_GetDigits_4= ruleGetDigits | this_Ask_5= ruleAsk | this_Send_6= ruleSend | this_Reject_7= ruleReject | this_Hangup_8= ruleHangup | this_Call_9= ruleCall | this_Sms_10= ruleSms | this_Email_11= ruleEmail ) ;
     public final EObject ruleVoiceTag() throws RecognitionException {
         EObject current = null;
 
@@ -1227,17 +1232,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
         EObject this_Sms_10 = null;
 
+        EObject this_Email_11 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:451:28: ( (this_Say_0= ruleSay | this_Dial_1= ruleDial | this_Play_2= rulePlay | this_Record_3= ruleRecord | this_GetDigits_4= ruleGetDigits | this_Ask_5= ruleAsk | this_Send_6= ruleSend | this_Reject_7= ruleReject | this_Hangup_8= ruleHangup | this_Call_9= ruleCall | this_Sms_10= ruleSms ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:452:1: (this_Say_0= ruleSay | this_Dial_1= ruleDial | this_Play_2= rulePlay | this_Record_3= ruleRecord | this_GetDigits_4= ruleGetDigits | this_Ask_5= ruleAsk | this_Send_6= ruleSend | this_Reject_7= ruleReject | this_Hangup_8= ruleHangup | this_Call_9= ruleCall | this_Sms_10= ruleSms )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:451:28: ( (this_Say_0= ruleSay | this_Dial_1= ruleDial | this_Play_2= rulePlay | this_Record_3= ruleRecord | this_GetDigits_4= ruleGetDigits | this_Ask_5= ruleAsk | this_Send_6= ruleSend | this_Reject_7= ruleReject | this_Hangup_8= ruleHangup | this_Call_9= ruleCall | this_Sms_10= ruleSms | this_Email_11= ruleEmail ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:452:1: (this_Say_0= ruleSay | this_Dial_1= ruleDial | this_Play_2= rulePlay | this_Record_3= ruleRecord | this_GetDigits_4= ruleGetDigits | this_Ask_5= ruleAsk | this_Send_6= ruleSend | this_Reject_7= ruleReject | this_Hangup_8= ruleHangup | this_Call_9= ruleCall | this_Sms_10= ruleSms | this_Email_11= ruleEmail )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:452:1: (this_Say_0= ruleSay | this_Dial_1= ruleDial | this_Play_2= rulePlay | this_Record_3= ruleRecord | this_GetDigits_4= ruleGetDigits | this_Ask_5= ruleAsk | this_Send_6= ruleSend | this_Reject_7= ruleReject | this_Hangup_8= ruleHangup | this_Call_9= ruleCall | this_Sms_10= ruleSms )
-            int alt9=11;
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:452:1: (this_Say_0= ruleSay | this_Dial_1= ruleDial | this_Play_2= rulePlay | this_Record_3= ruleRecord | this_GetDigits_4= ruleGetDigits | this_Ask_5= ruleAsk | this_Send_6= ruleSend | this_Reject_7= ruleReject | this_Hangup_8= ruleHangup | this_Call_9= ruleCall | this_Sms_10= ruleSms | this_Email_11= ruleEmail )
+            int alt9=12;
             switch ( input.LA(1) ) {
-            case 44:
+            case 42:
                 {
                 alt9=1;
                 }
@@ -1257,27 +1264,27 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                 alt9=4;
                 }
                 break;
-            case 37:
+            case 35:
                 {
                 alt9=5;
                 }
                 break;
-            case 39:
+            case 37:
                 {
                 alt9=6;
                 }
                 break;
-            case 40:
+            case 38:
                 {
                 alt9=7;
                 }
                 break;
-            case 35:
+            case 33:
                 {
                 alt9=8;
                 }
                 break;
-            case 36:
+            case 34:
                 {
                 alt9=9;
                 }
@@ -1287,9 +1294,14 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                 alt9=10;
                 }
                 break;
-            case 45:
+            case 43:
                 {
                 alt9=11;
+                }
+                break;
+            case 44:
+                {
+                alt9=12;
                 }
                 break;
             default:
@@ -1498,6 +1510,24 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
+                case 12 :
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:563:5: this_Email_11= ruleEmail
+                    {
+                     
+                            newCompositeNode(grammarAccess.getVoiceTagAccess().getEmailParserRuleCall_11()); 
+                        
+                    pushFollow(FOLLOW_ruleEmail_in_ruleVoiceTag1324);
+                    this_Email_11=ruleEmail();
+
+                    state._fsp--;
+
+                     
+                            current = this_Email_11; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
 
             }
 
@@ -1519,7 +1549,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCall"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:569:1: entryRuleCall returns [EObject current=null] : iv_ruleCall= ruleCall EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:579:1: entryRuleCall returns [EObject current=null] : iv_ruleCall= ruleCall EOF ;
     public final EObject entryRuleCall() throws RecognitionException {
         EObject current = null;
 
@@ -1527,17 +1557,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:570:2: (iv_ruleCall= ruleCall EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:571:2: iv_ruleCall= ruleCall EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:580:2: (iv_ruleCall= ruleCall EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:581:2: iv_ruleCall= ruleCall EOF
             {
              newCompositeNode(grammarAccess.getCallRule()); 
-            pushFollow(FOLLOW_ruleCall_in_entryRuleCall1332);
+            pushFollow(FOLLOW_ruleCall_in_entryRuleCall1359);
             iv_ruleCall=ruleCall();
 
             state._fsp--;
 
              current =iv_ruleCall; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCall1342); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCall1369); 
 
             }
 
@@ -1555,7 +1585,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCall"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:578:1: ruleCall returns [EObject current=null] : ( ( (lv_name_0_0= 'Call' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:588:1: ruleCall returns [EObject current=null] : ( ( (lv_name_0_0= 'Call' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) ;
     public final EObject ruleCall() throws RecognitionException {
         EObject current = null;
 
@@ -1567,19 +1597,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:581:28: ( ( ( (lv_name_0_0= 'Call' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:582:1: ( ( (lv_name_0_0= 'Call' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:591:28: ( ( ( (lv_name_0_0= 'Call' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:592:1: ( ( (lv_name_0_0= 'Call' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:582:1: ( ( (lv_name_0_0= 'Call' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:582:2: ( (lv_name_0_0= 'Call' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:592:1: ( ( (lv_name_0_0= 'Call' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:592:2: ( (lv_name_0_0= 'Call' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';'
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:582:2: ( (lv_name_0_0= 'Call' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:583:1: (lv_name_0_0= 'Call' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:592:2: ( (lv_name_0_0= 'Call' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:593:1: (lv_name_0_0= 'Call' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:583:1: (lv_name_0_0= 'Call' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:584:3: lv_name_0_0= 'Call'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:593:1: (lv_name_0_0= 'Call' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:594:3: lv_name_0_0= 'Call'
             {
-            lv_name_0_0=(Token)match(input,27,FOLLOW_27_in_ruleCall1385); 
+            lv_name_0_0=(Token)match(input,27,FOLLOW_27_in_ruleCall1412); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getCallAccess().getNameCallKeyword_0_0());
                 
@@ -1595,16 +1625,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:597:2: ( (lv_to_1_0= ruleConcatenationExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:598:1: (lv_to_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:607:2: ( (lv_to_1_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:608:1: (lv_to_1_0= ruleConcatenationExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:598:1: (lv_to_1_0= ruleConcatenationExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:599:3: lv_to_1_0= ruleConcatenationExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:608:1: (lv_to_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:609:3: lv_to_1_0= ruleConcatenationExpression
             {
              
             	        newCompositeNode(grammarAccess.getCallAccess().getToConcatenationExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleCall1419);
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleCall1446);
             lv_to_1_0=ruleConcatenationExpression();
 
             state._fsp--;
@@ -1626,7 +1656,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleCall1431); 
+            otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleCall1458); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getCallAccess().getSemicolonKeyword_2());
                 
@@ -1651,7 +1681,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDial"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:627:1: entryRuleDial returns [EObject current=null] : iv_ruleDial= ruleDial EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:637:1: entryRuleDial returns [EObject current=null] : iv_ruleDial= ruleDial EOF ;
     public final EObject entryRuleDial() throws RecognitionException {
         EObject current = null;
 
@@ -1659,17 +1689,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:628:2: (iv_ruleDial= ruleDial EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:629:2: iv_ruleDial= ruleDial EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:638:2: (iv_ruleDial= ruleDial EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:639:2: iv_ruleDial= ruleDial EOF
             {
              newCompositeNode(grammarAccess.getDialRule()); 
-            pushFollow(FOLLOW_ruleDial_in_entryRuleDial1467);
+            pushFollow(FOLLOW_ruleDial_in_entryRuleDial1494);
             iv_ruleDial=ruleDial();
 
             state._fsp--;
 
              current =iv_ruleDial; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDial1477); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDial1504); 
 
             }
 
@@ -1687,7 +1717,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDial"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:636:1: ruleDial returns [EObject current=null] : ( ( (lv_name_0_0= 'DialTo' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:646:1: ruleDial returns [EObject current=null] : ( ( (lv_name_0_0= 'DialTo' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) ;
     public final EObject ruleDial() throws RecognitionException {
         EObject current = null;
 
@@ -1699,19 +1729,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:639:28: ( ( ( (lv_name_0_0= 'DialTo' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:640:1: ( ( (lv_name_0_0= 'DialTo' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:649:28: ( ( ( (lv_name_0_0= 'DialTo' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:650:1: ( ( (lv_name_0_0= 'DialTo' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:640:1: ( ( (lv_name_0_0= 'DialTo' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:640:2: ( (lv_name_0_0= 'DialTo' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:650:1: ( ( (lv_name_0_0= 'DialTo' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:650:2: ( (lv_name_0_0= 'DialTo' ) ) ( (lv_to_1_0= ruleConcatenationExpression ) ) otherlv_2= ';'
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:640:2: ( (lv_name_0_0= 'DialTo' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:641:1: (lv_name_0_0= 'DialTo' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:650:2: ( (lv_name_0_0= 'DialTo' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:651:1: (lv_name_0_0= 'DialTo' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:641:1: (lv_name_0_0= 'DialTo' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:642:3: lv_name_0_0= 'DialTo'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:651:1: (lv_name_0_0= 'DialTo' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:652:3: lv_name_0_0= 'DialTo'
             {
-            lv_name_0_0=(Token)match(input,29,FOLLOW_29_in_ruleDial1520); 
+            lv_name_0_0=(Token)match(input,29,FOLLOW_29_in_ruleDial1547); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getDialAccess().getNameDialToKeyword_0_0());
                 
@@ -1727,16 +1757,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:655:2: ( (lv_to_1_0= ruleConcatenationExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:656:1: (lv_to_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:665:2: ( (lv_to_1_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:666:1: (lv_to_1_0= ruleConcatenationExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:656:1: (lv_to_1_0= ruleConcatenationExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:657:3: lv_to_1_0= ruleConcatenationExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:666:1: (lv_to_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:667:3: lv_to_1_0= ruleConcatenationExpression
             {
              
             	        newCompositeNode(grammarAccess.getDialAccess().getToConcatenationExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleDial1554);
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleDial1581);
             lv_to_1_0=ruleConcatenationExpression();
 
             state._fsp--;
@@ -1758,7 +1788,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleDial1566); 
+            otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleDial1593); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getDialAccess().getSemicolonKeyword_2());
                 
@@ -1783,7 +1813,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePlay"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:685:1: entryRulePlay returns [EObject current=null] : iv_rulePlay= rulePlay EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:695:1: entryRulePlay returns [EObject current=null] : iv_rulePlay= rulePlay EOF ;
     public final EObject entryRulePlay() throws RecognitionException {
         EObject current = null;
 
@@ -1791,17 +1821,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:686:2: (iv_rulePlay= rulePlay EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:687:2: iv_rulePlay= rulePlay EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:696:2: (iv_rulePlay= rulePlay EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:697:2: iv_rulePlay= rulePlay EOF
             {
              newCompositeNode(grammarAccess.getPlayRule()); 
-            pushFollow(FOLLOW_rulePlay_in_entryRulePlay1602);
+            pushFollow(FOLLOW_rulePlay_in_entryRulePlay1629);
             iv_rulePlay=rulePlay();
 
             state._fsp--;
 
              current =iv_rulePlay; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePlay1612); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePlay1639); 
 
             }
 
@@ -1819,7 +1849,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePlay"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:694:1: rulePlay returns [EObject current=null] : ( ( (lv_name_0_0= 'Play' ) ) ( (lv_file_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:704:1: rulePlay returns [EObject current=null] : ( ( (lv_name_0_0= 'Play' ) ) ( (lv_file_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) ;
     public final EObject rulePlay() throws RecognitionException {
         EObject current = null;
 
@@ -1831,19 +1861,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:697:28: ( ( ( (lv_name_0_0= 'Play' ) ) ( (lv_file_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:698:1: ( ( (lv_name_0_0= 'Play' ) ) ( (lv_file_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:707:28: ( ( ( (lv_name_0_0= 'Play' ) ) ( (lv_file_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:708:1: ( ( (lv_name_0_0= 'Play' ) ) ( (lv_file_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:698:1: ( ( (lv_name_0_0= 'Play' ) ) ( (lv_file_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:698:2: ( (lv_name_0_0= 'Play' ) ) ( (lv_file_1_0= ruleConcatenationExpression ) ) otherlv_2= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:708:1: ( ( (lv_name_0_0= 'Play' ) ) ( (lv_file_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:708:2: ( (lv_name_0_0= 'Play' ) ) ( (lv_file_1_0= ruleConcatenationExpression ) ) otherlv_2= ';'
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:698:2: ( (lv_name_0_0= 'Play' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:699:1: (lv_name_0_0= 'Play' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:708:2: ( (lv_name_0_0= 'Play' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:709:1: (lv_name_0_0= 'Play' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:699:1: (lv_name_0_0= 'Play' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:700:3: lv_name_0_0= 'Play'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:709:1: (lv_name_0_0= 'Play' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:710:3: lv_name_0_0= 'Play'
             {
-            lv_name_0_0=(Token)match(input,30,FOLLOW_30_in_rulePlay1655); 
+            lv_name_0_0=(Token)match(input,30,FOLLOW_30_in_rulePlay1682); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getPlayAccess().getNamePlayKeyword_0_0());
                 
@@ -1859,16 +1889,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:713:2: ( (lv_file_1_0= ruleConcatenationExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:714:1: (lv_file_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:723:2: ( (lv_file_1_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:724:1: (lv_file_1_0= ruleConcatenationExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:714:1: (lv_file_1_0= ruleConcatenationExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:715:3: lv_file_1_0= ruleConcatenationExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:724:1: (lv_file_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:725:3: lv_file_1_0= ruleConcatenationExpression
             {
              
             	        newCompositeNode(grammarAccess.getPlayAccess().getFileConcatenationExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_rulePlay1689);
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_rulePlay1716);
             lv_file_1_0=ruleConcatenationExpression();
 
             state._fsp--;
@@ -1890,7 +1920,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,28,FOLLOW_28_in_rulePlay1701); 
+            otherlv_2=(Token)match(input,28,FOLLOW_28_in_rulePlay1728); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getPlayAccess().getSemicolonKeyword_2());
                 
@@ -1915,7 +1945,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRecord"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:743:1: entryRuleRecord returns [EObject current=null] : iv_ruleRecord= ruleRecord EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:753:1: entryRuleRecord returns [EObject current=null] : iv_ruleRecord= ruleRecord EOF ;
     public final EObject entryRuleRecord() throws RecognitionException {
         EObject current = null;
 
@@ -1923,17 +1953,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:744:2: (iv_ruleRecord= ruleRecord EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:745:2: iv_ruleRecord= ruleRecord EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:754:2: (iv_ruleRecord= ruleRecord EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:755:2: iv_ruleRecord= ruleRecord EOF
             {
              newCompositeNode(grammarAccess.getRecordRule()); 
-            pushFollow(FOLLOW_ruleRecord_in_entryRuleRecord1737);
+            pushFollow(FOLLOW_ruleRecord_in_entryRuleRecord1764);
             iv_ruleRecord=ruleRecord();
 
             state._fsp--;
 
              current =iv_ruleRecord; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRecord1747); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRecord1774); 
 
             }
 
@@ -1951,7 +1981,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRecord"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:752:1: ruleRecord returns [EObject current=null] : ( ( (lv_name_0_0= 'Record' ) ) ( (lv_time_1_0= RULE_INT ) ) otherlv_2= 'seconds' otherlv_3= 'in' ( (lv_action_4_0= ruleConcatenationExpression ) ) (otherlv_5= ' -> ' ( (lv_vari_6_0= RULE_ID ) ) )? otherlv_7= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:762:1: ruleRecord returns [EObject current=null] : ( ( (lv_name_0_0= 'Record' ) ) ( (lv_time_1_0= RULE_INT ) ) otherlv_2= 'seconds' otherlv_3= ';' ) ;
     public final EObject ruleRecord() throws RecognitionException {
         EObject current = null;
 
@@ -1959,28 +1989,23 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
         Token lv_time_1_0=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
-        Token otherlv_5=null;
-        Token lv_vari_6_0=null;
-        Token otherlv_7=null;
-        EObject lv_action_4_0 = null;
-
 
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:755:28: ( ( ( (lv_name_0_0= 'Record' ) ) ( (lv_time_1_0= RULE_INT ) ) otherlv_2= 'seconds' otherlv_3= 'in' ( (lv_action_4_0= ruleConcatenationExpression ) ) (otherlv_5= ' -> ' ( (lv_vari_6_0= RULE_ID ) ) )? otherlv_7= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:756:1: ( ( (lv_name_0_0= 'Record' ) ) ( (lv_time_1_0= RULE_INT ) ) otherlv_2= 'seconds' otherlv_3= 'in' ( (lv_action_4_0= ruleConcatenationExpression ) ) (otherlv_5= ' -> ' ( (lv_vari_6_0= RULE_ID ) ) )? otherlv_7= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:765:28: ( ( ( (lv_name_0_0= 'Record' ) ) ( (lv_time_1_0= RULE_INT ) ) otherlv_2= 'seconds' otherlv_3= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:766:1: ( ( (lv_name_0_0= 'Record' ) ) ( (lv_time_1_0= RULE_INT ) ) otherlv_2= 'seconds' otherlv_3= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:756:1: ( ( (lv_name_0_0= 'Record' ) ) ( (lv_time_1_0= RULE_INT ) ) otherlv_2= 'seconds' otherlv_3= 'in' ( (lv_action_4_0= ruleConcatenationExpression ) ) (otherlv_5= ' -> ' ( (lv_vari_6_0= RULE_ID ) ) )? otherlv_7= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:756:2: ( (lv_name_0_0= 'Record' ) ) ( (lv_time_1_0= RULE_INT ) ) otherlv_2= 'seconds' otherlv_3= 'in' ( (lv_action_4_0= ruleConcatenationExpression ) ) (otherlv_5= ' -> ' ( (lv_vari_6_0= RULE_ID ) ) )? otherlv_7= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:766:1: ( ( (lv_name_0_0= 'Record' ) ) ( (lv_time_1_0= RULE_INT ) ) otherlv_2= 'seconds' otherlv_3= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:766:2: ( (lv_name_0_0= 'Record' ) ) ( (lv_time_1_0= RULE_INT ) ) otherlv_2= 'seconds' otherlv_3= ';'
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:756:2: ( (lv_name_0_0= 'Record' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:757:1: (lv_name_0_0= 'Record' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:766:2: ( (lv_name_0_0= 'Record' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:767:1: (lv_name_0_0= 'Record' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:757:1: (lv_name_0_0= 'Record' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:758:3: lv_name_0_0= 'Record'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:767:1: (lv_name_0_0= 'Record' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:768:3: lv_name_0_0= 'Record'
             {
-            lv_name_0_0=(Token)match(input,31,FOLLOW_31_in_ruleRecord1790); 
+            lv_name_0_0=(Token)match(input,31,FOLLOW_31_in_ruleRecord1817); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getRecordAccess().getNameRecordKeyword_0_0());
                 
@@ -1996,13 +2021,13 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:771:2: ( (lv_time_1_0= RULE_INT ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:772:1: (lv_time_1_0= RULE_INT )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:781:2: ( (lv_time_1_0= RULE_INT ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:782:1: (lv_time_1_0= RULE_INT )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:772:1: (lv_time_1_0= RULE_INT )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:773:3: lv_time_1_0= RULE_INT
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:782:1: (lv_time_1_0= RULE_INT )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:783:3: lv_time_1_0= RULE_INT
             {
-            lv_time_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleRecord1820); 
+            lv_time_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleRecord1847); 
 
             			newLeafNode(lv_time_1_0, grammarAccess.getRecordAccess().getTimeINTTerminalRuleCall_1_0()); 
             		
@@ -2022,95 +2047,13 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleRecord1837); 
+            otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleRecord1864); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getRecordAccess().getSecondsKeyword_2());
                 
-            otherlv_3=(Token)match(input,33,FOLLOW_33_in_ruleRecord1849); 
+            otherlv_3=(Token)match(input,28,FOLLOW_28_in_ruleRecord1876); 
 
-                	newLeafNode(otherlv_3, grammarAccess.getRecordAccess().getInKeyword_3());
-                
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:797:1: ( (lv_action_4_0= ruleConcatenationExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:798:1: (lv_action_4_0= ruleConcatenationExpression )
-            {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:798:1: (lv_action_4_0= ruleConcatenationExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:799:3: lv_action_4_0= ruleConcatenationExpression
-            {
-             
-            	        newCompositeNode(grammarAccess.getRecordAccess().getActionConcatenationExpressionParserRuleCall_4_0()); 
-            	    
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleRecord1870);
-            lv_action_4_0=ruleConcatenationExpression();
-
-            state._fsp--;
-
-
-            	        if (current==null) {
-            	            current = createModelElementForParent(grammarAccess.getRecordRule());
-            	        }
-                   		set(
-                   			current, 
-                   			"action",
-                    		lv_action_4_0, 
-                    		"ConcatenationExpression");
-            	        afterParserOrEnumRuleCall();
-            	    
-
-            }
-
-
-            }
-
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:815:2: (otherlv_5= ' -> ' ( (lv_vari_6_0= RULE_ID ) ) )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
-
-            if ( (LA10_0==34) ) {
-                alt10=1;
-            }
-            switch (alt10) {
-                case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:815:4: otherlv_5= ' -> ' ( (lv_vari_6_0= RULE_ID ) )
-                    {
-                    otherlv_5=(Token)match(input,34,FOLLOW_34_in_ruleRecord1883); 
-
-                        	newLeafNode(otherlv_5, grammarAccess.getRecordAccess().getSpaceHyphenMinusGreaterThanSignSpaceKeyword_5_0());
-                        
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:819:1: ( (lv_vari_6_0= RULE_ID ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:820:1: (lv_vari_6_0= RULE_ID )
-                    {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:820:1: (lv_vari_6_0= RULE_ID )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:821:3: lv_vari_6_0= RULE_ID
-                    {
-                    lv_vari_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRecord1900); 
-
-                    			newLeafNode(lv_vari_6_0, grammarAccess.getRecordAccess().getVariIDTerminalRuleCall_5_1_0()); 
-                    		
-
-                    	        if (current==null) {
-                    	            current = createModelElement(grammarAccess.getRecordRule());
-                    	        }
-                           		setWithLastConsumed(
-                           			current, 
-                           			"vari",
-                            		lv_vari_6_0, 
-                            		"ID");
-                    	    
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            otherlv_7=(Token)match(input,28,FOLLOW_28_in_ruleRecord1919); 
-
-                	newLeafNode(otherlv_7, grammarAccess.getRecordAccess().getSemicolonKeyword_6());
+                	newLeafNode(otherlv_3, grammarAccess.getRecordAccess().getSemicolonKeyword_3());
                 
 
             }
@@ -2133,7 +2076,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleReject"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:849:1: entryRuleReject returns [EObject current=null] : iv_ruleReject= ruleReject EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:815:1: entryRuleReject returns [EObject current=null] : iv_ruleReject= ruleReject EOF ;
     public final EObject entryRuleReject() throws RecognitionException {
         EObject current = null;
 
@@ -2141,17 +2084,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:850:2: (iv_ruleReject= ruleReject EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:851:2: iv_ruleReject= ruleReject EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:816:2: (iv_ruleReject= ruleReject EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:817:2: iv_ruleReject= ruleReject EOF
             {
              newCompositeNode(grammarAccess.getRejectRule()); 
-            pushFollow(FOLLOW_ruleReject_in_entryRuleReject1955);
+            pushFollow(FOLLOW_ruleReject_in_entryRuleReject1912);
             iv_ruleReject=ruleReject();
 
             state._fsp--;
 
              current =iv_ruleReject; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleReject1965); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleReject1922); 
 
             }
 
@@ -2169,7 +2112,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReject"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:858:1: ruleReject returns [EObject current=null] : ( (lv_name_0_0= 'Reject;' ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:824:1: ruleReject returns [EObject current=null] : ( (lv_name_0_0= 'Reject;' ) ) ;
     public final EObject ruleReject() throws RecognitionException {
         EObject current = null;
 
@@ -2178,16 +2121,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:861:28: ( ( (lv_name_0_0= 'Reject;' ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:862:1: ( (lv_name_0_0= 'Reject;' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:827:28: ( ( (lv_name_0_0= 'Reject;' ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:828:1: ( (lv_name_0_0= 'Reject;' ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:862:1: ( (lv_name_0_0= 'Reject;' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:863:1: (lv_name_0_0= 'Reject;' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:828:1: ( (lv_name_0_0= 'Reject;' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:829:1: (lv_name_0_0= 'Reject;' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:863:1: (lv_name_0_0= 'Reject;' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:864:3: lv_name_0_0= 'Reject;'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:829:1: (lv_name_0_0= 'Reject;' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:830:3: lv_name_0_0= 'Reject;'
             {
-            lv_name_0_0=(Token)match(input,35,FOLLOW_35_in_ruleReject2007); 
+            lv_name_0_0=(Token)match(input,33,FOLLOW_33_in_ruleReject1964); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getRejectAccess().getNameRejectKeyword_0());
                 
@@ -2221,7 +2164,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHangup"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:885:1: entryRuleHangup returns [EObject current=null] : iv_ruleHangup= ruleHangup EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:851:1: entryRuleHangup returns [EObject current=null] : iv_ruleHangup= ruleHangup EOF ;
     public final EObject entryRuleHangup() throws RecognitionException {
         EObject current = null;
 
@@ -2229,17 +2172,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:886:2: (iv_ruleHangup= ruleHangup EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:887:2: iv_ruleHangup= ruleHangup EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:852:2: (iv_ruleHangup= ruleHangup EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:853:2: iv_ruleHangup= ruleHangup EOF
             {
              newCompositeNode(grammarAccess.getHangupRule()); 
-            pushFollow(FOLLOW_ruleHangup_in_entryRuleHangup2055);
+            pushFollow(FOLLOW_ruleHangup_in_entryRuleHangup2012);
             iv_ruleHangup=ruleHangup();
 
             state._fsp--;
 
              current =iv_ruleHangup; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleHangup2065); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleHangup2022); 
 
             }
 
@@ -2257,7 +2200,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHangup"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:894:1: ruleHangup returns [EObject current=null] : ( (lv_name_0_0= 'HangUp;' ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:860:1: ruleHangup returns [EObject current=null] : ( (lv_name_0_0= 'HangUp;' ) ) ;
     public final EObject ruleHangup() throws RecognitionException {
         EObject current = null;
 
@@ -2266,16 +2209,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:897:28: ( ( (lv_name_0_0= 'HangUp;' ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:898:1: ( (lv_name_0_0= 'HangUp;' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:863:28: ( ( (lv_name_0_0= 'HangUp;' ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:864:1: ( (lv_name_0_0= 'HangUp;' ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:898:1: ( (lv_name_0_0= 'HangUp;' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:899:1: (lv_name_0_0= 'HangUp;' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:864:1: ( (lv_name_0_0= 'HangUp;' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:865:1: (lv_name_0_0= 'HangUp;' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:899:1: (lv_name_0_0= 'HangUp;' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:900:3: lv_name_0_0= 'HangUp;'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:865:1: (lv_name_0_0= 'HangUp;' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:866:3: lv_name_0_0= 'HangUp;'
             {
-            lv_name_0_0=(Token)match(input,36,FOLLOW_36_in_ruleHangup2107); 
+            lv_name_0_0=(Token)match(input,34,FOLLOW_34_in_ruleHangup2064); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getHangupAccess().getNameHangUpKeyword_0());
                 
@@ -2309,7 +2252,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGetDigits"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:921:1: entryRuleGetDigits returns [EObject current=null] : iv_ruleGetDigits= ruleGetDigits EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:887:1: entryRuleGetDigits returns [EObject current=null] : iv_ruleGetDigits= ruleGetDigits EOF ;
     public final EObject entryRuleGetDigits() throws RecognitionException {
         EObject current = null;
 
@@ -2317,17 +2260,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:922:2: (iv_ruleGetDigits= ruleGetDigits EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:923:2: iv_ruleGetDigits= ruleGetDigits EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:888:2: (iv_ruleGetDigits= ruleGetDigits EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:889:2: iv_ruleGetDigits= ruleGetDigits EOF
             {
              newCompositeNode(grammarAccess.getGetDigitsRule()); 
-            pushFollow(FOLLOW_ruleGetDigits_in_entryRuleGetDigits2155);
+            pushFollow(FOLLOW_ruleGetDigits_in_entryRuleGetDigits2112);
             iv_ruleGetDigits=ruleGetDigits();
 
             state._fsp--;
 
              current =iv_ruleGetDigits; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleGetDigits2165); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGetDigits2122); 
 
             }
 
@@ -2345,35 +2288,31 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGetDigits"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:930:1: ruleGetDigits returns [EObject current=null] : ( ( (lv_name_0_0= 'Get' ) ) ( (lv_numDigits_1_0= RULE_INT ) ) otherlv_2= 'digits' ( (lv_question_3_0= ruleConcatenationExpression ) ) otherlv_4= ' -> ' ( (lv_vari_5_0= RULE_ID ) ) otherlv_6= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:896:1: ruleGetDigits returns [EObject current=null] : ( ( (lv_name_0_0= 'Get' ) ) ( (lv_numDigits_1_0= RULE_INT ) ) otherlv_2= 'digits' otherlv_3= ';' ) ;
     public final EObject ruleGetDigits() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
         Token lv_numDigits_1_0=null;
         Token otherlv_2=null;
-        Token otherlv_4=null;
-        Token lv_vari_5_0=null;
-        Token otherlv_6=null;
-        EObject lv_question_3_0 = null;
-
+        Token otherlv_3=null;
 
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:933:28: ( ( ( (lv_name_0_0= 'Get' ) ) ( (lv_numDigits_1_0= RULE_INT ) ) otherlv_2= 'digits' ( (lv_question_3_0= ruleConcatenationExpression ) ) otherlv_4= ' -> ' ( (lv_vari_5_0= RULE_ID ) ) otherlv_6= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:934:1: ( ( (lv_name_0_0= 'Get' ) ) ( (lv_numDigits_1_0= RULE_INT ) ) otherlv_2= 'digits' ( (lv_question_3_0= ruleConcatenationExpression ) ) otherlv_4= ' -> ' ( (lv_vari_5_0= RULE_ID ) ) otherlv_6= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:899:28: ( ( ( (lv_name_0_0= 'Get' ) ) ( (lv_numDigits_1_0= RULE_INT ) ) otherlv_2= 'digits' otherlv_3= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:900:1: ( ( (lv_name_0_0= 'Get' ) ) ( (lv_numDigits_1_0= RULE_INT ) ) otherlv_2= 'digits' otherlv_3= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:934:1: ( ( (lv_name_0_0= 'Get' ) ) ( (lv_numDigits_1_0= RULE_INT ) ) otherlv_2= 'digits' ( (lv_question_3_0= ruleConcatenationExpression ) ) otherlv_4= ' -> ' ( (lv_vari_5_0= RULE_ID ) ) otherlv_6= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:934:2: ( (lv_name_0_0= 'Get' ) ) ( (lv_numDigits_1_0= RULE_INT ) ) otherlv_2= 'digits' ( (lv_question_3_0= ruleConcatenationExpression ) ) otherlv_4= ' -> ' ( (lv_vari_5_0= RULE_ID ) ) otherlv_6= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:900:1: ( ( (lv_name_0_0= 'Get' ) ) ( (lv_numDigits_1_0= RULE_INT ) ) otherlv_2= 'digits' otherlv_3= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:900:2: ( (lv_name_0_0= 'Get' ) ) ( (lv_numDigits_1_0= RULE_INT ) ) otherlv_2= 'digits' otherlv_3= ';'
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:934:2: ( (lv_name_0_0= 'Get' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:935:1: (lv_name_0_0= 'Get' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:900:2: ( (lv_name_0_0= 'Get' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:901:1: (lv_name_0_0= 'Get' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:935:1: (lv_name_0_0= 'Get' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:936:3: lv_name_0_0= 'Get'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:901:1: (lv_name_0_0= 'Get' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:902:3: lv_name_0_0= 'Get'
             {
-            lv_name_0_0=(Token)match(input,37,FOLLOW_37_in_ruleGetDigits2208); 
+            lv_name_0_0=(Token)match(input,35,FOLLOW_35_in_ruleGetDigits2165); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getGetDigitsAccess().getNameGetKeyword_0_0());
                 
@@ -2389,13 +2328,13 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:949:2: ( (lv_numDigits_1_0= RULE_INT ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:950:1: (lv_numDigits_1_0= RULE_INT )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:915:2: ( (lv_numDigits_1_0= RULE_INT ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:916:1: (lv_numDigits_1_0= RULE_INT )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:950:1: (lv_numDigits_1_0= RULE_INT )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:951:3: lv_numDigits_1_0= RULE_INT
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:916:1: (lv_numDigits_1_0= RULE_INT )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:917:3: lv_numDigits_1_0= RULE_INT
             {
-            lv_numDigits_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleGetDigits2238); 
+            lv_numDigits_1_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleGetDigits2195); 
 
             			newLeafNode(lv_numDigits_1_0, grammarAccess.getGetDigitsAccess().getNumDigitsINTTerminalRuleCall_1_0()); 
             		
@@ -2415,74 +2354,13 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,38,FOLLOW_38_in_ruleGetDigits2255); 
+            otherlv_2=(Token)match(input,36,FOLLOW_36_in_ruleGetDigits2212); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getGetDigitsAccess().getDigitsKeyword_2());
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:971:1: ( (lv_question_3_0= ruleConcatenationExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:972:1: (lv_question_3_0= ruleConcatenationExpression )
-            {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:972:1: (lv_question_3_0= ruleConcatenationExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:973:3: lv_question_3_0= ruleConcatenationExpression
-            {
-             
-            	        newCompositeNode(grammarAccess.getGetDigitsAccess().getQuestionConcatenationExpressionParserRuleCall_3_0()); 
-            	    
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleGetDigits2276);
-            lv_question_3_0=ruleConcatenationExpression();
+            otherlv_3=(Token)match(input,28,FOLLOW_28_in_ruleGetDigits2224); 
 
-            state._fsp--;
-
-
-            	        if (current==null) {
-            	            current = createModelElementForParent(grammarAccess.getGetDigitsRule());
-            	        }
-                   		set(
-                   			current, 
-                   			"question",
-                    		lv_question_3_0, 
-                    		"ConcatenationExpression");
-            	        afterParserOrEnumRuleCall();
-            	    
-
-            }
-
-
-            }
-
-            otherlv_4=(Token)match(input,34,FOLLOW_34_in_ruleGetDigits2288); 
-
-                	newLeafNode(otherlv_4, grammarAccess.getGetDigitsAccess().getSpaceHyphenMinusGreaterThanSignSpaceKeyword_4());
-                
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:993:1: ( (lv_vari_5_0= RULE_ID ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:994:1: (lv_vari_5_0= RULE_ID )
-            {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:994:1: (lv_vari_5_0= RULE_ID )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:995:3: lv_vari_5_0= RULE_ID
-            {
-            lv_vari_5_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleGetDigits2305); 
-
-            			newLeafNode(lv_vari_5_0, grammarAccess.getGetDigitsAccess().getVariIDTerminalRuleCall_5_0()); 
-            		
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getGetDigitsRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"vari",
-                    		lv_vari_5_0, 
-                    		"ID");
-            	    
-
-            }
-
-
-            }
-
-            otherlv_6=(Token)match(input,28,FOLLOW_28_in_ruleGetDigits2322); 
-
-                	newLeafNode(otherlv_6, grammarAccess.getGetDigitsAccess().getSemicolonKeyword_6());
+                	newLeafNode(otherlv_3, grammarAccess.getGetDigitsAccess().getSemicolonKeyword_3());
                 
 
             }
@@ -2505,7 +2383,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAsk"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1023:1: entryRuleAsk returns [EObject current=null] : iv_ruleAsk= ruleAsk EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:949:1: entryRuleAsk returns [EObject current=null] : iv_ruleAsk= ruleAsk EOF ;
     public final EObject entryRuleAsk() throws RecognitionException {
         EObject current = null;
 
@@ -2513,17 +2391,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1024:2: (iv_ruleAsk= ruleAsk EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1025:2: iv_ruleAsk= ruleAsk EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:950:2: (iv_ruleAsk= ruleAsk EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:951:2: iv_ruleAsk= ruleAsk EOF
             {
              newCompositeNode(grammarAccess.getAskRule()); 
-            pushFollow(FOLLOW_ruleAsk_in_entryRuleAsk2358);
+            pushFollow(FOLLOW_ruleAsk_in_entryRuleAsk2260);
             iv_ruleAsk=ruleAsk();
 
             state._fsp--;
 
              current =iv_ruleAsk; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAsk2368); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAsk2270); 
 
             }
 
@@ -2541,33 +2419,31 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAsk"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1032:1: ruleAsk returns [EObject current=null] : ( ( (lv_name_0_0= 'Ask' ) ) ( (lv_question_1_0= ruleConcatenationExpression ) ) otherlv_2= ' -> ' ( (lv_vari_3_0= RULE_ID ) ) otherlv_4= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:958:1: ruleAsk returns [EObject current=null] : ( ( (lv_name_0_0= 'Ask' ) ) ( (lv_question_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) ;
     public final EObject ruleAsk() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
         Token otherlv_2=null;
-        Token lv_vari_3_0=null;
-        Token otherlv_4=null;
         EObject lv_question_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1035:28: ( ( ( (lv_name_0_0= 'Ask' ) ) ( (lv_question_1_0= ruleConcatenationExpression ) ) otherlv_2= ' -> ' ( (lv_vari_3_0= RULE_ID ) ) otherlv_4= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1036:1: ( ( (lv_name_0_0= 'Ask' ) ) ( (lv_question_1_0= ruleConcatenationExpression ) ) otherlv_2= ' -> ' ( (lv_vari_3_0= RULE_ID ) ) otherlv_4= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:961:28: ( ( ( (lv_name_0_0= 'Ask' ) ) ( (lv_question_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:962:1: ( ( (lv_name_0_0= 'Ask' ) ) ( (lv_question_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1036:1: ( ( (lv_name_0_0= 'Ask' ) ) ( (lv_question_1_0= ruleConcatenationExpression ) ) otherlv_2= ' -> ' ( (lv_vari_3_0= RULE_ID ) ) otherlv_4= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1036:2: ( (lv_name_0_0= 'Ask' ) ) ( (lv_question_1_0= ruleConcatenationExpression ) ) otherlv_2= ' -> ' ( (lv_vari_3_0= RULE_ID ) ) otherlv_4= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:962:1: ( ( (lv_name_0_0= 'Ask' ) ) ( (lv_question_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:962:2: ( (lv_name_0_0= 'Ask' ) ) ( (lv_question_1_0= ruleConcatenationExpression ) ) otherlv_2= ';'
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1036:2: ( (lv_name_0_0= 'Ask' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1037:1: (lv_name_0_0= 'Ask' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:962:2: ( (lv_name_0_0= 'Ask' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:963:1: (lv_name_0_0= 'Ask' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1037:1: (lv_name_0_0= 'Ask' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1038:3: lv_name_0_0= 'Ask'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:963:1: (lv_name_0_0= 'Ask' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:964:3: lv_name_0_0= 'Ask'
             {
-            lv_name_0_0=(Token)match(input,39,FOLLOW_39_in_ruleAsk2411); 
+            lv_name_0_0=(Token)match(input,37,FOLLOW_37_in_ruleAsk2313); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getAskAccess().getNameAskKeyword_0_0());
                 
@@ -2583,16 +2459,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1051:2: ( (lv_question_1_0= ruleConcatenationExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1052:1: (lv_question_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:977:2: ( (lv_question_1_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:978:1: (lv_question_1_0= ruleConcatenationExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1052:1: (lv_question_1_0= ruleConcatenationExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1053:3: lv_question_1_0= ruleConcatenationExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:978:1: (lv_question_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:979:3: lv_question_1_0= ruleConcatenationExpression
             {
              
             	        newCompositeNode(grammarAccess.getAskAccess().getQuestionConcatenationExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleAsk2445);
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleAsk2347);
             lv_question_1_0=ruleConcatenationExpression();
 
             state._fsp--;
@@ -2614,39 +2490,9 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,34,FOLLOW_34_in_ruleAsk2457); 
+            otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleAsk2359); 
 
-                	newLeafNode(otherlv_2, grammarAccess.getAskAccess().getSpaceHyphenMinusGreaterThanSignSpaceKeyword_2());
-                
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1073:1: ( (lv_vari_3_0= RULE_ID ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1074:1: (lv_vari_3_0= RULE_ID )
-            {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1074:1: (lv_vari_3_0= RULE_ID )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1075:3: lv_vari_3_0= RULE_ID
-            {
-            lv_vari_3_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAsk2474); 
-
-            			newLeafNode(lv_vari_3_0, grammarAccess.getAskAccess().getVariIDTerminalRuleCall_3_0()); 
-            		
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getAskRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"vari",
-                    		lv_vari_3_0, 
-                    		"ID");
-            	    
-
-            }
-
-
-            }
-
-            otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleAsk2491); 
-
-                	newLeafNode(otherlv_4, grammarAccess.getAskAccess().getSemicolonKeyword_4());
+                	newLeafNode(otherlv_2, grammarAccess.getAskAccess().getSemicolonKeyword_2());
                 
 
             }
@@ -2669,7 +2515,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSend"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1103:1: entryRuleSend returns [EObject current=null] : iv_ruleSend= ruleSend EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1007:1: entryRuleSend returns [EObject current=null] : iv_ruleSend= ruleSend EOF ;
     public final EObject entryRuleSend() throws RecognitionException {
         EObject current = null;
 
@@ -2677,17 +2523,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1104:2: (iv_ruleSend= ruleSend EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1105:2: iv_ruleSend= ruleSend EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1008:2: (iv_ruleSend= ruleSend EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1009:2: iv_ruleSend= ruleSend EOF
             {
              newCompositeNode(grammarAccess.getSendRule()); 
-            pushFollow(FOLLOW_ruleSend_in_entryRuleSend2527);
+            pushFollow(FOLLOW_ruleSend_in_entryRuleSend2395);
             iv_ruleSend=ruleSend();
 
             state._fsp--;
 
              current =iv_ruleSend; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSend2537); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSend2405); 
 
             }
 
@@ -2705,7 +2551,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSend"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1112:1: ruleSend returns [EObject current=null] : ( ( (lv_name_0_0= 'Send' ) ) ( (lv_params_1_0= ruleSendBlock ) ) otherlv_2= 'to' ( (lv_url_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1016:1: ruleSend returns [EObject current=null] : ( ( (lv_name_0_0= 'Send' ) ) ( (lv_params_1_0= ruleSendBlock ) ) otherlv_2= 'to' ( (lv_url_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' ) ;
     public final EObject ruleSend() throws RecognitionException {
         EObject current = null;
 
@@ -2720,19 +2566,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1115:28: ( ( ( (lv_name_0_0= 'Send' ) ) ( (lv_params_1_0= ruleSendBlock ) ) otherlv_2= 'to' ( (lv_url_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1116:1: ( ( (lv_name_0_0= 'Send' ) ) ( (lv_params_1_0= ruleSendBlock ) ) otherlv_2= 'to' ( (lv_url_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1019:28: ( ( ( (lv_name_0_0= 'Send' ) ) ( (lv_params_1_0= ruleSendBlock ) ) otherlv_2= 'to' ( (lv_url_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1020:1: ( ( (lv_name_0_0= 'Send' ) ) ( (lv_params_1_0= ruleSendBlock ) ) otherlv_2= 'to' ( (lv_url_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1116:1: ( ( (lv_name_0_0= 'Send' ) ) ( (lv_params_1_0= ruleSendBlock ) ) otherlv_2= 'to' ( (lv_url_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1116:2: ( (lv_name_0_0= 'Send' ) ) ( (lv_params_1_0= ruleSendBlock ) ) otherlv_2= 'to' ( (lv_url_3_0= ruleConcatenationExpression ) ) otherlv_4= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1020:1: ( ( (lv_name_0_0= 'Send' ) ) ( (lv_params_1_0= ruleSendBlock ) ) otherlv_2= 'to' ( (lv_url_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1020:2: ( (lv_name_0_0= 'Send' ) ) ( (lv_params_1_0= ruleSendBlock ) ) otherlv_2= 'to' ( (lv_url_3_0= ruleConcatenationExpression ) ) otherlv_4= ';'
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1116:2: ( (lv_name_0_0= 'Send' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1117:1: (lv_name_0_0= 'Send' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1020:2: ( (lv_name_0_0= 'Send' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1021:1: (lv_name_0_0= 'Send' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1117:1: (lv_name_0_0= 'Send' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1118:3: lv_name_0_0= 'Send'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1021:1: (lv_name_0_0= 'Send' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1022:3: lv_name_0_0= 'Send'
             {
-            lv_name_0_0=(Token)match(input,40,FOLLOW_40_in_ruleSend2580); 
+            lv_name_0_0=(Token)match(input,38,FOLLOW_38_in_ruleSend2448); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getSendAccess().getNameSendKeyword_0_0());
                 
@@ -2748,16 +2594,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1131:2: ( (lv_params_1_0= ruleSendBlock ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1132:1: (lv_params_1_0= ruleSendBlock )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1035:2: ( (lv_params_1_0= ruleSendBlock ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1036:1: (lv_params_1_0= ruleSendBlock )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1132:1: (lv_params_1_0= ruleSendBlock )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1133:3: lv_params_1_0= ruleSendBlock
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1036:1: (lv_params_1_0= ruleSendBlock )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1037:3: lv_params_1_0= ruleSendBlock
             {
              
             	        newCompositeNode(grammarAccess.getSendAccess().getParamsSendBlockParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleSendBlock_in_ruleSend2614);
+            pushFollow(FOLLOW_ruleSendBlock_in_ruleSend2482);
             lv_params_1_0=ruleSendBlock();
 
             state._fsp--;
@@ -2779,20 +2625,20 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,41,FOLLOW_41_in_ruleSend2626); 
+            otherlv_2=(Token)match(input,39,FOLLOW_39_in_ruleSend2494); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getSendAccess().getToKeyword_2());
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1153:1: ( (lv_url_3_0= ruleConcatenationExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1154:1: (lv_url_3_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1057:1: ( (lv_url_3_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1058:1: (lv_url_3_0= ruleConcatenationExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1154:1: (lv_url_3_0= ruleConcatenationExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1155:3: lv_url_3_0= ruleConcatenationExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1058:1: (lv_url_3_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1059:3: lv_url_3_0= ruleConcatenationExpression
             {
              
             	        newCompositeNode(grammarAccess.getSendAccess().getUrlConcatenationExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleSend2647);
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleSend2515);
             lv_url_3_0=ruleConcatenationExpression();
 
             state._fsp--;
@@ -2814,7 +2660,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleSend2659); 
+            otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleSend2527); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getSendAccess().getSemicolonKeyword_4());
                 
@@ -2839,7 +2685,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSendBlock"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1183:1: entryRuleSendBlock returns [EObject current=null] : iv_ruleSendBlock= ruleSendBlock EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1087:1: entryRuleSendBlock returns [EObject current=null] : iv_ruleSendBlock= ruleSendBlock EOF ;
     public final EObject entryRuleSendBlock() throws RecognitionException {
         EObject current = null;
 
@@ -2847,17 +2693,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1184:2: (iv_ruleSendBlock= ruleSendBlock EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1185:2: iv_ruleSendBlock= ruleSendBlock EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1088:2: (iv_ruleSendBlock= ruleSendBlock EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1089:2: iv_ruleSendBlock= ruleSendBlock EOF
             {
              newCompositeNode(grammarAccess.getSendBlockRule()); 
-            pushFollow(FOLLOW_ruleSendBlock_in_entryRuleSendBlock2695);
+            pushFollow(FOLLOW_ruleSendBlock_in_entryRuleSendBlock2563);
             iv_ruleSendBlock=ruleSendBlock();
 
             state._fsp--;
 
              current =iv_ruleSendBlock; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSendBlock2705); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSendBlock2573); 
 
             }
 
@@ -2875,7 +2721,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSendBlock"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1192:1: ruleSendBlock returns [EObject current=null] : ( () otherlv_1= '{' ( (lv_value_2_0= ruleParam ) ) ( (lv_stms_3_0= ruleNotPrimaryParam ) )* otherlv_4= '}' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1096:1: ruleSendBlock returns [EObject current=null] : ( () otherlv_1= '{' ( (lv_value_2_0= ruleParam ) ) ( (lv_stms_3_0= ruleNotPrimaryParam ) )* otherlv_4= '}' ) ;
     public final EObject ruleSendBlock() throws RecognitionException {
         EObject current = null;
 
@@ -2889,14 +2735,14 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1195:28: ( ( () otherlv_1= '{' ( (lv_value_2_0= ruleParam ) ) ( (lv_stms_3_0= ruleNotPrimaryParam ) )* otherlv_4= '}' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1196:1: ( () otherlv_1= '{' ( (lv_value_2_0= ruleParam ) ) ( (lv_stms_3_0= ruleNotPrimaryParam ) )* otherlv_4= '}' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1099:28: ( ( () otherlv_1= '{' ( (lv_value_2_0= ruleParam ) ) ( (lv_stms_3_0= ruleNotPrimaryParam ) )* otherlv_4= '}' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1100:1: ( () otherlv_1= '{' ( (lv_value_2_0= ruleParam ) ) ( (lv_stms_3_0= ruleNotPrimaryParam ) )* otherlv_4= '}' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1196:1: ( () otherlv_1= '{' ( (lv_value_2_0= ruleParam ) ) ( (lv_stms_3_0= ruleNotPrimaryParam ) )* otherlv_4= '}' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1196:2: () otherlv_1= '{' ( (lv_value_2_0= ruleParam ) ) ( (lv_stms_3_0= ruleNotPrimaryParam ) )* otherlv_4= '}'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1100:1: ( () otherlv_1= '{' ( (lv_value_2_0= ruleParam ) ) ( (lv_stms_3_0= ruleNotPrimaryParam ) )* otherlv_4= '}' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1100:2: () otherlv_1= '{' ( (lv_value_2_0= ruleParam ) ) ( (lv_stms_3_0= ruleNotPrimaryParam ) )* otherlv_4= '}'
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1196:2: ()
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1197:5: 
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1100:2: ()
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1101:5: 
             {
 
                     current = forceCreateModelElement(
@@ -2906,20 +2752,20 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleSendBlock2751); 
+            otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleSendBlock2619); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getSendBlockAccess().getLeftCurlyBracketKeyword_1());
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1206:1: ( (lv_value_2_0= ruleParam ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1207:1: (lv_value_2_0= ruleParam )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1110:1: ( (lv_value_2_0= ruleParam ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1111:1: (lv_value_2_0= ruleParam )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1207:1: (lv_value_2_0= ruleParam )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1208:3: lv_value_2_0= ruleParam
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1111:1: (lv_value_2_0= ruleParam )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1112:3: lv_value_2_0= ruleParam
             {
              
             	        newCompositeNode(grammarAccess.getSendBlockAccess().getValueParamParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleParam_in_ruleSendBlock2772);
+            pushFollow(FOLLOW_ruleParam_in_ruleSendBlock2640);
             lv_value_2_0=ruleParam();
 
             state._fsp--;
@@ -2941,28 +2787,28 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1224:2: ( (lv_stms_3_0= ruleNotPrimaryParam ) )*
-            loop11:
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1128:2: ( (lv_stms_3_0= ruleNotPrimaryParam ) )*
+            loop10:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( (LA11_0==42) ) {
-                    alt11=1;
+                if ( (LA10_0==40) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt10) {
             	case 1 :
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1225:1: (lv_stms_3_0= ruleNotPrimaryParam )
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1129:1: (lv_stms_3_0= ruleNotPrimaryParam )
             	    {
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1225:1: (lv_stms_3_0= ruleNotPrimaryParam )
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1226:3: lv_stms_3_0= ruleNotPrimaryParam
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1129:1: (lv_stms_3_0= ruleNotPrimaryParam )
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1130:3: lv_stms_3_0= ruleNotPrimaryParam
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getSendBlockAccess().getStmsNotPrimaryParamParserRuleCall_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleNotPrimaryParam_in_ruleSendBlock2793);
+            	    pushFollow(FOLLOW_ruleNotPrimaryParam_in_ruleSendBlock2661);
             	    lv_stms_3_0=ruleNotPrimaryParam();
 
             	    state._fsp--;
@@ -2986,11 +2832,11 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop10;
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,26,FOLLOW_26_in_ruleSendBlock2806); 
+            otherlv_4=(Token)match(input,26,FOLLOW_26_in_ruleSendBlock2674); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getSendBlockAccess().getRightCurlyBracketKeyword_4());
                 
@@ -3015,7 +2861,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNotPrimaryParam"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1254:1: entryRuleNotPrimaryParam returns [EObject current=null] : iv_ruleNotPrimaryParam= ruleNotPrimaryParam EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1158:1: entryRuleNotPrimaryParam returns [EObject current=null] : iv_ruleNotPrimaryParam= ruleNotPrimaryParam EOF ;
     public final EObject entryRuleNotPrimaryParam() throws RecognitionException {
         EObject current = null;
 
@@ -3023,17 +2869,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1255:2: (iv_ruleNotPrimaryParam= ruleNotPrimaryParam EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1256:2: iv_ruleNotPrimaryParam= ruleNotPrimaryParam EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1159:2: (iv_ruleNotPrimaryParam= ruleNotPrimaryParam EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1160:2: iv_ruleNotPrimaryParam= ruleNotPrimaryParam EOF
             {
              newCompositeNode(grammarAccess.getNotPrimaryParamRule()); 
-            pushFollow(FOLLOW_ruleNotPrimaryParam_in_entryRuleNotPrimaryParam2842);
+            pushFollow(FOLLOW_ruleNotPrimaryParam_in_entryRuleNotPrimaryParam2710);
             iv_ruleNotPrimaryParam=ruleNotPrimaryParam();
 
             state._fsp--;
 
              current =iv_ruleNotPrimaryParam; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNotPrimaryParam2852); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNotPrimaryParam2720); 
 
             }
 
@@ -3051,7 +2897,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNotPrimaryParam"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1263:1: ruleNotPrimaryParam returns [EObject current=null] : (otherlv_0= ',' ( (lv_value_1_0= ruleParam ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1167:1: ruleNotPrimaryParam returns [EObject current=null] : (otherlv_0= ',' ( (lv_value_1_0= ruleParam ) ) ) ;
     public final EObject ruleNotPrimaryParam() throws RecognitionException {
         EObject current = null;
 
@@ -3062,26 +2908,26 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1266:28: ( (otherlv_0= ',' ( (lv_value_1_0= ruleParam ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1267:1: (otherlv_0= ',' ( (lv_value_1_0= ruleParam ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1170:28: ( (otherlv_0= ',' ( (lv_value_1_0= ruleParam ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1171:1: (otherlv_0= ',' ( (lv_value_1_0= ruleParam ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1267:1: (otherlv_0= ',' ( (lv_value_1_0= ruleParam ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1267:3: otherlv_0= ',' ( (lv_value_1_0= ruleParam ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1171:1: (otherlv_0= ',' ( (lv_value_1_0= ruleParam ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1171:3: otherlv_0= ',' ( (lv_value_1_0= ruleParam ) )
             {
-            otherlv_0=(Token)match(input,42,FOLLOW_42_in_ruleNotPrimaryParam2889); 
+            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleNotPrimaryParam2757); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getNotPrimaryParamAccess().getCommaKeyword_0());
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1271:1: ( (lv_value_1_0= ruleParam ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1272:1: (lv_value_1_0= ruleParam )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1175:1: ( (lv_value_1_0= ruleParam ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1176:1: (lv_value_1_0= ruleParam )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1272:1: (lv_value_1_0= ruleParam )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1273:3: lv_value_1_0= ruleParam
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1176:1: (lv_value_1_0= ruleParam )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1177:3: lv_value_1_0= ruleParam
             {
              
             	        newCompositeNode(grammarAccess.getNotPrimaryParamAccess().getValueParamParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleParam_in_ruleNotPrimaryParam2910);
+            pushFollow(FOLLOW_ruleParam_in_ruleNotPrimaryParam2778);
             lv_value_1_0=ruleParam();
 
             state._fsp--;
@@ -3124,7 +2970,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleParam"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1297:1: entryRuleParam returns [EObject current=null] : iv_ruleParam= ruleParam EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1201:1: entryRuleParam returns [EObject current=null] : iv_ruleParam= ruleParam EOF ;
     public final EObject entryRuleParam() throws RecognitionException {
         EObject current = null;
 
@@ -3132,17 +2978,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1298:2: (iv_ruleParam= ruleParam EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1299:2: iv_ruleParam= ruleParam EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1202:2: (iv_ruleParam= ruleParam EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1203:2: iv_ruleParam= ruleParam EOF
             {
              newCompositeNode(grammarAccess.getParamRule()); 
-            pushFollow(FOLLOW_ruleParam_in_entryRuleParam2946);
+            pushFollow(FOLLOW_ruleParam_in_entryRuleParam2814);
             iv_ruleParam=ruleParam();
 
             state._fsp--;
 
              current =iv_ruleParam; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleParam2956); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleParam2824); 
 
             }
 
@@ -3160,7 +3006,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParam"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1306:1: ruleParam returns [EObject current=null] : ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleConcatenationExpression ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1210:1: ruleParam returns [EObject current=null] : ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleConcatenationExpression ) ) ) ;
     public final EObject ruleParam() throws RecognitionException {
         EObject current = null;
 
@@ -3172,19 +3018,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1309:28: ( ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleConcatenationExpression ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1310:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleConcatenationExpression ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1213:28: ( ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleConcatenationExpression ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1214:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleConcatenationExpression ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1310:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleConcatenationExpression ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1310:2: ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1214:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleConcatenationExpression ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1214:2: ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleConcatenationExpression ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1310:2: ( (lv_name_0_0= RULE_STRING ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1311:1: (lv_name_0_0= RULE_STRING )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1214:2: ( (lv_name_0_0= RULE_STRING ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1215:1: (lv_name_0_0= RULE_STRING )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1311:1: (lv_name_0_0= RULE_STRING )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1312:3: lv_name_0_0= RULE_STRING
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1215:1: (lv_name_0_0= RULE_STRING )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1216:3: lv_name_0_0= RULE_STRING
             {
-            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleParam2998); 
+            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleParam2866); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getParamAccess().getNameSTRINGTerminalRuleCall_0_0()); 
             		
@@ -3204,20 +3050,20 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,43,FOLLOW_43_in_ruleParam3015); 
+            otherlv_1=(Token)match(input,41,FOLLOW_41_in_ruleParam2883); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getParamAccess().getColonKeyword_1());
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1332:1: ( (lv_value_2_0= ruleConcatenationExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1333:1: (lv_value_2_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1236:1: ( (lv_value_2_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1237:1: (lv_value_2_0= ruleConcatenationExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1333:1: (lv_value_2_0= ruleConcatenationExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1334:3: lv_value_2_0= ruleConcatenationExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1237:1: (lv_value_2_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1238:3: lv_value_2_0= ruleConcatenationExpression
             {
              
             	        newCompositeNode(grammarAccess.getParamAccess().getValueConcatenationExpressionParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleParam3036);
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleParam2904);
             lv_value_2_0=ruleConcatenationExpression();
 
             state._fsp--;
@@ -3260,7 +3106,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSay"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1358:1: entryRuleSay returns [EObject current=null] : iv_ruleSay= ruleSay EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1262:1: entryRuleSay returns [EObject current=null] : iv_ruleSay= ruleSay EOF ;
     public final EObject entryRuleSay() throws RecognitionException {
         EObject current = null;
 
@@ -3268,17 +3114,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1359:2: (iv_ruleSay= ruleSay EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1360:2: iv_ruleSay= ruleSay EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1263:2: (iv_ruleSay= ruleSay EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1264:2: iv_ruleSay= ruleSay EOF
             {
              newCompositeNode(grammarAccess.getSayRule()); 
-            pushFollow(FOLLOW_ruleSay_in_entryRuleSay3072);
+            pushFollow(FOLLOW_ruleSay_in_entryRuleSay2940);
             iv_ruleSay=ruleSay();
 
             state._fsp--;
 
              current =iv_ruleSay; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSay3082); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSay2950); 
 
             }
 
@@ -3296,7 +3142,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSay"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1367:1: ruleSay returns [EObject current=null] : ( ( (lv_name_0_0= 'Say' ) ) ( (lv_that_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1271:1: ruleSay returns [EObject current=null] : ( ( (lv_name_0_0= 'Say' ) ) ( (lv_that_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) ;
     public final EObject ruleSay() throws RecognitionException {
         EObject current = null;
 
@@ -3308,19 +3154,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1370:28: ( ( ( (lv_name_0_0= 'Say' ) ) ( (lv_that_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1371:1: ( ( (lv_name_0_0= 'Say' ) ) ( (lv_that_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1274:28: ( ( ( (lv_name_0_0= 'Say' ) ) ( (lv_that_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1275:1: ( ( (lv_name_0_0= 'Say' ) ) ( (lv_that_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1371:1: ( ( (lv_name_0_0= 'Say' ) ) ( (lv_that_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1371:2: ( (lv_name_0_0= 'Say' ) ) ( (lv_that_1_0= ruleConcatenationExpression ) ) otherlv_2= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1275:1: ( ( (lv_name_0_0= 'Say' ) ) ( (lv_that_1_0= ruleConcatenationExpression ) ) otherlv_2= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1275:2: ( (lv_name_0_0= 'Say' ) ) ( (lv_that_1_0= ruleConcatenationExpression ) ) otherlv_2= ';'
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1371:2: ( (lv_name_0_0= 'Say' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1372:1: (lv_name_0_0= 'Say' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1275:2: ( (lv_name_0_0= 'Say' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1276:1: (lv_name_0_0= 'Say' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1372:1: (lv_name_0_0= 'Say' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1373:3: lv_name_0_0= 'Say'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1276:1: (lv_name_0_0= 'Say' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1277:3: lv_name_0_0= 'Say'
             {
-            lv_name_0_0=(Token)match(input,44,FOLLOW_44_in_ruleSay3125); 
+            lv_name_0_0=(Token)match(input,42,FOLLOW_42_in_ruleSay2993); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getSayAccess().getNameSayKeyword_0_0());
                 
@@ -3336,16 +3182,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1386:2: ( (lv_that_1_0= ruleConcatenationExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1387:1: (lv_that_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1290:2: ( (lv_that_1_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1291:1: (lv_that_1_0= ruleConcatenationExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1387:1: (lv_that_1_0= ruleConcatenationExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1388:3: lv_that_1_0= ruleConcatenationExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1291:1: (lv_that_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1292:3: lv_that_1_0= ruleConcatenationExpression
             {
              
             	        newCompositeNode(grammarAccess.getSayAccess().getThatConcatenationExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleSay3159);
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleSay3027);
             lv_that_1_0=ruleConcatenationExpression();
 
             state._fsp--;
@@ -3367,7 +3213,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleSay3171); 
+            otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleSay3039); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getSayAccess().getSemicolonKeyword_2());
                 
@@ -3392,7 +3238,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSms"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1416:1: entryRuleSms returns [EObject current=null] : iv_ruleSms= ruleSms EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1320:1: entryRuleSms returns [EObject current=null] : iv_ruleSms= ruleSms EOF ;
     public final EObject entryRuleSms() throws RecognitionException {
         EObject current = null;
 
@@ -3400,17 +3246,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1417:2: (iv_ruleSms= ruleSms EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1418:2: iv_ruleSms= ruleSms EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1321:2: (iv_ruleSms= ruleSms EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1322:2: iv_ruleSms= ruleSms EOF
             {
              newCompositeNode(grammarAccess.getSmsRule()); 
-            pushFollow(FOLLOW_ruleSms_in_entryRuleSms3207);
+            pushFollow(FOLLOW_ruleSms_in_entryRuleSms3075);
             iv_ruleSms=ruleSms();
 
             state._fsp--;
 
              current =iv_ruleSms; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSms3217); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSms3085); 
 
             }
 
@@ -3428,7 +3274,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSms"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1425:1: ruleSms returns [EObject current=null] : ( ( (lv_name_0_0= 'Sms' ) ) ( (lv_value_1_0= ruleConcatenationExpression ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1329:1: ruleSms returns [EObject current=null] : ( ( (lv_name_0_0= 'Sms' ) ) ( (lv_value_1_0= ruleConcatenationExpression ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' ) ;
     public final EObject ruleSms() throws RecognitionException {
         EObject current = null;
 
@@ -3443,19 +3289,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1428:28: ( ( ( (lv_name_0_0= 'Sms' ) ) ( (lv_value_1_0= ruleConcatenationExpression ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1429:1: ( ( (lv_name_0_0= 'Sms' ) ) ( (lv_value_1_0= ruleConcatenationExpression ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1332:28: ( ( ( (lv_name_0_0= 'Sms' ) ) ( (lv_value_1_0= ruleConcatenationExpression ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1333:1: ( ( (lv_name_0_0= 'Sms' ) ) ( (lv_value_1_0= ruleConcatenationExpression ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1429:1: ( ( (lv_name_0_0= 'Sms' ) ) ( (lv_value_1_0= ruleConcatenationExpression ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1429:2: ( (lv_name_0_0= 'Sms' ) ) ( (lv_value_1_0= ruleConcatenationExpression ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleConcatenationExpression ) ) otherlv_4= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1333:1: ( ( (lv_name_0_0= 'Sms' ) ) ( (lv_value_1_0= ruleConcatenationExpression ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleConcatenationExpression ) ) otherlv_4= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1333:2: ( (lv_name_0_0= 'Sms' ) ) ( (lv_value_1_0= ruleConcatenationExpression ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleConcatenationExpression ) ) otherlv_4= ';'
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1429:2: ( (lv_name_0_0= 'Sms' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1430:1: (lv_name_0_0= 'Sms' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1333:2: ( (lv_name_0_0= 'Sms' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1334:1: (lv_name_0_0= 'Sms' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1430:1: (lv_name_0_0= 'Sms' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1431:3: lv_name_0_0= 'Sms'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1334:1: (lv_name_0_0= 'Sms' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1335:3: lv_name_0_0= 'Sms'
             {
-            lv_name_0_0=(Token)match(input,45,FOLLOW_45_in_ruleSms3260); 
+            lv_name_0_0=(Token)match(input,43,FOLLOW_43_in_ruleSms3128); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getSmsAccess().getNameSmsKeyword_0_0());
                 
@@ -3471,16 +3317,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1444:2: ( (lv_value_1_0= ruleConcatenationExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1445:1: (lv_value_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1348:2: ( (lv_value_1_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1349:1: (lv_value_1_0= ruleConcatenationExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1445:1: (lv_value_1_0= ruleConcatenationExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1446:3: lv_value_1_0= ruleConcatenationExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1349:1: (lv_value_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1350:3: lv_value_1_0= ruleConcatenationExpression
             {
              
             	        newCompositeNode(grammarAccess.getSmsAccess().getValueConcatenationExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleSms3294);
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleSms3162);
             lv_value_1_0=ruleConcatenationExpression();
 
             state._fsp--;
@@ -3502,20 +3348,20 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,41,FOLLOW_41_in_ruleSms3306); 
+            otherlv_2=(Token)match(input,39,FOLLOW_39_in_ruleSms3174); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getSmsAccess().getToKeyword_2());
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1466:1: ( (lv_to_3_0= ruleConcatenationExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1467:1: (lv_to_3_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1370:1: ( (lv_to_3_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1371:1: (lv_to_3_0= ruleConcatenationExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1467:1: (lv_to_3_0= ruleConcatenationExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1468:3: lv_to_3_0= ruleConcatenationExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1371:1: (lv_to_3_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1372:3: lv_to_3_0= ruleConcatenationExpression
             {
              
             	        newCompositeNode(grammarAccess.getSmsAccess().getToConcatenationExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleSms3327);
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleSms3195);
             lv_to_3_0=ruleConcatenationExpression();
 
             state._fsp--;
@@ -3537,7 +3383,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleSms3339); 
+            otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleSms3207); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getSmsAccess().getSemicolonKeyword_4());
                 
@@ -3561,8 +3407,294 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleSms"
 
 
+    // $ANTLR start "entryRuleEmail"
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1400:1: entryRuleEmail returns [EObject current=null] : iv_ruleEmail= ruleEmail EOF ;
+    public final EObject entryRuleEmail() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleEmail = null;
+
+
+        try {
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1401:2: (iv_ruleEmail= ruleEmail EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1402:2: iv_ruleEmail= ruleEmail EOF
+            {
+             newCompositeNode(grammarAccess.getEmailRule()); 
+            pushFollow(FOLLOW_ruleEmail_in_entryRuleEmail3243);
+            iv_ruleEmail=ruleEmail();
+
+            state._fsp--;
+
+             current =iv_ruleEmail; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEmail3253); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleEmail"
+
+
+    // $ANTLR start "ruleEmail"
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1409:1: ruleEmail returns [EObject current=null] : ( ( (lv_name_0_0= 'Email' ) ) otherlv_1= '{' otherlv_2= 'subject' otherlv_3= ':' ( (lv_title_4_0= ruleConcatenationExpression ) ) otherlv_5= ',' otherlv_6= 'from' otherlv_7= ':' ( (lv_from_8_0= ruleConcatenationExpression ) ) otherlv_9= ',' otherlv_10= 'message' otherlv_11= ':' ( (lv_value_12_0= ruleConcatenationExpression ) ) otherlv_13= '}' otherlv_14= 'to' ( (lv_to_15_0= ruleConcatenationExpression ) ) otherlv_16= ';' ) ;
+    public final EObject ruleEmail() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token otherlv_5=null;
+        Token otherlv_6=null;
+        Token otherlv_7=null;
+        Token otherlv_9=null;
+        Token otherlv_10=null;
+        Token otherlv_11=null;
+        Token otherlv_13=null;
+        Token otherlv_14=null;
+        Token otherlv_16=null;
+        EObject lv_title_4_0 = null;
+
+        EObject lv_from_8_0 = null;
+
+        EObject lv_value_12_0 = null;
+
+        EObject lv_to_15_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1412:28: ( ( ( (lv_name_0_0= 'Email' ) ) otherlv_1= '{' otherlv_2= 'subject' otherlv_3= ':' ( (lv_title_4_0= ruleConcatenationExpression ) ) otherlv_5= ',' otherlv_6= 'from' otherlv_7= ':' ( (lv_from_8_0= ruleConcatenationExpression ) ) otherlv_9= ',' otherlv_10= 'message' otherlv_11= ':' ( (lv_value_12_0= ruleConcatenationExpression ) ) otherlv_13= '}' otherlv_14= 'to' ( (lv_to_15_0= ruleConcatenationExpression ) ) otherlv_16= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1413:1: ( ( (lv_name_0_0= 'Email' ) ) otherlv_1= '{' otherlv_2= 'subject' otherlv_3= ':' ( (lv_title_4_0= ruleConcatenationExpression ) ) otherlv_5= ',' otherlv_6= 'from' otherlv_7= ':' ( (lv_from_8_0= ruleConcatenationExpression ) ) otherlv_9= ',' otherlv_10= 'message' otherlv_11= ':' ( (lv_value_12_0= ruleConcatenationExpression ) ) otherlv_13= '}' otherlv_14= 'to' ( (lv_to_15_0= ruleConcatenationExpression ) ) otherlv_16= ';' )
+            {
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1413:1: ( ( (lv_name_0_0= 'Email' ) ) otherlv_1= '{' otherlv_2= 'subject' otherlv_3= ':' ( (lv_title_4_0= ruleConcatenationExpression ) ) otherlv_5= ',' otherlv_6= 'from' otherlv_7= ':' ( (lv_from_8_0= ruleConcatenationExpression ) ) otherlv_9= ',' otherlv_10= 'message' otherlv_11= ':' ( (lv_value_12_0= ruleConcatenationExpression ) ) otherlv_13= '}' otherlv_14= 'to' ( (lv_to_15_0= ruleConcatenationExpression ) ) otherlv_16= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1413:2: ( (lv_name_0_0= 'Email' ) ) otherlv_1= '{' otherlv_2= 'subject' otherlv_3= ':' ( (lv_title_4_0= ruleConcatenationExpression ) ) otherlv_5= ',' otherlv_6= 'from' otherlv_7= ':' ( (lv_from_8_0= ruleConcatenationExpression ) ) otherlv_9= ',' otherlv_10= 'message' otherlv_11= ':' ( (lv_value_12_0= ruleConcatenationExpression ) ) otherlv_13= '}' otherlv_14= 'to' ( (lv_to_15_0= ruleConcatenationExpression ) ) otherlv_16= ';'
+            {
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1413:2: ( (lv_name_0_0= 'Email' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1414:1: (lv_name_0_0= 'Email' )
+            {
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1414:1: (lv_name_0_0= 'Email' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1415:3: lv_name_0_0= 'Email'
+            {
+            lv_name_0_0=(Token)match(input,44,FOLLOW_44_in_ruleEmail3296); 
+
+                    newLeafNode(lv_name_0_0, grammarAccess.getEmailAccess().getNameEmailKeyword_0_0());
+                
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getEmailRule());
+            	        }
+                   		setWithLastConsumed(current, "name", lv_name_0_0, "Email");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleEmail3321); 
+
+                	newLeafNode(otherlv_1, grammarAccess.getEmailAccess().getLeftCurlyBracketKeyword_1());
+                
+            otherlv_2=(Token)match(input,45,FOLLOW_45_in_ruleEmail3333); 
+
+                	newLeafNode(otherlv_2, grammarAccess.getEmailAccess().getSubjectKeyword_2());
+                
+            otherlv_3=(Token)match(input,41,FOLLOW_41_in_ruleEmail3345); 
+
+                	newLeafNode(otherlv_3, grammarAccess.getEmailAccess().getColonKeyword_3());
+                
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1440:1: ( (lv_title_4_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1441:1: (lv_title_4_0= ruleConcatenationExpression )
+            {
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1441:1: (lv_title_4_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1442:3: lv_title_4_0= ruleConcatenationExpression
+            {
+             
+            	        newCompositeNode(grammarAccess.getEmailAccess().getTitleConcatenationExpressionParserRuleCall_4_0()); 
+            	    
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleEmail3366);
+            lv_title_4_0=ruleConcatenationExpression();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getEmailRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"title",
+                    		lv_title_4_0, 
+                    		"ConcatenationExpression");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            otherlv_5=(Token)match(input,40,FOLLOW_40_in_ruleEmail3378); 
+
+                	newLeafNode(otherlv_5, grammarAccess.getEmailAccess().getCommaKeyword_5());
+                
+            otherlv_6=(Token)match(input,46,FOLLOW_46_in_ruleEmail3390); 
+
+                	newLeafNode(otherlv_6, grammarAccess.getEmailAccess().getFromKeyword_6());
+                
+            otherlv_7=(Token)match(input,41,FOLLOW_41_in_ruleEmail3402); 
+
+                	newLeafNode(otherlv_7, grammarAccess.getEmailAccess().getColonKeyword_7());
+                
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1470:1: ( (lv_from_8_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1471:1: (lv_from_8_0= ruleConcatenationExpression )
+            {
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1471:1: (lv_from_8_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1472:3: lv_from_8_0= ruleConcatenationExpression
+            {
+             
+            	        newCompositeNode(grammarAccess.getEmailAccess().getFromConcatenationExpressionParserRuleCall_8_0()); 
+            	    
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleEmail3423);
+            lv_from_8_0=ruleConcatenationExpression();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getEmailRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"from",
+                    		lv_from_8_0, 
+                    		"ConcatenationExpression");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            otherlv_9=(Token)match(input,40,FOLLOW_40_in_ruleEmail3435); 
+
+                	newLeafNode(otherlv_9, grammarAccess.getEmailAccess().getCommaKeyword_9());
+                
+            otherlv_10=(Token)match(input,47,FOLLOW_47_in_ruleEmail3447); 
+
+                	newLeafNode(otherlv_10, grammarAccess.getEmailAccess().getMessageKeyword_10());
+                
+            otherlv_11=(Token)match(input,41,FOLLOW_41_in_ruleEmail3459); 
+
+                	newLeafNode(otherlv_11, grammarAccess.getEmailAccess().getColonKeyword_11());
+                
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1500:1: ( (lv_value_12_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1501:1: (lv_value_12_0= ruleConcatenationExpression )
+            {
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1501:1: (lv_value_12_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1502:3: lv_value_12_0= ruleConcatenationExpression
+            {
+             
+            	        newCompositeNode(grammarAccess.getEmailAccess().getValueConcatenationExpressionParserRuleCall_12_0()); 
+            	    
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleEmail3480);
+            lv_value_12_0=ruleConcatenationExpression();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getEmailRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"value",
+                    		lv_value_12_0, 
+                    		"ConcatenationExpression");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            otherlv_13=(Token)match(input,26,FOLLOW_26_in_ruleEmail3492); 
+
+                	newLeafNode(otherlv_13, grammarAccess.getEmailAccess().getRightCurlyBracketKeyword_13());
+                
+            otherlv_14=(Token)match(input,39,FOLLOW_39_in_ruleEmail3504); 
+
+                	newLeafNode(otherlv_14, grammarAccess.getEmailAccess().getToKeyword_14());
+                
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1526:1: ( (lv_to_15_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1527:1: (lv_to_15_0= ruleConcatenationExpression )
+            {
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1527:1: (lv_to_15_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1528:3: lv_to_15_0= ruleConcatenationExpression
+            {
+             
+            	        newCompositeNode(grammarAccess.getEmailAccess().getToConcatenationExpressionParserRuleCall_15_0()); 
+            	    
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleEmail3525);
+            lv_to_15_0=ruleConcatenationExpression();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getEmailRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"to",
+                    		lv_to_15_0, 
+                    		"ConcatenationExpression");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            otherlv_16=(Token)match(input,28,FOLLOW_28_in_ruleEmail3537); 
+
+                	newLeafNode(otherlv_16, grammarAccess.getEmailAccess().getSemicolonKeyword_16());
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleEmail"
+
+
     // $ANTLR start "entryRuleTransition"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1500:1: entryRuleTransition returns [EObject current=null] : iv_ruleTransition= ruleTransition EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1556:1: entryRuleTransition returns [EObject current=null] : iv_ruleTransition= ruleTransition EOF ;
     public final EObject entryRuleTransition() throws RecognitionException {
         EObject current = null;
 
@@ -3570,17 +3702,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1501:2: (iv_ruleTransition= ruleTransition EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1502:2: iv_ruleTransition= ruleTransition EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1557:2: (iv_ruleTransition= ruleTransition EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1558:2: iv_ruleTransition= ruleTransition EOF
             {
              newCompositeNode(grammarAccess.getTransitionRule()); 
-            pushFollow(FOLLOW_ruleTransition_in_entryRuleTransition3379);
+            pushFollow(FOLLOW_ruleTransition_in_entryRuleTransition3573);
             iv_ruleTransition=ruleTransition();
 
             state._fsp--;
 
              current =iv_ruleTransition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTransition3389); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTransition3583); 
 
             }
 
@@ -3598,7 +3730,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTransition"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1509:1: ruleTransition returns [EObject current=null] : ( ( (lv_name_0_0= 'GoTo' ) ) ( (otherlv_1= RULE_ID ) ) otherlv_2= 'when' ( (lv_event_3_0= ruleEVENT ) ) otherlv_4= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1565:1: ruleTransition returns [EObject current=null] : ( ( (lv_name_0_0= 'GoTo' ) ) ( (otherlv_1= RULE_ID ) ) otherlv_2= 'when' ( (lv_event_3_0= ruleEVENT ) ) otherlv_4= ';' ) ;
     public final EObject ruleTransition() throws RecognitionException {
         EObject current = null;
 
@@ -3612,19 +3744,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1512:28: ( ( ( (lv_name_0_0= 'GoTo' ) ) ( (otherlv_1= RULE_ID ) ) otherlv_2= 'when' ( (lv_event_3_0= ruleEVENT ) ) otherlv_4= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1513:1: ( ( (lv_name_0_0= 'GoTo' ) ) ( (otherlv_1= RULE_ID ) ) otherlv_2= 'when' ( (lv_event_3_0= ruleEVENT ) ) otherlv_4= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1568:28: ( ( ( (lv_name_0_0= 'GoTo' ) ) ( (otherlv_1= RULE_ID ) ) otherlv_2= 'when' ( (lv_event_3_0= ruleEVENT ) ) otherlv_4= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1569:1: ( ( (lv_name_0_0= 'GoTo' ) ) ( (otherlv_1= RULE_ID ) ) otherlv_2= 'when' ( (lv_event_3_0= ruleEVENT ) ) otherlv_4= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1513:1: ( ( (lv_name_0_0= 'GoTo' ) ) ( (otherlv_1= RULE_ID ) ) otherlv_2= 'when' ( (lv_event_3_0= ruleEVENT ) ) otherlv_4= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1513:2: ( (lv_name_0_0= 'GoTo' ) ) ( (otherlv_1= RULE_ID ) ) otherlv_2= 'when' ( (lv_event_3_0= ruleEVENT ) ) otherlv_4= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1569:1: ( ( (lv_name_0_0= 'GoTo' ) ) ( (otherlv_1= RULE_ID ) ) otherlv_2= 'when' ( (lv_event_3_0= ruleEVENT ) ) otherlv_4= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1569:2: ( (lv_name_0_0= 'GoTo' ) ) ( (otherlv_1= RULE_ID ) ) otherlv_2= 'when' ( (lv_event_3_0= ruleEVENT ) ) otherlv_4= ';'
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1513:2: ( (lv_name_0_0= 'GoTo' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1514:1: (lv_name_0_0= 'GoTo' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1569:2: ( (lv_name_0_0= 'GoTo' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1570:1: (lv_name_0_0= 'GoTo' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1514:1: (lv_name_0_0= 'GoTo' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1515:3: lv_name_0_0= 'GoTo'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1570:1: (lv_name_0_0= 'GoTo' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1571:3: lv_name_0_0= 'GoTo'
             {
-            lv_name_0_0=(Token)match(input,46,FOLLOW_46_in_ruleTransition3432); 
+            lv_name_0_0=(Token)match(input,48,FOLLOW_48_in_ruleTransition3626); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getTransitionAccess().getNameGoToKeyword_0_0());
                 
@@ -3640,18 +3772,18 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1528:2: ( (otherlv_1= RULE_ID ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1529:1: (otherlv_1= RULE_ID )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1584:2: ( (otherlv_1= RULE_ID ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1585:1: (otherlv_1= RULE_ID )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1529:1: (otherlv_1= RULE_ID )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1530:3: otherlv_1= RULE_ID
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1585:1: (otherlv_1= RULE_ID )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1586:3: otherlv_1= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getTransitionRule());
             	        }
                     
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTransition3465); 
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTransition3659); 
 
             		newLeafNode(otherlv_1, grammarAccess.getTransitionAccess().getTargetStateCrossReference_1_0()); 
             	
@@ -3661,20 +3793,20 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,47,FOLLOW_47_in_ruleTransition3477); 
+            otherlv_2=(Token)match(input,49,FOLLOW_49_in_ruleTransition3671); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getTransitionAccess().getWhenKeyword_2());
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1545:1: ( (lv_event_3_0= ruleEVENT ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1546:1: (lv_event_3_0= ruleEVENT )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1601:1: ( (lv_event_3_0= ruleEVENT ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1602:1: (lv_event_3_0= ruleEVENT )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1546:1: (lv_event_3_0= ruleEVENT )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1547:3: lv_event_3_0= ruleEVENT
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1602:1: (lv_event_3_0= ruleEVENT )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1603:3: lv_event_3_0= ruleEVENT
             {
              
             	        newCompositeNode(grammarAccess.getTransitionAccess().getEventEVENTParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleEVENT_in_ruleTransition3498);
+            pushFollow(FOLLOW_ruleEVENT_in_ruleTransition3692);
             lv_event_3_0=ruleEVENT();
 
             state._fsp--;
@@ -3696,7 +3828,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleTransition3510); 
+            otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleTransition3704); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getTransitionAccess().getSemicolonKeyword_4());
                 
@@ -3721,7 +3853,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIfExp"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1575:1: entryRuleIfExp returns [EObject current=null] : iv_ruleIfExp= ruleIfExp EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1631:1: entryRuleIfExp returns [EObject current=null] : iv_ruleIfExp= ruleIfExp EOF ;
     public final EObject entryRuleIfExp() throws RecognitionException {
         EObject current = null;
 
@@ -3729,17 +3861,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1576:2: (iv_ruleIfExp= ruleIfExp EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1577:2: iv_ruleIfExp= ruleIfExp EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1632:2: (iv_ruleIfExp= ruleIfExp EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1633:2: iv_ruleIfExp= ruleIfExp EOF
             {
              newCompositeNode(grammarAccess.getIfExpRule()); 
-            pushFollow(FOLLOW_ruleIfExp_in_entryRuleIfExp3546);
+            pushFollow(FOLLOW_ruleIfExp_in_entryRuleIfExp3740);
             iv_ruleIfExp=ruleIfExp();
 
             state._fsp--;
 
              current =iv_ruleIfExp; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIfExp3556); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIfExp3750); 
 
             }
 
@@ -3757,7 +3889,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIfExp"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1584:1: ruleIfExp returns [EObject current=null] : ( ( (lv_block_0_0= ruleCondBlock ) ) (otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) ) )* (otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) ) )? ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1640:1: ruleIfExp returns [EObject current=null] : ( ( (lv_block_0_0= ruleCondBlock ) ) (otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) ) )* (otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) ) )? ) ;
     public final EObject ruleIfExp() throws RecognitionException {
         EObject current = null;
 
@@ -3773,22 +3905,22 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1587:28: ( ( ( (lv_block_0_0= ruleCondBlock ) ) (otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) ) )* (otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) ) )? ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1588:1: ( ( (lv_block_0_0= ruleCondBlock ) ) (otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) ) )* (otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) ) )? )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1643:28: ( ( ( (lv_block_0_0= ruleCondBlock ) ) (otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) ) )* (otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) ) )? ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1644:1: ( ( (lv_block_0_0= ruleCondBlock ) ) (otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) ) )* (otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) ) )? )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1588:1: ( ( (lv_block_0_0= ruleCondBlock ) ) (otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) ) )* (otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) ) )? )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1588:2: ( (lv_block_0_0= ruleCondBlock ) ) (otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) ) )* (otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) ) )?
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1644:1: ( ( (lv_block_0_0= ruleCondBlock ) ) (otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) ) )* (otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) ) )? )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1644:2: ( (lv_block_0_0= ruleCondBlock ) ) (otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) ) )* (otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) ) )?
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1588:2: ( (lv_block_0_0= ruleCondBlock ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1589:1: (lv_block_0_0= ruleCondBlock )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1644:2: ( (lv_block_0_0= ruleCondBlock ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1645:1: (lv_block_0_0= ruleCondBlock )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1589:1: (lv_block_0_0= ruleCondBlock )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1590:3: lv_block_0_0= ruleCondBlock
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1645:1: (lv_block_0_0= ruleCondBlock )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1646:3: lv_block_0_0= ruleCondBlock
             {
              
             	        newCompositeNode(grammarAccess.getIfExpAccess().getBlockCondBlockParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleCondBlock_in_ruleIfExp3602);
+            pushFollow(FOLLOW_ruleCondBlock_in_ruleIfExp3796);
             lv_block_0_0=ruleCondBlock();
 
             state._fsp--;
@@ -3810,41 +3942,41 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1606:2: (otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) ) )*
-            loop12:
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1662:2: (otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) ) )*
+            loop11:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( (LA12_0==48) ) {
-                    int LA12_1 = input.LA(2);
+                if ( (LA11_0==50) ) {
+                    int LA11_1 = input.LA(2);
 
-                    if ( (LA12_1==49) ) {
-                        alt12=1;
+                    if ( (LA11_1==51) ) {
+                        alt11=1;
                     }
 
 
                 }
 
 
-                switch (alt12) {
+                switch (alt11) {
             	case 1 :
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1606:4: otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) )
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1662:4: otherlv_1= 'else' ( (lv_blocks_2_0= ruleCondBlock ) )
             	    {
-            	    otherlv_1=(Token)match(input,48,FOLLOW_48_in_ruleIfExp3615); 
+            	    otherlv_1=(Token)match(input,50,FOLLOW_50_in_ruleIfExp3809); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getIfExpAccess().getElseKeyword_1_0());
             	        
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1610:1: ( (lv_blocks_2_0= ruleCondBlock ) )
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1611:1: (lv_blocks_2_0= ruleCondBlock )
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1666:1: ( (lv_blocks_2_0= ruleCondBlock ) )
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1667:1: (lv_blocks_2_0= ruleCondBlock )
             	    {
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1611:1: (lv_blocks_2_0= ruleCondBlock )
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1612:3: lv_blocks_2_0= ruleCondBlock
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1667:1: (lv_blocks_2_0= ruleCondBlock )
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1668:3: lv_blocks_2_0= ruleCondBlock
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getIfExpAccess().getBlocksCondBlockParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleCondBlock_in_ruleIfExp3636);
+            	    pushFollow(FOLLOW_ruleCondBlock_in_ruleIfExp3830);
             	    lv_blocks_2_0=ruleCondBlock();
 
             	    state._fsp--;
@@ -3871,35 +4003,35 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop11;
                 }
             } while (true);
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1628:4: (otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) ) )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1684:4: (otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) ) )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA13_0==48) ) {
-                alt13=1;
+            if ( (LA12_0==50) ) {
+                alt12=1;
             }
-            switch (alt13) {
+            switch (alt12) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1628:6: otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1684:6: otherlv_3= 'else' ( (lv_defaultBlock_4_0= ruleBlock ) )
                     {
-                    otherlv_3=(Token)match(input,48,FOLLOW_48_in_ruleIfExp3651); 
+                    otherlv_3=(Token)match(input,50,FOLLOW_50_in_ruleIfExp3845); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getIfExpAccess().getElseKeyword_2_0());
                         
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1632:1: ( (lv_defaultBlock_4_0= ruleBlock ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1633:1: (lv_defaultBlock_4_0= ruleBlock )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1688:1: ( (lv_defaultBlock_4_0= ruleBlock ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1689:1: (lv_defaultBlock_4_0= ruleBlock )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1633:1: (lv_defaultBlock_4_0= ruleBlock )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1634:3: lv_defaultBlock_4_0= ruleBlock
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1689:1: (lv_defaultBlock_4_0= ruleBlock )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1690:3: lv_defaultBlock_4_0= ruleBlock
                     {
                      
                     	        newCompositeNode(grammarAccess.getIfExpAccess().getDefaultBlockBlockParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleBlock_in_ruleIfExp3672);
+                    pushFollow(FOLLOW_ruleBlock_in_ruleIfExp3866);
                     lv_defaultBlock_4_0=ruleBlock();
 
                     state._fsp--;
@@ -3948,7 +4080,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCondBlock"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1658:1: entryRuleCondBlock returns [EObject current=null] : iv_ruleCondBlock= ruleCondBlock EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1714:1: entryRuleCondBlock returns [EObject current=null] : iv_ruleCondBlock= ruleCondBlock EOF ;
     public final EObject entryRuleCondBlock() throws RecognitionException {
         EObject current = null;
 
@@ -3956,17 +4088,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1659:2: (iv_ruleCondBlock= ruleCondBlock EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1660:2: iv_ruleCondBlock= ruleCondBlock EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1715:2: (iv_ruleCondBlock= ruleCondBlock EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1716:2: iv_ruleCondBlock= ruleCondBlock EOF
             {
              newCompositeNode(grammarAccess.getCondBlockRule()); 
-            pushFollow(FOLLOW_ruleCondBlock_in_entryRuleCondBlock3710);
+            pushFollow(FOLLOW_ruleCondBlock_in_entryRuleCondBlock3904);
             iv_ruleCondBlock=ruleCondBlock();
 
             state._fsp--;
 
              current =iv_ruleCondBlock; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCondBlock3720); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCondBlock3914); 
 
             }
 
@@ -3984,11 +4116,11 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCondBlock"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1667:1: ruleCondBlock returns [EObject current=null] : ( ( (lv_name_0_0= 'if' ) ) ( (lv_cond_1_0= ruleTerminalBoolExpression ) ) ( (lv_action_2_0= ruleBlock ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1723:1: ruleCondBlock returns [EObject current=null] : (otherlv_0= 'if' ( (lv_cond_1_0= ruleTerminalBoolExpression ) ) ( (lv_action_2_0= ruleBlock ) ) ) ;
     public final EObject ruleCondBlock() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_0=null;
+        Token otherlv_0=null;
         EObject lv_cond_1_0 = null;
 
         EObject lv_action_2_0 = null;
@@ -3997,44 +4129,26 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1670:28: ( ( ( (lv_name_0_0= 'if' ) ) ( (lv_cond_1_0= ruleTerminalBoolExpression ) ) ( (lv_action_2_0= ruleBlock ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1671:1: ( ( (lv_name_0_0= 'if' ) ) ( (lv_cond_1_0= ruleTerminalBoolExpression ) ) ( (lv_action_2_0= ruleBlock ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1726:28: ( (otherlv_0= 'if' ( (lv_cond_1_0= ruleTerminalBoolExpression ) ) ( (lv_action_2_0= ruleBlock ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1727:1: (otherlv_0= 'if' ( (lv_cond_1_0= ruleTerminalBoolExpression ) ) ( (lv_action_2_0= ruleBlock ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1671:1: ( ( (lv_name_0_0= 'if' ) ) ( (lv_cond_1_0= ruleTerminalBoolExpression ) ) ( (lv_action_2_0= ruleBlock ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1671:2: ( (lv_name_0_0= 'if' ) ) ( (lv_cond_1_0= ruleTerminalBoolExpression ) ) ( (lv_action_2_0= ruleBlock ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1727:1: (otherlv_0= 'if' ( (lv_cond_1_0= ruleTerminalBoolExpression ) ) ( (lv_action_2_0= ruleBlock ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1727:3: otherlv_0= 'if' ( (lv_cond_1_0= ruleTerminalBoolExpression ) ) ( (lv_action_2_0= ruleBlock ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1671:2: ( (lv_name_0_0= 'if' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1672:1: (lv_name_0_0= 'if' )
-            {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1672:1: (lv_name_0_0= 'if' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1673:3: lv_name_0_0= 'if'
-            {
-            lv_name_0_0=(Token)match(input,49,FOLLOW_49_in_ruleCondBlock3763); 
+            otherlv_0=(Token)match(input,51,FOLLOW_51_in_ruleCondBlock3951); 
 
-                    newLeafNode(lv_name_0_0, grammarAccess.getCondBlockAccess().getNameIfKeyword_0_0());
+                	newLeafNode(otherlv_0, grammarAccess.getCondBlockAccess().getIfKeyword_0());
                 
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getCondBlockRule());
-            	        }
-                   		setWithLastConsumed(current, "name", lv_name_0_0, "if");
-            	    
-
-            }
-
-
-            }
-
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1686:2: ( (lv_cond_1_0= ruleTerminalBoolExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1687:1: (lv_cond_1_0= ruleTerminalBoolExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1731:1: ( (lv_cond_1_0= ruleTerminalBoolExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1732:1: (lv_cond_1_0= ruleTerminalBoolExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1687:1: (lv_cond_1_0= ruleTerminalBoolExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1688:3: lv_cond_1_0= ruleTerminalBoolExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1732:1: (lv_cond_1_0= ruleTerminalBoolExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1733:3: lv_cond_1_0= ruleTerminalBoolExpression
             {
              
             	        newCompositeNode(grammarAccess.getCondBlockAccess().getCondTerminalBoolExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleTerminalBoolExpression_in_ruleCondBlock3797);
+            pushFollow(FOLLOW_ruleTerminalBoolExpression_in_ruleCondBlock3972);
             lv_cond_1_0=ruleTerminalBoolExpression();
 
             state._fsp--;
@@ -4056,16 +4170,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1704:2: ( (lv_action_2_0= ruleBlock ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1705:1: (lv_action_2_0= ruleBlock )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1749:2: ( (lv_action_2_0= ruleBlock ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1750:1: (lv_action_2_0= ruleBlock )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1705:1: (lv_action_2_0= ruleBlock )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1706:3: lv_action_2_0= ruleBlock
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1750:1: (lv_action_2_0= ruleBlock )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1751:3: lv_action_2_0= ruleBlock
             {
              
             	        newCompositeNode(grammarAccess.getCondBlockAccess().getActionBlockParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleBlock_in_ruleCondBlock3818);
+            pushFollow(FOLLOW_ruleBlock_in_ruleCondBlock3993);
             lv_action_2_0=ruleBlock();
 
             state._fsp--;
@@ -4108,7 +4222,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBlock"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1730:1: entryRuleBlock returns [EObject current=null] : iv_ruleBlock= ruleBlock EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1775:1: entryRuleBlock returns [EObject current=null] : iv_ruleBlock= ruleBlock EOF ;
     public final EObject entryRuleBlock() throws RecognitionException {
         EObject current = null;
 
@@ -4116,17 +4230,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1731:2: (iv_ruleBlock= ruleBlock EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1732:2: iv_ruleBlock= ruleBlock EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1776:2: (iv_ruleBlock= ruleBlock EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1777:2: iv_ruleBlock= ruleBlock EOF
             {
              newCompositeNode(grammarAccess.getBlockRule()); 
-            pushFollow(FOLLOW_ruleBlock_in_entryRuleBlock3854);
+            pushFollow(FOLLOW_ruleBlock_in_entryRuleBlock4029);
             iv_ruleBlock=ruleBlock();
 
             state._fsp--;
 
              current =iv_ruleBlock; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBlock3864); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBlock4039); 
 
             }
 
@@ -4144,11 +4258,11 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBlock"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1739:1: ruleBlock returns [EObject current=null] : ( () ( (lv_name_1_0= '{' ) ) ( (lv_sta_2_0= ruleAbstractElement ) )* otherlv_3= '}' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1784:1: ruleBlock returns [EObject current=null] : ( () otherlv_1= '{' ( (lv_sta_2_0= ruleAbstractElement ) )* otherlv_3= '}' ) ;
     public final EObject ruleBlock() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_1_0=null;
+        Token otherlv_1=null;
         Token otherlv_3=null;
         EObject lv_sta_2_0 = null;
 
@@ -4156,14 +4270,14 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1742:28: ( ( () ( (lv_name_1_0= '{' ) ) ( (lv_sta_2_0= ruleAbstractElement ) )* otherlv_3= '}' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1743:1: ( () ( (lv_name_1_0= '{' ) ) ( (lv_sta_2_0= ruleAbstractElement ) )* otherlv_3= '}' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1787:28: ( ( () otherlv_1= '{' ( (lv_sta_2_0= ruleAbstractElement ) )* otherlv_3= '}' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1788:1: ( () otherlv_1= '{' ( (lv_sta_2_0= ruleAbstractElement ) )* otherlv_3= '}' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1743:1: ( () ( (lv_name_1_0= '{' ) ) ( (lv_sta_2_0= ruleAbstractElement ) )* otherlv_3= '}' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1743:2: () ( (lv_name_1_0= '{' ) ) ( (lv_sta_2_0= ruleAbstractElement ) )* otherlv_3= '}'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1788:1: ( () otherlv_1= '{' ( (lv_sta_2_0= ruleAbstractElement ) )* otherlv_3= '}' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1788:2: () otherlv_1= '{' ( (lv_sta_2_0= ruleAbstractElement ) )* otherlv_3= '}'
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1743:2: ()
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1744:5: 
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1788:2: ()
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1789:5: 
             {
 
                     current = forceCreateModelElement(
@@ -4173,50 +4287,32 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1749:2: ( (lv_name_1_0= '{' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1750:1: (lv_name_1_0= '{' )
-            {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1750:1: (lv_name_1_0= '{' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1751:3: lv_name_1_0= '{'
-            {
-            lv_name_1_0=(Token)match(input,25,FOLLOW_25_in_ruleBlock3916); 
+            otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleBlock4085); 
 
-                    newLeafNode(lv_name_1_0, grammarAccess.getBlockAccess().getNameLeftCurlyBracketKeyword_1_0());
+                	newLeafNode(otherlv_1, grammarAccess.getBlockAccess().getLeftCurlyBracketKeyword_1());
                 
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getBlockRule());
-            	        }
-                   		setWithLastConsumed(current, "name", lv_name_1_0, "{");
-            	    
-
-            }
-
-
-            }
-
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1764:2: ( (lv_sta_2_0= ruleAbstractElement ) )*
-            loop14:
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1798:1: ( (lv_sta_2_0= ruleAbstractElement ) )*
+            loop13:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA14_0==RULE_ML_COMMENT||LA14_0==27||(LA14_0>=29 && LA14_0<=31)||(LA14_0>=35 && LA14_0<=37)||(LA14_0>=39 && LA14_0<=40)||(LA14_0>=44 && LA14_0<=46)||LA14_0==49||LA14_0==51||(LA14_0>=54 && LA14_0<=56)) ) {
-                    alt14=1;
+                if ( (LA13_0==RULE_ML_COMMENT||LA13_0==27||(LA13_0>=29 && LA13_0<=31)||(LA13_0>=33 && LA13_0<=35)||(LA13_0>=37 && LA13_0<=38)||(LA13_0>=42 && LA13_0<=44)||LA13_0==48||(LA13_0>=51 && LA13_0<=52)||(LA13_0>=55 && LA13_0<=57)) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt13) {
             	case 1 :
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1765:1: (lv_sta_2_0= ruleAbstractElement )
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1799:1: (lv_sta_2_0= ruleAbstractElement )
             	    {
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1765:1: (lv_sta_2_0= ruleAbstractElement )
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1766:3: lv_sta_2_0= ruleAbstractElement
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1799:1: (lv_sta_2_0= ruleAbstractElement )
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1800:3: lv_sta_2_0= ruleAbstractElement
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getBlockAccess().getStaAbstractElementParserRuleCall_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAbstractElement_in_ruleBlock3950);
+            	    pushFollow(FOLLOW_ruleAbstractElement_in_ruleBlock4106);
             	    lv_sta_2_0=ruleAbstractElement();
 
             	    state._fsp--;
@@ -4240,11 +4336,11 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop13;
                 }
             } while (true);
 
-            otherlv_3=(Token)match(input,26,FOLLOW_26_in_ruleBlock3963); 
+            otherlv_3=(Token)match(input,26,FOLLOW_26_in_ruleBlock4119); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getBlockAccess().getRightCurlyBracketKeyword_3());
                 
@@ -4269,7 +4365,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBoolExpression"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1794:1: entryRuleBoolExpression returns [EObject current=null] : iv_ruleBoolExpression= ruleBoolExpression EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1828:1: entryRuleBoolExpression returns [EObject current=null] : iv_ruleBoolExpression= ruleBoolExpression EOF ;
     public final EObject entryRuleBoolExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4277,17 +4373,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1795:2: (iv_ruleBoolExpression= ruleBoolExpression EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1796:2: iv_ruleBoolExpression= ruleBoolExpression EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1829:2: (iv_ruleBoolExpression= ruleBoolExpression EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1830:2: iv_ruleBoolExpression= ruleBoolExpression EOF
             {
              newCompositeNode(grammarAccess.getBoolExpressionRule()); 
-            pushFollow(FOLLOW_ruleBoolExpression_in_entryRuleBoolExpression3999);
+            pushFollow(FOLLOW_ruleBoolExpression_in_entryRuleBoolExpression4155);
             iv_ruleBoolExpression=ruleBoolExpression();
 
             state._fsp--;
 
              current =iv_ruleBoolExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolExpression4009); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolExpression4165); 
 
             }
 
@@ -4305,7 +4401,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoolExpression"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1803:1: ruleBoolExpression returns [EObject current=null] : (this_TerminalBoolExpression_0= ruleTerminalBoolExpression ( () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) ) )? ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1837:1: ruleBoolExpression returns [EObject current=null] : (this_TerminalBoolExpression_0= ruleTerminalBoolExpression ( () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) ) )? ) ;
     public final EObject ruleBoolExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4318,16 +4414,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1806:28: ( (this_TerminalBoolExpression_0= ruleTerminalBoolExpression ( () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) ) )? ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1807:1: (this_TerminalBoolExpression_0= ruleTerminalBoolExpression ( () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) ) )? )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1840:28: ( (this_TerminalBoolExpression_0= ruleTerminalBoolExpression ( () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) ) )? ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1841:1: (this_TerminalBoolExpression_0= ruleTerminalBoolExpression ( () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) ) )? )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1807:1: (this_TerminalBoolExpression_0= ruleTerminalBoolExpression ( () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) ) )? )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1808:5: this_TerminalBoolExpression_0= ruleTerminalBoolExpression ( () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) ) )?
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1841:1: (this_TerminalBoolExpression_0= ruleTerminalBoolExpression ( () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) ) )? )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1842:5: this_TerminalBoolExpression_0= ruleTerminalBoolExpression ( () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) ) )?
             {
              
                     newCompositeNode(grammarAccess.getBoolExpressionAccess().getTerminalBoolExpressionParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleTerminalBoolExpression_in_ruleBoolExpression4056);
+            pushFollow(FOLLOW_ruleTerminalBoolExpression_in_ruleBoolExpression4212);
             this_TerminalBoolExpression_0=ruleTerminalBoolExpression();
 
             state._fsp--;
@@ -4336,19 +4432,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     current = this_TerminalBoolExpression_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1816:1: ( () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) ) )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1850:1: ( () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) ) )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA15_0==RULE_LOGIC_WORD) ) {
-                alt15=1;
+            if ( (LA14_0==RULE_LOGIC_WORD) ) {
+                alt14=1;
             }
-            switch (alt15) {
+            switch (alt14) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1816:2: () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1850:2: () ( (lv_op_2_0= RULE_LOGIC_WORD ) ) ( (lv_right_3_0= ruleBoolExpression ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1816:2: ()
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1817:5: 
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1850:2: ()
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1851:5: 
                     {
 
                             current = forceCreateModelElementAndSet(
@@ -4358,13 +4454,13 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1822:2: ( (lv_op_2_0= RULE_LOGIC_WORD ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1823:1: (lv_op_2_0= RULE_LOGIC_WORD )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1856:2: ( (lv_op_2_0= RULE_LOGIC_WORD ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1857:1: (lv_op_2_0= RULE_LOGIC_WORD )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1823:1: (lv_op_2_0= RULE_LOGIC_WORD )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1824:3: lv_op_2_0= RULE_LOGIC_WORD
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1857:1: (lv_op_2_0= RULE_LOGIC_WORD )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1858:3: lv_op_2_0= RULE_LOGIC_WORD
                     {
-                    lv_op_2_0=(Token)match(input,RULE_LOGIC_WORD,FOLLOW_RULE_LOGIC_WORD_in_ruleBoolExpression4082); 
+                    lv_op_2_0=(Token)match(input,RULE_LOGIC_WORD,FOLLOW_RULE_LOGIC_WORD_in_ruleBoolExpression4238); 
 
                     			newLeafNode(lv_op_2_0, grammarAccess.getBoolExpressionAccess().getOpLOGIC_WORDTerminalRuleCall_1_1_0()); 
                     		
@@ -4384,16 +4480,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1840:2: ( (lv_right_3_0= ruleBoolExpression ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1841:1: (lv_right_3_0= ruleBoolExpression )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1874:2: ( (lv_right_3_0= ruleBoolExpression ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1875:1: (lv_right_3_0= ruleBoolExpression )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1841:1: (lv_right_3_0= ruleBoolExpression )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1842:3: lv_right_3_0= ruleBoolExpression
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1875:1: (lv_right_3_0= ruleBoolExpression )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1876:3: lv_right_3_0= ruleBoolExpression
                     {
                      
                     	        newCompositeNode(grammarAccess.getBoolExpressionAccess().getRightBoolExpressionParserRuleCall_1_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleBoolExpression_in_ruleBoolExpression4108);
+                    pushFollow(FOLLOW_ruleBoolExpression_in_ruleBoolExpression4264);
                     lv_right_3_0=ruleBoolExpression();
 
                     state._fsp--;
@@ -4442,7 +4538,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTerminalBoolExpression"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1866:1: entryRuleTerminalBoolExpression returns [EObject current=null] : iv_ruleTerminalBoolExpression= ruleTerminalBoolExpression EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1900:1: entryRuleTerminalBoolExpression returns [EObject current=null] : iv_ruleTerminalBoolExpression= ruleTerminalBoolExpression EOF ;
     public final EObject entryRuleTerminalBoolExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4450,17 +4546,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1867:2: (iv_ruleTerminalBoolExpression= ruleTerminalBoolExpression EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1868:2: iv_ruleTerminalBoolExpression= ruleTerminalBoolExpression EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1901:2: (iv_ruleTerminalBoolExpression= ruleTerminalBoolExpression EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1902:2: iv_ruleTerminalBoolExpression= ruleTerminalBoolExpression EOF
             {
              newCompositeNode(grammarAccess.getTerminalBoolExpressionRule()); 
-            pushFollow(FOLLOW_ruleTerminalBoolExpression_in_entryRuleTerminalBoolExpression4146);
+            pushFollow(FOLLOW_ruleTerminalBoolExpression_in_entryRuleTerminalBoolExpression4302);
             iv_ruleTerminalBoolExpression=ruleTerminalBoolExpression();
 
             state._fsp--;
 
              current =iv_ruleTerminalBoolExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTerminalBoolExpression4156); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTerminalBoolExpression4312); 
 
             }
 
@@ -4478,7 +4574,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTerminalBoolExpression"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1875:1: ruleTerminalBoolExpression returns [EObject current=null] : (this_BoolLiteral_0= ruleBoolLiteral | this_CompareExpression_1= ruleCompareExpression | this_NegExpression_2= ruleNegExpression | this_Literal_3= ruleLiteral | this_Brackets_4= ruleBrackets | this_CALLSTATUS_5= ruleCALLSTATUS ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1909:1: ruleTerminalBoolExpression returns [EObject current=null] : (this_BoolLiteral_0= ruleBoolLiteral | this_CompareExpression_1= ruleCompareExpression | this_NegExpression_2= ruleNegExpression | this_Literal_3= ruleLiteral | this_Brackets_4= ruleBrackets | this_CALLSTATUS_5= ruleCALLSTATUS ) ;
     public final EObject ruleTerminalBoolExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4498,20 +4594,20 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1878:28: ( (this_BoolLiteral_0= ruleBoolLiteral | this_CompareExpression_1= ruleCompareExpression | this_NegExpression_2= ruleNegExpression | this_Literal_3= ruleLiteral | this_Brackets_4= ruleBrackets | this_CALLSTATUS_5= ruleCALLSTATUS ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1879:1: (this_BoolLiteral_0= ruleBoolLiteral | this_CompareExpression_1= ruleCompareExpression | this_NegExpression_2= ruleNegExpression | this_Literal_3= ruleLiteral | this_Brackets_4= ruleBrackets | this_CALLSTATUS_5= ruleCALLSTATUS )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1912:28: ( (this_BoolLiteral_0= ruleBoolLiteral | this_CompareExpression_1= ruleCompareExpression | this_NegExpression_2= ruleNegExpression | this_Literal_3= ruleLiteral | this_Brackets_4= ruleBrackets | this_CALLSTATUS_5= ruleCALLSTATUS ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1913:1: (this_BoolLiteral_0= ruleBoolLiteral | this_CompareExpression_1= ruleCompareExpression | this_NegExpression_2= ruleNegExpression | this_Literal_3= ruleLiteral | this_Brackets_4= ruleBrackets | this_CALLSTATUS_5= ruleCALLSTATUS )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1879:1: (this_BoolLiteral_0= ruleBoolLiteral | this_CompareExpression_1= ruleCompareExpression | this_NegExpression_2= ruleNegExpression | this_Literal_3= ruleLiteral | this_Brackets_4= ruleBrackets | this_CALLSTATUS_5= ruleCALLSTATUS )
-            int alt16=6;
-            alt16 = dfa16.predict(input);
-            switch (alt16) {
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1913:1: (this_BoolLiteral_0= ruleBoolLiteral | this_CompareExpression_1= ruleCompareExpression | this_NegExpression_2= ruleNegExpression | this_Literal_3= ruleLiteral | this_Brackets_4= ruleBrackets | this_CALLSTATUS_5= ruleCALLSTATUS )
+            int alt15=6;
+            alt15 = dfa15.predict(input);
+            switch (alt15) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1880:5: this_BoolLiteral_0= ruleBoolLiteral
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1914:5: this_BoolLiteral_0= ruleBoolLiteral
                     {
                      
                             newCompositeNode(grammarAccess.getTerminalBoolExpressionAccess().getBoolLiteralParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleBoolLiteral_in_ruleTerminalBoolExpression4203);
+                    pushFollow(FOLLOW_ruleBoolLiteral_in_ruleTerminalBoolExpression4359);
                     this_BoolLiteral_0=ruleBoolLiteral();
 
                     state._fsp--;
@@ -4524,12 +4620,12 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1890:5: this_CompareExpression_1= ruleCompareExpression
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1924:5: this_CompareExpression_1= ruleCompareExpression
                     {
                      
                             newCompositeNode(grammarAccess.getTerminalBoolExpressionAccess().getCompareExpressionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleCompareExpression_in_ruleTerminalBoolExpression4230);
+                    pushFollow(FOLLOW_ruleCompareExpression_in_ruleTerminalBoolExpression4386);
                     this_CompareExpression_1=ruleCompareExpression();
 
                     state._fsp--;
@@ -4542,12 +4638,12 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1900:5: this_NegExpression_2= ruleNegExpression
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1934:5: this_NegExpression_2= ruleNegExpression
                     {
                      
                             newCompositeNode(grammarAccess.getTerminalBoolExpressionAccess().getNegExpressionParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleNegExpression_in_ruleTerminalBoolExpression4257);
+                    pushFollow(FOLLOW_ruleNegExpression_in_ruleTerminalBoolExpression4413);
                     this_NegExpression_2=ruleNegExpression();
 
                     state._fsp--;
@@ -4560,12 +4656,12 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1910:5: this_Literal_3= ruleLiteral
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1944:5: this_Literal_3= ruleLiteral
                     {
                      
                             newCompositeNode(grammarAccess.getTerminalBoolExpressionAccess().getLiteralParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleLiteral_in_ruleTerminalBoolExpression4284);
+                    pushFollow(FOLLOW_ruleLiteral_in_ruleTerminalBoolExpression4440);
                     this_Literal_3=ruleLiteral();
 
                     state._fsp--;
@@ -4578,12 +4674,12 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1920:5: this_Brackets_4= ruleBrackets
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1954:5: this_Brackets_4= ruleBrackets
                     {
                      
                             newCompositeNode(grammarAccess.getTerminalBoolExpressionAccess().getBracketsParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleBrackets_in_ruleTerminalBoolExpression4311);
+                    pushFollow(FOLLOW_ruleBrackets_in_ruleTerminalBoolExpression4467);
                     this_Brackets_4=ruleBrackets();
 
                     state._fsp--;
@@ -4596,12 +4692,12 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1930:5: this_CALLSTATUS_5= ruleCALLSTATUS
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1964:5: this_CALLSTATUS_5= ruleCALLSTATUS
                     {
                      
                             newCompositeNode(grammarAccess.getTerminalBoolExpressionAccess().getCALLSTATUSParserRuleCall_5()); 
                         
-                    pushFollow(FOLLOW_ruleCALLSTATUS_in_ruleTerminalBoolExpression4338);
+                    pushFollow(FOLLOW_ruleCALLSTATUS_in_ruleTerminalBoolExpression4494);
                     this_CALLSTATUS_5=ruleCALLSTATUS();
 
                     state._fsp--;
@@ -4634,7 +4730,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBrackets"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1946:1: entryRuleBrackets returns [EObject current=null] : iv_ruleBrackets= ruleBrackets EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1980:1: entryRuleBrackets returns [EObject current=null] : iv_ruleBrackets= ruleBrackets EOF ;
     public final EObject entryRuleBrackets() throws RecognitionException {
         EObject current = null;
 
@@ -4642,17 +4738,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1947:2: (iv_ruleBrackets= ruleBrackets EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1948:2: iv_ruleBrackets= ruleBrackets EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1981:2: (iv_ruleBrackets= ruleBrackets EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1982:2: iv_ruleBrackets= ruleBrackets EOF
             {
              newCompositeNode(grammarAccess.getBracketsRule()); 
-            pushFollow(FOLLOW_ruleBrackets_in_entryRuleBrackets4373);
+            pushFollow(FOLLOW_ruleBrackets_in_entryRuleBrackets4529);
             iv_ruleBrackets=ruleBrackets();
 
             state._fsp--;
 
              current =iv_ruleBrackets; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBrackets4383); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBrackets4539); 
 
             }
 
@@ -4670,7 +4766,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBrackets"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1955:1: ruleBrackets returns [EObject current=null] : ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleBoolExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1989:1: ruleBrackets returns [EObject current=null] : ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleBoolExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) ) ;
     public final EObject ruleBrackets() throws RecognitionException {
         EObject current = null;
 
@@ -4682,19 +4778,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1958:28: ( ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleBoolExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1959:1: ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleBoolExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1992:28: ( ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleBoolExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1993:1: ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleBoolExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1959:1: ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleBoolExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1959:2: ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleBoolExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1993:1: ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleBoolExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1993:2: ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleBoolExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1959:2: ( (lv_open_0_0= RULE_OBRACKET ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1960:1: (lv_open_0_0= RULE_OBRACKET )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1993:2: ( (lv_open_0_0= RULE_OBRACKET ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1994:1: (lv_open_0_0= RULE_OBRACKET )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1960:1: (lv_open_0_0= RULE_OBRACKET )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1961:3: lv_open_0_0= RULE_OBRACKET
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1994:1: (lv_open_0_0= RULE_OBRACKET )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1995:3: lv_open_0_0= RULE_OBRACKET
             {
-            lv_open_0_0=(Token)match(input,RULE_OBRACKET,FOLLOW_RULE_OBRACKET_in_ruleBrackets4425); 
+            lv_open_0_0=(Token)match(input,RULE_OBRACKET,FOLLOW_RULE_OBRACKET_in_ruleBrackets4581); 
 
             			newLeafNode(lv_open_0_0, grammarAccess.getBracketsAccess().getOpenOBRACKETTerminalRuleCall_0_0()); 
             		
@@ -4714,16 +4810,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1977:2: ( (lv_obj_1_0= ruleBoolExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1978:1: (lv_obj_1_0= ruleBoolExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2011:2: ( (lv_obj_1_0= ruleBoolExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2012:1: (lv_obj_1_0= ruleBoolExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1978:1: (lv_obj_1_0= ruleBoolExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1979:3: lv_obj_1_0= ruleBoolExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2012:1: (lv_obj_1_0= ruleBoolExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2013:3: lv_obj_1_0= ruleBoolExpression
             {
              
             	        newCompositeNode(grammarAccess.getBracketsAccess().getObjBoolExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleBoolExpression_in_ruleBrackets4451);
+            pushFollow(FOLLOW_ruleBoolExpression_in_ruleBrackets4607);
             lv_obj_1_0=ruleBoolExpression();
 
             state._fsp--;
@@ -4745,13 +4841,13 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1995:2: ( (lv_close_2_0= RULE_CBRACKET ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1996:1: (lv_close_2_0= RULE_CBRACKET )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2029:2: ( (lv_close_2_0= RULE_CBRACKET ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2030:1: (lv_close_2_0= RULE_CBRACKET )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1996:1: (lv_close_2_0= RULE_CBRACKET )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1997:3: lv_close_2_0= RULE_CBRACKET
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2030:1: (lv_close_2_0= RULE_CBRACKET )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2031:3: lv_close_2_0= RULE_CBRACKET
             {
-            lv_close_2_0=(Token)match(input,RULE_CBRACKET,FOLLOW_RULE_CBRACKET_in_ruleBrackets4468); 
+            lv_close_2_0=(Token)match(input,RULE_CBRACKET,FOLLOW_RULE_CBRACKET_in_ruleBrackets4624); 
 
             			newLeafNode(lv_close_2_0, grammarAccess.getBracketsAccess().getCloseCBRACKETTerminalRuleCall_2_0()); 
             		
@@ -4792,7 +4888,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCompareExpression"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2021:1: entryRuleCompareExpression returns [EObject current=null] : iv_ruleCompareExpression= ruleCompareExpression EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2055:1: entryRuleCompareExpression returns [EObject current=null] : iv_ruleCompareExpression= ruleCompareExpression EOF ;
     public final EObject entryRuleCompareExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4800,17 +4896,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2022:2: (iv_ruleCompareExpression= ruleCompareExpression EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2023:2: iv_ruleCompareExpression= ruleCompareExpression EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2056:2: (iv_ruleCompareExpression= ruleCompareExpression EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2057:2: iv_ruleCompareExpression= ruleCompareExpression EOF
             {
              newCompositeNode(grammarAccess.getCompareExpressionRule()); 
-            pushFollow(FOLLOW_ruleCompareExpression_in_entryRuleCompareExpression4509);
+            pushFollow(FOLLOW_ruleCompareExpression_in_entryRuleCompareExpression4665);
             iv_ruleCompareExpression=ruleCompareExpression();
 
             state._fsp--;
 
              current =iv_ruleCompareExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCompareExpression4519); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCompareExpression4675); 
 
             }
 
@@ -4828,7 +4924,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompareExpression"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2030:1: ruleCompareExpression returns [EObject current=null] : ( ( (lv_left_0_0= ruleLiteralAbs ) ) ( (lv_op_1_0= RULE_COMPARE ) ) ( (lv_right_2_0= ruleLiteralAbs ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2064:1: ruleCompareExpression returns [EObject current=null] : ( ( (lv_left_0_0= ruleLiteralAbs ) ) ( (lv_op_1_0= RULE_COMPARE ) ) ( (lv_right_2_0= ruleLiteralAbs ) ) ) ;
     public final EObject ruleCompareExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4841,22 +4937,22 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2033:28: ( ( ( (lv_left_0_0= ruleLiteralAbs ) ) ( (lv_op_1_0= RULE_COMPARE ) ) ( (lv_right_2_0= ruleLiteralAbs ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2034:1: ( ( (lv_left_0_0= ruleLiteralAbs ) ) ( (lv_op_1_0= RULE_COMPARE ) ) ( (lv_right_2_0= ruleLiteralAbs ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2067:28: ( ( ( (lv_left_0_0= ruleLiteralAbs ) ) ( (lv_op_1_0= RULE_COMPARE ) ) ( (lv_right_2_0= ruleLiteralAbs ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2068:1: ( ( (lv_left_0_0= ruleLiteralAbs ) ) ( (lv_op_1_0= RULE_COMPARE ) ) ( (lv_right_2_0= ruleLiteralAbs ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2034:1: ( ( (lv_left_0_0= ruleLiteralAbs ) ) ( (lv_op_1_0= RULE_COMPARE ) ) ( (lv_right_2_0= ruleLiteralAbs ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2034:2: ( (lv_left_0_0= ruleLiteralAbs ) ) ( (lv_op_1_0= RULE_COMPARE ) ) ( (lv_right_2_0= ruleLiteralAbs ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2068:1: ( ( (lv_left_0_0= ruleLiteralAbs ) ) ( (lv_op_1_0= RULE_COMPARE ) ) ( (lv_right_2_0= ruleLiteralAbs ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2068:2: ( (lv_left_0_0= ruleLiteralAbs ) ) ( (lv_op_1_0= RULE_COMPARE ) ) ( (lv_right_2_0= ruleLiteralAbs ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2034:2: ( (lv_left_0_0= ruleLiteralAbs ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2035:1: (lv_left_0_0= ruleLiteralAbs )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2068:2: ( (lv_left_0_0= ruleLiteralAbs ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2069:1: (lv_left_0_0= ruleLiteralAbs )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2035:1: (lv_left_0_0= ruleLiteralAbs )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2036:3: lv_left_0_0= ruleLiteralAbs
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2069:1: (lv_left_0_0= ruleLiteralAbs )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2070:3: lv_left_0_0= ruleLiteralAbs
             {
              
             	        newCompositeNode(grammarAccess.getCompareExpressionAccess().getLeftLiteralAbsParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleLiteralAbs_in_ruleCompareExpression4565);
+            pushFollow(FOLLOW_ruleLiteralAbs_in_ruleCompareExpression4721);
             lv_left_0_0=ruleLiteralAbs();
 
             state._fsp--;
@@ -4878,13 +4974,13 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2052:2: ( (lv_op_1_0= RULE_COMPARE ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2053:1: (lv_op_1_0= RULE_COMPARE )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2086:2: ( (lv_op_1_0= RULE_COMPARE ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2087:1: (lv_op_1_0= RULE_COMPARE )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2053:1: (lv_op_1_0= RULE_COMPARE )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2054:3: lv_op_1_0= RULE_COMPARE
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2087:1: (lv_op_1_0= RULE_COMPARE )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2088:3: lv_op_1_0= RULE_COMPARE
             {
-            lv_op_1_0=(Token)match(input,RULE_COMPARE,FOLLOW_RULE_COMPARE_in_ruleCompareExpression4582); 
+            lv_op_1_0=(Token)match(input,RULE_COMPARE,FOLLOW_RULE_COMPARE_in_ruleCompareExpression4738); 
 
             			newLeafNode(lv_op_1_0, grammarAccess.getCompareExpressionAccess().getOpCOMPARETerminalRuleCall_1_0()); 
             		
@@ -4904,16 +5000,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2070:2: ( (lv_right_2_0= ruleLiteralAbs ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2071:1: (lv_right_2_0= ruleLiteralAbs )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2104:2: ( (lv_right_2_0= ruleLiteralAbs ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2105:1: (lv_right_2_0= ruleLiteralAbs )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2071:1: (lv_right_2_0= ruleLiteralAbs )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2072:3: lv_right_2_0= ruleLiteralAbs
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2105:1: (lv_right_2_0= ruleLiteralAbs )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2106:3: lv_right_2_0= ruleLiteralAbs
             {
              
             	        newCompositeNode(grammarAccess.getCompareExpressionAccess().getRightLiteralAbsParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleLiteralAbs_in_ruleCompareExpression4608);
+            pushFollow(FOLLOW_ruleLiteralAbs_in_ruleCompareExpression4764);
             lv_right_2_0=ruleLiteralAbs();
 
             state._fsp--;
@@ -4956,7 +5052,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNegExpression"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2096:1: entryRuleNegExpression returns [EObject current=null] : iv_ruleNegExpression= ruleNegExpression EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2130:1: entryRuleNegExpression returns [EObject current=null] : iv_ruleNegExpression= ruleNegExpression EOF ;
     public final EObject entryRuleNegExpression() throws RecognitionException {
         EObject current = null;
 
@@ -4964,17 +5060,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2097:2: (iv_ruleNegExpression= ruleNegExpression EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2098:2: iv_ruleNegExpression= ruleNegExpression EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2131:2: (iv_ruleNegExpression= ruleNegExpression EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2132:2: iv_ruleNegExpression= ruleNegExpression EOF
             {
              newCompositeNode(grammarAccess.getNegExpressionRule()); 
-            pushFollow(FOLLOW_ruleNegExpression_in_entryRuleNegExpression4644);
+            pushFollow(FOLLOW_ruleNegExpression_in_entryRuleNegExpression4800);
             iv_ruleNegExpression=ruleNegExpression();
 
             state._fsp--;
 
              current =iv_ruleNegExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNegExpression4654); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNegExpression4810); 
 
             }
 
@@ -4992,7 +5088,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNegExpression"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2105:1: ruleNegExpression returns [EObject current=null] : ( ( (lv_op_0_0= RULE_NEGATION ) ) ( (lv_obj_1_0= ruleTerminalBoolExpression ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2139:1: ruleNegExpression returns [EObject current=null] : ( ( (lv_op_0_0= RULE_NEGATION ) ) ( (lv_obj_1_0= ruleTerminalBoolExpression ) ) ) ;
     public final EObject ruleNegExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5003,19 +5099,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2108:28: ( ( ( (lv_op_0_0= RULE_NEGATION ) ) ( (lv_obj_1_0= ruleTerminalBoolExpression ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2109:1: ( ( (lv_op_0_0= RULE_NEGATION ) ) ( (lv_obj_1_0= ruleTerminalBoolExpression ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2142:28: ( ( ( (lv_op_0_0= RULE_NEGATION ) ) ( (lv_obj_1_0= ruleTerminalBoolExpression ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2143:1: ( ( (lv_op_0_0= RULE_NEGATION ) ) ( (lv_obj_1_0= ruleTerminalBoolExpression ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2109:1: ( ( (lv_op_0_0= RULE_NEGATION ) ) ( (lv_obj_1_0= ruleTerminalBoolExpression ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2109:2: ( (lv_op_0_0= RULE_NEGATION ) ) ( (lv_obj_1_0= ruleTerminalBoolExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2143:1: ( ( (lv_op_0_0= RULE_NEGATION ) ) ( (lv_obj_1_0= ruleTerminalBoolExpression ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2143:2: ( (lv_op_0_0= RULE_NEGATION ) ) ( (lv_obj_1_0= ruleTerminalBoolExpression ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2109:2: ( (lv_op_0_0= RULE_NEGATION ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2110:1: (lv_op_0_0= RULE_NEGATION )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2143:2: ( (lv_op_0_0= RULE_NEGATION ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2144:1: (lv_op_0_0= RULE_NEGATION )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2110:1: (lv_op_0_0= RULE_NEGATION )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2111:3: lv_op_0_0= RULE_NEGATION
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2144:1: (lv_op_0_0= RULE_NEGATION )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2145:3: lv_op_0_0= RULE_NEGATION
             {
-            lv_op_0_0=(Token)match(input,RULE_NEGATION,FOLLOW_RULE_NEGATION_in_ruleNegExpression4696); 
+            lv_op_0_0=(Token)match(input,RULE_NEGATION,FOLLOW_RULE_NEGATION_in_ruleNegExpression4852); 
 
             			newLeafNode(lv_op_0_0, grammarAccess.getNegExpressionAccess().getOpNEGATIONTerminalRuleCall_0_0()); 
             		
@@ -5035,16 +5131,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2127:2: ( (lv_obj_1_0= ruleTerminalBoolExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2128:1: (lv_obj_1_0= ruleTerminalBoolExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2161:2: ( (lv_obj_1_0= ruleTerminalBoolExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2162:1: (lv_obj_1_0= ruleTerminalBoolExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2128:1: (lv_obj_1_0= ruleTerminalBoolExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2129:3: lv_obj_1_0= ruleTerminalBoolExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2162:1: (lv_obj_1_0= ruleTerminalBoolExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2163:3: lv_obj_1_0= ruleTerminalBoolExpression
             {
              
             	        newCompositeNode(grammarAccess.getNegExpressionAccess().getObjTerminalBoolExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleTerminalBoolExpression_in_ruleNegExpression4722);
+            pushFollow(FOLLOW_ruleTerminalBoolExpression_in_ruleNegExpression4878);
             lv_obj_1_0=ruleTerminalBoolExpression();
 
             state._fsp--;
@@ -5087,7 +5183,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMathExpression"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2153:1: entryRuleMathExpression returns [EObject current=null] : iv_ruleMathExpression= ruleMathExpression EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2187:1: entryRuleMathExpression returns [EObject current=null] : iv_ruleMathExpression= ruleMathExpression EOF ;
     public final EObject entryRuleMathExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5095,17 +5191,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2154:2: (iv_ruleMathExpression= ruleMathExpression EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2155:2: iv_ruleMathExpression= ruleMathExpression EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2188:2: (iv_ruleMathExpression= ruleMathExpression EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2189:2: iv_ruleMathExpression= ruleMathExpression EOF
             {
              newCompositeNode(grammarAccess.getMathExpressionRule()); 
-            pushFollow(FOLLOW_ruleMathExpression_in_entryRuleMathExpression4758);
+            pushFollow(FOLLOW_ruleMathExpression_in_entryRuleMathExpression4914);
             iv_ruleMathExpression=ruleMathExpression();
 
             state._fsp--;
 
              current =iv_ruleMathExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMathExpression4768); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMathExpression4924); 
 
             }
 
@@ -5123,7 +5219,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMathExpression"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2162:1: ruleMathExpression returns [EObject current=null] : (this_MathTerminal_0= ruleMathTerminal ( () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) ) )? ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2196:1: ruleMathExpression returns [EObject current=null] : (this_MathTerminal_0= ruleMathTerminal ( () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) ) )? ) ;
     public final EObject ruleMathExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5136,16 +5232,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2165:28: ( (this_MathTerminal_0= ruleMathTerminal ( () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) ) )? ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2166:1: (this_MathTerminal_0= ruleMathTerminal ( () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) ) )? )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2199:28: ( (this_MathTerminal_0= ruleMathTerminal ( () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) ) )? ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2200:1: (this_MathTerminal_0= ruleMathTerminal ( () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) ) )? )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2166:1: (this_MathTerminal_0= ruleMathTerminal ( () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) ) )? )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2167:5: this_MathTerminal_0= ruleMathTerminal ( () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) ) )?
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2200:1: (this_MathTerminal_0= ruleMathTerminal ( () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) ) )? )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2201:5: this_MathTerminal_0= ruleMathTerminal ( () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) ) )?
             {
              
                     newCompositeNode(grammarAccess.getMathExpressionAccess().getMathTerminalParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleMathTerminal_in_ruleMathExpression4815);
+            pushFollow(FOLLOW_ruleMathTerminal_in_ruleMathExpression4971);
             this_MathTerminal_0=ruleMathTerminal();
 
             state._fsp--;
@@ -5154,19 +5250,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     current = this_MathTerminal_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2175:1: ( () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) ) )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2209:1: ( () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) ) )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA17_0==RULE_MATH) ) {
-                alt17=1;
+            if ( (LA16_0==RULE_MATH) ) {
+                alt16=1;
             }
-            switch (alt17) {
+            switch (alt16) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2175:2: () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2209:2: () ( (lv_op_2_0= RULE_MATH ) ) ( (lv_right_3_0= ruleMathExpression ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2175:2: ()
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2176:5: 
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2209:2: ()
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2210:5: 
                     {
 
                             current = forceCreateModelElementAndSet(
@@ -5176,13 +5272,13 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2181:2: ( (lv_op_2_0= RULE_MATH ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2182:1: (lv_op_2_0= RULE_MATH )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2215:2: ( (lv_op_2_0= RULE_MATH ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2216:1: (lv_op_2_0= RULE_MATH )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2182:1: (lv_op_2_0= RULE_MATH )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2183:3: lv_op_2_0= RULE_MATH
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2216:1: (lv_op_2_0= RULE_MATH )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2217:3: lv_op_2_0= RULE_MATH
                     {
-                    lv_op_2_0=(Token)match(input,RULE_MATH,FOLLOW_RULE_MATH_in_ruleMathExpression4841); 
+                    lv_op_2_0=(Token)match(input,RULE_MATH,FOLLOW_RULE_MATH_in_ruleMathExpression4997); 
 
                     			newLeafNode(lv_op_2_0, grammarAccess.getMathExpressionAccess().getOpMATHTerminalRuleCall_1_1_0()); 
                     		
@@ -5202,16 +5298,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2199:2: ( (lv_right_3_0= ruleMathExpression ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2200:1: (lv_right_3_0= ruleMathExpression )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2233:2: ( (lv_right_3_0= ruleMathExpression ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2234:1: (lv_right_3_0= ruleMathExpression )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2200:1: (lv_right_3_0= ruleMathExpression )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2201:3: lv_right_3_0= ruleMathExpression
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2234:1: (lv_right_3_0= ruleMathExpression )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2235:3: lv_right_3_0= ruleMathExpression
                     {
                      
                     	        newCompositeNode(grammarAccess.getMathExpressionAccess().getRightMathExpressionParserRuleCall_1_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleMathExpression_in_ruleMathExpression4867);
+                    pushFollow(FOLLOW_ruleMathExpression_in_ruleMathExpression5023);
                     lv_right_3_0=ruleMathExpression();
 
                     state._fsp--;
@@ -5260,7 +5356,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMathTerminal"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2225:1: entryRuleMathTerminal returns [EObject current=null] : iv_ruleMathTerminal= ruleMathTerminal EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2259:1: entryRuleMathTerminal returns [EObject current=null] : iv_ruleMathTerminal= ruleMathTerminal EOF ;
     public final EObject entryRuleMathTerminal() throws RecognitionException {
         EObject current = null;
 
@@ -5268,17 +5364,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2226:2: (iv_ruleMathTerminal= ruleMathTerminal EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2227:2: iv_ruleMathTerminal= ruleMathTerminal EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2260:2: (iv_ruleMathTerminal= ruleMathTerminal EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2261:2: iv_ruleMathTerminal= ruleMathTerminal EOF
             {
              newCompositeNode(grammarAccess.getMathTerminalRule()); 
-            pushFollow(FOLLOW_ruleMathTerminal_in_entryRuleMathTerminal4905);
+            pushFollow(FOLLOW_ruleMathTerminal_in_entryRuleMathTerminal5061);
             iv_ruleMathTerminal=ruleMathTerminal();
 
             state._fsp--;
 
              current =iv_ruleMathTerminal; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMathTerminal4915); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMathTerminal5071); 
 
             }
 
@@ -5296,7 +5392,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMathTerminal"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2234:1: ruleMathTerminal returns [EObject current=null] : (this_MathBrackets_0= ruleMathBrackets | this_Literal_1= ruleLiteral | this_NumLiteral_2= ruleNumLiteral ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2268:1: ruleMathTerminal returns [EObject current=null] : (this_MathBrackets_0= ruleMathBrackets | this_Literal_1= ruleLiteral | this_NumLiteral_2= ruleNumLiteral ) ;
     public final EObject ruleMathTerminal() throws RecognitionException {
         EObject current = null;
 
@@ -5310,48 +5406,51 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2237:28: ( (this_MathBrackets_0= ruleMathBrackets | this_Literal_1= ruleLiteral | this_NumLiteral_2= ruleNumLiteral ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2238:1: (this_MathBrackets_0= ruleMathBrackets | this_Literal_1= ruleLiteral | this_NumLiteral_2= ruleNumLiteral )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2271:28: ( (this_MathBrackets_0= ruleMathBrackets | this_Literal_1= ruleLiteral | this_NumLiteral_2= ruleNumLiteral ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2272:1: (this_MathBrackets_0= ruleMathBrackets | this_Literal_1= ruleLiteral | this_NumLiteral_2= ruleNumLiteral )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2238:1: (this_MathBrackets_0= ruleMathBrackets | this_Literal_1= ruleLiteral | this_NumLiteral_2= ruleNumLiteral )
-            int alt18=3;
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2272:1: (this_MathBrackets_0= ruleMathBrackets | this_Literal_1= ruleLiteral | this_NumLiteral_2= ruleNumLiteral )
+            int alt17=3;
             switch ( input.LA(1) ) {
             case RULE_OBRACKET:
                 {
-                alt18=1;
+                alt17=1;
                 }
                 break;
             case RULE_ID:
             case RULE_NULL:
-            case 62:
             case 63:
             case 64:
             case 65:
+            case 66:
+            case 67:
+            case 68:
+            case 69:
                 {
-                alt18=2;
+                alt17=2;
                 }
                 break;
             case RULE_INT:
             case RULE_DOUBLE:
                 {
-                alt18=3;
+                alt17=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
+                    new NoViableAltException("", 17, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt18) {
+            switch (alt17) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2239:5: this_MathBrackets_0= ruleMathBrackets
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2273:5: this_MathBrackets_0= ruleMathBrackets
                     {
                      
                             newCompositeNode(grammarAccess.getMathTerminalAccess().getMathBracketsParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleMathBrackets_in_ruleMathTerminal4962);
+                    pushFollow(FOLLOW_ruleMathBrackets_in_ruleMathTerminal5118);
                     this_MathBrackets_0=ruleMathBrackets();
 
                     state._fsp--;
@@ -5364,12 +5463,12 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2249:5: this_Literal_1= ruleLiteral
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2283:5: this_Literal_1= ruleLiteral
                     {
                      
                             newCompositeNode(grammarAccess.getMathTerminalAccess().getLiteralParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleLiteral_in_ruleMathTerminal4989);
+                    pushFollow(FOLLOW_ruleLiteral_in_ruleMathTerminal5145);
                     this_Literal_1=ruleLiteral();
 
                     state._fsp--;
@@ -5382,12 +5481,12 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2259:5: this_NumLiteral_2= ruleNumLiteral
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2293:5: this_NumLiteral_2= ruleNumLiteral
                     {
                      
                             newCompositeNode(grammarAccess.getMathTerminalAccess().getNumLiteralParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleNumLiteral_in_ruleMathTerminal5016);
+                    pushFollow(FOLLOW_ruleNumLiteral_in_ruleMathTerminal5172);
                     this_NumLiteral_2=ruleNumLiteral();
 
                     state._fsp--;
@@ -5420,7 +5519,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMathBrackets"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2275:1: entryRuleMathBrackets returns [EObject current=null] : iv_ruleMathBrackets= ruleMathBrackets EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2309:1: entryRuleMathBrackets returns [EObject current=null] : iv_ruleMathBrackets= ruleMathBrackets EOF ;
     public final EObject entryRuleMathBrackets() throws RecognitionException {
         EObject current = null;
 
@@ -5428,17 +5527,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2276:2: (iv_ruleMathBrackets= ruleMathBrackets EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2277:2: iv_ruleMathBrackets= ruleMathBrackets EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2310:2: (iv_ruleMathBrackets= ruleMathBrackets EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2311:2: iv_ruleMathBrackets= ruleMathBrackets EOF
             {
              newCompositeNode(grammarAccess.getMathBracketsRule()); 
-            pushFollow(FOLLOW_ruleMathBrackets_in_entryRuleMathBrackets5051);
+            pushFollow(FOLLOW_ruleMathBrackets_in_entryRuleMathBrackets5207);
             iv_ruleMathBrackets=ruleMathBrackets();
 
             state._fsp--;
 
              current =iv_ruleMathBrackets; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMathBrackets5061); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMathBrackets5217); 
 
             }
 
@@ -5456,7 +5555,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMathBrackets"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2284:1: ruleMathBrackets returns [EObject current=null] : ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleMathExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2318:1: ruleMathBrackets returns [EObject current=null] : ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleMathExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) ) ;
     public final EObject ruleMathBrackets() throws RecognitionException {
         EObject current = null;
 
@@ -5468,19 +5567,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2287:28: ( ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleMathExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2288:1: ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleMathExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2321:28: ( ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleMathExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2322:1: ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleMathExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2288:1: ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleMathExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2288:2: ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleMathExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2322:1: ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleMathExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2322:2: ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleMathExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2288:2: ( (lv_open_0_0= RULE_OBRACKET ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2289:1: (lv_open_0_0= RULE_OBRACKET )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2322:2: ( (lv_open_0_0= RULE_OBRACKET ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2323:1: (lv_open_0_0= RULE_OBRACKET )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2289:1: (lv_open_0_0= RULE_OBRACKET )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2290:3: lv_open_0_0= RULE_OBRACKET
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2323:1: (lv_open_0_0= RULE_OBRACKET )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2324:3: lv_open_0_0= RULE_OBRACKET
             {
-            lv_open_0_0=(Token)match(input,RULE_OBRACKET,FOLLOW_RULE_OBRACKET_in_ruleMathBrackets5103); 
+            lv_open_0_0=(Token)match(input,RULE_OBRACKET,FOLLOW_RULE_OBRACKET_in_ruleMathBrackets5259); 
 
             			newLeafNode(lv_open_0_0, grammarAccess.getMathBracketsAccess().getOpenOBRACKETTerminalRuleCall_0_0()); 
             		
@@ -5500,16 +5599,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2306:2: ( (lv_obj_1_0= ruleMathExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2307:1: (lv_obj_1_0= ruleMathExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2340:2: ( (lv_obj_1_0= ruleMathExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2341:1: (lv_obj_1_0= ruleMathExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2307:1: (lv_obj_1_0= ruleMathExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2308:3: lv_obj_1_0= ruleMathExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2341:1: (lv_obj_1_0= ruleMathExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2342:3: lv_obj_1_0= ruleMathExpression
             {
              
             	        newCompositeNode(grammarAccess.getMathBracketsAccess().getObjMathExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleMathExpression_in_ruleMathBrackets5129);
+            pushFollow(FOLLOW_ruleMathExpression_in_ruleMathBrackets5285);
             lv_obj_1_0=ruleMathExpression();
 
             state._fsp--;
@@ -5531,13 +5630,13 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2324:2: ( (lv_close_2_0= RULE_CBRACKET ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2325:1: (lv_close_2_0= RULE_CBRACKET )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2358:2: ( (lv_close_2_0= RULE_CBRACKET ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2359:1: (lv_close_2_0= RULE_CBRACKET )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2325:1: (lv_close_2_0= RULE_CBRACKET )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2326:3: lv_close_2_0= RULE_CBRACKET
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2359:1: (lv_close_2_0= RULE_CBRACKET )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2360:3: lv_close_2_0= RULE_CBRACKET
             {
-            lv_close_2_0=(Token)match(input,RULE_CBRACKET,FOLLOW_RULE_CBRACKET_in_ruleMathBrackets5146); 
+            lv_close_2_0=(Token)match(input,RULE_CBRACKET,FOLLOW_RULE_CBRACKET_in_ruleMathBrackets5302); 
 
             			newLeafNode(lv_close_2_0, grammarAccess.getMathBracketsAccess().getCloseCBRACKETTerminalRuleCall_2_0()); 
             		
@@ -5578,7 +5677,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConcatenationExpression"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2350:1: entryRuleConcatenationExpression returns [EObject current=null] : iv_ruleConcatenationExpression= ruleConcatenationExpression EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2384:1: entryRuleConcatenationExpression returns [EObject current=null] : iv_ruleConcatenationExpression= ruleConcatenationExpression EOF ;
     public final EObject entryRuleConcatenationExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5586,17 +5685,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2351:2: (iv_ruleConcatenationExpression= ruleConcatenationExpression EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2352:2: iv_ruleConcatenationExpression= ruleConcatenationExpression EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2385:2: (iv_ruleConcatenationExpression= ruleConcatenationExpression EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2386:2: iv_ruleConcatenationExpression= ruleConcatenationExpression EOF
             {
              newCompositeNode(grammarAccess.getConcatenationExpressionRule()); 
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_entryRuleConcatenationExpression5187);
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_entryRuleConcatenationExpression5343);
             iv_ruleConcatenationExpression=ruleConcatenationExpression();
 
             state._fsp--;
 
              current =iv_ruleConcatenationExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConcatenationExpression5197); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConcatenationExpression5353); 
 
             }
 
@@ -5614,7 +5713,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConcatenationExpression"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2359:1: ruleConcatenationExpression returns [EObject current=null] : (this_ConcatenationTerminal_0= ruleConcatenationTerminal ( () ( (lv_op_2_0= '+' ) ) ( (lv_right_3_0= ruleConcatenationExpression ) ) )? ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2393:1: ruleConcatenationExpression returns [EObject current=null] : (this_ConcatenationTerminal_0= ruleConcatenationTerminal ( () ( (lv_op_2_0= RULE_CONCATENATION ) ) ( (lv_right_3_0= ruleConcatenationExpression ) ) )? ) ;
     public final EObject ruleConcatenationExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5627,16 +5726,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2362:28: ( (this_ConcatenationTerminal_0= ruleConcatenationTerminal ( () ( (lv_op_2_0= '+' ) ) ( (lv_right_3_0= ruleConcatenationExpression ) ) )? ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2363:1: (this_ConcatenationTerminal_0= ruleConcatenationTerminal ( () ( (lv_op_2_0= '+' ) ) ( (lv_right_3_0= ruleConcatenationExpression ) ) )? )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2396:28: ( (this_ConcatenationTerminal_0= ruleConcatenationTerminal ( () ( (lv_op_2_0= RULE_CONCATENATION ) ) ( (lv_right_3_0= ruleConcatenationExpression ) ) )? ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2397:1: (this_ConcatenationTerminal_0= ruleConcatenationTerminal ( () ( (lv_op_2_0= RULE_CONCATENATION ) ) ( (lv_right_3_0= ruleConcatenationExpression ) ) )? )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2363:1: (this_ConcatenationTerminal_0= ruleConcatenationTerminal ( () ( (lv_op_2_0= '+' ) ) ( (lv_right_3_0= ruleConcatenationExpression ) ) )? )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2364:5: this_ConcatenationTerminal_0= ruleConcatenationTerminal ( () ( (lv_op_2_0= '+' ) ) ( (lv_right_3_0= ruleConcatenationExpression ) ) )?
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2397:1: (this_ConcatenationTerminal_0= ruleConcatenationTerminal ( () ( (lv_op_2_0= RULE_CONCATENATION ) ) ( (lv_right_3_0= ruleConcatenationExpression ) ) )? )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2398:5: this_ConcatenationTerminal_0= ruleConcatenationTerminal ( () ( (lv_op_2_0= RULE_CONCATENATION ) ) ( (lv_right_3_0= ruleConcatenationExpression ) ) )?
             {
              
                     newCompositeNode(grammarAccess.getConcatenationExpressionAccess().getConcatenationTerminalParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleConcatenationTerminal_in_ruleConcatenationExpression5244);
+            pushFollow(FOLLOW_ruleConcatenationTerminal_in_ruleConcatenationExpression5400);
             this_ConcatenationTerminal_0=ruleConcatenationTerminal();
 
             state._fsp--;
@@ -5645,19 +5744,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     current = this_ConcatenationTerminal_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2372:1: ( () ( (lv_op_2_0= '+' ) ) ( (lv_right_3_0= ruleConcatenationExpression ) ) )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2406:1: ( () ( (lv_op_2_0= RULE_CONCATENATION ) ) ( (lv_right_3_0= ruleConcatenationExpression ) ) )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA19_0==50) ) {
-                alt19=1;
+            if ( (LA18_0==RULE_CONCATENATION) ) {
+                alt18=1;
             }
-            switch (alt19) {
+            switch (alt18) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2372:2: () ( (lv_op_2_0= '+' ) ) ( (lv_right_3_0= ruleConcatenationExpression ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2406:2: () ( (lv_op_2_0= RULE_CONCATENATION ) ) ( (lv_right_3_0= ruleConcatenationExpression ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2372:2: ()
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2373:5: 
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2406:2: ()
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2407:5: 
                     {
 
                             current = forceCreateModelElementAndSet(
@@ -5667,21 +5766,25 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2378:2: ( (lv_op_2_0= '+' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2379:1: (lv_op_2_0= '+' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2412:2: ( (lv_op_2_0= RULE_CONCATENATION ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2413:1: (lv_op_2_0= RULE_CONCATENATION )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2379:1: (lv_op_2_0= '+' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2380:3: lv_op_2_0= '+'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2413:1: (lv_op_2_0= RULE_CONCATENATION )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2414:3: lv_op_2_0= RULE_CONCATENATION
                     {
-                    lv_op_2_0=(Token)match(input,50,FOLLOW_50_in_ruleConcatenationExpression5271); 
+                    lv_op_2_0=(Token)match(input,RULE_CONCATENATION,FOLLOW_RULE_CONCATENATION_in_ruleConcatenationExpression5426); 
 
-                            newLeafNode(lv_op_2_0, grammarAccess.getConcatenationExpressionAccess().getOpPlusSignKeyword_1_1_0());
-                        
+                    			newLeafNode(lv_op_2_0, grammarAccess.getConcatenationExpressionAccess().getOpCONCATENATIONTerminalRuleCall_1_1_0()); 
+                    		
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getConcatenationExpressionRule());
                     	        }
-                           		setWithLastConsumed(current, "op", lv_op_2_0, "+");
+                           		setWithLastConsumed(
+                           			current, 
+                           			"op",
+                            		lv_op_2_0, 
+                            		"CONCATENATION");
                     	    
 
                     }
@@ -5689,16 +5792,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2393:2: ( (lv_right_3_0= ruleConcatenationExpression ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2394:1: (lv_right_3_0= ruleConcatenationExpression )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2430:2: ( (lv_right_3_0= ruleConcatenationExpression ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2431:1: (lv_right_3_0= ruleConcatenationExpression )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2394:1: (lv_right_3_0= ruleConcatenationExpression )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2395:3: lv_right_3_0= ruleConcatenationExpression
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2431:1: (lv_right_3_0= ruleConcatenationExpression )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2432:3: lv_right_3_0= ruleConcatenationExpression
                     {
                      
                     	        newCompositeNode(grammarAccess.getConcatenationExpressionAccess().getRightConcatenationExpressionParserRuleCall_1_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleConcatenationExpression5305);
+                    pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleConcatenationExpression5452);
                     lv_right_3_0=ruleConcatenationExpression();
 
                     state._fsp--;
@@ -5747,7 +5850,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConcatenationTerminal"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2419:1: entryRuleConcatenationTerminal returns [EObject current=null] : iv_ruleConcatenationTerminal= ruleConcatenationTerminal EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2456:1: entryRuleConcatenationTerminal returns [EObject current=null] : iv_ruleConcatenationTerminal= ruleConcatenationTerminal EOF ;
     public final EObject entryRuleConcatenationTerminal() throws RecognitionException {
         EObject current = null;
 
@@ -5755,17 +5858,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2420:2: (iv_ruleConcatenationTerminal= ruleConcatenationTerminal EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2421:2: iv_ruleConcatenationTerminal= ruleConcatenationTerminal EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2457:2: (iv_ruleConcatenationTerminal= ruleConcatenationTerminal EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2458:2: iv_ruleConcatenationTerminal= ruleConcatenationTerminal EOF
             {
              newCompositeNode(grammarAccess.getConcatenationTerminalRule()); 
-            pushFollow(FOLLOW_ruleConcatenationTerminal_in_entryRuleConcatenationTerminal5343);
+            pushFollow(FOLLOW_ruleConcatenationTerminal_in_entryRuleConcatenationTerminal5490);
             iv_ruleConcatenationTerminal=ruleConcatenationTerminal();
 
             state._fsp--;
 
              current =iv_ruleConcatenationTerminal; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConcatenationTerminal5353); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConcatenationTerminal5500); 
 
             }
 
@@ -5783,7 +5886,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConcatenationTerminal"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2428:1: ruleConcatenationTerminal returns [EObject current=null] : (this_ConcatenationBrackets_0= ruleConcatenationBrackets | this_LiteralAbs_1= ruleLiteralAbs ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2465:1: ruleConcatenationTerminal returns [EObject current=null] : (this_ConcatenationBrackets_0= ruleConcatenationBrackets | this_LiteralAbs_1= ruleLiteralAbs ) ;
     public final EObject ruleConcatenationTerminal() throws RecognitionException {
         EObject current = null;
 
@@ -5795,33 +5898,33 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2431:28: ( (this_ConcatenationBrackets_0= ruleConcatenationBrackets | this_LiteralAbs_1= ruleLiteralAbs ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2432:1: (this_ConcatenationBrackets_0= ruleConcatenationBrackets | this_LiteralAbs_1= ruleLiteralAbs )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2468:28: ( (this_ConcatenationBrackets_0= ruleConcatenationBrackets | this_LiteralAbs_1= ruleLiteralAbs ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2469:1: (this_ConcatenationBrackets_0= ruleConcatenationBrackets | this_LiteralAbs_1= ruleLiteralAbs )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2432:1: (this_ConcatenationBrackets_0= ruleConcatenationBrackets | this_LiteralAbs_1= ruleLiteralAbs )
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2469:1: (this_ConcatenationBrackets_0= ruleConcatenationBrackets | this_LiteralAbs_1= ruleLiteralAbs )
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA20_0==RULE_OBRACKET) ) {
-                alt20=1;
+            if ( (LA19_0==RULE_OBRACKET) ) {
+                alt19=1;
             }
-            else if ( (LA20_0==RULE_ID||(LA20_0>=RULE_INT && LA20_0<=RULE_STRING)||(LA20_0>=RULE_NULL && LA20_0<=RULE_DOUBLE)||(LA20_0>=62 && LA20_0<=65)) ) {
-                alt20=2;
+            else if ( (LA19_0==RULE_ID||(LA19_0>=RULE_INT && LA19_0<=RULE_STRING)||(LA19_0>=RULE_NULL && LA19_0<=RULE_DOUBLE)||(LA19_0>=63 && LA19_0<=69)) ) {
+                alt19=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
-            switch (alt20) {
+            switch (alt19) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2433:5: this_ConcatenationBrackets_0= ruleConcatenationBrackets
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2470:5: this_ConcatenationBrackets_0= ruleConcatenationBrackets
                     {
                      
                             newCompositeNode(grammarAccess.getConcatenationTerminalAccess().getConcatenationBracketsParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleConcatenationBrackets_in_ruleConcatenationTerminal5400);
+                    pushFollow(FOLLOW_ruleConcatenationBrackets_in_ruleConcatenationTerminal5547);
                     this_ConcatenationBrackets_0=ruleConcatenationBrackets();
 
                     state._fsp--;
@@ -5834,12 +5937,12 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2443:5: this_LiteralAbs_1= ruleLiteralAbs
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2480:5: this_LiteralAbs_1= ruleLiteralAbs
                     {
                      
                             newCompositeNode(grammarAccess.getConcatenationTerminalAccess().getLiteralAbsParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleLiteralAbs_in_ruleConcatenationTerminal5427);
+                    pushFollow(FOLLOW_ruleLiteralAbs_in_ruleConcatenationTerminal5574);
                     this_LiteralAbs_1=ruleLiteralAbs();
 
                     state._fsp--;
@@ -5872,7 +5975,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConcatenationBrackets"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2459:1: entryRuleConcatenationBrackets returns [EObject current=null] : iv_ruleConcatenationBrackets= ruleConcatenationBrackets EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2496:1: entryRuleConcatenationBrackets returns [EObject current=null] : iv_ruleConcatenationBrackets= ruleConcatenationBrackets EOF ;
     public final EObject entryRuleConcatenationBrackets() throws RecognitionException {
         EObject current = null;
 
@@ -5880,17 +5983,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2460:2: (iv_ruleConcatenationBrackets= ruleConcatenationBrackets EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2461:2: iv_ruleConcatenationBrackets= ruleConcatenationBrackets EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2497:2: (iv_ruleConcatenationBrackets= ruleConcatenationBrackets EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2498:2: iv_ruleConcatenationBrackets= ruleConcatenationBrackets EOF
             {
              newCompositeNode(grammarAccess.getConcatenationBracketsRule()); 
-            pushFollow(FOLLOW_ruleConcatenationBrackets_in_entryRuleConcatenationBrackets5462);
+            pushFollow(FOLLOW_ruleConcatenationBrackets_in_entryRuleConcatenationBrackets5609);
             iv_ruleConcatenationBrackets=ruleConcatenationBrackets();
 
             state._fsp--;
 
              current =iv_ruleConcatenationBrackets; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConcatenationBrackets5472); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConcatenationBrackets5619); 
 
             }
 
@@ -5908,7 +6011,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConcatenationBrackets"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2468:1: ruleConcatenationBrackets returns [EObject current=null] : ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleConcatenationExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2505:1: ruleConcatenationBrackets returns [EObject current=null] : ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleConcatenationExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) ) ;
     public final EObject ruleConcatenationBrackets() throws RecognitionException {
         EObject current = null;
 
@@ -5920,19 +6023,19 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2471:28: ( ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleConcatenationExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2472:1: ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleConcatenationExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2508:28: ( ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleConcatenationExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2509:1: ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleConcatenationExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2472:1: ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleConcatenationExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2472:2: ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleConcatenationExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2509:1: ( ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleConcatenationExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2509:2: ( (lv_open_0_0= RULE_OBRACKET ) ) ( (lv_obj_1_0= ruleConcatenationExpression ) ) ( (lv_close_2_0= RULE_CBRACKET ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2472:2: ( (lv_open_0_0= RULE_OBRACKET ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2473:1: (lv_open_0_0= RULE_OBRACKET )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2509:2: ( (lv_open_0_0= RULE_OBRACKET ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2510:1: (lv_open_0_0= RULE_OBRACKET )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2473:1: (lv_open_0_0= RULE_OBRACKET )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2474:3: lv_open_0_0= RULE_OBRACKET
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2510:1: (lv_open_0_0= RULE_OBRACKET )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2511:3: lv_open_0_0= RULE_OBRACKET
             {
-            lv_open_0_0=(Token)match(input,RULE_OBRACKET,FOLLOW_RULE_OBRACKET_in_ruleConcatenationBrackets5514); 
+            lv_open_0_0=(Token)match(input,RULE_OBRACKET,FOLLOW_RULE_OBRACKET_in_ruleConcatenationBrackets5661); 
 
             			newLeafNode(lv_open_0_0, grammarAccess.getConcatenationBracketsAccess().getOpenOBRACKETTerminalRuleCall_0_0()); 
             		
@@ -5952,16 +6055,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2490:2: ( (lv_obj_1_0= ruleConcatenationExpression ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2491:1: (lv_obj_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2527:2: ( (lv_obj_1_0= ruleConcatenationExpression ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2528:1: (lv_obj_1_0= ruleConcatenationExpression )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2491:1: (lv_obj_1_0= ruleConcatenationExpression )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2492:3: lv_obj_1_0= ruleConcatenationExpression
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2528:1: (lv_obj_1_0= ruleConcatenationExpression )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2529:3: lv_obj_1_0= ruleConcatenationExpression
             {
              
             	        newCompositeNode(grammarAccess.getConcatenationBracketsAccess().getObjConcatenationExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleConcatenationBrackets5540);
+            pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleConcatenationBrackets5687);
             lv_obj_1_0=ruleConcatenationExpression();
 
             state._fsp--;
@@ -5983,13 +6086,13 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2508:2: ( (lv_close_2_0= RULE_CBRACKET ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2509:1: (lv_close_2_0= RULE_CBRACKET )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2545:2: ( (lv_close_2_0= RULE_CBRACKET ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2546:1: (lv_close_2_0= RULE_CBRACKET )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2509:1: (lv_close_2_0= RULE_CBRACKET )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2510:3: lv_close_2_0= RULE_CBRACKET
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2546:1: (lv_close_2_0= RULE_CBRACKET )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2547:3: lv_close_2_0= RULE_CBRACKET
             {
-            lv_close_2_0=(Token)match(input,RULE_CBRACKET,FOLLOW_RULE_CBRACKET_in_ruleConcatenationBrackets5557); 
+            lv_close_2_0=(Token)match(input,RULE_CBRACKET,FOLLOW_RULE_CBRACKET_in_ruleConcatenationBrackets5704); 
 
             			newLeafNode(lv_close_2_0, grammarAccess.getConcatenationBracketsAccess().getCloseCBRACKETTerminalRuleCall_2_0()); 
             		
@@ -6030,7 +6133,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringVariable"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2534:1: entryRuleStringVariable returns [EObject current=null] : iv_ruleStringVariable= ruleStringVariable EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2571:1: entryRuleStringVariable returns [EObject current=null] : iv_ruleStringVariable= ruleStringVariable EOF ;
     public final EObject entryRuleStringVariable() throws RecognitionException {
         EObject current = null;
 
@@ -6038,17 +6141,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2535:2: (iv_ruleStringVariable= ruleStringVariable EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2536:2: iv_ruleStringVariable= ruleStringVariable EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2572:2: (iv_ruleStringVariable= ruleStringVariable EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2573:2: iv_ruleStringVariable= ruleStringVariable EOF
             {
              newCompositeNode(grammarAccess.getStringVariableRule()); 
-            pushFollow(FOLLOW_ruleStringVariable_in_entryRuleStringVariable5598);
+            pushFollow(FOLLOW_ruleStringVariable_in_entryRuleStringVariable5745);
             iv_ruleStringVariable=ruleStringVariable();
 
             state._fsp--;
 
              current =iv_ruleStringVariable; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStringVariable5608); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStringVariable5755); 
 
             }
 
@@ -6066,7 +6169,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringVariable"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2543:1: ruleStringVariable returns [EObject current=null] : (otherlv_0= 'String' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) ) )? otherlv_5= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2580:1: ruleStringVariable returns [EObject current=null] : (otherlv_0= 'String' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) ) )? otherlv_5= ';' ) ;
     public final EObject ruleStringVariable() throws RecognitionException {
         EObject current = null;
 
@@ -6081,23 +6184,23 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2546:28: ( (otherlv_0= 'String' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) ) )? otherlv_5= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2547:1: (otherlv_0= 'String' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) ) )? otherlv_5= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2583:28: ( (otherlv_0= 'String' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) ) )? otherlv_5= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2584:1: (otherlv_0= 'String' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) ) )? otherlv_5= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2547:1: (otherlv_0= 'String' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) ) )? otherlv_5= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2547:3: otherlv_0= 'String' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) ) )? otherlv_5= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2584:1: (otherlv_0= 'String' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) ) )? otherlv_5= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2584:3: otherlv_0= 'String' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) ) )? otherlv_5= ';'
             {
-            otherlv_0=(Token)match(input,51,FOLLOW_51_in_ruleStringVariable5645); 
+            otherlv_0=(Token)match(input,52,FOLLOW_52_in_ruleStringVariable5792); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getStringVariableAccess().getStringKeyword_0());
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2551:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2552:1: (lv_name_1_0= RULE_ID )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2588:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2589:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2552:1: (lv_name_1_0= RULE_ID )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2553:3: lv_name_1_0= RULE_ID
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2589:1: (lv_name_1_0= RULE_ID )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2590:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStringVariable5662); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStringVariable5809); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getStringVariableAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -6117,38 +6220,38 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2569:2: ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) ) )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2606:2: ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) ) )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( ((LA22_0>=52 && LA22_0<=53)) ) {
-                alt22=1;
+            if ( ((LA21_0>=53 && LA21_0<=54)) ) {
+                alt21=1;
             }
-            switch (alt22) {
+            switch (alt21) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2569:3: (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2606:3: (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleConcatenationExpression ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2569:3: (otherlv_2= '=' | otherlv_3= ' = ' )
-                    int alt21=2;
-                    int LA21_0 = input.LA(1);
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2606:3: (otherlv_2= '=' | otherlv_3= ' = ' )
+                    int alt20=2;
+                    int LA20_0 = input.LA(1);
 
-                    if ( (LA21_0==52) ) {
-                        alt21=1;
+                    if ( (LA20_0==53) ) {
+                        alt20=1;
                     }
-                    else if ( (LA21_0==53) ) {
-                        alt21=2;
+                    else if ( (LA20_0==54) ) {
+                        alt20=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 21, 0, input);
+                            new NoViableAltException("", 20, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt21) {
+                    switch (alt20) {
                         case 1 :
-                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2569:5: otherlv_2= '='
+                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2606:5: otherlv_2= '='
                             {
-                            otherlv_2=(Token)match(input,52,FOLLOW_52_in_ruleStringVariable5681); 
+                            otherlv_2=(Token)match(input,53,FOLLOW_53_in_ruleStringVariable5828); 
 
                                 	newLeafNode(otherlv_2, grammarAccess.getStringVariableAccess().getEqualsSignKeyword_2_0_0());
                                 
@@ -6156,9 +6259,9 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2574:7: otherlv_3= ' = '
+                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2611:7: otherlv_3= ' = '
                             {
-                            otherlv_3=(Token)match(input,53,FOLLOW_53_in_ruleStringVariable5699); 
+                            otherlv_3=(Token)match(input,54,FOLLOW_54_in_ruleStringVariable5846); 
 
                                 	newLeafNode(otherlv_3, grammarAccess.getStringVariableAccess().getSpaceEqualsSignSpaceKeyword_2_0_1());
                                 
@@ -6168,16 +6271,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2578:2: ( (lv_value_4_0= ruleConcatenationExpression ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2579:1: (lv_value_4_0= ruleConcatenationExpression )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2615:2: ( (lv_value_4_0= ruleConcatenationExpression ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2616:1: (lv_value_4_0= ruleConcatenationExpression )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2579:1: (lv_value_4_0= ruleConcatenationExpression )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2580:3: lv_value_4_0= ruleConcatenationExpression
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2616:1: (lv_value_4_0= ruleConcatenationExpression )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2617:3: lv_value_4_0= ruleConcatenationExpression
                     {
                      
                     	        newCompositeNode(grammarAccess.getStringVariableAccess().getValueConcatenationExpressionParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleStringVariable5721);
+                    pushFollow(FOLLOW_ruleConcatenationExpression_in_ruleStringVariable5868);
                     lv_value_4_0=ruleConcatenationExpression();
 
                     state._fsp--;
@@ -6205,7 +6308,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleStringVariable5735); 
+            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleStringVariable5882); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getStringVariableAccess().getSemicolonKeyword_3());
                 
@@ -6230,7 +6333,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumVariable"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2608:1: entryRuleNumVariable returns [EObject current=null] : iv_ruleNumVariable= ruleNumVariable EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2645:1: entryRuleNumVariable returns [EObject current=null] : iv_ruleNumVariable= ruleNumVariable EOF ;
     public final EObject entryRuleNumVariable() throws RecognitionException {
         EObject current = null;
 
@@ -6238,17 +6341,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2609:2: (iv_ruleNumVariable= ruleNumVariable EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2610:2: iv_ruleNumVariable= ruleNumVariable EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2646:2: (iv_ruleNumVariable= ruleNumVariable EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2647:2: iv_ruleNumVariable= ruleNumVariable EOF
             {
              newCompositeNode(grammarAccess.getNumVariableRule()); 
-            pushFollow(FOLLOW_ruleNumVariable_in_entryRuleNumVariable5771);
+            pushFollow(FOLLOW_ruleNumVariable_in_entryRuleNumVariable5918);
             iv_ruleNumVariable=ruleNumVariable();
 
             state._fsp--;
 
              current =iv_ruleNumVariable; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNumVariable5781); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumVariable5928); 
 
             }
 
@@ -6266,7 +6369,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumVariable"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2617:1: ruleNumVariable returns [EObject current=null] : (otherlv_0= 'Num' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) ) )? otherlv_5= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2654:1: ruleNumVariable returns [EObject current=null] : (otherlv_0= 'Num' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) ) )? otherlv_5= ';' ) ;
     public final EObject ruleNumVariable() throws RecognitionException {
         EObject current = null;
 
@@ -6281,23 +6384,23 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2620:28: ( (otherlv_0= 'Num' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) ) )? otherlv_5= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2621:1: (otherlv_0= 'Num' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) ) )? otherlv_5= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2657:28: ( (otherlv_0= 'Num' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) ) )? otherlv_5= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2658:1: (otherlv_0= 'Num' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) ) )? otherlv_5= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2621:1: (otherlv_0= 'Num' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) ) )? otherlv_5= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2621:3: otherlv_0= 'Num' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) ) )? otherlv_5= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2658:1: (otherlv_0= 'Num' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) ) )? otherlv_5= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2658:3: otherlv_0= 'Num' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) ) )? otherlv_5= ';'
             {
-            otherlv_0=(Token)match(input,54,FOLLOW_54_in_ruleNumVariable5818); 
+            otherlv_0=(Token)match(input,55,FOLLOW_55_in_ruleNumVariable5965); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getNumVariableAccess().getNumKeyword_0());
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2625:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2626:1: (lv_name_1_0= RULE_ID )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2662:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2663:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2626:1: (lv_name_1_0= RULE_ID )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2627:3: lv_name_1_0= RULE_ID
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2663:1: (lv_name_1_0= RULE_ID )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2664:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNumVariable5835); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNumVariable5982); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getNumVariableAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -6317,38 +6420,38 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2643:2: ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) ) )?
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2680:2: ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) ) )?
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( ((LA24_0>=52 && LA24_0<=53)) ) {
-                alt24=1;
+            if ( ((LA23_0>=53 && LA23_0<=54)) ) {
+                alt23=1;
             }
-            switch (alt24) {
+            switch (alt23) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2643:3: (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2680:3: (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleMathExpression ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2643:3: (otherlv_2= '=' | otherlv_3= ' = ' )
-                    int alt23=2;
-                    int LA23_0 = input.LA(1);
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2680:3: (otherlv_2= '=' | otherlv_3= ' = ' )
+                    int alt22=2;
+                    int LA22_0 = input.LA(1);
 
-                    if ( (LA23_0==52) ) {
-                        alt23=1;
+                    if ( (LA22_0==53) ) {
+                        alt22=1;
                     }
-                    else if ( (LA23_0==53) ) {
-                        alt23=2;
+                    else if ( (LA22_0==54) ) {
+                        alt22=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 23, 0, input);
+                            new NoViableAltException("", 22, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt23) {
+                    switch (alt22) {
                         case 1 :
-                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2643:5: otherlv_2= '='
+                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2680:5: otherlv_2= '='
                             {
-                            otherlv_2=(Token)match(input,52,FOLLOW_52_in_ruleNumVariable5854); 
+                            otherlv_2=(Token)match(input,53,FOLLOW_53_in_ruleNumVariable6001); 
 
                                 	newLeafNode(otherlv_2, grammarAccess.getNumVariableAccess().getEqualsSignKeyword_2_0_0());
                                 
@@ -6356,9 +6459,9 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2648:7: otherlv_3= ' = '
+                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2685:7: otherlv_3= ' = '
                             {
-                            otherlv_3=(Token)match(input,53,FOLLOW_53_in_ruleNumVariable5872); 
+                            otherlv_3=(Token)match(input,54,FOLLOW_54_in_ruleNumVariable6019); 
 
                                 	newLeafNode(otherlv_3, grammarAccess.getNumVariableAccess().getSpaceEqualsSignSpaceKeyword_2_0_1());
                                 
@@ -6368,16 +6471,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2652:2: ( (lv_value_4_0= ruleMathExpression ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2653:1: (lv_value_4_0= ruleMathExpression )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2689:2: ( (lv_value_4_0= ruleMathExpression ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2690:1: (lv_value_4_0= ruleMathExpression )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2653:1: (lv_value_4_0= ruleMathExpression )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2654:3: lv_value_4_0= ruleMathExpression
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2690:1: (lv_value_4_0= ruleMathExpression )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2691:3: lv_value_4_0= ruleMathExpression
                     {
                      
                     	        newCompositeNode(grammarAccess.getNumVariableAccess().getValueMathExpressionParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleMathExpression_in_ruleNumVariable5894);
+                    pushFollow(FOLLOW_ruleMathExpression_in_ruleNumVariable6041);
                     lv_value_4_0=ruleMathExpression();
 
                     state._fsp--;
@@ -6405,7 +6508,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleNumVariable5908); 
+            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleNumVariable6055); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getNumVariableAccess().getSemicolonKeyword_3());
                 
@@ -6430,7 +6533,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBoolVariable"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2682:1: entryRuleBoolVariable returns [EObject current=null] : iv_ruleBoolVariable= ruleBoolVariable EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2719:1: entryRuleBoolVariable returns [EObject current=null] : iv_ruleBoolVariable= ruleBoolVariable EOF ;
     public final EObject entryRuleBoolVariable() throws RecognitionException {
         EObject current = null;
 
@@ -6438,17 +6541,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2683:2: (iv_ruleBoolVariable= ruleBoolVariable EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2684:2: iv_ruleBoolVariable= ruleBoolVariable EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2720:2: (iv_ruleBoolVariable= ruleBoolVariable EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2721:2: iv_ruleBoolVariable= ruleBoolVariable EOF
             {
              newCompositeNode(grammarAccess.getBoolVariableRule()); 
-            pushFollow(FOLLOW_ruleBoolVariable_in_entryRuleBoolVariable5944);
+            pushFollow(FOLLOW_ruleBoolVariable_in_entryRuleBoolVariable6091);
             iv_ruleBoolVariable=ruleBoolVariable();
 
             state._fsp--;
 
              current =iv_ruleBoolVariable; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolVariable5954); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolVariable6101); 
 
             }
 
@@ -6466,7 +6569,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoolVariable"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2691:1: ruleBoolVariable returns [EObject current=null] : (otherlv_0= 'Bool' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) ) )? otherlv_5= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2728:1: ruleBoolVariable returns [EObject current=null] : (otherlv_0= 'Bool' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) ) )? otherlv_5= ';' ) ;
     public final EObject ruleBoolVariable() throws RecognitionException {
         EObject current = null;
 
@@ -6481,23 +6584,23 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2694:28: ( (otherlv_0= 'Bool' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) ) )? otherlv_5= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2695:1: (otherlv_0= 'Bool' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) ) )? otherlv_5= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2731:28: ( (otherlv_0= 'Bool' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) ) )? otherlv_5= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2732:1: (otherlv_0= 'Bool' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) ) )? otherlv_5= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2695:1: (otherlv_0= 'Bool' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) ) )? otherlv_5= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2695:3: otherlv_0= 'Bool' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) ) )? otherlv_5= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2732:1: (otherlv_0= 'Bool' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) ) )? otherlv_5= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2732:3: otherlv_0= 'Bool' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) ) )? otherlv_5= ';'
             {
-            otherlv_0=(Token)match(input,55,FOLLOW_55_in_ruleBoolVariable5991); 
+            otherlv_0=(Token)match(input,56,FOLLOW_56_in_ruleBoolVariable6138); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getBoolVariableAccess().getBoolKeyword_0());
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2699:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2700:1: (lv_name_1_0= RULE_ID )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2736:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2737:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2700:1: (lv_name_1_0= RULE_ID )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2701:3: lv_name_1_0= RULE_ID
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2737:1: (lv_name_1_0= RULE_ID )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2738:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBoolVariable6008); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBoolVariable6155); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getBoolVariableAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -6517,38 +6620,38 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2717:2: ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) ) )?
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2754:2: ( (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) ) )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( ((LA26_0>=52 && LA26_0<=53)) ) {
-                alt26=1;
+            if ( ((LA25_0>=53 && LA25_0<=54)) ) {
+                alt25=1;
             }
-            switch (alt26) {
+            switch (alt25) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2717:3: (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2754:3: (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= ruleBoolExpression ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2717:3: (otherlv_2= '=' | otherlv_3= ' = ' )
-                    int alt25=2;
-                    int LA25_0 = input.LA(1);
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2754:3: (otherlv_2= '=' | otherlv_3= ' = ' )
+                    int alt24=2;
+                    int LA24_0 = input.LA(1);
 
-                    if ( (LA25_0==52) ) {
-                        alt25=1;
+                    if ( (LA24_0==53) ) {
+                        alt24=1;
                     }
-                    else if ( (LA25_0==53) ) {
-                        alt25=2;
+                    else if ( (LA24_0==54) ) {
+                        alt24=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 25, 0, input);
+                            new NoViableAltException("", 24, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt25) {
+                    switch (alt24) {
                         case 1 :
-                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2717:5: otherlv_2= '='
+                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2754:5: otherlv_2= '='
                             {
-                            otherlv_2=(Token)match(input,52,FOLLOW_52_in_ruleBoolVariable6027); 
+                            otherlv_2=(Token)match(input,53,FOLLOW_53_in_ruleBoolVariable6174); 
 
                                 	newLeafNode(otherlv_2, grammarAccess.getBoolVariableAccess().getEqualsSignKeyword_2_0_0());
                                 
@@ -6556,9 +6659,9 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2722:7: otherlv_3= ' = '
+                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2759:7: otherlv_3= ' = '
                             {
-                            otherlv_3=(Token)match(input,53,FOLLOW_53_in_ruleBoolVariable6045); 
+                            otherlv_3=(Token)match(input,54,FOLLOW_54_in_ruleBoolVariable6192); 
 
                                 	newLeafNode(otherlv_3, grammarAccess.getBoolVariableAccess().getSpaceEqualsSignSpaceKeyword_2_0_1());
                                 
@@ -6568,16 +6671,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2726:2: ( (lv_value_4_0= ruleBoolExpression ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2727:1: (lv_value_4_0= ruleBoolExpression )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2763:2: ( (lv_value_4_0= ruleBoolExpression ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2764:1: (lv_value_4_0= ruleBoolExpression )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2727:1: (lv_value_4_0= ruleBoolExpression )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2728:3: lv_value_4_0= ruleBoolExpression
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2764:1: (lv_value_4_0= ruleBoolExpression )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2765:3: lv_value_4_0= ruleBoolExpression
                     {
                      
                     	        newCompositeNode(grammarAccess.getBoolVariableAccess().getValueBoolExpressionParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleBoolExpression_in_ruleBoolVariable6067);
+                    pushFollow(FOLLOW_ruleBoolExpression_in_ruleBoolVariable6214);
                     lv_value_4_0=ruleBoolExpression();
 
                     state._fsp--;
@@ -6605,7 +6708,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleBoolVariable6081); 
+            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleBoolVariable6228); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getBoolVariableAccess().getSemicolonKeyword_3());
                 
@@ -6630,7 +6733,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConstant"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2756:1: entryRuleConstant returns [EObject current=null] : iv_ruleConstant= ruleConstant EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2793:1: entryRuleConstant returns [EObject current=null] : iv_ruleConstant= ruleConstant EOF ;
     public final EObject entryRuleConstant() throws RecognitionException {
         EObject current = null;
 
@@ -6638,17 +6741,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2757:2: (iv_ruleConstant= ruleConstant EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2758:2: iv_ruleConstant= ruleConstant EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2794:2: (iv_ruleConstant= ruleConstant EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2795:2: iv_ruleConstant= ruleConstant EOF
             {
              newCompositeNode(grammarAccess.getConstantRule()); 
-            pushFollow(FOLLOW_ruleConstant_in_entryRuleConstant6117);
+            pushFollow(FOLLOW_ruleConstant_in_entryRuleConstant6264);
             iv_ruleConstant=ruleConstant();
 
             state._fsp--;
 
              current =iv_ruleConstant; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConstant6127); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConstant6274); 
 
             }
 
@@ -6666,7 +6769,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConstant"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2765:1: ruleConstant returns [EObject current=null] : (otherlv_0= 'Const' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= rulePrimitive ) ) otherlv_5= ';' ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2802:1: ruleConstant returns [EObject current=null] : (otherlv_0= 'Const' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= rulePrimitive ) ) otherlv_5= ';' ) ;
     public final EObject ruleConstant() throws RecognitionException {
         EObject current = null;
 
@@ -6681,23 +6784,23 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2768:28: ( (otherlv_0= 'Const' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= rulePrimitive ) ) otherlv_5= ';' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2769:1: (otherlv_0= 'Const' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= rulePrimitive ) ) otherlv_5= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2805:28: ( (otherlv_0= 'Const' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= rulePrimitive ) ) otherlv_5= ';' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2806:1: (otherlv_0= 'Const' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= rulePrimitive ) ) otherlv_5= ';' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2769:1: (otherlv_0= 'Const' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= rulePrimitive ) ) otherlv_5= ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2769:3: otherlv_0= 'Const' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= rulePrimitive ) ) otherlv_5= ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2806:1: (otherlv_0= 'Const' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= rulePrimitive ) ) otherlv_5= ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2806:3: otherlv_0= 'Const' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '=' | otherlv_3= ' = ' ) ( (lv_value_4_0= rulePrimitive ) ) otherlv_5= ';'
             {
-            otherlv_0=(Token)match(input,56,FOLLOW_56_in_ruleConstant6164); 
+            otherlv_0=(Token)match(input,57,FOLLOW_57_in_ruleConstant6311); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getConstantAccess().getConstKeyword_0());
                 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2773:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2774:1: (lv_name_1_0= RULE_ID )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2810:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2811:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2774:1: (lv_name_1_0= RULE_ID )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2775:3: lv_name_1_0= RULE_ID
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2811:1: (lv_name_1_0= RULE_ID )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2812:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleConstant6181); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleConstant6328); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getConstantAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -6717,27 +6820,27 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2791:2: (otherlv_2= '=' | otherlv_3= ' = ' )
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2828:2: (otherlv_2= '=' | otherlv_3= ' = ' )
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA27_0==52) ) {
-                alt27=1;
+            if ( (LA26_0==53) ) {
+                alt26=1;
             }
-            else if ( (LA27_0==53) ) {
-                alt27=2;
+            else if ( (LA26_0==54) ) {
+                alt26=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 27, 0, input);
+                    new NoViableAltException("", 26, 0, input);
 
                 throw nvae;
             }
-            switch (alt27) {
+            switch (alt26) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2791:4: otherlv_2= '='
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2828:4: otherlv_2= '='
                     {
-                    otherlv_2=(Token)match(input,52,FOLLOW_52_in_ruleConstant6199); 
+                    otherlv_2=(Token)match(input,53,FOLLOW_53_in_ruleConstant6346); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getConstantAccess().getEqualsSignKeyword_2_0());
                         
@@ -6745,9 +6848,9 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2796:7: otherlv_3= ' = '
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2833:7: otherlv_3= ' = '
                     {
-                    otherlv_3=(Token)match(input,53,FOLLOW_53_in_ruleConstant6217); 
+                    otherlv_3=(Token)match(input,54,FOLLOW_54_in_ruleConstant6364); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getConstantAccess().getSpaceEqualsSignSpaceKeyword_2_1());
                         
@@ -6757,16 +6860,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2800:2: ( (lv_value_4_0= rulePrimitive ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2801:1: (lv_value_4_0= rulePrimitive )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2837:2: ( (lv_value_4_0= rulePrimitive ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2838:1: (lv_value_4_0= rulePrimitive )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2801:1: (lv_value_4_0= rulePrimitive )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2802:3: lv_value_4_0= rulePrimitive
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2838:1: (lv_value_4_0= rulePrimitive )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2839:3: lv_value_4_0= rulePrimitive
             {
              
             	        newCompositeNode(grammarAccess.getConstantAccess().getValuePrimitiveParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_rulePrimitive_in_ruleConstant6239);
+            pushFollow(FOLLOW_rulePrimitive_in_ruleConstant6386);
             lv_value_4_0=rulePrimitive();
 
             state._fsp--;
@@ -6788,7 +6891,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleConstant6251); 
+            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleConstant6398); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getConstantAccess().getSemicolonKeyword_4());
                 
@@ -6813,7 +6916,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePrimitive"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2830:1: entryRulePrimitive returns [EObject current=null] : iv_rulePrimitive= rulePrimitive EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2867:1: entryRulePrimitive returns [EObject current=null] : iv_rulePrimitive= rulePrimitive EOF ;
     public final EObject entryRulePrimitive() throws RecognitionException {
         EObject current = null;
 
@@ -6821,17 +6924,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2831:2: (iv_rulePrimitive= rulePrimitive EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2832:2: iv_rulePrimitive= rulePrimitive EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2868:2: (iv_rulePrimitive= rulePrimitive EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2869:2: iv_rulePrimitive= rulePrimitive EOF
             {
              newCompositeNode(grammarAccess.getPrimitiveRule()); 
-            pushFollow(FOLLOW_rulePrimitive_in_entryRulePrimitive6287);
+            pushFollow(FOLLOW_rulePrimitive_in_entryRulePrimitive6434);
             iv_rulePrimitive=rulePrimitive();
 
             state._fsp--;
 
              current =iv_rulePrimitive; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePrimitive6297); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePrimitive6444); 
 
             }
 
@@ -6849,7 +6952,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePrimitive"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2839:1: rulePrimitive returns [EObject current=null] : (this_StringLiteral_0= ruleStringLiteral | this_BoolLiteral_1= ruleBoolLiteral | this_NumLiteral_2= ruleNumLiteral ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2876:1: rulePrimitive returns [EObject current=null] : (this_StringLiteral_0= ruleStringLiteral | this_BoolLiteral_1= ruleBoolLiteral | this_NumLiteral_2= ruleNumLiteral ) ;
     public final EObject rulePrimitive() throws RecognitionException {
         EObject current = null;
 
@@ -6863,43 +6966,43 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2842:28: ( (this_StringLiteral_0= ruleStringLiteral | this_BoolLiteral_1= ruleBoolLiteral | this_NumLiteral_2= ruleNumLiteral ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2843:1: (this_StringLiteral_0= ruleStringLiteral | this_BoolLiteral_1= ruleBoolLiteral | this_NumLiteral_2= ruleNumLiteral )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2879:28: ( (this_StringLiteral_0= ruleStringLiteral | this_BoolLiteral_1= ruleBoolLiteral | this_NumLiteral_2= ruleNumLiteral ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2880:1: (this_StringLiteral_0= ruleStringLiteral | this_BoolLiteral_1= ruleBoolLiteral | this_NumLiteral_2= ruleNumLiteral )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2843:1: (this_StringLiteral_0= ruleStringLiteral | this_BoolLiteral_1= ruleBoolLiteral | this_NumLiteral_2= ruleNumLiteral )
-            int alt28=3;
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2880:1: (this_StringLiteral_0= ruleStringLiteral | this_BoolLiteral_1= ruleBoolLiteral | this_NumLiteral_2= ruleNumLiteral )
+            int alt27=3;
             switch ( input.LA(1) ) {
             case RULE_STRING:
                 {
-                alt28=1;
+                alt27=1;
                 }
                 break;
             case RULE_BOOL:
                 {
-                alt28=2;
+                alt27=2;
                 }
                 break;
             case RULE_INT:
             case RULE_DOUBLE:
                 {
-                alt28=3;
+                alt27=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 28, 0, input);
+                    new NoViableAltException("", 27, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt28) {
+            switch (alt27) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2844:5: this_StringLiteral_0= ruleStringLiteral
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2881:5: this_StringLiteral_0= ruleStringLiteral
                     {
                      
                             newCompositeNode(grammarAccess.getPrimitiveAccess().getStringLiteralParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleStringLiteral_in_rulePrimitive6344);
+                    pushFollow(FOLLOW_ruleStringLiteral_in_rulePrimitive6491);
                     this_StringLiteral_0=ruleStringLiteral();
 
                     state._fsp--;
@@ -6912,12 +7015,12 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2854:5: this_BoolLiteral_1= ruleBoolLiteral
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2891:5: this_BoolLiteral_1= ruleBoolLiteral
                     {
                      
                             newCompositeNode(grammarAccess.getPrimitiveAccess().getBoolLiteralParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleBoolLiteral_in_rulePrimitive6371);
+                    pushFollow(FOLLOW_ruleBoolLiteral_in_rulePrimitive6518);
                     this_BoolLiteral_1=ruleBoolLiteral();
 
                     state._fsp--;
@@ -6930,12 +7033,12 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2864:5: this_NumLiteral_2= ruleNumLiteral
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2901:5: this_NumLiteral_2= ruleNumLiteral
                     {
                      
                             newCompositeNode(grammarAccess.getPrimitiveAccess().getNumLiteralParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleNumLiteral_in_rulePrimitive6398);
+                    pushFollow(FOLLOW_ruleNumLiteral_in_rulePrimitive6545);
                     this_NumLiteral_2=ruleNumLiteral();
 
                     state._fsp--;
@@ -6968,7 +7071,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLiteralAbs"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2882:1: entryRuleLiteralAbs returns [EObject current=null] : iv_ruleLiteralAbs= ruleLiteralAbs EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2919:1: entryRuleLiteralAbs returns [EObject current=null] : iv_ruleLiteralAbs= ruleLiteralAbs EOF ;
     public final EObject entryRuleLiteralAbs() throws RecognitionException {
         EObject current = null;
 
@@ -6976,17 +7079,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2883:2: (iv_ruleLiteralAbs= ruleLiteralAbs EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2884:2: iv_ruleLiteralAbs= ruleLiteralAbs EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2920:2: (iv_ruleLiteralAbs= ruleLiteralAbs EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2921:2: iv_ruleLiteralAbs= ruleLiteralAbs EOF
             {
              newCompositeNode(grammarAccess.getLiteralAbsRule()); 
-            pushFollow(FOLLOW_ruleLiteralAbs_in_entryRuleLiteralAbs6435);
+            pushFollow(FOLLOW_ruleLiteralAbs_in_entryRuleLiteralAbs6582);
             iv_ruleLiteralAbs=ruleLiteralAbs();
 
             state._fsp--;
 
              current =iv_ruleLiteralAbs; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLiteralAbs6445); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLiteralAbs6592); 
 
             }
 
@@ -7004,7 +7107,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLiteralAbs"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2891:1: ruleLiteralAbs returns [EObject current=null] : (this_Literal_0= ruleLiteral | this_Primitive_1= rulePrimitive ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2928:1: ruleLiteralAbs returns [EObject current=null] : (this_Literal_0= ruleLiteral | this_Primitive_1= rulePrimitive ) ;
     public final EObject ruleLiteralAbs() throws RecognitionException {
         EObject current = null;
 
@@ -7016,33 +7119,33 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2894:28: ( (this_Literal_0= ruleLiteral | this_Primitive_1= rulePrimitive ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2895:1: (this_Literal_0= ruleLiteral | this_Primitive_1= rulePrimitive )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2931:28: ( (this_Literal_0= ruleLiteral | this_Primitive_1= rulePrimitive ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2932:1: (this_Literal_0= ruleLiteral | this_Primitive_1= rulePrimitive )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2895:1: (this_Literal_0= ruleLiteral | this_Primitive_1= rulePrimitive )
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2932:1: (this_Literal_0= ruleLiteral | this_Primitive_1= rulePrimitive )
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA29_0==RULE_ID||LA29_0==RULE_NULL||(LA29_0>=62 && LA29_0<=65)) ) {
-                alt29=1;
+            if ( (LA28_0==RULE_ID||LA28_0==RULE_NULL||(LA28_0>=63 && LA28_0<=69)) ) {
+                alt28=1;
             }
-            else if ( ((LA29_0>=RULE_INT && LA29_0<=RULE_STRING)||(LA29_0>=RULE_BOOL && LA29_0<=RULE_DOUBLE)) ) {
-                alt29=2;
+            else if ( ((LA28_0>=RULE_INT && LA28_0<=RULE_STRING)||(LA28_0>=RULE_BOOL && LA28_0<=RULE_DOUBLE)) ) {
+                alt28=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 29, 0, input);
+                    new NoViableAltException("", 28, 0, input);
 
                 throw nvae;
             }
-            switch (alt29) {
+            switch (alt28) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2896:5: this_Literal_0= ruleLiteral
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2933:5: this_Literal_0= ruleLiteral
                     {
                      
                             newCompositeNode(grammarAccess.getLiteralAbsAccess().getLiteralParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleLiteral_in_ruleLiteralAbs6492);
+                    pushFollow(FOLLOW_ruleLiteral_in_ruleLiteralAbs6639);
                     this_Literal_0=ruleLiteral();
 
                     state._fsp--;
@@ -7055,12 +7158,12 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2906:5: this_Primitive_1= rulePrimitive
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2943:5: this_Primitive_1= rulePrimitive
                     {
                      
                             newCompositeNode(grammarAccess.getLiteralAbsAccess().getPrimitiveParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_rulePrimitive_in_ruleLiteralAbs6519);
+                    pushFollow(FOLLOW_rulePrimitive_in_ruleLiteralAbs6666);
                     this_Primitive_1=rulePrimitive();
 
                     state._fsp--;
@@ -7093,7 +7196,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLiteral"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2922:1: entryRuleLiteral returns [EObject current=null] : iv_ruleLiteral= ruleLiteral EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2959:1: entryRuleLiteral returns [EObject current=null] : iv_ruleLiteral= ruleLiteral EOF ;
     public final EObject entryRuleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -7101,17 +7204,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2923:2: (iv_ruleLiteral= ruleLiteral EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2924:2: iv_ruleLiteral= ruleLiteral EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2960:2: (iv_ruleLiteral= ruleLiteral EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2961:2: iv_ruleLiteral= ruleLiteral EOF
             {
              newCompositeNode(grammarAccess.getLiteralRule()); 
-            pushFollow(FOLLOW_ruleLiteral_in_entryRuleLiteral6554);
+            pushFollow(FOLLOW_ruleLiteral_in_entryRuleLiteral6701);
             iv_ruleLiteral=ruleLiteral();
 
             state._fsp--;
 
              current =iv_ruleLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLiteral6564); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLiteral6711); 
 
             }
 
@@ -7129,7 +7232,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLiteral"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2931:1: ruleLiteral returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) | ( (lv_nul_1_0= RULE_NULL ) ) | this_SESSION_2= ruleSESSION ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2968:1: ruleLiteral returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) | ( (lv_nul_1_0= RULE_NULL ) ) | this_SESSION_2= ruleSESSION ) ;
     public final EObject ruleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -7141,53 +7244,56 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2934:28: ( ( ( (otherlv_0= RULE_ID ) ) | ( (lv_nul_1_0= RULE_NULL ) ) | this_SESSION_2= ruleSESSION ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2935:1: ( ( (otherlv_0= RULE_ID ) ) | ( (lv_nul_1_0= RULE_NULL ) ) | this_SESSION_2= ruleSESSION )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2971:28: ( ( ( (otherlv_0= RULE_ID ) ) | ( (lv_nul_1_0= RULE_NULL ) ) | this_SESSION_2= ruleSESSION ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2972:1: ( ( (otherlv_0= RULE_ID ) ) | ( (lv_nul_1_0= RULE_NULL ) ) | this_SESSION_2= ruleSESSION )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2935:1: ( ( (otherlv_0= RULE_ID ) ) | ( (lv_nul_1_0= RULE_NULL ) ) | this_SESSION_2= ruleSESSION )
-            int alt30=3;
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2972:1: ( ( (otherlv_0= RULE_ID ) ) | ( (lv_nul_1_0= RULE_NULL ) ) | this_SESSION_2= ruleSESSION )
+            int alt29=3;
             switch ( input.LA(1) ) {
             case RULE_ID:
                 {
-                alt30=1;
+                alt29=1;
                 }
                 break;
             case RULE_NULL:
                 {
-                alt30=2;
+                alt29=2;
                 }
                 break;
-            case 62:
             case 63:
             case 64:
             case 65:
+            case 66:
+            case 67:
+            case 68:
+            case 69:
                 {
-                alt30=3;
+                alt29=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 30, 0, input);
+                    new NoViableAltException("", 29, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt30) {
+            switch (alt29) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2935:2: ( (otherlv_0= RULE_ID ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2972:2: ( (otherlv_0= RULE_ID ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2935:2: ( (otherlv_0= RULE_ID ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2936:1: (otherlv_0= RULE_ID )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2972:2: ( (otherlv_0= RULE_ID ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2973:1: (otherlv_0= RULE_ID )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2936:1: (otherlv_0= RULE_ID )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2937:3: otherlv_0= RULE_ID
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2973:1: (otherlv_0= RULE_ID )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2974:3: otherlv_0= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getLiteralRule());
                     	        }
                             
-                    otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLiteral6609); 
+                    otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLiteral6756); 
 
                     		newLeafNode(otherlv_0, grammarAccess.getLiteralAccess().getVVarsCrossReference_0_0()); 
                     	
@@ -7201,15 +7307,15 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2949:6: ( (lv_nul_1_0= RULE_NULL ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2986:6: ( (lv_nul_1_0= RULE_NULL ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2949:6: ( (lv_nul_1_0= RULE_NULL ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2950:1: (lv_nul_1_0= RULE_NULL )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2986:6: ( (lv_nul_1_0= RULE_NULL ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2987:1: (lv_nul_1_0= RULE_NULL )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2950:1: (lv_nul_1_0= RULE_NULL )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2951:3: lv_nul_1_0= RULE_NULL
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2987:1: (lv_nul_1_0= RULE_NULL )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2988:3: lv_nul_1_0= RULE_NULL
                     {
-                    lv_nul_1_0=(Token)match(input,RULE_NULL,FOLLOW_RULE_NULL_in_ruleLiteral6632); 
+                    lv_nul_1_0=(Token)match(input,RULE_NULL,FOLLOW_RULE_NULL_in_ruleLiteral6779); 
 
                     			newLeafNode(lv_nul_1_0, grammarAccess.getLiteralAccess().getNulNULLTerminalRuleCall_1_0()); 
                     		
@@ -7233,12 +7339,12 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2969:5: this_SESSION_2= ruleSESSION
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3006:5: this_SESSION_2= ruleSESSION
                     {
                      
                             newCompositeNode(grammarAccess.getLiteralAccess().getSESSIONParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleSESSION_in_ruleLiteral6665);
+                    pushFollow(FOLLOW_ruleSESSION_in_ruleLiteral6812);
                     this_SESSION_2=ruleSESSION();
 
                     state._fsp--;
@@ -7271,7 +7377,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBoolLiteral"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2985:1: entryRuleBoolLiteral returns [EObject current=null] : iv_ruleBoolLiteral= ruleBoolLiteral EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3022:1: entryRuleBoolLiteral returns [EObject current=null] : iv_ruleBoolLiteral= ruleBoolLiteral EOF ;
     public final EObject entryRuleBoolLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -7279,17 +7385,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2986:2: (iv_ruleBoolLiteral= ruleBoolLiteral EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2987:2: iv_ruleBoolLiteral= ruleBoolLiteral EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3023:2: (iv_ruleBoolLiteral= ruleBoolLiteral EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3024:2: iv_ruleBoolLiteral= ruleBoolLiteral EOF
             {
              newCompositeNode(grammarAccess.getBoolLiteralRule()); 
-            pushFollow(FOLLOW_ruleBoolLiteral_in_entryRuleBoolLiteral6700);
+            pushFollow(FOLLOW_ruleBoolLiteral_in_entryRuleBoolLiteral6847);
             iv_ruleBoolLiteral=ruleBoolLiteral();
 
             state._fsp--;
 
              current =iv_ruleBoolLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolLiteral6710); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolLiteral6857); 
 
             }
 
@@ -7307,7 +7413,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoolLiteral"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2994:1: ruleBoolLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= RULE_BOOL ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3031:1: ruleBoolLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= RULE_BOOL ) ) ) ;
     public final EObject ruleBoolLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -7316,14 +7422,14 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2997:28: ( ( () ( (lv_value_1_0= RULE_BOOL ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2998:1: ( () ( (lv_value_1_0= RULE_BOOL ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3034:28: ( ( () ( (lv_value_1_0= RULE_BOOL ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3035:1: ( () ( (lv_value_1_0= RULE_BOOL ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2998:1: ( () ( (lv_value_1_0= RULE_BOOL ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2998:2: () ( (lv_value_1_0= RULE_BOOL ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3035:1: ( () ( (lv_value_1_0= RULE_BOOL ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3035:2: () ( (lv_value_1_0= RULE_BOOL ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2998:2: ()
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:2999:5: 
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3035:2: ()
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3036:5: 
             {
 
                     current = forceCreateModelElement(
@@ -7333,13 +7439,13 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3004:2: ( (lv_value_1_0= RULE_BOOL ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3005:1: (lv_value_1_0= RULE_BOOL )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3041:2: ( (lv_value_1_0= RULE_BOOL ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3042:1: (lv_value_1_0= RULE_BOOL )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3005:1: (lv_value_1_0= RULE_BOOL )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3006:3: lv_value_1_0= RULE_BOOL
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3042:1: (lv_value_1_0= RULE_BOOL )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3043:3: lv_value_1_0= RULE_BOOL
             {
-            lv_value_1_0=(Token)match(input,RULE_BOOL,FOLLOW_RULE_BOOL_in_ruleBoolLiteral6761); 
+            lv_value_1_0=(Token)match(input,RULE_BOOL,FOLLOW_RULE_BOOL_in_ruleBoolLiteral6908); 
 
             			newLeafNode(lv_value_1_0, grammarAccess.getBoolLiteralAccess().getValueBOOLTerminalRuleCall_1_0()); 
             		
@@ -7380,7 +7486,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumLiteral"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3030:1: entryRuleNumLiteral returns [EObject current=null] : iv_ruleNumLiteral= ruleNumLiteral EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3067:1: entryRuleNumLiteral returns [EObject current=null] : iv_ruleNumLiteral= ruleNumLiteral EOF ;
     public final EObject entryRuleNumLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -7388,17 +7494,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3031:2: (iv_ruleNumLiteral= ruleNumLiteral EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3032:2: iv_ruleNumLiteral= ruleNumLiteral EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3068:2: (iv_ruleNumLiteral= ruleNumLiteral EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3069:2: iv_ruleNumLiteral= ruleNumLiteral EOF
             {
              newCompositeNode(grammarAccess.getNumLiteralRule()); 
-            pushFollow(FOLLOW_ruleNumLiteral_in_entryRuleNumLiteral6802);
+            pushFollow(FOLLOW_ruleNumLiteral_in_entryRuleNumLiteral6949);
             iv_ruleNumLiteral=ruleNumLiteral();
 
             state._fsp--;
 
              current =iv_ruleNumLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNumLiteral6812); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumLiteral6959); 
 
             }
 
@@ -7416,7 +7522,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumLiteral"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3039:1: ruleNumLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= ruleNumber ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3076:1: ruleNumLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= ruleNumber ) ) ) ;
     public final EObject ruleNumLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -7426,14 +7532,14 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3042:28: ( ( () ( (lv_value_1_0= ruleNumber ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3043:1: ( () ( (lv_value_1_0= ruleNumber ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3079:28: ( ( () ( (lv_value_1_0= ruleNumber ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3080:1: ( () ( (lv_value_1_0= ruleNumber ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3043:1: ( () ( (lv_value_1_0= ruleNumber ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3043:2: () ( (lv_value_1_0= ruleNumber ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3080:1: ( () ( (lv_value_1_0= ruleNumber ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3080:2: () ( (lv_value_1_0= ruleNumber ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3043:2: ()
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3044:5: 
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3080:2: ()
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3081:5: 
             {
 
                     current = forceCreateModelElement(
@@ -7443,16 +7549,16 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3049:2: ( (lv_value_1_0= ruleNumber ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3050:1: (lv_value_1_0= ruleNumber )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3086:2: ( (lv_value_1_0= ruleNumber ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3087:1: (lv_value_1_0= ruleNumber )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3050:1: (lv_value_1_0= ruleNumber )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3051:3: lv_value_1_0= ruleNumber
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3087:1: (lv_value_1_0= ruleNumber )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3088:3: lv_value_1_0= ruleNumber
             {
              
             	        newCompositeNode(grammarAccess.getNumLiteralAccess().getValueNumberParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleNumber_in_ruleNumLiteral6867);
+            pushFollow(FOLLOW_ruleNumber_in_ruleNumLiteral7014);
             lv_value_1_0=ruleNumber();
 
             state._fsp--;
@@ -7495,7 +7601,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringLiteral"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3075:1: entryRuleStringLiteral returns [EObject current=null] : iv_ruleStringLiteral= ruleStringLiteral EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3112:1: entryRuleStringLiteral returns [EObject current=null] : iv_ruleStringLiteral= ruleStringLiteral EOF ;
     public final EObject entryRuleStringLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -7503,17 +7609,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3076:2: (iv_ruleStringLiteral= ruleStringLiteral EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3077:2: iv_ruleStringLiteral= ruleStringLiteral EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3113:2: (iv_ruleStringLiteral= ruleStringLiteral EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3114:2: iv_ruleStringLiteral= ruleStringLiteral EOF
             {
              newCompositeNode(grammarAccess.getStringLiteralRule()); 
-            pushFollow(FOLLOW_ruleStringLiteral_in_entryRuleStringLiteral6903);
+            pushFollow(FOLLOW_ruleStringLiteral_in_entryRuleStringLiteral7050);
             iv_ruleStringLiteral=ruleStringLiteral();
 
             state._fsp--;
 
              current =iv_ruleStringLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStringLiteral6913); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStringLiteral7060); 
 
             }
 
@@ -7531,7 +7637,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringLiteral"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3084:1: ruleStringLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= RULE_STRING ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3121:1: ruleStringLiteral returns [EObject current=null] : ( () ( (lv_value_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleStringLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -7540,14 +7646,14 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3087:28: ( ( () ( (lv_value_1_0= RULE_STRING ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3088:1: ( () ( (lv_value_1_0= RULE_STRING ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3124:28: ( ( () ( (lv_value_1_0= RULE_STRING ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3125:1: ( () ( (lv_value_1_0= RULE_STRING ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3088:1: ( () ( (lv_value_1_0= RULE_STRING ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3088:2: () ( (lv_value_1_0= RULE_STRING ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3125:1: ( () ( (lv_value_1_0= RULE_STRING ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3125:2: () ( (lv_value_1_0= RULE_STRING ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3088:2: ()
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3089:5: 
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3125:2: ()
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3126:5: 
             {
 
                     current = forceCreateModelElement(
@@ -7557,13 +7663,13 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3094:2: ( (lv_value_1_0= RULE_STRING ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3095:1: (lv_value_1_0= RULE_STRING )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3131:2: ( (lv_value_1_0= RULE_STRING ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3132:1: (lv_value_1_0= RULE_STRING )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3095:1: (lv_value_1_0= RULE_STRING )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3096:3: lv_value_1_0= RULE_STRING
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3132:1: (lv_value_1_0= RULE_STRING )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3133:3: lv_value_1_0= RULE_STRING
             {
-            lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleStringLiteral6964); 
+            lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleStringLiteral7111); 
 
             			newLeafNode(lv_value_1_0, grammarAccess.getStringLiteralAccess().getValueSTRINGTerminalRuleCall_1_0()); 
             		
@@ -7604,7 +7710,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumber"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3120:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3157:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
     public final String entryRuleNumber() throws RecognitionException {
         String current = null;
 
@@ -7612,17 +7718,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3121:2: (iv_ruleNumber= ruleNumber EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3122:2: iv_ruleNumber= ruleNumber EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3158:2: (iv_ruleNumber= ruleNumber EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3159:2: iv_ruleNumber= ruleNumber EOF
             {
              newCompositeNode(grammarAccess.getNumberRule()); 
-            pushFollow(FOLLOW_ruleNumber_in_entryRuleNumber7006);
+            pushFollow(FOLLOW_ruleNumber_in_entryRuleNumber7153);
             iv_ruleNumber=ruleNumber();
 
             state._fsp--;
 
              current =iv_ruleNumber.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNumber7017); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumber7164); 
 
             }
 
@@ -7640,7 +7746,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumber"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3129:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_DOUBLE_0= RULE_DOUBLE | this_INT_1= RULE_INT ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3166:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_DOUBLE_0= RULE_DOUBLE | this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleNumber() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -7650,30 +7756,30 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3132:28: ( (this_DOUBLE_0= RULE_DOUBLE | this_INT_1= RULE_INT ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3133:1: (this_DOUBLE_0= RULE_DOUBLE | this_INT_1= RULE_INT )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3169:28: ( (this_DOUBLE_0= RULE_DOUBLE | this_INT_1= RULE_INT ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3170:1: (this_DOUBLE_0= RULE_DOUBLE | this_INT_1= RULE_INT )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3133:1: (this_DOUBLE_0= RULE_DOUBLE | this_INT_1= RULE_INT )
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3170:1: (this_DOUBLE_0= RULE_DOUBLE | this_INT_1= RULE_INT )
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA31_0==RULE_DOUBLE) ) {
-                alt31=1;
+            if ( (LA30_0==RULE_DOUBLE) ) {
+                alt30=1;
             }
-            else if ( (LA31_0==RULE_INT) ) {
-                alt31=2;
+            else if ( (LA30_0==RULE_INT) ) {
+                alt30=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 31, 0, input);
+                    new NoViableAltException("", 30, 0, input);
 
                 throw nvae;
             }
-            switch (alt31) {
+            switch (alt30) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3133:6: this_DOUBLE_0= RULE_DOUBLE
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3170:6: this_DOUBLE_0= RULE_DOUBLE
                     {
-                    this_DOUBLE_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleNumber7057); 
+                    this_DOUBLE_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleNumber7204); 
 
                     		current.merge(this_DOUBLE_0);
                         
@@ -7684,9 +7790,9 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3141:10: this_INT_1= RULE_INT
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3178:10: this_INT_1= RULE_INT
                     {
-                    this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber7083); 
+                    this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber7230); 
 
                     		current.merge(this_INT_1);
                         
@@ -7717,7 +7823,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEVENT"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3156:1: entryRuleEVENT returns [EObject current=null] : iv_ruleEVENT= ruleEVENT EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3193:1: entryRuleEVENT returns [EObject current=null] : iv_ruleEVENT= ruleEVENT EOF ;
     public final EObject entryRuleEVENT() throws RecognitionException {
         EObject current = null;
 
@@ -7725,17 +7831,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3157:2: (iv_ruleEVENT= ruleEVENT EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3158:2: iv_ruleEVENT= ruleEVENT EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3194:2: (iv_ruleEVENT= ruleEVENT EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3195:2: iv_ruleEVENT= ruleEVENT EOF
             {
              newCompositeNode(grammarAccess.getEVENTRule()); 
-            pushFollow(FOLLOW_ruleEVENT_in_entryRuleEVENT7128);
+            pushFollow(FOLLOW_ruleEVENT_in_entryRuleEVENT7275);
             iv_ruleEVENT=ruleEVENT();
 
             state._fsp--;
 
              current =iv_ruleEVENT; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEVENT7138); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEVENT7285); 
 
             }
 
@@ -7753,7 +7859,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEVENT"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3165:1: ruleEVENT returns [EObject current=null] : ( ( (lv_name_0_0= 'HANGUP' ) ) | ( (lv_name_1_0= 'COMPLETED' ) ) | ( (lv_name_2_0= 'ERROR' ) ) | ( (lv_name_3_0= 'TIMES' ) ) | ( (lv_name_4_0= 'TIMEOUT' ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3202:1: ruleEVENT returns [EObject current=null] : ( ( (lv_name_0_0= 'HANGUP' ) ) | ( (lv_name_1_0= 'COMPLETED' ) ) | ( (lv_name_2_0= 'ERROR' ) ) | ( (lv_name_3_0= 'TIMES' ) ) | ( (lv_name_4_0= 'TIMEOUT' ) ) ) ;
     public final EObject ruleEVENT() throws RecognitionException {
         EObject current = null;
 
@@ -7766,55 +7872,55 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3168:28: ( ( ( (lv_name_0_0= 'HANGUP' ) ) | ( (lv_name_1_0= 'COMPLETED' ) ) | ( (lv_name_2_0= 'ERROR' ) ) | ( (lv_name_3_0= 'TIMES' ) ) | ( (lv_name_4_0= 'TIMEOUT' ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3169:1: ( ( (lv_name_0_0= 'HANGUP' ) ) | ( (lv_name_1_0= 'COMPLETED' ) ) | ( (lv_name_2_0= 'ERROR' ) ) | ( (lv_name_3_0= 'TIMES' ) ) | ( (lv_name_4_0= 'TIMEOUT' ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3205:28: ( ( ( (lv_name_0_0= 'HANGUP' ) ) | ( (lv_name_1_0= 'COMPLETED' ) ) | ( (lv_name_2_0= 'ERROR' ) ) | ( (lv_name_3_0= 'TIMES' ) ) | ( (lv_name_4_0= 'TIMEOUT' ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3206:1: ( ( (lv_name_0_0= 'HANGUP' ) ) | ( (lv_name_1_0= 'COMPLETED' ) ) | ( (lv_name_2_0= 'ERROR' ) ) | ( (lv_name_3_0= 'TIMES' ) ) | ( (lv_name_4_0= 'TIMEOUT' ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3169:1: ( ( (lv_name_0_0= 'HANGUP' ) ) | ( (lv_name_1_0= 'COMPLETED' ) ) | ( (lv_name_2_0= 'ERROR' ) ) | ( (lv_name_3_0= 'TIMES' ) ) | ( (lv_name_4_0= 'TIMEOUT' ) ) )
-            int alt32=5;
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3206:1: ( ( (lv_name_0_0= 'HANGUP' ) ) | ( (lv_name_1_0= 'COMPLETED' ) ) | ( (lv_name_2_0= 'ERROR' ) ) | ( (lv_name_3_0= 'TIMES' ) ) | ( (lv_name_4_0= 'TIMEOUT' ) ) )
+            int alt31=5;
             switch ( input.LA(1) ) {
-            case 57:
-                {
-                alt32=1;
-                }
-                break;
             case 58:
                 {
-                alt32=2;
+                alt31=1;
                 }
                 break;
             case 59:
                 {
-                alt32=3;
+                alt31=2;
                 }
                 break;
             case 60:
                 {
-                alt32=4;
+                alt31=3;
                 }
                 break;
             case 61:
                 {
-                alt32=5;
+                alt31=4;
+                }
+                break;
+            case 62:
+                {
+                alt31=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 32, 0, input);
+                    new NoViableAltException("", 31, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt32) {
+            switch (alt31) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3169:2: ( (lv_name_0_0= 'HANGUP' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3206:2: ( (lv_name_0_0= 'HANGUP' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3169:2: ( (lv_name_0_0= 'HANGUP' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3170:1: (lv_name_0_0= 'HANGUP' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3206:2: ( (lv_name_0_0= 'HANGUP' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3207:1: (lv_name_0_0= 'HANGUP' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3170:1: (lv_name_0_0= 'HANGUP' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3171:3: lv_name_0_0= 'HANGUP'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3207:1: (lv_name_0_0= 'HANGUP' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3208:3: lv_name_0_0= 'HANGUP'
                     {
-                    lv_name_0_0=(Token)match(input,57,FOLLOW_57_in_ruleEVENT7181); 
+                    lv_name_0_0=(Token)match(input,58,FOLLOW_58_in_ruleEVENT7328); 
 
                             newLeafNode(lv_name_0_0, grammarAccess.getEVENTAccess().getNameHANGUPKeyword_0_0());
                         
@@ -7834,15 +7940,15 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3185:6: ( (lv_name_1_0= 'COMPLETED' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3222:6: ( (lv_name_1_0= 'COMPLETED' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3185:6: ( (lv_name_1_0= 'COMPLETED' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3186:1: (lv_name_1_0= 'COMPLETED' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3222:6: ( (lv_name_1_0= 'COMPLETED' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3223:1: (lv_name_1_0= 'COMPLETED' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3186:1: (lv_name_1_0= 'COMPLETED' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3187:3: lv_name_1_0= 'COMPLETED'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3223:1: (lv_name_1_0= 'COMPLETED' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3224:3: lv_name_1_0= 'COMPLETED'
                     {
-                    lv_name_1_0=(Token)match(input,58,FOLLOW_58_in_ruleEVENT7218); 
+                    lv_name_1_0=(Token)match(input,59,FOLLOW_59_in_ruleEVENT7365); 
 
                             newLeafNode(lv_name_1_0, grammarAccess.getEVENTAccess().getNameCOMPLETEDKeyword_1_0());
                         
@@ -7862,15 +7968,15 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3201:6: ( (lv_name_2_0= 'ERROR' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3238:6: ( (lv_name_2_0= 'ERROR' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3201:6: ( (lv_name_2_0= 'ERROR' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3202:1: (lv_name_2_0= 'ERROR' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3238:6: ( (lv_name_2_0= 'ERROR' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3239:1: (lv_name_2_0= 'ERROR' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3202:1: (lv_name_2_0= 'ERROR' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3203:3: lv_name_2_0= 'ERROR'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3239:1: (lv_name_2_0= 'ERROR' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3240:3: lv_name_2_0= 'ERROR'
                     {
-                    lv_name_2_0=(Token)match(input,59,FOLLOW_59_in_ruleEVENT7255); 
+                    lv_name_2_0=(Token)match(input,60,FOLLOW_60_in_ruleEVENT7402); 
 
                             newLeafNode(lv_name_2_0, grammarAccess.getEVENTAccess().getNameERRORKeyword_2_0());
                         
@@ -7890,15 +7996,15 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3217:6: ( (lv_name_3_0= 'TIMES' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3254:6: ( (lv_name_3_0= 'TIMES' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3217:6: ( (lv_name_3_0= 'TIMES' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3218:1: (lv_name_3_0= 'TIMES' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3254:6: ( (lv_name_3_0= 'TIMES' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3255:1: (lv_name_3_0= 'TIMES' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3218:1: (lv_name_3_0= 'TIMES' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3219:3: lv_name_3_0= 'TIMES'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3255:1: (lv_name_3_0= 'TIMES' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3256:3: lv_name_3_0= 'TIMES'
                     {
-                    lv_name_3_0=(Token)match(input,60,FOLLOW_60_in_ruleEVENT7292); 
+                    lv_name_3_0=(Token)match(input,61,FOLLOW_61_in_ruleEVENT7439); 
 
                             newLeafNode(lv_name_3_0, grammarAccess.getEVENTAccess().getNameTIMESKeyword_3_0());
                         
@@ -7918,15 +8024,15 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3233:6: ( (lv_name_4_0= 'TIMEOUT' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3270:6: ( (lv_name_4_0= 'TIMEOUT' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3233:6: ( (lv_name_4_0= 'TIMEOUT' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3234:1: (lv_name_4_0= 'TIMEOUT' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3270:6: ( (lv_name_4_0= 'TIMEOUT' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3271:1: (lv_name_4_0= 'TIMEOUT' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3234:1: (lv_name_4_0= 'TIMEOUT' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3235:3: lv_name_4_0= 'TIMEOUT'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3271:1: (lv_name_4_0= 'TIMEOUT' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3272:3: lv_name_4_0= 'TIMEOUT'
                     {
-                    lv_name_4_0=(Token)match(input,61,FOLLOW_61_in_ruleEVENT7329); 
+                    lv_name_4_0=(Token)match(input,62,FOLLOW_62_in_ruleEVENT7476); 
 
                             newLeafNode(lv_name_4_0, grammarAccess.getEVENTAccess().getNameTIMEOUTKeyword_4_0());
                         
@@ -7966,7 +8072,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSESSION"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3256:1: entryRuleSESSION returns [EObject current=null] : iv_ruleSESSION= ruleSESSION EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3293:1: entryRuleSESSION returns [EObject current=null] : iv_ruleSESSION= ruleSESSION EOF ;
     public final EObject entryRuleSESSION() throws RecognitionException {
         EObject current = null;
 
@@ -7974,17 +8080,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3257:2: (iv_ruleSESSION= ruleSESSION EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3258:2: iv_ruleSESSION= ruleSESSION EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3294:2: (iv_ruleSESSION= ruleSESSION EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3295:2: iv_ruleSESSION= ruleSESSION EOF
             {
              newCompositeNode(grammarAccess.getSESSIONRule()); 
-            pushFollow(FOLLOW_ruleSESSION_in_entryRuleSESSION7378);
+            pushFollow(FOLLOW_ruleSESSION_in_entryRuleSESSION7525);
             iv_ruleSESSION=ruleSESSION();
 
             state._fsp--;
 
              current =iv_ruleSESSION; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSESSION7388); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSESSION7535); 
 
             }
 
@@ -8002,7 +8108,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSESSION"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3265:1: ruleSESSION returns [EObject current=null] : ( ( (lv_name_0_0= 'CALLER' ) ) | ( (lv_name_1_0= 'LASTSTATE' ) ) | ( (lv_name_2_0= 'TIME' ) ) | ( (lv_name_3_0= 'CALLED' ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3302:1: ruleSESSION returns [EObject current=null] : ( ( (lv_name_0_0= 'CALLER' ) ) | ( (lv_name_1_0= 'LASTSTATE' ) ) | ( (lv_name_2_0= 'TIME' ) ) | ( (lv_name_3_0= 'CALLED' ) ) | ( (lv_name_4_0= 'ANSWER' ) ) | ( (lv_name_5_0= 'DIGITS' ) ) | ( (lv_name_6_0= 'RECORD' ) ) ) ;
     public final EObject ruleSESSION() throws RecognitionException {
         EObject current = null;
 
@@ -8010,54 +8116,72 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
         Token lv_name_1_0=null;
         Token lv_name_2_0=null;
         Token lv_name_3_0=null;
+        Token lv_name_4_0=null;
+        Token lv_name_5_0=null;
+        Token lv_name_6_0=null;
 
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3268:28: ( ( ( (lv_name_0_0= 'CALLER' ) ) | ( (lv_name_1_0= 'LASTSTATE' ) ) | ( (lv_name_2_0= 'TIME' ) ) | ( (lv_name_3_0= 'CALLED' ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3269:1: ( ( (lv_name_0_0= 'CALLER' ) ) | ( (lv_name_1_0= 'LASTSTATE' ) ) | ( (lv_name_2_0= 'TIME' ) ) | ( (lv_name_3_0= 'CALLED' ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3305:28: ( ( ( (lv_name_0_0= 'CALLER' ) ) | ( (lv_name_1_0= 'LASTSTATE' ) ) | ( (lv_name_2_0= 'TIME' ) ) | ( (lv_name_3_0= 'CALLED' ) ) | ( (lv_name_4_0= 'ANSWER' ) ) | ( (lv_name_5_0= 'DIGITS' ) ) | ( (lv_name_6_0= 'RECORD' ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3306:1: ( ( (lv_name_0_0= 'CALLER' ) ) | ( (lv_name_1_0= 'LASTSTATE' ) ) | ( (lv_name_2_0= 'TIME' ) ) | ( (lv_name_3_0= 'CALLED' ) ) | ( (lv_name_4_0= 'ANSWER' ) ) | ( (lv_name_5_0= 'DIGITS' ) ) | ( (lv_name_6_0= 'RECORD' ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3269:1: ( ( (lv_name_0_0= 'CALLER' ) ) | ( (lv_name_1_0= 'LASTSTATE' ) ) | ( (lv_name_2_0= 'TIME' ) ) | ( (lv_name_3_0= 'CALLED' ) ) )
-            int alt33=4;
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3306:1: ( ( (lv_name_0_0= 'CALLER' ) ) | ( (lv_name_1_0= 'LASTSTATE' ) ) | ( (lv_name_2_0= 'TIME' ) ) | ( (lv_name_3_0= 'CALLED' ) ) | ( (lv_name_4_0= 'ANSWER' ) ) | ( (lv_name_5_0= 'DIGITS' ) ) | ( (lv_name_6_0= 'RECORD' ) ) )
+            int alt32=7;
             switch ( input.LA(1) ) {
-            case 62:
-                {
-                alt33=1;
-                }
-                break;
             case 63:
                 {
-                alt33=2;
+                alt32=1;
                 }
                 break;
             case 64:
                 {
-                alt33=3;
+                alt32=2;
                 }
                 break;
             case 65:
                 {
-                alt33=4;
+                alt32=3;
+                }
+                break;
+            case 66:
+                {
+                alt32=4;
+                }
+                break;
+            case 67:
+                {
+                alt32=5;
+                }
+                break;
+            case 68:
+                {
+                alt32=6;
+                }
+                break;
+            case 69:
+                {
+                alt32=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 33, 0, input);
+                    new NoViableAltException("", 32, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt33) {
+            switch (alt32) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3269:2: ( (lv_name_0_0= 'CALLER' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3306:2: ( (lv_name_0_0= 'CALLER' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3269:2: ( (lv_name_0_0= 'CALLER' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3270:1: (lv_name_0_0= 'CALLER' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3306:2: ( (lv_name_0_0= 'CALLER' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3307:1: (lv_name_0_0= 'CALLER' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3270:1: (lv_name_0_0= 'CALLER' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3271:3: lv_name_0_0= 'CALLER'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3307:1: (lv_name_0_0= 'CALLER' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3308:3: lv_name_0_0= 'CALLER'
                     {
-                    lv_name_0_0=(Token)match(input,62,FOLLOW_62_in_ruleSESSION7431); 
+                    lv_name_0_0=(Token)match(input,63,FOLLOW_63_in_ruleSESSION7578); 
 
                             newLeafNode(lv_name_0_0, grammarAccess.getSESSIONAccess().getNameCALLERKeyword_0_0());
                         
@@ -8077,15 +8201,15 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3285:6: ( (lv_name_1_0= 'LASTSTATE' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3322:6: ( (lv_name_1_0= 'LASTSTATE' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3285:6: ( (lv_name_1_0= 'LASTSTATE' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3286:1: (lv_name_1_0= 'LASTSTATE' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3322:6: ( (lv_name_1_0= 'LASTSTATE' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3323:1: (lv_name_1_0= 'LASTSTATE' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3286:1: (lv_name_1_0= 'LASTSTATE' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3287:3: lv_name_1_0= 'LASTSTATE'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3323:1: (lv_name_1_0= 'LASTSTATE' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3324:3: lv_name_1_0= 'LASTSTATE'
                     {
-                    lv_name_1_0=(Token)match(input,63,FOLLOW_63_in_ruleSESSION7468); 
+                    lv_name_1_0=(Token)match(input,64,FOLLOW_64_in_ruleSESSION7615); 
 
                             newLeafNode(lv_name_1_0, grammarAccess.getSESSIONAccess().getNameLASTSTATEKeyword_1_0());
                         
@@ -8105,15 +8229,15 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3301:6: ( (lv_name_2_0= 'TIME' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3338:6: ( (lv_name_2_0= 'TIME' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3301:6: ( (lv_name_2_0= 'TIME' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3302:1: (lv_name_2_0= 'TIME' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3338:6: ( (lv_name_2_0= 'TIME' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3339:1: (lv_name_2_0= 'TIME' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3302:1: (lv_name_2_0= 'TIME' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3303:3: lv_name_2_0= 'TIME'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3339:1: (lv_name_2_0= 'TIME' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3340:3: lv_name_2_0= 'TIME'
                     {
-                    lv_name_2_0=(Token)match(input,64,FOLLOW_64_in_ruleSESSION7505); 
+                    lv_name_2_0=(Token)match(input,65,FOLLOW_65_in_ruleSESSION7652); 
 
                             newLeafNode(lv_name_2_0, grammarAccess.getSESSIONAccess().getNameTIMEKeyword_2_0());
                         
@@ -8133,15 +8257,15 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3317:6: ( (lv_name_3_0= 'CALLED' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3354:6: ( (lv_name_3_0= 'CALLED' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3317:6: ( (lv_name_3_0= 'CALLED' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3318:1: (lv_name_3_0= 'CALLED' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3354:6: ( (lv_name_3_0= 'CALLED' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3355:1: (lv_name_3_0= 'CALLED' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3318:1: (lv_name_3_0= 'CALLED' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3319:3: lv_name_3_0= 'CALLED'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3355:1: (lv_name_3_0= 'CALLED' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3356:3: lv_name_3_0= 'CALLED'
                     {
-                    lv_name_3_0=(Token)match(input,65,FOLLOW_65_in_ruleSESSION7542); 
+                    lv_name_3_0=(Token)match(input,66,FOLLOW_66_in_ruleSESSION7689); 
 
                             newLeafNode(lv_name_3_0, grammarAccess.getSESSIONAccess().getNameCALLEDKeyword_3_0());
                         
@@ -8150,6 +8274,90 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     	            current = createModelElement(grammarAccess.getSESSIONRule());
                     	        }
                            		setWithLastConsumed(current, "name", lv_name_3_0, "CALLED");
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3370:6: ( (lv_name_4_0= 'ANSWER' ) )
+                    {
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3370:6: ( (lv_name_4_0= 'ANSWER' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3371:1: (lv_name_4_0= 'ANSWER' )
+                    {
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3371:1: (lv_name_4_0= 'ANSWER' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3372:3: lv_name_4_0= 'ANSWER'
+                    {
+                    lv_name_4_0=(Token)match(input,67,FOLLOW_67_in_ruleSESSION7726); 
+
+                            newLeafNode(lv_name_4_0, grammarAccess.getSESSIONAccess().getNameANSWERKeyword_4_0());
+                        
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getSESSIONRule());
+                    	        }
+                           		setWithLastConsumed(current, "name", lv_name_4_0, "ANSWER");
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 6 :
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3386:6: ( (lv_name_5_0= 'DIGITS' ) )
+                    {
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3386:6: ( (lv_name_5_0= 'DIGITS' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3387:1: (lv_name_5_0= 'DIGITS' )
+                    {
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3387:1: (lv_name_5_0= 'DIGITS' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3388:3: lv_name_5_0= 'DIGITS'
+                    {
+                    lv_name_5_0=(Token)match(input,68,FOLLOW_68_in_ruleSESSION7763); 
+
+                            newLeafNode(lv_name_5_0, grammarAccess.getSESSIONAccess().getNameDIGITSKeyword_5_0());
+                        
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getSESSIONRule());
+                    	        }
+                           		setWithLastConsumed(current, "name", lv_name_5_0, "DIGITS");
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 7 :
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3402:6: ( (lv_name_6_0= 'RECORD' ) )
+                    {
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3402:6: ( (lv_name_6_0= 'RECORD' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3403:1: (lv_name_6_0= 'RECORD' )
+                    {
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3403:1: (lv_name_6_0= 'RECORD' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3404:3: lv_name_6_0= 'RECORD'
+                    {
+                    lv_name_6_0=(Token)match(input,69,FOLLOW_69_in_ruleSESSION7800); 
+
+                            newLeafNode(lv_name_6_0, grammarAccess.getSESSIONAccess().getNameRECORDKeyword_6_0());
+                        
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getSESSIONRule());
+                    	        }
+                           		setWithLastConsumed(current, "name", lv_name_6_0, "RECORD");
                     	    
 
                     }
@@ -8181,7 +8389,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCALLSTATUS"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3340:1: entryRuleCALLSTATUS returns [EObject current=null] : iv_ruleCALLSTATUS= ruleCALLSTATUS EOF ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3425:1: entryRuleCALLSTATUS returns [EObject current=null] : iv_ruleCALLSTATUS= ruleCALLSTATUS EOF ;
     public final EObject entryRuleCALLSTATUS() throws RecognitionException {
         EObject current = null;
 
@@ -8189,17 +8397,17 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3341:2: (iv_ruleCALLSTATUS= ruleCALLSTATUS EOF )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3342:2: iv_ruleCALLSTATUS= ruleCALLSTATUS EOF
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3426:2: (iv_ruleCALLSTATUS= ruleCALLSTATUS EOF )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3427:2: iv_ruleCALLSTATUS= ruleCALLSTATUS EOF
             {
              newCompositeNode(grammarAccess.getCALLSTATUSRule()); 
-            pushFollow(FOLLOW_ruleCALLSTATUS_in_entryRuleCALLSTATUS7591);
+            pushFollow(FOLLOW_ruleCALLSTATUS_in_entryRuleCALLSTATUS7849);
             iv_ruleCALLSTATUS=ruleCALLSTATUS();
 
             state._fsp--;
 
              current =iv_ruleCALLSTATUS; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCALLSTATUS7601); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCALLSTATUS7859); 
 
             }
 
@@ -8217,7 +8425,7 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCALLSTATUS"
-    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3349:1: ruleCALLSTATUS returns [EObject current=null] : ( ( (lv_name_0_0= 'RINGING' ) ) | ( (lv_name_1_0= 'IN-PROGRESS' ) ) | ( (lv_name_2_0= 'DISCONNECTED' ) ) | ( (lv_name_3_0= 'FAILED' ) ) ) ;
+    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3434:1: ruleCALLSTATUS returns [EObject current=null] : ( ( (lv_name_0_0= 'RINGING' ) ) | ( (lv_name_1_0= 'IN-PROGRESS' ) ) | ( (lv_name_2_0= 'DISCONNECTED' ) ) | ( (lv_name_3_0= 'FAILED' ) ) ) ;
     public final EObject ruleCALLSTATUS() throws RecognitionException {
         EObject current = null;
 
@@ -8229,50 +8437,50 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3352:28: ( ( ( (lv_name_0_0= 'RINGING' ) ) | ( (lv_name_1_0= 'IN-PROGRESS' ) ) | ( (lv_name_2_0= 'DISCONNECTED' ) ) | ( (lv_name_3_0= 'FAILED' ) ) ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3353:1: ( ( (lv_name_0_0= 'RINGING' ) ) | ( (lv_name_1_0= 'IN-PROGRESS' ) ) | ( (lv_name_2_0= 'DISCONNECTED' ) ) | ( (lv_name_3_0= 'FAILED' ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3437:28: ( ( ( (lv_name_0_0= 'RINGING' ) ) | ( (lv_name_1_0= 'IN-PROGRESS' ) ) | ( (lv_name_2_0= 'DISCONNECTED' ) ) | ( (lv_name_3_0= 'FAILED' ) ) ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3438:1: ( ( (lv_name_0_0= 'RINGING' ) ) | ( (lv_name_1_0= 'IN-PROGRESS' ) ) | ( (lv_name_2_0= 'DISCONNECTED' ) ) | ( (lv_name_3_0= 'FAILED' ) ) )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3353:1: ( ( (lv_name_0_0= 'RINGING' ) ) | ( (lv_name_1_0= 'IN-PROGRESS' ) ) | ( (lv_name_2_0= 'DISCONNECTED' ) ) | ( (lv_name_3_0= 'FAILED' ) ) )
-            int alt34=4;
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3438:1: ( ( (lv_name_0_0= 'RINGING' ) ) | ( (lv_name_1_0= 'IN-PROGRESS' ) ) | ( (lv_name_2_0= 'DISCONNECTED' ) ) | ( (lv_name_3_0= 'FAILED' ) ) )
+            int alt33=4;
             switch ( input.LA(1) ) {
-            case 66:
+            case 70:
                 {
-                alt34=1;
+                alt33=1;
                 }
                 break;
-            case 67:
+            case 71:
                 {
-                alt34=2;
+                alt33=2;
                 }
                 break;
-            case 68:
+            case 72:
                 {
-                alt34=3;
+                alt33=3;
                 }
                 break;
-            case 69:
+            case 73:
                 {
-                alt34=4;
+                alt33=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 34, 0, input);
+                    new NoViableAltException("", 33, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt34) {
+            switch (alt33) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3353:2: ( (lv_name_0_0= 'RINGING' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3438:2: ( (lv_name_0_0= 'RINGING' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3353:2: ( (lv_name_0_0= 'RINGING' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3354:1: (lv_name_0_0= 'RINGING' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3438:2: ( (lv_name_0_0= 'RINGING' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3439:1: (lv_name_0_0= 'RINGING' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3354:1: (lv_name_0_0= 'RINGING' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3355:3: lv_name_0_0= 'RINGING'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3439:1: (lv_name_0_0= 'RINGING' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3440:3: lv_name_0_0= 'RINGING'
                     {
-                    lv_name_0_0=(Token)match(input,66,FOLLOW_66_in_ruleCALLSTATUS7644); 
+                    lv_name_0_0=(Token)match(input,70,FOLLOW_70_in_ruleCALLSTATUS7902); 
 
                             newLeafNode(lv_name_0_0, grammarAccess.getCALLSTATUSAccess().getNameRINGINGKeyword_0_0());
                         
@@ -8292,15 +8500,15 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3369:6: ( (lv_name_1_0= 'IN-PROGRESS' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3454:6: ( (lv_name_1_0= 'IN-PROGRESS' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3369:6: ( (lv_name_1_0= 'IN-PROGRESS' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3370:1: (lv_name_1_0= 'IN-PROGRESS' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3454:6: ( (lv_name_1_0= 'IN-PROGRESS' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3455:1: (lv_name_1_0= 'IN-PROGRESS' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3370:1: (lv_name_1_0= 'IN-PROGRESS' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3371:3: lv_name_1_0= 'IN-PROGRESS'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3455:1: (lv_name_1_0= 'IN-PROGRESS' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3456:3: lv_name_1_0= 'IN-PROGRESS'
                     {
-                    lv_name_1_0=(Token)match(input,67,FOLLOW_67_in_ruleCALLSTATUS7681); 
+                    lv_name_1_0=(Token)match(input,71,FOLLOW_71_in_ruleCALLSTATUS7939); 
 
                             newLeafNode(lv_name_1_0, grammarAccess.getCALLSTATUSAccess().getNameINPROGRESSKeyword_1_0());
                         
@@ -8320,15 +8528,15 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3385:6: ( (lv_name_2_0= 'DISCONNECTED' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3470:6: ( (lv_name_2_0= 'DISCONNECTED' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3385:6: ( (lv_name_2_0= 'DISCONNECTED' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3386:1: (lv_name_2_0= 'DISCONNECTED' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3470:6: ( (lv_name_2_0= 'DISCONNECTED' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3471:1: (lv_name_2_0= 'DISCONNECTED' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3386:1: (lv_name_2_0= 'DISCONNECTED' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3387:3: lv_name_2_0= 'DISCONNECTED'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3471:1: (lv_name_2_0= 'DISCONNECTED' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3472:3: lv_name_2_0= 'DISCONNECTED'
                     {
-                    lv_name_2_0=(Token)match(input,68,FOLLOW_68_in_ruleCALLSTATUS7718); 
+                    lv_name_2_0=(Token)match(input,72,FOLLOW_72_in_ruleCALLSTATUS7976); 
 
                             newLeafNode(lv_name_2_0, grammarAccess.getCALLSTATUSAccess().getNameDISCONNECTEDKeyword_2_0());
                         
@@ -8348,15 +8556,15 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3401:6: ( (lv_name_3_0= 'FAILED' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3486:6: ( (lv_name_3_0= 'FAILED' ) )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3401:6: ( (lv_name_3_0= 'FAILED' ) )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3402:1: (lv_name_3_0= 'FAILED' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3486:6: ( (lv_name_3_0= 'FAILED' ) )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3487:1: (lv_name_3_0= 'FAILED' )
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3402:1: (lv_name_3_0= 'FAILED' )
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3403:3: lv_name_3_0= 'FAILED'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3487:1: (lv_name_3_0= 'FAILED' )
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3488:3: lv_name_3_0= 'FAILED'
                     {
-                    lv_name_3_0=(Token)match(input,69,FOLLOW_69_in_ruleCALLSTATUS7755); 
+                    lv_name_3_0=(Token)match(input,73,FOLLOW_73_in_ruleCALLSTATUS8013); 
 
                             newLeafNode(lv_name_3_0, grammarAccess.getCALLSTATUSAccess().getNameFAILEDKeyword_3_0());
                         
@@ -8397,29 +8605,32 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
     // Delegated rules
 
 
-    protected DFA16 dfa16 = new DFA16(this);
-    static final String DFA16_eotS =
-        "\16\uffff";
-    static final String DFA16_eofS =
-        "\1\uffff\1\14\6\15\6\uffff";
-    static final String DFA16_minS =
-        "\1\4\7\10\6\uffff";
-    static final String DFA16_maxS =
-        "\1\105\7\34\6\uffff";
-    static final String DFA16_acceptS =
-        "\10\uffff\1\2\1\3\1\5\1\6\1\1\1\4";
-    static final String DFA16_specialS =
-        "\16\uffff}>";
-    static final String[] DFA16_transitionS = {
-            "\1\2\1\uffff\2\10\1\uffff\1\12\2\uffff\1\11\1\uffff\1\3\1\1"+
-            "\1\10\55\uffff\1\4\1\5\1\6\1\7\4\13",
-            "\1\14\1\uffff\1\14\1\10\15\uffff\1\14\2\uffff\1\14",
-            "\1\15\1\uffff\1\15\1\10\15\uffff\1\15\2\uffff\1\15",
-            "\1\15\1\uffff\1\15\1\10\15\uffff\1\15\2\uffff\1\15",
-            "\1\15\1\uffff\1\15\1\10\15\uffff\1\15\2\uffff\1\15",
-            "\1\15\1\uffff\1\15\1\10\15\uffff\1\15\2\uffff\1\15",
-            "\1\15\1\uffff\1\15\1\10\15\uffff\1\15\2\uffff\1\15",
-            "\1\15\1\uffff\1\15\1\10\15\uffff\1\15\2\uffff\1\15",
+    protected DFA15 dfa15 = new DFA15(this);
+    static final String DFA15_eotS =
+        "\21\uffff";
+    static final String DFA15_eofS =
+        "\1\uffff\1\17\11\20\6\uffff";
+    static final String DFA15_minS =
+        "\1\4\12\10\6\uffff";
+    static final String DFA15_maxS =
+        "\1\111\12\34\6\uffff";
+    static final String DFA15_acceptS =
+        "\13\uffff\1\2\1\3\1\5\1\6\1\1\1\4";
+    static final String DFA15_specialS =
+        "\21\uffff}>";
+    static final String[] DFA15_transitionS = {
+            "\1\2\1\uffff\2\13\1\uffff\1\15\2\uffff\1\14\2\uffff\1\3\1\1"+
+            "\1\13\55\uffff\1\4\1\5\1\6\1\7\1\10\1\11\1\12\4\16",
+            "\1\17\1\uffff\1\17\1\13\15\uffff\1\17\2\uffff\1\17",
+            "\1\20\1\uffff\1\20\1\13\15\uffff\1\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\1\13\15\uffff\1\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\1\13\15\uffff\1\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\1\13\15\uffff\1\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\1\13\15\uffff\1\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\1\13\15\uffff\1\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\1\13\15\uffff\1\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\1\13\15\uffff\1\20\2\uffff\1\20",
+            "\1\20\1\uffff\1\20\1\13\15\uffff\1\20\2\uffff\1\20",
             "",
             "",
             "",
@@ -8428,37 +8639,37 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
             ""
     };
 
-    static final short[] DFA16_eot = DFA.unpackEncodedString(DFA16_eotS);
-    static final short[] DFA16_eof = DFA.unpackEncodedString(DFA16_eofS);
-    static final char[] DFA16_min = DFA.unpackEncodedStringToUnsignedChars(DFA16_minS);
-    static final char[] DFA16_max = DFA.unpackEncodedStringToUnsignedChars(DFA16_maxS);
-    static final short[] DFA16_accept = DFA.unpackEncodedString(DFA16_acceptS);
-    static final short[] DFA16_special = DFA.unpackEncodedString(DFA16_specialS);
-    static final short[][] DFA16_transition;
+    static final short[] DFA15_eot = DFA.unpackEncodedString(DFA15_eotS);
+    static final short[] DFA15_eof = DFA.unpackEncodedString(DFA15_eofS);
+    static final char[] DFA15_min = DFA.unpackEncodedStringToUnsignedChars(DFA15_minS);
+    static final char[] DFA15_max = DFA.unpackEncodedStringToUnsignedChars(DFA15_maxS);
+    static final short[] DFA15_accept = DFA.unpackEncodedString(DFA15_acceptS);
+    static final short[] DFA15_special = DFA.unpackEncodedString(DFA15_specialS);
+    static final short[][] DFA15_transition;
 
     static {
-        int numStates = DFA16_transitionS.length;
-        DFA16_transition = new short[numStates][];
+        int numStates = DFA15_transitionS.length;
+        DFA15_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA16_transition[i] = DFA.unpackEncodedString(DFA16_transitionS[i]);
+            DFA15_transition[i] = DFA.unpackEncodedString(DFA15_transitionS[i]);
         }
     }
 
-    class DFA16 extends DFA {
+    class DFA15 extends DFA {
 
-        public DFA16(BaseRecognizer recognizer) {
+        public DFA15(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 16;
-            this.eot = DFA16_eot;
-            this.eof = DFA16_eof;
-            this.min = DFA16_min;
-            this.max = DFA16_max;
-            this.accept = DFA16_accept;
-            this.special = DFA16_special;
-            this.transition = DFA16_transition;
+            this.decisionNumber = 15;
+            this.eot = DFA15_eot;
+            this.eof = DFA15_eof;
+            this.min = DFA15_min;
+            this.max = DFA15_max;
+            this.accept = DFA15_accept;
+            this.special = DFA15_special;
+            this.transition = DFA15_transition;
         }
         public String getDescription() {
-            return "1879:1: (this_BoolLiteral_0= ruleBoolLiteral | this_CompareExpression_1= ruleCompareExpression | this_NegExpression_2= ruleNegExpression | this_Literal_3= ruleLiteral | this_Brackets_4= ruleBrackets | this_CALLSTATUS_5= ruleCALLSTATUS )";
+            return "1913:1: (this_BoolLiteral_0= ruleBoolLiteral | this_CompareExpression_1= ruleCompareExpression | this_NegExpression_2= ruleNegExpression | this_Literal_3= ruleLiteral | this_Brackets_4= ruleBrackets | this_CALLSTATUS_5= ruleCALLSTATUS )";
         }
     }
  
@@ -8466,8 +8677,8 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleDocument_in_entryRuleDocument75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDocument85 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_21_in_ruleDocument122 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDocument139 = new BitSet(new long[]{0x01C8000003400022L});
-    public static final BitSet FOLLOW_ruleStatement_in_ruleDocument165 = new BitSet(new long[]{0x01C8000003400022L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDocument139 = new BitSet(new long[]{0x0390000003400022L});
+    public static final BitSet FOLLOW_ruleStatement_in_ruleDocument165 = new BitSet(new long[]{0x0390000003400022L});
     public static final BitSet FOLLOW_ruleState_in_ruleDocument187 = new BitSet(new long[]{0x0000000003400002L});
     public static final BitSet FOLLOW_ruleStatement_in_entryRuleStatement224 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStatement234 = new BitSet(new long[]{0x0000000000000002L});
@@ -8490,8 +8701,8 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_INT_in_ruleState742 = new BitSet(new long[]{0x0000000003400002L});
     public static final BitSet FOLLOW_24_in_ruleState818 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_RULE_INT_in_ruleState835 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleState854 = new BitSet(new long[]{0x01CA71B8EC000020L});
-    public static final BitSet FOLLOW_ruleAbstractElement_in_ruleState875 = new BitSet(new long[]{0x01CA71B8EC000020L});
+    public static final BitSet FOLLOW_25_in_ruleState854 = new BitSet(new long[]{0x03991C6EEC000020L});
+    public static final BitSet FOLLOW_ruleAbstractElement_in_ruleState875 = new BitSet(new long[]{0x03991C6EEC000020L});
     public static final BitSet FOLLOW_26_in_ruleState888 = new BitSet(new long[]{0x0000000003400002L});
     public static final BitSet FOLLOW_ruleVoiceTag_in_entryRuleVoiceTag970 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleVoiceTag980 = new BitSet(new long[]{0x0000000000000002L});
@@ -8506,244 +8717,258 @@ public class InternalDimeParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleHangup_in_ruleVoiceTag1243 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCall_in_ruleVoiceTag1270 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSms_in_ruleVoiceTag1297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCall_in_entryRuleCall1332 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCall1342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleCall1385 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleCall1419 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleCall1431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDial_in_entryRuleDial1467 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDial1477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleDial1520 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleDial1554 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleDial1566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePlay_in_entryRulePlay1602 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePlay1612 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rulePlay1655 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_rulePlay1689 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_rulePlay1701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRecord_in_entryRuleRecord1737 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRecord1747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleRecord1790 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleRecord1820 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleRecord1837 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleRecord1849 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleRecord1870 = new BitSet(new long[]{0x0000000410000000L});
-    public static final BitSet FOLLOW_34_in_ruleRecord1883 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRecord1900 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleRecord1919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleReject_in_entryRuleReject1955 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleReject1965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleReject2007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHangup_in_entryRuleHangup2055 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleHangup2065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleHangup2107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGetDigits_in_entryRuleGetDigits2155 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleGetDigits2165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleGetDigits2208 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleGetDigits2238 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_ruleGetDigits2255 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleGetDigits2276 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleGetDigits2288 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleGetDigits2305 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleGetDigits2322 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAsk_in_entryRuleAsk2358 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAsk2368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleAsk2411 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleAsk2445 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleAsk2457 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAsk2474 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleAsk2491 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSend_in_entryRuleSend2527 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSend2537 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleSend2580 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_ruleSendBlock_in_ruleSend2614 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleSend2626 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleSend2647 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleSend2659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSendBlock_in_entryRuleSendBlock2695 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSendBlock2705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleSendBlock2751 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_ruleParam_in_ruleSendBlock2772 = new BitSet(new long[]{0x0000040004000000L});
-    public static final BitSet FOLLOW_ruleNotPrimaryParam_in_ruleSendBlock2793 = new BitSet(new long[]{0x0000040004000000L});
-    public static final BitSet FOLLOW_26_in_ruleSendBlock2806 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNotPrimaryParam_in_entryRuleNotPrimaryParam2842 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNotPrimaryParam2852 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleNotPrimaryParam2889 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_ruleParam_in_ruleNotPrimaryParam2910 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParam_in_entryRuleParam2946 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleParam2956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleParam2998 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_43_in_ruleParam3015 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleParam3036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSay_in_entryRuleSay3072 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSay3082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_ruleSay3125 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleSay3159 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleSay3171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSms_in_entryRuleSms3207 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSms3217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_ruleSms3260 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleSms3294 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleSms3306 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleSms3327 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleSms3339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTransition_in_entryRuleTransition3379 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTransition3389 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_ruleTransition3432 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleTransition3465 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_47_in_ruleTransition3477 = new BitSet(new long[]{0x3E00000000000000L});
-    public static final BitSet FOLLOW_ruleEVENT_in_ruleTransition3498 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleTransition3510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIfExp_in_entryRuleIfExp3546 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIfExp3556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCondBlock_in_ruleIfExp3602 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleIfExp3615 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_ruleCondBlock_in_ruleIfExp3636 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleIfExp3651 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_ruleBlock_in_ruleIfExp3672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCondBlock_in_entryRuleCondBlock3710 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCondBlock3720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleCondBlock3763 = new BitSet(new long[]{0xC00000000001D2D0L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleTerminalBoolExpression_in_ruleCondBlock3797 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_ruleBlock_in_ruleCondBlock3818 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlock_in_entryRuleBlock3854 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBlock3864 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleBlock3916 = new BitSet(new long[]{0x01CA71B8EC000020L});
-    public static final BitSet FOLLOW_ruleAbstractElement_in_ruleBlock3950 = new BitSet(new long[]{0x01CA71B8EC000020L});
-    public static final BitSet FOLLOW_26_in_ruleBlock3963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolExpression_in_entryRuleBoolExpression3999 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBoolExpression4009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerminalBoolExpression_in_ruleBoolExpression4056 = new BitSet(new long[]{0x0000000000000102L});
-    public static final BitSet FOLLOW_RULE_LOGIC_WORD_in_ruleBoolExpression4082 = new BitSet(new long[]{0xC00000000001D2D0L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleBoolExpression_in_ruleBoolExpression4108 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerminalBoolExpression_in_entryRuleTerminalBoolExpression4146 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTerminalBoolExpression4156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolLiteral_in_ruleTerminalBoolExpression4203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompareExpression_in_ruleTerminalBoolExpression4230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNegExpression_in_ruleTerminalBoolExpression4257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteral_in_ruleTerminalBoolExpression4284 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBrackets_in_ruleTerminalBoolExpression4311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCALLSTATUS_in_ruleTerminalBoolExpression4338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBrackets_in_entryRuleBrackets4373 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBrackets4383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_OBRACKET_in_ruleBrackets4425 = new BitSet(new long[]{0xC00000000001D2D0L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleBoolExpression_in_ruleBrackets4451 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_RULE_CBRACKET_in_ruleBrackets4468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompareExpression_in_entryRuleCompareExpression4509 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCompareExpression4519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralAbs_in_ruleCompareExpression4565 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_RULE_COMPARE_in_ruleCompareExpression4582 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleLiteralAbs_in_ruleCompareExpression4608 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNegExpression_in_entryRuleNegExpression4644 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNegExpression4654 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NEGATION_in_ruleNegExpression4696 = new BitSet(new long[]{0xC00000000001D2D0L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleTerminalBoolExpression_in_ruleNegExpression4722 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMathExpression_in_entryRuleMathExpression4758 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMathExpression4768 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMathTerminal_in_ruleMathExpression4815 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_RULE_MATH_in_ruleMathExpression4841 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleMathExpression_in_ruleMathExpression4867 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMathTerminal_in_entryRuleMathTerminal4905 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMathTerminal4915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMathBrackets_in_ruleMathTerminal4962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteral_in_ruleMathTerminal4989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumLiteral_in_ruleMathTerminal5016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMathBrackets_in_entryRuleMathBrackets5051 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMathBrackets5061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_OBRACKET_in_ruleMathBrackets5103 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleMathExpression_in_ruleMathBrackets5129 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_RULE_CBRACKET_in_ruleMathBrackets5146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_entryRuleConcatenationExpression5187 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConcatenationExpression5197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConcatenationTerminal_in_ruleConcatenationExpression5244 = new BitSet(new long[]{0x0004000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleConcatenationExpression5271 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleConcatenationExpression5305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConcatenationTerminal_in_entryRuleConcatenationTerminal5343 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConcatenationTerminal5353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConcatenationBrackets_in_ruleConcatenationTerminal5400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralAbs_in_ruleConcatenationTerminal5427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConcatenationBrackets_in_entryRuleConcatenationBrackets5462 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConcatenationBrackets5472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_OBRACKET_in_ruleConcatenationBrackets5514 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleConcatenationBrackets5540 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_RULE_CBRACKET_in_ruleConcatenationBrackets5557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringVariable_in_entryRuleStringVariable5598 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStringVariable5608 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_ruleStringVariable5645 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleStringVariable5662 = new BitSet(new long[]{0x0030000010000000L});
-    public static final BitSet FOLLOW_52_in_ruleStringVariable5681 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_53_in_ruleStringVariable5699 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleStringVariable5721 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleStringVariable5735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumVariable_in_entryRuleNumVariable5771 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNumVariable5781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_ruleNumVariable5818 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNumVariable5835 = new BitSet(new long[]{0x0030000010000000L});
-    public static final BitSet FOLLOW_52_in_ruleNumVariable5854 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_53_in_ruleNumVariable5872 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleMathExpression_in_ruleNumVariable5894 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleNumVariable5908 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolVariable_in_entryRuleBoolVariable5944 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBoolVariable5954 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_ruleBoolVariable5991 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBoolVariable6008 = new BitSet(new long[]{0x0030000010000000L});
-    public static final BitSet FOLLOW_52_in_ruleBoolVariable6027 = new BitSet(new long[]{0xC00000000001D2D0L,0x000000000000003FL});
-    public static final BitSet FOLLOW_53_in_ruleBoolVariable6045 = new BitSet(new long[]{0xC00000000001D2D0L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleBoolExpression_in_ruleBoolVariable6067 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleBoolVariable6081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstant_in_entryRuleConstant6117 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConstant6127 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleConstant6164 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleConstant6181 = new BitSet(new long[]{0x0030000000000000L});
-    public static final BitSet FOLLOW_52_in_ruleConstant6199 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_53_in_ruleConstant6217 = new BitSet(new long[]{0xC00000000001C2D0L,0x0000000000000003L});
-    public static final BitSet FOLLOW_rulePrimitive_in_ruleConstant6239 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleConstant6251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimitive_in_entryRulePrimitive6287 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePrimitive6297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringLiteral_in_rulePrimitive6344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolLiteral_in_rulePrimitive6371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumLiteral_in_rulePrimitive6398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralAbs_in_entryRuleLiteralAbs6435 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLiteralAbs6445 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteral_in_ruleLiteralAbs6492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimitive_in_ruleLiteralAbs6519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteral_in_entryRuleLiteral6554 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLiteral6564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLiteral6609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NULL_in_ruleLiteral6632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSESSION_in_ruleLiteral6665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolLiteral_in_entryRuleBoolLiteral6700 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBoolLiteral6710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BOOL_in_ruleBoolLiteral6761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumLiteral_in_entryRuleNumLiteral6802 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNumLiteral6812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumber_in_ruleNumLiteral6867 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringLiteral_in_entryRuleStringLiteral6903 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStringLiteral6913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleStringLiteral6964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumber_in_entryRuleNumber7006 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNumber7017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleNumber7057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber7083 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEVENT_in_entryRuleEVENT7128 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEVENT7138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_ruleEVENT7181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_ruleEVENT7218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_ruleEVENT7255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_ruleEVENT7292 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_ruleEVENT7329 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSESSION_in_entryRuleSESSION7378 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSESSION7388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_ruleSESSION7431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_ruleSESSION7468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_ruleSESSION7505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_ruleSESSION7542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCALLSTATUS_in_entryRuleCALLSTATUS7591 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCALLSTATUS7601 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleCALLSTATUS7644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_ruleCALLSTATUS7681 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_ruleCALLSTATUS7718 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_ruleCALLSTATUS7755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEmail_in_ruleVoiceTag1324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCall_in_entryRuleCall1359 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCall1369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleCall1412 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleCall1446 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleCall1458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDial_in_entryRuleDial1494 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDial1504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleDial1547 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleDial1581 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleDial1593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePlay_in_entryRulePlay1629 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePlay1639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rulePlay1682 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_rulePlay1716 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_rulePlay1728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRecord_in_entryRuleRecord1764 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRecord1774 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleRecord1817 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleRecord1847 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleRecord1864 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleRecord1876 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleReject_in_entryRuleReject1912 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleReject1922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleReject1964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHangup_in_entryRuleHangup2012 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleHangup2022 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleHangup2064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGetDigits_in_entryRuleGetDigits2112 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGetDigits2122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleGetDigits2165 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleGetDigits2195 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleGetDigits2212 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleGetDigits2224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAsk_in_entryRuleAsk2260 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAsk2270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleAsk2313 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleAsk2347 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleAsk2359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSend_in_entryRuleSend2395 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSend2405 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleSend2448 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_ruleSendBlock_in_ruleSend2482 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleSend2494 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleSend2515 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleSend2527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSendBlock_in_entryRuleSendBlock2563 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSendBlock2573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleSendBlock2619 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_ruleParam_in_ruleSendBlock2640 = new BitSet(new long[]{0x0000010004000000L});
+    public static final BitSet FOLLOW_ruleNotPrimaryParam_in_ruleSendBlock2661 = new BitSet(new long[]{0x0000010004000000L});
+    public static final BitSet FOLLOW_26_in_ruleSendBlock2674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNotPrimaryParam_in_entryRuleNotPrimaryParam2710 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNotPrimaryParam2720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleNotPrimaryParam2757 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_ruleParam_in_ruleNotPrimaryParam2778 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParam_in_entryRuleParam2814 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleParam2824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleParam2866 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleParam2883 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleParam2904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSay_in_entryRuleSay2940 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSay2950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleSay2993 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleSay3027 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleSay3039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSms_in_entryRuleSms3075 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSms3085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_ruleSms3128 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleSms3162 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleSms3174 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleSms3195 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleSms3207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEmail_in_entryRuleEmail3243 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEmail3253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_ruleEmail3296 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleEmail3321 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_45_in_ruleEmail3333 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleEmail3345 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleEmail3366 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleEmail3378 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_46_in_ruleEmail3390 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleEmail3402 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleEmail3423 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleEmail3435 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_ruleEmail3447 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleEmail3459 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleEmail3480 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_ruleEmail3492 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleEmail3504 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleEmail3525 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleEmail3537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTransition_in_entryRuleTransition3573 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTransition3583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleTransition3626 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleTransition3659 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_ruleTransition3671 = new BitSet(new long[]{0x7C00000000000000L});
+    public static final BitSet FOLLOW_ruleEVENT_in_ruleTransition3692 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleTransition3704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIfExp_in_entryRuleIfExp3740 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIfExp3750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCondBlock_in_ruleIfExp3796 = new BitSet(new long[]{0x0004000000000002L});
+    public static final BitSet FOLLOW_50_in_ruleIfExp3809 = new BitSet(new long[]{0x0008000000000000L});
+    public static final BitSet FOLLOW_ruleCondBlock_in_ruleIfExp3830 = new BitSet(new long[]{0x0004000000000002L});
+    public static final BitSet FOLLOW_50_in_ruleIfExp3845 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_ruleBlock_in_ruleIfExp3866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCondBlock_in_entryRuleCondBlock3904 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCondBlock3914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_ruleCondBlock3951 = new BitSet(new long[]{0x80000000000392D0L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_ruleTerminalBoolExpression_in_ruleCondBlock3972 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_ruleBlock_in_ruleCondBlock3993 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlock_in_entryRuleBlock4029 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBlock4039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleBlock4085 = new BitSet(new long[]{0x03991C6EEC000020L});
+    public static final BitSet FOLLOW_ruleAbstractElement_in_ruleBlock4106 = new BitSet(new long[]{0x03991C6EEC000020L});
+    public static final BitSet FOLLOW_26_in_ruleBlock4119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoolExpression_in_entryRuleBoolExpression4155 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBoolExpression4165 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerminalBoolExpression_in_ruleBoolExpression4212 = new BitSet(new long[]{0x0000000000000102L});
+    public static final BitSet FOLLOW_RULE_LOGIC_WORD_in_ruleBoolExpression4238 = new BitSet(new long[]{0x80000000000392D0L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_ruleBoolExpression_in_ruleBoolExpression4264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerminalBoolExpression_in_entryRuleTerminalBoolExpression4302 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTerminalBoolExpression4312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoolLiteral_in_ruleTerminalBoolExpression4359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompareExpression_in_ruleTerminalBoolExpression4386 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNegExpression_in_ruleTerminalBoolExpression4413 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteral_in_ruleTerminalBoolExpression4440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBrackets_in_ruleTerminalBoolExpression4467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCALLSTATUS_in_ruleTerminalBoolExpression4494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBrackets_in_entryRuleBrackets4529 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBrackets4539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_OBRACKET_in_ruleBrackets4581 = new BitSet(new long[]{0x80000000000392D0L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_ruleBoolExpression_in_ruleBrackets4607 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_RULE_CBRACKET_in_ruleBrackets4624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompareExpression_in_entryRuleCompareExpression4665 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCompareExpression4675 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralAbs_in_ruleCompareExpression4721 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_RULE_COMPARE_in_ruleCompareExpression4738 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleLiteralAbs_in_ruleCompareExpression4764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNegExpression_in_entryRuleNegExpression4800 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNegExpression4810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NEGATION_in_ruleNegExpression4852 = new BitSet(new long[]{0x80000000000392D0L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_ruleTerminalBoolExpression_in_ruleNegExpression4878 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMathExpression_in_entryRuleMathExpression4914 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMathExpression4924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMathTerminal_in_ruleMathExpression4971 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_RULE_MATH_in_ruleMathExpression4997 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleMathExpression_in_ruleMathExpression5023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMathTerminal_in_entryRuleMathTerminal5061 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMathTerminal5071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMathBrackets_in_ruleMathTerminal5118 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteral_in_ruleMathTerminal5145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumLiteral_in_ruleMathTerminal5172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMathBrackets_in_entryRuleMathBrackets5207 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMathBrackets5217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_OBRACKET_in_ruleMathBrackets5259 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleMathExpression_in_ruleMathBrackets5285 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_RULE_CBRACKET_in_ruleMathBrackets5302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_entryRuleConcatenationExpression5343 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConcatenationExpression5353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConcatenationTerminal_in_ruleConcatenationExpression5400 = new BitSet(new long[]{0x0000000000004002L});
+    public static final BitSet FOLLOW_RULE_CONCATENATION_in_ruleConcatenationExpression5426 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleConcatenationExpression5452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConcatenationTerminal_in_entryRuleConcatenationTerminal5490 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConcatenationTerminal5500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConcatenationBrackets_in_ruleConcatenationTerminal5547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralAbs_in_ruleConcatenationTerminal5574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConcatenationBrackets_in_entryRuleConcatenationBrackets5609 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConcatenationBrackets5619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_OBRACKET_in_ruleConcatenationBrackets5661 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleConcatenationBrackets5687 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_RULE_CBRACKET_in_ruleConcatenationBrackets5704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringVariable_in_entryRuleStringVariable5745 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStringVariable5755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_ruleStringVariable5792 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleStringVariable5809 = new BitSet(new long[]{0x0060000010000000L});
+    public static final BitSet FOLLOW_53_in_ruleStringVariable5828 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_54_in_ruleStringVariable5846 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleConcatenationExpression_in_ruleStringVariable5868 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleStringVariable5882 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumVariable_in_entryRuleNumVariable5918 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumVariable5928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_ruleNumVariable5965 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNumVariable5982 = new BitSet(new long[]{0x0060000010000000L});
+    public static final BitSet FOLLOW_53_in_ruleNumVariable6001 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_54_in_ruleNumVariable6019 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleMathExpression_in_ruleNumVariable6041 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleNumVariable6055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoolVariable_in_entryRuleBoolVariable6091 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBoolVariable6101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_ruleBoolVariable6138 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBoolVariable6155 = new BitSet(new long[]{0x0060000010000000L});
+    public static final BitSet FOLLOW_53_in_ruleBoolVariable6174 = new BitSet(new long[]{0x80000000000392D0L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_54_in_ruleBoolVariable6192 = new BitSet(new long[]{0x80000000000392D0L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_ruleBoolExpression_in_ruleBoolVariable6214 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleBoolVariable6228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstant_in_entryRuleConstant6264 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConstant6274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_ruleConstant6311 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleConstant6328 = new BitSet(new long[]{0x0060000000000000L});
+    public static final BitSet FOLLOW_53_in_ruleConstant6346 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_54_in_ruleConstant6364 = new BitSet(new long[]{0x80000000000382D0L,0x000000000000003FL});
+    public static final BitSet FOLLOW_rulePrimitive_in_ruleConstant6386 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleConstant6398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimitive_in_entryRulePrimitive6434 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePrimitive6444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringLiteral_in_rulePrimitive6491 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoolLiteral_in_rulePrimitive6518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumLiteral_in_rulePrimitive6545 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralAbs_in_entryRuleLiteralAbs6582 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLiteralAbs6592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteral_in_ruleLiteralAbs6639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimitive_in_ruleLiteralAbs6666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteral_in_entryRuleLiteral6701 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLiteral6711 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleLiteral6756 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NULL_in_ruleLiteral6779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSESSION_in_ruleLiteral6812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoolLiteral_in_entryRuleBoolLiteral6847 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBoolLiteral6857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BOOL_in_ruleBoolLiteral6908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumLiteral_in_entryRuleNumLiteral6949 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumLiteral6959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumber_in_ruleNumLiteral7014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringLiteral_in_entryRuleStringLiteral7050 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStringLiteral7060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleStringLiteral7111 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumber_in_entryRuleNumber7153 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumber7164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleNumber7204 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber7230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEVENT_in_entryRuleEVENT7275 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEVENT7285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_ruleEVENT7328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_ruleEVENT7365 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_ruleEVENT7402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_ruleEVENT7439 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_ruleEVENT7476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSESSION_in_entryRuleSESSION7525 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSESSION7535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_ruleSESSION7578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_ruleSESSION7615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleSESSION7652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleSESSION7689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_ruleSESSION7726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_ruleSESSION7763 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_ruleSESSION7800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCALLSTATUS_in_entryRuleCALLSTATUS7849 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCALLSTATUS7859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_ruleCALLSTATUS7902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_ruleCALLSTATUS7939 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_ruleCALLSTATUS7976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_ruleCALLSTATUS8013 = new BitSet(new long[]{0x0000000000000002L});
 
 }

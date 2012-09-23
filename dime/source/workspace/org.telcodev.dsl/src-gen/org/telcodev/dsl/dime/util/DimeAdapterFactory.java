@@ -175,11 +175,6 @@ public class DimeAdapterFactory extends AdapterFactoryImpl
         return createEmailAdapter();
       }
       @Override
-      public Adapter caseTweet(Tweet object)
-      {
-        return createTweetAdapter();
-      }
-      @Override
       public Adapter caseTransition(Transition object)
       {
         return createTransitionAdapter();
@@ -642,21 +637,6 @@ public class DimeAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createEmailAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.Tweet <em>Tweet</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.telcodev.dsl.dime.Tweet
-   * @generated
-   */
-  public Adapter createTweetAdapter()
   {
     return null;
   }

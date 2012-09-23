@@ -31,7 +31,7 @@ public class XMLfile {
 			String scriptlanguage = getTextValue(docEle, "scriptlanguage");
 			String url = getTextValue(docEle, "url");
 			if (language.equals("tropo")) {
-				tropo = new Tropo(getTextVoiceValue(docEle, "voice", language));
+				tropo = new Tropo(getTextVoiceValue(docEle, "voice", language),getTextVoiceValue(docEle, "user", language),getTextVoiceValue(docEle, "token", language),getTextVoiceValue(docEle, "password", language));
 				twilio = new Twilio();
 
 			}else{

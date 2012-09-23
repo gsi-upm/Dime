@@ -1,0 +1,224 @@
+grammar org.telcodev.dsl.Dime with org.eclipse.xtext.common.Terminals
+
+generate dime "http://www.telcodev.org/dsl/Dime"
+
+Document:
+	'Application' name=ID
+	elements+=Statement*
+	sta+=State*;
+
+Statement:
+	NumVariable | StringVariable | BoolVariable | Constant | com=ML_COMMENT //| AssigmentString    | AssigmentBool //| AssigmentNum
+;
+
+AbstractElement:
+	Statement | Transition | IfExp | VoiceTag;
+
+State:
+	'State' name=ID ('times' times=INT)? & ('timeout' timeout=INT)? '{'
+	stms+=AbstractElement*
+	'}';
+ 
+VoiceTag:
+	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms ;//| Email | Tweet;
+
+Call:
+	name='Call' to=ConcatenationExpression ';';
+
+Dial:
+	name='DialTo' to=ConcatenationExpression ';';
+
+Play:
+	name='Play' file=ConcatenationExpression ';';
+
+Record:
+	name='Record' time=INT 'seconds'  ';';
+
+Reject:
+	name='Reject;';
+
+Hangup:
+	name='HangUp;';
+
+GetDigits:
+	name='Get' numDigits=INT 'digits'';';
+
+Ask:
+	name='Ask' question=ConcatenationExpression ';';
+
+Send:
+	name='Send'  params=SendBlock  'to' url=ConcatenationExpression  ';';
+
+SendBlock:
+	{SendBlock}
+	
+	'{'
+	value=Param
+	stms+=NotPrimaryParam*
+	'}';
+
+NotPrimaryParam:
+	',' value=Param;
+
+Param:
+	name=STRING ':' value=ConcatenationExpression;
+
+Say:
+	name='Say' that=ConcatenationExpression ';';
+	
+Sms:
+	name='Sms'  value=ConcatenationExpression 'to' to=ConcatenationExpression  ';'
+;
+
+Email:
+	name='Email'  '{' 
+	'subject' ':' title=ConcatenationExpression ','
+	'from' ':' from=ConcatenationExpression ','
+	value=ConcatenationExpression '}' 'to' to=ConcatenationExpression ';'
+;
+
+Tweet:
+	name='Tweet' value=ConcatenationExpression ';'
+;
+Transition:
+	name='GoTo' target=[State] 'when' event=EVENT ';';
+
+	// Estructures.
+IfExp:
+	block=CondBlock ('else' blocks+=CondBlock)* ('else' defaultBlock=Block)?;
+
+CondBlock:
+	name='if' cond=TerminalBoolExpression action=Block;
+
+Block:
+	{Block}
+	name='{'
+	sta+=AbstractElement*
+	'}';
+
+	// Expression
+BoolExpression:
+	(TerminalBoolExpression ({OperationBool.left=current}
+	op=LOGIC_WORD right=BoolExpression)?);
+
+TerminalBoolExpression returns BoolExpression:
+	BoolLiteral | CompareExpression | NegExpression | Literal | Brackets | CALLSTATUS;
+
+Brackets:
+	open=OBRACKET obj=BoolExpression close=CBRACKET;
+
+CompareExpression:
+	(left=LiteralAbs op=COMPARE right=LiteralAbs);
+
+NegExpression:
+	op=NEGATION obj=TerminalBoolExpression;
+
+MathExpression:
+	MathTerminal ({Operation.left=current}
+	op=MATH right=MathExpression)?;
+
+MathTerminal returns MathExpression:
+	MathBrackets | Literal | NumLiteral;
+
+MathBrackets:
+	open=OBRACKET obj=MathExpression close=CBRACKET;
+
+	// Concatenation expression
+ConcatenationExpression:
+	ConcatenationTerminal ({Concatenation.left=current}
+	op='+' right=ConcatenationExpression)?;
+
+ConcatenationTerminal returns ConcatenationExpression:
+	ConcatenationBrackets | LiteralAbs;
+
+ConcatenationBrackets:
+	open=OBRACKET obj=ConcatenationExpression close=CBRACKET;
+
+	// Variable
+StringVariable:
+	'String' name=ID (('='|' = ') value=ConcatenationExpression)? ';';
+
+NumVariable:
+	'Num' name=ID (('='|' = ') value=MathExpression)? ';';
+
+BoolVariable:
+	'Bool' name=ID (('='|' = ') value=BoolExpression)? ';';
+
+Constant:
+	'Const' name=ID ('='|' = ') value=Primitive ';';
+
+Primitive:
+	StringLiteral | BoolLiteral | NumLiteral;
+
+	//AssigmentString:
+//	vas=[Vars] '=' (rights=ConcatenationExpression)';';
+//
+//AssigmentNum:
+//	van=[Vars] '=' (rightn=MathExpression)';';
+//
+//AssigmentBool:
+//	vab=[Vars] '=' (rightb=BoolExpression)';';
+//	
+
+// FALLO CONSTANT TIENE QUE IR EN LITERAL NO EN VARS
+Vars:
+	StringVariable | NumVariable | BoolVariable  | Constant;
+	// Literals
+LiteralAbs:
+	Literal | Primitive;
+
+Literal:
+	v=[Vars] | nul=NULL | SESSION // | constant=[Constant]
+;
+
+BoolLiteral:
+	{BoolLiteral} value=BOOL;
+
+NumLiteral:
+	{NumLiteral} value=Number;
+
+StringLiteral:
+	{StringLiteral} value=STRING;
+
+Number:
+	DOUBLE | INT;
+
+	// Terminals
+EVENT:
+	name='HANGUP' | name='COMPLETED' | name='ERROR' | name='TIMES' | name='TIMEOUT';
+
+SESSION:
+	name='CALLER' | name='LASTSTATE' | name='TIME' | name='CALLED';
+
+CALLSTATUS:
+	 name='RINGING' | name='IN-PROGRESS' | name='DISCONNECTED' | name='FAILED';
+
+terminal DOUBLE:
+	INT '.' INT;
+
+terminal NULL:
+	'null';
+
+terminal BOOL:
+	'true' | 'false';
+
+terminal LOGIC_WORD:
+	'&&' | '||';
+
+terminal COMPARE:
+	'<' | '==' | '>' | '<=' | '>=' | '!=';
+
+terminal MATH:
+	'*' | '/' | '-' | '+';
+
+terminal CONCATENATION:
+	'.';
+
+terminal NEGATION:
+	'!';
+
+terminal OBRACKET:
+	'(';
+
+terminal CBRACKET:
+	')';

@@ -558,6 +558,16 @@ ruleVoiceTag returns [EObject current=null]
         $current = $this_Sms_10.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getVoiceTagAccess().getEmailParserRuleCall_11()); 
+    }
+    this_Email_11=ruleEmail
+    { 
+        $current = $this_Email_11.current; 
+        afterParserOrEnumRuleCall();
+    }
 )
 ;
 
@@ -790,53 +800,9 @@ ruleRecord returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getRecordAccess().getSecondsKeyword_2());
     }
-	otherlv_3='in' 
+	otherlv_3=';' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getRecordAccess().getInKeyword_3());
-    }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getRecordAccess().getActionConcatenationExpressionParserRuleCall_4_0()); 
-	    }
-		lv_action_4_0=ruleConcatenationExpression		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRecordRule());
-	        }
-       		set(
-       			$current, 
-       			"action",
-        		lv_action_4_0, 
-        		"ConcatenationExpression");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(	otherlv_5=' -> ' 
-    {
-    	newLeafNode(otherlv_5, grammarAccess.getRecordAccess().getSpaceHyphenMinusGreaterThanSignSpaceKeyword_5_0());
-    }
-(
-(
-		lv_vari_6_0=RULE_ID
-		{
-			newLeafNode(lv_vari_6_0, grammarAccess.getRecordAccess().getVariIDTerminalRuleCall_5_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getRecordRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"vari",
-        		lv_vari_6_0, 
-        		"ID");
-	    }
-
-)
-))?	otherlv_7=';' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getRecordAccess().getSemicolonKeyword_6());
+    	newLeafNode(otherlv_3, grammarAccess.getRecordAccess().getSemicolonKeyword_3());
     }
 )
 ;
@@ -968,49 +934,9 @@ ruleGetDigits returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getGetDigitsAccess().getDigitsKeyword_2());
     }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getGetDigitsAccess().getQuestionConcatenationExpressionParserRuleCall_3_0()); 
-	    }
-		lv_question_3_0=ruleConcatenationExpression		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getGetDigitsRule());
-	        }
-       		set(
-       			$current, 
-       			"question",
-        		lv_question_3_0, 
-        		"ConcatenationExpression");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)	otherlv_4=' -> ' 
+	otherlv_3=';' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getGetDigitsAccess().getSpaceHyphenMinusGreaterThanSignSpaceKeyword_4());
-    }
-(
-(
-		lv_vari_5_0=RULE_ID
-		{
-			newLeafNode(lv_vari_5_0, grammarAccess.getGetDigitsAccess().getVariIDTerminalRuleCall_5_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getGetDigitsRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"vari",
-        		lv_vari_5_0, 
-        		"ID");
-	    }
-
-)
-)	otherlv_6=';' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getGetDigitsAccess().getSemicolonKeyword_6());
+    	newLeafNode(otherlv_3, grammarAccess.getGetDigitsAccess().getSemicolonKeyword_3());
     }
 )
 ;
@@ -1066,31 +992,9 @@ ruleAsk returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2=' -> ' 
+)	otherlv_2=';' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getAskAccess().getSpaceHyphenMinusGreaterThanSignSpaceKeyword_2());
-    }
-(
-(
-		lv_vari_3_0=RULE_ID
-		{
-			newLeafNode(lv_vari_3_0, grammarAccess.getAskAccess().getVariIDTerminalRuleCall_3_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getAskRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"vari",
-        		lv_vari_3_0, 
-        		"ID");
-	    }
-
-)
-)	otherlv_4=';' 
-    {
-    	newLeafNode(otherlv_4, grammarAccess.getAskAccess().getSemicolonKeyword_4());
+    	newLeafNode(otherlv_2, grammarAccess.getAskAccess().getSemicolonKeyword_2());
     }
 )
 ;
@@ -1492,6 +1396,158 @@ ruleSms returns [EObject current=null]
 
 
 
+// Entry rule entryRuleEmail
+entryRuleEmail returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getEmailRule()); }
+	 iv_ruleEmail=ruleEmail 
+	 { $current=$iv_ruleEmail.current; } 
+	 EOF 
+;
+
+// Rule Email
+ruleEmail returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_name_0_0=	'Email' 
+    {
+        newLeafNode(lv_name_0_0, grammarAccess.getEmailAccess().getNameEmailKeyword_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getEmailRule());
+	        }
+       		setWithLastConsumed($current, "name", lv_name_0_0, "Email");
+	    }
+
+)
+)	otherlv_1='{' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getEmailAccess().getLeftCurlyBracketKeyword_1());
+    }
+	otherlv_2='subject' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getEmailAccess().getSubjectKeyword_2());
+    }
+	otherlv_3=':' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getEmailAccess().getColonKeyword_3());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getEmailAccess().getTitleConcatenationExpressionParserRuleCall_4_0()); 
+	    }
+		lv_title_4_0=ruleConcatenationExpression		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getEmailRule());
+	        }
+       		set(
+       			$current, 
+       			"title",
+        		lv_title_4_0, 
+        		"ConcatenationExpression");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_5=',' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getEmailAccess().getCommaKeyword_5());
+    }
+	otherlv_6='from' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getEmailAccess().getFromKeyword_6());
+    }
+	otherlv_7=':' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getEmailAccess().getColonKeyword_7());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getEmailAccess().getFromConcatenationExpressionParserRuleCall_8_0()); 
+	    }
+		lv_from_8_0=ruleConcatenationExpression		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getEmailRule());
+	        }
+       		set(
+       			$current, 
+       			"from",
+        		lv_from_8_0, 
+        		"ConcatenationExpression");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_9=',' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getEmailAccess().getCommaKeyword_9());
+    }
+	otherlv_10='message' 
+    {
+    	newLeafNode(otherlv_10, grammarAccess.getEmailAccess().getMessageKeyword_10());
+    }
+	otherlv_11=':' 
+    {
+    	newLeafNode(otherlv_11, grammarAccess.getEmailAccess().getColonKeyword_11());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getEmailAccess().getValueConcatenationExpressionParserRuleCall_12_0()); 
+	    }
+		lv_value_12_0=ruleConcatenationExpression		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getEmailRule());
+	        }
+       		set(
+       			$current, 
+       			"value",
+        		lv_value_12_0, 
+        		"ConcatenationExpression");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_13='}' 
+    {
+    	newLeafNode(otherlv_13, grammarAccess.getEmailAccess().getRightCurlyBracketKeyword_13());
+    }
+	otherlv_14='to' 
+    {
+    	newLeafNode(otherlv_14, grammarAccess.getEmailAccess().getToKeyword_14());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getEmailAccess().getToConcatenationExpressionParserRuleCall_15_0()); 
+	    }
+		lv_to_15_0=ruleConcatenationExpression		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getEmailRule());
+	        }
+       		set(
+       			$current, 
+       			"to",
+        		lv_to_15_0, 
+        		"ConcatenationExpression");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_16=';' 
+    {
+    	newLeafNode(otherlv_16, grammarAccess.getEmailAccess().getSemicolonKeyword_16());
+    }
+)
+;
+
 
 
 
@@ -1668,22 +1724,11 @@ ruleCondBlock returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
-(
-		lv_name_0_0=	'if' 
+(	otherlv_0='if' 
     {
-        newLeafNode(lv_name_0_0, grammarAccess.getCondBlockAccess().getNameIfKeyword_0_0());
+    	newLeafNode(otherlv_0, grammarAccess.getCondBlockAccess().getIfKeyword_0());
     }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getCondBlockRule());
-	        }
-       		setWithLastConsumed($current, "name", lv_name_0_0, "if");
-	    }
-
-)
-)(
+(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getCondBlockAccess().getCondTerminalBoolExpressionParserRuleCall_1_0()); 
@@ -1746,22 +1791,11 @@ ruleBlock returns [EObject current=null]
             grammarAccess.getBlockAccess().getBlockAction_0(),
             $current);
     }
-)(
-(
-		lv_name_1_0=	'{' 
+)	otherlv_1='{' 
     {
-        newLeafNode(lv_name_1_0, grammarAccess.getBlockAccess().getNameLeftCurlyBracketKeyword_1_0());
+    	newLeafNode(otherlv_1, grammarAccess.getBlockAccess().getLeftCurlyBracketKeyword_1());
     }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getBlockRule());
-	        }
-       		setWithLastConsumed($current, "name", lv_name_1_0, "{");
-	    }
-
-)
-)(
+(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getBlockAccess().getStaAbstractElementParserRuleCall_2_0()); 
@@ -2377,16 +2411,19 @@ ruleConcatenationExpression returns [EObject current=null]
     }
 )(
 (
-		lv_op_2_0=	'+' 
-    {
-        newLeafNode(lv_op_2_0, grammarAccess.getConcatenationExpressionAccess().getOpPlusSignKeyword_1_1_0());
-    }
- 
-	    {
+		lv_op_2_0=RULE_CONCATENATION
+		{
+			newLeafNode(lv_op_2_0, grammarAccess.getConcatenationExpressionAccess().getOpCONCATENATIONTerminalRuleCall_1_1_0()); 
+		}
+		{
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getConcatenationExpressionRule());
 	        }
-       		setWithLastConsumed($current, "op", lv_op_2_0, "+");
+       		setWithLastConsumed(
+       			$current, 
+       			"op",
+        		lv_op_2_0, 
+        		"CONCATENATION");
 	    }
 
 )
@@ -3326,6 +3363,54 @@ ruleSESSION returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getSESSIONRule());
 	        }
        		setWithLastConsumed($current, "name", lv_name_3_0, "CALLED");
+	    }
+
+)
+)
+    |(
+(
+		lv_name_4_0=	'ANSWER' 
+    {
+        newLeafNode(lv_name_4_0, grammarAccess.getSESSIONAccess().getNameANSWERKeyword_4_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSESSIONRule());
+	        }
+       		setWithLastConsumed($current, "name", lv_name_4_0, "ANSWER");
+	    }
+
+)
+)
+    |(
+(
+		lv_name_5_0=	'DIGITS' 
+    {
+        newLeafNode(lv_name_5_0, grammarAccess.getSESSIONAccess().getNameDIGITSKeyword_5_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSESSIONRule());
+	        }
+       		setWithLastConsumed($current, "name", lv_name_5_0, "DIGITS");
+	    }
+
+)
+)
+    |(
+(
+		lv_name_6_0=	'RECORD' 
+    {
+        newLeafNode(lv_name_6_0, grammarAccess.getSESSIONAccess().getNameRECORDKeyword_6_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSESSIONRule());
+	        }
+       		setWithLastConsumed($current, "name", lv_name_6_0, "RECORD");
 	    }
 
 )

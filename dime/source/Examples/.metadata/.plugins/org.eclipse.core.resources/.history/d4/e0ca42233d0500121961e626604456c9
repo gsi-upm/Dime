@@ -1,0 +1,23 @@
+Application test
+
+State start {
+
+	Say "start";  
+	Record 5 seconds;
+	GoTo end when COMPLETED;   
+	Num hola= 1;
+} 
+  
+       
+State end{ 
+	if(RINGING){
+		Say "end";
+	Say RECORD.5;
+
+	HangUp; 
+	}    
+	  
+	 
+}      
+
+ 

@@ -1,0 +1,17 @@
+Application test
+
+State start {
+	
+	
+	Say "This is the start state";
+	
+	GoTo end when COMPLETED;
+	Get 4 digits; 
+	  
+} 
+State end{ 
+	
+	Say "This is the end state";
+	Say DIGITS;
+	HangUp; 
+}   

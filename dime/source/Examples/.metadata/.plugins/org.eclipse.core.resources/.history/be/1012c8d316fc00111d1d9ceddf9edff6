@@ -1,7 +1,0 @@
-Application OutboundCall
-String hola='h';
-State start {
-	
-	Call "+34656422095";
-	Say "Funciona";
-} 

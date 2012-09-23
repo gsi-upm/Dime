@@ -1,8 +1,12 @@
 Application RecordIt
 
-Const GREETING= "HOLA";
 State start{
-	Record 5 seconds in "http://shannon.gsi.dit.upm.es/roberto/getParams.php?caller=roberto";
-	 
+	Record 5 seconds ;
+	GoTo end when COMPLETED;
 	
+}
+
+State end{
+	Play RECORD;
+	HangUp;
 }

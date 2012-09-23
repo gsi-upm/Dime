@@ -1,0 +1,15 @@
+Application test
+
+State start {
+
+	Say "This is Dime";  
+	GoTo end when COMPLETED;   
+} 
+
+       
+State end{ 
+	Say "Thanks for using Dime";
+	HangUp;
+	
+}      
+

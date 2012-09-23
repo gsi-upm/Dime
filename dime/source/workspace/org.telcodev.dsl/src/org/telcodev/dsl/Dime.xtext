@@ -20,7 +20,7 @@ State:
 	'}';
  
 VoiceTag:
-	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms ;//| Email | Tweet;
+	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms | Email ;
 
 Call:
 	name='Call' to=ConcatenationExpression ';';
@@ -32,7 +32,7 @@ Play:
 	name='Play' file=ConcatenationExpression ';';
 
 Record:
-	name='Record' time=INT 'seconds' 'in' action=ConcatenationExpression (' -> ' vari=ID)? ';';
+	name='Record' time=INT 'seconds'  ';';
 
 Reject:
 	name='Reject;';
@@ -41,10 +41,10 @@ Hangup:
 	name='HangUp;';
 
 GetDigits:
-	name='Get' numDigits=INT 'digits' question=ConcatenationExpression ' -> ' vari=ID ';';
+	name='Get' numDigits=INT 'digits'';';
 
 Ask:
-	name='Ask' question=ConcatenationExpression ' -> ' vari=ID ';';
+	name='Ask' question=ConcatenationExpression ';';
 
 Send:
 	name='Send'  params=SendBlock  'to' url=ConcatenationExpression  ';';
@@ -74,12 +74,11 @@ Email:
 	name='Email'  '{' 
 	'subject' ':' title=ConcatenationExpression ','
 	'from' ':' from=ConcatenationExpression ','
+	'message' ':'
 	value=ConcatenationExpression '}' 'to' to=ConcatenationExpression ';'
 ;
 
-Tweet:
-	name='Tweet' value=ConcatenationExpression ';'
-;
+
 Transition:
 	name='GoTo' target=[State] 'when' event=EVENT ';';
 
@@ -88,11 +87,11 @@ IfExp:
 	block=CondBlock ('else' blocks+=CondBlock)* ('else' defaultBlock=Block)?;
 
 CondBlock:
-	name='if' cond=TerminalBoolExpression action=Block;
+	'if' cond=TerminalBoolExpression action=Block;
 
 Block:
 	{Block}
-	name='{'
+	'{'
 	sta+=AbstractElement*
 	'}';
 
@@ -126,7 +125,7 @@ MathBrackets:
 	// Concatenation expression
 ConcatenationExpression:
 	ConcatenationTerminal ({Concatenation.left=current}
-	op='+' right=ConcatenationExpression)?;
+	op=CONCATENATION right=ConcatenationExpression)?;
 
 ConcatenationTerminal returns ConcatenationExpression:
 	ConcatenationBrackets | LiteralAbs;
@@ -162,7 +161,7 @@ Primitive:
 
 // FALLO CONSTANT TIENE QUE IR EN LITERAL NO EN VARS
 Vars:
-	StringVariable | Ask | NumVariable | BoolVariable | GetDigits | Constant;
+	StringVariable | NumVariable | BoolVariable  | Constant;
 	// Literals
 LiteralAbs:
 	Literal | Primitive;
@@ -188,7 +187,7 @@ EVENT:
 	name='HANGUP' | name='COMPLETED' | name='ERROR' | name='TIMES' | name='TIMEOUT';
 
 SESSION:
-	name='CALLER' | name='LASTSTATE' | name='TIME' | name='CALLED';
+	name='CALLER' | name='LASTSTATE' | name='TIME' | name='CALLED'| name='ANSWER' | name='DIGITS'| name='RECORD';
 
 CALLSTATUS:
 	 name='RINGING' | name='IN-PROGRESS' | name='DISCONNECTED' | name='FAILED';

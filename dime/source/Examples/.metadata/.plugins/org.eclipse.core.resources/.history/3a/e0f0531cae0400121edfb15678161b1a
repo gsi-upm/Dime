@@ -1,0 +1,129 @@
+<?php
+			
+// Required Tropo files
+
+require 'res/tropo.class.php';
+
+// Limonade files for states simulation. More information in 
+
+require 'res/lib/limonade.php';
+
+// Defining constants
+
+
+// Declaration of the states
+
+// State start implementation
+
+dispatch_post('/start', 'app_start');
+function app_start() {
+	
+	// Creates a Tropo session and getting its parameters
+	if(!isset($_SESSION['caller'])){
+	$session = new Session();
+	$from = $session->getFrom();
+	$sessionID = $session->getId();
+	$caller = $from["id"]; 
+	$to = $session->getTo();
+	$called = $to["id"]; 
+	$_SESSION['caller']=$caller;
+	$_SESSION['called']=$called;
+	$_SESSION['sessionID']=$sessionID;
+	}
+	
+	// Initialitation of the global variables
+	
+	
+
+	// Times signal appears when the param reached the atribute times of the state
+	
+	if(isset($_SESSION['times_start_dime'])){
+	$attempts=intval($_SESSION['times_start_dime']);
+		if($attempts==3){
+			$_SESSION['times_start_dime']=0;
+			$urltimes = "http://shannon.gsi.dit.upm.es/roberto/res/signals.php?signal=attemptsLimit&sessionID=".$_SESSION['sessionID'];
+			$curl_handle=curl_init();
+			curl_setopt($curl_handle,CURLOPT_URL,$urltimes);
+			curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
+			curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
+			curl_exec($curl_handle);
+			curl_close($curl_handle);
+		}else{
+			$attempts++;
+			$_SESSION['times_start_dime']=$attempts;
+		}
+	}else{
+		$_SESSION['times_start_dime']=1;
+	}
+	
+	// Inicialize the tropo aplication
+	
+	$tropo = new Tropo();
+	
+	// Update of the value of the global constants and variables, and the session params.
+	
+	if(isset($_SESSION['caller'])){
+		$caller=$_SESSION['caller'];
+	}
+	if(isset($_SESSION['called'])){
+		$called=$_SESSION['called'];
+	}
+	if(isset($_SESSION['sessionID'])){
+		$sessionID=$_SESSION['sessionID'];
+	}
+	if(isset($_SESSION['lastState'])){
+		$lastState=$_SESSION['lastState'];
+	}
+	
+	
+	// Declaration of the statements of the state.
+	
+	$tropo->say("Start", array("voice"=>"susan", "allowSignals"=>array("timeExceededstart", "attemptsLimit")));
+	$tropo->on(array("event" => "attemptsLimit", "next" =>"test.php?uri=end"));
+	$tropo->on(array("event" => "continue", "next" =>"test.php?uri=start"));
+	
+	// Update the global variables and the session params.
+	
+	$_SESSION['lastState']='start';
+	return $tropo->RenderJson();
+}
+// State end implementation
+
+dispatch_post('/end', 'app_end');
+function app_end() {
+	
+	
+	// Inicialize the tropo aplication
+	
+	$tropo = new Tropo();
+	
+	@$result_dime=new Result();
+	// Update of the value of the global constants and variables, and the session params.
+	
+	if(isset($_SESSION['caller'])){
+		$caller=$_SESSION['caller'];
+	}
+	if(isset($_SESSION['called'])){
+		$called=$_SESSION['called'];
+	}
+	if(isset($_SESSION['sessionID'])){
+		$sessionID=$_SESSION['sessionID'];
+	}
+	if(isset($_SESSION['lastState'])){
+		$lastState=$_SESSION['lastState'];
+	}
+	
+	
+	// Declaration of the statements of the state.
+	
+	$tropo->say("End", array("voice"=>"susan", "allowSignals"=>array("timeExceededend", "attemptsLimit")));
+	$tropo->hangup();
+	
+	// Update the global variables and the session params.
+	
+	$_SESSION['lastState']='end';
+	return $tropo->RenderJson();
+}
+
+run(); 
+?>

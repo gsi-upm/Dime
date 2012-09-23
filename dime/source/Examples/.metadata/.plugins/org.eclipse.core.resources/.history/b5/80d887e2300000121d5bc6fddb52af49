@@ -1,0 +1,14 @@
+Application Getdigits
+
+State start times 3{
+	
+	Say "Say five digits";
+	GoTo end when TIMES;
+	GoTo start when COMPLETED;
+
+}
+State end{
+	Say DIGITS;
+	Say "Bye"; 
+	HangUp;
+}      

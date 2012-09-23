@@ -59,7 +59,6 @@ import org.telcodev.dsl.dime.Statement;
 import org.telcodev.dsl.dime.StringLiteral;
 import org.telcodev.dsl.dime.StringVariable;
 import org.telcodev.dsl.dime.Transition;
-import org.telcodev.dsl.dime.Tweet;
 import org.telcodev.dsl.dime.Vars;
 import org.telcodev.dsl.dime.VoiceTag;
 import org.telcodev.dsl.generator.Config;
@@ -69,6 +68,12 @@ import org.telcodev.dsl.generator.Tropo;
 @SuppressWarnings("all")
 public class Tropo_php_generator {
   private static String appName;
+  
+  private static String user;
+  
+  private static String password;
+  
+  private static String token;
   
   private static String voice;
   
@@ -88,6 +93,15 @@ public class Tropo_php_generator {
     Tropo _tropo = config.getTropo();
     String _voice = _tropo.getVoice();
     Tropo_php_generator.voice = _voice;
+    Tropo _tropo_1 = config.getTropo();
+    String _password = _tropo_1.getPassword();
+    Tropo_php_generator.password = _password;
+    Tropo _tropo_2 = config.getTropo();
+    String _user = _tropo_2.getUser();
+    Tropo_php_generator.user = _user;
+    Tropo _tropo_3 = config.getTropo();
+    String _token = _tropo_3.getToken();
+    Tropo_php_generator.token = _token;
     String _url = config.getUrl();
     Tropo_php_generator.url = _url;
     System.out.println("");
@@ -146,6 +160,10 @@ public class Tropo_php_generator {
     EObject _head_1 = IterableExtensions.<EObject>head(_contents_1);
     CharSequence _tropoPHP = Tropo_php_generator.toTropoPHP(((Document) _head_1), resource);
     fsa.generateFile(_plus_4, _tropoPHP);
+    CharSequence _declareSignal = Tropo_php_generator.declareSignal();
+    fsa.generateFile("res/signals.php", _declareSignal);
+    CharSequence _transcription = Tropo_php_generator.transcription();
+    fsa.generateFile("res/transcription.php", _transcription);
     System.out.println("Success.");
     System.out.println("Success.");
   }
@@ -155,6 +173,68 @@ public class Tropo_php_generator {
     String name = _uRI.lastSegment();
     int _indexOf = name.indexOf(".");
     return name.substring(0, _indexOf);
+  }
+  
+  public static CharSequence declareSignal() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("<?php");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("if(isset($_GET[\'sessionID_dime\'])&& isset($_GET[\'signal_dime\'])){");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("$urltimes = \"https://api.tropo.com/1.0/sessions/\".$_GET[\'sessionID\'].\"/signals?action=signal&value=\".$_GET[\'signal_dime\'];");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("$curl_handle=curl_init();");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("curl_setopt($curl_handle,CURLOPT_URL,$urltimes);");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("curl_exec($curl_handle);");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("curl_close($curl_handle);");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("?>");
+    return _builder;
+  }
+  
+  public static CharSequence transcription() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("<?php ");
+    _builder.newLine();
+    _builder.append("$file = fopen(\'transcription.txt\', \'w\'); ");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("$data = file_get_contents(\'php://input\'); ");
+    _builder.newLine();
+    _builder.append("fwrite($file, $data); ");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("fclose($file); ");
+    _builder.newLine();
+    _builder.append("?> ");
+    return _builder;
   }
   
   public static CharSequence toTropoPHP(final Document sm, final Resource resource) {
@@ -320,33 +400,37 @@ public class Tropo_php_generator {
           _builder.append("// Creates a Tropo session and getting its parameters");
           _builder.newLine();
           _builder.append("\t");
+          _builder.append("if(!isset($_SESSION[\'caller\'])){");
           _builder.newLine();
           _builder.append("\t");
-          _builder.append("$session = new Session();");
+          _builder.append("$session_dime = new Session();");
           _builder.newLine();
           _builder.append("\t");
-          _builder.append("$from = $session->getFrom();");
+          _builder.append("$from_dime = $session_dime->getFrom();");
           _builder.newLine();
           _builder.append("\t");
-          _builder.append("$sessionID = $session->getId();");
+          _builder.append("$sessionID = $session_dime->getId();");
           _builder.newLine();
           _builder.append("\t");
-          _builder.append("$caller = $from[\"id\"]; ");
+          _builder.append("$caller_dime = $from_dime[\"id\"]; ");
           _builder.newLine();
           _builder.append("\t");
-          _builder.append("$to = $session->getTo();");
+          _builder.append("$to_dime = $session_dime->getTo();");
           _builder.newLine();
           _builder.append("\t");
-          _builder.append("$called = $to[\"id\"]; ");
+          _builder.append("$called_dime = $to_dime[\"id\"]; ");
           _builder.newLine();
           _builder.append("\t");
-          _builder.append("$_SESSION[\'caller\']=$caller;");
+          _builder.append("$_SESSION[\'caller_dime\']=$caller_dime;");
           _builder.newLine();
           _builder.append("\t");
-          _builder.append("$_SESSION[\'called\']=$called;");
+          _builder.append("$_SESSION[\'called_dime\']=$called_dime;");
           _builder.newLine();
           _builder.append("\t");
-          _builder.append("$_SESSION[\'sessionID\']=$sessionID;");
+          _builder.append("$_SESSION[\'sessionID_dime\']=$sessionID_dime;");
+          _builder.newLine();
+          _builder.append("\t");
+          _builder.append("}");
           _builder.newLine();
           _builder.append("\t");
           _builder.newLine();
@@ -366,6 +450,8 @@ public class Tropo_php_generator {
           }
         }
       }
+      _builder.append("\t");
+      _builder.newLine();
       {
         int _times = elem.getTimes();
         boolean _notEquals = (_times != 0);
@@ -377,11 +463,17 @@ public class Tropo_php_generator {
           _builder.append("\t");
           _builder.newLine();
           _builder.append("\t");
-          _builder.append("if(isset($_SESSION[\'times\']){");
-          _builder.newLine();
+          _builder.append("if(isset($_SESSION[\'times_");
+          String _name_5 = elem.getName();
+          _builder.append(_name_5, "	");
+          _builder.append("_dime\'])){");
+          _builder.newLineIfNotEmpty();
           _builder.append("\t");
-          _builder.append("$attempts=$_SESSION[\'times\'];");
-          _builder.newLine();
+          _builder.append("$attempts=intval($_SESSION[\'times_");
+          String _name_6 = elem.getName();
+          _builder.append(_name_6, "	");
+          _builder.append("_dime\']);");
+          _builder.newLineIfNotEmpty();
           _builder.append("\t");
           _builder.append("\t");
           _builder.append("if($attempts==");
@@ -391,12 +483,16 @@ public class Tropo_php_generator {
           _builder.newLineIfNotEmpty();
           _builder.append("\t");
           _builder.append("\t\t");
+          _builder.append("$_SESSION[\'times_");
+          String _name_7 = elem.getName();
+          _builder.append(_name_7, "			");
+          _builder.append("_dime\']=0;");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t");
+          _builder.append("\t\t");
           _builder.append("$urltimes = \"");
           _builder.append(Tropo_php_generator.url, "			");
-          _builder.append("/res/signals.php?uri=times&sessionID=\".$sessionID.\"&state=");
-          String _name_5 = elem.getName();
-          _builder.append(_name_5, "			");
-          _builder.append("\";");
+          _builder.append("res/signals.php?signal_dime=attemptsLimit&sessionID_dime=\".$_SESSION[\'sessionID_dime\'];");
           _builder.newLineIfNotEmpty();
           _builder.append("\t");
           _builder.append("\t\t");
@@ -431,6 +527,13 @@ public class Tropo_php_generator {
           _builder.append("$attempts++;");
           _builder.newLine();
           _builder.append("\t");
+          _builder.append("\t\t");
+          _builder.append("$_SESSION[\'times_");
+          String _name_8 = elem.getName();
+          _builder.append(_name_8, "			");
+          _builder.append("_dime\']=$attempts;");
+          _builder.newLineIfNotEmpty();
+          _builder.append("\t");
           _builder.append("\t");
           _builder.append("}");
           _builder.newLine();
@@ -439,8 +542,11 @@ public class Tropo_php_generator {
           _builder.newLine();
           _builder.append("\t");
           _builder.append("\t");
-          _builder.append("$_SESSION[\'times\']=1;");
-          _builder.newLine();
+          _builder.append("$_SESSION[\'times_");
+          String _name_9 = elem.getName();
+          _builder.append(_name_9, "		");
+          _builder.append("_dime\']=1;");
+          _builder.newLineIfNotEmpty();
           _builder.append("\t");
           _builder.append("}");
           _builder.newLine();
@@ -458,9 +564,9 @@ public class Tropo_php_generator {
           _builder.append("\t");
           _builder.append("$url = \"");
           _builder.append(Tropo_php_generator.url, "	");
-          _builder.append("/res/signals.php?uri=timeout&sessionID=\".$sessionID.\"&state=");
-          String _name_6 = elem.getName();
-          _builder.append(_name_6, "	");
+          _builder.append("res/signals.php?uri=timeout&sessionID=\".$sessionID.\"&state=");
+          String _name_10 = elem.getName();
+          _builder.append(_name_10, "	");
           _builder.append("&timeout=");
           int _timeout = elem.getTimeout();
           _builder.append(_timeout, "	");
@@ -498,6 +604,15 @@ public class Tropo_php_generator {
       _builder.newLine();
       _builder.append("\t");
       _builder.newLine();
+      {
+        boolean _equals_1 = Tropo_php_generator.name.equals("start");
+        boolean _not = (!_equals_1);
+        if (_not) {
+          _builder.append("\t");
+          _builder.append("@$result_dime=new Result();");
+          _builder.newLine();
+        }
+      }
       _builder.append("\t");
       _builder.append("// Update of the value of the global constants and variables, and the session params.");
       _builder.newLine();
@@ -512,44 +627,6 @@ public class Tropo_php_generator {
           _builder.newLineIfNotEmpty();
         }
       }
-      _builder.append("\t");
-      _builder.append("if(isset($_SESSION[\'caller\'])){");
-      _builder.newLine();
-      _builder.append("\t\t");
-      _builder.append("$caller=$_SESSION[\'caller\'];");
-      _builder.newLine();
-      _builder.append("\t");
-      _builder.append("}");
-      _builder.newLine();
-      _builder.append("\t");
-      _builder.append("if(isset($_SESSION[\'called\'])){");
-      _builder.newLine();
-      _builder.append("\t\t");
-      _builder.append("$called=$_SESSION[\'called\'];");
-      _builder.newLine();
-      _builder.append("\t");
-      _builder.append("}");
-      _builder.newLine();
-      _builder.append("\t");
-      _builder.append("if(isset($_SESSION[\'sessionID\'])){");
-      _builder.newLine();
-      _builder.append("\t\t");
-      _builder.append("$sessionID=$_SESSION[\'sessionID\'];");
-      _builder.newLine();
-      _builder.append("\t");
-      _builder.append("}");
-      _builder.newLine();
-      _builder.append("\t");
-      _builder.append("if(isset($_SESSION[\'lastState\'])){");
-      _builder.newLine();
-      _builder.append("\t\t");
-      _builder.append("$lastState=$_SESSION[\'lastState\'];");
-      _builder.newLine();
-      _builder.append("\t");
-      _builder.append("}");
-      _builder.newLine();
-      _builder.append("\t");
-      _builder.newLine();
       _builder.append("\t");
       _builder.newLine();
       _builder.append("\t");
@@ -583,9 +660,9 @@ public class Tropo_php_generator {
         }
       }
       _builder.append("\t");
-      _builder.append("$_SESSION[\'lastState\']=\'");
-      String _name_7 = elem.getName();
-      _builder.append(_name_7, "	");
+      _builder.append("$_SESSION[\'lastState_dime\']=\'");
+      String _name_11 = elem.getName();
+      _builder.append(_name_11, "	");
       _builder.append("\';");
       _builder.newLineIfNotEmpty();
       _builder.append("\t");
@@ -937,22 +1014,6 @@ public class Tropo_php_generator {
     return _builder;
   }
   
-  protected static CharSequence _declareVars(final Ask elem) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("$");
-    String _vari = elem.getVari();
-    _builder.append(_vari, "");
-    return _builder;
-  }
-  
-  protected static CharSequence _declareVars(final GetDigits elem) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("$");
-    String _vari = elem.getVari();
-    _builder.append(_vari, "");
-    return _builder;
-  }
-  
   protected static CharSequence _declareVars(final Constant elem) {
     StringConcatenation _builder = new StringConcatenation();
     String _name = elem.getName();
@@ -1083,7 +1144,7 @@ public class Tropo_php_generator {
     boolean _equals = _name.equals("CALLER");
     if (_equals) {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("$caller");
+      _builder.append("$_SESSION[\'caller_dime\']");
       _xifexpression = _builder;
     } else {
       CharSequence _xifexpression_1 = null;
@@ -1091,7 +1152,7 @@ public class Tropo_php_generator {
       boolean _equals_1 = _name_1.equals("CALLED");
       if (_equals_1) {
         StringConcatenation _builder_1 = new StringConcatenation();
-        _builder_1.append("$called");
+        _builder_1.append("$_SESSION[\'called_dime\']");
         _xifexpression_1 = _builder_1;
       } else {
         CharSequence _xifexpression_2 = null;
@@ -1099,19 +1160,53 @@ public class Tropo_php_generator {
         boolean _equals_2 = _name_2.equals("LASTSTATE");
         if (_equals_2) {
           StringConcatenation _builder_2 = new StringConcatenation();
-          _builder_2.append("$lastState");
+          _builder_2.append("$_SESSION[\'lastState_dime\']");
           _xifexpression_2 = _builder_2;
         } else {
           CharSequence _xifexpression_3 = null;
           String _name_3 = elem.getName();
-          boolean _equals_3 = _name_3.equals("TIME");
+          boolean _equals_3 = _name_3.equals("ANSWER");
           if (_equals_3) {
             StringConcatenation _builder_3 = new StringConcatenation();
-            _builder_3.append("$time");
+            _builder_3.append("$result_dime->getValue()");
             _xifexpression_3 = _builder_3;
           } else {
-            StringConcatenation _builder_4 = new StringConcatenation();
-            _xifexpression_3 = _builder_4;
+            CharSequence _xifexpression_4 = null;
+            String _name_4 = elem.getName();
+            boolean _equals_4 = _name_4.equals("RECORD");
+            if (_equals_4) {
+              StringConcatenation _builder_4 = new StringConcatenation();
+              _builder_4.append("\"ftp://");
+              _builder_4.append(Tropo_php_generator.user, "");
+              _builder_4.append(":");
+              _builder_4.append(Tropo_php_generator.password, "");
+              _builder_4.append("@ftp.tropo.com/recordings/record_\".$_REQUEST[\'lastState_dime\'].\".mp3\"");
+              _xifexpression_4 = _builder_4;
+            } else {
+              CharSequence _xifexpression_5 = null;
+              String _name_5 = elem.getName();
+              boolean _equals_5 = _name_5.equals("DIGITS");
+              if (_equals_5) {
+                StringConcatenation _builder_5 = new StringConcatenation();
+                _builder_5.append("$result_dime->getValue()");
+                _xifexpression_5 = _builder_5;
+              } else {
+                CharSequence _xifexpression_6 = null;
+                String _name_6 = elem.getName();
+                boolean _equals_6 = _name_6.equals("TIME");
+                if (_equals_6) {
+                  StringConcatenation _builder_6 = new StringConcatenation();
+                  _builder_6.append("$result_dime->getSessionDuration()");
+                  _xifexpression_6 = _builder_6;
+                } else {
+                  StringConcatenation _builder_7 = new StringConcatenation();
+                  _xifexpression_6 = _builder_7;
+                }
+                _xifexpression_5 = _xifexpression_6;
+              }
+              _xifexpression_4 = _xifexpression_5;
+            }
+            _xifexpression_3 = _xifexpression_4;
           }
           _xifexpression_2 = _xifexpression_3;
         }
@@ -1249,24 +1344,40 @@ public class Tropo_php_generator {
   
   protected static CharSequence _declareVoiceTag(final Record elem) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("$tropo->record(array(\'url\' => ");
-    ConcatenationExpression _action = elem.getAction();
-    CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_action);
-    _builder.append(_declareConcatenation, "");
-    _builder.append(",\'terminator\' => \'#\'");
-    {
-      int _time = elem.getTime();
-      boolean _notEquals = (!Objects.equal(Integer.valueOf(_time), null));
-      if (_notEquals) {
-        _builder.append(",\'timeout\' =>");
-        int _time_1 = elem.getTime();
-        _builder.append(_time_1, "");
-        _builder.append(")");
-      }
-    }
-    _builder.append(", \"allowSignals\"=>array(\"timeExceeded");
-    _builder.append(Tropo_php_generator.name, "");
-    _builder.append("\", \"attemptsLimit\")))");
+    _builder.append("$tropo->record(array(");
+    _builder.newLine();
+    _builder.append("    ");
+    _builder.append("\'name\' => \'recording\',");
+    _builder.newLine();
+    _builder.append("    ");
+    _builder.append("\'say\' => \'Please leave a message.\',");
+    _builder.newLine();
+    _builder.append("   \t");
+    _builder.append("\'url\' => \'ftp://");
+    _builder.append(Tropo_php_generator.user, "   	");
+    _builder.append(":");
+    _builder.append(Tropo_php_generator.password, "   	");
+    _builder.append("@ftp.tropo.com/recordings/record_");
+    _builder.append(Tropo_php_generator.name, "   	");
+    _builder.append(".mp3\',");
+    _builder.newLineIfNotEmpty();
+    _builder.append("    ");
+    _builder.append("\'terminator\' => \'#\',");
+    _builder.newLine();
+    _builder.append("    ");
+    _builder.append("\'timeout\' => 10,");
+    _builder.newLine();
+    _builder.append("    ");
+    _builder.append("\'maxSilence\' => 3,");
+    _builder.newLine();
+    _builder.append("    ");
+    _builder.append("\'maxTime\' => 10,");
+    _builder.newLine();
+    _builder.append("    ");
+    _builder.append("\'format\' => \'audio/mp3\',");
+    _builder.newLine();
+    _builder.append("  ");
+    _builder.append("));");
     return _builder;
   }
   
@@ -1284,17 +1395,18 @@ public class Tropo_php_generator {
   
   protected static CharSequence _declareVoiceTag(final GetDigits elem) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("$");
-    String _vari = elem.getVari();
-    _builder.append(_vari, "");
-    _builder.append("=$tropo->ask(");
-    ConcatenationExpression _question = elem.getQuestion();
-    CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_question);
-    _builder.append(_declareConcatenation, "");
-    _builder.append(",array(\"choices\"=>\"[");
+    _builder.append("$tropo->ask(\"\",array(\"choices\"=>\"[");
     int _numDigits = elem.getNumDigits();
     _builder.append(_numDigits, "");
-    _builder.append(" DIGITS]\", \"terminator\" => \"#\", \"name\"=>\"");
+    _builder.append(" DIGIT");
+    {
+      int _numDigits_1 = elem.getNumDigits();
+      boolean _greaterThan = (_numDigits_1 > 1);
+      if (_greaterThan) {
+        _builder.append("S");
+      }
+    }
+    _builder.append("]\", \"terminator\" => \"#\", \"name\"=>\"");
     String _name = elem.getName();
     _builder.append(_name, "");
     _builder.append("\", \"voice\"=>\"");
@@ -1329,13 +1441,11 @@ public class Tropo_php_generator {
     return _builder;
   }
   
-  protected static CharSequence _declareVoiceTag(final Tweet elem) {
-    StringConcatenation _builder = new StringConcatenation();
-    return _builder;
-  }
-  
   protected static CharSequence _declareVoiceTag(final Email elem) {
     StringConcatenation _builder = new StringConcatenation();
+    _builder.append("// Email implementation");
+    _builder.newLine();
+    _builder.newLine();
     _builder.append("mail(");
     ConcatenationExpression _to = elem.getTo();
     CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_to);
@@ -1480,7 +1590,7 @@ public class Tropo_php_generator {
         boolean _equals_2 = _name_2.equals("TIMES");
         if (_equals_2) {
           StringConcatenation _builder_2 = new StringConcatenation();
-          _builder_2.append("timeExceeattemptsLimit");
+          _builder_2.append("attemptsLimit");
           _xifexpression_2 = _builder_2;
         } else {
           StringConcatenation _builder_3 = new StringConcatenation();
@@ -1573,14 +1683,10 @@ public class Tropo_php_generator {
   }
   
   public static CharSequence declareVars(final EObject elem) {
-    if (elem instanceof Ask) {
-      return _declareVars((Ask)elem);
-    } else if (elem instanceof BoolVariable) {
+    if (elem instanceof BoolVariable) {
       return _declareVars((BoolVariable)elem);
     } else if (elem instanceof Constant) {
       return _declareVars((Constant)elem);
-    } else if (elem instanceof GetDigits) {
-      return _declareVars((GetDigits)elem);
     } else if (elem instanceof NumVariable) {
       return _declareVars((NumVariable)elem);
     } else if (elem instanceof StringVariable) {
@@ -1626,13 +1732,15 @@ public class Tropo_php_generator {
     }
   }
   
-  public static CharSequence declareVoiceTag(final EObject elem) {
+  public static CharSequence declareVoiceTag(final VoiceTag elem) {
     if (elem instanceof Ask) {
       return _declareVoiceTag((Ask)elem);
     } else if (elem instanceof Call) {
       return _declareVoiceTag((Call)elem);
     } else if (elem instanceof Dial) {
       return _declareVoiceTag((Dial)elem);
+    } else if (elem instanceof Email) {
+      return _declareVoiceTag((Email)elem);
     } else if (elem instanceof GetDigits) {
       return _declareVoiceTag((GetDigits)elem);
     } else if (elem instanceof Hangup) {
@@ -1649,10 +1757,6 @@ public class Tropo_php_generator {
       return _declareVoiceTag((Send)elem);
     } else if (elem instanceof Sms) {
       return _declareVoiceTag((Sms)elem);
-    } else if (elem instanceof Email) {
-      return _declareVoiceTag((Email)elem);
-    } else if (elem instanceof Tweet) {
-      return _declareVoiceTag((Tweet)elem);
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
         Arrays.<Object>asList(elem).toString());

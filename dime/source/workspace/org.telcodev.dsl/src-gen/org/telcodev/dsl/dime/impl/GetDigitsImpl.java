@@ -3,14 +3,11 @@
 package org.telcodev.dsl.dime.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.telcodev.dsl.dime.ConcatenationExpression;
 import org.telcodev.dsl.dime.DimePackage;
 import org.telcodev.dsl.dime.GetDigits;
 
@@ -22,8 +19,6 @@ import org.telcodev.dsl.dime.GetDigits;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.telcodev.dsl.dime.impl.GetDigitsImpl#getNumDigits <em>Num Digits</em>}</li>
- *   <li>{@link org.telcodev.dsl.dime.impl.GetDigitsImpl#getQuestion <em>Question</em>}</li>
- *   <li>{@link org.telcodev.dsl.dime.impl.GetDigitsImpl#getVari <em>Vari</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,36 +45,6 @@ public class GetDigitsImpl extends VoiceTagImpl implements GetDigits
    * @ordered
    */
   protected int numDigits = NUM_DIGITS_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getQuestion() <em>Question</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getQuestion()
-   * @generated
-   * @ordered
-   */
-  protected ConcatenationExpression question;
-
-  /**
-   * The default value of the '{@link #getVari() <em>Vari</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVari()
-   * @generated
-   * @ordered
-   */
-  protected static final String VARI_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getVari() <em>Vari</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVari()
-   * @generated
-   * @ordered
-   */
-  protected String vari = VARI_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -130,93 +95,6 @@ public class GetDigitsImpl extends VoiceTagImpl implements GetDigits
    * <!-- end-user-doc -->
    * @generated
    */
-  public ConcatenationExpression getQuestion()
-  {
-    return question;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetQuestion(ConcatenationExpression newQuestion, NotificationChain msgs)
-  {
-    ConcatenationExpression oldQuestion = question;
-    question = newQuestion;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DimePackage.GET_DIGITS__QUESTION, oldQuestion, newQuestion);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setQuestion(ConcatenationExpression newQuestion)
-  {
-    if (newQuestion != question)
-    {
-      NotificationChain msgs = null;
-      if (question != null)
-        msgs = ((InternalEObject)question).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DimePackage.GET_DIGITS__QUESTION, null, msgs);
-      if (newQuestion != null)
-        msgs = ((InternalEObject)newQuestion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DimePackage.GET_DIGITS__QUESTION, null, msgs);
-      msgs = basicSetQuestion(newQuestion, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.GET_DIGITS__QUESTION, newQuestion, newQuestion));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getVari()
-  {
-    return vari;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setVari(String newVari)
-  {
-    String oldVari = vari;
-    vari = newVari;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.GET_DIGITS__VARI, oldVari, vari));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case DimePackage.GET_DIGITS__QUESTION:
-        return basicSetQuestion(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -224,10 +102,6 @@ public class GetDigitsImpl extends VoiceTagImpl implements GetDigits
     {
       case DimePackage.GET_DIGITS__NUM_DIGITS:
         return getNumDigits();
-      case DimePackage.GET_DIGITS__QUESTION:
-        return getQuestion();
-      case DimePackage.GET_DIGITS__VARI:
-        return getVari();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -244,12 +118,6 @@ public class GetDigitsImpl extends VoiceTagImpl implements GetDigits
     {
       case DimePackage.GET_DIGITS__NUM_DIGITS:
         setNumDigits((Integer)newValue);
-        return;
-      case DimePackage.GET_DIGITS__QUESTION:
-        setQuestion((ConcatenationExpression)newValue);
-        return;
-      case DimePackage.GET_DIGITS__VARI:
-        setVari((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -268,12 +136,6 @@ public class GetDigitsImpl extends VoiceTagImpl implements GetDigits
       case DimePackage.GET_DIGITS__NUM_DIGITS:
         setNumDigits(NUM_DIGITS_EDEFAULT);
         return;
-      case DimePackage.GET_DIGITS__QUESTION:
-        setQuestion((ConcatenationExpression)null);
-        return;
-      case DimePackage.GET_DIGITS__VARI:
-        setVari(VARI_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -290,10 +152,6 @@ public class GetDigitsImpl extends VoiceTagImpl implements GetDigits
     {
       case DimePackage.GET_DIGITS__NUM_DIGITS:
         return numDigits != NUM_DIGITS_EDEFAULT;
-      case DimePackage.GET_DIGITS__QUESTION:
-        return question != null;
-      case DimePackage.GET_DIGITS__VARI:
-        return VARI_EDEFAULT == null ? vari != null : !VARI_EDEFAULT.equals(vari);
     }
     return super.eIsSet(featureID);
   }
@@ -311,8 +169,6 @@ public class GetDigitsImpl extends VoiceTagImpl implements GetDigits
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (numDigits: ");
     result.append(numDigits);
-    result.append(", vari: ");
-    result.append(vari);
     result.append(')');
     return result.toString();
   }

@@ -1,0 +1,10 @@
+Application Getdigits
+
+State start{
+	GoTo end when COMPLETED;
+	Get 5 digits;
+}
+State end{
+	Say DIGITS;
+	HangUp;
+}

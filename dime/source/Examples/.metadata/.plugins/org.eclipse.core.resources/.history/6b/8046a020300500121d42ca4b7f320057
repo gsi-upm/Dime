@@ -1,0 +1,8 @@
+Application RecordIt
+
+Const GREETING= "HOLA";
+State start{
+	Record 5 seconds ;
+	 
+	
+}

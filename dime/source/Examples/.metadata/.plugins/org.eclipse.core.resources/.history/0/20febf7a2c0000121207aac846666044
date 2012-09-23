@@ -1,0 +1,16 @@
+Application OutboundCall
+
+State start {
+	 
+	
+	Say "Hi, this is dime";
+	GoTo end when COMPLETED;
+	Record 5 seconds;
+	
+	
+}    
+State end {
+ 
+	Play RECORD;
+	HangUp; 
+}      

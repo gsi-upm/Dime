@@ -1,0 +1,9 @@
+Application OutboundCall
+
+State start {
+	 
+	Call "";
+	Say "This is Dime";
+	HangUp;
+	
+}    

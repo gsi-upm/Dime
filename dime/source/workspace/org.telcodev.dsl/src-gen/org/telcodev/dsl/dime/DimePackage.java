@@ -372,31 +372,13 @@ public interface DimePackage extends EPackage
   int RECORD__TIME = VOICE_TAG_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RECORD__ACTION = VOICE_TAG_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Vari</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RECORD__VARI = VOICE_TAG_FEATURE_COUNT + 2;
-
-  /**
    * The number of structural features of the '<em>Record</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RECORD_FEATURE_COUNT = VOICE_TAG_FEATURE_COUNT + 3;
+  int RECORD_FEATURE_COUNT = VOICE_TAG_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.telcodev.dsl.dime.impl.RejectImpl <em>Reject</em>}' class.
@@ -483,31 +465,13 @@ public interface DimePackage extends EPackage
   int GET_DIGITS__NUM_DIGITS = VOICE_TAG_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Question</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GET_DIGITS__QUESTION = VOICE_TAG_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Vari</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GET_DIGITS__VARI = VOICE_TAG_FEATURE_COUNT + 2;
-
-  /**
    * The number of structural features of the '<em>Get Digits</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GET_DIGITS_FEATURE_COUNT = VOICE_TAG_FEATURE_COUNT + 3;
+  int GET_DIGITS_FEATURE_COUNT = VOICE_TAG_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.telcodev.dsl.dime.impl.AskImpl <em>Ask</em>}' class.
@@ -538,22 +502,13 @@ public interface DimePackage extends EPackage
   int ASK__QUESTION = VOICE_TAG_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Vari</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ASK__VARI = VOICE_TAG_FEATURE_COUNT + 1;
-
-  /**
    * The number of structural features of the '<em>Ask</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ASK_FEATURE_COUNT = VOICE_TAG_FEATURE_COUNT + 2;
+  int ASK_FEATURE_COUNT = VOICE_TAG_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.telcodev.dsl.dime.impl.SendImpl <em>Send</em>}' class.
@@ -803,7 +758,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EMAIL__NAME = 0;
+  int EMAIL__NAME = VOICE_TAG__NAME;
 
   /**
    * The feature id for the '<em><b>Title</b></em>' containment reference.
@@ -812,7 +767,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EMAIL__TITLE = 1;
+  int EMAIL__TITLE = VOICE_TAG_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>From</b></em>' containment reference.
@@ -821,7 +776,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EMAIL__FROM = 2;
+  int EMAIL__FROM = VOICE_TAG_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -830,7 +785,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EMAIL__VALUE = 3;
+  int EMAIL__VALUE = VOICE_TAG_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>To</b></em>' containment reference.
@@ -839,7 +794,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EMAIL__TO = 4;
+  int EMAIL__TO = VOICE_TAG_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Email</em>' class.
@@ -848,44 +803,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int EMAIL_FEATURE_COUNT = 5;
-
-  /**
-   * The meta object id for the '{@link org.telcodev.dsl.dime.impl.TweetImpl <em>Tweet</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.telcodev.dsl.dime.impl.TweetImpl
-   * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getTweet()
-   * @generated
-   */
-  int TWEET = 20;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TWEET__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TWEET__VALUE = 1;
-
-  /**
-   * The number of structural features of the '<em>Tweet</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TWEET_FEATURE_COUNT = 2;
+  int EMAIL_FEATURE_COUNT = VOICE_TAG_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.telcodev.dsl.dime.impl.TransitionImpl <em>Transition</em>}' class.
@@ -895,7 +813,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getTransition()
    * @generated
    */
-  int TRANSITION = 21;
+  int TRANSITION = 20;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -941,7 +859,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getIfExp()
    * @generated
    */
-  int IF_EXP = 22;
+  int IF_EXP = 21;
 
   /**
    * The feature id for the '<em><b>Block</b></em>' containment reference.
@@ -987,16 +905,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getCondBlock()
    * @generated
    */
-  int COND_BLOCK = 23;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COND_BLOCK__NAME = 0;
+  int COND_BLOCK = 22;
 
   /**
    * The feature id for the '<em><b>Cond</b></em>' containment reference.
@@ -1005,7 +914,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int COND_BLOCK__COND = 1;
+  int COND_BLOCK__COND = 0;
 
   /**
    * The feature id for the '<em><b>Action</b></em>' containment reference.
@@ -1014,7 +923,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int COND_BLOCK__ACTION = 2;
+  int COND_BLOCK__ACTION = 1;
 
   /**
    * The number of structural features of the '<em>Cond Block</em>' class.
@@ -1023,7 +932,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int COND_BLOCK_FEATURE_COUNT = 3;
+  int COND_BLOCK_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.telcodev.dsl.dime.impl.BlockImpl <em>Block</em>}' class.
@@ -1033,16 +942,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getBlock()
    * @generated
    */
-  int BLOCK = 24;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BLOCK__NAME = 0;
+  int BLOCK = 23;
 
   /**
    * The feature id for the '<em><b>Sta</b></em>' containment reference list.
@@ -1051,7 +951,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK__STA = 1;
+  int BLOCK__STA = 0;
 
   /**
    * The number of structural features of the '<em>Block</em>' class.
@@ -1060,7 +960,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK_FEATURE_COUNT = 2;
+  int BLOCK_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.telcodev.dsl.dime.impl.BoolExpressionImpl <em>Bool Expression</em>}' class.
@@ -1070,7 +970,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getBoolExpression()
    * @generated
    */
-  int BOOL_EXPRESSION = 25;
+  int BOOL_EXPRESSION = 24;
 
   /**
    * The number of structural features of the '<em>Bool Expression</em>' class.
@@ -1089,7 +989,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getBrackets()
    * @generated
    */
-  int BRACKETS = 26;
+  int BRACKETS = 25;
 
   /**
    * The feature id for the '<em><b>Open</b></em>' attribute.
@@ -1135,7 +1035,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getCompareExpression()
    * @generated
    */
-  int COMPARE_EXPRESSION = 27;
+  int COMPARE_EXPRESSION = 26;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1181,7 +1081,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getNegExpression()
    * @generated
    */
-  int NEG_EXPRESSION = 28;
+  int NEG_EXPRESSION = 27;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1218,7 +1118,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getMathExpression()
    * @generated
    */
-  int MATH_EXPRESSION = 29;
+  int MATH_EXPRESSION = 28;
 
   /**
    * The number of structural features of the '<em>Math Expression</em>' class.
@@ -1237,7 +1137,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getMathBrackets()
    * @generated
    */
-  int MATH_BRACKETS = 30;
+  int MATH_BRACKETS = 29;
 
   /**
    * The feature id for the '<em><b>Open</b></em>' attribute.
@@ -1283,7 +1183,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getConcatenationExpression()
    * @generated
    */
-  int CONCATENATION_EXPRESSION = 31;
+  int CONCATENATION_EXPRESSION = 30;
 
   /**
    * The number of structural features of the '<em>Concatenation Expression</em>' class.
@@ -1302,7 +1202,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getConcatenationBrackets()
    * @generated
    */
-  int CONCATENATION_BRACKETS = 32;
+  int CONCATENATION_BRACKETS = 31;
 
   /**
    * The feature id for the '<em><b>Open</b></em>' attribute.
@@ -1348,7 +1248,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getStringVariable()
    * @generated
    */
-  int STRING_VARIABLE = 33;
+  int STRING_VARIABLE = 32;
 
   /**
    * The feature id for the '<em><b>Com</b></em>' attribute.
@@ -1394,7 +1294,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getNumVariable()
    * @generated
    */
-  int NUM_VARIABLE = 34;
+  int NUM_VARIABLE = 33;
 
   /**
    * The feature id for the '<em><b>Com</b></em>' attribute.
@@ -1440,7 +1340,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getBoolVariable()
    * @generated
    */
-  int BOOL_VARIABLE = 35;
+  int BOOL_VARIABLE = 34;
 
   /**
    * The feature id for the '<em><b>Com</b></em>' attribute.
@@ -1486,7 +1386,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getConstant()
    * @generated
    */
-  int CONSTANT = 36;
+  int CONSTANT = 35;
 
   /**
    * The feature id for the '<em><b>Com</b></em>' attribute.
@@ -1532,7 +1432,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getLiteralAbs()
    * @generated
    */
-  int LITERAL_ABS = 39;
+  int LITERAL_ABS = 38;
 
   /**
    * The number of structural features of the '<em>Literal Abs</em>' class.
@@ -1551,7 +1451,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getPrimitive()
    * @generated
    */
-  int PRIMITIVE = 37;
+  int PRIMITIVE = 36;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1579,7 +1479,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getVars()
    * @generated
    */
-  int VARS = 38;
+  int VARS = 37;
 
   /**
    * The number of structural features of the '<em>Vars</em>' class.
@@ -1598,7 +1498,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 40;
+  int LITERAL = 39;
 
   /**
    * The feature id for the '<em><b>V</b></em>' reference.
@@ -1635,7 +1535,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getBoolLiteral()
    * @generated
    */
-  int BOOL_LITERAL = 41;
+  int BOOL_LITERAL = 40;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1663,7 +1563,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getNumLiteral()
    * @generated
    */
-  int NUM_LITERAL = 42;
+  int NUM_LITERAL = 41;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1691,7 +1591,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getStringLiteral()
    * @generated
    */
-  int STRING_LITERAL = 43;
+  int STRING_LITERAL = 42;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1719,7 +1619,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getEVENT()
    * @generated
    */
-  int EVENT = 44;
+  int EVENT = 43;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1747,7 +1647,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getSESSION()
    * @generated
    */
-  int SESSION = 45;
+  int SESSION = 44;
 
   /**
    * The feature id for the '<em><b>V</b></em>' reference.
@@ -1793,7 +1693,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getCALLSTATUS()
    * @generated
    */
-  int CALLSTATUS = 46;
+  int CALLSTATUS = 45;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1821,7 +1721,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getOperationBool()
    * @generated
    */
-  int OPERATION_BOOL = 47;
+  int OPERATION_BOOL = 46;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1867,7 +1767,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getOperation()
    * @generated
    */
-  int OPERATION = 48;
+  int OPERATION = 47;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1913,7 +1813,7 @@ public interface DimePackage extends EPackage
    * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getConcatenation()
    * @generated
    */
-  int CONCATENATION = 49;
+  int CONCATENATION = 48;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2186,28 +2086,6 @@ public interface DimePackage extends EPackage
   EAttribute getRecord_Time();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.telcodev.dsl.dime.Record#getAction <em>Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Action</em>'.
-   * @see org.telcodev.dsl.dime.Record#getAction()
-   * @see #getRecord()
-   * @generated
-   */
-  EReference getRecord_Action();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.telcodev.dsl.dime.Record#getVari <em>Vari</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Vari</em>'.
-   * @see org.telcodev.dsl.dime.Record#getVari()
-   * @see #getRecord()
-   * @generated
-   */
-  EAttribute getRecord_Vari();
-
-  /**
    * Returns the meta object for class '{@link org.telcodev.dsl.dime.Reject <em>Reject</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2249,28 +2127,6 @@ public interface DimePackage extends EPackage
   EAttribute getGetDigits_NumDigits();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.telcodev.dsl.dime.GetDigits#getQuestion <em>Question</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Question</em>'.
-   * @see org.telcodev.dsl.dime.GetDigits#getQuestion()
-   * @see #getGetDigits()
-   * @generated
-   */
-  EReference getGetDigits_Question();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.telcodev.dsl.dime.GetDigits#getVari <em>Vari</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Vari</em>'.
-   * @see org.telcodev.dsl.dime.GetDigits#getVari()
-   * @see #getGetDigits()
-   * @generated
-   */
-  EAttribute getGetDigits_Vari();
-
-  /**
    * Returns the meta object for class '{@link org.telcodev.dsl.dime.Ask <em>Ask</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2290,17 +2146,6 @@ public interface DimePackage extends EPackage
    * @generated
    */
   EReference getAsk_Question();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.telcodev.dsl.dime.Ask#getVari <em>Vari</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Vari</em>'.
-   * @see org.telcodev.dsl.dime.Ask#getVari()
-   * @see #getAsk()
-   * @generated
-   */
-  EAttribute getAsk_Vari();
 
   /**
    * Returns the meta object for class '{@link org.telcodev.dsl.dime.Send <em>Send</em>}'.
@@ -2483,17 +2328,6 @@ public interface DimePackage extends EPackage
   EClass getEmail();
 
   /**
-   * Returns the meta object for the attribute '{@link org.telcodev.dsl.dime.Email#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.telcodev.dsl.dime.Email#getName()
-   * @see #getEmail()
-   * @generated
-   */
-  EAttribute getEmail_Name();
-
-  /**
    * Returns the meta object for the containment reference '{@link org.telcodev.dsl.dime.Email#getTitle <em>Title</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2536,38 +2370,6 @@ public interface DimePackage extends EPackage
    * @generated
    */
   EReference getEmail_To();
-
-  /**
-   * Returns the meta object for class '{@link org.telcodev.dsl.dime.Tweet <em>Tweet</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Tweet</em>'.
-   * @see org.telcodev.dsl.dime.Tweet
-   * @generated
-   */
-  EClass getTweet();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.telcodev.dsl.dime.Tweet#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.telcodev.dsl.dime.Tweet#getName()
-   * @see #getTweet()
-   * @generated
-   */
-  EAttribute getTweet_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.telcodev.dsl.dime.Tweet#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Value</em>'.
-   * @see org.telcodev.dsl.dime.Tweet#getValue()
-   * @see #getTweet()
-   * @generated
-   */
-  EReference getTweet_Value();
 
   /**
    * Returns the meta object for class '{@link org.telcodev.dsl.dime.Transition <em>Transition</em>}'.
@@ -2666,17 +2468,6 @@ public interface DimePackage extends EPackage
   EClass getCondBlock();
 
   /**
-   * Returns the meta object for the attribute '{@link org.telcodev.dsl.dime.CondBlock#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.telcodev.dsl.dime.CondBlock#getName()
-   * @see #getCondBlock()
-   * @generated
-   */
-  EAttribute getCondBlock_Name();
-
-  /**
    * Returns the meta object for the containment reference '{@link org.telcodev.dsl.dime.CondBlock#getCond <em>Cond</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2707,17 +2498,6 @@ public interface DimePackage extends EPackage
    * @generated
    */
   EClass getBlock();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.telcodev.dsl.dime.Block#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.telcodev.dsl.dime.Block#getName()
-   * @see #getBlock()
-   * @generated
-   */
-  EAttribute getBlock_Name();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.telcodev.dsl.dime.Block#getSta <em>Sta</em>}'.
@@ -3605,22 +3385,6 @@ public interface DimePackage extends EPackage
     EAttribute RECORD__TIME = eINSTANCE.getRecord_Time();
 
     /**
-     * The meta object literal for the '<em><b>Action</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference RECORD__ACTION = eINSTANCE.getRecord_Action();
-
-    /**
-     * The meta object literal for the '<em><b>Vari</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RECORD__VARI = eINSTANCE.getRecord_Vari();
-
-    /**
      * The meta object literal for the '{@link org.telcodev.dsl.dime.impl.RejectImpl <em>Reject</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3659,22 +3423,6 @@ public interface DimePackage extends EPackage
     EAttribute GET_DIGITS__NUM_DIGITS = eINSTANCE.getGetDigits_NumDigits();
 
     /**
-     * The meta object literal for the '<em><b>Question</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference GET_DIGITS__QUESTION = eINSTANCE.getGetDigits_Question();
-
-    /**
-     * The meta object literal for the '<em><b>Vari</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GET_DIGITS__VARI = eINSTANCE.getGetDigits_Vari();
-
-    /**
      * The meta object literal for the '{@link org.telcodev.dsl.dime.impl.AskImpl <em>Ask</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3691,14 +3439,6 @@ public interface DimePackage extends EPackage
      * @generated
      */
     EReference ASK__QUESTION = eINSTANCE.getAsk_Question();
-
-    /**
-     * The meta object literal for the '<em><b>Vari</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ASK__VARI = eINSTANCE.getAsk_Vari();
 
     /**
      * The meta object literal for the '{@link org.telcodev.dsl.dime.impl.SendImpl <em>Send</em>}' class.
@@ -3851,14 +3591,6 @@ public interface DimePackage extends EPackage
     EClass EMAIL = eINSTANCE.getEmail();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EMAIL__NAME = eINSTANCE.getEmail_Name();
-
-    /**
      * The meta object literal for the '<em><b>Title</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3889,32 +3621,6 @@ public interface DimePackage extends EPackage
      * @generated
      */
     EReference EMAIL__TO = eINSTANCE.getEmail_To();
-
-    /**
-     * The meta object literal for the '{@link org.telcodev.dsl.dime.impl.TweetImpl <em>Tweet</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.telcodev.dsl.dime.impl.TweetImpl
-     * @see org.telcodev.dsl.dime.impl.DimePackageImpl#getTweet()
-     * @generated
-     */
-    EClass TWEET = eINSTANCE.getTweet();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TWEET__NAME = eINSTANCE.getTweet_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference TWEET__VALUE = eINSTANCE.getTweet_Value();
 
     /**
      * The meta object literal for the '{@link org.telcodev.dsl.dime.impl.TransitionImpl <em>Transition</em>}' class.
@@ -3995,14 +3701,6 @@ public interface DimePackage extends EPackage
     EClass COND_BLOCK = eINSTANCE.getCondBlock();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COND_BLOCK__NAME = eINSTANCE.getCondBlock_Name();
-
-    /**
      * The meta object literal for the '<em><b>Cond</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4027,14 +3725,6 @@ public interface DimePackage extends EPackage
      * @generated
      */
     EClass BLOCK = eINSTANCE.getBlock();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BLOCK__NAME = eINSTANCE.getBlock_Name();
 
     /**
      * The meta object literal for the '<em><b>Sta</b></em>' containment reference list feature.

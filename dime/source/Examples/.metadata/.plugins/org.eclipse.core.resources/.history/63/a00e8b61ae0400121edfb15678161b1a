@@ -1,0 +1,13 @@
+Application test
+
+State start times 3 {
+	
+	
+	Say "Hello";   
+	     
+}        
+State end{ 
+	
+	Say "End"; 
+	HangUp;  
+}    

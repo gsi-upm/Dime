@@ -84,7 +84,6 @@ public class DimeFactoryImpl extends EFactoryImpl implements DimeFactory
       case DimePackage.SAY: return createSay();
       case DimePackage.SMS: return createSms();
       case DimePackage.EMAIL: return createEmail();
-      case DimePackage.TWEET: return createTweet();
       case DimePackage.TRANSITION: return createTransition();
       case DimePackage.IF_EXP: return createIfExp();
       case DimePackage.COND_BLOCK: return createCondBlock();
@@ -337,17 +336,6 @@ public class DimeFactoryImpl extends EFactoryImpl implements DimeFactory
   {
     EmailImpl email = new EmailImpl();
     return email;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Tweet createTweet()
-  {
-    TweetImpl tweet = new TweetImpl();
-    return tweet;
   }
 
   /**

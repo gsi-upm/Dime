@@ -1,0 +1,16 @@
+Application test
+
+State start times 3 {
+	
+	
+	Say "Start"; 
+	
+	GoTo end when TIMES;
+	GoTo start when COMPLETED;     
+	     
+}       
+State end{ 
+	
+	Say "End"; 
+	HangUp;  
+}   
