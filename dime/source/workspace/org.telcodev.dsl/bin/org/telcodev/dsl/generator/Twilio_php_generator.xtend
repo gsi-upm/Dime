@@ -51,7 +51,7 @@ import org.telcodev.dsl.dime.CALLSTATUS
 import org.telcodev.dsl.dime.Email
 import org.telcodev.dsl.dime.Sms
 import org.telcodev.dsl.dime.ConcatenationExpression
-import org.telcodev.dsl.dime.AbstractElement
+ 
 
 class Twilio_php_generator {
 	private static String appName
@@ -71,6 +71,9 @@ class Twilio_php_generator {
 	private static String timeoutRedirect
 	private static Set<String> variablesId
 	private static Set<String> constantsId
+	
+	private static Record record;
+	private static GetDigits getdigits;
 	
 	
 	
@@ -166,7 +169,7 @@ class Twilio_php_generator {
 		System::out.println("Creating "+"call_dime"+".php file");
 		
 		fsa.generateFile("call_dime.php",declareCall())
-		
+		fsa.generateFile("res/token.php", tokenFile)
 		
 		for(state :( resource.contents.head as Document).sta){
 			fsa.generateFile(state.name+".php",declareState(state))
@@ -202,6 +205,20 @@ class Twilio_php_generator {
 
 	}  
 
+	def static tokenFile(){
+		'''<?php
+
+$url= "«url»start.php";
+		$curl_handle=curl_init();
+		curl_setopt($curl_handle,CURLOPT_URL,$url);
+		curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
+		curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
+		curl_exec($curl_handle);
+		curl_close($curl_handle);
+
+echo "<h1>Twilio token, from a Dime application.</h1>";
+
+?> '''}
 
 
 	def static dispatch declareGlobalStatement(Constant elem){
@@ -252,7 +269,7 @@ class Twilio_php_generator {
 	
 	
 	def  static declareState(State elem){
-		var result=false
+		
 		var first=true;
 		name=elem.name;
 		System::out.println("Generating "+elem.name.toUpperCase+" state.");
@@ -328,12 +345,6 @@ require "globals_dime.php";
 		$times_dime=1;
 	}
 	«ENDIF»
-	
-	«IF elem.timeout!=0 && timeoutRedirect!=null» 	
-	
-	// Timeout signal appears when the timeout atribute of the state is reached.
-	
-	«ENDIF»
 	«IF elem.name.equals("start")»
 
 	«ENDIF»
@@ -346,7 +357,12 @@ require "globals_dime.php";
 		«declareAbstractElement(c)»
 	«ENDFOR»
 	
-		«IF completedRedirect!=null && !result»
+		«IF completedRedirect!=null »
+		«IF record!=null»if($recordtag_dime==TRUE){
+			«declareVoiceTag(record)»
+		}«ENDIF»«IF getdigits!=null»if($getdigits_dime==TRUE){
+			declareVoiceTag(getdigits)»
+		}«ENDIF»else{
 		$url=$completedurl_dime."?"."laststate_dime=«elem.name»";
 		«IF !variablesId.isEmpty()»«saveGlobalVariableXML("url")»«ENDIF»
 		if(isset($hangupurl_dime)){
@@ -359,7 +375,8 @@ require "globals_dime.php";
 			$url=$url."&amp;timesurl_dime=".urlencode($timesurl_dime);
 		}
 		
-		echo "<Redirect>".$url."</Redirect>";«ENDIF»
+		echo "<Redirect>".$url."</Redirect>";
+		}«ENDIF»
 	
 		echo "</Response>";
 	}
@@ -697,13 +714,16 @@ echo "<Record transcribe=\"true\" transcribeCallback=\"".$url_dime."\" /> \n";
 	
 	
 	def static dispatch declareVoiceTag( Record elem){
-		
-		'''
-		if(isset($completedurl_dime)){
-			$url_dime=$completedurl_dime."?laststate_dime=«name»";
-			«saveGlobalVariableXML("url_dime")»
-			echo "<Record action=\"".$url_dime."\" method=\"GET\" maxLength=\"«elem.time»\" finishOnKey=\"*\" /> \n";
-		}
+		record=elem;
+		'''if(isset($completedurl_dime)){
+	$url_dime=$completedurl_dime."?laststate_dime=«name»";
+	«saveGlobalVariableXML("url_dime")»
+	echo "<Record action=\"".$url_dime."\" method=\"GET\" maxLength=\"«elem.time»\" finishOnKey=\"*\" /> \n";
+	echo "</Response>";
+	exit();
+}else{
+$recordtag_dime=TRUE;
+}
 		'''
 	}
 	def static dispatch declareVoiceTag( Reject elem){
@@ -718,11 +738,15 @@ echo "<Record transcribe=\"true\" transcribeCallback=\"".$url_dime."\" /> \n";
 	
 	//
 	def static dispatch declareVoiceTag( GetDigits elem){
-		
+		getdigits=elem;
 		'''if(isset($completedurl_dime)){
 	$url_dime=$completedurl_dime."?laststate_dime=«name»";
 	«saveGlobalVariableXML("url_dime")»
 	echo "<Gather action=\"".$url_dime."\"  numDigits=\"«elem.numDigits»\" ></Gather>";
+	echo "</Response>";
+	exit();
+}else{
+	$getdigits_dime=TRUE;
 }
 	'''
 	}
@@ -745,7 +769,9 @@ if(!isset($_REQUEST['CallStatus'])){
 	curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 	curl_exec($curl_handle);
 	curl_close($curl_handle);
+	
 	exit();
+	
 }
 	'''
 	}

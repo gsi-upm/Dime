@@ -81,7 +81,6 @@ public class InternalDimeLexer extends Lexer {
     public static final int T__38=38;
     public static final int T__39=39;
     public static final int RULE_WS=19;
-    public static final int T__73=73;
     public static final int RULE_MATH=13;
 
     // delegates
@@ -165,11 +164,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:14:7: ( 'timeout' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:14:9: 'timeout'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:14:7: ( '{' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:14:9: '{'
             {
-            match("timeout"); 
-
+            match('{'); 
 
             }
 
@@ -186,10 +184,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:15:7: ( '{' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:15:9: '{'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:15:7: ( '}' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:15:9: '}'
             {
-            match('{'); 
+            match('}'); 
 
             }
 
@@ -206,10 +204,11 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:16:7: ( '}' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:16:9: '}'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:16:7: ( 'Call' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:16:9: 'Call'
             {
-            match('}'); 
+            match("Call"); 
+
 
             }
 
@@ -226,11 +225,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:17:7: ( 'Call' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:17:9: 'Call'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:17:7: ( ';' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:17:9: ';'
             {
-            match("Call"); 
-
+            match(';'); 
 
             }
 
@@ -247,10 +245,11 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:18:7: ( ';' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:18:9: ';'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:18:7: ( 'DialTo' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:18:9: 'DialTo'
             {
-            match(';'); 
+            match("DialTo"); 
+
 
             }
 
@@ -267,10 +266,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:19:7: ( 'DialTo' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:19:9: 'DialTo'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:19:7: ( 'Play' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:19:9: 'Play'
             {
-            match("DialTo"); 
+            match("Play"); 
 
 
             }
@@ -288,10 +287,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:20:7: ( 'Play' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:20:9: 'Play'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:20:7: ( 'Record' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:20:9: 'Record'
             {
-            match("Play"); 
+            match("Record"); 
 
 
             }
@@ -309,10 +308,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:21:7: ( 'Record' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:21:9: 'Record'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:21:7: ( 'seconds' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:21:9: 'seconds'
             {
-            match("Record"); 
+            match("seconds"); 
 
 
             }
@@ -330,10 +329,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:22:7: ( 'seconds' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:22:9: 'seconds'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:22:7: ( 'Reject;' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:22:9: 'Reject;'
             {
-            match("seconds"); 
+            match("Reject;"); 
 
 
             }
@@ -351,10 +350,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:23:7: ( 'Reject;' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:23:9: 'Reject;'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:23:7: ( 'HangUp;' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:23:9: 'HangUp;'
             {
-            match("Reject;"); 
+            match("HangUp;"); 
 
 
             }
@@ -372,10 +371,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:24:7: ( 'HangUp;' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:24:9: 'HangUp;'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:24:7: ( 'Get' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:24:9: 'Get'
             {
-            match("HangUp;"); 
+            match("Get"); 
 
 
             }
@@ -393,10 +392,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:25:7: ( 'Get' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:25:9: 'Get'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:25:7: ( 'digits' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:25:9: 'digits'
             {
-            match("Get"); 
+            match("digits"); 
 
 
             }
@@ -414,10 +413,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:26:7: ( 'digits' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:26:9: 'digits'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:26:7: ( 'Ask' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:26:9: 'Ask'
             {
-            match("digits"); 
+            match("Ask"); 
 
 
             }
@@ -435,10 +434,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:27:7: ( 'Ask' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:27:9: 'Ask'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:27:7: ( 'Send' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:27:9: 'Send'
             {
-            match("Ask"); 
+            match("Send"); 
 
 
             }
@@ -456,10 +455,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:28:7: ( 'Send' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:28:9: 'Send'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:28:7: ( 'to' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:28:9: 'to'
             {
-            match("Send"); 
+            match("to"); 
 
 
             }
@@ -477,11 +476,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:29:7: ( 'to' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:29:9: 'to'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:29:7: ( ',' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:29:9: ','
             {
-            match("to"); 
-
+            match(','); 
 
             }
 
@@ -498,10 +496,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:30:7: ( ',' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:30:9: ','
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:30:7: ( ':' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:30:9: ':'
             {
-            match(','); 
+            match(':'); 
 
             }
 
@@ -518,10 +516,11 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:31:7: ( ':' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:31:9: ':'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:31:7: ( 'Say' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:31:9: 'Say'
             {
-            match(':'); 
+            match("Say"); 
+
 
             }
 
@@ -538,10 +537,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:32:7: ( 'Say' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:32:9: 'Say'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:32:7: ( 'Sms' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:32:9: 'Sms'
             {
-            match("Say"); 
+            match("Sms"); 
 
 
             }
@@ -559,10 +558,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:33:7: ( 'Sms' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:33:9: 'Sms'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:33:7: ( 'Email' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:33:9: 'Email'
             {
-            match("Sms"); 
+            match("Email"); 
 
 
             }
@@ -580,10 +579,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:34:7: ( 'Email' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:34:9: 'Email'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:34:7: ( 'subject' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:34:9: 'subject'
             {
-            match("Email"); 
+            match("subject"); 
 
 
             }
@@ -601,10 +600,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:35:7: ( 'subject' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:35:9: 'subject'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:35:7: ( 'from' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:35:9: 'from'
             {
-            match("subject"); 
+            match("from"); 
 
 
             }
@@ -622,10 +621,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:36:7: ( 'from' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:36:9: 'from'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:36:7: ( 'message' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:36:9: 'message'
             {
-            match("from"); 
+            match("message"); 
 
 
             }
@@ -643,10 +642,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:37:7: ( 'message' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:37:9: 'message'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:37:7: ( 'GoTo' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:37:9: 'GoTo'
             {
-            match("message"); 
+            match("GoTo"); 
 
 
             }
@@ -664,10 +663,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:38:7: ( 'GoTo' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:38:9: 'GoTo'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:38:7: ( 'when' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:38:9: 'when'
             {
-            match("GoTo"); 
+            match("when"); 
 
 
             }
@@ -685,10 +684,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:39:7: ( 'when' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:39:9: 'when'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:39:7: ( 'else' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:39:9: 'else'
             {
-            match("when"); 
+            match("else"); 
 
 
             }
@@ -706,10 +705,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:40:7: ( 'else' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:40:9: 'else'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:40:7: ( 'if' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:40:9: 'if'
             {
-            match("else"); 
+            match("if"); 
 
 
             }
@@ -727,10 +726,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:41:7: ( 'if' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:41:9: 'if'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:41:7: ( 'String' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:41:9: 'String'
             {
-            match("if"); 
+            match("String"); 
 
 
             }
@@ -748,11 +747,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:42:7: ( 'String' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:42:9: 'String'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:42:7: ( '=' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:42:9: '='
             {
-            match("String"); 
-
+            match('='); 
 
             }
 
@@ -769,10 +767,11 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:43:7: ( '=' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:43:9: '='
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:43:7: ( ' = ' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:43:9: ' = '
             {
-            match('='); 
+            match(" = "); 
+
 
             }
 
@@ -789,10 +788,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:44:7: ( ' = ' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:44:9: ' = '
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:44:7: ( 'Num' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:44:9: 'Num'
             {
-            match(" = "); 
+            match("Num"); 
 
 
             }
@@ -810,10 +809,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:45:7: ( 'Num' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:45:9: 'Num'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:45:7: ( 'Bool' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:45:9: 'Bool'
             {
-            match("Num"); 
+            match("Bool"); 
 
 
             }
@@ -831,10 +830,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:46:7: ( 'Bool' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:46:9: 'Bool'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:46:7: ( 'Const' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:46:9: 'Const'
             {
-            match("Bool"); 
+            match("Const"); 
 
 
             }
@@ -852,10 +851,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:47:7: ( 'Const' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:47:9: 'Const'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:47:7: ( 'HANGUP' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:47:9: 'HANGUP'
             {
-            match("Const"); 
+            match("HANGUP"); 
 
 
             }
@@ -873,10 +872,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:48:7: ( 'HANGUP' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:48:9: 'HANGUP'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:48:7: ( 'COMPLETED' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:48:9: 'COMPLETED'
             {
-            match("HANGUP"); 
+            match("COMPLETED"); 
 
 
             }
@@ -894,10 +893,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:49:7: ( 'COMPLETED' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:49:9: 'COMPLETED'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:49:7: ( 'ERROR' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:49:9: 'ERROR'
             {
-            match("COMPLETED"); 
+            match("ERROR"); 
 
 
             }
@@ -915,10 +914,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:50:7: ( 'ERROR' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:50:9: 'ERROR'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:50:7: ( 'TIMES' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:50:9: 'TIMES'
             {
-            match("ERROR"); 
+            match("TIMES"); 
 
 
             }
@@ -936,10 +935,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:51:7: ( 'TIMES' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:51:9: 'TIMES'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:51:7: ( 'TIMEOUT' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:51:9: 'TIMEOUT'
             {
-            match("TIMES"); 
+            match("TIMEOUT"); 
 
 
             }
@@ -957,10 +956,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:52:7: ( 'TIMEOUT' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:52:9: 'TIMEOUT'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:52:7: ( 'CALLER' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:52:9: 'CALLER'
             {
-            match("TIMEOUT"); 
+            match("CALLER"); 
 
 
             }
@@ -978,10 +977,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:53:7: ( 'CALLER' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:53:9: 'CALLER'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:53:7: ( 'LASTSTATE' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:53:9: 'LASTSTATE'
             {
-            match("CALLER"); 
+            match("LASTSTATE"); 
 
 
             }
@@ -999,10 +998,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:54:7: ( 'LASTSTATE' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:54:9: 'LASTSTATE'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:54:7: ( 'TIME' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:54:9: 'TIME'
             {
-            match("LASTSTATE"); 
+            match("TIME"); 
 
 
             }
@@ -1020,10 +1019,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:55:7: ( 'TIME' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:55:9: 'TIME'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:55:7: ( 'CALLED' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:55:9: 'CALLED'
             {
-            match("TIME"); 
+            match("CALLED"); 
 
 
             }
@@ -1041,10 +1040,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:56:7: ( 'CALLED' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:56:9: 'CALLED'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:56:7: ( 'ANSWER' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:56:9: 'ANSWER'
             {
-            match("CALLED"); 
+            match("ANSWER"); 
 
 
             }
@@ -1062,10 +1061,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:57:7: ( 'ANSWER' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:57:9: 'ANSWER'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:57:7: ( 'DIGITS' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:57:9: 'DIGITS'
             {
-            match("ANSWER"); 
+            match("DIGITS"); 
 
 
             }
@@ -1083,10 +1082,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:58:7: ( 'DIGITS' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:58:9: 'DIGITS'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:58:7: ( 'RECORD' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:58:9: 'RECORD'
             {
-            match("DIGITS"); 
+            match("RECORD"); 
 
 
             }
@@ -1104,10 +1103,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:59:7: ( 'RECORD' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:59:9: 'RECORD'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:59:7: ( 'RINGING' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:59:9: 'RINGING'
             {
-            match("RECORD"); 
+            match("RINGING"); 
 
 
             }
@@ -1125,10 +1124,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:60:7: ( 'RINGING' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:60:9: 'RINGING'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:60:7: ( 'IN-PROGRESS' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:60:9: 'IN-PROGRESS'
             {
-            match("RINGING"); 
+            match("IN-PROGRESS"); 
 
 
             }
@@ -1146,10 +1145,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:61:7: ( 'IN-PROGRESS' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:61:9: 'IN-PROGRESS'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:61:7: ( 'DISCONNECTED' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:61:9: 'DISCONNECTED'
             {
-            match("IN-PROGRESS"); 
+            match("DISCONNECTED"); 
 
 
             }
@@ -1167,29 +1166,8 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:62:7: ( 'DISCONNECTED' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:62:9: 'DISCONNECTED'
-            {
-            match("DISCONNECTED"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__72"
-
-    // $ANTLR start "T__73"
-    public final void mT__73() throws RecognitionException {
-        try {
-            int _type = T__73;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:63:7: ( 'FAILED' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:63:9: 'FAILED'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:62:7: ( 'FAILED' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:62:9: 'FAILED'
             {
             match("FAILED"); 
 
@@ -1202,15 +1180,15 @@ public class InternalDimeLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__73"
+    // $ANTLR end "T__72"
 
     // $ANTLR start "RULE_DOUBLE"
     public final void mRULE_DOUBLE() throws RecognitionException {
         try {
             int _type = RULE_DOUBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3508:13: ( RULE_INT '.' RULE_INT )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3508:15: RULE_INT '.' RULE_INT
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3445:13: ( RULE_INT '.' RULE_INT )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3445:15: RULE_INT '.' RULE_INT
             {
             mRULE_INT(); 
             match('.'); 
@@ -1231,8 +1209,8 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_NULL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3510:11: ( 'null' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3510:13: 'null'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3447:11: ( 'null' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3447:13: 'null'
             {
             match("null"); 
 
@@ -1252,10 +1230,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_BOOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3512:11: ( ( 'true' | 'false' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3512:13: ( 'true' | 'false' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3449:11: ( ( 'true' | 'false' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3449:13: ( 'true' | 'false' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3512:13: ( 'true' | 'false' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3449:13: ( 'true' | 'false' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1273,7 +1251,7 @@ public class InternalDimeLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3512:14: 'true'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3449:14: 'true'
                     {
                     match("true"); 
 
@@ -1281,7 +1259,7 @@ public class InternalDimeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3512:21: 'false'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3449:21: 'false'
                     {
                     match("false"); 
 
@@ -1307,10 +1285,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_LOGIC_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3514:17: ( ( '&&' | '||' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3514:19: ( '&&' | '||' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3451:17: ( ( '&&' | '||' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3451:19: ( '&&' | '||' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3514:19: ( '&&' | '||' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3451:19: ( '&&' | '||' )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -1328,7 +1306,7 @@ public class InternalDimeLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3514:20: '&&'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3451:20: '&&'
                     {
                     match("&&"); 
 
@@ -1336,7 +1314,7 @@ public class InternalDimeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3514:25: '||'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3451:25: '||'
                     {
                     match("||"); 
 
@@ -1362,10 +1340,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_COMPARE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3516:14: ( ( '<' | '==' | '>' | '<=' | '>=' | '!=' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3516:16: ( '<' | '==' | '>' | '<=' | '>=' | '!=' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3453:14: ( ( '<' | '==' | '>' | '<=' | '>=' | '!=' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3453:16: ( '<' | '==' | '>' | '<=' | '>=' | '!=' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3516:16: ( '<' | '==' | '>' | '<=' | '>=' | '!=' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3453:16: ( '<' | '==' | '>' | '<=' | '>=' | '!=' )
             int alt3=6;
             switch ( input.LA(1) ) {
             case '<':
@@ -1409,14 +1387,14 @@ public class InternalDimeLexer extends Lexer {
 
             switch (alt3) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3516:17: '<'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3453:17: '<'
                     {
                     match('<'); 
 
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3516:21: '=='
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3453:21: '=='
                     {
                     match("=="); 
 
@@ -1424,14 +1402,14 @@ public class InternalDimeLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3516:26: '>'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3453:26: '>'
                     {
                     match('>'); 
 
                     }
                     break;
                 case 4 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3516:30: '<='
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3453:30: '<='
                     {
                     match("<="); 
 
@@ -1439,7 +1417,7 @@ public class InternalDimeLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3516:35: '>='
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3453:35: '>='
                     {
                     match(">="); 
 
@@ -1447,7 +1425,7 @@ public class InternalDimeLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3516:40: '!='
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3453:40: '!='
                     {
                     match("!="); 
 
@@ -1473,8 +1451,8 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_MATH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3518:11: ( ( '*' | '/' | '-' | '+' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3518:13: ( '*' | '/' | '-' | '+' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3455:11: ( ( '*' | '/' | '-' | '+' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3455:13: ( '*' | '/' | '-' | '+' )
             {
             if ( (input.LA(1)>='*' && input.LA(1)<='+')||input.LA(1)=='-'||input.LA(1)=='/' ) {
                 input.consume();
@@ -1501,8 +1479,8 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_CONCATENATION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3520:20: ( '.' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3520:22: '.'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3457:20: ( '.' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3457:22: '.'
             {
             match('.'); 
 
@@ -1521,8 +1499,8 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_NEGATION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3522:15: ( '!' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3522:17: '!'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3459:15: ( '!' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3459:17: '!'
             {
             match('!'); 
 
@@ -1541,8 +1519,8 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_OBRACKET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3524:15: ( '(' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3524:17: '('
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3461:15: ( '(' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3461:17: '('
             {
             match('('); 
 
@@ -1561,8 +1539,8 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_CBRACKET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3526:15: ( ')' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3526:17: ')'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3463:15: ( ')' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3463:17: ')'
             {
             match(')'); 
 
@@ -1581,10 +1559,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3528:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3528:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3465:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3465:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3528:11: ( '^' )?
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3465:11: ( '^' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1593,7 +1571,7 @@ public class InternalDimeLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3528:11: '^'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3465:11: '^'
                     {
                     match('^'); 
 
@@ -1611,7 +1589,7 @@ public class InternalDimeLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3528:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3465:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop5:
             do {
                 int alt5=2;
@@ -1660,10 +1638,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3530:10: ( ( '0' .. '9' )+ )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3530:12: ( '0' .. '9' )+
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3467:10: ( ( '0' .. '9' )+ )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3467:12: ( '0' .. '9' )+
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3530:12: ( '0' .. '9' )+
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3467:12: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -1677,7 +1655,7 @@ public class InternalDimeLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3530:13: '0' .. '9'
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3467:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1709,10 +1687,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3532:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3532:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3469:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3469:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3532:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3469:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1730,10 +1708,10 @@ public class InternalDimeLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3532:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3469:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3532:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3469:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -1749,7 +1727,7 @@ public class InternalDimeLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3532:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3469:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1765,7 +1743,7 @@ public class InternalDimeLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3532:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3469:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1790,10 +1768,10 @@ public class InternalDimeLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3532:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3469:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3532:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3469:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -1809,7 +1787,7 @@ public class InternalDimeLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3532:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3469:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1825,7 +1803,7 @@ public class InternalDimeLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3532:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3469:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1868,12 +1846,12 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3534:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3534:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3471:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3471:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3534:24: ( options {greedy=false; } : . )*
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3471:24: ( options {greedy=false; } : . )*
             loop10:
             do {
                 int alt10=2;
@@ -1898,7 +1876,7 @@ public class InternalDimeLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3534:52: .
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3471:52: .
             	    {
             	    matchAny(); 
 
@@ -1928,12 +1906,12 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3536:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3536:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3473:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3473:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3536:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3473:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop11:
             do {
                 int alt11=2;
@@ -1946,7 +1924,7 @@ public class InternalDimeLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3536:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3473:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1966,7 +1944,7 @@ public class InternalDimeLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3536:40: ( ( '\\r' )? '\\n' )?
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3473:40: ( ( '\\r' )? '\\n' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1975,9 +1953,9 @@ public class InternalDimeLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3536:41: ( '\\r' )? '\\n'
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3473:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3536:41: ( '\\r' )?
+                    // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3473:41: ( '\\r' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -1986,7 +1964,7 @@ public class InternalDimeLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3536:41: '\\r'
+                            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3473:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2018,10 +1996,10 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3538:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3538:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3475:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3475:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3538:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3475:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt14=0;
             loop14:
             do {
@@ -2075,8 +2053,8 @@ public class InternalDimeLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3540:16: ( . )
-            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3540:18: .
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3477:16: ( . )
+            // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:3477:18: .
             {
             matchAny(); 
 
@@ -2091,8 +2069,8 @@ public class InternalDimeLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:8: ( T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | RULE_DOUBLE | RULE_NULL | RULE_BOOL | RULE_LOGIC_WORD | RULE_COMPARE | RULE_MATH | RULE_CONCATENATION | RULE_NEGATION | RULE_OBRACKET | RULE_CBRACKET | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt15=70;
+        // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:8: ( T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | RULE_DOUBLE | RULE_NULL | RULE_BOOL | RULE_LOGIC_WORD | RULE_COMPARE | RULE_MATH | RULE_CONCATENATION | RULE_NEGATION | RULE_OBRACKET | RULE_CBRACKET | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt15=69;
         alt15 = dfa15.predict(input);
         switch (alt15) {
             case 1 :
@@ -2460,126 +2438,119 @@ public class InternalDimeLexer extends Lexer {
                 }
                 break;
             case 53 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:322: T__73
-                {
-                mT__73(); 
-
-                }
-                break;
-            case 54 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:328: RULE_DOUBLE
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:322: RULE_DOUBLE
                 {
                 mRULE_DOUBLE(); 
 
                 }
                 break;
-            case 55 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:340: RULE_NULL
+            case 54 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:334: RULE_NULL
                 {
                 mRULE_NULL(); 
 
                 }
                 break;
-            case 56 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:350: RULE_BOOL
+            case 55 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:344: RULE_BOOL
                 {
                 mRULE_BOOL(); 
 
                 }
                 break;
-            case 57 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:360: RULE_LOGIC_WORD
+            case 56 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:354: RULE_LOGIC_WORD
                 {
                 mRULE_LOGIC_WORD(); 
 
                 }
                 break;
-            case 58 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:376: RULE_COMPARE
+            case 57 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:370: RULE_COMPARE
                 {
                 mRULE_COMPARE(); 
 
                 }
                 break;
-            case 59 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:389: RULE_MATH
+            case 58 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:383: RULE_MATH
                 {
                 mRULE_MATH(); 
 
                 }
                 break;
-            case 60 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:399: RULE_CONCATENATION
+            case 59 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:393: RULE_CONCATENATION
                 {
                 mRULE_CONCATENATION(); 
 
                 }
                 break;
-            case 61 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:418: RULE_NEGATION
+            case 60 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:412: RULE_NEGATION
                 {
                 mRULE_NEGATION(); 
 
                 }
                 break;
-            case 62 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:432: RULE_OBRACKET
+            case 61 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:426: RULE_OBRACKET
                 {
                 mRULE_OBRACKET(); 
 
                 }
                 break;
-            case 63 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:446: RULE_CBRACKET
+            case 62 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:440: RULE_CBRACKET
                 {
                 mRULE_CBRACKET(); 
 
                 }
                 break;
-            case 64 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:460: RULE_ID
+            case 63 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:454: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 65 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:468: RULE_INT
+            case 64 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:462: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 66 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:477: RULE_STRING
+            case 65 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:471: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 67 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:489: RULE_ML_COMMENT
+            case 66 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:483: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 68 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:505: RULE_SL_COMMENT
+            case 67 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:499: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 69 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:521: RULE_WS
+            case 68 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:515: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 70 :
-                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:529: RULE_ANY_OTHER
+            case 69 :
+                // ../org.telcodev.dsl/src-gen/org/telcodev/dsl/parser/antlr/internal/InternalDime.g:1:523: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -2596,22 +2567,22 @@ public class InternalDimeLexer extends Lexer {
         "\1\uffff\3\64\2\uffff\1\64\1\uffff\7\64\2\uffff\6\64\1\133\1\135"+
         "\6\64\1\144\1\64\2\60\2\uffff\1\151\1\154\3\uffff\1\60\1\uffff\2"+
         "\60\3\uffff\3\64\1\uffff\5\64\1\172\1\64\2\uffff\4\64\1\uffff\15"+
-        "\64\2\uffff\7\64\1\u0096\4\uffff\6\64\2\uffff\1\144\1\64\11\uffff"+
-        "\1\64\1\u009f\4\64\1\u00a4\1\u00a5\1\64\1\uffff\21\64\1\u00b8\11"+
-        "\64\1\uffff\1\u00c2\3\64\1\uffff\3\64\1\uffff\3\64\1\u00cc\2\uffff"+
-        "\1\64\1\u00cf\1\u00d0\6\64\1\u00d7\10\64\1\uffff\1\u00e0\3\64\1"+
-        "\u00e4\2\64\1\u00e7\1\u00e8\1\uffff\1\u00e9\1\u00ec\2\64\1\u00ef"+
-        "\2\64\1\u00f2\1\64\1\uffff\1\u00f4\1\64\2\uffff\1\u00f6\5\64\1\uffff"+
-        "\10\64\1\uffff\1\64\1\u0106\1\u0107\1\uffff\1\u00cf\1\64\3\uffff"+
-        "\1\u0109\1\64\1\uffff\2\64\1\uffff\1\64\1\u010e\1\uffff\1\u010f"+
-        "\1\uffff\1\64\1\uffff\1\64\1\u0112\1\u0113\1\u0114\1\u0115\1\64"+
-        "\1\u0117\1\64\1\u0119\4\64\1\u011e\1\u011f\2\uffff\1\64\1\uffff"+
-        "\2\64\1\u0123\1\64\2\uffff\1\u0125\1\64\4\uffff\1\64\3\uffff\1\u0128"+
-        "\1\u0129\1\u012a\3\uffff\1\u012b\1\u012c\1\64\1\uffff\1\64\1\uffff"+
-        "\2\64\5\uffff\2\64\1\u0133\1\64\1\u0135\1\64\1\uffff\1\64\1\uffff"+
-        "\1\u0138\1\64\1\uffff\1\u013a\1\uffff";
+        "\64\2\uffff\7\64\1\u0096\4\uffff\6\64\1\uffff\1\144\1\uffff\1\64"+
+        "\11\uffff\1\64\1\u009f\4\64\1\u00a4\1\u00a5\1\64\1\uffff\21\64\1"+
+        "\u00b8\11\64\1\uffff\1\u00c2\3\64\1\uffff\3\64\1\uffff\3\64\1\u00cc"+
+        "\2\uffff\1\64\1\u00ce\1\u00cf\6\64\1\u00d6\10\64\1\uffff\1\u00df"+
+        "\3\64\1\u00e3\2\64\1\u00e6\1\u00e7\1\uffff\1\u00e8\1\u00eb\2\64"+
+        "\1\u00ee\2\64\1\u00f1\1\64\1\uffff\1\u00f3\2\uffff\1\u00f4\5\64"+
+        "\1\uffff\10\64\1\uffff\1\64\1\u0104\1\u0105\1\uffff\1\u00ce\1\64"+
+        "\3\uffff\1\u0107\1\64\1\uffff\2\64\1\uffff\1\64\1\u010c\1\uffff"+
+        "\1\u010d\2\uffff\1\64\1\u010f\1\u0110\1\u0111\1\u0112\1\64\1\u0114"+
+        "\1\64\1\u0116\4\64\1\u011b\1\u011c\2\uffff\1\64\1\uffff\2\64\1\u0120"+
+        "\1\64\2\uffff\1\64\4\uffff\1\64\3\uffff\1\u0124\1\u0125\1\u0126"+
+        "\3\uffff\1\u0127\1\u0128\1\64\1\uffff\3\64\5\uffff\2\64\1\u012f"+
+        "\1\64\1\u0131\1\64\1\uffff\1\64\1\uffff\1\u0134\1\64\1\uffff\1\u0136"+
+        "\1\uffff";
     static final String DFA15_eofS =
-        "\u013b\uffff";
+        "\u0137\uffff";
     static final String DFA15_minS =
         "\1\0\1\116\1\141\1\151\2\uffff\1\101\1\uffff\1\111\1\154\1\105\1"+
         "\145\1\101\1\145\1\151\2\uffff\1\122\1\141\1\145\1\150\1\154\1\146"+
@@ -2621,23 +2592,23 @@ public class InternalDimeLexer extends Lexer {
         "\1\154\1\156\1\115\1\114\1\uffff\1\141\1\107\1\141\1\143\1\103\1"+
         "\116\1\143\1\142\1\156\1\116\1\164\1\124\1\147\2\uffff\1\141\1\122"+
         "\1\157\1\154\1\163\1\145\1\163\1\60\4\uffff\1\155\1\157\1\115\1"+
-        "\123\1\55\1\111\2\uffff\1\56\1\154\11\uffff\1\154\1\60\1\127\1\164"+
-        "\1\151\1\144\2\60\1\145\1\uffff\1\145\1\154\1\163\1\120\1\114\1"+
-        "\154\1\111\1\103\1\171\1\157\1\145\1\117\1\107\1\157\1\152\1\147"+
-        "\1\107\1\60\1\157\2\151\1\117\1\155\2\163\1\156\1\145\1\uffff\1"+
-        "\60\1\154\1\105\1\124\1\uffff\1\114\1\154\1\151\1\uffff\1\105\1"+
-        "\145\1\156\1\60\2\uffff\1\157\2\60\1\164\1\114\1\105\2\124\1\117"+
+        "\123\1\55\1\111\1\uffff\1\56\1\uffff\1\154\11\uffff\1\154\1\60\1"+
+        "\127\1\164\1\151\1\144\2\60\1\145\1\uffff\1\145\1\154\1\163\1\120"+
+        "\1\114\1\154\1\111\1\103\1\171\1\157\1\145\1\117\1\107\1\157\1\152"+
+        "\1\147\1\107\1\60\1\157\2\151\1\117\1\155\2\163\1\156\1\145\1\uffff"+
+        "\1\60\1\154\1\105\1\124\1\uffff\1\114\1\154\1\151\1\uffff\1\105"+
+        "\1\145\1\156\1\60\2\uffff\1\163\2\60\1\164\1\114\1\105\2\124\1\117"+
         "\1\60\1\162\1\143\1\122\1\111\1\156\1\145\2\125\1\uffff\1\60\1\164"+
         "\1\154\1\122\1\60\1\145\1\141\2\60\1\uffff\2\60\1\123\1\105\1\60"+
-        "\1\143\1\122\1\60\1\147\1\uffff\1\60\1\165\2\uffff\1\60\1\105\1"+
-        "\104\1\157\1\123\1\116\1\uffff\1\144\1\164\1\104\1\116\1\144\1\143"+
-        "\1\160\1\120\1\uffff\1\163\2\60\1\uffff\1\60\1\147\3\uffff\1\60"+
-        "\1\125\1\uffff\1\124\1\104\1\uffff\1\141\1\60\1\uffff\1\60\1\uffff"+
-        "\1\164\1\uffff\1\124\4\60\1\116\1\60\1\73\1\60\1\107\1\163\1\164"+
-        "\1\73\2\60\2\uffff\1\145\1\uffff\1\124\1\101\1\60\1\164\2\uffff"+
-        "\1\60\1\105\4\uffff\1\105\3\uffff\3\60\3\uffff\2\60\1\124\1\uffff"+
-        "\1\151\1\uffff\1\104\1\103\5\uffff\1\105\1\157\1\60\1\124\1\60\1"+
-        "\156\1\uffff\1\105\1\uffff\1\60\1\104\1\uffff\1\60\1\uffff";
+        "\1\143\1\122\1\60\1\147\1\uffff\1\60\2\uffff\1\60\1\105\1\104\1"+
+        "\157\1\123\1\116\1\uffff\1\144\1\164\1\104\1\116\1\144\1\143\1\160"+
+        "\1\120\1\uffff\1\163\2\60\1\uffff\1\60\1\147\3\uffff\1\60\1\125"+
+        "\1\uffff\1\124\1\104\1\uffff\1\141\1\60\1\uffff\1\60\2\uffff\1\124"+
+        "\4\60\1\116\1\60\1\73\1\60\1\107\1\163\1\164\1\73\2\60\2\uffff\1"+
+        "\145\1\uffff\1\124\1\101\1\60\1\164\2\uffff\1\105\4\uffff\1\105"+
+        "\3\uffff\3\60\3\uffff\2\60\1\124\1\uffff\1\151\1\104\1\103\5\uffff"+
+        "\1\105\1\157\1\60\1\124\1\60\1\156\1\uffff\1\105\1\uffff\1\60\1"+
+        "\104\1\uffff\1\60\1\uffff";
     static final String DFA15_maxS =
         "\1\uffff\1\163\1\164\1\162\2\uffff\1\157\1\uffff\1\151\1\154\1\145"+
         "\1\165\1\141\1\157\1\151\2\uffff\1\155\1\162\1\145\1\150\1\154\1"+
@@ -2647,40 +2618,39 @@ public class InternalDimeLexer extends Lexer {
         "\uffff\1\154\1\156\1\115\1\114\1\uffff\1\141\1\123\1\141\1\152\1"+
         "\103\1\116\1\143\1\142\1\156\1\116\1\164\1\124\1\147\2\uffff\1\141"+
         "\1\122\1\157\1\154\1\163\1\145\1\163\1\172\4\uffff\1\155\1\157\1"+
-        "\115\1\123\1\55\1\111\2\uffff\1\71\1\154\11\uffff\1\154\1\172\1"+
-        "\127\1\164\1\151\1\144\2\172\1\145\1\uffff\1\145\1\154\1\163\1\120"+
-        "\1\114\1\154\1\111\1\103\1\171\1\157\1\145\1\117\1\107\1\157\1\152"+
-        "\1\147\1\107\1\172\1\157\2\151\1\117\1\155\2\163\1\156\1\145\1\uffff"+
-        "\1\172\1\154\1\105\1\124\1\uffff\1\114\1\154\1\151\1\uffff\1\105"+
-        "\1\145\1\156\1\172\2\uffff\1\163\2\172\1\164\1\114\1\105\2\124\1"+
-        "\117\1\172\1\162\1\143\1\122\1\111\1\156\1\145\2\125\1\uffff\1\172"+
-        "\1\164\1\154\1\122\1\172\1\145\1\141\2\172\1\uffff\2\172\1\123\1"+
-        "\105\1\172\1\143\1\122\1\172\1\147\1\uffff\1\172\1\165\2\uffff\1"+
-        "\172\1\105\1\122\1\157\1\123\1\116\1\uffff\1\144\1\164\1\104\1\116"+
-        "\1\144\1\143\1\160\1\120\1\uffff\1\163\2\172\1\uffff\1\172\1\147"+
-        "\3\uffff\1\172\1\125\1\uffff\1\124\1\104\1\uffff\1\141\1\172\1\uffff"+
-        "\1\172\1\uffff\1\164\1\uffff\1\124\4\172\1\116\1\172\1\73\1\172"+
+        "\115\1\123\1\55\1\111\1\uffff\1\71\1\uffff\1\154\11\uffff\1\154"+
+        "\1\172\1\127\1\164\1\151\1\144\2\172\1\145\1\uffff\1\145\1\154\1"+
+        "\163\1\120\1\114\1\154\1\111\1\103\1\171\1\157\1\145\1\117\1\107"+
+        "\1\157\1\152\1\147\1\107\1\172\1\157\2\151\1\117\1\155\2\163\1\156"+
+        "\1\145\1\uffff\1\172\1\154\1\105\1\124\1\uffff\1\114\1\154\1\151"+
+        "\1\uffff\1\105\1\145\1\156\1\172\2\uffff\1\163\2\172\1\164\1\114"+
+        "\1\105\2\124\1\117\1\172\1\162\1\143\1\122\1\111\1\156\1\145\2\125"+
+        "\1\uffff\1\172\1\164\1\154\1\122\1\172\1\145\1\141\2\172\1\uffff"+
+        "\2\172\1\123\1\105\1\172\1\143\1\122\1\172\1\147\1\uffff\1\172\2"+
+        "\uffff\1\172\1\105\1\122\1\157\1\123\1\116\1\uffff\1\144\1\164\1"+
+        "\104\1\116\1\144\1\143\1\160\1\120\1\uffff\1\163\2\172\1\uffff\1"+
+        "\172\1\147\3\uffff\1\172\1\125\1\uffff\1\124\1\104\1\uffff\1\141"+
+        "\1\172\1\uffff\1\172\2\uffff\1\124\4\172\1\116\1\172\1\73\1\172"+
         "\1\107\1\163\1\164\1\73\2\172\2\uffff\1\145\1\uffff\1\124\1\101"+
-        "\1\172\1\164\2\uffff\1\172\1\105\4\uffff\1\105\3\uffff\3\172\3\uffff"+
-        "\2\172\1\124\1\uffff\1\151\1\uffff\1\104\1\103\5\uffff\1\105\1\157"+
-        "\1\172\1\124\1\172\1\156\1\uffff\1\105\1\uffff\1\172\1\104\1\uffff"+
-        "\1\172\1\uffff";
+        "\1\172\1\164\2\uffff\1\105\4\uffff\1\105\3\uffff\3\172\3\uffff\2"+
+        "\172\1\124\1\uffff\1\151\1\104\1\103\5\uffff\1\105\1\157\1\172\1"+
+        "\124\1\172\1\156\1\uffff\1\105\1\uffff\1\172\1\104\1\uffff\1\172"+
+        "\1\uffff";
     static final String DFA15_acceptS =
-        "\4\uffff\1\5\1\6\1\uffff\1\10\7\uffff\1\24\1\25\22\uffff\2\72\2"+
-        "\uffff\1\74\1\76\1\77\1\uffff\1\100\2\uffff\1\73\1\105\1\106\3\uffff"+
-        "\1\100\7\uffff\1\5\1\6\4\uffff\1\10\15\uffff\1\24\1\25\10\uffff"+
-        "\1\72\1\41\1\42\1\105\6\uffff\1\101\1\66\2\uffff\1\71\1\75\1\103"+
-        "\1\104\1\73\1\74\1\76\1\77\1\102\11\uffff\1\23\33\uffff\1\37\4\uffff"+
-        "\1\63\3\uffff\1\21\4\uffff\1\26\1\27\22\uffff\1\17\11\uffff\1\43"+
-        "\11\uffff\1\22\2\uffff\1\70\1\7\6\uffff\1\12\10\uffff\1\34\3\uffff"+
-        "\1\32\2\uffff\1\35\1\36\1\44\2\uffff\1\55\2\uffff\1\67\2\uffff\1"+
-        "\2\1\uffff\1\3\1\uffff\1\45\17\uffff\1\30\1\50\1\uffff\1\51\4\uffff"+
-        "\1\57\1\40\2\uffff\1\53\1\56\1\11\1\60\1\uffff\1\13\1\15\1\61\3"+
-        "\uffff\1\16\1\46\1\20\3\uffff\1\65\1\uffff\1\4\2\uffff\1\62\1\14"+
-        "\1\31\1\33\1\52\6\uffff\1\47\1\uffff\1\54\2\uffff\1\1\1\uffff\1"+
-        "\64";
+        "\4\uffff\1\4\1\5\1\uffff\1\7\7\uffff\1\23\1\24\22\uffff\2\71\2\uffff"+
+        "\1\73\1\75\1\76\1\uffff\1\77\2\uffff\1\72\1\104\1\105\3\uffff\1"+
+        "\77\7\uffff\1\4\1\5\4\uffff\1\7\15\uffff\1\23\1\24\10\uffff\1\71"+
+        "\1\40\1\41\1\104\6\uffff\1\100\1\uffff\1\65\1\uffff\1\70\1\74\1"+
+        "\102\1\103\1\72\1\73\1\75\1\76\1\101\11\uffff\1\22\33\uffff\1\36"+
+        "\4\uffff\1\62\3\uffff\1\20\4\uffff\1\25\1\26\22\uffff\1\16\11\uffff"+
+        "\1\42\11\uffff\1\21\1\uffff\1\67\1\6\6\uffff\1\11\10\uffff\1\33"+
+        "\3\uffff\1\31\2\uffff\1\34\1\35\1\43\2\uffff\1\54\2\uffff\1\66\2"+
+        "\uffff\1\2\1\uffff\1\3\1\44\17\uffff\1\27\1\47\1\uffff\1\50\4\uffff"+
+        "\1\56\1\37\1\uffff\1\52\1\55\1\10\1\57\1\uffff\1\12\1\14\1\60\3"+
+        "\uffff\1\15\1\45\1\17\3\uffff\1\64\3\uffff\1\61\1\13\1\30\1\32\1"+
+        "\51\6\uffff\1\46\1\uffff\1\53\2\uffff\1\1\1\uffff\1\63";
     static final String DFA15_specialS =
-        "\1\0\53\uffff\1\1\1\2\u010d\uffff}>";
+        "\1\2\53\uffff\1\0\1\1\u0109\uffff}>";
     static final String[] DFA15_transitionS = {
             "\11\60\2\57\2\60\1\57\22\60\1\30\1\45\1\54\3\60\1\41\1\55\1"+
             "\50\1\51\2\56\1\17\1\56\1\47\1\46\12\37\1\20\1\7\1\43\1\27\1"+
@@ -2718,7 +2688,7 @@ public class InternalDimeLexer extends Lexer {
             "\1\141",
             "\1\142",
             "\1\143",
-            "\1\145\1\uffff\12\146",
+            "\1\146\1\uffff\12\145",
             "\1\147",
             "\1\150",
             "\1\150",
@@ -2788,8 +2758,8 @@ public class InternalDimeLexer extends Lexer {
             "\1\u009b",
             "\1\u009c",
             "",
+            "\1\146\1\uffff\12\145",
             "",
-            "\1\145\1\uffff\12\146",
             "\1\u009d",
             "",
             "",
@@ -2853,16 +2823,17 @@ public class InternalDimeLexer extends Lexer {
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "",
             "",
-            "\1\u00ce\3\uffff\1\u00cd",
+            "\1\u00cd",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00d0",
             "\1\u00d1",
             "\1\u00d2",
             "\1\u00d3",
             "\1\u00d4",
             "\1\u00d5",
-            "\1\u00d6",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00d7",
             "\1\u00d8",
             "\1\u00d9",
             "\1\u00da",
@@ -2870,103 +2841,99 @@ public class InternalDimeLexer extends Lexer {
             "\1\u00dc",
             "\1\u00dd",
             "\1\u00de",
-            "\1\u00df",
             "",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00e0",
             "\1\u00e1",
             "\1\u00e2",
-            "\1\u00e3",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00e4",
             "\1\u00e5",
-            "\1\u00e6",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\12\64\7\uffff\16\64\1\u00eb\3\64\1\u00ea\7\64\4\uffff\1\64"+
+            "\12\64\7\uffff\16\64\1\u00ea\3\64\1\u00e9\7\64\4\uffff\1\64"+
             "\1\uffff\32\64",
+            "\1\u00ec",
             "\1\u00ed",
-            "\1\u00ee",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u00ef",
             "\1\u00f0",
-            "\1\u00f1",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u00f3",
+            "\1\u00f2",
+            "",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "",
             "",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\1\u00f5",
-            "",
-            "",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u00f7",
-            "\1\u00f9\15\uffff\1\u00f8",
+            "\1\u00f7\15\uffff\1\u00f6",
+            "\1\u00f8",
+            "\1\u00f9",
             "\1\u00fa",
+            "",
             "\1\u00fb",
             "\1\u00fc",
-            "",
             "\1\u00fd",
             "\1\u00fe",
             "\1\u00ff",
             "\1\u0100",
             "\1\u0101",
             "\1\u0102",
-            "\1\u0103",
-            "\1\u0104",
             "",
-            "\1\u0105",
+            "\1\u0103",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u0106",
+            "",
+            "",
             "",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\1\u0108",
             "",
-            "",
-            "",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u0109",
             "\1\u010a",
             "",
             "\1\u010b",
-            "\1\u010c",
-            "",
-            "\1\u010d",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "",
-            "\1\u0110",
             "",
-            "\1\u0111",
+            "\1\u010e",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0116",
+            "\1\u0113",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u0115",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u0117",
             "\1\u0118",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u0119",
             "\1\u011a",
-            "\1\u011b",
-            "\1\u011c",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "",
+            "",
             "\1\u011d",
+            "",
+            "\1\u011e",
+            "\1\u011f",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "",
-            "",
-            "\1\u0120",
-            "",
             "\1\u0121",
+            "",
+            "",
             "\1\u0122",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0124",
-            "",
-            "",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0126",
             "",
             "",
             "",
             "",
-            "\1\u0127",
+            "\1\u0123",
             "",
             "",
             "",
@@ -2978,28 +2945,27 @@ public class InternalDimeLexer extends Lexer {
             "",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
+            "\1\u0129",
+            "",
+            "\1\u012a",
+            "\1\u012b",
+            "\1\u012c",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\u012d",
-            "",
             "\1\u012e",
-            "",
-            "\1\u012f",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\1\u0130",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u0131",
+            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             "\1\u0132",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0134",
-            "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0136",
             "",
-            "\1\u0137",
+            "\1\u0133",
             "",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
-            "\1\u0139",
+            "\1\u0135",
             "",
             "\12\64\7\uffff\32\64\4\uffff\1\64\1\uffff\32\64",
             ""
@@ -3035,13 +3001,33 @@ public class InternalDimeLexer extends Lexer {
             this.transition = DFA15_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | RULE_DOUBLE | RULE_NULL | RULE_BOOL | RULE_LOGIC_WORD | RULE_COMPARE | RULE_MATH | RULE_CONCATENATION | RULE_NEGATION | RULE_OBRACKET | RULE_CBRACKET | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | RULE_DOUBLE | RULE_NULL | RULE_BOOL | RULE_LOGIC_WORD | RULE_COMPARE | RULE_MATH | RULE_CONCATENATION | RULE_NEGATION | RULE_OBRACKET | RULE_CBRACKET | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA15_44 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA15_44>='\u0000' && LA15_44<='\uFFFF')) ) {s = 112;}
+
+                        else s = 48;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA15_45 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA15_45>='\u0000' && LA15_45<='\uFFFF')) ) {s = 112;}
+
+                        else s = 48;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA15_0 = input.LA(1);
 
                         s = -1;
@@ -3140,26 +3126,6 @@ public class InternalDimeLexer extends Lexer {
                         else if ( ((LA15_0>='\t' && LA15_0<='\n')||LA15_0=='\r') ) {s = 47;}
 
                         else if ( ((LA15_0>='\u0000' && LA15_0<='\b')||(LA15_0>='\u000B' && LA15_0<='\f')||(LA15_0>='\u000E' && LA15_0<='\u001F')||(LA15_0>='#' && LA15_0<='%')||(LA15_0>='?' && LA15_0<='@')||(LA15_0>='[' && LA15_0<=']')||LA15_0=='`'||(LA15_0>='~' && LA15_0<='\uFFFF')) ) {s = 48;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA15_44 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA15_44>='\u0000' && LA15_44<='\uFFFF')) ) {s = 112;}
-
-                        else s = 48;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA15_45 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA15_45>='\u0000' && LA15_45<='\uFFFF')) ) {s = 112;}
-
-                        else s = 48;
 
                         if ( s>=0 ) return s;
                         break;

@@ -295,29 +295,15 @@ ruleState returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-
-(
-	{ 
-	  getUnorderedGroupHelper().enter(grammarAccess.getStateAccess().getUnorderedGroup());
-	}
-	(
-		(
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getStateAccess().getUnorderedGroup(), 0)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getStateAccess().getUnorderedGroup(), 0);
-	 				}
-					({true}?=>(	otherlv_1='State' 
+(	otherlv_0='State' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getStateAccess().getStateKeyword_0_0());
+    	newLeafNode(otherlv_0, grammarAccess.getStateAccess().getStateKeyword_0());
     }
 (
 (
-		lv_name_2_0=RULE_ID
+		lv_name_1_0=RULE_ID
 		{
-			newLeafNode(lv_name_2_0, grammarAccess.getStateAccess().getNameIDTerminalRuleCall_0_1_0()); 
+			newLeafNode(lv_name_1_0, grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -326,20 +312,20 @@ ruleState returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_2_0, 
+        		lv_name_1_0, 
         		"ID");
 	    }
 
 )
-)(	otherlv_3='times' 
+)(	otherlv_2='times' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getStateAccess().getTimesKeyword_0_2_0());
+    	newLeafNode(otherlv_2, grammarAccess.getStateAccess().getTimesKeyword_2_0());
     }
 (
 (
-		lv_times_4_0=RULE_INT
+		lv_times_3_0=RULE_INT
 		{
-			newLeafNode(lv_times_4_0, grammarAccess.getStateAccess().getTimesINTTerminalRuleCall_0_2_1_0()); 
+			newLeafNode(lv_times_3_0, grammarAccess.getStateAccess().getTimesINTTerminalRuleCall_2_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -348,86 +334,37 @@ ruleState returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"times",
-        		lv_times_4_0, 
+        		lv_times_3_0, 
         		"INT");
 	    }
 
 )
-))?))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getStateAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getStateAccess().getUnorderedGroup(), 1)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getStateAccess().getUnorderedGroup(), 1);
-	 				}
-					({true}?=>((	otherlv_5='timeout' 
+))?	otherlv_4='{' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getStateAccess().getTimeoutKeyword_1_0_0());
-    }
-(
-(
-		lv_timeout_6_0=RULE_INT
-		{
-			newLeafNode(lv_timeout_6_0, grammarAccess.getStateAccess().getTimeoutINTTerminalRuleCall_1_0_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getStateRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"timeout",
-        		lv_timeout_6_0, 
-        		"INT");
-	    }
-
-)
-))?	otherlv_7='{' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getStateAccess().getLeftCurlyBracketKeyword_1_1());
+    	newLeafNode(otherlv_4, grammarAccess.getStateAccess().getLeftCurlyBracketKeyword_3());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getStateAccess().getStmsAbstractElementParserRuleCall_1_2_0()); 
+	        newCompositeNode(grammarAccess.getStateAccess().getStmsAbstractElementParserRuleCall_4_0()); 
 	    }
-		lv_stms_8_0=ruleAbstractElement		{
+		lv_stms_5_0=ruleAbstractElement		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getStateRule());
 	        }
        		add(
        			$current, 
        			"stms",
-        		lv_stms_8_0, 
+        		lv_stms_5_0, 
         		"AbstractElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*	otherlv_9='}' 
+)*	otherlv_6='}' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getStateAccess().getRightCurlyBracketKeyword_1_3());
+    	newLeafNode(otherlv_6, grammarAccess.getStateAccess().getRightCurlyBracketKeyword_5());
     }
-))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getStateAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  
-
-		)+
-	  	{getUnorderedGroupHelper().canLeave(grammarAccess.getStateAccess().getUnorderedGroup())}?	
-	)
-)
-	{ 
-	  getUnorderedGroupHelper().leave(grammarAccess.getStateAccess().getUnorderedGroup());
-	}
-
 )
 ;
 

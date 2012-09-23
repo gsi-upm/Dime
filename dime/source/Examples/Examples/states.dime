@@ -54,17 +54,23 @@ State end times 3{
 	
     
    Sms "what the fuck" to "+656240934";
-	
+	Send {
+		"Name": "hoo",
+		"Name": "hoo",
+		"Name": "hoo"
+		 
+	} to "hooootslfkjpa";
 	Email  {
 		subject : "Dime mola" ,
 		from: "dime@gsi.com",
-		"CONTENT"
+		message:"CONTENT"
 	} to "totemteleko@gmail.com" ;
 	
 	HangUp;
 	Reject; 
 	
 	  Say "FUCK";
+	  
 }     
  
  

@@ -1,9 +1,0 @@
-Application Getdigits
-
-State start{
-	GoTo end when COMPLETED;
-}
-State end{
-	Say DIGITS;
-	HangUp;
-}

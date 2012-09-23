@@ -56,10 +56,8 @@ public class DimeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSESSIONAccess().getAlternatives(), "rule__SESSION__Alternatives");
 					put(grammarAccess.getCALLSTATUSAccess().getAlternatives(), "rule__CALLSTATUS__Alternatives");
 					put(grammarAccess.getDocumentAccess().getGroup(), "rule__Document__Group__0");
-					put(grammarAccess.getStateAccess().getGroup_0(), "rule__State__Group_0__0");
-					put(grammarAccess.getStateAccess().getGroup_0_2(), "rule__State__Group_0_2__0");
-					put(grammarAccess.getStateAccess().getGroup_1(), "rule__State__Group_1__0");
-					put(grammarAccess.getStateAccess().getGroup_1_0(), "rule__State__Group_1_0__0");
+					put(grammarAccess.getStateAccess().getGroup(), "rule__State__Group__0");
+					put(grammarAccess.getStateAccess().getGroup_2(), "rule__State__Group_2__0");
 					put(grammarAccess.getCallAccess().getGroup(), "rule__Call__Group__0");
 					put(grammarAccess.getDialAccess().getGroup(), "rule__Dial__Group__0");
 					put(grammarAccess.getPlayAccess().getGroup(), "rule__Play__Group__0");
@@ -104,10 +102,9 @@ public class DimeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDocumentAccess().getElementsAssignment_2(), "rule__Document__ElementsAssignment_2");
 					put(grammarAccess.getDocumentAccess().getStaAssignment_3(), "rule__Document__StaAssignment_3");
 					put(grammarAccess.getStatementAccess().getComAssignment_4(), "rule__Statement__ComAssignment_4");
-					put(grammarAccess.getStateAccess().getNameAssignment_0_1(), "rule__State__NameAssignment_0_1");
-					put(grammarAccess.getStateAccess().getTimesAssignment_0_2_1(), "rule__State__TimesAssignment_0_2_1");
-					put(grammarAccess.getStateAccess().getTimeoutAssignment_1_0_1(), "rule__State__TimeoutAssignment_1_0_1");
-					put(grammarAccess.getStateAccess().getStmsAssignment_1_2(), "rule__State__StmsAssignment_1_2");
+					put(grammarAccess.getStateAccess().getNameAssignment_1(), "rule__State__NameAssignment_1");
+					put(grammarAccess.getStateAccess().getTimesAssignment_2_1(), "rule__State__TimesAssignment_2_1");
+					put(grammarAccess.getStateAccess().getStmsAssignment_4(), "rule__State__StmsAssignment_4");
 					put(grammarAccess.getCallAccess().getNameAssignment_0(), "rule__Call__NameAssignment_0");
 					put(grammarAccess.getCallAccess().getToAssignment_1(), "rule__Call__ToAssignment_1");
 					put(grammarAccess.getDialAccess().getNameAssignment_0(), "rule__Dial__NameAssignment_0");
@@ -198,7 +195,6 @@ public class DimeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCALLSTATUSAccess().getNameAssignment_1(), "rule__CALLSTATUS__NameAssignment_1");
 					put(grammarAccess.getCALLSTATUSAccess().getNameAssignment_2(), "rule__CALLSTATUS__NameAssignment_2");
 					put(grammarAccess.getCALLSTATUSAccess().getNameAssignment_3(), "rule__CALLSTATUS__NameAssignment_3");
-					put(grammarAccess.getStateAccess().getUnorderedGroup(), "rule__State__UnorderedGroup");
 				}
 			};
 		}

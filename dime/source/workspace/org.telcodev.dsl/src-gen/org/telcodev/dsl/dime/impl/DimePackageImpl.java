@@ -577,19 +577,9 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getState_Timeout()
-  {
-    return (EAttribute)stateEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getState_Stms()
   {
-    return (EReference)stateEClass.getEStructuralFeatures().get(3);
+    return (EReference)stateEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1755,7 +1745,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     stateEClass = createEClass(STATE);
     createEAttribute(stateEClass, STATE__NAME);
     createEAttribute(stateEClass, STATE__TIMES);
-    createEAttribute(stateEClass, STATE__TIMEOUT);
     createEReference(stateEClass, STATE__STMS);
 
     voiceTagEClass = createEClass(VOICE_TAG);
@@ -2004,7 +1993,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getState_Times(), ecorePackage.getEInt(), "times", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getState_Timeout(), ecorePackage.getEInt(), "timeout", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getState_Stms(), this.getAbstractElement(), null, "stms", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(voiceTagEClass, VoiceTag.class, "VoiceTag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

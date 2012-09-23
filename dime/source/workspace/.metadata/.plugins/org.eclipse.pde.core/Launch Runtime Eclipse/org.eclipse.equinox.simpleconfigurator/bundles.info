@@ -285,8 +285,8 @@ org.eclipse.xtext.xtext.ui,2.3.0.v201206120633,file:/Applications/eclipse/plugin
 org.eclipse.xtext.xtext.ui.examples,2.3.0.v201206120633,file:/Applications/eclipse/plugins/org.eclipse.xtext.xtext.ui.examples_2.3.0.v201206120633/,4,false
 org.eclipse.xtext.xtext.ui.graph,2.3.0.v201206120633,file:/Applications/eclipse/plugins/org.eclipse.xtext.xtext.ui.graph_2.3.0.v201206120633.jar,4,false
 org.hamcrest.core,1.1.0.v20090501071000,file:/Applications/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar,4,false
-org.junit,4.10.0.v4_10_0_v20120426-0900,file:/Applications/eclipse/plugins/org.junit_4.10.0.v4_10_0_v20120426-0900/,4,false
 org.junit,3.8.2.v3_8_2_v20100427-1100,file:/Applications/eclipse/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100/,4,false
+org.junit,4.10.0.v4_10_0_v20120426-0900,file:/Applications/eclipse/plugins/org.junit_4.10.0.v4_10_0_v20120426-0900/,4,false
 org.junit4,4.8.1.v20120523-1257,file:/Applications/eclipse/plugins/org.junit4_4.8.1.v20120523-1257/,4,false
 org.objectweb.asm,3.3.1.v201105211655,file:/Applications/eclipse/plugins/org.objectweb.asm_3.3.1.v201105211655.jar,4,false
 org.sat4j.core,2.3.0.v20110329,file:/Applications/eclipse/plugins/org.sat4j.core_2.3.0.v20110329.jar,4,false

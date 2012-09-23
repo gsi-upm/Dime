@@ -129,82 +129,58 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class StateElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "State");
-		private final UnorderedGroup cUnorderedGroup = (UnorderedGroup)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cUnorderedGroup.eContents().get(0);
-		private final Keyword cStateKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Assignment cNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_0_1_0 = (RuleCall)cNameAssignment_0_1.eContents().get(0);
-		private final Group cGroup_0_2 = (Group)cGroup_0.eContents().get(2);
-		private final Keyword cTimesKeyword_0_2_0 = (Keyword)cGroup_0_2.eContents().get(0);
-		private final Assignment cTimesAssignment_0_2_1 = (Assignment)cGroup_0_2.eContents().get(1);
-		private final RuleCall cTimesINTTerminalRuleCall_0_2_1_0 = (RuleCall)cTimesAssignment_0_2_1.eContents().get(0);
-		private final Group cGroup_1 = (Group)cUnorderedGroup.eContents().get(1);
-		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
-		private final Keyword cTimeoutKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
-		private final Assignment cTimeoutAssignment_1_0_1 = (Assignment)cGroup_1_0.eContents().get(1);
-		private final RuleCall cTimeoutINTTerminalRuleCall_1_0_1_0 = (RuleCall)cTimeoutAssignment_1_0_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Assignment cStmsAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cStmsAbstractElementParserRuleCall_1_2_0 = (RuleCall)cStmsAssignment_1_2.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cStateKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cTimesKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cTimesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cTimesINTTerminalRuleCall_2_1_0 = (RuleCall)cTimesAssignment_2_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cStmsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cStmsAbstractElementParserRuleCall_4_0 = (RuleCall)cStmsAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//State:
-		//	"State" name=ID ("times" times=INT)? & ("timeout" timeout=INT)? "{" stms+=AbstractElement* "}";
+		//	"State" name=ID ("times" times=INT)? "{" stms+=AbstractElement* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"State" name=ID ("times" times=INT)? & ("timeout" timeout=INT)? "{" stms+=AbstractElement* "}"
-		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
-
-		//"State" name=ID ("times" times=INT)?
-		public Group getGroup_0() { return cGroup_0; }
+		//"State" name=ID ("times" times=INT)? "{" stms+=AbstractElement* "}"
+		public Group getGroup() { return cGroup; }
 
 		//"State"
-		public Keyword getStateKeyword_0_0() { return cStateKeyword_0_0; }
+		public Keyword getStateKeyword_0() { return cStateKeyword_0; }
 
 		//name=ID
-		public Assignment getNameAssignment_0_1() { return cNameAssignment_0_1; }
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_1_0() { return cNameIDTerminalRuleCall_0_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
 		//("times" times=INT)?
-		public Group getGroup_0_2() { return cGroup_0_2; }
+		public Group getGroup_2() { return cGroup_2; }
 
 		//"times"
-		public Keyword getTimesKeyword_0_2_0() { return cTimesKeyword_0_2_0; }
+		public Keyword getTimesKeyword_2_0() { return cTimesKeyword_2_0; }
 
 		//times=INT
-		public Assignment getTimesAssignment_0_2_1() { return cTimesAssignment_0_2_1; }
+		public Assignment getTimesAssignment_2_1() { return cTimesAssignment_2_1; }
 
 		//INT
-		public RuleCall getTimesINTTerminalRuleCall_0_2_1_0() { return cTimesINTTerminalRuleCall_0_2_1_0; }
-
-		//("timeout" timeout=INT)? "{" stms+=AbstractElement* "}"
-		public Group getGroup_1() { return cGroup_1; }
-
-		//("timeout" timeout=INT)?
-		public Group getGroup_1_0() { return cGroup_1_0; }
-
-		//"timeout"
-		public Keyword getTimeoutKeyword_1_0_0() { return cTimeoutKeyword_1_0_0; }
-
-		//timeout=INT
-		public Assignment getTimeoutAssignment_1_0_1() { return cTimeoutAssignment_1_0_1; }
-
-		//INT
-		public RuleCall getTimeoutINTTerminalRuleCall_1_0_1_0() { return cTimeoutINTTerminalRuleCall_1_0_1_0; }
+		public RuleCall getTimesINTTerminalRuleCall_2_1_0() { return cTimesINTTerminalRuleCall_2_1_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//stms+=AbstractElement*
-		public Assignment getStmsAssignment_1_2() { return cStmsAssignment_1_2; }
+		public Assignment getStmsAssignment_4() { return cStmsAssignment_4; }
 
 		//AbstractElement
-		public RuleCall getStmsAbstractElementParserRuleCall_1_2_0() { return cStmsAbstractElementParserRuleCall_1_2_0; }
+		public RuleCall getStmsAbstractElementParserRuleCall_4_0() { return cStmsAbstractElementParserRuleCall_4_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_1_3() { return cRightCurlyBracketKeyword_1_3; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class VoiceTagElements extends AbstractParserRuleElementFinder {
@@ -2072,7 +2048,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//State:
-	//	"State" name=ID ("times" times=INT)? & ("timeout" timeout=INT)? "{" stms+=AbstractElement* "}";
+	//	"State" name=ID ("times" times=INT)? "{" stms+=AbstractElement* "}";
 	public StateElements getStateAccess() {
 		return (pState != null) ? pState : (pState = new StateElements());
 	}

@@ -164,7 +164,8 @@ public class Tropo_php_generator {
     fsa.generateFile("res/signals.php", _declareSignal);
     CharSequence _transcription = Tropo_php_generator.transcription();
     fsa.generateFile("res/transcription.php", _transcription);
-    System.out.println("Success.");
+    CharSequence _kenFile = Tropo_php_generator.tokenFile();
+    fsa.generateFile("res/token.php", _kenFile);
     System.out.println("Success.");
   }
   
@@ -232,6 +233,41 @@ public class Tropo_php_generator {
     _builder.newLine();
     _builder.newLine();
     _builder.append("fclose($file); ");
+    _builder.newLine();
+    _builder.append("?> ");
+    return _builder;
+  }
+  
+  public static CharSequence tokenFile() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("<?php");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("$url= \"http://api.tropo.com/1.0/sessions?action=create&token=");
+    _builder.append(Tropo_php_generator.token, "");
+    _builder.append("\";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t\t");
+    _builder.append("$curl_handle=curl_init();");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("curl_setopt($curl_handle,CURLOPT_URL,$url);");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("curl_exec($curl_handle);");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("curl_close($curl_handle);");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("echo \"<h1>Tropo token, from a Dime application.</h1>\";");
+    _builder.newLine();
     _builder.newLine();
     _builder.append("?> ");
     return _builder;
@@ -552,46 +588,6 @@ public class Tropo_php_generator {
           _builder.newLine();
         }
       }
-      {
-        if (false) {
-          _builder.append("\t");
-          _builder.newLine();
-          _builder.append("\t");
-          _builder.append("// Timeout signal appears when the timeout atribute of the state is reached.");
-          _builder.newLine();
-          _builder.append("\t");
-          _builder.newLine();
-          _builder.append("\t");
-          _builder.append("$url = \"");
-          _builder.append(Tropo_php_generator.url, "	");
-          _builder.append("res/signals.php?uri=timeout&sessionID=\".$sessionID.\"&state=");
-          String _name_10 = elem.getName();
-          _builder.append(_name_10, "	");
-          _builder.append("&timeout=");
-          int _timeout = elem.getTimeout();
-          _builder.append(_timeout, "	");
-          _builder.append("\";");
-          _builder.newLineIfNotEmpty();
-          _builder.append("\t");
-          _builder.append("$curl_handle=curl_init();");
-          _builder.newLine();
-          _builder.append("\t");
-          _builder.append("curl_setopt($curl_handle,CURLOPT_URL,$url);");
-          _builder.newLine();
-          _builder.append("\t");
-          _builder.append("curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);");
-          _builder.newLine();
-          _builder.append("\t");
-          _builder.append("curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);");
-          _builder.newLine();
-          _builder.append("\t");
-          _builder.append("curl_exec($curl_handle);");
-          _builder.newLine();
-          _builder.append("\t");
-          _builder.append("curl_close($curl_handle);");
-          _builder.newLine();
-        }
-      }
       _builder.append("\t");
       _builder.newLine();
       _builder.append("\t");
@@ -661,8 +657,8 @@ public class Tropo_php_generator {
       }
       _builder.append("\t");
       _builder.append("$_SESSION[\'lastState_dime\']=\'");
-      String _name_11 = elem.getName();
-      _builder.append(_name_11, "	");
+      String _name_10 = elem.getName();
+      _builder.append(_name_10, "	");
       _builder.append("\';");
       _builder.newLineIfNotEmpty();
       _builder.append("\t");

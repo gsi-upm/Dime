@@ -178,22 +178,13 @@ public interface DimePackage extends EPackage
   int STATE__TIMES = 1;
 
   /**
-   * The feature id for the '<em><b>Timeout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STATE__TIMEOUT = 2;
-
-  /**
    * The feature id for the '<em><b>Stms</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATE__STMS = 3;
+  int STATE__STMS = 2;
 
   /**
    * The number of structural features of the '<em>State</em>' class.
@@ -202,7 +193,7 @@ public interface DimePackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATE_FEATURE_COUNT = 4;
+  int STATE_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.telcodev.dsl.dime.impl.VoiceTagImpl <em>Voice Tag</em>}' class.
@@ -1959,17 +1950,6 @@ public interface DimePackage extends EPackage
   EAttribute getState_Times();
 
   /**
-   * Returns the meta object for the attribute '{@link org.telcodev.dsl.dime.State#getTimeout <em>Timeout</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Timeout</em>'.
-   * @see org.telcodev.dsl.dime.State#getTimeout()
-   * @see #getState()
-   * @generated
-   */
-  EAttribute getState_Timeout();
-
-  /**
    * Returns the meta object for the containment reference list '{@link org.telcodev.dsl.dime.State#getStms <em>Stms</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3277,14 +3257,6 @@ public interface DimePackage extends EPackage
      * @generated
      */
     EAttribute STATE__TIMES = eINSTANCE.getState_Times();
-
-    /**
-     * The meta object literal for the '<em><b>Timeout</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STATE__TIMEOUT = eINSTANCE.getState_Timeout();
 
     /**
      * The meta object literal for the '<em><b>Stms</b></em>' containment reference list feature.

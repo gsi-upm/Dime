@@ -1,0 +1,31 @@
+Application test
+
+State start {
+
+	Say "start"."adios".ANSWER;  
+	Record 5 seconds;
+	GoTo end when COMPLETED;   
+	Ask "hflafh"; 
+	
+	 
+	  }     
+  
+        
+State end{  
+	if(RINGING){
+	Say "end";
+	Say RECORD.5; 
+  
+	HangUp; 
+	}
+	else if(true){
+		Say "bay";
+	} 
+	else{
+		Say "bay";
+	}
+	 
+	        
+}       
+
+ 

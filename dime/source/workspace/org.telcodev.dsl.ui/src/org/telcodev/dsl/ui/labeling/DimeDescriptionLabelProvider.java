@@ -5,9 +5,7 @@ package org.telcodev.dsl.ui.labeling;
 
 
 import org.eclipse.xtext.ui.label.DefaultDescriptionLabelProvider;
-import org.telcodev.dsl.dime.DimePackage;
-import org.telcodev.dsl.dime.Say;
-import org.telcodev.*;
+
 
 /**
  * Provides labels for a IEObjectDescriptions and IResourceDescriptions.
@@ -27,8 +25,5 @@ public class DimeDescriptionLabelProvider extends DefaultDescriptionLabelProvide
       return ele.getEClass().getName() + ".gif";
     }	 
 */
-	String text(Say ele) {
-		  return "my ";
-		}
 	
 }

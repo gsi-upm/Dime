@@ -15,7 +15,7 @@ AbstractElement:
 	Statement | Transition | IfExp | VoiceTag;
 
 State:
-	'State' name=ID ('times' times=INT)? & ('timeout' timeout=INT)? '{'
+	'State' name=ID ('times' times=INT)? '{'
 	stms+=AbstractElement*
 	'}';
  

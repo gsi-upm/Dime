@@ -123,8 +123,9 @@ class Tropo_php_generator {
 		fsa.generateFile(appName+".php", Tropo_php_generator::toTropoPHP(resource.contents.head as Document, resource))
 		fsa.generateFile("res/signals.php", declareSignal)
 		fsa.generateFile("res/transcription.php", transcription)
+		fsa.generateFile("res/token.php", tokenFile)
 		System::out.println("Success.");
-		System::out.println("Success.");
+		
 	}
 	
 	def static className(Resource res) {
@@ -158,6 +159,21 @@ $data = file_get_contents('php://input');
 fwrite($file, $data); 
 
 fclose($file); 
+?> '''
+	}
+	def static tokenFile(){
+		'''<?php
+
+$url= "http://api.tropo.com/1.0/sessions?action=create&token=«token»";
+		$curl_handle=curl_init();
+		curl_setopt($curl_handle,CURLOPT_URL,$url);
+		curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
+		curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
+		curl_exec($curl_handle);
+		curl_close($curl_handle);
+
+echo "<h1>Tropo token, from a Dime application.</h1>";
+
 ?> '''
 	}
 	def static toTropoPHP(Document sm, Resource resource) {
@@ -288,17 +304,6 @@ function app_«elem.name»() {
 	}else{
 		$_SESSION['times_«elem.name»_dime']=1;
 	}
-	«ENDIF»«IF false» 	
-	
-	// Timeout signal appears when the timeout atribute of the state is reached.
-	
-	$url = "«url»res/signals.php?uri=timeout&sessionID=".$sessionID."&state=«elem.name»&timeout=«elem.timeout»";
-	$curl_handle=curl_init();
-	curl_setopt($curl_handle,CURLOPT_URL,$url);
-	curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
-	curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
-	curl_exec($curl_handle);
-	curl_close($curl_handle);
 	«ENDIF»
 	
 	// Inicialize the tropo aplication

@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.telcodev.dsl.dime.State#getName <em>Name</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.State#getTimes <em>Times</em>}</li>
- *   <li>{@link org.telcodev.dsl.dime.State#getTimeout <em>Timeout</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.State#getStms <em>Stms</em>}</li>
  * </ul>
  * </p>
@@ -78,32 +77,6 @@ public interface State extends EObject
    * @generated
    */
   void setTimes(int value);
-
-  /**
-   * Returns the value of the '<em><b>Timeout</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Timeout</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Timeout</em>' attribute.
-   * @see #setTimeout(int)
-   * @see org.telcodev.dsl.dime.DimePackage#getState_Timeout()
-   * @model
-   * @generated
-   */
-  int getTimeout();
-
-  /**
-   * Sets the value of the '{@link org.telcodev.dsl.dime.State#getTimeout <em>Timeout</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Timeout</em>' attribute.
-   * @see #getTimeout()
-   * @generated
-   */
-  void setTimeout(int value);
 
   /**
    * Returns the value of the '<em><b>Stms</b></em>' containment reference list.

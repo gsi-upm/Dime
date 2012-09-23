@@ -1019,7 +1019,7 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID times=INT? timeout=INT? stms+=AbstractElement*)
+	 *     (name=ID times=INT? stms+=AbstractElement*)
 	 */
 	protected void sequence_State(EObject context, State semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

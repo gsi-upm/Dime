@@ -7,6 +7,7 @@ import org.eclipse.xtext.validation.Check;
 //import org.telcodev.dsl.dime.CompareExpression;
 import org.telcodev.dsl.dime.CondBlock;
 
+import org.telcodev.dsl.dime.AbstractElement;
 import org.telcodev.dsl.dime.DimePackage;
 import org.telcodev.dsl.dime.Document;
 import org.telcodev.dsl.dime.SendBlock;
@@ -96,7 +97,40 @@ public class DimeJavaValidator extends AbstractDimeJavaValidator {
 	// }
 	// return bool;
 	// }
-
+	
+	
+	@Check
+	public void checkSeveralResult(org.telcodev.dsl.dime.State state) {
+		int counter=0;
+		
+		for (AbstractElement c : state.getStms()) {
+		
+			if (c.eClass().getName().equals("Ask") ||c.eClass().getName().equals("GetDigits") ||c.eClass().getName().equals("Record") ) {
+				counter++;
+			}
+		}
+		if(counter>1){
+		error("States just can contains one tag of Ask, Record or GetDigits",
+				DimePackage.Literals.STATE__NAME);
+		}
+	}
+	
+	@Check
+	public void checkSeveralCalls(org.telcodev.dsl.dime.State state) {
+		int counter=0;
+		
+		for (AbstractElement c : state.getStms()) {
+			if (c.eClass().getName().equals("Call") ) {
+				counter++;
+			}
+		}
+		if(counter>1){
+		error("Only one call for each state",
+				DimePackage.Literals.STATE__NAME);
+		}
+	}
+	
+	
 	@Check
 	public void checkStatesLowerCase(org.telcodev.dsl.dime.State state) {
 		String name = state.getName();
