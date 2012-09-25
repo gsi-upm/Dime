@@ -3351,6 +3351,22 @@ ruleSESSION returns [EObject current=null]
 	    }
 
 )
+)
+    |(
+(
+		lv_name_7_0=	'TIMES' 
+    {
+        newLeafNode(lv_name_7_0, grammarAccess.getSESSIONAccess().getNameTIMESKeyword_7_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSESSIONRule());
+	        }
+       		setWithLastConsumed($current, "name", lv_name_7_0, "TIMES");
+	    }
+
+)
 ))
 ;
 

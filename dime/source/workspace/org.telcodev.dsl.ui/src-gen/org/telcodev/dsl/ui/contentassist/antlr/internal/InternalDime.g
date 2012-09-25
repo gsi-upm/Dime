@@ -1975,6 +1975,12 @@ rule__SESSION__Alternatives
 { after(grammarAccess.getSESSIONAccess().getNameAssignment_6()); }
 )
 
+    |(
+{ before(grammarAccess.getSESSIONAccess().getNameAssignment_7()); }
+(rule__SESSION__NameAssignment_7)
+{ after(grammarAccess.getSESSIONAccess().getNameAssignment_7()); }
+)
+
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -8303,6 +8309,29 @@ rule__SESSION__NameAssignment_6
 )
 
 { after(grammarAccess.getSESSIONAccess().getNameRECORDKeyword_6_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SESSION__NameAssignment_7
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getSESSIONAccess().getNameTIMESKeyword_7_0()); }
+(
+{ before(grammarAccess.getSESSIONAccess().getNameTIMESKeyword_7_0()); }
+
+	'TIMES' 
+
+{ after(grammarAccess.getSESSIONAccess().getNameTIMESKeyword_7_0()); }
+)
+
+{ after(grammarAccess.getSESSIONAccess().getNameTIMESKeyword_7_0()); }
 )
 
 ;

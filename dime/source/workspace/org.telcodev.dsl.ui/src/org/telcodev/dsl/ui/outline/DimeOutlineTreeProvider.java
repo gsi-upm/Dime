@@ -54,11 +54,9 @@ public class DimeOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	} 
 
 	public void state_createChildren(IOutlineNode parent, State m) {
-		for (AbstractElement v : m.getStms()) { //IF its only one dont loop ;-)
+		for (AbstractElement v : m.getStms()) { 
 		
 			if(v.eClass().getName().equals("IfExp")){
-			//	System.out.println(v.eClass().getName());
-				
 				IfExp p= (IfExp) v;
 				createNode(parent, p.getBlock());
 				for (CondBlock d :p.getBlocks()){
@@ -90,7 +88,9 @@ public class DimeOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	public void send_createChildren(IOutlineNode parent, Send m) {
 		createNode(parent,m.getParams().getValue());
 		for(NotPrimaryParam n: m.getParams().getStms()){
+			if(n.getValue()!=null){
 			createNode(parent,n.getValue());
+			}
 		}
 	
 	}

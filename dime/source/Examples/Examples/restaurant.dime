@@ -1,142 +1,163 @@
-Application Restaurant  
+Application RestaurantPhoneMenu  
 
-String  hour;
+String hour;
 String day;
 String month;  
-String people;			
-
-State start  {
-	
+String people;		
+Const userNumber="+34656422095";	
+Const userEmail="totemteleko@gmail.com";
+Const year= 2012; 
+   
+   
+State START  {  
 	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
-	Ask 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto?';
-	GoTo isclient when COMPLETED;
-	
-	
-} 
+	GoTo ISCLIENT when COMPLETED;    
+}   
 
-State isclient times 3 {
 
-	if(ANSWER=="yes"){
+State ISCLIENT {
+	Say 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.';
+	Get 1 digits;
+	GoTo CLIENTCONF when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+}
+  
+State CLIENTCONF times 3 {
+
+	if(DIGITS==1){
 		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
-		
-		GoTo askpeople when COMPLETED;
-	}else{
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==0){
 		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
 		HangUp;
+	}else{
+		GoTo ISCLIENT when COMPLETED;
 	}
-	GoTo tooattempts when TIMES;
-	GoTo hanguperror when ERROR;
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+} 
+
+State ASKPEOPLE {
+	Say "Diga el numero de comensales";
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKDAY when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
 }
 
-State askpeople times 3 {
-	Ask "Diga el numero de comensales";
-	GoTo askday when COMPLETED;
-	GoTo tooattempts when TIMES;
-	GoTo hanguperror when ERROR;
-}
-
-State askday times 3 {
-	String people=ANSWER;
-	Ask "En que dia lo desea?" ;
+State ASKDAY{
+	String people=DIGITS;
+	Say "En que dia lo desea?" ;
+	Get 2 digits;
+	if(TIMES==0){
+		GoTo ASKMONTH when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
 	
-	GoTo askmonth when COMPLETED;
-	GoTo tooattempts when TIMES;
-	GoTo hanguperror when ERROR;
+	GoTo HANGUPERROR when ERROR;
 }
 
-State askmonth times 3 {
-	String day=ANSWER;
-	Ask "En que mes desea realizar dicha reserva?" ;
+State ASKMONTH {
+	String day=DIGITS;
+	Say "En que mes desea realizar dicha reserva?" ;
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+} 
+
+
+State ASKHOUR {
+	String month=DIGITS;
+	Say "A que hora le conviene?" ;
+	Get 4 digits;
+	GoTo ASKDONE when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+} 
+State ASKDONE  {
+	if(LASTSTATE=="ASKHOUR"){
+		String hour=DIGITS;
+	}else if(LASTSTATE=="ASKDAY"){
+		String day=DIGITS;
+	}else if(LASTSTATE=="ASKPEOPLE"){
+		String people=DIGITS;
+	}else if(LASTSTATE=="ASKMONTH"){
+		String month=DIGITS;
+	}
 	
-	GoTo askhour when COMPLETED;
-	GoTo tooattempts when TIMES;
-	GoTo hanguperror when ERROR;
-}
-
-
-State askhour times 3 {
-	String month=ANSWER;
-	Ask "A que hora le conviene?" ;
 	
-	GoTo askdone when COMPLETED;
-	GoTo tooattempts when TIMES;
-	GoTo wrongchoice when ERROR;
-	GoTo hanguperror when ERROR;
-}
-State askdone times 3 {
-	String hour=ANSWER;
 	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
-	Ask "Esta totalmente de acuerdo con dicha solicitud?";
-	if(ANSWER=="yes"){
-		GoTo hangup when COMPLETED;
-	}else{
-		GoTo modification when COMPLETED;
-	}
-	GoTo tooattempts when TIMES;
-	
-	GoTo hanguperror when ERROR;
+	Say "Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.";
+	Get 1 digits;
+	GoTo DONECONF when COMPLETED;
 }
-
-State modification times 3 {
-	Ask "Que dato desea modificar?" ;
-	if(ANSWER=="numero de comensales"){
-		GoTo askpeople when COMPLETED;
-	}else if(ANSWER=="dia"){
-		GoTo askday when COMPLETED;
-	}
-	else if(ANSWER=="hora"){
-		GoTo askhour when COMPLETED;
-	}else{
-		GoTo askmonth when COMPLETED;
-	}
-	
-	GoTo tooattempts when TIMES;
-	GoTo wrongchoice when ERROR;
-	GoTo hanguperror when ERROR;
-}
-
-State tooattempts {
-	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo m‡s tarde";
-}
-
-State hanguperror {
-	Say "Ha ocurrido un error, disculpe las molestias.";
-}
-
-State wrongchoice{
-	if(LASTSTATE=="askDay"){
-		Say  "Lo siento, no le hemos entendido. Tiene que decir un dia del mes";
-		GoTo askday when COMPLETED;
-	}else if(LASTSTATE=="askHour"){
-		Say "Lo siento, no le hemos entendido. Diga la hora a la que quiere hacer la reserva. Solo es posible hacer una reserva a las horas en punto o y media entre la una y las 11 y media de la noche.";
-		GoTo askhour when COMPLETED;
-	}
-	else if(LASTSTATE=="askPeople"){
-		Say "Lo siento, no le hemos entendido. Sepa ademas que el numero maximo de comensales es 10";
-		GoTo askpeople when COMPLETED;
-	}else if (LASTSTATE=="askMonth"){
-		GoTo askmonth when COMPLETED;
-	}else if(LASTSTATE=="askDone"){
-		Say "Perdone, no le hemos entendido";
-		GoTo askdone when COMPLETED;
-	}else if(LASTSTATE=="confirmation"){
-		Say "Lo siento, no le hemos entendido. Los datos a modificar son: numero de comensales, mes, dia y hora de la reserva";
-		GoTo modification when COMPLETED;
-		
-	}else{ 
-		Say "Perdone, no le hemos entendido";
-		GoTo isclient when COMPLETED;
-	}
-}    
  
-State hangup {
+State DONECONF times 3{
+	if(DIGITS==1){
+		GoTo END when COMPLETED;
+	}else if(DIGITS==0){
+		Say "Que dato desea modificar?";
+		Say "Pulse 1 para el numero de comensales.";
+		Say "Pulse 2 para el dia";
+		Say "Pulse 3 para el mes";
+		Say "Pulse 4 para la hora";
+		Get 1 digits;
+		GoTo MODIFICATION when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+State MODIFICATION times 3 {
+	
+	if(DIGITS==1){
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==2){
+		GoTo ASKDAY when COMPLETED;
+	}
+	else if(DIGITS==3){
+		GoTo ASKMONTH when COMPLETED;
+	}
+	else if(DIGITS==4){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		Say "Disculpe, pero ha pulsado un digito equivocado.";
+		GoTo DONECONF when COMPLETED;
+	}
+	
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State TOOATTEMPTS {
+	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde";
+}
+
+State HANGUPERROR {
+	Say "Ha ocurrido un error, disculpe las molestias.";
+	HangUp;
+}    
+            
+     
+State END {
 	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
 	
-	
-	Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people} to "http://www.restaurant.com";
-	Email{subject : "Reservation",
+	if(CALLER==userNumber){
+		Email{subject : "Reservation",
 		from :"restaurant@dime.com",
-		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas'
-	} to "user@dime.com";
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'.year.'a las '.hour." para ".people.' personas'
+	} to userEmail;
+		Send { "caller": userNumber, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://shannon.gsi.dit.upm.es/roberto/res/saveReservation.php";
+	
+	}else{
+		Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://shannon.gsi.dit.upm.es/roberto/res/saveReservation.php";
+	}
+	    
 	HangUp;
 }

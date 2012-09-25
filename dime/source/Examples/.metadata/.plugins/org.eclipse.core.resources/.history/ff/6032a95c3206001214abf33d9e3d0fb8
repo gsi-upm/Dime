@@ -1,0 +1,45 @@
+<?php
+
+require "res/Services/Twilio.php";
+require "globals_dime.php";
+
+// State TOOATTEMPTS implementation
+
+
+	header("content-type: text/xml");
+	
+	// Update of the value of the global constants and variables, and the session params.
+	if(isset($_GET['times_dime'])){
+		$times_dime=$_GET['times_dime'];
+	} 
+	if(isset($_GET['month'])){
+		$month=$_GET['month'];
+	} 
+	if(isset($_GET['day'])){
+		$day=$_GET['day'];
+	} 
+	if(isset($_GET['hour'])){
+		$hour=$_GET['hour'];
+	} 
+	if(isset($_GET['people'])){
+		$people=$_GET['people'];
+	} 
+	
+	
+	if((!isset($_REQUEST['CallStatus']))||$_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing"|| $_REQUEST["CallStatus"]=="queued"){
+	
+	
+		// Declaration of the statements of the state.
+		
+	echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
+	echo "<Response>";	
+		echo "<Say voice=\"woman\" language=\"es\">"."Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde"."</Say>\n"; 
+	
+	
+		echo "</Response>";
+	}
+	
+
+
+	
+?>

@@ -191,6 +191,7 @@ public class DimeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSESSIONAccess().getNameAssignment_4(), "rule__SESSION__NameAssignment_4");
 					put(grammarAccess.getSESSIONAccess().getNameAssignment_5(), "rule__SESSION__NameAssignment_5");
 					put(grammarAccess.getSESSIONAccess().getNameAssignment_6(), "rule__SESSION__NameAssignment_6");
+					put(grammarAccess.getSESSIONAccess().getNameAssignment_7(), "rule__SESSION__NameAssignment_7");
 					put(grammarAccess.getCALLSTATUSAccess().getNameAssignment_0(), "rule__CALLSTATUS__NameAssignment_0");
 					put(grammarAccess.getCALLSTATUSAccess().getNameAssignment_1(), "rule__CALLSTATUS__NameAssignment_1");
 					put(grammarAccess.getCALLSTATUSAccess().getNameAssignment_2(), "rule__CALLSTATUS__NameAssignment_2");

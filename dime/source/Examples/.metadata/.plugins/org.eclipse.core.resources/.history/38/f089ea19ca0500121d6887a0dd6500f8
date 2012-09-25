@@ -1,0 +1,57 @@
+<?php
+
+require "res/Services/Twilio.php";
+require "globals_dime.php";
+
+// State hangup implementation
+
+
+	header("content-type: text/xml");
+	
+	// Update of the value of the global constants and variables, and the session params.
+	if(isset($_GET['times_dime'])){
+		$times_dime=$_GET['times_dime'];
+	} 
+	if(isset($_GET['month'])){
+		$month=$_GET['month'];
+	} 
+	if(isset($_GET['day'])){
+		$day=$_GET['day'];
+	} 
+	if(isset($_GET['hour'])){
+		$hour=$_GET['hour'];
+	} 
+	if(isset($_GET['people'])){
+		$people=$_GET['people'];
+	} 
+	
+	
+	if((!isset($_REQUEST['CallStatus']))||$_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing"|| $_REQUEST["CallStatus"]=="queued"){
+	
+	
+		// Declaration of the statements of the state.
+		
+	echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
+	echo "<Response>";	
+		echo "<Say voice=\"man\" language=\"en\">"."De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo."."</Say>\n"; 
+		// Send implementation for HTTP GET with cURL.
+			
+					$curl_handle=curl_init();
+					curl_setopt($curl_handle,CURLOPT_URL,"http://www.restaurant.com"+"?"+"caller="+$_REQUEST['From']+"&"+"day="+$day+"&"+"hour="+$hour+"&"+"month="+$month+"&"+"people="+$people);
+					curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
+					curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
+					curl_exec($curl_handle);
+					curl_close($curl_handle);
+		// Email implementation
+		
+		mail("user@dime.com", "Reservation","Usted ha solicitado una reserva en nuestro restaurante el dia ".$day."de".$month."de"."2012"."a las ".$hour." para".$people." personas", "From: <"."restaurant@dime.com"."> \r\n"); 
+		echo "<Hangup /> \n"; 
+	
+	
+		echo "</Response>";
+	}
+	
+
+
+	
+?>

@@ -1569,15 +1569,6 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBoolVariableParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cConstantParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
-		////AssigmentString:
-		////	vas=[Vars] '=' (rights=ConcatenationExpression)';';
-		////
-		////AssigmentNum:
-		////	van=[Vars] '=' (rightn=MathExpression)';';
-		////
-		////AssigmentBool:
-		////	vab=[Vars] '=' (rightb=BoolExpression)';';
-		////	
 		//// FALLO CONSTANT TIENE QUE IR EN LITERAL NO EN VARS
 		//Vars:
 		//	StringVariable | NumVariable | BoolVariable | Constant;
@@ -1821,12 +1812,16 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameDIGITSKeyword_5_0 = (Keyword)cNameAssignment_5.eContents().get(0);
 		private final Assignment cNameAssignment_6 = (Assignment)cAlternatives.eContents().get(6);
 		private final Keyword cNameRECORDKeyword_6_0 = (Keyword)cNameAssignment_6.eContents().get(0);
+		private final Assignment cNameAssignment_7 = (Assignment)cAlternatives.eContents().get(7);
+		private final Keyword cNameTIMESKeyword_7_0 = (Keyword)cNameAssignment_7.eContents().get(0);
 		
 		//SESSION:
-		//	name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED" | name="ANSWER" | name="DIGITS" | name="RECORD";
+		//	name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED" | name="ANSWER" | name="DIGITS" | name="RECORD" |
+		//	name="TIMES";
 		public ParserRule getRule() { return rule; }
 
-		//name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED" | name="ANSWER" | name="DIGITS" | name="RECORD"
+		//name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED" | name="ANSWER" | name="DIGITS" | name="RECORD" |
+		//name="TIMES"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//name="CALLER"
@@ -1870,6 +1865,12 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"RECORD"
 		public Keyword getNameRECORDKeyword_6_0() { return cNameRECORDKeyword_6_0; }
+
+		//name="TIMES"
+		public Assignment getNameAssignment_7() { return cNameAssignment_7; }
+
+		//"TIMES"
+		public Keyword getNameTIMESKeyword_7_0() { return cNameTIMESKeyword_7_0; }
 	}
 
 	public class CALLSTATUSElements extends AbstractParserRuleElementFinder {
@@ -2422,15 +2423,6 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		return getPrimitiveAccess().getRule();
 	}
 
-	////AssigmentString:
-	////	vas=[Vars] '=' (rights=ConcatenationExpression)';';
-	////
-	////AssigmentNum:
-	////	van=[Vars] '=' (rightn=MathExpression)';';
-	////
-	////AssigmentBool:
-	////	vab=[Vars] '=' (rightb=BoolExpression)';';
-	////	
 	//// FALLO CONSTANT TIENE QUE IR EN LITERAL NO EN VARS
 	//Vars:
 	//	StringVariable | NumVariable | BoolVariable | Constant;
@@ -2516,7 +2508,8 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SESSION:
-	//	name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED" | name="ANSWER" | name="DIGITS" | name="RECORD";
+	//	name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED" | name="ANSWER" | name="DIGITS" | name="RECORD" |
+	//	name="TIMES";
 	public SESSIONElements getSESSIONAccess() {
 		return (pSESSION != null) ? pSESSION : (pSESSION = new SESSIONElements());
 	}

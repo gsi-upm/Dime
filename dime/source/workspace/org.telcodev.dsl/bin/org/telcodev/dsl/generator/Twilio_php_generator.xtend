@@ -170,7 +170,9 @@ class Twilio_php_generator {
 		
 		fsa.generateFile("call_dime.php",declareCall())
 		fsa.generateFile("res/token.php", tokenFile)
-		
+		for(state :( resource.contents.head as Document).sta){
+				variablesId.add("times_"+state.name+"_dime")
+		}
 		for(state :( resource.contents.head as Document).sta){
 			fsa.generateFile(state.name+".php",declareState(state))
 			
@@ -273,9 +275,10 @@ echo "<h1>Twilio token, from a Dime application.</h1>";
 		var first=true;
 		name=elem.name;
 		System::out.println("Generating "+elem.name.toUpperCase+" state.");
-		
-		
-			
+		getdigits=null;
+		record=null;
+	
+			 
 '''
 <?php
 
@@ -320,16 +323,19 @@ require "globals_dime.php";
 	
 	«IF !first»else «ENDIF»if((!isset($_REQUEST['CallStatus']))||$_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing"|| $_REQUEST["CallStatus"]=="queued"){
 	
-	«IF elem.times!=0» 
 	
-	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_GET['times_dime'])){
-		if($_GET['times_dime']==«elem.times»){
+	
+	if(isset($_GET['times_«elem.name»_dime'])){
+		$times_«elem.name»_dime=intval($_GET['times_«elem.name»_dime'])+1;
+		«IF elem.times!=0»
+		// Times signal appears when the param reached the atribute times of the state
+		
+		if($_GET['times_«elem.name»_dime']==«elem.times»){
 			
 			if(isset($_GET['timesurl_dime'])){
 			$url=$_GET['timesurl_dime']."?laststate_dime=«name»";
-			$times_url=null;
+			$times_url=NULL;
 			«IF !variablesId.isEmpty()»«saveGlobalVariableXML("url")»«ENDIF»
 			echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
 			echo "<Response>";
@@ -337,14 +343,13 @@ require "globals_dime.php";
 			echo "</Response>";
 			exit();
 			}
-			
-		}else{
-			$times_dime=$_GET['times_dime']+1;
-		}
+		}«ENDIF»			
+		
 	}else{
-		$times_dime=1;
+		$times_«elem.name»_dime=1;
+		
 	}
-	«ENDIF»
+	
 	«IF elem.name.equals("start")»
 
 	«ENDIF»
@@ -361,8 +366,8 @@ require "globals_dime.php";
 		«IF record!=null»if($recordtag_dime==TRUE){
 			«declareVoiceTag(record)»
 		}«ENDIF»«IF getdigits!=null»if($getdigits_dime==TRUE){
-			declareVoiceTag(getdigits)»
-		}«ENDIF»else{
+			«declareVoiceTag(getdigits)»
+		}«ENDIF»
 		$url=$completedurl_dime."?"."laststate_dime=«elem.name»";
 		«IF !variablesId.isEmpty()»«saveGlobalVariableXML("url")»«ENDIF»
 		if(isset($hangupurl_dime)){
@@ -376,36 +381,22 @@ require "globals_dime.php";
 		}
 		
 		echo "<Redirect>".$url."</Redirect>";
-		}«ENDIF»
+		«ENDIF»
 	
 		echo "</Response>";
 	}
 	
+«errorRedirect=null»«completedRedirect=null»«hangupRedirect=null»«timesRedirect=null»«timeoutRedirect=null»
 
-
-	«errorRedirect=null»«completedRedirect=null»«hangupRedirect=null»«timesRedirect=null»«timeoutRedirect=null»
-	
 ?>'''
 
 
 	
 	}
 	
-//
-//	if($«elem»=="Digits"){
-//	$«elem»= $_REQUEST['Digits'];
-//}else if($«elem»=="TranscriptionText"){
-//	$«elem»= $_REQUEST['TranscriptionText'];
-//}
-	
 
 	
-	
-	
 	// Auxiliar functions for state
-	
-	
-	// AQUI HE HECHO UNA GILIPOLLEZ ENORME
 
 	def static  declareStateGlobalVariable(String elem){
 		
@@ -481,13 +472,13 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 // Expressiones
 	def static dispatch declareBoolExpression(CALLSTATUS elem){
 		 if(elem.name.equals("RINGING")){
-		 	'''($callStatus=="RINGING")'''
+		 	'''($_REQUEST['CallStatus']=="RINGING")'''
 		 }else if(elem.name.equals("IN-PROGRESS")){
-		 	'''($callStatus=="ANSWERING"| $callStatus=="ANSWERED")'''
+		 	'''($_REQUEST['CallStatus']=="ANSWERING"|| $_REQUEST['CallStatus']=="ANSWERED")'''
 		 	}else if(elem.name.equals("DISCONNECTED")){
-		 	'''($callStatus=="DISCONNECTED")'''
+		 	'''($_REQUEST['CallStatus']=="DISCONNECTED")'''
 		 	}else if(elem.name.equals("FAILED")){
-		 	'''($callStatus=="FAILED")'''
+		 	'''($_REQUEST['CallStatus']=="FAILED")'''
 		 	}
 		 	else{
 		 	''''''
@@ -641,7 +632,11 @@ def static dispatch declareAbstractElement(VoiceTag elem){
  			'''$_REQUEST['RecordingUrl']'''
  		
  		} else if(elem.name.equals('DIGITS')){
- 			'''$_REQUEST['Digits']'''
+ 			'''intval($_REQUEST['Digits'])'''
+ 		
+ 		} 	
+ 			else if(elem.name.equals('TIMES')){
+ 			'''intval($_GET['times_«name»_dime'])'''
  		
  		} 	
  		
@@ -664,7 +659,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	'''// Send implementation for HTTP GET with cURL.
 	
 			$curl_handle=curl_init();
-			curl_setopt($curl_handle,CURLOPT_URL,«declareConcatenation(elem.url)»«IF elem.params!=null»+"?"+«declareSendBlock(elem.params)»«ENDIF»);
+			curl_setopt($curl_handle,CURLOPT_URL,«declareConcatenation(elem.url)»«IF elem.params!=null»+"?".«declareSendBlock(elem.params)»«ENDIF»);
 			curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
 			curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 			curl_exec($curl_handle);
@@ -677,11 +672,11 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		var size = elem.stms.size;
 		if(size!=0){
 			while(i<size){
-			s=s+"+\"&\"+"+declareParam(elem.stms.get(i).value);
+			s=s+".\"&\"."+declareParam(elem.stms.get(i).value);
 			i=i+1;
 			}
 		}
-		//s=s+")";
+		
 		'''«s»'''
 	}
 	

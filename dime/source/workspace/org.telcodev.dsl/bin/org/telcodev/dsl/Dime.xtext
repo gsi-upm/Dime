@@ -149,15 +149,7 @@ Constant:
 Primitive:
 	StringLiteral | BoolLiteral | NumLiteral;
 
-	//AssigmentString:
-//	vas=[Vars] '=' (rights=ConcatenationExpression)';';
-//
-//AssigmentNum:
-//	van=[Vars] '=' (rightn=MathExpression)';';
-//
-//AssigmentBool:
-//	vab=[Vars] '=' (rightb=BoolExpression)';';
-//	
+
 
 // FALLO CONSTANT TIENE QUE IR EN LITERAL NO EN VARS
 Vars:
@@ -187,7 +179,7 @@ EVENT:
 	name='HANGUP' | name='COMPLETED' | name='ERROR' | name='TIMES' | name='TIMEOUT';
 
 SESSION:
-	name='CALLER' | name='LASTSTATE' | name='TIME' | name='CALLED'| name='ANSWER' | name='DIGITS'| name='RECORD';
+	name='CALLER' | name='LASTSTATE' | name='TIME' | name='CALLED'| name='ANSWER' | name='DIGITS'| name='RECORD' | name='TIMES';
 
 CALLSTATUS:
 	 name='RINGING' | name='IN-PROGRESS' | name='DISCONNECTED' | name='FAILED';

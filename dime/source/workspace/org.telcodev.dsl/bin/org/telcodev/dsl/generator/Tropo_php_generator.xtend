@@ -222,7 +222,7 @@ run();
 			variables.put(elem.name, declareBoolExpression(elem.value))
 		}
 		
-		''''''
+		'''«declareStatement(elem)»'''
 	}
 	
 	def static dispatch declareGlobalStatement(StringVariable elem){
@@ -231,7 +231,7 @@ run();
 			variables.put(elem.name, declareConcatenation(elem.value))
 		}
 			
-		''''''
+		'''«declareStatement(elem)»'''
 	}
 	
 	def static dispatch declareGlobalStatement(NumVariable elem){
@@ -241,7 +241,7 @@ run();
 				}
 			
 			
-			''''''
+			'''«declareStatement(elem)»'''
 	}
 	
 	
@@ -257,17 +257,18 @@ run();
 		name=elem.name
 		System::out.println("Generating "+name+" state.");
 		
+		
 '''// State «elem.name» implementation
 
 dispatch_post('/«elem.name»', 'app_«elem.name»');
 function app_«elem.name»() {
-	«IF name.equals("start")»
+	
 	
 	// Creates a Tropo session and getting its parameters
-	if(!isset($_SESSION['caller'])){
+	if(!isset($_SESSION['caller_dime'])){
 	$session_dime = new Session();
 	$from_dime = $session_dime->getFrom();
-	$sessionID = $session_dime->getId();
+	$sessionID_dime = $session_dime->getId();
 	$caller_dime = $from_dime["id"]; 
 	$to_dime = $session_dime->getTo();
 	$called_dime = $to_dime["id"]; 
@@ -276,18 +277,15 @@ function app_«elem.name»() {
 	$_SESSION['sessionID_dime']=$sessionID_dime;
 	}
 	
-	// Initialitation of the global variables
 	
-	«FOR d: variablesId»
-	«inicializeGlobalVariable(d)» 
-	«ENDFOR»«ENDIF»	
 	
-	«IF elem.times!=0»
-
 	// Times signal appears when the param reached the atribute times of the state
 	
 	if(isset($_SESSION['times_«elem.name»_dime'])){
 	$attempts=intval($_SESSION['times_«elem.name»_dime']);
+	$attempts++;
+	$_SESSION['times_«elem.name»_dime']=$attempts;
+	«IF elem.times!=0»
 		if($attempts==«elem.times»){
 			$_SESSION['times_«elem.name»_dime']=0;
 			$urltimes = "«url»res/signals.php?signal_dime=attemptsLimit&sessionID_dime=".$_SESSION['sessionID_dime'];
@@ -297,22 +295,22 @@ function app_«elem.name»() {
 			curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 			curl_exec($curl_handle);
 			curl_close($curl_handle);
-		}else{
-			$attempts++;
-			$_SESSION['times_«elem.name»_dime']=$attempts;
 		}
+	«ENDIF»	
+			
+		
 	}else{
-		$_SESSION['times_«elem.name»_dime']=1;
+		$_SESSION['times_«elem.name»_dime']=0;
 	}
-	«ENDIF»
+	
 	
 	// Inicialize the tropo aplication
 	
 	$tropo = new Tropo();
 	
-	«IF !name.equals("start") »
+	if(isset($_SESSION['lastState_dime'])){
 		@$result_dime=new Result();
-	«ENDIF»
+	}
 	// Update of the value of the global constants and variables, and the session params.
 	
 	«FOR d: variablesId»
@@ -349,7 +347,10 @@ function app_«elem.name»() {
 	
 	
 	def static saveGlobalVariable(String elem){
-		'''$_SESSION['«elem»']=$«elem»;  '''
+		'''if(isset($«elem»)){
+	$_SESSION['«elem»']=$«elem»;
+}
+		  '''
 	}
 	
 	
@@ -404,13 +405,13 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 // Expressiones
 	def static dispatch declareBoolExpression(CALLSTATUS elem){
 		 if(elem.name.equals("RINGING")){
-		 	'''($callStatus=="RINGING")'''
+		 	'''($result_dime->getState()=="RINGING")'''
 		 }else if(elem.name.equals("IN-PROGRESS")){
-		 	'''($callStatus=="ANSWERING"| $callStatus=="ANSWERED")'''
+		 	'''($result_dime->getState()=="ANSWERING"| $result_dime->getState()=="ANSWERED")'''
 		 	}else if(elem.name.equals("DISCONNECTED")){
-		 	'''($callStatus=="DISCONNECTED")'''
+		 	'''($result_dime->getState()=="DISCONNECTED")'''
 		 	}else if(elem.name.equals("FAILED")){
-		 	'''($callStatus=="FAILED")'''
+		 	'''($result_dime->getState()=="FAILED")'''
 		 	}
 		 	else{
 		 	''''''
@@ -564,13 +565,15 @@ def static dispatch declareAbstractElement(VoiceTag elem){
  			'''"ftp://«user»:«password»@ftp.tropo.com/recordings/record_".$_REQUEST['lastState_dime'].".mp3"'''
  		
  		} else if(elem.name.equals('DIGITS')){
- 			'''$result_dime->getValue()'''
+ 			'''intval($result_dime->getValue())'''
+ 		
+ 		} 	else if(elem.name.equals('TIMES')){
+ 			'''intval($_SESSION['times_«name»_dime'])'''
  		
  		} 	
- 		
- 		
+
  		else if(elem.name.equals('TIME')){
- 			'''$result_dime->getSessionDuration()'''
+ 			'''intval($result_dime->getSessionDuration())'''
  		} 	
  		
  		else{
@@ -586,24 +589,24 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	'''// Send implementation for HTTP GET with cURL.
 	
 			$curl_handle=curl_init();
-			curl_setopt($curl_handle,CURLOPT_URL,«declareConcatenation(elem.url)»«IF elem.params!=null»+"?"+«declareSendBlock(elem.params)»«ENDIF»);
+			curl_setopt($curl_handle,CURLOPT_URL,«declareConcatenation(elem.url)»«IF elem.params!=null»+"?".«declareSendBlock(elem.params)»«ENDIF»);
 			curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
 			curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 			curl_exec($curl_handle);
 			curl_close($curl_handle);'''
 	}
-
+	
 	def static declareSendBlock(SendBlock elem){
 		var s=declareParam(elem.value);
 		var i =0;
 		var size = elem.stms.size;
 		if(size!=0){
 			while(i<size){
-			s=s+"+\"&\"+"+declareParam(elem.stms.get(i).value);
+			s=s+".\"&\"."+declareParam(elem.stms.get(i).value);
 			i=i+1;
 			}
 		}
-		//s=s+")";
+		
 		'''«s»'''
 	}
 	
@@ -690,7 +693,7 @@ $tropo->say(«declareConcatenation(elem.value)»)'''
 	def static dispatch declareStatement(Constant elem){
 		'''«declareConstant(elem)»;'''
 	}
-	
+	 
 	
 	
 	def static declareConstant(Constant elem){

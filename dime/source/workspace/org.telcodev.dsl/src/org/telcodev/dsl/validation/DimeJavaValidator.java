@@ -131,17 +131,17 @@ public class DimeJavaValidator extends AbstractDimeJavaValidator {
 	}
 	
 	
-	@Check
-	public void checkStatesLowerCase(org.telcodev.dsl.dime.State state) {
-		String name = state.getName();
-		char[] characters = name.toCharArray();
-		for (char character : characters) {
-			if (Character.isUpperCase(character)) {
-				error("States must be written in lower characters",
-						DimePackage.Literals.STATE__NAME);
-			}
-		}
-	}
+//	@Check
+//	public void checkStatesLowerCase(org.telcodev.dsl.dime.State state) {
+//		String name = state.getName();
+//		char[] characters = name.toCharArray();
+//		for (char character : characters) {
+//			if (Character.isUpperCase(character)) {
+//				error("States must be written in lower characters",
+//						DimePackage.Literals.STATE__NAME);
+//			}
+//		}
+//	}
 
 	@Check
 	public void checkStatesNames(Document document) {
@@ -166,8 +166,8 @@ public class DimeJavaValidator extends AbstractDimeJavaValidator {
 				}
 			}
 			if (!start) {
-				error("There must be an state called start",
-						DimePackage.Literals.DOCUMENT__STA);
+//				error("There must be an state called start",
+//						DimePackage.Literals.DOCUMENT__STA);
 			}
 		}
 	}

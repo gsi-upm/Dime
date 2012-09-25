@@ -937,7 +937,8 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name='CALLED' | 
 	 *         name='ANSWER' | 
 	 *         name='DIGITS' | 
-	 *         name='RECORD'
+	 *         name='RECORD' | 
+	 *         name='TIMES'
 	 *     )
 	 */
 	protected void sequence_SESSION(EObject context, SESSION semanticObject) {

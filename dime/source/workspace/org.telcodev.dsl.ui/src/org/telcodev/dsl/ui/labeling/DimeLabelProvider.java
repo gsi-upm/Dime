@@ -48,16 +48,16 @@ public class DimeLabelProvider extends DefaultEObjectLabelProvider {
       }
 	
 	String text(StringVariable ele) {
-        return "var"+ele.getName();
+        return "var \t"+ele.getName();
       }
 	String text(NumVariable ele) {
-        return "var "+ele.getName();
+        return "var \t"+ele.getName();
       }
 	String text(Constant ele) {
-        return "const "+ele.getName();
+        return "const \t"+ele.getName();
       }
 	String text(BoolVariable ele) {
-        return "var "+ele.getName();
+        return "var \t"+ele.getName();
       }
 	String text(Send ele) {
         return "Send ";

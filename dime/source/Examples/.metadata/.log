@@ -10005,3 +10005,3281 @@ Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Di
 
 !ENTRY org.eclipse.core.net 1 0 2012-09-23 21:51:21.375
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-23 23:30:21.401 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-23 23:30:26.774
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-23 23:53:37.573 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-23 23:53:42.386
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-23 23:58:25.350
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-23 23:58:25.350
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-23 23:58:25.351
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-23 23:58:25.352
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-23 23:58:25.352
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-23 23:58:25.359
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-23 23:58:25.359
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-23 23:58:25.359
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-23 23:58:25.359
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.apache.log4j 4 0 2012-09-23 23:58:40.894
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-23 23:58:40.894
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-23 23:58:40.895
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-23 23:58:40.895
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-23 23:58:40.895
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-23 23:58:40.899
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-23 23:58:40.899
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-23 23:58:40.899
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-23 23:58:40.899
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 00:00:16.244
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/hangup.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/hangup.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 00:00:16.245
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/hangup.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-24 00:00:16.245
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/hangup.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 00:00:16.245
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/hangup.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 00:00:16.245
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/hangup.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-24 00:00:16.247
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-24 00:00:16.247
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/hangup.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-24 00:00:16.247
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/hangup.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 00:00:16.247
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/hangup.php'.
+!SESSION 2012-09-24 00:04:39.350 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 00:04:44.246
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 00:11:04.212 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 00:11:09.133
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 00:40:12.183 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 00:40:17.098
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 00:44:15.740 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 00:44:20.601
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 00:50:12.195 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 00:50:17.070
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 01:11:03.876 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 01:11:08.870
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.xtext.ui 4 0 2012-09-24 01:22:23.141
+!MESSAGE Error refreshing outline
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider._isLeaf(DefaultOutlineTreeProvider.java:163)
+	at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.xtext.util.PolymorphicDispatcher.invoke(PolymorphicDispatcher.java:291)
+	at org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider._createNode(DefaultOutlineTreeProvider.java:122)
+	at sun.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.xtext.util.PolymorphicDispatcher.invoke(PolymorphicDispatcher.java:291)
+	at org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider.createNode(DefaultOutlineTreeProvider.java:106)
+	at org.telcodev.dsl.ui.outline.DimeOutlineTreeProvider.send_createChildren(DimeOutlineTreeProvider.java:93)
+	at org.telcodev.dsl.ui.outline.DimeOutlineTreeProvider._createChildren(DimeOutlineTreeProvider.java:39)
+	at sun.reflect.GeneratedMethodAccessor30.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.xtext.util.PolymorphicDispatcher.invoke(PolymorphicDispatcher.java:291)
+	at org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider.createChildren(DefaultOutlineTreeProvider.java:79)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode$1.process(AbstractOutlineNode.java:80)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode$1.process(AbstractOutlineNode.java:1)
+	at org.eclipse.xtext.util.concurrent.IUnitOfWork$Void.exec(IUnitOfWork.java:36)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode$2.exec(AbstractOutlineNode.java:165)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode$2.exec(AbstractOutlineNode.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:78)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode.readOnly(AbstractOutlineNode.java:158)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode.getChildren(AbstractOutlineNode.java:77)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:68)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:71)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:71)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:71)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:71)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob$1.exec(OutlineRefreshJob.java:60)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob$1.exec(OutlineRefreshJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:78)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.refreshOutlineModel(OutlineRefreshJob.java:57)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.run(OutlineRefreshJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.xtext.ui 4 0 2012-09-24 01:22:29.603
+!MESSAGE Error refreshing outline
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider._isLeaf(DefaultOutlineTreeProvider.java:163)
+	at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.xtext.util.PolymorphicDispatcher.invoke(PolymorphicDispatcher.java:291)
+	at org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider._createNode(DefaultOutlineTreeProvider.java:122)
+	at sun.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.xtext.util.PolymorphicDispatcher.invoke(PolymorphicDispatcher.java:291)
+	at org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider.createNode(DefaultOutlineTreeProvider.java:106)
+	at org.telcodev.dsl.ui.outline.DimeOutlineTreeProvider.send_createChildren(DimeOutlineTreeProvider.java:93)
+	at org.telcodev.dsl.ui.outline.DimeOutlineTreeProvider._createChildren(DimeOutlineTreeProvider.java:39)
+	at sun.reflect.GeneratedMethodAccessor30.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.xtext.util.PolymorphicDispatcher.invoke(PolymorphicDispatcher.java:291)
+	at org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider.createChildren(DefaultOutlineTreeProvider.java:79)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode$1.process(AbstractOutlineNode.java:80)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode$1.process(AbstractOutlineNode.java:1)
+	at org.eclipse.xtext.util.concurrent.IUnitOfWork$Void.exec(IUnitOfWork.java:36)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode$2.exec(AbstractOutlineNode.java:165)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode$2.exec(AbstractOutlineNode.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:78)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode.readOnly(AbstractOutlineNode.java:158)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode.getChildren(AbstractOutlineNode.java:77)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:68)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:71)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:71)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:71)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:71)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob$1.exec(OutlineRefreshJob.java:60)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob$1.exec(OutlineRefreshJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:78)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.refreshOutlineModel(OutlineRefreshJob.java:57)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.run(OutlineRefreshJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.xtext.ui 4 0 2012-09-24 01:22:34.933
+!MESSAGE Error refreshing outline
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider._isLeaf(DefaultOutlineTreeProvider.java:163)
+	at sun.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.xtext.util.PolymorphicDispatcher.invoke(PolymorphicDispatcher.java:291)
+	at org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider._createNode(DefaultOutlineTreeProvider.java:122)
+	at sun.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.xtext.util.PolymorphicDispatcher.invoke(PolymorphicDispatcher.java:291)
+	at org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider.createNode(DefaultOutlineTreeProvider.java:106)
+	at org.telcodev.dsl.ui.outline.DimeOutlineTreeProvider.send_createChildren(DimeOutlineTreeProvider.java:93)
+	at org.telcodev.dsl.ui.outline.DimeOutlineTreeProvider._createChildren(DimeOutlineTreeProvider.java:39)
+	at sun.reflect.GeneratedMethodAccessor30.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.xtext.util.PolymorphicDispatcher.invoke(PolymorphicDispatcher.java:291)
+	at org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider.createChildren(DefaultOutlineTreeProvider.java:79)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode$1.process(AbstractOutlineNode.java:80)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode$1.process(AbstractOutlineNode.java:1)
+	at org.eclipse.xtext.util.concurrent.IUnitOfWork$Void.exec(IUnitOfWork.java:36)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode$2.exec(AbstractOutlineNode.java:165)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode$2.exec(AbstractOutlineNode.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:78)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode.readOnly(AbstractOutlineNode.java:158)
+	at org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode.getChildren(AbstractOutlineNode.java:77)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:68)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:71)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:71)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:71)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.restoreChildrenSelectionAndExpansion(OutlineRefreshJob.java:71)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob$1.exec(OutlineRefreshJob.java:60)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob$1.exec(OutlineRefreshJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:78)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.refreshOutlineModel(OutlineRefreshJob.java:57)
+	at org.eclipse.xtext.ui.editor.outline.impl.OutlineRefreshJob.run(OutlineRefreshJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2012-09-24 11:42:56.397 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 11:43:01.511
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 12:26:27.328 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 12:26:32.341
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 12:33:02.620
+!MESSAGE org.eclipse.xtext.ui.editor.model.DocumentPartitioner  - Detected unexpected state in document partitioner. Please file a bug with the following information attached:
+Document content after the event was applied:
+>>>Application RestaurantPhoneMenu  
+
+String hour;
+String day;
+String month;  
+String people;		
+Const userNumber="+34656422095";	
+Const userEmail="totemteleko@gmail.com";
+Const year= 2012;
+ 
+State START  {  
+	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	GoTo ISCLIENT when COMPLETED;    
+}   
+ 
+State ISCLIENT {
+	Say 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.';
+	Get 1 digits;
+	GoTo CLIENTCONF when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+}
+  
+State CLIENTCONF times 3 {
+
+	if(DIGITS==1){
+		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==0){
+		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
+		HangUp;
+	}else{
+		GoTo ISCLIENT when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKPEOPLE {
+	Say "Diga el numero de comensales";
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKDAY when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKDAY{
+	String people=DIGITS;
+	Say "En que dia lo desea?" ;
+	Get 2 digits;
+	if(TIMES==0){
+		GoTo ASKMONTH when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKMONTH {
+	String day=DIGITS;
+	Say "En que mes desea realizar dicha reserva?" ;
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+
+State ASKHOUR {
+	String month=DIGITS;
+	Say "A que hora le conviene?" ;
+	Get 4 digits;
+	GoTo ASKDONE when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+} 
+State ASKDONE  {
+	if(LASTSTATE=="ASKHOUR"){
+		String hour=DIGITS;
+	}else if(LASTSTATE=="ASKDAY"){
+		String day=DIGITS;
+	}else if(LASTSTATE=="ASKPEOPLE"){
+		String p=DIGITS;
+	}else if(LASTSTATE=="A"){
+		String day=DIGITS;
+	}
+	
+	
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Say "Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.";
+	Get 1 digits;
+	GoTo DONECONF when COMPLETED;
+}
+ 
+State DONECONF times 3{
+	if(DIGITS==1){
+		GoTo END when COMPLETED;
+	}else if(DIGITS==0){
+		Say "Que dato desea modificar?";
+		Say "Pulse 1 para el numero de comensales.";
+		Say "Pulse 2 para el dia";
+		Say "Pulse 3 para el mes";
+		Say "Pulse 4 para la hora";
+		Get 1 digits;
+		GoTo MODIFICATION when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+State MODIFICATION times 3 {
+	
+	if(DIGITS==1){
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==2){
+		GoTo ASKDAY when COMPLETED;
+	}
+	else if(DIGITS==3){
+		GoTo ASKMONTH when COMPLETED;
+	}
+	else if(DIGITS==4){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		Say "Disculpe, pero ha pulsado un digito equivocado.";
+		GoTo DONECONF when COMPLETED;
+	}
+	
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State TOOATTEMPTS {
+	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde";
+}
+
+State HANGUPERROR {
+	Say "Ha ocurrido un error, disculpe las molestias.";
+	HangUp;
+}
+   
+
+State END {
+	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
+	
+	if(CALLER==userNumber){
+		Email{subject : "Reservation",
+		from :"restaurant@dime.com",
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'.year.'a las '.hour." para".people.' personas'
+	} to userEmail;
+		//Send { "caller": userNumber, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	
+	}else{
+		//Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	}
+	 
+	HangUp;
+}<<<
+Document event: offset: 1860, length: 0, timestamp: 126
+text:>p<
+
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 12:33:02.894
+!MESSAGE org.eclipse.xtext.ui.editor.model.DocumentPartitioner  - Detected unexpected state in document partitioner. Please file a bug with the following information attached:
+Document content after the event was applied:
+>>>Application RestaurantPhoneMenu  
+
+String hour;
+String day;
+String month;  
+String people;		
+Const userNumber="+34656422095";	
+Const userEmail="totemteleko@gmail.com";
+Const year= 2012;
+ 
+State START  {  
+	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	GoTo ISCLIENT when COMPLETED;    
+}   
+ 
+State ISCLIENT {
+	Say 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.';
+	Get 1 digits;
+	GoTo CLIENTCONF when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+}
+  
+State CLIENTCONF times 3 {
+
+	if(DIGITS==1){
+		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==0){
+		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
+		HangUp;
+	}else{
+		GoTo ISCLIENT when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKPEOPLE {
+	Say "Diga el numero de comensales";
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKDAY when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKDAY{
+	String people=DIGITS;
+	Say "En que dia lo desea?" ;
+	Get 2 digits;
+	if(TIMES==0){
+		GoTo ASKMONTH when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKMONTH {
+	String day=DIGITS;
+	Say "En que mes desea realizar dicha reserva?" ;
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+
+State ASKHOUR {
+	String month=DIGITS;
+	Say "A que hora le conviene?" ;
+	Get 4 digits;
+	GoTo ASKDONE when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+} 
+State ASKDONE  {
+	if(LASTSTATE=="ASKHOUR"){
+		String hour=DIGITS;
+	}else if(LASTSTATE=="ASKDAY"){
+		String day=DIGITS;
+	}else if(LASTSTATE=="ASKPEOPLE"){
+		String pe=DIGITS;
+	}else if(LASTSTATE=="A"){
+		String day=DIGITS;
+	}
+	
+	
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Say "Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.";
+	Get 1 digits;
+	GoTo DONECONF when COMPLETED;
+}
+ 
+State DONECONF times 3{
+	if(DIGITS==1){
+		GoTo END when COMPLETED;
+	}else if(DIGITS==0){
+		Say "Que dato desea modificar?";
+		Say "Pulse 1 para el numero de comensales.";
+		Say "Pulse 2 para el dia";
+		Say "Pulse 3 para el mes";
+		Say "Pulse 4 para la hora";
+		Get 1 digits;
+		GoTo MODIFICATION when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+State MODIFICATION times 3 {
+	
+	if(DIGITS==1){
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==2){
+		GoTo ASKDAY when COMPLETED;
+	}
+	else if(DIGITS==3){
+		GoTo ASKMONTH when COMPLETED;
+	}
+	else if(DIGITS==4){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		Say "Disculpe, pero ha pulsado un digito equivocado.";
+		GoTo DONECONF when COMPLETED;
+	}
+	
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State TOOATTEMPTS {
+	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde";
+}
+
+State HANGUPERROR {
+	Say "Ha ocurrido un error, disculpe las molestias.";
+	HangUp;
+}
+   
+
+State END {
+	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
+	
+	if(CALLER==userNumber){
+		Email{subject : "Reservation",
+		from :"restaurant@dime.com",
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'.year.'a las '.hour." para".people.' personas'
+	} to userEmail;
+		//Send { "caller": userNumber, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	
+	}else{
+		//Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	}
+	 
+	HangUp;
+}<<<
+Document event: offset: 1861, length: 0, timestamp: 127
+text:>e<
+
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 12:33:03.239
+!MESSAGE org.eclipse.xtext.ui.editor.model.DocumentPartitioner  - Detected unexpected state in document partitioner. Please file a bug with the following information attached:
+Document content after the event was applied:
+>>>Application RestaurantPhoneMenu  
+
+String hour;
+String day;
+String month;  
+String people;		
+Const userNumber="+34656422095";	
+Const userEmail="totemteleko@gmail.com";
+Const year= 2012;
+ 
+State START  {  
+	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	GoTo ISCLIENT when COMPLETED;    
+}   
+ 
+State ISCLIENT {
+	Say 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.';
+	Get 1 digits;
+	GoTo CLIENTCONF when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+}
+  
+State CLIENTCONF times 3 {
+
+	if(DIGITS==1){
+		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==0){
+		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
+		HangUp;
+	}else{
+		GoTo ISCLIENT when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKPEOPLE {
+	Say "Diga el numero de comensales";
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKDAY when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKDAY{
+	String people=DIGITS;
+	Say "En que dia lo desea?" ;
+	Get 2 digits;
+	if(TIMES==0){
+		GoTo ASKMONTH when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKMONTH {
+	String day=DIGITS;
+	Say "En que mes desea realizar dicha reserva?" ;
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+
+State ASKHOUR {
+	String month=DIGITS;
+	Say "A que hora le conviene?" ;
+	Get 4 digits;
+	GoTo ASKDONE when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+} 
+State ASKDONE  {
+	if(LASTSTATE=="ASKHOUR"){
+		String hour=DIGITS;
+	}else if(LASTSTATE=="ASKDAY"){
+		String day=DIGITS;
+	}else if(LASTSTATE=="ASKPEOPLE"){
+		String peo=DIGITS;
+	}else if(LASTSTATE=="A"){
+		String day=DIGITS;
+	}
+	
+	
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Say "Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.";
+	Get 1 digits;
+	GoTo DONECONF when COMPLETED;
+}
+ 
+State DONECONF times 3{
+	if(DIGITS==1){
+		GoTo END when COMPLETED;
+	}else if(DIGITS==0){
+		Say "Que dato desea modificar?";
+		Say "Pulse 1 para el numero de comensales.";
+		Say "Pulse 2 para el dia";
+		Say "Pulse 3 para el mes";
+		Say "Pulse 4 para la hora";
+		Get 1 digits;
+		GoTo MODIFICATION when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+State MODIFICATION times 3 {
+	
+	if(DIGITS==1){
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==2){
+		GoTo ASKDAY when COMPLETED;
+	}
+	else if(DIGITS==3){
+		GoTo ASKMONTH when COMPLETED;
+	}
+	else if(DIGITS==4){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		Say "Disculpe, pero ha pulsado un digito equivocado.";
+		GoTo DONECONF when COMPLETED;
+	}
+	
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State TOOATTEMPTS {
+	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde";
+}
+
+State HANGUPERROR {
+	Say "Ha ocurrido un error, disculpe las molestias.";
+	HangUp;
+}
+   
+
+State END {
+	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
+	
+	if(CALLER==userNumber){
+		Email{subject : "Reservation",
+		from :"restaurant@dime.com",
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'.year.'a las '.hour." para".people.' personas'
+	} to userEmail;
+		//Send { "caller": userNumber, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	
+	}else{
+		//Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	}
+	 
+	HangUp;
+}<<<
+Document event: offset: 1862, length: 0, timestamp: 128
+text:>o<
+
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 12:33:03.631
+!MESSAGE org.eclipse.xtext.ui.editor.model.DocumentPartitioner  - Detected unexpected state in document partitioner. Please file a bug with the following information attached:
+Document content after the event was applied:
+>>>Application RestaurantPhoneMenu  
+
+String hour;
+String day;
+String month;  
+String people;		
+Const userNumber="+34656422095";	
+Const userEmail="totemteleko@gmail.com";
+Const year= 2012;
+ 
+State START  {  
+	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	GoTo ISCLIENT when COMPLETED;    
+}   
+ 
+State ISCLIENT {
+	Say 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.';
+	Get 1 digits;
+	GoTo CLIENTCONF when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+}
+  
+State CLIENTCONF times 3 {
+
+	if(DIGITS==1){
+		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==0){
+		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
+		HangUp;
+	}else{
+		GoTo ISCLIENT when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKPEOPLE {
+	Say "Diga el numero de comensales";
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKDAY when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKDAY{
+	String people=DIGITS;
+	Say "En que dia lo desea?" ;
+	Get 2 digits;
+	if(TIMES==0){
+		GoTo ASKMONTH when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKMONTH {
+	String day=DIGITS;
+	Say "En que mes desea realizar dicha reserva?" ;
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+
+State ASKHOUR {
+	String month=DIGITS;
+	Say "A que hora le conviene?" ;
+	Get 4 digits;
+	GoTo ASKDONE when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+} 
+State ASKDONE  {
+	if(LASTSTATE=="ASKHOUR"){
+		String hour=DIGITS;
+	}else if(LASTSTATE=="ASKDAY"){
+		String day=DIGITS;
+	}else if(LASTSTATE=="ASKPEOPLE"){
+		String peop=DIGITS;
+	}else if(LASTSTATE=="A"){
+		String day=DIGITS;
+	}
+	
+	
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Say "Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.";
+	Get 1 digits;
+	GoTo DONECONF when COMPLETED;
+}
+ 
+State DONECONF times 3{
+	if(DIGITS==1){
+		GoTo END when COMPLETED;
+	}else if(DIGITS==0){
+		Say "Que dato desea modificar?";
+		Say "Pulse 1 para el numero de comensales.";
+		Say "Pulse 2 para el dia";
+		Say "Pulse 3 para el mes";
+		Say "Pulse 4 para la hora";
+		Get 1 digits;
+		GoTo MODIFICATION when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+State MODIFICATION times 3 {
+	
+	if(DIGITS==1){
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==2){
+		GoTo ASKDAY when COMPLETED;
+	}
+	else if(DIGITS==3){
+		GoTo ASKMONTH when COMPLETED;
+	}
+	else if(DIGITS==4){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		Say "Disculpe, pero ha pulsado un digito equivocado.";
+		GoTo DONECONF when COMPLETED;
+	}
+	
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State TOOATTEMPTS {
+	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde";
+}
+
+State HANGUPERROR {
+	Say "Ha ocurrido un error, disculpe las molestias.";
+	HangUp;
+}
+   
+
+State END {
+	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
+	
+	if(CALLER==userNumber){
+		Email{subject : "Reservation",
+		from :"restaurant@dime.com",
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'.year.'a las '.hour." para".people.' personas'
+	} to userEmail;
+		//Send { "caller": userNumber, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	
+	}else{
+		//Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	}
+	 
+	HangUp;
+}<<<
+Document event: offset: 1863, length: 0, timestamp: 129
+text:>p<
+
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 12:33:03.823
+!MESSAGE org.eclipse.xtext.ui.editor.model.DocumentPartitioner  - Detected unexpected state in document partitioner. Please file a bug with the following information attached:
+Document content after the event was applied:
+>>>Application RestaurantPhoneMenu  
+
+String hour;
+String day;
+String month;  
+String people;		
+Const userNumber="+34656422095";	
+Const userEmail="totemteleko@gmail.com";
+Const year= 2012;
+ 
+State START  {  
+	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	GoTo ISCLIENT when COMPLETED;    
+}   
+ 
+State ISCLIENT {
+	Say 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.';
+	Get 1 digits;
+	GoTo CLIENTCONF when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+}
+  
+State CLIENTCONF times 3 {
+
+	if(DIGITS==1){
+		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==0){
+		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
+		HangUp;
+	}else{
+		GoTo ISCLIENT when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKPEOPLE {
+	Say "Diga el numero de comensales";
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKDAY when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKDAY{
+	String people=DIGITS;
+	Say "En que dia lo desea?" ;
+	Get 2 digits;
+	if(TIMES==0){
+		GoTo ASKMONTH when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKMONTH {
+	String day=DIGITS;
+	Say "En que mes desea realizar dicha reserva?" ;
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+
+State ASKHOUR {
+	String month=DIGITS;
+	Say "A que hora le conviene?" ;
+	Get 4 digits;
+	GoTo ASKDONE when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+} 
+State ASKDONE  {
+	if(LASTSTATE=="ASKHOUR"){
+		String hour=DIGITS;
+	}else if(LASTSTATE=="ASKDAY"){
+		String day=DIGITS;
+	}else if(LASTSTATE=="ASKPEOPLE"){
+		String peopl=DIGITS;
+	}else if(LASTSTATE=="A"){
+		String day=DIGITS;
+	}
+	
+	
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Say "Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.";
+	Get 1 digits;
+	GoTo DONECONF when COMPLETED;
+}
+ 
+State DONECONF times 3{
+	if(DIGITS==1){
+		GoTo END when COMPLETED;
+	}else if(DIGITS==0){
+		Say "Que dato desea modificar?";
+		Say "Pulse 1 para el numero de comensales.";
+		Say "Pulse 2 para el dia";
+		Say "Pulse 3 para el mes";
+		Say "Pulse 4 para la hora";
+		Get 1 digits;
+		GoTo MODIFICATION when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+State MODIFICATION times 3 {
+	
+	if(DIGITS==1){
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==2){
+		GoTo ASKDAY when COMPLETED;
+	}
+	else if(DIGITS==3){
+		GoTo ASKMONTH when COMPLETED;
+	}
+	else if(DIGITS==4){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		Say "Disculpe, pero ha pulsado un digito equivocado.";
+		GoTo DONECONF when COMPLETED;
+	}
+	
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State TOOATTEMPTS {
+	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde";
+}
+
+State HANGUPERROR {
+	Say "Ha ocurrido un error, disculpe las molestias.";
+	HangUp;
+}
+   
+
+State END {
+	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
+	
+	if(CALLER==userNumber){
+		Email{subject : "Reservation",
+		from :"restaurant@dime.com",
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'.year.'a las '.hour." para".people.' personas'
+	} to userEmail;
+		//Send { "caller": userNumber, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	
+	}else{
+		//Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	}
+	 
+	HangUp;
+}<<<
+Document event: offset: 1864, length: 0, timestamp: 130
+text:>l<
+
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 12:33:03.943
+!MESSAGE org.eclipse.xtext.ui.editor.model.DocumentPartitioner  - Detected unexpected state in document partitioner. Please file a bug with the following information attached:
+Document content after the event was applied:
+>>>Application RestaurantPhoneMenu  
+
+String hour;
+String day;
+String month;  
+String people;		
+Const userNumber="+34656422095";	
+Const userEmail="totemteleko@gmail.com";
+Const year= 2012;
+ 
+State START  {  
+	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	GoTo ISCLIENT when COMPLETED;    
+}   
+ 
+State ISCLIENT {
+	Say 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.';
+	Get 1 digits;
+	GoTo CLIENTCONF when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+}
+  
+State CLIENTCONF times 3 {
+
+	if(DIGITS==1){
+		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==0){
+		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
+		HangUp;
+	}else{
+		GoTo ISCLIENT when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKPEOPLE {
+	Say "Diga el numero de comensales";
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKDAY when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKDAY{
+	String people=DIGITS;
+	Say "En que dia lo desea?" ;
+	Get 2 digits;
+	if(TIMES==0){
+		GoTo ASKMONTH when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKMONTH {
+	String day=DIGITS;
+	Say "En que mes desea realizar dicha reserva?" ;
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+
+State ASKHOUR {
+	String month=DIGITS;
+	Say "A que hora le conviene?" ;
+	Get 4 digits;
+	GoTo ASKDONE when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+} 
+State ASKDONE  {
+	if(LASTSTATE=="ASKHOUR"){
+		String hour=DIGITS;
+	}else if(LASTSTATE=="ASKDAY"){
+		String day=DIGITS;
+	}else if(LASTSTATE=="ASKPEOPLE"){
+		String people=DIGITS;
+	}else if(LASTSTATE=="A"){
+		String day=DIGITS;
+	}
+	
+	
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Say "Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.";
+	Get 1 digits;
+	GoTo DONECONF when COMPLETED;
+}
+ 
+State DONECONF times 3{
+	if(DIGITS==1){
+		GoTo END when COMPLETED;
+	}else if(DIGITS==0){
+		Say "Que dato desea modificar?";
+		Say "Pulse 1 para el numero de comensales.";
+		Say "Pulse 2 para el dia";
+		Say "Pulse 3 para el mes";
+		Say "Pulse 4 para la hora";
+		Get 1 digits;
+		GoTo MODIFICATION when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+State MODIFICATION times 3 {
+	
+	if(DIGITS==1){
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==2){
+		GoTo ASKDAY when COMPLETED;
+	}
+	else if(DIGITS==3){
+		GoTo ASKMONTH when COMPLETED;
+	}
+	else if(DIGITS==4){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		Say "Disculpe, pero ha pulsado un digito equivocado.";
+		GoTo DONECONF when COMPLETED;
+	}
+	
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State TOOATTEMPTS {
+	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde";
+}
+
+State HANGUPERROR {
+	Say "Ha ocurrido un error, disculpe las molestias.";
+	HangUp;
+}
+   
+
+State END {
+	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
+	
+	if(CALLER==userNumber){
+		Email{subject : "Reservation",
+		from :"restaurant@dime.com",
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'.year.'a las '.hour." para".people.' personas'
+	} to userEmail;
+		//Send { "caller": userNumber, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	
+	}else{
+		//Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	}
+	 
+	HangUp;
+}<<<
+Document event: offset: 1865, length: 0, timestamp: 131
+text:>e<
+
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 12:33:21.829
+!MESSAGE org.eclipse.xtext.ui.editor.model.DocumentPartitioner  - Detected unexpected state in document partitioner. Please file a bug with the following information attached:
+Document content after the event was applied:
+>>>Application RestaurantPhoneMenu  
+
+String hour;
+String day;
+String month;  
+String people;		
+Const userNumber="+34656422095";	
+Const userEmail="totemteleko@gmail.com";
+Const year= 2012;
+ 
+State START  {  
+	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	GoTo ISCLIENT when COMPLETED;    
+}   
+ 
+State ISCLIENT {
+	Say 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.';
+	Get 1 digits;
+	GoTo CLIENTCONF when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+}
+  
+State CLIENTCONF times 3 {
+
+	if(DIGITS==1){
+		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==0){
+		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
+		HangUp;
+	}else{
+		GoTo ISCLIENT when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKPEOPLE {
+	Say "Diga el numero de comensales";
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKDAY when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKDAY{
+	String people=DIGITS;
+	Say "En que dia lo desea?" ;
+	Get 2 digits;
+	if(TIMES==0){
+		GoTo ASKMONTH when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKMONTH {
+	String day=DIGITS;
+	Say "En que mes desea realizar dicha reserva?" ;
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+
+State ASKHOUR {
+	String month=DIGITS;
+	Say "A que hora le conviene?" ;
+	Get 4 digits;
+	GoTo ASKDONE when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+} 
+State ASKDONE  {
+	if(LASTSTATE=="ASKHOUR"){
+		String hour=DIGITS;
+	}else if(LASTSTATE=="ASKDAY"){
+		String day=DIGITS;
+	}else if(LASTSTATE=="ASKPEOPLE"){
+		String people=DIGITS;
+	}else if(LASTSTATE=="ASKMONTH"){
+		String m=DIGITS;
+	}
+	
+	
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Say "Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.";
+	Get 1 digits;
+	GoTo DONECONF when COMPLETED;
+}
+ 
+State DONECONF times 3{
+	if(DIGITS==1){
+		GoTo END when COMPLETED;
+	}else if(DIGITS==0){
+		Say "Que dato desea modificar?";
+		Say "Pulse 1 para el numero de comensales.";
+		Say "Pulse 2 para el dia";
+		Say "Pulse 3 para el mes";
+		Say "Pulse 4 para la hora";
+		Get 1 digits;
+		GoTo MODIFICATION when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+State MODIFICATION times 3 {
+	
+	if(DIGITS==1){
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==2){
+		GoTo ASKDAY when COMPLETED;
+	}
+	else if(DIGITS==3){
+		GoTo ASKMONTH when COMPLETED;
+	}
+	else if(DIGITS==4){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		Say "Disculpe, pero ha pulsado un digito equivocado.";
+		GoTo DONECONF when COMPLETED;
+	}
+	
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State TOOATTEMPTS {
+	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde";
+}
+
+State HANGUPERROR {
+	Say "Ha ocurrido un error, disculpe las molestias.";
+	HangUp;
+}
+   
+
+State END {
+	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
+	
+	if(CALLER==userNumber){
+		Email{subject : "Reservation",
+		from :"restaurant@dime.com",
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'.year.'a las '.hour." para".people.' personas'
+	} to userEmail;
+		//Send { "caller": userNumber, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	
+	}else{
+		//Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	}
+	 
+	HangUp;
+}<<<
+Document event: offset: 1918, length: 0, timestamp: 147
+text:>m<
+
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 12:33:21.949
+!MESSAGE org.eclipse.xtext.ui.editor.model.DocumentPartitioner  - Detected unexpected state in document partitioner. Please file a bug with the following information attached:
+Document content after the event was applied:
+>>>Application RestaurantPhoneMenu  
+
+String hour;
+String day;
+String month;  
+String people;		
+Const userNumber="+34656422095";	
+Const userEmail="totemteleko@gmail.com";
+Const year= 2012;
+ 
+State START  {  
+	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	GoTo ISCLIENT when COMPLETED;    
+}   
+ 
+State ISCLIENT {
+	Say 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.';
+	Get 1 digits;
+	GoTo CLIENTCONF when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+}
+  
+State CLIENTCONF times 3 {
+
+	if(DIGITS==1){
+		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==0){
+		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
+		HangUp;
+	}else{
+		GoTo ISCLIENT when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKPEOPLE {
+	Say "Diga el numero de comensales";
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKDAY when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKDAY{
+	String people=DIGITS;
+	Say "En que dia lo desea?" ;
+	Get 2 digits;
+	if(TIMES==0){
+		GoTo ASKMONTH when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKMONTH {
+	String day=DIGITS;
+	Say "En que mes desea realizar dicha reserva?" ;
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+
+State ASKHOUR {
+	String month=DIGITS;
+	Say "A que hora le conviene?" ;
+	Get 4 digits;
+	GoTo ASKDONE when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+} 
+State ASKDONE  {
+	if(LASTSTATE=="ASKHOUR"){
+		String hour=DIGITS;
+	}else if(LASTSTATE=="ASKDAY"){
+		String day=DIGITS;
+	}else if(LASTSTATE=="ASKPEOPLE"){
+		String people=DIGITS;
+	}else if(LASTSTATE=="ASKMONTH"){
+		String mo=DIGITS;
+	}
+	
+	
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Say "Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.";
+	Get 1 digits;
+	GoTo DONECONF when COMPLETED;
+}
+ 
+State DONECONF times 3{
+	if(DIGITS==1){
+		GoTo END when COMPLETED;
+	}else if(DIGITS==0){
+		Say "Que dato desea modificar?";
+		Say "Pulse 1 para el numero de comensales.";
+		Say "Pulse 2 para el dia";
+		Say "Pulse 3 para el mes";
+		Say "Pulse 4 para la hora";
+		Get 1 digits;
+		GoTo MODIFICATION when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+State MODIFICATION times 3 {
+	
+	if(DIGITS==1){
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==2){
+		GoTo ASKDAY when COMPLETED;
+	}
+	else if(DIGITS==3){
+		GoTo ASKMONTH when COMPLETED;
+	}
+	else if(DIGITS==4){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		Say "Disculpe, pero ha pulsado un digito equivocado.";
+		GoTo DONECONF when COMPLETED;
+	}
+	
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State TOOATTEMPTS {
+	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde";
+}
+
+State HANGUPERROR {
+	Say "Ha ocurrido un error, disculpe las molestias.";
+	HangUp;
+}
+   
+
+State END {
+	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
+	
+	if(CALLER==userNumber){
+		Email{subject : "Reservation",
+		from :"restaurant@dime.com",
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'.year.'a las '.hour." para".people.' personas'
+	} to userEmail;
+		//Send { "caller": userNumber, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	
+	}else{
+		//Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	}
+	 
+	HangUp;
+}<<<
+Document event: offset: 1919, length: 0, timestamp: 148
+text:>o<
+
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 12:33:22.205
+!MESSAGE org.eclipse.xtext.ui.editor.model.DocumentPartitioner  - Detected unexpected state in document partitioner. Please file a bug with the following information attached:
+Document content after the event was applied:
+>>>Application RestaurantPhoneMenu  
+
+String hour;
+String day;
+String month;  
+String people;		
+Const userNumber="+34656422095";	
+Const userEmail="totemteleko@gmail.com";
+Const year= 2012;
+ 
+State START  {  
+	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	GoTo ISCLIENT when COMPLETED;    
+}   
+ 
+State ISCLIENT {
+	Say 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.';
+	Get 1 digits;
+	GoTo CLIENTCONF when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+}
+  
+State CLIENTCONF times 3 {
+
+	if(DIGITS==1){
+		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==0){
+		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
+		HangUp;
+	}else{
+		GoTo ISCLIENT when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKPEOPLE {
+	Say "Diga el numero de comensales";
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKDAY when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKDAY{
+	String people=DIGITS;
+	Say "En que dia lo desea?" ;
+	Get 2 digits;
+	if(TIMES==0){
+		GoTo ASKMONTH when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKMONTH {
+	String day=DIGITS;
+	Say "En que mes desea realizar dicha reserva?" ;
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+
+State ASKHOUR {
+	String month=DIGITS;
+	Say "A que hora le conviene?" ;
+	Get 4 digits;
+	GoTo ASKDONE when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+} 
+State ASKDONE  {
+	if(LASTSTATE=="ASKHOUR"){
+		String hour=DIGITS;
+	}else if(LASTSTATE=="ASKDAY"){
+		String day=DIGITS;
+	}else if(LASTSTATE=="ASKPEOPLE"){
+		String people=DIGITS;
+	}else if(LASTSTATE=="ASKMONTH"){
+		String mon=DIGITS;
+	}
+	
+	
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Say "Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.";
+	Get 1 digits;
+	GoTo DONECONF when COMPLETED;
+}
+ 
+State DONECONF times 3{
+	if(DIGITS==1){
+		GoTo END when COMPLETED;
+	}else if(DIGITS==0){
+		Say "Que dato desea modificar?";
+		Say "Pulse 1 para el numero de comensales.";
+		Say "Pulse 2 para el dia";
+		Say "Pulse 3 para el mes";
+		Say "Pulse 4 para la hora";
+		Get 1 digits;
+		GoTo MODIFICATION when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+State MODIFICATION times 3 {
+	
+	if(DIGITS==1){
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==2){
+		GoTo ASKDAY when COMPLETED;
+	}
+	else if(DIGITS==3){
+		GoTo ASKMONTH when COMPLETED;
+	}
+	else if(DIGITS==4){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		Say "Disculpe, pero ha pulsado un digito equivocado.";
+		GoTo DONECONF when COMPLETED;
+	}
+	
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State TOOATTEMPTS {
+	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde";
+}
+
+State HANGUPERROR {
+	Say "Ha ocurrido un error, disculpe las molestias.";
+	HangUp;
+}
+   
+
+State END {
+	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
+	
+	if(CALLER==userNumber){
+		Email{subject : "Reservation",
+		from :"restaurant@dime.com",
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'.year.'a las '.hour." para".people.' personas'
+	} to userEmail;
+		//Send { "caller": userNumber, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	
+	}else{
+		//Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	}
+	 
+	HangUp;
+}<<<
+Document event: offset: 1920, length: 0, timestamp: 149
+text:>n<
+
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 12:33:22.549
+!MESSAGE org.eclipse.xtext.ui.editor.model.DocumentPartitioner  - Detected unexpected state in document partitioner. Please file a bug with the following information attached:
+Document content after the event was applied:
+>>>Application RestaurantPhoneMenu  
+
+String hour;
+String day;
+String month;  
+String people;		
+Const userNumber="+34656422095";	
+Const userEmail="totemteleko@gmail.com";
+Const year= 2012;
+ 
+State START  {  
+	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	GoTo ISCLIENT when COMPLETED;    
+}   
+ 
+State ISCLIENT {
+	Say 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.';
+	Get 1 digits;
+	GoTo CLIENTCONF when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+}
+  
+State CLIENTCONF times 3 {
+
+	if(DIGITS==1){
+		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==0){
+		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
+		HangUp;
+	}else{
+		GoTo ISCLIENT when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKPEOPLE {
+	Say "Diga el numero de comensales";
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKDAY when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKDAY{
+	String people=DIGITS;
+	Say "En que dia lo desea?" ;
+	Get 2 digits;
+	if(TIMES==0){
+		GoTo ASKMONTH when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKMONTH {
+	String day=DIGITS;
+	Say "En que mes desea realizar dicha reserva?" ;
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+
+State ASKHOUR {
+	String month=DIGITS;
+	Say "A que hora le conviene?" ;
+	Get 4 digits;
+	GoTo ASKDONE when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+} 
+State ASKDONE  {
+	if(LASTSTATE=="ASKHOUR"){
+		String hour=DIGITS;
+	}else if(LASTSTATE=="ASKDAY"){
+		String day=DIGITS;
+	}else if(LASTSTATE=="ASKPEOPLE"){
+		String people=DIGITS;
+	}else if(LASTSTATE=="ASKMONTH"){
+		String mont=DIGITS;
+	}
+	
+	
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Say "Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.";
+	Get 1 digits;
+	GoTo DONECONF when COMPLETED;
+}
+ 
+State DONECONF times 3{
+	if(DIGITS==1){
+		GoTo END when COMPLETED;
+	}else if(DIGITS==0){
+		Say "Que dato desea modificar?";
+		Say "Pulse 1 para el numero de comensales.";
+		Say "Pulse 2 para el dia";
+		Say "Pulse 3 para el mes";
+		Say "Pulse 4 para la hora";
+		Get 1 digits;
+		GoTo MODIFICATION when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+State MODIFICATION times 3 {
+	
+	if(DIGITS==1){
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==2){
+		GoTo ASKDAY when COMPLETED;
+	}
+	else if(DIGITS==3){
+		GoTo ASKMONTH when COMPLETED;
+	}
+	else if(DIGITS==4){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		Say "Disculpe, pero ha pulsado un digito equivocado.";
+		GoTo DONECONF when COMPLETED;
+	}
+	
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State TOOATTEMPTS {
+	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde";
+}
+
+State HANGUPERROR {
+	Say "Ha ocurrido un error, disculpe las molestias.";
+	HangUp;
+}
+   
+
+State END {
+	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
+	
+	if(CALLER==userNumber){
+		Email{subject : "Reservation",
+		from :"restaurant@dime.com",
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'.year.'a las '.hour." para".people.' personas'
+	} to userEmail;
+		//Send { "caller": userNumber, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	
+	}else{
+		//Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	}
+	 
+	HangUp;
+}<<<
+Document event: offset: 1921, length: 0, timestamp: 150
+text:>t<
+
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 12:33:22.760
+!MESSAGE org.eclipse.xtext.ui.editor.model.DocumentPartitioner  - Detected unexpected state in document partitioner. Please file a bug with the following information attached:
+Document content after the event was applied:
+>>>Application RestaurantPhoneMenu  
+
+String hour;
+String day;
+String month;  
+String people;		
+Const userNumber="+34656422095";	
+Const userEmail="totemteleko@gmail.com";
+Const year= 2012;
+ 
+State START  {  
+	Say "Bienvenido al servicio de atencion especial de restaurantes de Telcodev.";
+	GoTo ISCLIENT when COMPLETED;    
+}   
+ 
+State ISCLIENT {
+	Say 'Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.';
+	Get 1 digits;
+	GoTo CLIENTCONF when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+}
+  
+State CLIENTCONF times 3 {
+
+	if(DIGITS==1){
+		Say "De acuerdo. Ahora procederemos a la realizacion de la solicitud. ";
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==0){
+		Say "De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.";
+		HangUp;
+	}else{
+		GoTo ISCLIENT when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKPEOPLE {
+	Say "Diga el numero de comensales";
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKDAY when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKDAY{
+	String people=DIGITS;
+	Say "En que dia lo desea?" ;
+	Get 2 digits;
+	if(TIMES==0){
+		GoTo ASKMONTH when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	
+	GoTo HANGUPERROR when ERROR;
+}
+
+State ASKMONTH {
+	String day=DIGITS;
+	Say "En que mes desea realizar dicha reserva?" ;
+	Get 1 digits;
+	if(TIMES==0){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		GoTo ASKDONE when COMPLETED;
+	}
+	GoTo HANGUPERROR when ERROR;
+}
+
+
+State ASKHOUR {
+	String month=DIGITS;
+	Say "A que hora le conviene?" ;
+	Get 4 digits;
+	GoTo ASKDONE when COMPLETED;
+	GoTo HANGUPERROR when ERROR;
+} 
+State ASKDONE  {
+	if(LASTSTATE=="ASKHOUR"){
+		String hour=DIGITS;
+	}else if(LASTSTATE=="ASKDAY"){
+		String day=DIGITS;
+	}else if(LASTSTATE=="ASKPEOPLE"){
+		String people=DIGITS;
+	}else if(LASTSTATE=="ASKMONTH"){
+		String month=DIGITS;
+	}
+	
+	
+	Say 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'."2012".'a las '.hour." para".people.' personas.';
+	Say "Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.";
+	Get 1 digits;
+	GoTo DONECONF when COMPLETED;
+}
+ 
+State DONECONF times 3{
+	if(DIGITS==1){
+		GoTo END when COMPLETED;
+	}else if(DIGITS==0){
+		Say "Que dato desea modificar?";
+		Say "Pulse 1 para el numero de comensales.";
+		Say "Pulse 2 para el dia";
+		Say "Pulse 3 para el mes";
+		Say "Pulse 4 para la hora";
+		Get 1 digits;
+		GoTo MODIFICATION when COMPLETED;
+	}
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+State MODIFICATION times 3 {
+	
+	if(DIGITS==1){
+		GoTo ASKPEOPLE when COMPLETED;
+	}else if(DIGITS==2){
+		GoTo ASKDAY when COMPLETED;
+	}
+	else if(DIGITS==3){
+		GoTo ASKMONTH when COMPLETED;
+	}
+	else if(DIGITS==4){
+		GoTo ASKHOUR when COMPLETED;
+	}else{
+		Say "Disculpe, pero ha pulsado un digito equivocado.";
+		GoTo DONECONF when COMPLETED;
+	}
+	
+	GoTo TOOATTEMPTS when TIMES;
+	GoTo HANGUPERROR when ERROR;
+}
+
+State TOOATTEMPTS {
+	Say "Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde";
+}
+
+State HANGUPERROR {
+	Say "Ha ocurrido un error, disculpe las molestias.";
+	HangUp;
+}
+   
+
+State END {
+	Say "De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.";
+	
+	if(CALLER==userNumber){
+		Email{subject : "Reservation",
+		from :"restaurant@dime.com",
+		message : 'Usted ha solicitado una reserva en nuestro restaurante el dia '.day.'de'.month.'de'.year.'a las '.hour." para".people.' personas'
+	} to userEmail;
+		//Send { "caller": userNumber, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	
+	}else{
+		//Send { "caller": CALLER, "day": day, "hour": hour, "month": month, "people": people, "year":year} to "http://s.com";
+	}
+	 
+	HangUp;
+}<<<
+Document event: offset: 1922, length: 0, timestamp: 151
+text:>h<
+
+
+!SESSION 2012-09-24 12:41:10.730 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 12:41:15.527
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 12:56:41.603 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 12:56:46.443
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 13:08:44.646 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 13:08:49.434
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 13:17:03.697 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 13:17:08.590
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 13:20:17.848 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 13:20:22.681
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 13:20:36.225
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 13:20:36.225
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-24 13:20:36.226
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 13:20:36.226
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 13:20:36.226
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-24 13:20:36.238
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-24 13:20:36.238
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-24 13:20:36.239
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 13:20:36.239
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SESSION 2012-09-24 13:20:48.304 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 13:20:53.142
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 13:29:29.129 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 13:29:34.219
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 13:38:08.947 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 13:38:13.792
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 13:40:37.087
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 13:40:37.088
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-24 13:40:37.089
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 13:40:37.089
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 13:40:37.089
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-24 13:40:37.094
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-24 13:40:37.095
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-24 13:40:37.095
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 13:40:37.095
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SESSION 2012-09-24 13:55:07.289 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 13:55:12.137
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 13:55:20.392
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 13:55:20.392
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-24 13:55:20.394
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 13:55:20.394
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 13:55:20.394
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-24 13:55:20.419
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-24 13:55:20.419
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-24 13:55:20.419
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 13:55:20.419
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SESSION 2012-09-24 13:55:38.252 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 13:55:43.231
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 14:10:51.379 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 14:10:56.260
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 14:38:04.076 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-24 14:38:06.530
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 14:38:09.543
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 14:38:20.546
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:321)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:396)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:124)
+	at org.eclipse.xtext.builder.impl.BuildScheduler$BuildJob.run(BuildScheduler.java:163)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 14:38:20.547
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-24 14:38:20.548
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:321)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:396)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:124)
+	at org.eclipse.xtext.builder.impl.BuildScheduler$BuildJob.run(BuildScheduler.java:163)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 14:38:20.549
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 14:38:20.549
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.xtext.builder 4 1 2012-09-24 14:38:20.575
+!MESSAGE 
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-24 14:38:20.575
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:321)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:396)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:124)
+	at org.eclipse.xtext.builder.impl.BuildScheduler$BuildJob.run(BuildScheduler.java:163)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-24 14:38:20.575
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 14:38:20.576
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SESSION 2012-09-24 14:39:03.318 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 14:39:08.154
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 14:39:22.830
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 14:39:22.830
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-24 14:39:22.831
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 14:39:22.831
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 14:39:22.831
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-24 14:39:22.835
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-24 14:39:22.835
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-24 14:39:22.836
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 14:39:22.836
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.apache.log4j 4 0 2012-09-24 14:39:46.512
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 14:39:46.512
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-24 14:39:46.513
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 14:39:46.513
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 14:39:46.513
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-24 14:39:46.515
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-24 14:39:46.515
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:260)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-24 14:39:46.515
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-24 14:39:46.515
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SESSION 2012-09-24 20:25:11.813 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 20:25:16.987
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 21:19:41.183 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 21:19:47.114
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-24 23:29:37.013 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-24 23:29:42.067
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-25 01:35:47.125 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-25 01:35:49.246
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-25 01:35:52.182
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-25 01:44:32.370 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-25 01:44:37.268
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-25 01:45:41.526 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-25 01:45:46.423
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-25 01:51:39.689 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-25 01:51:44.536
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-25 01:57:27.823 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-25 01:57:32.692
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-25 01:57:48.708 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-25 01:57:53.751
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-25 02:02:19.969 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-25 02:02:24.816
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
