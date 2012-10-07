@@ -1,14 +1,20 @@
 <?xml version="1.0" ?> 
 <config>
-	<language>twilio</language>
+	<language>tropo</language>
 	<scriptlanguage>php</scriptlanguage> 
-	<url>http://www.gsi.dit.upm.es/~rjimenez/app/index.php</url>
+	<url>http://yourserver.com/</url>
 	<tropo>
-		<voice>leonor</voice>
+		<voice>susan</voice>
+        <user>user</user>
+        <password>telcodev</password>
+        <token>XXXXXXXXXXXXXXXXXXXXX</token>
 	</tropo>
 	<twilio>
 		<language>en</language>
 		<voice>man</voice>
+        <number>+XXXXXXXXXXXX</number>
+        <accountSid>XXXXXXXXXXXXXXXXXXXXX</accountSid>
+        <token>XXXXXXXXXXXXXXXXXXXXX</token>
 	</twilio>
 </config>
 
