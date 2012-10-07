@@ -1,0 +1,12 @@
+<?php 
+
+// Defining global constants and variables
+
+define("userNumber","+34680809809");
+define("userEmail","user@mail.com");
+define("year",2012);
+
+
+
+
+?>

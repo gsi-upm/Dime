@@ -4,7 +4,7 @@ import java.util.HashSet
 import java.util.Set
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
-import org.telcodev.dsl.dime.Ask 
+//import org.telcodev.dsl.dime.Ask 
 //import org.telcodev.dsl.dime.Assigment
 import org.telcodev.dsl.dime.Block
 import org.telcodev.dsl.dime.BoolLiteral
@@ -36,7 +36,6 @@ import org.telcodev.dsl.dime.StringLiteral
 import org.telcodev.dsl.dime.StringVariable
 import org.telcodev.dsl.dime.Transition
 import org.telcodev.dsl.dime.VoiceTag
-
 
 
 import org.telcodev.dsl.dime.SendBlock
@@ -74,7 +73,7 @@ class Twilio_php_generator {
 	
 	private static Record record;
 	private static GetDigits getdigits;
-	
+	private static int timeout;
 	
 	
 	
@@ -116,8 +115,6 @@ class Twilio_php_generator {
 		fsa.generateFile('res/Services/Twilio/RestException.php', CopyFile::readFile('res/twilio_php/Services/Twilio/RestException.php'))
 		fsa.generateFile('res/Services/Twilio/TinyHttp.php', CopyFile::readFile('res/twilio_php/Services/Twilio/TinyHttp.php'))
 		fsa.generateFile('res/Services/Twilio/Twiml.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Twiml.php'))
-		
-		
 		fsa.generateFile('res/Services/Twilio/Rest/Account.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Account.php'))
 		fsa.generateFile('res/Services/Twilio/Rest/Accounts.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Accounts.php'))
 		fsa.generateFile('res/Services/Twilio/Rest/Application.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Application.php'))
@@ -139,7 +136,7 @@ class Twilio_php_generator {
 		fsa.generateFile('res/Services/Twilio/Rest/Notification.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Notification.php'))
 		fsa.generateFile('res/Services/Twilio/Rest/Notifications.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Notifications.php'))
 		fsa.generateFile('res/Services/Twilio/Rest/OutgoingCallerId.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/OutgoingCallerId.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/OutgoingCallerIds.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/OutgoingCallerId.php'))
+		fsa.generateFile('res/Services/Twilio/Rest/OutgoingCallerIds.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/OutgoingCallerIds.php'))
 		fsa.generateFile('res/Services/Twilio/Rest/Participant.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Participant.php'))
 		fsa.generateFile('res/Services/Twilio/Rest/Participants.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Participants.php'))
 		fsa.generateFile('res/Services/Twilio/Rest/Queue.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Queue.php'))
@@ -169,7 +166,7 @@ class Twilio_php_generator {
 		System::out.println("Creating "+"call_dime"+".php file");
 		
 		fsa.generateFile("call_dime.php",declareCall())
-		fsa.generateFile("res/token.php", tokenFile)
+		fsa.generateFile("token.php", tokenFile)
 		for(state :( resource.contents.head as Document).sta){
 				variablesId.add("times_"+state.name+"_dime")
 		}
@@ -217,7 +214,6 @@ $url= "«url»start.php";
 		curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_exec($curl_handle);
 		curl_close($curl_handle);
-
 echo "<h1>Twilio token, from a Dime application.</h1>";
 
 ?> '''}
@@ -277,6 +273,7 @@ echo "<h1>Twilio token, from a Dime application.</h1>";
 		System::out.println("Generating "+elem.name.toUpperCase+" state.");
 		getdigits=null;
 		record=null;
+		timeout=elem.timeout;
 	
 			 
 '''
@@ -554,19 +551,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		'''«elem.name»'''
 	}
 	
-// Variables and assigments
 
-	//def static declareAssigment(Assigment elem){
-		
-	//	if(variables.contains(declareVars(elem.va).toString())){
-	//		'''$«declareVars(elem.va)»=«declareRight(elem.right)»; 
-//$_SESSION['«declareVars(elem.va)»'] = «declareVars(elem.va)»'''
-	//	}
-	//	else{
-	//		'''$«declareVars(elem.va)»=«declareRight(elem.right)»'''
-	//	}
-		
-	//}
 	
 	
 	def static declareVariable(StringVariable elem){
@@ -609,7 +594,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 			
 		}else {
 			
-		//	'''«declareConstantLiteral(elem)»'''
+		
 		}
 		
 	}
@@ -640,11 +625,6 @@ def static dispatch declareAbstractElement(VoiceTag elem){
  		
  		} 	
  		
- 		
- 		else if(elem.name.equals('TIME')){
- 			'''$time'''
- 		} 	
- 		
  		else{
  			''''''
  		}
@@ -659,7 +639,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	'''// Send implementation for HTTP GET with cURL.
 	
 			$curl_handle=curl_init();
-			curl_setopt($curl_handle,CURLOPT_URL,«declareConcatenation(elem.url)»«IF elem.params!=null»+"?".«declareSendBlock(elem.params)»«ENDIF»);
+			curl_setopt($curl_handle,CURLOPT_URL,«declareConcatenation(elem.url)»«IF elem.params!=null»."?".«declareSendBlock(elem.params)»«ENDIF»);
 			curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
 			curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 			curl_exec($curl_handle);
@@ -681,27 +661,28 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	}
 	
 	def static declareParam(Param elem){
-		'''"«elem.name»="+«declareConcatenation(elem.value)»'''
+		'''"«elem.name»=".«declareConcatenation(elem.value)»'''
 	}
 	
-	// FALTAN EVENTOS
+	
 	
 	
 	def static dispatch declareVoiceTag( Say elem){
 		'''echo "<Say voice=\"«voice»\" language=\"«twilioLanguage»\">".«declareConcatenation(elem.that)»."</Say>\n"; '''
 	}
-	//FALTA HACER LA PREGUNTA
 	
-	def static dispatch declareVoiceTag( Ask elem){
-		
-		'''if(isset($completedurl_dime)){
-$url_dime=$completedurl_dime."?laststate_dime=«name»";
-«saveGlobalVariableXML("url_dime")»
-echo "<Record transcribe=\"true\" transcribeCallback=\"".$url_dime."\" /> \n";
-}
-			'''
-	}
 	
+	
+//	def static dispatch declareVoiceTag( Ask elem){
+//		
+//		'''if(isset($completedurl_dime)){
+//$url_dime=$completedurl_dime."?laststate_dime=«name»";
+//«saveGlobalVariableXML("url_dime")»
+//echo "<Record transcribe=\"true\" transcribeCallback=\"".$url_dime."\" /> \n";
+//}
+//			'''
+//	}
+//	
 	
 	def static dispatch declareVoiceTag( Play elem){
 		'''echo "<Play>".«declareConcatenation(elem.file)»."</Play>\n"; '''
@@ -717,7 +698,7 @@ echo "<Record transcribe=\"true\" transcribeCallback=\"".$url_dime."\" /> \n";
 	echo "</Response>";
 	exit();
 }else{
-$recordtag_dime=TRUE;
+	$recordtag_dime=TRUE;
 }
 		'''
 	}
@@ -728,8 +709,7 @@ $recordtag_dime=TRUE;
 		'''echo "<Hangup /> \n"; '''
 	}
 	
-	//FALTA DECLARAR LA VOICETAG SAYa
-	// twilio envia a la direccion.
+	
 	
 	//
 	def static dispatch declareVoiceTag( GetDigits elem){
@@ -737,7 +717,7 @@ $recordtag_dime=TRUE;
 		'''if(isset($completedurl_dime)){
 	$url_dime=$completedurl_dime."?laststate_dime=«name»";
 	«saveGlobalVariableXML("url_dime")»
-	echo "<Gather action=\"".$url_dime."\"  numDigits=\"«elem.numDigits»\" ></Gather>";
+	echo "<Gather action=\"".$url_dime."\"  «IF elem.numDigits!=0»numDigits=\"«elem.numDigits»\" «ENDIF»«IF timeout!=0»timeout=\""."«timeout»"."\"«ENDIF» ></Gather>";
 	echo "</Response>";
 	exit();
 }else{
@@ -746,7 +726,7 @@ $recordtag_dime=TRUE;
 	'''
 	}
 	def static dispatch declareVoiceTag( Dial elem){
-		'''echo "<Dial callerId=\""."«number»"."\">\n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n";'''
+		'''echo "<Dial callerId=\""."«number»"."\" «IF timeout!=0»timeout=\""."«timeout»"."\"«ENDIF»> \n <Number>".«declareConcatenation(elem.to)»."</Number> \n </Dial> \n";'''
 	}
 	def static dispatch declareVoiceTag( Call elem){
 		
@@ -827,9 +807,7 @@ if(!isset($_REQUEST['CallStatus'])){
 	def static dispatch declareStatement(NumVariable elem){
 		'''«declareVariable(elem)»;'''
 	}  
-	//def static dispatch declareStatement(Assigment elem){
-	//	'''«declareAssigment(elem)»;'''
-	//}
+
 	
 	def static dispatch declareStatement(BoolVariable elem){
 		'''«declareVariable(elem)»;'''

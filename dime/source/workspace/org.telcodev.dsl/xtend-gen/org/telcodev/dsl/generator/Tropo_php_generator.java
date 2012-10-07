@@ -13,7 +13,6 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.telcodev.dsl.dime.AbstractElement;
-import org.telcodev.dsl.dime.Ask;
 import org.telcodev.dsl.dime.Block;
 import org.telcodev.dsl.dime.BoolExpression;
 import org.telcodev.dsl.dime.BoolLiteral;
@@ -89,6 +88,8 @@ public class Tropo_php_generator {
   
   private static Set<String> constantsId;
   
+  private static int timeout;
+  
   public static void generateTropoPhp(final Resource resource, final IFileSystemAccess fsa, final Config config) {
     Tropo _tropo = config.getTropo();
     String _voice = _tropo.getVoice();
@@ -162,10 +163,8 @@ public class Tropo_php_generator {
     fsa.generateFile(_plus_4, _tropoPHP);
     CharSequence _declareSignal = Tropo_php_generator.declareSignal();
     fsa.generateFile("res/signals.php", _declareSignal);
-    CharSequence _transcription = Tropo_php_generator.transcription();
-    fsa.generateFile("res/transcription.php", _transcription);
     CharSequence _kenFile = Tropo_php_generator.tokenFile();
-    fsa.generateFile("res/token.php", _kenFile);
+    fsa.generateFile("token.php", _kenFile);
     System.out.println("Success.");
   }
   
@@ -217,24 +216,6 @@ public class Tropo_php_generator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("?>");
-    return _builder;
-  }
-  
-  public static CharSequence transcription() {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("<?php ");
-    _builder.newLine();
-    _builder.append("$file = fopen(\'transcription.txt\', \'w\'); ");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("$data = file_get_contents(\'php://input\'); ");
-    _builder.newLine();
-    _builder.append("fwrite($file, $data); ");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("fclose($file); ");
-    _builder.newLine();
-    _builder.append("?> ");
     return _builder;
   }
   
@@ -413,6 +394,8 @@ public class Tropo_php_generator {
       String _plus = ("Generating " + Tropo_php_generator.name);
       String _plus_1 = (_plus + " state.");
       System.out.println(_plus_1);
+      int _timeout = elem.getTimeout();
+      Tropo_php_generator.timeout = _timeout;
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("// State ");
       String _name_1 = elem.getName();
@@ -526,7 +509,9 @@ public class Tropo_php_generator {
           _builder.append("\t");
           _builder.append("$urltimes = \"");
           _builder.append(Tropo_php_generator.url, "		");
-          _builder.append("res/signals.php?signal_dime=attemptsLimit&sessionID_dime=\".$_SESSION[\'sessionID_dime\'];");
+          _builder.append("res/signals.php?signal_dime=attemptsLimit");
+          _builder.append(Tropo_php_generator.name, "		");
+          _builder.append("&sessionID_dime=\".$_SESSION[\'sessionID_dime\'];");
           _builder.newLineIfNotEmpty();
           _builder.append("\t");
           _builder.append("\t");
@@ -1192,18 +1177,8 @@ public class Tropo_php_generator {
                   _builder_6.append("_dime\'])");
                   _xifexpression_6 = _builder_6;
                 } else {
-                  CharSequence _xifexpression_7 = null;
-                  String _name_7 = elem.getName();
-                  boolean _equals_7 = _name_7.equals("TIME");
-                  if (_equals_7) {
-                    StringConcatenation _builder_7 = new StringConcatenation();
-                    _builder_7.append("intval($result_dime->getSessionDuration())");
-                    _xifexpression_7 = _builder_7;
-                  } else {
-                    StringConcatenation _builder_8 = new StringConcatenation();
-                    _xifexpression_7 = _builder_8;
-                  }
-                  _xifexpression_6 = _xifexpression_7;
+                  StringConcatenation _builder_7 = new StringConcatenation();
+                  _xifexpression_6 = _builder_7;
                 }
                 _xifexpression_5 = _xifexpression_6;
               }
@@ -1238,7 +1213,7 @@ public class Tropo_php_generator {
       SendBlock _params = elem.getParams();
       boolean _notEquals = (!Objects.equal(_params, null));
       if (_notEquals) {
-        _builder.append("+\"?\".");
+        _builder.append(".\"?\".");
         SendBlock _params_1 = elem.getParams();
         CharSequence _declareSendBlock = Tropo_php_generator.declareSendBlock(_params_1);
         _builder.append(_declareSendBlock, "			");
@@ -1300,7 +1275,7 @@ public class Tropo_php_generator {
     _builder.append("\"");
     String _name = elem.getName();
     _builder.append(_name, "");
-    _builder.append("=\"+");
+    _builder.append("=\".");
     ConcatenationExpression _value = elem.getValue();
     CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_value);
     _builder.append(_declareConcatenation, "");
@@ -1315,23 +1290,9 @@ public class Tropo_php_generator {
     _builder.append(_declareConcatenation, "");
     _builder.append(", array(\"voice\"=>\"");
     _builder.append(Tropo_php_generator.voice, "");
-    _builder.append("\", \"allowSignals\"=>array(\"timeExceeded");
+    _builder.append("\", \"allowSignals\"=>array(\"attemptsLimit");
     _builder.append(Tropo_php_generator.name, "");
-    _builder.append("\", \"attemptsLimit\")))");
-    return _builder;
-  }
-  
-  protected static CharSequence _declareVoiceTag(final Ask elem) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("$tropo->record( array(\"say\" => ");
-    ConcatenationExpression _question = elem.getQuestion();
-    CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_question);
-    _builder.append(_declareConcatenation, "");
-    _builder.append(",  \"voice\"=>\"");
-    _builder.append(Tropo_php_generator.voice, "");
-    _builder.append("\", \"allowSignals\"=>array(\"timeExceeded");
-    _builder.append(Tropo_php_generator.name, "");
-    _builder.append("\", \"attemptsLimit\")))");
+    _builder.append("\")))");
     return _builder;
   }
   
@@ -1341,7 +1302,9 @@ public class Tropo_php_generator {
     ConcatenationExpression _file = elem.getFile();
     CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_file);
     _builder.append(_declareConcatenation, "");
-    _builder.append(", array(\"allowSignals\"=>array(\"timeExceeded\", \"attemptsLimit\")))");
+    _builder.append(", array(\"allowSignals\"=>array(\"attemptsLimit");
+    _builder.append(Tropo_php_generator.name, "");
+    _builder.append("\")))");
     return _builder;
   }
   
@@ -1367,9 +1330,16 @@ public class Tropo_php_generator {
     _builder.append("    ");
     _builder.append("\'terminator\' => \'#\',");
     _builder.newLine();
-    _builder.append("    ");
-    _builder.append("\'timeout\' => 10,");
-    _builder.newLine();
+    _builder.append("     ");
+    {
+      boolean _notEquals = (Tropo_php_generator.timeout != 0);
+      if (_notEquals) {
+        _builder.append(" \'timeout\'=> ");
+        _builder.append(Tropo_php_generator.timeout, "     ");
+        _builder.append(" , ");
+      }
+    }
+    _builder.newLineIfNotEmpty();
     _builder.append("    ");
     _builder.append("\'maxSilence\' => 3,");
     _builder.newLine();
@@ -1398,25 +1368,43 @@ public class Tropo_php_generator {
   
   protected static CharSequence _declareVoiceTag(final GetDigits elem) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("$tropo->ask(\"\",array(\"choices\"=>\"[");
-    int _numDigits = elem.getNumDigits();
-    _builder.append(_numDigits, "");
-    _builder.append(" DIGIT");
+    _builder.append("$tropo->ask(\"\",array(\"choices\"=> ");
     {
-      int _numDigits_1 = elem.getNumDigits();
-      boolean _greaterThan = (_numDigits_1 > 1);
-      if (_greaterThan) {
-        _builder.append("S");
+      int _numDigits = elem.getNumDigits();
+      boolean _notEquals = (_numDigits != 0);
+      if (_notEquals) {
+        _builder.append("\"[");
+        int _numDigits_1 = elem.getNumDigits();
+        _builder.append(_numDigits_1, "");
+        _builder.append(" DIGIT");
+        {
+          int _numDigits_2 = elem.getNumDigits();
+          boolean _greaterThan = (_numDigits_2 > 1);
+          if (_greaterThan) {
+            _builder.append("S");
+          }
+        }
+        _builder.append("]\"");
+      } else {
+        _builder.append("\"[1-50 DIGITS]\" ");
       }
     }
-    _builder.append("]\", \"terminator\" => \"#\", \"name\"=>\"");
+    _builder.append(", \"terminator\" => \"#\", \"name\"=>\"");
     String _name = elem.getName();
     _builder.append(_name, "");
     _builder.append("\", \"voice\"=>\"");
     _builder.append(Tropo_php_generator.voice, "");
-    _builder.append("\", \"allowSignals\"=>array(\"timeExceeded");
+    _builder.append("\", \"allowSignals\"=>array(\"attemptsLimit");
     _builder.append(Tropo_php_generator.name, "");
-    _builder.append("\", \"attemptsLimit\")))");
+    _builder.append("\") ");
+    {
+      boolean _notEquals_1 = (Tropo_php_generator.timeout != 0);
+      if (_notEquals_1) {
+        _builder.append(", \'timeout\'=> ");
+        _builder.append(Tropo_php_generator.timeout, "");
+      }
+    }
+    _builder.append("))");
     return _builder;
   }
   
@@ -1426,9 +1414,17 @@ public class Tropo_php_generator {
     ConcatenationExpression _to = elem.getTo();
     CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_to);
     _builder.append(_declareConcatenation, "");
-    _builder.append(", array( \"allowSignals\"=>array(\"timeExceeded");
+    _builder.append(", array( \"allowSignals\"=>array(\"attemptsLimit");
     _builder.append(Tropo_php_generator.name, "");
-    _builder.append("\", \"attemptsLimit\")))");
+    _builder.append("\") ");
+    {
+      boolean _notEquals = (Tropo_php_generator.timeout != 0);
+      if (_notEquals) {
+        _builder.append(", \'timeout\'=> ");
+        _builder.append(Tropo_php_generator.timeout, "");
+      }
+    }
+    _builder.append("))");
     return _builder;
   }
   
@@ -1438,9 +1434,17 @@ public class Tropo_php_generator {
     ConcatenationExpression _to = elem.getTo();
     CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_to);
     _builder.append(_declareConcatenation, "");
-    _builder.append(", array( \"allowSignals\"=>array(\"timeExceeded");
+    _builder.append(", array( \"allowSignals\"=>array(\"attemptsLimit");
     _builder.append(Tropo_php_generator.name, "");
-    _builder.append("\", \"attemptsLimit\")))");
+    _builder.append("\") ");
+    {
+      boolean _notEquals = (Tropo_php_generator.timeout != 0);
+      if (_notEquals) {
+        _builder.append(", \'timeout\'=> ");
+        _builder.append(Tropo_php_generator.timeout, "");
+      }
+    }
+    _builder.append("))");
     return _builder;
   }
   
@@ -1475,7 +1479,15 @@ public class Tropo_php_generator {
     ConcatenationExpression _to = elem.getTo();
     CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_to);
     _builder.append(_declareConcatenation, "");
-    _builder.append(", array(\'network\'=>\'SMS\'));");
+    _builder.append(", array(\'network\'=>\'SMS\' ");
+    {
+      boolean _notEquals = (!Objects.equal(Integer.valueOf(Tropo_php_generator.timeout), null));
+      if (_notEquals) {
+        _builder.append(", \'timeout\'=> ");
+        _builder.append(Tropo_php_generator.timeout, "");
+      }
+    }
+    _builder.append("));");
     _builder.newLineIfNotEmpty();
     _builder.append("$tropo->say(");
     ConcatenationExpression _value = elem.getValue();
@@ -1736,9 +1748,7 @@ public class Tropo_php_generator {
   }
   
   public static CharSequence declareVoiceTag(final VoiceTag elem) {
-    if (elem instanceof Ask) {
-      return _declareVoiceTag((Ask)elem);
-    } else if (elem instanceof Call) {
+    if (elem instanceof Call) {
       return _declareVoiceTag((Call)elem);
     } else if (elem instanceof Dial) {
       return _declareVoiceTag((Dial)elem);

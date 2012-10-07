@@ -44,11 +44,14 @@
     <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HelloWorld8:GREETING" fragment="//@elements.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Constant"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HelloWorld5:start" fragment="//@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HelloWorld5:START" fragment="//@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HelloWorld5:start3:Say" fragment="//@sta.0/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HelloWorld5:START3:Say" fragment="//@sta.0/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="10:HelloWorld5:START7:HangUp;" fragment="//@sta.0/@stms.1">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
     </exportedObjects>
   </builderState:ResourceDescription>
   <builderState:ResourceDescription URI="platform:/resource/Examples/outboundcall.dime">
@@ -84,27 +87,27 @@
     <exportedObjects xsi:type="builderState:EObjectDescription" name="4:test5:start7:HangUp;" fragment="//@sta.0/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
     </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="4:test5:start4:Play" fragment="//@sta.0/@stms.3">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Play"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="4:test5:start4:Play6:RECORD" fragment="//@sta.0/@stms.3/@file">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
+    </exportedObjects>
   </builderState:ResourceDescription>
   <builderState:ResourceDescription URI="platform:/resource/Examples/state.dime">
     <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE" fragment="/">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE8:greeting" fragment="//@elements.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
-    </exportedObjects>
     <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE5:start" fragment="//@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE5:start8:greeting" fragment="//@sta.0/@stms.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE5:start3:Say" fragment="//@sta.0/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE5:start3:Say" fragment="//@sta.0/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE5:start4:GoTo" fragment="//@sta.0/@stms.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE5:start4:GoTo" fragment="//@sta.0/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE5:start4:GoTo9:COMPLETED" fragment="//@sta.0/@stms.2/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE5:start4:GoTo9:COMPLETED" fragment="//@sta.0/@stms.1/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
     <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE3:end" fragment="//@sta.1">
@@ -113,10 +116,24 @@
     <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE3:end3:Say" fragment="//@sta.1/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE3:end3:Say" fragment="//@sta.1/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE3:end7:HangUp;" fragment="//@sta.1/@stms.1">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Examples/email.dime">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL" fragment="/">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL5:start" fragment="//@sta.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL5:start3:Say" fragment="//@sta.0/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:STATE3:end7:HangUp;" fragment="//@sta.1/@stms.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL5:start5:Email" fragment="//@sta.0/@stms.1">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Email"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL5:start7:HangUp;" fragment="//@sta.0/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
     </exportedObjects>
   </builderState:ResourceDescription>
@@ -154,12 +171,6 @@
     <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States5:start4:GoTo6:HANGUP" fragment="//@sta.0/@stms.3/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States5:start4:GoTo" fragment="//@sta.0/@stms.4">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States5:start4:GoTo7:TIMEOUT" fragment="//@sta.0/@stms.4/@event">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
-    </exportedObjects>
     <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end" fragment="//@sta.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
@@ -181,103 +192,68 @@
     <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:Play" fragment="//@sta.1/@stms.5">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Play"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Get" fragment="//@sta.1/@stms.6">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end6:Gather" fragment="//@sta.1/@stms.6">
       <eClass href="http://www.telcodev.org/dsl/Dime#//GetDigits"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Ask" fragment="//@sta.1/@stms.7">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Ask"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end6:DialTo" fragment="//@sta.1/@stms.8">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end6:DialTo" fragment="//@sta.1/@stms.7">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Dial"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:Call" fragment="//@sta.1/@stms.9">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:Call" fragment="//@sta.1/@stms.8">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Call"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end11:IN-PROGRESS" fragment="//@sta.1/@stms.10/@block/@cond/@obj">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end11:IN-PROGRESS" fragment="//@sta.1/@stms.9/@block/@cond/@obj">
       <eClass href="http://www.telcodev.org/dsl/Dime#//CALLSTATUS"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo" fragment="//@sta.1/@stms.10/@block/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo" fragment="//@sta.1/@stms.9/@block/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo9:COMPLETED" fragment="//@sta.1/@stms.10/@block/@action/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo9:COMPLETED" fragment="//@sta.1/@stms.9/@block/@action/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo" fragment="//@sta.1/@stms.10/@block/@action/@sta.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo" fragment="//@sta.1/@stms.9/@block/@action/@sta.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo5:ERROR" fragment="//@sta.1/@stms.10/@block/@action/@sta.1/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo5:ERROR" fragment="//@sta.1/@stms.9/@block/@action/@sta.1/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo" fragment="//@sta.1/@stms.10/@block/@action/@sta.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo" fragment="//@sta.1/@stms.9/@block/@action/@sta.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo6:HANGUP" fragment="//@sta.1/@stms.10/@block/@action/@sta.2/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo6:HANGUP" fragment="//@sta.1/@stms.9/@block/@action/@sta.2/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo" fragment="//@sta.1/@stms.10/@block/@action/@sta.3">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo" fragment="//@sta.1/@stms.9/@block/@action/@sta.3">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo5:TIMES" fragment="//@sta.1/@stms.10/@block/@action/@sta.3/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo5:TIMES" fragment="//@sta.1/@stms.9/@block/@action/@sta.3/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo" fragment="//@sta.1/@stms.10/@block/@action/@sta.4">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:GoTo7:TIMEOUT" fragment="//@sta.1/@stms.10/@block/@action/@sta.4/@event">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end6:FAILED" fragment="//@sta.1/@stms.10/@blocks.0/@cond/@obj">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//CALLSTATUS"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Say" fragment="//@sta.1/@stms.10/@blocks.0/@action/@sta.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Say9:LASTSTATE" fragment="//@sta.1/@stms.10/@blocks.0/@action/@sta.0/@that">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Say" fragment="//@sta.1/@stms.10/@defaultBlock/@sta.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end1:d" fragment="//@sta.1/@stms.11">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Sms" fragment="//@sta.1/@stms.12">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Sms" fragment="//@sta.1/@stms.9/@block/@action/@sta.4">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Sms"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:Send" fragment="//@sta.1/@stms.13">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:Send" fragment="//@sta.1/@stms.10">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Send"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:Send4:Name" fragment="//@sta.1/@stms.13/@params/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:Send6:param1" fragment="//@sta.1/@stms.10/@params/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:Send4:Name" fragment="//@sta.1/@stms.13/@params/@stms.0/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:Send6:param2" fragment="//@sta.1/@stms.10/@params/@stms.0/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end4:Send4:Name" fragment="//@sta.1/@stms.13/@params/@stms.1/@value">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end5:Email" fragment="//@sta.1/@stms.14">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end5:Email" fragment="//@sta.1/@stms.11">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Email"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end7:HangUp;" fragment="//@sta.1/@stms.15">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end6:Record" fragment="//@sta.1/@stms.12">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Record"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end7:HangUp;" fragment="//@sta.1/@stms.13">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end7:Reject;" fragment="//@sta.1/@stms.16">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end7:Reject;" fragment="//@sta.1/@stms.14">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Reject"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Say" fragment="//@sta.1/@stms.17">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="6:States3:end3:Say" fragment="//@sta.1/@stms.15">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
-    </exportedObjects>
-  </builderState:ResourceDescription>
-  <builderState:ResourceDescription URI="platform:/resource/Examples/email.dime">
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL" fragment="/">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL5:start" fragment="//@sta.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="5:EMAIL5:start5:Email" fragment="//@sta.0/@stms.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Email"/>
     </exportedObjects>
   </builderState:ResourceDescription>
   <builderState:ResourceDescription URI="platform:/resource/Examples/digits.dime">
@@ -290,14 +266,14 @@
     <exportedObjects xsi:type="builderState:EObjectDescription" name="9:Getdigits5:start3:Say" fragment="//@sta.0/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="9:Getdigits5:start4:GoTo" fragment="//@sta.0/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="9:Getdigits5:start6:Gather" fragment="//@sta.0/@stms.1">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//GetDigits"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="9:Getdigits5:start4:GoTo" fragment="//@sta.0/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="9:Getdigits5:start4:GoTo9:COMPLETED" fragment="//@sta.0/@stms.1/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="9:Getdigits5:start4:GoTo9:COMPLETED" fragment="//@sta.0/@stms.2/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="9:Getdigits5:start3:Get" fragment="//@sta.0/@stms.2">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//GetDigits"/>
     </exportedObjects>
     <exportedObjects xsi:type="builderState:EObjectDescription" name="9:Getdigits3:end" fragment="//@sta.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
@@ -340,462 +316,448 @@
     <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu4:year" fragment="//@elements.6">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Constant"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu5:START" fragment="//@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu5:start" fragment="//@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu5:START3:Say" fragment="//@sta.0/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu5:start3:Say" fragment="//@sta.0/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu5:START4:GoTo" fragment="//@sta.0/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu5:start4:GoTo" fragment="//@sta.0/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu5:START4:GoTo9:COMPLETED" fragment="//@sta.0/@stms.1/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu5:start4:GoTo9:COMPLETED" fragment="//@sta.0/@stms.1/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ISCLIENT" fragment="//@sta.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:isclient" fragment="//@sta.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ISCLIENT3:Say" fragment="//@sta.1/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:isclient3:Say" fragment="//@sta.1/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ISCLIENT3:Get" fragment="//@sta.1/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:isclient6:Gather" fragment="//@sta.1/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//GetDigits"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ISCLIENT4:GoTo" fragment="//@sta.1/@stms.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:isclient4:GoTo" fragment="//@sta.1/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ISCLIENT4:GoTo9:COMPLETED" fragment="//@sta.1/@stms.2/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:isclient4:GoTo9:COMPLETED" fragment="//@sta.1/@stms.2/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ISCLIENT4:GoTo" fragment="//@sta.1/@stms.3">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:isclient4:GoTo" fragment="//@sta.1/@stms.3">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ISCLIENT4:GoTo5:ERROR" fragment="//@sta.1/@stms.3/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:isclient4:GoTo5:ERROR" fragment="//@sta.1/@stms.3/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF" fragment="//@sta.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf" fragment="//@sta.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF6:DIGITS" fragment="//@sta.2/@stms.0/@block/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf6:DIGITS" fragment="//@sta.2/@stms.0/@block/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF3:Say" fragment="//@sta.2/@stms.0/@block/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf3:Say" fragment="//@sta.2/@stms.0/@block/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF4:GoTo" fragment="//@sta.2/@stms.0/@block/@action/@sta.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf4:GoTo" fragment="//@sta.2/@stms.0/@block/@action/@sta.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF4:GoTo9:COMPLETED" fragment="//@sta.2/@stms.0/@block/@action/@sta.1/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf4:GoTo9:COMPLETED" fragment="//@sta.2/@stms.0/@block/@action/@sta.1/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF6:DIGITS" fragment="//@sta.2/@stms.0/@blocks.0/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf6:DIGITS" fragment="//@sta.2/@stms.0/@blocks.0/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF3:Say" fragment="//@sta.2/@stms.0/@blocks.0/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf3:Say" fragment="//@sta.2/@stms.0/@blocks.0/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF7:HangUp;" fragment="//@sta.2/@stms.0/@blocks.0/@action/@sta.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf7:HangUp;" fragment="//@sta.2/@stms.0/@blocks.0/@action/@sta.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF4:GoTo" fragment="//@sta.2/@stms.0/@defaultBlock/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf4:GoTo" fragment="//@sta.2/@stms.0/@defaultBlock/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF4:GoTo9:COMPLETED" fragment="//@sta.2/@stms.0/@defaultBlock/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf4:GoTo9:COMPLETED" fragment="//@sta.2/@stms.0/@defaultBlock/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF4:GoTo" fragment="//@sta.2/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf4:GoTo" fragment="//@sta.2/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF4:GoTo5:TIMES" fragment="//@sta.2/@stms.1/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf4:GoTo5:TIMES" fragment="//@sta.2/@stms.1/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF4:GoTo" fragment="//@sta.2/@stms.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf4:GoTo" fragment="//@sta.2/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:CLIENTCONF4:GoTo5:ERROR" fragment="//@sta.2/@stms.2/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu10:clientconf4:GoTo5:ERROR" fragment="//@sta.2/@stms.2/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:ASKPEOPLE" fragment="//@sta.3">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:askpeople" fragment="//@sta.3">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:ASKPEOPLE3:Say" fragment="//@sta.3/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:askpeople3:Say" fragment="//@sta.3/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:ASKPEOPLE3:Get" fragment="//@sta.3/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:askpeople6:Gather" fragment="//@sta.3/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//GetDigits"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:ASKPEOPLE5:TIMES" fragment="//@sta.3/@stms.2/@block/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:askpeople5:TIMES" fragment="//@sta.3/@stms.2/@block/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:ASKPEOPLE4:GoTo" fragment="//@sta.3/@stms.2/@block/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:askpeople4:GoTo" fragment="//@sta.3/@stms.2/@block/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:ASKPEOPLE4:GoTo9:COMPLETED" fragment="//@sta.3/@stms.2/@block/@action/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:askpeople4:GoTo9:COMPLETED" fragment="//@sta.3/@stms.2/@block/@action/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:ASKPEOPLE4:GoTo" fragment="//@sta.3/@stms.2/@defaultBlock/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:askpeople4:GoTo" fragment="//@sta.3/@stms.2/@defaultBlock/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:ASKPEOPLE4:GoTo9:COMPLETED" fragment="//@sta.3/@stms.2/@defaultBlock/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:askpeople4:GoTo9:COMPLETED" fragment="//@sta.3/@stms.2/@defaultBlock/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:ASKPEOPLE4:GoTo" fragment="//@sta.3/@stms.3">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:askpeople4:GoTo" fragment="//@sta.3/@stms.3">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:ASKPEOPLE4:GoTo5:ERROR" fragment="//@sta.3/@stms.3/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu9:askpeople4:GoTo5:ERROR" fragment="//@sta.3/@stms.3/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:ASKDAY" fragment="//@sta.4">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:askday" fragment="//@sta.4">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:ASKDAY6:people" fragment="//@sta.4/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:askday6:people" fragment="//@sta.4/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:ASKDAY6:people6:DIGITS" fragment="//@sta.4/@stms.0/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:askday6:people6:DIGITS" fragment="//@sta.4/@stms.0/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:ASKDAY3:Say" fragment="//@sta.4/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:askday3:Say" fragment="//@sta.4/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:ASKDAY3:Get" fragment="//@sta.4/@stms.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:askday6:Gather" fragment="//@sta.4/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//GetDigits"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:ASKDAY5:TIMES" fragment="//@sta.4/@stms.3/@block/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:askday5:TIMES" fragment="//@sta.4/@stms.3/@block/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:ASKDAY4:GoTo" fragment="//@sta.4/@stms.3/@block/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:askday4:GoTo" fragment="//@sta.4/@stms.3/@block/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:ASKDAY4:GoTo9:COMPLETED" fragment="//@sta.4/@stms.3/@block/@action/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:askday4:GoTo9:COMPLETED" fragment="//@sta.4/@stms.3/@block/@action/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:ASKDAY4:GoTo" fragment="//@sta.4/@stms.3/@defaultBlock/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:askday4:GoTo" fragment="//@sta.4/@stms.3/@defaultBlock/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:ASKDAY4:GoTo9:COMPLETED" fragment="//@sta.4/@stms.3/@defaultBlock/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:askday4:GoTo9:COMPLETED" fragment="//@sta.4/@stms.3/@defaultBlock/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:ASKDAY4:GoTo" fragment="//@sta.4/@stms.4">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:askday4:GoTo" fragment="//@sta.4/@stms.4">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:ASKDAY4:GoTo5:ERROR" fragment="//@sta.4/@stms.4/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu6:askday4:GoTo5:ERROR" fragment="//@sta.4/@stms.4/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ASKMONTH" fragment="//@sta.5">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:askmonth" fragment="//@sta.5">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ASKMONTH3:day" fragment="//@sta.5/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:askmonth3:day" fragment="//@sta.5/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ASKMONTH3:day6:DIGITS" fragment="//@sta.5/@stms.0/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:askmonth3:day6:DIGITS" fragment="//@sta.5/@stms.0/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ASKMONTH3:Say" fragment="//@sta.5/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:askmonth3:Say" fragment="//@sta.5/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ASKMONTH3:Get" fragment="//@sta.5/@stms.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:askmonth6:Gather" fragment="//@sta.5/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//GetDigits"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ASKMONTH5:TIMES" fragment="//@sta.5/@stms.3/@block/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:askmonth5:TIMES" fragment="//@sta.5/@stms.3/@block/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ASKMONTH4:GoTo" fragment="//@sta.5/@stms.3/@block/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:askmonth4:GoTo" fragment="//@sta.5/@stms.3/@block/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ASKMONTH4:GoTo9:COMPLETED" fragment="//@sta.5/@stms.3/@block/@action/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:askmonth4:GoTo9:COMPLETED" fragment="//@sta.5/@stms.3/@block/@action/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ASKMONTH4:GoTo" fragment="//@sta.5/@stms.3/@defaultBlock/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:askmonth4:GoTo" fragment="//@sta.5/@stms.3/@defaultBlock/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ASKMONTH4:GoTo9:COMPLETED" fragment="//@sta.5/@stms.3/@defaultBlock/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:askmonth4:GoTo9:COMPLETED" fragment="//@sta.5/@stms.3/@defaultBlock/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ASKMONTH4:GoTo" fragment="//@sta.5/@stms.4">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:askmonth4:GoTo" fragment="//@sta.5/@stms.4">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:ASKMONTH4:GoTo5:ERROR" fragment="//@sta.5/@stms.4/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:askmonth4:GoTo5:ERROR" fragment="//@sta.5/@stms.4/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKHOUR" fragment="//@sta.6">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askhour" fragment="//@sta.6">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKHOUR5:month" fragment="//@sta.6/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askhour5:month" fragment="//@sta.6/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKHOUR5:month6:DIGITS" fragment="//@sta.6/@stms.0/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askhour5:month6:DIGITS" fragment="//@sta.6/@stms.0/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKHOUR3:Say" fragment="//@sta.6/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askhour3:Say" fragment="//@sta.6/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKHOUR3:Get" fragment="//@sta.6/@stms.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askhour6:Gather" fragment="//@sta.6/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//GetDigits"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKHOUR4:GoTo" fragment="//@sta.6/@stms.3">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askhour4:GoTo" fragment="//@sta.6/@stms.3">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKHOUR4:GoTo9:COMPLETED" fragment="//@sta.6/@stms.3/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askhour4:GoTo9:COMPLETED" fragment="//@sta.6/@stms.3/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKHOUR4:GoTo" fragment="//@sta.6/@stms.4">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askhour4:GoTo" fragment="//@sta.6/@stms.4">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKHOUR4:GoTo5:ERROR" fragment="//@sta.6/@stms.4/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askhour4:GoTo5:ERROR" fragment="//@sta.6/@stms.4/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE" fragment="//@sta.7">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone" fragment="//@sta.7">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE9:LASTSTATE" fragment="//@sta.7/@stms.0/@block/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone9:LASTSTATE" fragment="//@sta.7/@stms.0/@block/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE4:hour" fragment="//@sta.7/@stms.0/@block/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone4:hour" fragment="//@sta.7/@stms.0/@block/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE4:hour6:DIGITS" fragment="//@sta.7/@stms.0/@block/@action/@sta.0/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone4:hour6:DIGITS" fragment="//@sta.7/@stms.0/@block/@action/@sta.0/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE9:LASTSTATE" fragment="//@sta.7/@stms.0/@blocks.0/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone9:LASTSTATE" fragment="//@sta.7/@stms.0/@blocks.0/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE3:day" fragment="//@sta.7/@stms.0/@blocks.0/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone3:day" fragment="//@sta.7/@stms.0/@blocks.0/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE3:day6:DIGITS" fragment="//@sta.7/@stms.0/@blocks.0/@action/@sta.0/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone3:day6:DIGITS" fragment="//@sta.7/@stms.0/@blocks.0/@action/@sta.0/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE9:LASTSTATE" fragment="//@sta.7/@stms.0/@blocks.1/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone9:LASTSTATE" fragment="//@sta.7/@stms.0/@blocks.1/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE6:people" fragment="//@sta.7/@stms.0/@blocks.1/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone6:people" fragment="//@sta.7/@stms.0/@blocks.1/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE6:people6:DIGITS" fragment="//@sta.7/@stms.0/@blocks.1/@action/@sta.0/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone6:people6:DIGITS" fragment="//@sta.7/@stms.0/@blocks.1/@action/@sta.0/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE9:LASTSTATE" fragment="//@sta.7/@stms.0/@blocks.2/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone9:LASTSTATE" fragment="//@sta.7/@stms.0/@blocks.2/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE5:month" fragment="//@sta.7/@stms.0/@blocks.2/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone5:month" fragment="//@sta.7/@stms.0/@blocks.2/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//StringVariable"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE5:month6:DIGITS" fragment="//@sta.7/@stms.0/@blocks.2/@action/@sta.0/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone5:month6:DIGITS" fragment="//@sta.7/@stms.0/@blocks.2/@action/@sta.0/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE3:Say" fragment="//@sta.7/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone3:Say" fragment="//@sta.7/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE3:Say" fragment="//@sta.7/@stms.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone3:Say" fragment="//@sta.7/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE3:Get" fragment="//@sta.7/@stms.3">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone6:Gather" fragment="//@sta.7/@stms.3">
       <eClass href="http://www.telcodev.org/dsl/Dime#//GetDigits"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE4:GoTo" fragment="//@sta.7/@stms.4">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone4:GoTo" fragment="//@sta.7/@stms.4">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:ASKDONE4:GoTo9:COMPLETED" fragment="//@sta.7/@stms.4/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu7:askdone4:GoTo9:COMPLETED" fragment="//@sta.7/@stms.4/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF" fragment="//@sta.8">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf" fragment="//@sta.8">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF6:DIGITS" fragment="//@sta.8/@stms.0/@block/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf6:DIGITS" fragment="//@sta.8/@stms.0/@block/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF4:GoTo" fragment="//@sta.8/@stms.0/@block/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf4:GoTo" fragment="//@sta.8/@stms.0/@block/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF4:GoTo9:COMPLETED" fragment="//@sta.8/@stms.0/@block/@action/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf4:GoTo9:COMPLETED" fragment="//@sta.8/@stms.0/@block/@action/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF6:DIGITS" fragment="//@sta.8/@stms.0/@blocks.0/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf6:DIGITS" fragment="//@sta.8/@stms.0/@blocks.0/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF3:Say" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf3:Say" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF3:Say" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf3:Say" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF3:Say" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf3:Say" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF3:Say" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.3">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf3:Say" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.3">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF3:Say" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.4">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf3:Say" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.4">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF3:Get" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.5">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf6:Gather" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.5">
       <eClass href="http://www.telcodev.org/dsl/Dime#//GetDigits"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF4:GoTo" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.6">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf4:GoTo" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.6">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF4:GoTo9:COMPLETED" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.6/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf4:GoTo9:COMPLETED" fragment="//@sta.8/@stms.0/@blocks.0/@action/@sta.6/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF4:GoTo" fragment="//@sta.8/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf4:GoTo" fragment="//@sta.8/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF4:GoTo5:TIMES" fragment="//@sta.8/@stms.1/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf4:GoTo5:TIMES" fragment="//@sta.8/@stms.1/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF4:GoTo" fragment="//@sta.8/@stms.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf4:GoTo" fragment="//@sta.8/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:DONECONF4:GoTo5:ERROR" fragment="//@sta.8/@stms.2/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu8:doneconf4:GoTo5:ERROR" fragment="//@sta.8/@stms.2/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION" fragment="//@sta.9">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification" fragment="//@sta.9">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION6:DIGITS" fragment="//@sta.9/@stms.0/@block/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification6:DIGITS" fragment="//@sta.9/@stms.0/@block/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo" fragment="//@sta.9/@stms.0/@block/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo" fragment="//@sta.9/@stms.0/@block/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo9:COMPLETED" fragment="//@sta.9/@stms.0/@block/@action/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo9:COMPLETED" fragment="//@sta.9/@stms.0/@block/@action/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION6:DIGITS" fragment="//@sta.9/@stms.0/@blocks.0/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification6:DIGITS" fragment="//@sta.9/@stms.0/@blocks.0/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo" fragment="//@sta.9/@stms.0/@blocks.0/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo" fragment="//@sta.9/@stms.0/@blocks.0/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo9:COMPLETED" fragment="//@sta.9/@stms.0/@blocks.0/@action/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo9:COMPLETED" fragment="//@sta.9/@stms.0/@blocks.0/@action/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION6:DIGITS" fragment="//@sta.9/@stms.0/@blocks.1/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification6:DIGITS" fragment="//@sta.9/@stms.0/@blocks.1/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo" fragment="//@sta.9/@stms.0/@blocks.1/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo" fragment="//@sta.9/@stms.0/@blocks.1/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo9:COMPLETED" fragment="//@sta.9/@stms.0/@blocks.1/@action/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo9:COMPLETED" fragment="//@sta.9/@stms.0/@blocks.1/@action/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION6:DIGITS" fragment="//@sta.9/@stms.0/@blocks.2/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification6:DIGITS" fragment="//@sta.9/@stms.0/@blocks.2/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo" fragment="//@sta.9/@stms.0/@blocks.2/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo" fragment="//@sta.9/@stms.0/@blocks.2/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo9:COMPLETED" fragment="//@sta.9/@stms.0/@blocks.2/@action/@sta.0/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo9:COMPLETED" fragment="//@sta.9/@stms.0/@blocks.2/@action/@sta.0/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION3:Say" fragment="//@sta.9/@stms.0/@defaultBlock/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification3:Say" fragment="//@sta.9/@stms.0/@defaultBlock/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo" fragment="//@sta.9/@stms.0/@defaultBlock/@sta.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo" fragment="//@sta.9/@stms.0/@defaultBlock/@sta.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo9:COMPLETED" fragment="//@sta.9/@stms.0/@defaultBlock/@sta.1/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo9:COMPLETED" fragment="//@sta.9/@stms.0/@defaultBlock/@sta.1/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo" fragment="//@sta.9/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo" fragment="//@sta.9/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo5:TIMES" fragment="//@sta.9/@stms.1/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo5:TIMES" fragment="//@sta.9/@stms.1/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo" fragment="//@sta.9/@stms.2">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo" fragment="//@sta.9/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:MODIFICATION4:GoTo5:ERROR" fragment="//@sta.9/@stms.2/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu12:modification4:GoTo5:ERROR" fragment="//@sta.9/@stms.2/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu11:TOOATTEMPTS" fragment="//@sta.10">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu11:tooattempts" fragment="//@sta.10">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu11:TOOATTEMPTS3:Say" fragment="//@sta.10/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu11:tooattempts3:Say" fragment="//@sta.10/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu11:HANGUPERROR" fragment="//@sta.11">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu11:hanguperror" fragment="//@sta.11">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu11:HANGUPERROR3:Say" fragment="//@sta.11/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu11:hanguperror3:Say" fragment="//@sta.11/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu11:HANGUPERROR7:HangUp;" fragment="//@sta.11/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu11:hanguperror7:HangUp;" fragment="//@sta.11/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END" fragment="//@sta.12">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end" fragment="//@sta.12">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END3:Say" fragment="//@sta.12/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end3:Say" fragment="//@sta.12/@stms.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END6:CALLER" fragment="//@sta.12/@stms.1/@block/@cond/@obj/@left">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end6:CALLER" fragment="//@sta.12/@stms.1/@block/@cond/@obj/@left">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END5:Email" fragment="//@sta.12/@stms.1/@block/@action/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end5:Email" fragment="//@sta.12/@stms.1/@block/@action/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Email"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send" fragment="//@sta.12/@stms.1/@block/@action/@sta.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send" fragment="//@sta.12/@stms.1/@block/@action/@sta.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Send"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send6:caller" fragment="//@sta.12/@stms.1/@block/@action/@sta.1/@params/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send6:caller" fragment="//@sta.12/@stms.1/@block/@action/@sta.1/@params/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send3:day" fragment="//@sta.12/@stms.1/@block/@action/@sta.1/@params/@stms.0/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send3:day" fragment="//@sta.12/@stms.1/@block/@action/@sta.1/@params/@stms.0/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send4:hour" fragment="//@sta.12/@stms.1/@block/@action/@sta.1/@params/@stms.1/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send4:hour" fragment="//@sta.12/@stms.1/@block/@action/@sta.1/@params/@stms.1/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send5:month" fragment="//@sta.12/@stms.1/@block/@action/@sta.1/@params/@stms.2/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send5:month" fragment="//@sta.12/@stms.1/@block/@action/@sta.1/@params/@stms.2/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send6:people" fragment="//@sta.12/@stms.1/@block/@action/@sta.1/@params/@stms.3/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send6:people" fragment="//@sta.12/@stms.1/@block/@action/@sta.1/@params/@stms.3/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send4:year" fragment="//@sta.12/@stms.1/@block/@action/@sta.1/@params/@stms.4/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send4:year" fragment="//@sta.12/@stms.1/@block/@action/@sta.1/@params/@stms.4/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Send"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send6:caller" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send6:caller" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send6:caller6:CALLER" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@value/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send6:caller6:CALLER" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@value/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send3:day" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@stms.0/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send3:day" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@stms.0/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send4:hour" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@stms.1/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send4:hour" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@stms.1/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send5:month" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@stms.2/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send5:month" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@stms.2/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send6:people" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@stms.3/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send6:people" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@stms.3/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END4:Send4:year" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@stms.4/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end4:Send4:year" fragment="//@sta.12/@stms.1/@defaultBlock/@sta.0/@params/@stms.4/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:END7:HangUp;" fragment="//@sta.12/@stms.2">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
-    </exportedObjects>
-  </builderState:ResourceDescription>
-  <builderState:ResourceDescription URI="platform:/resource/Examples/sms.dime">
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="3:SMS" fragment="/">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="3:SMS5:start" fragment="//@sta.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="3:SMS5:start3:Sms" fragment="//@sta.0/@stms.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Sms"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="3:SMS5:start7:HangUp;" fragment="//@sta.0/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="19:RestaurantPhoneMenu3:end7:HangUp;" fragment="//@sta.12/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
     </exportedObjects>
   </builderState:ResourceDescription>
@@ -834,6 +796,23 @@
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
     </exportedObjects>
   </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Examples/sms.dime">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="3:SMS" fragment="/">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="3:SMS5:start" fragment="//@sta.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="3:SMS5:start3:Say" fragment="//@sta.0/@stms.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="3:SMS5:start3:Sms" fragment="//@sta.0/@stms.1">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Sms"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="3:SMS5:start7:HangUp;" fragment="//@sta.0/@stms.2">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
   <builderState:ResourceDescription URI="platform:/resource/Examples/sound.dime">
     <exportedObjects xsi:type="builderState:EObjectDescription" name="5:Sound" fragment="/">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
@@ -855,31 +834,20 @@
     <exportedObjects xsi:type="builderState:EObjectDescription" name="8:SendData5:start" fragment="//@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:SendData5:start4:Send" fragment="//@sta.0/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:SendData5:start3:Say" fragment="//@sta.0/@stms.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:SendData5:start4:Send" fragment="//@sta.0/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Send"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:SendData5:start4:Send6:caller" fragment="//@sta.0/@stms.0/@params/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:SendData5:start4:Send6:caller" fragment="//@sta.0/@stms.1/@params/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Param"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:SendData5:start4:Send6:caller6:CALLER" fragment="//@sta.0/@stms.0/@params/@value/@value">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:SendData5:start4:Send6:caller6:CALLER" fragment="//@sta.0/@stms.1/@params/@value/@value">
       <eClass href="http://www.telcodev.org/dsl/Dime#//SESSION"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:SendData5:start3:Say" fragment="//@sta.0/@stms.1">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
     </exportedObjects>
     <exportedObjects xsi:type="builderState:EObjectDescription" name="8:SendData5:start7:HangUp;" fragment="//@sta.0/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
-    </exportedObjects>
-  </builderState:ResourceDescription>
-  <builderState:ResourceDescription URI="platform:/resource/Examples/dial.dime">
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="4:Dial" fragment="/">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="4:Dial5:start" fragment="//@sta.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
-    </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="4:Dial5:start6:DialTo" fragment="//@sta.0/@stms.0">
-      <eClass href="http://www.telcodev.org/dsl/Dime#//Dial"/>
     </exportedObjects>
   </builderState:ResourceDescription>
   <builderState:ResourceDescription URI="platform:/resource/Examples/record.dime">
@@ -889,13 +857,16 @@
     <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt5:start" fragment="//@sta.0">
       <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt5:start6:Record" fragment="//@sta.0/@stms.0">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt5:start3:Say" fragment="//@sta.0/@stms.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Say"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt5:start6:Record" fragment="//@sta.0/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Record"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt5:start4:GoTo" fragment="//@sta.0/@stms.1">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt5:start4:GoTo" fragment="//@sta.0/@stms.2">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Transition"/>
     </exportedObjects>
-    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt5:start4:GoTo9:COMPLETED" fragment="//@sta.0/@stms.1/@event">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt5:start4:GoTo9:COMPLETED" fragment="//@sta.0/@stms.2/@event">
       <eClass href="http://www.telcodev.org/dsl/Dime#//EVENT"/>
     </exportedObjects>
     <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt3:end" fragment="//@sta.1">
@@ -909,6 +880,17 @@
     </exportedObjects>
     <exportedObjects xsi:type="builderState:EObjectDescription" name="8:RecordIt3:end7:HangUp;" fragment="//@sta.1/@stms.1">
       <eClass href="http://www.telcodev.org/dsl/Dime#//Hangup"/>
+    </exportedObjects>
+  </builderState:ResourceDescription>
+  <builderState:ResourceDescription URI="platform:/resource/Examples/dial.dime">
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="4:Dial" fragment="/">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Document"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="4:Dial5:start" fragment="//@sta.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//State"/>
+    </exportedObjects>
+    <exportedObjects xsi:type="builderState:EObjectDescription" name="4:Dial5:start6:DialTo" fragment="//@sta.0/@stms.0">
+      <eClass href="http://www.telcodev.org/dsl/Dime#//Dial"/>
     </exportedObjects>
   </builderState:ResourceDescription>
 </xmi:XMI>

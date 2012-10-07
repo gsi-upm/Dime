@@ -1,6 +1,7 @@
 Application RecordIt
 
 State start{
+	Say "Welcome to the record application.";
 	Record 5 seconds ;
 	GoTo end when COMPLETED;
 	
@@ -10,3 +11,5 @@ State end{
 	Play RECORD;
 	HangUp;
 }
+
+

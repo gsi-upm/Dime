@@ -1,0 +1,16 @@
+Application Caller
+
+State start {
+	 
+	if(CALLER=="+34656422095"){
+		Say "Hello Peter!. We was waiting for you."; 
+		HangUp; 
+	}
+	else{
+		Say "sorry, we are busy. Bye";
+		HangUp;
+	} 
+	
+}
+     
+ 

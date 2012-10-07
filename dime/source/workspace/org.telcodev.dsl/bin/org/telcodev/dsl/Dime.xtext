@@ -8,19 +8,19 @@ Document:
 	sta+=State*;
 
 Statement:
-	NumVariable | StringVariable | BoolVariable | Constant | com=ML_COMMENT //| AssigmentString    | AssigmentBool //| AssigmentNum
+	NumVariable | StringVariable | BoolVariable | Constant | com=ML_COMMENT 
 ;
-
+ 
 AbstractElement:
 	Statement | Transition | IfExp | VoiceTag;
 
 State:
-	'State' name=ID ('times' times=INT)? '{'
+	'State' name=ID ('times' times=INT)? & ('timeout' timeout=INT)? '{'
 	stms+=AbstractElement*
 	'}';
  
 VoiceTag:
-	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms | Email ;
+	Say | Dial | Play | Record | GetDigits | Send | Reject | Hangup | Call | Sms | Email ;
 
 Call:
 	name='Call' to=ConcatenationExpression ';';
@@ -41,10 +41,9 @@ Hangup:
 	name='HangUp;';
 
 GetDigits:
-	name='Get' numDigits=INT 'digits'';';
+	name='Gather' (numDigits=INT)? 'digits'';';
 
-Ask:
-	name='Ask' question=ConcatenationExpression ';';
+
 
 Send:
 	name='Send'  params=SendBlock  'to' url=ConcatenationExpression  ';';
@@ -151,7 +150,7 @@ Primitive:
 
 
 
-// FALLO CONSTANT TIENE QUE IR EN LITERAL NO EN VARS
+
 Vars:
 	StringVariable | NumVariable | BoolVariable  | Constant;
 	// Literals
@@ -159,7 +158,7 @@ LiteralAbs:
 	Literal | Primitive;
 
 Literal:
-	v=[Vars] | nul=NULL | SESSION // | constant=[Constant]
+	v=[Vars] | nul=NULL | SESSION 
 ;
 
 BoolLiteral:
@@ -176,10 +175,10 @@ Number:
 
 	// Terminals
 EVENT:
-	name='HANGUP' | name='COMPLETED' | name='ERROR' | name='TIMES' | name='TIMEOUT';
+	name='HANGUP' | name='COMPLETED' | name='ERROR' | name='TIMES';
 
 SESSION:
-	name='CALLER' | name='LASTSTATE' | name='TIME' | name='CALLED'| name='ANSWER' | name='DIGITS'| name='RECORD' | name='TIMES';
+	name='CALLER' | name='LASTSTATE'  | name='CALLED' | name='DIGITS'| name='RECORD' | name='TIMES';
 
 CALLSTATUS:
 	 name='RINGING' | name='IN-PROGRESS' | name='DISCONNECTED' | name='FAILED';

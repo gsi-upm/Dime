@@ -1,0 +1,10 @@
+<?php 
+
+// Defining global constants and variables
+
+$greeting="Dime is cool";
+
+
+
+
+?>

@@ -1,0 +1,74 @@
+<?php
+			
+// Required Tropo files
+
+require 'res/tropo.class.php';
+
+// Limonade files for states simulation. More information in 
+
+require 'res/lib/limonade.php';
+
+// Defining constants
+
+
+// Declaration of the states
+
+// State start implementation
+
+dispatch_post('/start', 'app_start');
+function app_start() {
+	
+	
+	// Creates a Tropo session and getting its parameters
+	if(!isset($_SESSION['caller_dime'])){
+	$session_dime = new Session();
+	$from_dime = $session_dime->getFrom();
+	$sessionID_dime = $session_dime->getId();
+	$caller_dime = $from_dime["id"]; 
+	$to_dime = $session_dime->getTo();
+	$called_dime = $to_dime["id"]; 
+	$_SESSION['caller_dime']=$caller_dime;
+	$_SESSION['called_dime']=$called_dime;
+	$_SESSION['sessionID_dime']=$sessionID_dime;
+	}
+	
+	
+	
+	// Times signal appears when the param reached the atribute times of the state
+	
+	if(isset($_SESSION['times_start_dime'])){
+	$attempts=intval($_SESSION['times_start_dime']);
+	$attempts++;
+	$_SESSION['times_start_dime']=$attempts;
+			
+		
+	}else{
+		$_SESSION['times_start_dime']=0;
+	}
+	
+	
+	// Inicialize the tropo aplication
+	
+	$tropo = new Tropo();
+	
+	if(isset($_SESSION['lastState_dime'])){
+		@$result_dime=new Result();
+	}
+	// Update of the value of the global constants and variables, and the session params.
+	
+	
+	// Declaration of the statements of the state.
+	
+	$tropo->say("SMS application", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitstart")));
+	$tropo->call("+34656422095", array('network'=>'SMS' , 'timeout'=> 0));
+	$tropo->say("Dime is cool");
+	$tropo->hangup();
+	
+	// Update the global variables and the session params.
+	
+	$_SESSION['lastState_dime']='start';
+	return $tropo->RenderJson();
+}
+
+run(); 
+?>

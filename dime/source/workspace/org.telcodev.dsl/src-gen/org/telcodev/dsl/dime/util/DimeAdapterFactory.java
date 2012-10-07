@@ -135,11 +135,6 @@ public class DimeAdapterFactory extends AdapterFactoryImpl
         return createGetDigitsAdapter();
       }
       @Override
-      public Adapter caseAsk(Ask object)
-      {
-        return createAskAdapter();
-      }
-      @Override
       public Adapter caseSend(Send object)
       {
         return createSendAdapter();
@@ -517,21 +512,6 @@ public class DimeAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createGetDigitsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.Ask <em>Ask</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.telcodev.dsl.dime.Ask
-   * @generated
-   */
-  public Adapter createAskAdapter()
   {
     return null;
   }

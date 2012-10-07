@@ -1,0 +1,82 @@
+Application States
+
+String company="google";
+
+
+State start times 3{
+	
+	GoTo end when COMPLETED;
+	GoTo start when ERROR;
+	GoTo start when TIMES;
+	GoTo end when HANGUP;
+	
+} 
+  
+  
+State end times 3{
+	 
+	Const LANGUAGE="Dime";
+	String hola="Hello".LANGUAGE;  
+	Bool b= false; 
+	Num d=1+LANGUAGE; 
+	
+	
+	
+	Say "Thanks for calling to"; 
+	 
+	Play "http://myfile.com";
+	
+	
+	Gather 5 digits;
+	
+
+	DialTo "+34655412095";
+	
+	Call "+34655412095";   
+	
+	 
+	
+	 
+	if(IN-PROGRESS)  {
+		
+		GoTo start when COMPLETED;
+		GoTo start when ERROR; 
+		GoTo start when HANGUP; 
+		GoTo start when TIMES;
+		
+		
+	
+   Sms "what the fuck" to "+656240934";
+   
+   }
+   
+	Send {
+		"param1": "hello",
+		"param2": "bye"
+	}
+	
+	
+	
+	 to "hooootslfkjpa";
+	 
+	Email  {
+		subject : "Dime" ,
+		from: "dime@gsi.com",
+		message:"Dime is cool"
+	} to "totemteleko@gmail.com" ;
+	
+	
+	Record 10 seconds;
+	
+	
+	HangUp;
+	Reject; 
+	
+	  Say "FUCK";
+	  
+}     
+ 
+ 
+
+
+    

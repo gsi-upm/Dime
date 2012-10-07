@@ -1,0 +1,46 @@
+<?php
+
+require "res/Services/Twilio.php";
+require "globals_dime.php";
+
+// State start implementation
+
+
+	header("content-type: text/xml");
+	
+	// Update of the value of the global constants and variables, and the session params.
+	if(isset($_GET['times_dime'])){
+		$times_dime=$_GET['times_dime'];
+	} 
+	if(isset($_GET['times_start_dime'])){
+		$times_start_dime=$_GET['times_start_dime'];
+	} 
+	
+	
+	if((!isset($_REQUEST['CallStatus']))||$_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing"|| $_REQUEST["CallStatus"]=="queued"){
+	
+	
+	
+	
+	if(isset($_GET['times_start_dime'])){
+		$times_start_dime=intval($_GET['times_start_dime'])+1;
+		
+	}else{
+		$times_start_dime=1;
+		
+	}
+	
+
+	
+		// Declaration of the statements of the state.
+		
+	echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
+	echo "<Response>";	
+		echo "<Dial callerId=\""."+1 754-333-6784"."\" > \n <Number>"."+1 651-314-1873"."</Number> \n </Dial> \n";
+	
+	
+		echo "</Response>";
+	}
+	
+
+?>

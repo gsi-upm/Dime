@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="Dime_tests"
+      label="Dime_tests"
+      version="1.0"
+      plugin="org.telcodev.dsl.tests">
+
+   <description>
+      Dime tests feature.
+   </description>
+
+   <copyright>
+      Open Source.
+   </copyright>
+
+   <license url="http://www.apache.org/licenses/LICENSE-2.0.html">
+      Apache licence 2.0
+   </license>
+
+</feature>

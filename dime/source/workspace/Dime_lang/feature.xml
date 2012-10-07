@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="Dime_lang"
+      label="Dime_lang"
+      version="1.0"
+      plugin="org.telcodev.dsl">
+
+   <description>
+      Dime language feature.
+   </description>
+
+   <copyright>
+      Open source
+   </copyright>
+
+   <license url="http://www.apache.org/licenses/LICENSE-2.0.html">
+      Apache licence 2.0 version.
+   </license>
+
+</feature>

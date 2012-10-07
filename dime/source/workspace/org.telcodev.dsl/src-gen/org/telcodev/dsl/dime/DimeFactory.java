@@ -131,15 +131,6 @@ public interface DimeFactory extends EFactory
   GetDigits createGetDigits();
 
   /**
-   * Returns a new object of class '<em>Ask</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Ask</em>'.
-   * @generated
-   */
-  Ask createAsk();
-
-  /**
    * Returns a new object of class '<em>Send</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

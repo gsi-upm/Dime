@@ -5,7 +5,7 @@ State start {
 	Call "34656422095";
 	Say "Hello Robert";
 	HangUp;
-
+ 	Play RECORD;
   }     
   
           

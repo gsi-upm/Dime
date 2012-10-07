@@ -1,0 +1,101 @@
+<?php
+
+require "res/Services/Twilio.php";
+require "globals_dime.php";
+
+// State start implementation
+
+
+	header("content-type: text/xml");
+	
+	// Update of the value of the global constants and variables, and the session params.
+	if(isset($_GET['times_dime'])){
+		$times_dime=$_GET['times_dime'];
+	} 
+	if(isset($_GET['times_end_dime'])){
+		$times_end_dime=$_GET['times_end_dime'];
+	} 
+	if(isset($_GET['times_start_dime'])){
+		$times_start_dime=$_GET['times_start_dime'];
+	} 
+	
+	
+	if((!isset($_REQUEST['CallStatus']))||$_REQUEST["CallStatus"]=="in-progress"|| $_REQUEST["CallStatus"]=="ringing"|| $_REQUEST["CallStatus"]=="queued"){
+	
+	
+	
+	
+	if(isset($_GET['times_start_dime'])){
+		$times_start_dime=intval($_GET['times_start_dime'])+1;
+		
+	}else{
+		$times_start_dime=1;
+		
+	}
+	
+
+	
+		// Declaration of the statements of the state.
+		
+	echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?> ";
+	echo "<Response>";	
+		echo "<Say voice=\"woman\" language=\"es\">"."Welcome to the record application."."</Say>\n"; 
+		if(isset($completedurl_dime)){
+			$url_dime=$completedurl_dime."?laststate_dime=start";
+			if(isset($times_dime)){
+				$url_dime=$url_dime."&amp;times_dime=".urlencode($times_dime);
+			}if(isset($times_end_dime)){
+				$url_dime=$url_dime."&amp;times_end_dime=".urlencode($times_end_dime);
+			}if(isset($times_start_dime)){
+				$url_dime=$url_dime."&amp;times_start_dime=".urlencode($times_start_dime);
+			}
+			echo "<Record action=\"".$url_dime."\" method=\"GET\" maxLength=\"5\" finishOnKey=\"*\" /> \n";
+			echo "</Response>";
+			exit();
+		}else{
+			$recordtag_dime=TRUE;
+		}
+		$completedurl_dime="http://shannon.gsi.dit.upm.es/roberto/end.php";
+	
+		if($recordtag_dime==TRUE){
+			if(isset($completedurl_dime)){
+				$url_dime=$completedurl_dime."?laststate_dime=start";
+				if(isset($times_dime)){
+					$url_dime=$url_dime."&amp;times_dime=".urlencode($times_dime);
+				}if(isset($times_end_dime)){
+					$url_dime=$url_dime."&amp;times_end_dime=".urlencode($times_end_dime);
+				}if(isset($times_start_dime)){
+					$url_dime=$url_dime."&amp;times_start_dime=".urlencode($times_start_dime);
+				}
+				echo "<Record action=\"".$url_dime."\" method=\"GET\" maxLength=\"5\" finishOnKey=\"*\" /> \n";
+				echo "</Response>";
+				exit();
+			}else{
+				$recordtag_dime=TRUE;
+			}
+		}
+		$url=$completedurl_dime."?"."laststate_dime=start";
+		if(isset($times_dime)){
+			$url=$url."&amp;times_dime=".urlencode($times_dime);
+		}if(isset($times_end_dime)){
+			$url=$url."&amp;times_end_dime=".urlencode($times_end_dime);
+		}if(isset($times_start_dime)){
+			$url=$url."&amp;times_start_dime=".urlencode($times_start_dime);
+		}
+		if(isset($hangupurl_dime)){
+			$url=$url."&amp;hangupurl_dime=".urlencode($hangupurl_dime);
+		}
+		if(isset($errorurl_dime)){
+			$url=$url."&amp;errorurl_dime=".urlencode($errorurl_dime);
+		}
+		if(isset($timesurl_dime)){
+			$url=$url."&amp;timesurl_dime=".urlencode($timesurl_dime);
+		}
+		
+		echo "<Redirect>".$url."</Redirect>";
+	
+		echo "</Response>";
+	}
+	
+
+?>

@@ -13283,3 +13283,1397 @@ Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Di
 
 !ENTRY org.eclipse.core.net 1 0 2012-09-25 02:02:24.816
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-25 15:06:29.662 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-25 15:06:31.755
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-25 15:06:34.661
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-25 16:54:48.309
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:269)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-25 16:54:48.309
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-25 16:54:48.311
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:269)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-25 16:54:48.311
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-25 16:54:48.311
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-25 16:54:48.322
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-25 16:54:48.322
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:269)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-25 16:54:48.322
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-25 16:54:48.322
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-25 16:54:48.814
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-25 16:54:48.814
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:269)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-25 16:54:48.814
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-25 16:54:48.815
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SESSION 2012-09-27 18:11:59.150 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-27 18:12:01.283
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-27 18:12:04.149
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-27 18:21:42.895 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-27 18:21:48.477
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-27 18:22:43.316
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-27 18:22:43.317
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-27 18:22:43.318
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-27 18:22:43.318
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-27 18:22:43.318
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-27 18:22:43.331
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-27 18:22:43.331
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-27 18:22:43.331
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-27 18:22:43.332
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.apache.log4j 4 0 2012-09-27 18:26:07.200
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-27 18:26:07.200
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-27 18:26:07.200
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-27 18:26:07.201
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-27 18:26:07.201
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-27 18:26:07.211
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-27 18:26:07.211
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-27 18:26:07.211
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-27 18:26:07.211
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SESSION 2012-09-27 23:47:13.296 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-27 23:47:18.350
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-28 00:09:14.531
+!MESSAGE org.eclipse.xtext.purexbase.ui.PureXbaseExecutableExtensionFactory  - java.lang.NullPointerException
+
+
+!ENTRY org.apache.log4j 4 0 2012-09-28 00:09:14.535
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - 
+
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.purexbase.ui.PureXbaseExecutableExtensionFactory.getBundle(PureXbaseExecutableExtensionFactory.java:21)
+	at org.eclipse.xtext.ui.guice.AbstractGuiceAwareExecutableExtensionFactory.create(AbstractGuiceAwareExecutableExtensionFactory.java:57)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:262)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant$BuilderParticipantReader.readElement(RegistryBuilderParticipant.java:102)
+	at org.eclipse.emf.ecore.plugin.RegistryReader.internalReadElement(RegistryReader.java:117)
+	at org.eclipse.emf.ecore.plugin.RegistryReader.readRegistry(RegistryReader.java:87)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.initParticipants(RegistryBuilderParticipant.java:80)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.getParticipants(RegistryBuilderParticipant.java:67)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:52)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2012-09-28 00:11:00.544 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-28 00:11:05.608
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-28 00:16:29.297
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 00:16:29.297
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-28 00:16:29.299
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 00:16:29.299
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 00:16:29.299
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-28 00:16:29.313
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-28 00:16:29.313
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-28 00:16:29.313
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 00:16:29.313
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SESSION 2012-09-28 00:38:39.208 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-28 00:38:44.506
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-28 00:46:47.516 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-28 00:46:52.526
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-28 01:10:27.396 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-28 01:10:32.251
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-28 01:22:12.548 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-28 01:22:14.539
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-28 01:22:19.002
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-28 11:16:20.627 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-28 11:16:25.577
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-28 13:16:27.114 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-28 13:16:29.355
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-28 13:16:32.452
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-28 13:17:00.581
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:17:00.583
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-28 13:17:00.585
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:17:00.585
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:17:00.585
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-28 13:17:00.633
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-28 13:17:00.633
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-28 13:17:00.633
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:17:00.634
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.apache.log4j 4 0 2012-09-28 13:19:16.429
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:19:16.429
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-28 13:19:16.430
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:19:16.430
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:19:16.430
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-28 13:19:16.438
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-28 13:19:16.438
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-28 13:19:16.438
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:19:16.438
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-28 13:19:17.035
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-28 13:19:17.035
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-28 13:19:17.037
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:19:17.037
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SESSION 2012-09-28 13:20:53.453 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-28 13:20:55.636
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-28 13:20:58.507
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-28 13:32:21.978
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:32:21.979
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-28 13:32:21.981
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:32:21.981
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:32:21.981
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-28 13:32:21.991
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-28 13:32:21.991
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-28 13:32:21.991
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:32:21.991
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.apache.log4j 4 0 2012-09-28 13:55:32.329
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:55:32.329
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-28 13:55:32.330
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:55:32.330
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:55:32.330
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-28 13:55:32.342
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-28 13:55:32.342
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-28 13:55:32.342
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:55:32.343
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-28 13:55:33.115
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-28 13:55:33.115
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-28 13:55:33.116
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 13:55:33.116
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SESSION 2012-09-28 14:26:04.308 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-09-28 14:26:06.386
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-28 14:26:09.198
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-28 19:57:49.336 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-28 19:57:54.696
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.apache.log4j 4 0 2012-09-28 19:59:40.509
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 19:59:40.509
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-28 19:59:40.511
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 19:59:40.511
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 19:59:40.511
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-28 19:59:40.531
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-28 19:59:40.531
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/start.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.fullBuild(XtextBuilder.java:188)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:85)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-28 19:59:40.531
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 19:59:40.531
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/start.php'.
+
+!ENTRY org.apache.log4j 4 0 2012-09-28 20:06:44.694
+!MESSAGE org.eclipse.xtext.builder.impl.XtextBuilder  - A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 20:06:44.694
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 2 2012-09-28 20:06:44.695
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 20:06:44.695
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 20:06:44.695
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+
+!ENTRY org.eclipse.core.resources 4 75 2012-09-28 20:06:44.703
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.xtext.ui.shared 4 75 2012-09-28 20:06:44.703
+!MESSAGE Errors running builder 'Xtext Project Builder' on project 'Examples'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/Examples/src-gen/START.php'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:329)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:307)
+	at org.eclipse.core.internal.resources.File.create(File.java:111)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at org.eclipse.xtext.builder.EclipseResourceFileSystemAccess2.generateFile(EclipseResourceFileSystemAccess2.java:169)
+	at org.eclipse.xtext.generator.AbstractFileSystemAccess.generateFile(AbstractFileSystemAccess.java:74)
+	at org.telcodev.dsl.generator.Twilio_php_generator.generateTwilioPhp(Twilio_php_generator.java:270)
+	at org.telcodev.dsl.generator.DimeGenerator.doGenerate(DimeGenerator.java:31)
+	at org.eclipse.xtext.builder.BuilderParticipant.handleChangedContents(BuilderParticipant.java:259)
+	at org.eclipse.xtext.builder.BuilderParticipant.build(BuilderParticipant.java:194)
+	at org.eclipse.xtext.builder.impl.RegistryBuilderParticipant.build(RegistryBuilderParticipant.java:60)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.doBuild(XtextBuilder.java:161)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.incrementalBuild(XtextBuilder.java:141)
+	at org.eclipse.xtext.builder.impl.XtextBuilder.build(XtextBuilder.java:91)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2012-09-28 20:06:44.703
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SUBENTRY 1 org.eclipse.core.resources 4 275 2012-09-28 20:06:44.703
+!MESSAGE A resource exists with a different case: '/Examples/src-gen/START.php'.
+!SESSION 2012-09-28 21:13:55.280 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-28 21:14:00.205
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-29 15:44:16.573 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-29 15:44:22.016
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2012-09-29 16:08:06.691 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_35
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=es_ES
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/media/Dime/Dime/dime/source/workspace/../Examples -dev file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.core.net 1 0 2012-09-29 16:08:11.589
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

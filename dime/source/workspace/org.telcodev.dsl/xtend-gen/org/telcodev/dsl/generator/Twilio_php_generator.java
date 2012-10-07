@@ -12,7 +12,6 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.telcodev.dsl.dime.AbstractElement;
-import org.telcodev.dsl.dime.Ask;
 import org.telcodev.dsl.dime.Block;
 import org.telcodev.dsl.dime.BoolExpression;
 import org.telcodev.dsl.dime.BoolLiteral;
@@ -101,6 +100,8 @@ public class Twilio_php_generator {
   private static Record record;
   
   private static GetDigits getdigits;
+  
+  private static int timeout;
   
   public static void generateTwilioPhp(final Resource resource, final IFileSystemAccess fsa, final Config config) {
     Twilio _twilio = config.getTwilio();
@@ -201,7 +202,7 @@ public class Twilio_php_generator {
     fsa.generateFile("res/Services/Twilio/Rest/Notifications.php", _readFile_32);
     String _readFile_33 = CopyFile.readFile("res/twilio_php/Services/Twilio/Rest/OutgoingCallerId.php");
     fsa.generateFile("res/Services/Twilio/Rest/OutgoingCallerId.php", _readFile_33);
-    String _readFile_34 = CopyFile.readFile("res/twilio_php/Services/Twilio/Rest/OutgoingCallerId.php");
+    String _readFile_34 = CopyFile.readFile("res/twilio_php/Services/Twilio/Rest/OutgoingCallerIds.php");
     fsa.generateFile("res/Services/Twilio/Rest/OutgoingCallerIds.php", _readFile_34);
     String _readFile_35 = CopyFile.readFile("res/twilio_php/Services/Twilio/Rest/Participant.php");
     fsa.generateFile("res/Services/Twilio/Rest/Participant.php", _readFile_35);
@@ -249,7 +250,7 @@ public class Twilio_php_generator {
     CharSequence _declareCall = Twilio_php_generator.declareCall();
     fsa.generateFile("call_dime.php", _declareCall);
     CharSequence _kenFile = Twilio_php_generator.tokenFile();
-    fsa.generateFile("res/token.php", _kenFile);
+    fsa.generateFile("token.php", _kenFile);
     EList<EObject> _contents_2 = resource.getContents();
     EObject _head_2 = IterableExtensions.<EObject>head(_contents_2);
     EList<State> _sta = ((Document) _head_2).getSta();
@@ -329,7 +330,6 @@ public class Twilio_php_generator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("curl_close($curl_handle);");
-    _builder.newLine();
     _builder.newLine();
     _builder.append("echo \"<h1>Twilio token, from a Dime application.</h1>\";");
     _builder.newLine();
@@ -448,6 +448,8 @@ public class Twilio_php_generator {
       System.out.println(_plus_1);
       Twilio_php_generator.getdigits = null;
       Twilio_php_generator.record = null;
+      int _timeout = elem.getTimeout();
+      Twilio_php_generator.timeout = _timeout;
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("<?php");
       _builder.newLine();
@@ -1426,18 +1428,8 @@ public class Twilio_php_generator {
                   _builder_6.append("_dime\'])");
                   _xifexpression_6 = _builder_6;
                 } else {
-                  CharSequence _xifexpression_7 = null;
-                  String _name_7 = elem.getName();
-                  boolean _equals_7 = _name_7.equals("TIME");
-                  if (_equals_7) {
-                    StringConcatenation _builder_7 = new StringConcatenation();
-                    _builder_7.append("$time");
-                    _xifexpression_7 = _builder_7;
-                  } else {
-                    StringConcatenation _builder_8 = new StringConcatenation();
-                    _xifexpression_7 = _builder_8;
-                  }
-                  _xifexpression_6 = _xifexpression_7;
+                  StringConcatenation _builder_7 = new StringConcatenation();
+                  _xifexpression_6 = _builder_7;
                 }
                 _xifexpression_5 = _xifexpression_6;
               }
@@ -1472,7 +1464,7 @@ public class Twilio_php_generator {
       SendBlock _params = elem.getParams();
       boolean _notEquals = (!Objects.equal(_params, null));
       if (_notEquals) {
-        _builder.append("+\"?\".");
+        _builder.append(".\"?\".");
         SendBlock _params_1 = elem.getParams();
         CharSequence _declareSendBlock = Twilio_php_generator.declareSendBlock(_params_1);
         _builder.append(_declareSendBlock, "			");
@@ -1534,7 +1526,7 @@ public class Twilio_php_generator {
     _builder.append("\"");
     String _name = elem.getName();
     _builder.append(_name, "");
-    _builder.append("=\"+");
+    _builder.append("=\".");
     ConcatenationExpression _value = elem.getValue();
     CharSequence _declareConcatenation = Twilio_php_generator.declareConcatenation(_value);
     _builder.append(_declareConcatenation, "");
@@ -1552,24 +1544,6 @@ public class Twilio_php_generator {
     CharSequence _declareConcatenation = Twilio_php_generator.declareConcatenation(_that);
     _builder.append(_declareConcatenation, "");
     _builder.append(".\"</Say>\\n\"; ");
-    return _builder;
-  }
-  
-  protected static CharSequence _declareVoiceTag(final Ask elem) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("if(isset($completedurl_dime)){");
-    _builder.newLine();
-    _builder.append("$url_dime=$completedurl_dime.\"?laststate_dime=");
-    _builder.append(Twilio_php_generator.name, "");
-    _builder.append("\";");
-    _builder.newLineIfNotEmpty();
-    CharSequence _saveGlobalVariableXML = Twilio_php_generator.saveGlobalVariableXML("url_dime");
-    _builder.append(_saveGlobalVariableXML, "");
-    _builder.newLineIfNotEmpty();
-    _builder.append("echo \"<Record transcribe=\\\"true\\\" transcribeCallback=\\\"\".$url_dime.\"\\\" /> \\n\";");
-    _builder.newLine();
-    _builder.append("}");
-    _builder.newLine();
     return _builder;
   }
   
@@ -1613,6 +1587,7 @@ public class Twilio_php_generator {
       _builder.newLine();
       _builder.append("}else{");
       _builder.newLine();
+      _builder.append("\t");
       _builder.append("$recordtag_dime=TRUE;");
       _builder.newLine();
       _builder.append("}");
@@ -1651,10 +1626,26 @@ public class Twilio_php_generator {
       _builder.append(_saveGlobalVariableXML, "	");
       _builder.newLineIfNotEmpty();
       _builder.append("\t");
-      _builder.append("echo \"<Gather action=\\\"\".$url_dime.\"\\\"  numDigits=\\\"");
-      int _numDigits = elem.getNumDigits();
-      _builder.append(_numDigits, "	");
-      _builder.append("\\\" ></Gather>\";");
+      _builder.append("echo \"<Gather action=\\\"\".$url_dime.\"\\\"  ");
+      {
+        int _numDigits = elem.getNumDigits();
+        boolean _notEquals = (_numDigits != 0);
+        if (_notEquals) {
+          _builder.append("numDigits=\\\"");
+          int _numDigits_1 = elem.getNumDigits();
+          _builder.append(_numDigits_1, "	");
+          _builder.append("\\\" ");
+        }
+      }
+      {
+        boolean _notEquals_1 = (Twilio_php_generator.timeout != 0);
+        if (_notEquals_1) {
+          _builder.append("timeout=\\\"\".\"");
+          _builder.append(Twilio_php_generator.timeout, "	");
+          _builder.append("\".\"\\\"");
+        }
+      }
+      _builder.append(" ></Gather>\";");
       _builder.newLineIfNotEmpty();
       _builder.append("\t");
       _builder.append("echo \"</Response>\";");
@@ -1678,7 +1669,16 @@ public class Twilio_php_generator {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("echo \"<Dial callerId=\\\"\".\"");
     _builder.append(Twilio_php_generator.number, "");
-    _builder.append("\".\"\\\">\\n <Number>\".");
+    _builder.append("\".\"\\\" ");
+    {
+      boolean _notEquals = (Twilio_php_generator.timeout != 0);
+      if (_notEquals) {
+        _builder.append("timeout=\\\"\".\"");
+        _builder.append(Twilio_php_generator.timeout, "");
+        _builder.append("\".\"\\\"");
+      }
+    }
+    _builder.append("> \\n <Number>\".");
     ConcatenationExpression _to = elem.getTo();
     CharSequence _declareConcatenation = Twilio_php_generator.declareConcatenation(_to);
     _builder.append(_declareConcatenation, "");
@@ -2188,9 +2188,7 @@ public class Twilio_php_generator {
   }
   
   public static CharSequence declareVoiceTag(final VoiceTag elem) {
-    if (elem instanceof Ask) {
-      return _declareVoiceTag((Ask)elem);
-    } else if (elem instanceof Call) {
+    if (elem instanceof Call) {
       return _declareVoiceTag((Call)elem);
     } else if (elem instanceof Dial) {
       return _declareVoiceTag((Dial)elem);

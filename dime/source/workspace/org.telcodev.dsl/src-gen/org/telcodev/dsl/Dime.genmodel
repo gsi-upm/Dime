@@ -19,6 +19,7 @@
     <genClasses ecoreClass="Dime.ecore#//State">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//State/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//State/times"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//State/timeout"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//State/stms"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//VoiceTag">
@@ -40,9 +41,6 @@
     <genClasses ecoreClass="Dime.ecore#//Hangup"/>
     <genClasses ecoreClass="Dime.ecore#//GetDigits">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//GetDigits/numDigits"/>
-    </genClasses>
-    <genClasses ecoreClass="Dime.ecore#//Ask">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Ask/question"/>
     </genClasses>
     <genClasses ecoreClass="Dime.ecore#//Send">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Send/params"/>

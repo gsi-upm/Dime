@@ -13,7 +13,6 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEOb
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
-import org.telcodev.dsl.dime.Ask;
 import org.telcodev.dsl.dime.Block;
 import org.telcodev.dsl.dime.BoolLiteral;
 import org.telcodev.dsl.dime.BoolVariable;
@@ -65,14 +64,6 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == DimePackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case DimePackage.ASK:
-				if(context == grammarAccess.getAbstractElementRule() ||
-				   context == grammarAccess.getAskRule() ||
-				   context == grammarAccess.getVoiceTagRule()) {
-					sequence_Ask(context, (Ask) semanticObject); 
-					return; 
-				}
-				else break;
 			case DimePackage.BLOCK:
 				if(context == grammarAccess.getBlockRule()) {
 					sequence_Block(context, (Block) semanticObject); 
@@ -416,25 +407,6 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name='Ask' question=ConcatenationExpression)
-	 */
-	protected void sequence_Ask(EObject context, Ask semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.VOICE_TAG__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.VOICE_TAG__NAME));
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.ASK__QUESTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.ASK__QUESTION));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAskAccess().getNameAskKeyword_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getAskAccess().getQuestionConcatenationExpressionParserRuleCall_1_0(), semanticObject.getQuestion());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     (sta+=AbstractElement*)
 	 */
 	protected void sequence_Block(EObject context, Block semanticObject) {
@@ -663,7 +635,7 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name='HANGUP' | name='COMPLETED' | name='ERROR' | name='TIMES' | name='TIMEOUT')
+	 *     (name='HANGUP' | name='COMPLETED' | name='ERROR' | name='TIMES')
 	 */
 	protected void sequence_EVENT(EObject context, EVENT semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -700,20 +672,10 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name='Get' numDigits=INT)
+	 *     (name='Gather' numDigits=INT?)
 	 */
 	protected void sequence_GetDigits(EObject context, GetDigits semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.VOICE_TAG__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.VOICE_TAG__NAME));
-			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.GET_DIGITS__NUM_DIGITS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.GET_DIGITS__NUM_DIGITS));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getGetDigitsAccess().getNameGetKeyword_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGetDigitsAccess().getNumDigitsINTTerminalRuleCall_1_0(), semanticObject.getNumDigits());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -933,9 +895,7 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name='CALLER' | 
 	 *         name='LASTSTATE' | 
-	 *         name='TIME' | 
 	 *         name='CALLED' | 
-	 *         name='ANSWER' | 
 	 *         name='DIGITS' | 
 	 *         name='RECORD' | 
 	 *         name='TIMES'
@@ -1020,7 +980,7 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID times=INT? stms+=AbstractElement*)
+	 *     (name=ID times=INT? timeout=INT? stms+=AbstractElement*)
 	 */
 	protected void sequence_State(EObject context, State semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -14,16 +14,16 @@ $hour;
 $day;
 $month;
 $people;
-define("userNumber","+34656422095");
-define("userEmail","totemteleko@gmail.com");
+define("userNumber","+3656422095");
+define("userEmail","user@mail.com");
 define("year",2012);
 
 // Declaration of the states
 
-// State START implementation
+// State start implementation
 
-dispatch_post('/START', 'app_START');
-function app_START() {
+dispatch_post('/start', 'app_start');
+function app_start() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -43,14 +43,14 @@ function app_START() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_START_dime'])){
-	$attempts=intval($_SESSION['times_START_dime']);
+	if(isset($_SESSION['times_start_dime'])){
+	$attempts=intval($_SESSION['times_start_dime']);
 	$attempts++;
-	$_SESSION['times_START_dime']=$attempts;
+	$_SESSION['times_start_dime']=$attempts;
 			
 		
 	}else{
-		$_SESSION['times_START_dime']=0;
+		$_SESSION['times_start_dime']=0;
 	}
 	
 	
@@ -78,8 +78,8 @@ function app_START() {
 	
 	// Declaration of the statements of the state.
 	
-	$tropo->say("Bienvenido al servicio de atencion especial de restaurantes de Telcodev.", array("voice"=>"leonor", "allowSignals"=>array("timeExceededSTART", "attemptsLimit")));
-	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ISCLIENT"));
+	$tropo->say("Bienvenido al servicio de atencion especial de restaurantes de Telcodev.", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitstart")));
+	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=isclient"));
 	
 	// Update the global variables and the session params.
 	
@@ -95,13 +95,13 @@ function app_START() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='START';
+	$_SESSION['lastState_dime']='start';
 	return $tropo->RenderJson();
 }
-// State ISCLIENT implementation
+// State isclient implementation
 
-dispatch_post('/ISCLIENT', 'app_ISCLIENT');
-function app_ISCLIENT() {
+dispatch_post('/isclient', 'app_isclient');
+function app_isclient() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -121,14 +121,14 @@ function app_ISCLIENT() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_ISCLIENT_dime'])){
-	$attempts=intval($_SESSION['times_ISCLIENT_dime']);
+	if(isset($_SESSION['times_isclient_dime'])){
+	$attempts=intval($_SESSION['times_isclient_dime']);
 	$attempts++;
-	$_SESSION['times_ISCLIENT_dime']=$attempts;
+	$_SESSION['times_isclient_dime']=$attempts;
 			
 		
 	}else{
-		$_SESSION['times_ISCLIENT_dime']=0;
+		$_SESSION['times_isclient_dime']=0;
 	}
 	
 	
@@ -156,11 +156,11 @@ function app_ISCLIENT() {
 	
 	// Declaration of the statements of the state.
 	
-	$tropo->say("Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.", array("voice"=>"leonor", "allowSignals"=>array("timeExceededISCLIENT", "attemptsLimit")));
-	$tropo->ask("",array("choices"=>"[1 DIGIT]", "terminator" => "#", "name"=>"Get", "voice"=>"leonor", "allowSignals"=>array("timeExceededISCLIENT", "attemptsLimit")));
-	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=CLIENTCONF"));
-	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=HANGUPERROR"));
-	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=HANGUPERROR"));
+	$tropo->say("Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitisclient")));
+	$tropo->ask("",array("choices"=> "[1 DIGIT]", "terminator" => "#", "name"=>"Gather", "voice"=>"leonor", "allowSignals"=>array("attemptsLimitisclient") ));
+	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=clientconf"));
+	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=hanguperror"));
+	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=hanguperror"));
 	
 	// Update the global variables and the session params.
 	
@@ -176,13 +176,13 @@ function app_ISCLIENT() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='ISCLIENT';
+	$_SESSION['lastState_dime']='isclient';
 	return $tropo->RenderJson();
 }
-// State CLIENTCONF implementation
+// State clientconf implementation
 
-dispatch_post('/CLIENTCONF', 'app_CLIENTCONF');
-function app_CLIENTCONF() {
+dispatch_post('/clientconf', 'app_clientconf');
+function app_clientconf() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -202,13 +202,13 @@ function app_CLIENTCONF() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_CLIENTCONF_dime'])){
-	$attempts=intval($_SESSION['times_CLIENTCONF_dime']);
+	if(isset($_SESSION['times_clientconf_dime'])){
+	$attempts=intval($_SESSION['times_clientconf_dime']);
 	$attempts++;
-	$_SESSION['times_CLIENTCONF_dime']=$attempts;
+	$_SESSION['times_clientconf_dime']=$attempts;
 	if($attempts==3){
-		$_SESSION['times_CLIENTCONF_dime']=0;
-		$urltimes = "http://shannon.gsi.dit.upm.es/roberto/res/signals.php?signal_dime=attemptsLimit&sessionID_dime=".$_SESSION['sessionID_dime'];
+		$_SESSION['times_clientconf_dime']=0;
+		$urltimes = "http://shannon.gsi.dit.upm.es/roberto/res/signals.php?signal_dime=attemptsLimitclientconf&sessionID_dime=".$_SESSION['sessionID_dime'];
 		$curl_handle=curl_init();
 		curl_setopt($curl_handle,CURLOPT_URL,$urltimes);
 		curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
@@ -219,7 +219,7 @@ function app_CLIENTCONF() {
 			
 		
 	}else{
-		$_SESSION['times_CLIENTCONF_dime']=0;
+		$_SESSION['times_clientconf_dime']=0;
 	}
 	
 	
@@ -248,19 +248,19 @@ function app_CLIENTCONF() {
 	// Declaration of the statements of the state.
 	
 	if((intval($result_dime->getValue())==1)){
-			$tropo->say("De acuerdo. Ahora procederemos a la realizacion de la solicitud. ", array("voice"=>"leonor", "allowSignals"=>array("timeExceededCLIENTCONF", "attemptsLimit")));
-	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ASKPEOPLE"));
+			$tropo->say("De acuerdo. Ahora procederemos a la realizacion de la solicitud. ", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitclientconf")));
+	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=askpeople"));
 			}
 	else if((intval($result_dime->getValue())==0)){
-			$tropo->say("De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.", array("voice"=>"leonor", "allowSignals"=>array("timeExceededCLIENTCONF", "attemptsLimit")));
+			$tropo->say("De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitclientconf")));
 	$tropo->hangup();
 			}
 	else {
-			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ISCLIENT"));
+			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=isclient"));
 			}
-	$tropo->on(array("event" => "attemptsLimit", "next" =>"restaurant.php?uri=TOOATTEMPTS"));
-	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=HANGUPERROR"));
-	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=HANGUPERROR"));
+	$tropo->on(array("event" => "attemptsLimit", "next" =>"restaurant.php?uri=tooattempts"));
+	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=hanguperror"));
+	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=hanguperror"));
 	
 	// Update the global variables and the session params.
 	
@@ -276,13 +276,13 @@ function app_CLIENTCONF() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='CLIENTCONF';
+	$_SESSION['lastState_dime']='clientconf';
 	return $tropo->RenderJson();
 }
-// State ASKPEOPLE implementation
+// State askpeople implementation
 
-dispatch_post('/ASKPEOPLE', 'app_ASKPEOPLE');
-function app_ASKPEOPLE() {
+dispatch_post('/askpeople', 'app_askpeople');
+function app_askpeople() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -302,14 +302,14 @@ function app_ASKPEOPLE() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_ASKPEOPLE_dime'])){
-	$attempts=intval($_SESSION['times_ASKPEOPLE_dime']);
+	if(isset($_SESSION['times_askpeople_dime'])){
+	$attempts=intval($_SESSION['times_askpeople_dime']);
 	$attempts++;
-	$_SESSION['times_ASKPEOPLE_dime']=$attempts;
+	$_SESSION['times_askpeople_dime']=$attempts;
 			
 		
 	}else{
-		$_SESSION['times_ASKPEOPLE_dime']=0;
+		$_SESSION['times_askpeople_dime']=0;
 	}
 	
 	
@@ -337,16 +337,16 @@ function app_ASKPEOPLE() {
 	
 	// Declaration of the statements of the state.
 	
-	$tropo->say("Diga el numero de comensales", array("voice"=>"leonor", "allowSignals"=>array("timeExceededASKPEOPLE", "attemptsLimit")));
-	$tropo->ask("",array("choices"=>"[1 DIGIT]", "terminator" => "#", "name"=>"Get", "voice"=>"leonor", "allowSignals"=>array("timeExceededASKPEOPLE", "attemptsLimit")));
-	if((intval($_SESSION['times_ASKPEOPLE_dime'])==0)){
-			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ASKDAY"));
+	$tropo->say("Diga el numero de comensales", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitaskpeople")));
+	$tropo->ask("",array("choices"=> "[1 DIGIT]", "terminator" => "#", "name"=>"Gather", "voice"=>"leonor", "allowSignals"=>array("attemptsLimitaskpeople") ));
+	if((intval($_SESSION['times_askpeople_dime'])==0)){
+			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=askday"));
 			}
 	else {
-			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ASKDONE"));
+			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=askdone"));
 			}
-	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=HANGUPERROR"));
-	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=HANGUPERROR"));
+	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=hanguperror"));
+	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=hanguperror"));
 	
 	// Update the global variables and the session params.
 	
@@ -362,13 +362,13 @@ function app_ASKPEOPLE() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='ASKPEOPLE';
+	$_SESSION['lastState_dime']='askpeople';
 	return $tropo->RenderJson();
 }
-// State ASKDAY implementation
+// State askday implementation
 
-dispatch_post('/ASKDAY', 'app_ASKDAY');
-function app_ASKDAY() {
+dispatch_post('/askday', 'app_askday');
+function app_askday() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -388,14 +388,14 @@ function app_ASKDAY() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_ASKDAY_dime'])){
-	$attempts=intval($_SESSION['times_ASKDAY_dime']);
+	if(isset($_SESSION['times_askday_dime'])){
+	$attempts=intval($_SESSION['times_askday_dime']);
 	$attempts++;
-	$_SESSION['times_ASKDAY_dime']=$attempts;
+	$_SESSION['times_askday_dime']=$attempts;
 			
 		
 	}else{
-		$_SESSION['times_ASKDAY_dime']=0;
+		$_SESSION['times_askday_dime']=0;
 	}
 	
 	
@@ -424,16 +424,16 @@ function app_ASKDAY() {
 	// Declaration of the statements of the state.
 	
 	$people=intval($result_dime->getValue());
-	$tropo->say("En que dia lo desea?", array("voice"=>"leonor", "allowSignals"=>array("timeExceededASKDAY", "attemptsLimit")));
-	$tropo->ask("",array("choices"=>"[2 DIGITS]", "terminator" => "#", "name"=>"Get", "voice"=>"leonor", "allowSignals"=>array("timeExceededASKDAY", "attemptsLimit")));
-	if((intval($_SESSION['times_ASKDAY_dime'])==0)){
-			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ASKMONTH"));
+	$tropo->say("En que dia lo desea?", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitaskday")));
+	$tropo->ask("",array("choices"=> "[2 DIGITS]", "terminator" => "#", "name"=>"Gather", "voice"=>"leonor", "allowSignals"=>array("attemptsLimitaskday") ));
+	if((intval($_SESSION['times_askday_dime'])==0)){
+			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=askmonth"));
 			}
 	else {
-			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ASKDONE"));
+			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=askdone"));
 			}
-	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=HANGUPERROR"));
-	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=HANGUPERROR"));
+	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=hanguperror"));
+	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=hanguperror"));
 	
 	// Update the global variables and the session params.
 	
@@ -449,13 +449,13 @@ function app_ASKDAY() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='ASKDAY';
+	$_SESSION['lastState_dime']='askday';
 	return $tropo->RenderJson();
 }
-// State ASKMONTH implementation
+// State askmonth implementation
 
-dispatch_post('/ASKMONTH', 'app_ASKMONTH');
-function app_ASKMONTH() {
+dispatch_post('/askmonth', 'app_askmonth');
+function app_askmonth() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -475,14 +475,14 @@ function app_ASKMONTH() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_ASKMONTH_dime'])){
-	$attempts=intval($_SESSION['times_ASKMONTH_dime']);
+	if(isset($_SESSION['times_askmonth_dime'])){
+	$attempts=intval($_SESSION['times_askmonth_dime']);
 	$attempts++;
-	$_SESSION['times_ASKMONTH_dime']=$attempts;
+	$_SESSION['times_askmonth_dime']=$attempts;
 			
 		
 	}else{
-		$_SESSION['times_ASKMONTH_dime']=0;
+		$_SESSION['times_askmonth_dime']=0;
 	}
 	
 	
@@ -511,16 +511,16 @@ function app_ASKMONTH() {
 	// Declaration of the statements of the state.
 	
 	$day=intval($result_dime->getValue());
-	$tropo->say("En que mes desea realizar dicha reserva?", array("voice"=>"leonor", "allowSignals"=>array("timeExceededASKMONTH", "attemptsLimit")));
-	$tropo->ask("",array("choices"=>"[1 DIGIT]", "terminator" => "#", "name"=>"Get", "voice"=>"leonor", "allowSignals"=>array("timeExceededASKMONTH", "attemptsLimit")));
-	if((intval($_SESSION['times_ASKMONTH_dime'])==0)){
-			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ASKHOUR"));
+	$tropo->say("En que mes desea realizar dicha reserva?", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitaskmonth")));
+	$tropo->ask("",array("choices"=> "[1 DIGIT]", "terminator" => "#", "name"=>"Gather", "voice"=>"leonor", "allowSignals"=>array("attemptsLimitaskmonth") ));
+	if((intval($_SESSION['times_askmonth_dime'])==0)){
+			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=askhour"));
 			}
 	else {
-			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ASKDONE"));
+			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=askdone"));
 			}
-	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=HANGUPERROR"));
-	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=HANGUPERROR"));
+	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=hanguperror"));
+	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=hanguperror"));
 	
 	// Update the global variables and the session params.
 	
@@ -536,13 +536,13 @@ function app_ASKMONTH() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='ASKMONTH';
+	$_SESSION['lastState_dime']='askmonth';
 	return $tropo->RenderJson();
 }
-// State ASKHOUR implementation
+// State askhour implementation
 
-dispatch_post('/ASKHOUR', 'app_ASKHOUR');
-function app_ASKHOUR() {
+dispatch_post('/askhour', 'app_askhour');
+function app_askhour() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -562,14 +562,14 @@ function app_ASKHOUR() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_ASKHOUR_dime'])){
-	$attempts=intval($_SESSION['times_ASKHOUR_dime']);
+	if(isset($_SESSION['times_askhour_dime'])){
+	$attempts=intval($_SESSION['times_askhour_dime']);
 	$attempts++;
-	$_SESSION['times_ASKHOUR_dime']=$attempts;
+	$_SESSION['times_askhour_dime']=$attempts;
 			
 		
 	}else{
-		$_SESSION['times_ASKHOUR_dime']=0;
+		$_SESSION['times_askhour_dime']=0;
 	}
 	
 	
@@ -598,11 +598,11 @@ function app_ASKHOUR() {
 	// Declaration of the statements of the state.
 	
 	$month=intval($result_dime->getValue());
-	$tropo->say("A que hora le conviene?", array("voice"=>"leonor", "allowSignals"=>array("timeExceededASKHOUR", "attemptsLimit")));
-	$tropo->ask("",array("choices"=>"[4 DIGITS]", "terminator" => "#", "name"=>"Get", "voice"=>"leonor", "allowSignals"=>array("timeExceededASKHOUR", "attemptsLimit")));
-	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ASKDONE"));
-	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=HANGUPERROR"));
-	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=HANGUPERROR"));
+	$tropo->say("A que hora le conviene?", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitaskhour")));
+	$tropo->ask("",array("choices"=> "[2 DIGITS]", "terminator" => "#", "name"=>"Gather", "voice"=>"leonor", "allowSignals"=>array("attemptsLimitaskhour") ));
+	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=askdone"));
+	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=hanguperror"));
+	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=hanguperror"));
 	
 	// Update the global variables and the session params.
 	
@@ -618,13 +618,13 @@ function app_ASKHOUR() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='ASKHOUR';
+	$_SESSION['lastState_dime']='askhour';
 	return $tropo->RenderJson();
 }
-// State ASKDONE implementation
+// State askdone implementation
 
-dispatch_post('/ASKDONE', 'app_ASKDONE');
-function app_ASKDONE() {
+dispatch_post('/askdone', 'app_askdone');
+function app_askdone() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -644,14 +644,14 @@ function app_ASKDONE() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_ASKDONE_dime'])){
-	$attempts=intval($_SESSION['times_ASKDONE_dime']);
+	if(isset($_SESSION['times_askdone_dime'])){
+	$attempts=intval($_SESSION['times_askdone_dime']);
 	$attempts++;
-	$_SESSION['times_ASKDONE_dime']=$attempts;
+	$_SESSION['times_askdone_dime']=$attempts;
 			
 		
 	}else{
-		$_SESSION['times_ASKDONE_dime']=0;
+		$_SESSION['times_askdone_dime']=0;
 	}
 	
 	
@@ -679,22 +679,22 @@ function app_ASKDONE() {
 	
 	// Declaration of the statements of the state.
 	
-	if(($_SESSION['lastState_dime']=="ASKHOUR")){
+	if(($_SESSION['lastState_dime']=="askhour")){
 			$hour=intval($result_dime->getValue());
 			}
-	else if(($_SESSION['lastState_dime']=="ASKDAY")){
+	else if(($_SESSION['lastState_dime']=="askday")){
 			$day=intval($result_dime->getValue());
 			}
-	else if(($_SESSION['lastState_dime']=="ASKPEOPLE")){
+	else if(($_SESSION['lastState_dime']=="askpeople")){
 			$people=intval($result_dime->getValue());
 			}
-	else if(($_SESSION['lastState_dime']=="ASKMONTH")){
+	else if(($_SESSION['lastState_dime']=="askmonth")){
 			$month=intval($result_dime->getValue());
 			}
-	$tropo->say("Usted ha solicitado una reserva en nuestro restaurante el dia ".$day."de".$month."de"."2012"."a las ".$hour." para".$people." personas.", array("voice"=>"leonor", "allowSignals"=>array("timeExceededASKDONE", "attemptsLimit")));
-	$tropo->say("Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.", array("voice"=>"leonor", "allowSignals"=>array("timeExceededASKDONE", "attemptsLimit")));
-	$tropo->ask("",array("choices"=>"[1 DIGIT]", "terminator" => "#", "name"=>"Get", "voice"=>"leonor", "allowSignals"=>array("timeExceededASKDONE", "attemptsLimit")));
-	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=DONECONF"));
+	$tropo->say("Usted ha solicitado una reserva en nuestro restaurante el dia ".$day." de ".$month." de "."2012"." a las ".$hour." horas  para ".$people." personas.", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitaskdone")));
+	$tropo->say("Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitaskdone")));
+	$tropo->ask("",array("choices"=> "[1 DIGIT]", "terminator" => "#", "name"=>"Gather", "voice"=>"leonor", "allowSignals"=>array("attemptsLimitaskdone") ));
+	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=doneconf"));
 	
 	// Update the global variables and the session params.
 	
@@ -710,13 +710,13 @@ function app_ASKDONE() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='ASKDONE';
+	$_SESSION['lastState_dime']='askdone';
 	return $tropo->RenderJson();
 }
-// State DONECONF implementation
+// State doneconf implementation
 
-dispatch_post('/DONECONF', 'app_DONECONF');
-function app_DONECONF() {
+dispatch_post('/doneconf', 'app_doneconf');
+function app_doneconf() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -736,13 +736,13 @@ function app_DONECONF() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_DONECONF_dime'])){
-	$attempts=intval($_SESSION['times_DONECONF_dime']);
+	if(isset($_SESSION['times_doneconf_dime'])){
+	$attempts=intval($_SESSION['times_doneconf_dime']);
 	$attempts++;
-	$_SESSION['times_DONECONF_dime']=$attempts;
+	$_SESSION['times_doneconf_dime']=$attempts;
 	if($attempts==3){
-		$_SESSION['times_DONECONF_dime']=0;
-		$urltimes = "http://shannon.gsi.dit.upm.es/roberto/res/signals.php?signal_dime=attemptsLimit&sessionID_dime=".$_SESSION['sessionID_dime'];
+		$_SESSION['times_doneconf_dime']=0;
+		$urltimes = "http://shannon.gsi.dit.upm.es/roberto/res/signals.php?signal_dime=attemptsLimitdoneconf&sessionID_dime=".$_SESSION['sessionID_dime'];
 		$curl_handle=curl_init();
 		curl_setopt($curl_handle,CURLOPT_URL,$urltimes);
 		curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
@@ -753,7 +753,7 @@ function app_DONECONF() {
 			
 		
 	}else{
-		$_SESSION['times_DONECONF_dime']=0;
+		$_SESSION['times_doneconf_dime']=0;
 	}
 	
 	
@@ -782,20 +782,20 @@ function app_DONECONF() {
 	// Declaration of the statements of the state.
 	
 	if((intval($result_dime->getValue())==1)){
-			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=END"));
+			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=end"));
 			}
 	else if((intval($result_dime->getValue())==0)){
-			$tropo->say("Que dato desea modificar?", array("voice"=>"leonor", "allowSignals"=>array("timeExceededDONECONF", "attemptsLimit")));
-	$tropo->say("Pulse 1 para el numero de comensales.", array("voice"=>"leonor", "allowSignals"=>array("timeExceededDONECONF", "attemptsLimit")));
-	$tropo->say("Pulse 2 para el dia", array("voice"=>"leonor", "allowSignals"=>array("timeExceededDONECONF", "attemptsLimit")));
-	$tropo->say("Pulse 3 para el mes", array("voice"=>"leonor", "allowSignals"=>array("timeExceededDONECONF", "attemptsLimit")));
-	$tropo->say("Pulse 4 para la hora", array("voice"=>"leonor", "allowSignals"=>array("timeExceededDONECONF", "attemptsLimit")));
-	$tropo->ask("",array("choices"=>"[1 DIGIT]", "terminator" => "#", "name"=>"Get", "voice"=>"leonor", "allowSignals"=>array("timeExceededDONECONF", "attemptsLimit")));
-	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=MODIFICATION"));
+			$tropo->say("Que dato desea modificar?", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitdoneconf")));
+	$tropo->say("Pulse 1 para el numero de comensales.", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitdoneconf")));
+	$tropo->say("Pulse 2 para el dia", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitdoneconf")));
+	$tropo->say("Pulse 3 para el mes", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitdoneconf")));
+	$tropo->say("Pulse 4 para la hora", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitdoneconf")));
+	$tropo->ask("",array("choices"=> "[1 DIGIT]", "terminator" => "#", "name"=>"Gather", "voice"=>"leonor", "allowSignals"=>array("attemptsLimitdoneconf") ));
+	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=modification"));
 			}
-	$tropo->on(array("event" => "attemptsLimit", "next" =>"restaurant.php?uri=TOOATTEMPTS"));
-	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=HANGUPERROR"));
-	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=HANGUPERROR"));
+	$tropo->on(array("event" => "attemptsLimit", "next" =>"restaurant.php?uri=tooattempts"));
+	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=hanguperror"));
+	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=hanguperror"));
 	
 	// Update the global variables and the session params.
 	
@@ -811,13 +811,13 @@ function app_DONECONF() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='DONECONF';
+	$_SESSION['lastState_dime']='doneconf';
 	return $tropo->RenderJson();
 }
-// State MODIFICATION implementation
+// State modification implementation
 
-dispatch_post('/MODIFICATION', 'app_MODIFICATION');
-function app_MODIFICATION() {
+dispatch_post('/modification', 'app_modification');
+function app_modification() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -837,13 +837,13 @@ function app_MODIFICATION() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_MODIFICATION_dime'])){
-	$attempts=intval($_SESSION['times_MODIFICATION_dime']);
+	if(isset($_SESSION['times_modification_dime'])){
+	$attempts=intval($_SESSION['times_modification_dime']);
 	$attempts++;
-	$_SESSION['times_MODIFICATION_dime']=$attempts;
+	$_SESSION['times_modification_dime']=$attempts;
 	if($attempts==3){
-		$_SESSION['times_MODIFICATION_dime']=0;
-		$urltimes = "http://shannon.gsi.dit.upm.es/roberto/res/signals.php?signal_dime=attemptsLimit&sessionID_dime=".$_SESSION['sessionID_dime'];
+		$_SESSION['times_modification_dime']=0;
+		$urltimes = "http://shannon.gsi.dit.upm.es/roberto/res/signals.php?signal_dime=attemptsLimitmodification&sessionID_dime=".$_SESSION['sessionID_dime'];
 		$curl_handle=curl_init();
 		curl_setopt($curl_handle,CURLOPT_URL,$urltimes);
 		curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
@@ -854,7 +854,7 @@ function app_MODIFICATION() {
 			
 		
 	}else{
-		$_SESSION['times_MODIFICATION_dime']=0;
+		$_SESSION['times_modification_dime']=0;
 	}
 	
 	
@@ -883,24 +883,24 @@ function app_MODIFICATION() {
 	// Declaration of the statements of the state.
 	
 	if((intval($result_dime->getValue())==1)){
-			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ASKPEOPLE"));
+			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=askpeople"));
 			}
 	else if((intval($result_dime->getValue())==2)){
-			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ASKDAY"));
+			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=askday"));
 			}
 	else if((intval($result_dime->getValue())==3)){
-			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ASKMONTH"));
+			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=askmonth"));
 			}
 	else if((intval($result_dime->getValue())==4)){
-			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=ASKHOUR"));
+			$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=askhour"));
 			}
 	else {
-			$tropo->say("Disculpe, pero ha pulsado un digito equivocado.", array("voice"=>"leonor", "allowSignals"=>array("timeExceededMODIFICATION", "attemptsLimit")));
-	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=DONECONF"));
+			$tropo->say("Disculpe, pero ha pulsado un digito equivocado.", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitmodification")));
+	$tropo->on(array("event" => "continue", "next" =>"restaurant.php?uri=doneconf"));
 			}
-	$tropo->on(array("event" => "attemptsLimit", "next" =>"restaurant.php?uri=TOOATTEMPTS"));
-	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=HANGUPERROR"));
-	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=HANGUPERROR"));
+	$tropo->on(array("event" => "attemptsLimit", "next" =>"restaurant.php?uri=tooattempts"));
+	$tropo->on(array("event" => "incomplete", "next" =>"restaurant.php?uri=hanguperror"));
+	$tropo->on(array("event" => "error", "next" =>"restaurant.php?uri=hanguperror"));
 	
 	// Update the global variables and the session params.
 	
@@ -916,13 +916,13 @@ function app_MODIFICATION() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='MODIFICATION';
+	$_SESSION['lastState_dime']='modification';
 	return $tropo->RenderJson();
 }
-// State TOOATTEMPTS implementation
+// State tooattempts implementation
 
-dispatch_post('/TOOATTEMPTS', 'app_TOOATTEMPTS');
-function app_TOOATTEMPTS() {
+dispatch_post('/tooattempts', 'app_tooattempts');
+function app_tooattempts() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -942,14 +942,14 @@ function app_TOOATTEMPTS() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_TOOATTEMPTS_dime'])){
-	$attempts=intval($_SESSION['times_TOOATTEMPTS_dime']);
+	if(isset($_SESSION['times_tooattempts_dime'])){
+	$attempts=intval($_SESSION['times_tooattempts_dime']);
 	$attempts++;
-	$_SESSION['times_TOOATTEMPTS_dime']=$attempts;
+	$_SESSION['times_tooattempts_dime']=$attempts;
 			
 		
 	}else{
-		$_SESSION['times_TOOATTEMPTS_dime']=0;
+		$_SESSION['times_tooattempts_dime']=0;
 	}
 	
 	
@@ -977,7 +977,7 @@ function app_TOOATTEMPTS() {
 	
 	// Declaration of the statements of the state.
 	
-	$tropo->say("Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde", array("voice"=>"leonor", "allowSignals"=>array("timeExceededTOOATTEMPTS", "attemptsLimit")));
+	$tropo->say("Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimittooattempts")));
 	
 	// Update the global variables and the session params.
 	
@@ -993,13 +993,13 @@ function app_TOOATTEMPTS() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='TOOATTEMPTS';
+	$_SESSION['lastState_dime']='tooattempts';
 	return $tropo->RenderJson();
 }
-// State HANGUPERROR implementation
+// State hanguperror implementation
 
-dispatch_post('/HANGUPERROR', 'app_HANGUPERROR');
-function app_HANGUPERROR() {
+dispatch_post('/hanguperror', 'app_hanguperror');
+function app_hanguperror() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -1019,14 +1019,14 @@ function app_HANGUPERROR() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_HANGUPERROR_dime'])){
-	$attempts=intval($_SESSION['times_HANGUPERROR_dime']);
+	if(isset($_SESSION['times_hanguperror_dime'])){
+	$attempts=intval($_SESSION['times_hanguperror_dime']);
 	$attempts++;
-	$_SESSION['times_HANGUPERROR_dime']=$attempts;
+	$_SESSION['times_hanguperror_dime']=$attempts;
 			
 		
 	}else{
-		$_SESSION['times_HANGUPERROR_dime']=0;
+		$_SESSION['times_hanguperror_dime']=0;
 	}
 	
 	
@@ -1054,7 +1054,7 @@ function app_HANGUPERROR() {
 	
 	// Declaration of the statements of the state.
 	
-	$tropo->say("Ha ocurrido un error, disculpe las molestias.", array("voice"=>"leonor", "allowSignals"=>array("timeExceededHANGUPERROR", "attemptsLimit")));
+	$tropo->say("Ha ocurrido un error, disculpe las molestias.", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimithanguperror")));
 	$tropo->hangup();
 	
 	// Update the global variables and the session params.
@@ -1071,13 +1071,13 @@ function app_HANGUPERROR() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='HANGUPERROR';
+	$_SESSION['lastState_dime']='hanguperror';
 	return $tropo->RenderJson();
 }
-// State END implementation
+// State end implementation
 
-dispatch_post('/END', 'app_END');
-function app_END() {
+dispatch_post('/end', 'app_end');
+function app_end() {
 	
 	
 	// Creates a Tropo session and getting its parameters
@@ -1097,14 +1097,14 @@ function app_END() {
 	
 	// Times signal appears when the param reached the atribute times of the state
 	
-	if(isset($_SESSION['times_END_dime'])){
-	$attempts=intval($_SESSION['times_END_dime']);
+	if(isset($_SESSION['times_end_dime'])){
+	$attempts=intval($_SESSION['times_end_dime']);
 	$attempts++;
-	$_SESSION['times_END_dime']=$attempts;
+	$_SESSION['times_end_dime']=$attempts;
 			
 		
 	}else{
-		$_SESSION['times_END_dime']=0;
+		$_SESSION['times_end_dime']=0;
 	}
 	
 	
@@ -1132,7 +1132,7 @@ function app_END() {
 	
 	// Declaration of the statements of the state.
 	
-	$tropo->say("De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.", array("voice"=>"leonor", "allowSignals"=>array("timeExceededEND", "attemptsLimit")));
+	$tropo->say("De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.", array("voice"=>"leonor", "allowSignals"=>array("attemptsLimitend")));
 	if(($_SESSION['caller_dime']==userNumber)){
 			// Email implementation
 			
@@ -1140,7 +1140,7 @@ function app_END() {
 	// Send implementation for HTTP GET with cURL.
 				
 						$curl_handle=curl_init();
-						curl_setopt($curl_handle,CURLOPT_URL,"http://shannon.gsi.dit.upm.es/roberto/res/saveReservation.php"+"?"."caller="+userNumber."&"."day="+$day."&"."hour="+$hour."&"."month="+$month."&"."people="+$people."&"."year="+year);
+						curl_setopt($curl_handle,CURLOPT_URL,"http://host.com/saveReservation.php"."?"."caller=".userNumber."&"."day=".$day."&"."hour=".$hour."&"."month=".$month."&"."people=".$people."&"."year=".year);
 						curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
 						curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 						curl_exec($curl_handle);
@@ -1150,7 +1150,7 @@ function app_END() {
 			// Send implementation for HTTP GET with cURL.
 				
 						$curl_handle=curl_init();
-						curl_setopt($curl_handle,CURLOPT_URL,"http://shannon.gsi.dit.upm.es/roberto/res/saveReservation.php"+"?"."caller="+$_SESSION['caller_dime']."&"."day="+$day."&"."hour="+$hour."&"."month="+$month."&"."people="+$people."&"."year="+year);
+						curl_setopt($curl_handle,CURLOPT_URL,"http://host.com/saveReservation.php"."?"."caller=".$_SESSION['caller_dime']."&"."day=".$day."&"."hour=".$hour."&"."month=".$month."&"."people=".$people."&"."year=".year);
 						curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
 						curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 						curl_exec($curl_handle);
@@ -1172,7 +1172,7 @@ function app_END() {
 	if(isset($people)){
 		$_SESSION['people']=$people;
 	}
-	$_SESSION['lastState_dime']='END';
+	$_SESSION['lastState_dime']='end';
 	return $tropo->RenderJson();
 }
 

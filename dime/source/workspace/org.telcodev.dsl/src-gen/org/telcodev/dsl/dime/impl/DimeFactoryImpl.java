@@ -76,7 +76,6 @@ public class DimeFactoryImpl extends EFactoryImpl implements DimeFactory
       case DimePackage.REJECT: return createReject();
       case DimePackage.HANGUP: return createHangup();
       case DimePackage.GET_DIGITS: return createGetDigits();
-      case DimePackage.ASK: return createAsk();
       case DimePackage.SEND: return createSend();
       case DimePackage.SEND_BLOCK: return createSendBlock();
       case DimePackage.NOT_PRIMARY_PARAM: return createNotPrimaryParam();
@@ -248,17 +247,6 @@ public class DimeFactoryImpl extends EFactoryImpl implements DimeFactory
   {
     GetDigitsImpl getDigits = new GetDigitsImpl();
     return getDigits;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Ask createAsk()
-  {
-    AskImpl ask = new AskImpl();
-    return ask;
   }
 
   /**

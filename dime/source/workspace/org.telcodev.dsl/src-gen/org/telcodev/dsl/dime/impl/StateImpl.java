@@ -31,6 +31,7 @@ import org.telcodev.dsl.dime.State;
  * <ul>
  *   <li>{@link org.telcodev.dsl.dime.impl.StateImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.StateImpl#getTimes <em>Times</em>}</li>
+ *   <li>{@link org.telcodev.dsl.dime.impl.StateImpl#getTimeout <em>Timeout</em>}</li>
  *   <li>{@link org.telcodev.dsl.dime.impl.StateImpl#getStms <em>Stms</em>}</li>
  * </ul>
  * </p>
@@ -78,6 +79,26 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
    * @ordered
    */
   protected int times = TIMES_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getTimeout() <em>Timeout</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTimeout()
+   * @generated
+   * @ordered
+   */
+  protected static final int TIMEOUT_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getTimeout() <em>Timeout</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTimeout()
+   * @generated
+   * @ordered
+   */
+  protected int timeout = TIMEOUT_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getStms() <em>Stms</em>}' containment reference list.
@@ -161,6 +182,29 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
    * <!-- end-user-doc -->
    * @generated
    */
+  public int getTimeout()
+  {
+    return timeout;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTimeout(int newTimeout)
+  {
+    int oldTimeout = timeout;
+    timeout = newTimeout;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DimePackage.STATE__TIMEOUT, oldTimeout, timeout));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<AbstractElement> getStms()
   {
     if (stms == null)
@@ -200,6 +244,8 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
         return getName();
       case DimePackage.STATE__TIMES:
         return getTimes();
+      case DimePackage.STATE__TIMEOUT:
+        return getTimeout();
       case DimePackage.STATE__STMS:
         return getStms();
     }
@@ -222,6 +268,9 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
         return;
       case DimePackage.STATE__TIMES:
         setTimes((Integer)newValue);
+        return;
+      case DimePackage.STATE__TIMEOUT:
+        setTimeout((Integer)newValue);
         return;
       case DimePackage.STATE__STMS:
         getStms().clear();
@@ -247,6 +296,9 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
       case DimePackage.STATE__TIMES:
         setTimes(TIMES_EDEFAULT);
         return;
+      case DimePackage.STATE__TIMEOUT:
+        setTimeout(TIMEOUT_EDEFAULT);
+        return;
       case DimePackage.STATE__STMS:
         getStms().clear();
         return;
@@ -268,6 +320,8 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case DimePackage.STATE__TIMES:
         return times != TIMES_EDEFAULT;
+      case DimePackage.STATE__TIMEOUT:
+        return timeout != TIMEOUT_EDEFAULT;
       case DimePackage.STATE__STMS:
         return stms != null && !stms.isEmpty();
     }
@@ -289,6 +343,8 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State
     result.append(name);
     result.append(", times: ");
     result.append(times);
+    result.append(", timeout: ");
+    result.append(timeout);
     result.append(')');
     return result.toString();
   }

@@ -4,8 +4,6 @@ import java.util.HashSet
 import java.util.Set
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
-import org.telcodev.dsl.dime.Ask
-//import org.telcodev.dsl.dime.Assigment
 import org.telcodev.dsl.dime.Block
 
 import org.telcodev.dsl.dime.BoolLiteral 
@@ -70,6 +68,8 @@ class Tropo_php_generator {
 	private static HashMap constants
 	private static Set<String> constantsId
 	
+	private static int timeout;
+	
 	def static void generateTropoPhp(Resource resource, IFileSystemAccess fsa, Config config){
 		//Setting parameters
 		
@@ -122,8 +122,8 @@ class Tropo_php_generator {
 		
 		fsa.generateFile(appName+".php", Tropo_php_generator::toTropoPHP(resource.contents.head as Document, resource))
 		fsa.generateFile("res/signals.php", declareSignal)
-		fsa.generateFile("res/transcription.php", transcription)
-		fsa.generateFile("res/token.php", tokenFile)
+		
+		fsa.generateFile("token.php", tokenFile)
 		System::out.println("Success.");
 		
 	}
@@ -151,16 +151,7 @@ class Tropo_php_generator {
 		?>'''
 	}
 	
-	def static transcription(){
-		'''<?php 
-$file = fopen('transcription.txt', 'w'); 
 
-$data = file_get_contents('php://input'); 
-fwrite($file, $data); 
-
-fclose($file); 
-?> '''
-	}
 	def static tokenFile(){
 		'''<?php
 
@@ -254,9 +245,9 @@ run();
 
 	def  static declareState(State elem){
 		
-		name=elem.name
+		name=elem.name;
 		System::out.println("Generating "+name+" state.");
-		
+		timeout=elem.timeout;
 		
 '''// State «elem.name» implementation
 
@@ -288,7 +279,7 @@ function app_«elem.name»() {
 	«IF elem.times!=0»
 		if($attempts==«elem.times»){
 			$_SESSION['times_«elem.name»_dime']=0;
-			$urltimes = "«url»res/signals.php?signal_dime=attemptsLimit&sessionID_dime=".$_SESSION['sessionID_dime'];
+			$urltimes = "«url»res/signals.php?signal_dime=attemptsLimit«name»&sessionID_dime=".$_SESSION['sessionID_dime'];
 			$curl_handle=curl_init();
 			curl_setopt($curl_handle,CURLOPT_URL,$urltimes);
 			curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
@@ -543,7 +534,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 			
 		}else {
 			
-		//	'''«declareConstantLiteral(elem)»'''
+		
 		}
 		
 	}
@@ -571,16 +562,11 @@ def static dispatch declareAbstractElement(VoiceTag elem){
  			'''intval($_SESSION['times_«name»_dime'])'''
  		
  		} 	
-
- 		else if(elem.name.equals('TIME')){
- 			'''intval($result_dime->getSessionDuration())'''
- 		} 	
- 		
  		else{
  			''''''
  		}
  	}
-	
+	 
 
 //VoiceTags
 
@@ -589,7 +575,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	'''// Send implementation for HTTP GET with cURL.
 	
 			$curl_handle=curl_init();
-			curl_setopt($curl_handle,CURLOPT_URL,«declareConcatenation(elem.url)»«IF elem.params!=null»+"?".«declareSendBlock(elem.params)»«ENDIF»);
+			curl_setopt($curl_handle,CURLOPT_URL,«declareConcatenation(elem.url)»«IF elem.params!=null»."?".«declareSendBlock(elem.params)»«ENDIF»);
 			curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
 			curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 			curl_exec($curl_handle);
@@ -611,22 +597,22 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	}
 	
 	def static declareParam(Param elem){
-		'''"«elem.name»="+«declareConcatenation(elem.value)»'''
+		'''"«elem.name»=".«declareConcatenation(elem.value)»'''
 	}
 	
 	
 	def static dispatch declareVoiceTag( Say elem){
-		'''$tropo->say(«declareConcatenation(elem.that)», array("voice"=>"«voice»", "allowSignals"=>array("timeExceeded«name»", "attemptsLimit")))'''
+		'''$tropo->say(«declareConcatenation(elem.that)», array("voice"=>"«voice»", "allowSignals"=>array("attemptsLimit«name»")))'''
 	}
 	
 	
-	def static dispatch declareVoiceTag( Ask elem){
-		'''$tropo->record( array("say" => «declareConcatenation(elem.question)»,  "voice"=>"«voice»", "allowSignals"=>array("timeExceeded«name»", "attemptsLimit")))'''
-	}
-	
+//	def static dispatch declareVoiceTag( Ask elem){
+//		'''$tropo->record( array("say" => «declareConcatenation(elem.question)»,  "voice"=>"«voice»", "allowSignals"=>array( "attemptsLimit«name»")  «IF timeout!=null», 'timeout'=> «timeout»«ENDIF»))'''
+//	}
+//	
 	
 	def static dispatch declareVoiceTag( Play elem){
-		'''$tropo->say(«declareConcatenation(elem.file)», array("allowSignals"=>array("timeExceeded", "attemptsLimit")))'''
+		'''$tropo->say(«declareConcatenation(elem.file)», array("allowSignals"=>array("attemptsLimit«name»")))'''
 	}
 	
 	
@@ -637,7 +623,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
     'say' => 'Please leave a message.',
    	'url' => 'ftp://«user»:«password»@ftp.tropo.com/recordings/record_«name».mp3',
     'terminator' => '#',
-    'timeout' => 10,
+     «IF timeout!=0» 'timeout'=> «timeout» , «ENDIF»
     'maxSilence' => 3,
     'maxTime' => 10,
     'format' => 'audio/mp3',
@@ -650,14 +636,14 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		'''$tropo->hangup()'''
 	}
 	def static dispatch declareVoiceTag( GetDigits elem){
-	'''$tropo->ask("",array("choices"=>"[«elem.numDigits» DIGIT«IF elem.numDigits>1»S«ENDIF»]", "terminator" => "#", "name"=>"«elem.name»", "voice"=>"«voice»", "allowSignals"=>array("timeExceeded«name»", "attemptsLimit")))'''
+	'''$tropo->ask("",array("choices"=> «IF elem.numDigits!=0»"[«elem.numDigits» DIGIT«IF elem.numDigits>1»S«ENDIF»]"«ELSE»"[1-50 DIGITS]" «ENDIF», "terminator" => "#", "name"=>"«elem.name»", "voice"=>"«voice»", "allowSignals"=>array("attemptsLimit«name»") «IF timeout!=0», 'timeout'=> «timeout»«ENDIF»))'''
 	
 	}
 	def static dispatch declareVoiceTag( Dial elem){
-		'''$tropo->transfer(«declareConcatenation(elem.to)», array( "allowSignals"=>array("timeExceeded«name»", "attemptsLimit")))'''
+		'''$tropo->transfer(«declareConcatenation(elem.to)», array( "allowSignals"=>array("attemptsLimit«name»") «IF timeout!=0», 'timeout'=> «timeout»«ENDIF»))'''
 	}
 	def static dispatch declareVoiceTag( Call elem){
-		'''$tropo->call(«declareConcatenation(elem.to)», array( "allowSignals"=>array("timeExceeded«name»", "attemptsLimit")))'''
+		'''$tropo->call(«declareConcatenation(elem.to)», array( "allowSignals"=>array("attemptsLimit«name»") «IF timeout!=0», 'timeout'=> «timeout»«ENDIF»))'''
 	} 
 	
 
@@ -670,7 +656,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		mail(«declareConcatenation(elem.to)», «declareConcatenation(elem.title)»,«declareConcatenation(elem.value)», "From: <".«declareConcatenation(elem.from)»."> \r\n") '''
 	} 
 	def static dispatch declareVoiceTag( Sms elem){
-		'''$tropo->call(«declareConcatenation(elem.to)», array('network'=>'SMS'));
+		'''$tropo->call(«declareConcatenation(elem.to)», array('network'=>'SMS' «IF timeout!=null», 'timeout'=> «timeout»«ENDIF»));
 $tropo->say(«declareConcatenation(elem.value)»)'''
 	} 
 	// Statements
@@ -682,9 +668,7 @@ $tropo->say(«declareConcatenation(elem.value)»)'''
 	def static dispatch declareStatement(NumVariable elem){
 		'''«declareVariable(elem)»;'''
 	}
-	//def static dispatch declareStatement(Assigment elem){
-	//	'''«declareAssigment(elem)»;'''
-	//}
+	
 	
 	def static dispatch declareStatement(BoolVariable elem){
 		'''«declareVariable(elem)»;'''

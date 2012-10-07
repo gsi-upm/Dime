@@ -129,58 +129,82 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class StateElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "State");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cStateKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cTimesKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cTimesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cTimesINTTerminalRuleCall_2_1_0 = (RuleCall)cTimesAssignment_2_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cStmsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cStmsAbstractElementParserRuleCall_4_0 = (RuleCall)cStmsAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final UnorderedGroup cUnorderedGroup = (UnorderedGroup)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cUnorderedGroup.eContents().get(0);
+		private final Keyword cStateKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_0_1_0 = (RuleCall)cNameAssignment_0_1.eContents().get(0);
+		private final Group cGroup_0_2 = (Group)cGroup_0.eContents().get(2);
+		private final Keyword cTimesKeyword_0_2_0 = (Keyword)cGroup_0_2.eContents().get(0);
+		private final Assignment cTimesAssignment_0_2_1 = (Assignment)cGroup_0_2.eContents().get(1);
+		private final RuleCall cTimesINTTerminalRuleCall_0_2_1_0 = (RuleCall)cTimesAssignment_0_2_1.eContents().get(0);
+		private final Group cGroup_1 = (Group)cUnorderedGroup.eContents().get(1);
+		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
+		private final Keyword cTimeoutKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
+		private final Assignment cTimeoutAssignment_1_0_1 = (Assignment)cGroup_1_0.eContents().get(1);
+		private final RuleCall cTimeoutINTTerminalRuleCall_1_0_1_0 = (RuleCall)cTimeoutAssignment_1_0_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cStmsAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cStmsAbstractElementParserRuleCall_1_2_0 = (RuleCall)cStmsAssignment_1_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		
 		//State:
-		//	"State" name=ID ("times" times=INT)? "{" stms+=AbstractElement* "}";
+		//	"State" name=ID ("times" times=INT)? & ("timeout" timeout=INT)? "{" stms+=AbstractElement* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"State" name=ID ("times" times=INT)? "{" stms+=AbstractElement* "}"
-		public Group getGroup() { return cGroup; }
+		//"State" name=ID ("times" times=INT)? & ("timeout" timeout=INT)? "{" stms+=AbstractElement* "}"
+		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
+
+		//"State" name=ID ("times" times=INT)?
+		public Group getGroup_0() { return cGroup_0; }
 
 		//"State"
-		public Keyword getStateKeyword_0() { return cStateKeyword_0; }
+		public Keyword getStateKeyword_0_0() { return cStateKeyword_0_0; }
 
 		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_0_1() { return cNameAssignment_0_1; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_0_1_0() { return cNameIDTerminalRuleCall_0_1_0; }
 
 		//("times" times=INT)?
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_0_2() { return cGroup_0_2; }
 
 		//"times"
-		public Keyword getTimesKeyword_2_0() { return cTimesKeyword_2_0; }
+		public Keyword getTimesKeyword_0_2_0() { return cTimesKeyword_0_2_0; }
 
 		//times=INT
-		public Assignment getTimesAssignment_2_1() { return cTimesAssignment_2_1; }
+		public Assignment getTimesAssignment_0_2_1() { return cTimesAssignment_0_2_1; }
 
 		//INT
-		public RuleCall getTimesINTTerminalRuleCall_2_1_0() { return cTimesINTTerminalRuleCall_2_1_0; }
+		public RuleCall getTimesINTTerminalRuleCall_0_2_1_0() { return cTimesINTTerminalRuleCall_0_2_1_0; }
+
+		//("timeout" timeout=INT)? "{" stms+=AbstractElement* "}"
+		public Group getGroup_1() { return cGroup_1; }
+
+		//("timeout" timeout=INT)?
+		public Group getGroup_1_0() { return cGroup_1_0; }
+
+		//"timeout"
+		public Keyword getTimeoutKeyword_1_0_0() { return cTimeoutKeyword_1_0_0; }
+
+		//timeout=INT
+		public Assignment getTimeoutAssignment_1_0_1() { return cTimeoutAssignment_1_0_1; }
+
+		//INT
+		public RuleCall getTimeoutINTTerminalRuleCall_1_0_1_0() { return cTimeoutINTTerminalRuleCall_1_0_1_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
 
 		//stms+=AbstractElement*
-		public Assignment getStmsAssignment_4() { return cStmsAssignment_4; }
+		public Assignment getStmsAssignment_1_2() { return cStmsAssignment_1_2; }
 
 		//AbstractElement
-		public RuleCall getStmsAbstractElementParserRuleCall_4_0() { return cStmsAbstractElementParserRuleCall_4_0; }
+		public RuleCall getStmsAbstractElementParserRuleCall_1_2_0() { return cStmsAbstractElementParserRuleCall_1_2_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_1_3() { return cRightCurlyBracketKeyword_1_3; }
 	}
 
 	public class VoiceTagElements extends AbstractParserRuleElementFinder {
@@ -191,19 +215,18 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPlayParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cRecordParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cGetDigitsParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cAskParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cSendParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cRejectParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cHangupParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cCallParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cSmsParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cEmailParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cSendParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cRejectParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cHangupParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cCallParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cSmsParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cEmailParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
 		
 		//VoiceTag:
-		//	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms | Email;
+		//	Say | Dial | Play | Record | GetDigits | Send | Reject | Hangup | Call | Sms | Email;
 		public ParserRule getRule() { return rule; }
 
-		//Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms | Email
+		//Say | Dial | Play | Record | GetDigits | Send | Reject | Hangup | Call | Sms | Email
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Say
@@ -221,26 +244,23 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		//GetDigits
 		public RuleCall getGetDigitsParserRuleCall_4() { return cGetDigitsParserRuleCall_4; }
 
-		//Ask
-		public RuleCall getAskParserRuleCall_5() { return cAskParserRuleCall_5; }
-
 		//Send
-		public RuleCall getSendParserRuleCall_6() { return cSendParserRuleCall_6; }
+		public RuleCall getSendParserRuleCall_5() { return cSendParserRuleCall_5; }
 
 		//Reject
-		public RuleCall getRejectParserRuleCall_7() { return cRejectParserRuleCall_7; }
+		public RuleCall getRejectParserRuleCall_6() { return cRejectParserRuleCall_6; }
 
 		//Hangup
-		public RuleCall getHangupParserRuleCall_8() { return cHangupParserRuleCall_8; }
+		public RuleCall getHangupParserRuleCall_7() { return cHangupParserRuleCall_7; }
 
 		//Call
-		public RuleCall getCallParserRuleCall_9() { return cCallParserRuleCall_9; }
+		public RuleCall getCallParserRuleCall_8() { return cCallParserRuleCall_8; }
 
 		//Sms
-		public RuleCall getSmsParserRuleCall_10() { return cSmsParserRuleCall_10; }
+		public RuleCall getSmsParserRuleCall_9() { return cSmsParserRuleCall_9; }
 
 		//Email
-		public RuleCall getEmailParserRuleCall_11() { return cEmailParserRuleCall_11; }
+		public RuleCall getEmailParserRuleCall_10() { return cEmailParserRuleCall_10; }
 	}
 
 	public class CallElements extends AbstractParserRuleElementFinder {
@@ -411,26 +431,26 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "GetDigits");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameGetKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cNameGatherKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Assignment cNumDigitsAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNumDigitsINTTerminalRuleCall_1_0 = (RuleCall)cNumDigitsAssignment_1.eContents().get(0);
 		private final Keyword cDigitsKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//GetDigits:
-		//	name="Get" numDigits=INT "digits" ";";
+		//	name="Gather" numDigits=INT? "digits" ";";
 		public ParserRule getRule() { return rule; }
 
-		//name="Get" numDigits=INT "digits" ";"
+		//name="Gather" numDigits=INT? "digits" ";"
 		public Group getGroup() { return cGroup; }
 
-		//name="Get"
+		//name="Gather"
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//"Get"
-		public Keyword getNameGetKeyword_0_0() { return cNameGetKeyword_0_0; }
+		//"Gather"
+		public Keyword getNameGatherKeyword_0_0() { return cNameGatherKeyword_0_0; }
 
-		//numDigits=INT
+		//numDigits=INT?
 		public Assignment getNumDigitsAssignment_1() { return cNumDigitsAssignment_1; }
 
 		//INT
@@ -441,38 +461,6 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 
 		//";"
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
-	}
-
-	public class AskElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Ask");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cNameAskKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final Assignment cQuestionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cQuestionConcatenationExpressionParserRuleCall_1_0 = (RuleCall)cQuestionAssignment_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		
-		//Ask:
-		//	name="Ask" question=ConcatenationExpression ";";
-		public ParserRule getRule() { return rule; }
-
-		//name="Ask" question=ConcatenationExpression ";"
-		public Group getGroup() { return cGroup; }
-
-		//name="Ask"
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//"Ask"
-		public Keyword getNameAskKeyword_0_0() { return cNameAskKeyword_0_0; }
-
-		//question=ConcatenationExpression
-		public Assignment getQuestionAssignment_1() { return cQuestionAssignment_1; }
-
-		//ConcatenationExpression
-		public RuleCall getQuestionConcatenationExpressionParserRuleCall_1_0() { return cQuestionConcatenationExpressionParserRuleCall_1_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class SendElements extends AbstractParserRuleElementFinder {
@@ -487,6 +475,8 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cUrlConcatenationExpressionParserRuleCall_3_0 = (RuleCall)cUrlAssignment_3.eContents().get(0);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
+		////Ask:
+		////	name='Ask' question=ConcatenationExpression ';';
 		//Send:
 		//	name="Send" params=SendBlock "to" url=ConcatenationExpression ";";
 		public ParserRule getRule() { return rule; }
@@ -1753,15 +1743,13 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameERRORKeyword_2_0 = (Keyword)cNameAssignment_2.eContents().get(0);
 		private final Assignment cNameAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
 		private final Keyword cNameTIMESKeyword_3_0 = (Keyword)cNameAssignment_3.eContents().get(0);
-		private final Assignment cNameAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
-		private final Keyword cNameTIMEOUTKeyword_4_0 = (Keyword)cNameAssignment_4.eContents().get(0);
 		
 		//// Terminals
 		//EVENT:
-		//	name="HANGUP" | name="COMPLETED" | name="ERROR" | name="TIMES" | name="TIMEOUT";
+		//	name="HANGUP" | name="COMPLETED" | name="ERROR" | name="TIMES";
 		public ParserRule getRule() { return rule; }
 
-		//name="HANGUP" | name="COMPLETED" | name="ERROR" | name="TIMES" | name="TIMEOUT"
+		//name="HANGUP" | name="COMPLETED" | name="ERROR" | name="TIMES"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//name="HANGUP"
@@ -1787,12 +1775,6 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"TIMES"
 		public Keyword getNameTIMESKeyword_3_0() { return cNameTIMESKeyword_3_0; }
-
-		//name="TIMEOUT"
-		public Assignment getNameAssignment_4() { return cNameAssignment_4; }
-
-		//"TIMEOUT"
-		public Keyword getNameTIMEOUTKeyword_4_0() { return cNameTIMEOUTKeyword_4_0; }
 	}
 
 	public class SESSIONElements extends AbstractParserRuleElementFinder {
@@ -1803,25 +1785,19 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final Keyword cNameLASTSTATEKeyword_1_0 = (Keyword)cNameAssignment_1.eContents().get(0);
 		private final Assignment cNameAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final Keyword cNameTIMEKeyword_2_0 = (Keyword)cNameAssignment_2.eContents().get(0);
+		private final Keyword cNameCALLEDKeyword_2_0 = (Keyword)cNameAssignment_2.eContents().get(0);
 		private final Assignment cNameAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
-		private final Keyword cNameCALLEDKeyword_3_0 = (Keyword)cNameAssignment_3.eContents().get(0);
+		private final Keyword cNameDIGITSKeyword_3_0 = (Keyword)cNameAssignment_3.eContents().get(0);
 		private final Assignment cNameAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
-		private final Keyword cNameANSWERKeyword_4_0 = (Keyword)cNameAssignment_4.eContents().get(0);
+		private final Keyword cNameRECORDKeyword_4_0 = (Keyword)cNameAssignment_4.eContents().get(0);
 		private final Assignment cNameAssignment_5 = (Assignment)cAlternatives.eContents().get(5);
-		private final Keyword cNameDIGITSKeyword_5_0 = (Keyword)cNameAssignment_5.eContents().get(0);
-		private final Assignment cNameAssignment_6 = (Assignment)cAlternatives.eContents().get(6);
-		private final Keyword cNameRECORDKeyword_6_0 = (Keyword)cNameAssignment_6.eContents().get(0);
-		private final Assignment cNameAssignment_7 = (Assignment)cAlternatives.eContents().get(7);
-		private final Keyword cNameTIMESKeyword_7_0 = (Keyword)cNameAssignment_7.eContents().get(0);
+		private final Keyword cNameTIMESKeyword_5_0 = (Keyword)cNameAssignment_5.eContents().get(0);
 		
 		//SESSION:
-		//	name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED" | name="ANSWER" | name="DIGITS" | name="RECORD" |
-		//	name="TIMES";
+		//	name="CALLER" | name="LASTSTATE" | name="CALLED" | name="DIGITS" | name="RECORD" | name="TIMES";
 		public ParserRule getRule() { return rule; }
 
-		//name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED" | name="ANSWER" | name="DIGITS" | name="RECORD" |
-		//name="TIMES"
+		//name="CALLER" | name="LASTSTATE" | name="CALLED" | name="DIGITS" | name="RECORD" | name="TIMES"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//name="CALLER"
@@ -1836,41 +1812,29 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		//"LASTSTATE"
 		public Keyword getNameLASTSTATEKeyword_1_0() { return cNameLASTSTATEKeyword_1_0; }
 
-		//name="TIME"
+		//name="CALLED"
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 
-		//"TIME"
-		public Keyword getNameTIMEKeyword_2_0() { return cNameTIMEKeyword_2_0; }
-
-		//name="CALLED"
-		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
-
 		//"CALLED"
-		public Keyword getNameCALLEDKeyword_3_0() { return cNameCALLEDKeyword_3_0; }
-
-		//name="ANSWER"
-		public Assignment getNameAssignment_4() { return cNameAssignment_4; }
-
-		//"ANSWER"
-		public Keyword getNameANSWERKeyword_4_0() { return cNameANSWERKeyword_4_0; }
+		public Keyword getNameCALLEDKeyword_2_0() { return cNameCALLEDKeyword_2_0; }
 
 		//name="DIGITS"
-		public Assignment getNameAssignment_5() { return cNameAssignment_5; }
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
 
 		//"DIGITS"
-		public Keyword getNameDIGITSKeyword_5_0() { return cNameDIGITSKeyword_5_0; }
+		public Keyword getNameDIGITSKeyword_3_0() { return cNameDIGITSKeyword_3_0; }
 
 		//name="RECORD"
-		public Assignment getNameAssignment_6() { return cNameAssignment_6; }
+		public Assignment getNameAssignment_4() { return cNameAssignment_4; }
 
 		//"RECORD"
-		public Keyword getNameRECORDKeyword_6_0() { return cNameRECORDKeyword_6_0; }
+		public Keyword getNameRECORDKeyword_4_0() { return cNameRECORDKeyword_4_0; }
 
 		//name="TIMES"
-		public Assignment getNameAssignment_7() { return cNameAssignment_7; }
+		public Assignment getNameAssignment_5() { return cNameAssignment_5; }
 
 		//"TIMES"
-		public Keyword getNameTIMESKeyword_7_0() { return cNameTIMESKeyword_7_0; }
+		public Keyword getNameTIMESKeyword_5_0() { return cNameTIMESKeyword_5_0; }
 	}
 
 	public class CALLSTATUSElements extends AbstractParserRuleElementFinder {
@@ -1930,7 +1894,6 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	private RejectElements pReject;
 	private HangupElements pHangup;
 	private GetDigitsElements pGetDigits;
-	private AskElements pAsk;
 	private SendElements pSend;
 	private SendBlockElements pSendBlock;
 	private NotPrimaryParamElements pNotPrimaryParam;
@@ -2049,7 +2012,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//State:
-	//	"State" name=ID ("times" times=INT)? "{" stms+=AbstractElement* "}";
+	//	"State" name=ID ("times" times=INT)? & ("timeout" timeout=INT)? "{" stms+=AbstractElement* "}";
 	public StateElements getStateAccess() {
 		return (pState != null) ? pState : (pState = new StateElements());
 	}
@@ -2059,7 +2022,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//VoiceTag:
-	//	Say | Dial | Play | Record | GetDigits | Ask | Send | Reject | Hangup | Call | Sms | Email;
+	//	Say | Dial | Play | Record | GetDigits | Send | Reject | Hangup | Call | Sms | Email;
 	public VoiceTagElements getVoiceTagAccess() {
 		return (pVoiceTag != null) ? pVoiceTag : (pVoiceTag = new VoiceTagElements());
 	}
@@ -2129,7 +2092,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//GetDigits:
-	//	name="Get" numDigits=INT "digits" ";";
+	//	name="Gather" numDigits=INT? "digits" ";";
 	public GetDigitsElements getGetDigitsAccess() {
 		return (pGetDigits != null) ? pGetDigits : (pGetDigits = new GetDigitsElements());
 	}
@@ -2138,16 +2101,8 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 		return getGetDigitsAccess().getRule();
 	}
 
-	//Ask:
-	//	name="Ask" question=ConcatenationExpression ";";
-	public AskElements getAskAccess() {
-		return (pAsk != null) ? pAsk : (pAsk = new AskElements());
-	}
-	
-	public ParserRule getAskRule() {
-		return getAskAccess().getRule();
-	}
-
+	////Ask:
+	////	name='Ask' question=ConcatenationExpression ';';
 	//Send:
 	//	name="Send" params=SendBlock "to" url=ConcatenationExpression ";";
 	public SendElements getSendAccess() {
@@ -2498,7 +2453,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// Terminals
 	//EVENT:
-	//	name="HANGUP" | name="COMPLETED" | name="ERROR" | name="TIMES" | name="TIMEOUT";
+	//	name="HANGUP" | name="COMPLETED" | name="ERROR" | name="TIMES";
 	public EVENTElements getEVENTAccess() {
 		return (pEVENT != null) ? pEVENT : (pEVENT = new EVENTElements());
 	}
@@ -2508,8 +2463,7 @@ public class DimeGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SESSION:
-	//	name="CALLER" | name="LASTSTATE" | name="TIME" | name="CALLED" | name="ANSWER" | name="DIGITS" | name="RECORD" |
-	//	name="TIMES";
+	//	name="CALLER" | name="LASTSTATE" | name="CALLED" | name="DIGITS" | name="RECORD" | name="TIMES";
 	public SESSIONElements getSESSIONAccess() {
 		return (pSESSION != null) ? pSESSION : (pSESSION = new SESSIONElements());
 	}

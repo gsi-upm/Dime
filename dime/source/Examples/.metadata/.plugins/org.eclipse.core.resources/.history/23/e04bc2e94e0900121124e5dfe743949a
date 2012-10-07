@@ -1,0 +1,10 @@
+Application OutboundCall
+
+State start {
+	 
+	Call "sip:totemteleko@ekiga.net";
+	Say "This is Dime";
+	HangUp;
+	 
+}    
+    

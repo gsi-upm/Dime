@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.telcodev.dsl.dime.AbstractElement;
-import org.telcodev.dsl.dime.Ask;
 import org.telcodev.dsl.dime.Block;
 import org.telcodev.dsl.dime.BoolExpression;
 import org.telcodev.dsl.dime.BoolLiteral;
@@ -149,13 +148,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * @generated
    */
   private EClass getDigitsEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass askEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -577,9 +569,19 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getState_Timeout()
+  {
+    return (EAttribute)stateEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getState_Stms()
   {
-    return (EReference)stateEClass.getEStructuralFeatures().get(2);
+    return (EReference)stateEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -720,26 +722,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
   public EAttribute getGetDigits_NumDigits()
   {
     return (EAttribute)getDigitsEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAsk()
-  {
-    return askEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAsk_Question()
-  {
-    return (EReference)askEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1745,6 +1727,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     stateEClass = createEClass(STATE);
     createEAttribute(stateEClass, STATE__NAME);
     createEAttribute(stateEClass, STATE__TIMES);
+    createEAttribute(stateEClass, STATE__TIMEOUT);
     createEReference(stateEClass, STATE__STMS);
 
     voiceTagEClass = createEClass(VOICE_TAG);
@@ -1768,9 +1751,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
 
     getDigitsEClass = createEClass(GET_DIGITS);
     createEAttribute(getDigitsEClass, GET_DIGITS__NUM_DIGITS);
-
-    askEClass = createEClass(ASK);
-    createEReference(askEClass, ASK__QUESTION);
 
     sendEClass = createEClass(SEND);
     createEReference(sendEClass, SEND__PARAMS);
@@ -1943,7 +1923,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     rejectEClass.getESuperTypes().add(this.getVoiceTag());
     hangupEClass.getESuperTypes().add(this.getVoiceTag());
     getDigitsEClass.getESuperTypes().add(this.getVoiceTag());
-    askEClass.getESuperTypes().add(this.getVoiceTag());
     sendEClass.getESuperTypes().add(this.getVoiceTag());
     sayEClass.getESuperTypes().add(this.getVoiceTag());
     smsEClass.getESuperTypes().add(this.getVoiceTag());
@@ -1993,6 +1972,7 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getState_Times(), ecorePackage.getEInt(), "times", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getState_Timeout(), ecorePackage.getEInt(), "timeout", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getState_Stms(), this.getAbstractElement(), null, "stms", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(voiceTagEClass, VoiceTag.class, "VoiceTag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2016,9 +1996,6 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
 
     initEClass(getDigitsEClass, GetDigits.class, "GetDigits", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGetDigits_NumDigits(), ecorePackage.getEInt(), "numDigits", null, 0, 1, GetDigits.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(askEClass, Ask.class, "Ask", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAsk_Question(), this.getConcatenationExpression(), null, "question", null, 0, 1, Ask.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(sendEClass, Send.class, "Send", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSend_Params(), this.getSendBlock(), null, "params", null, 0, 1, Send.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

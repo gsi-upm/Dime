@@ -15,6 +15,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="State">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="times" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeout" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="stms" upperBound="-1" eType="#//AbstractElement"
         containment="true"/>
   </eClassifiers>
@@ -40,10 +41,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Hangup" eSuperTypes="#//VoiceTag"/>
   <eClassifiers xsi:type="ecore:EClass" name="GetDigits" eSuperTypes="#//VoiceTag">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numDigits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Ask" eSuperTypes="#//VoiceTag">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="question" eType="#//ConcatenationExpression"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Send" eSuperTypes="#//VoiceTag">
     <eStructuralFeatures xsi:type="ecore:EReference" name="params" eType="#//SendBlock"

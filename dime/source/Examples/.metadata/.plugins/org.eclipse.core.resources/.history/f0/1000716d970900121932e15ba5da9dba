@@ -1,0 +1,14 @@
+Application OutboundCall
+
+State START {
+	 
+	Call "+346664452095";
+	Say "This is Dime";
+	HangUp;
+	 
+}     
+    
+    
+    
+    
+    

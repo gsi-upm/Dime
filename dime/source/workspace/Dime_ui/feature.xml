@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="Dime_ui"
+      label="Dime_ui"
+      version="1.0"
+      plugin="org.telcodev.dsl.ui">
+
+   <description>
+      Dime ui feature.
+   </description>
+
+   <copyright>
+      Open Source project.
+   </copyright>
+
+   <license url="http://www.apache.org/licenses/LICENSE-2.0.html">
+      Apache license version 2.0.
+   </license>
+
+</feature>

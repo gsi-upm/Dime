@@ -172,15 +172,6 @@ public class DimeSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DimePackage.ASK:
-      {
-        Ask ask = (Ask)theEObject;
-        T result = caseAsk(ask);
-        if (result == null) result = caseVoiceTag(ask);
-        if (result == null) result = caseAbstractElement(ask);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case DimePackage.SEND:
       {
         Send send = (Send)theEObject;
@@ -679,22 +670,6 @@ public class DimeSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseGetDigits(GetDigits object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Ask</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Ask</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAsk(Ask object)
   {
     return null;
   }

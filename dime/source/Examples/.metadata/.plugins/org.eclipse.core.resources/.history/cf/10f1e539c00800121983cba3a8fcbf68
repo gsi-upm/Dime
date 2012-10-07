@@ -1,0 +1,11 @@
+Application EMAIL
+
+State start{
+	Say "Welcome";
+	Email { 
+		subject: "Tropo-Test",
+		from: "totemteleko@dime.com",
+		"Dime works!"
+		} to "totemteleko@gmail.com";
+	HangUp;
+} 

@@ -1,0 +1,11 @@
+<?php 
+
+// Defining global constants and variables
+
+$greeting="Hello ";
+define("role","customer");
+
+
+
+
+?>
