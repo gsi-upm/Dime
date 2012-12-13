@@ -1,7 +1,7 @@
 <?xml version="1.0" ?> 
 <config>
 	<language>tropo</language>
-	<scriptlanguage>tropo</scriptlanguage>
+	<scriptlanguage>php</scriptlanguage>
 	<url>http://yourserver.com/</url>
 	<tropo>
 		<voice>susan</voice>
