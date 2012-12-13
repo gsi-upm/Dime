@@ -2,7 +2,7 @@ Application SendData
 
 State start{
 	Say "SendData application.";
-	Send {"caller": CALLER} to "http://shannon.gsi.dit.upm.es/roberto/getParams.php";
+	Send {"caller": CALLER} to "http://yourserver.com/getParams.php";
 	HangUp;   
 }
  

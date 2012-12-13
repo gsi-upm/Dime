@@ -189,7 +189,7 @@ terminal DOUBLE:
 terminal NULL:
 	'null';
 
-terminal BOOL:
+terminal BOOL: 
 	'true' | 'false';
 
 terminal LOGIC_WORD:

@@ -2,11 +2,11 @@ Application HelloWorld
 
 Const GREETING="HELLO";
 
-State START {
+State start {
  	Say GREETING." world!"; 
  	HangUp;
- }
+ }       
              
-              
-             
-             
+                
+               
+                 

@@ -3,9 +3,8 @@ Application Dial
 
 State start {
 		
-		DialTo "+1 651-314-1873";
-	
- 
-}
+		DialTo "+34925355552";
+    
+}  
 
    

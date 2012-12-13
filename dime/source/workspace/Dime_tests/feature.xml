@@ -17,4 +17,11 @@
       Apache licence 2.0
    </license>
 
+   <plugin
+         id="org.telcodev.dsl.tests"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>

@@ -18,4 +18,6 @@
 <fullyQualifiedTypeName name="org.telcodev.dsl.dime.SendBlock"/>
 <fullyQualifiedTypeName name="org.telcodev.dsl.dime.NotPrimaryParam"/>
 <fullyQualifiedTypeName name="org.telcodev.dsl.dime.Send"/>
+<fullyQualifiedTypeName name="org.telcodev.dsl.generator.VoiceXML"/>
+<fullyQualifiedTypeName name="org.telcodev.dsl.validation.TellMeMyWorkingDirectory"/>
 </qualifiedTypeNameHistroy>

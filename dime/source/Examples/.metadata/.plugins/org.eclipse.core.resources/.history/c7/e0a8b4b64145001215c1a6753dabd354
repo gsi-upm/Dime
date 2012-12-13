@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.1" xml:lang="eu-es">
+
+<!-- Declaration of the global statements -->
+
+<var name="hour" />
+<var name="day" />
+<var name="month" />
+<var name="people" />
+<block >
+	<assign name="userNumber" expr="&quot;+3656422095&quot;" />
+</block>
+<var name="userNumber" expr="&quot;+3656422095&quot;" />
+<block >
+	<assign name="userEmail" expr="&quot;user@mail.com&quot;" />
+</block>
+<var name="userEmail" expr="&quot;user@mail.com&quot;" />
+<block >
+	<assign name="year" expr="2012" />
+</block>
+<var name="year" expr="2012" />
+
+<var name="times_start_dime" expr="0"/>
+<var name="times_isclient_dime" expr="0"/>
+<var name="times_clientconf_dime" expr="0"/>
+<var name="times_askpeople_dime" expr="0"/>
+<var name="times_askday_dime" expr="0"/>
+<var name="times_askmonth_dime" expr="0"/>
+<var name="times_askhour_dime" expr="0"/>
+<var name="times_askdone_dime" expr="0"/>
+<var name="times_doneconf_dime" expr="0"/>
+<var name="times_modification_dime" expr="0"/>
+<var name="times_tooattempts_dime" expr="0"/>
+<var name="times_hanguperror_dime" expr="0"/>
+<var name="times_end_dime" expr="0"/>
+
+<var name="DIGITS"/>
+
+<var name="RECORD"/>
+
+<var name="LASTSTATE" expr="&quot;start&quot;"/>
+
+<!-- Declaration of the states -->
+
+<!-- Declaration of the state start -->
+<form id="start">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;start&quot;" />
+	</block>
+	<block >
+		<prompt>Bienvenido al servicio de atencion especial de restaurantes de Telcodev.</prompt>
+	</block>
+	<block >
+		<goto next="#isclient"/>
+	</block>
+
+</form>
+	
+<!-- End of the state start -->
+
+<!-- Declaration of the state isclient -->
+<form id="isclient">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;isclient&quot;" />
+	</block>
+	<block >
+		<prompt>Usted desea solicitar reserva en uno de nuestros restaurantes. Es correcto? Pulse 1 si esta conforme o 0 si no lo esta.</prompt>
+	</block>
+	<field  name="field_dime" type="digits?length=1" />
+	<block><assign name="DIGITS" expr="field_dime" /></block>
+	<block >
+		<goto next="#clientconf"/>
+	</block>
+	<catch  event="error">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="maxtime_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="busy">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="noanswer">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="far_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="near_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+
+</form>
+	
+<!-- End of the state isclient -->
+
+<!-- Declaration of the state clientconf -->
+<form id="clientconf">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;clientconf&quot;" />
+	</block>
+	<if cond="times_clientconf_dime==3">
+		<throw event="times_clientconf_event"/> 
+	</if>
+	<!-- If structure declaration -->
+	
+	<!--  IF cond=(DIGITS==1) -->
+	<block cond="(DIGITS==1)">
+		<prompt>De acuerdo. Ahora procederemos a la realizacion de la solicitud. </prompt>
+	</block>
+	<block cond="(DIGITS==1)">
+		<goto next="#askpeople"/>
+	</block>
+	
+	<!-- ENDIF -->
+	<!-- ELSE  IF cond=(DIGITS==0) -->
+	<block cond="(!((DIGITS==1)))&amp;&amp;(DIGITS==0)">
+		<prompt>De acuerdo, disculpe las molestias que le hayamos ocasionado. Un saludo.</prompt>
+	</block>
+	<block cond="(!((DIGITS==1)))&amp;&amp;(DIGITS==0)">
+		<disconnect/>
+	</block>
+	
+	<!-- ENDIF -->
+	<!--ELSE -->
+	<block cond="(!((DIGITS==1)))&amp;&amp;(DIGITS==0)">
+		<goto next="#isclient"/>
+	</block>
+	<!-- End of the if declaration -->
+	<catch   event="times_clientconf_event">
+		<goto next="#tooattempts"/> 
+	</catch>
+	<catch  event="error">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="maxtime_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="busy">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="noanswer">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="far_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="near_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+
+</form>
+	
+<!-- End of the state clientconf -->
+
+<!-- Declaration of the state askpeople -->
+<form id="askpeople">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;askpeople&quot;" />
+	</block>
+	<block >
+		<prompt>Diga el numero de comensales</prompt>
+	</block>
+	<field  name="field_dime" type="digits?length=1" />
+	<block><assign name="DIGITS" expr="field_dime" /></block>
+	<!-- If structure declaration -->
+	
+	<!--  IF cond=(times_askpeople_dime==0) -->
+	<block cond="(times_askpeople_dime==0)">
+		<goto next="#askday"/>
+	</block>
+	
+	<!-- ENDIF --><!--ELSE -->
+	<block cond="(times_askpeople_dime==0)">
+		<goto next="#askdone"/>
+	</block>
+	<!-- End of the if declaration -->
+	<catch  event="error">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="maxtime_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="busy">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="noanswer">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="far_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="near_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+
+</form>
+	
+<!-- End of the state askpeople -->
+
+<!-- Declaration of the state askday -->
+<form id="askday">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;askday&quot;" />
+	</block>
+	<block >
+		<assign name="people" expr="DIGITS" />
+	</block>
+	<var name="people" expr="DIGITS" />
+	<block >
+		<prompt>En que dia lo desea?</prompt>
+	</block>
+	<field  name="field_dime" type="digits?length=2" />
+	<block><assign name="DIGITS" expr="field_dime" /></block>
+	<!-- If structure declaration -->
+	
+	<!--  IF cond=(times_askday_dime==0) -->
+	<block cond="(times_askday_dime==0)">
+		<goto next="#askmonth"/>
+	</block>
+	
+	<!-- ENDIF --><!--ELSE -->
+	<block cond="(times_askday_dime==0)">
+		<goto next="#askdone"/>
+	</block>
+	<!-- End of the if declaration -->
+	<catch  event="error">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="maxtime_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="busy">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="noanswer">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="far_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="near_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+
+</form>
+	
+<!-- End of the state askday -->
+
+<!-- Declaration of the state askmonth -->
+<form id="askmonth">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;askmonth&quot;" />
+	</block>
+	<block >
+		<assign name="day" expr="DIGITS" />
+	</block>
+	<var name="day" expr="DIGITS" />
+	<block >
+		<prompt>En que mes desea realizar dicha reserva?</prompt>
+	</block>
+	<field  name="field_dime" type="digits?length=1" />
+	<block><assign name="DIGITS" expr="field_dime" /></block>
+	<!-- If structure declaration -->
+	
+	<!--  IF cond=(times_askmonth_dime==0) -->
+	<block cond="(times_askmonth_dime==0)">
+		<goto next="#askhour"/>
+	</block>
+	
+	<!-- ENDIF --><!--ELSE -->
+	<block cond="(times_askmonth_dime==0)">
+		<goto next="#askdone"/>
+	</block>
+	<!-- End of the if declaration -->
+	<catch  event="error">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="maxtime_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="busy">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="noanswer">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="far_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="near_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+
+</form>
+	
+<!-- End of the state askmonth -->
+
+<!-- Declaration of the state askhour -->
+<form id="askhour">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;askhour&quot;" />
+	</block>
+	<block >
+		<assign name="month" expr="DIGITS" />
+	</block>
+	<var name="month" expr="DIGITS" />
+	<block >
+		<prompt>A que hora le conviene?</prompt>
+	</block>
+	<field  name="field_dime" type="digits?length=2" />
+	<block><assign name="DIGITS" expr="field_dime" /></block>
+	<block >
+		<goto next="#askdone"/>
+	</block>
+	<catch  event="error">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="maxtime_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="busy">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="noanswer">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="far_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="near_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+
+</form>
+	
+<!-- End of the state askhour -->
+
+<!-- Declaration of the state askdone -->
+<form id="askdone">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;askdone&quot;" />
+	</block>
+	<!-- If structure declaration -->
+	
+	<!--  IF cond=(LASTSTATE==&quot;askhour&quot;) -->
+	<block cond="(LASTSTATE==&quot;askhour&quot;)">
+		<assign name="hour" expr="DIGITS" />
+	</block>
+	<var name="hour" expr="DIGITS" />
+	
+	<!-- ENDIF -->
+	<!-- ELSE  IF cond=(LASTSTATE==&quot;askday&quot;) -->
+	<block cond="(!((LASTSTATE==&quot;askhour&quot;)))&amp;&amp;(LASTSTATE==&quot;askday&quot;)">
+		<assign name="day" expr="DIGITS" />
+	</block>
+	<var name="day" expr="DIGITS" />
+	
+	<!-- ENDIF -->
+	<!-- ELSE  IF cond=(LASTSTATE==&quot;askpeople&quot;) -->
+	<block cond="(!((!((LASTSTATE==&quot;askhour&quot;)))&amp;&amp;(LASTSTATE==&quot;askday&quot;)))&amp;&amp;(LASTSTATE==&quot;askpeople&quot;)">
+		<assign name="people" expr="DIGITS" />
+	</block>
+	<var name="people" expr="DIGITS" />
+	
+	<!-- ENDIF -->
+	<!-- ELSE  IF cond=(LASTSTATE==&quot;askmonth&quot;) -->
+	<block cond="(!((!((!((LASTSTATE==&quot;askhour&quot;)))&amp;&amp;(LASTSTATE==&quot;askday&quot;)))&amp;&amp;(LASTSTATE==&quot;askpeople&quot;)))&amp;&amp;(LASTSTATE==&quot;askmonth&quot;)">
+		<assign name="month" expr="DIGITS" />
+	</block>
+	<var name="month" expr="DIGITS" />
+	
+	<!-- ENDIF -->
+	<!-- End of the if declaration -->
+	<block >
+		<prompt>Usted ha solicitado una reserva en nuestro restaurante el dia <value expr="day"/> de <value expr="month"/> de 2012 a las <value expr="hour"/> horas  para <value expr="people"/> personas.</prompt>
+	</block>
+	<block >
+		<prompt>Esta totalmente de acuerdo con dicha solicitud? Pulse 1 si esta conforme, o 0 si no lo esta.</prompt>
+	</block>
+	<field  name="field_dime" type="digits?length=1" />
+	<block><assign name="DIGITS" expr="field_dime" /></block>
+	<block >
+		<goto next="#doneconf"/>
+	</block>
+
+</form>
+	
+<!-- End of the state askdone -->
+
+<!-- Declaration of the state doneconf -->
+<form id="doneconf">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;doneconf&quot;" />
+	</block>
+	<if cond="times_doneconf_dime==3">
+		<throw event="times_doneconf_event"/> 
+	</if>
+	<!-- If structure declaration -->
+	
+	<!--  IF cond=(DIGITS==1) -->
+	<block cond="(DIGITS==1)">
+		<goto next="#end"/>
+	</block>
+	
+	<!-- ENDIF -->
+	<!-- ELSE  IF cond=(DIGITS==0) -->
+	<block cond="(!((DIGITS==1)))&amp;&amp;(DIGITS==0)">
+		<prompt>Que dato desea modificar?</prompt>
+	</block>
+	<block cond="(!((DIGITS==1)))&amp;&amp;(DIGITS==0)">
+		<prompt>Pulse 1 para el numero de comensales.</prompt>
+	</block>
+	<block cond="(!((DIGITS==1)))&amp;&amp;(DIGITS==0)">
+		<prompt>Pulse 2 para el dia</prompt>
+	</block>
+	<block cond="(!((DIGITS==1)))&amp;&amp;(DIGITS==0)">
+		<prompt>Pulse 3 para el mes</prompt>
+	</block>
+	<block cond="(!((DIGITS==1)))&amp;&amp;(DIGITS==0)">
+		<prompt>Pulse 4 para la hora</prompt>
+	</block>
+	<field cond="(!((DIGITS==1)))&amp;&amp;(DIGITS==0)" name="field_dime" type="digits?length=1" />
+	<block><assign name="DIGITS" expr="field_dime" /></block>
+	<block cond="(!((DIGITS==1)))&amp;&amp;(DIGITS==0)">
+		<goto next="#modification"/>
+	</block>
+	
+	<!-- ENDIF -->
+	<!-- End of the if declaration -->
+	<catch   event="times_doneconf_event">
+		<goto next="#tooattempts"/> 
+	</catch>
+	<catch  event="error">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="maxtime_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="busy">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="noanswer">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="far_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="near_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+
+</form>
+	
+<!-- End of the state doneconf -->
+
+<!-- Declaration of the state modification -->
+<form id="modification">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;modification&quot;" />
+	</block>
+	<if cond="times_modification_dime==3">
+		<throw event="times_modification_event"/> 
+	</if>
+	<!-- If structure declaration -->
+	
+	<!--  IF cond=(DIGITS==1) -->
+	<block cond="(DIGITS==1)">
+		<goto next="#askpeople"/>
+	</block>
+	
+	<!-- ENDIF -->
+	<!-- ELSE  IF cond=(DIGITS==2) -->
+	<block cond="(!((DIGITS==1)))&amp;&amp;(DIGITS==2)">
+		<goto next="#askday"/>
+	</block>
+	
+	<!-- ENDIF -->
+	<!-- ELSE  IF cond=(DIGITS==3) -->
+	<block cond="(!((!((DIGITS==1)))&amp;&amp;(DIGITS==2)))&amp;&amp;(DIGITS==3)">
+		<goto next="#askmonth"/>
+	</block>
+	
+	<!-- ENDIF -->
+	<!-- ELSE  IF cond=(DIGITS==4) -->
+	<block cond="(!((!((!((DIGITS==1)))&amp;&amp;(DIGITS==2)))&amp;&amp;(DIGITS==3)))&amp;&amp;(DIGITS==4)">
+		<goto next="#askhour"/>
+	</block>
+	
+	<!-- ENDIF -->
+	<!--ELSE -->
+	<block cond="(!((!((!((DIGITS==1)))&amp;&amp;(DIGITS==2)))&amp;&amp;(DIGITS==3)))&amp;&amp;(DIGITS==4)">
+		<prompt>Disculpe, pero ha pulsado un digito equivocado.</prompt>
+	</block>
+	<block cond="(!((!((!((DIGITS==1)))&amp;&amp;(DIGITS==2)))&amp;&amp;(DIGITS==3)))&amp;&amp;(DIGITS==4)">
+		<goto next="#doneconf"/>
+	</block>
+	<!-- End of the if declaration -->
+	<catch   event="times_modification_event">
+		<goto next="#tooattempts"/> 
+	</catch>
+	<catch  event="error">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="maxtime_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="busy">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="noanswer">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="far_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+	<catch  event="near_end_disconnect">
+		<goto next="#hanguperror"/> 
+	</catch>
+
+</form>
+	
+<!-- End of the state modification -->
+
+<!-- Declaration of the state tooattempts -->
+<form id="tooattempts">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;tooattempts&quot;" />
+	</block>
+	<block >
+		<prompt>Disculpe, pero estamos teniendo problemas para entender. Si es tan amable intentelo mas tarde</prompt>
+	</block>
+
+</form>
+	
+<!-- End of the state tooattempts -->
+
+<!-- Declaration of the state hanguperror -->
+<form id="hanguperror">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;hanguperror&quot;" />
+	</block>
+	<block >
+		<prompt>Ha ocurrido un error, disculpe las molestias.</prompt>
+	</block>
+	<block >
+		<disconnect/>
+	</block>
+
+</form>
+	
+<!-- End of the state hanguperror -->
+
+<!-- Declaration of the state end -->
+<form id="end">
+	<block>
+		<assign name="LASTSTATE" expr="&quot;end&quot;" />
+	</block>
+	<block >
+		<prompt>De acuerdo. Gracias por utilizar nuestro servicio de restaurantes Telcodev. Un saludo.</prompt>
+	</block>
+	<!-- If structure declaration -->
+	
+	<!--  IF cond=(session.callerid==userNumber) -->
+	<!-- Email implementation -->
+	<var name="title_email_dime" exp="&quot;Reservation&quot;"/>
+	<var name="value_email_dime" exp="&quot;Usted ha solicitado una reserva en nuestro restaurante el dia &quot;+day+&quot;de&quot;+month+&quot;de&quot;+year+&quot;a las &quot;+hour+&quot; para &quot;+people+&quot; personas&quot;"/>
+	<var name="from_email_dime" exp="&quot;restaurant@dime.com&quot;"/>
+	<block cond="(session.callerid==userNumber)" >
+	<data srcexpr="&quot;email_dime.php?title_email_dime=&quot;+escape(title_email_dime)+&amp;&quot;value_email=&quot;+escape(value_email_dime)+&amp;&quot;from_email_dime=&quot;+escape(from_email_dime)+&amp;&quot;to_email_dime=org.telcodev.dsl.dime.impl.LiteralImpl@bec15c7 (nul: null)&quot;" method="get"/>
+	</block>
+	
+	<!-- End Email implementation -->
+	<!-- Send implementation for HTTP GET with cURL -->
+	
+	<block cond="(session.callerid==userNumber)">
+		<var name="response_dime" /> 
+		<data name="response_dime" method="get" srcexpr="&quot;http://host.com/saveReservation.php&quot;+&quot;?&quot;+&quot;caller=&quot;+escape(userNumber)+&quot;&amp;&quot;+&quot;day=&quot;+escape(day)+&quot;&amp;&quot;+&quot;hour=&quot;+escape(hour)+&quot;&amp;&quot;+&quot;month=&quot;+escape(month)+&quot;&amp;&quot;+&quot;people=&quot;+escape(people)+&quot;&amp;&quot;+&quot;year=&quot;+escape(year)" />
+	</block>
+	 
+	<!-- End Send implementation--> 
+	
+	<!-- ENDIF --><!--ELSE -->
+	<!-- Send implementation for HTTP GET with cURL -->
+	
+	<block cond="(session.callerid==userNumber)">
+		<var name="response_dime" /> 
+		<data name="response_dime" method="get" srcexpr="&quot;http://host.com/saveReservation.php&quot;+&quot;?&quot;+&quot;caller=&quot;+escape(session.callerid)+&quot;&amp;&quot;+&quot;day=&quot;+escape(day)+&quot;&amp;&quot;+&quot;hour=&quot;+escape(hour)+&quot;&amp;&quot;+&quot;month=&quot;+escape(month)+&quot;&amp;&quot;+&quot;people=&quot;+escape(people)+&quot;&amp;&quot;+&quot;year=&quot;+escape(year)" />
+	</block>
+	 
+	<!-- End Send implementation--> 
+	<!-- End of the if declaration -->
+	<block >
+		<disconnect/>
+	</block>
+
+</form>
+	
+<!-- End of the state end -->
+
+
+</vxml>

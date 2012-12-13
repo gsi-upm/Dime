@@ -1,0 +1,28 @@
+Application SendData
+
+State start{
+	if(true){
+		Say "SendData application.";
+		Send {"caller": CALLER} to "get.php";
+		HangUp;   
+		if(true){
+			Say "SendData application.";
+			Send {"caller": CALLER} to "get.php";
+			HangUp;   
+		   
+		}else if(false){  
+			Say "SendData application.";
+		}else{
+			Say "SendData application.";
+		} 
+	}else if(false){
+		Say "SendData application.";
+	}else{
+		Say "SendData application.";
+	}
+	HangUp;   
+	 
+}
+ 
+   
+//http://shannon.gsi.dit.upm.es/roberto/   

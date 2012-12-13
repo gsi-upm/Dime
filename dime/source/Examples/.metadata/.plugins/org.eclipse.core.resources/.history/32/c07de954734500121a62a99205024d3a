@@ -1,0 +1,10 @@
+Application Dial
+
+
+State start {
+		
+		DialTo "+34925314322";
+    
+}  
+
+   

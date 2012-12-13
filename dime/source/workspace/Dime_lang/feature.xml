@@ -17,4 +17,15 @@
       Apache licence 2.0 version.
    </license>
 
+   <requires>
+      <import plugin="org.telcodev.dsl"/>
+   </requires>
+
+   <plugin
+         id="org.telcodev.dsl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>

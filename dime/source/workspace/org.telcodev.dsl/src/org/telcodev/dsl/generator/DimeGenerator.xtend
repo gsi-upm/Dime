@@ -6,11 +6,13 @@ package org.telcodev.dsl.generator
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
+import org.telcodev.dsl.validation.TellMeMyWorkingDirectory
 
 
 class DimeGenerator implements IGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
+		
 		var config= XMLfile::readConfig("res/config.xml")
 		if(config.language=="tropo"){
 			if(config.scriptLanguage=="php"){
@@ -23,7 +25,10 @@ class DimeGenerator implements IGenerator {
 			
 			}   
 		}else{
+			if(config.scriptLanguage=="vxml"){
+			VoiceXML_generator::generateVoiceXML(resource, fsa, config)
 			
+			}   
 		}
 		
 	}

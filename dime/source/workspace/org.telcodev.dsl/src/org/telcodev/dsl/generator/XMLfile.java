@@ -16,6 +16,7 @@ public class XMLfile {
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		Tropo tropo ;
 		Twilio twilio;
+		VoiceXML vxml;
 
 		try {
 
@@ -33,14 +34,19 @@ public class XMLfile {
 			if (language.equals("tropo")) {
 				tropo = new Tropo(getTextVoiceValue(docEle, "voice", language),getTextVoiceValue(docEle, "user", language),getTextVoiceValue(docEle, "token", language),getTextVoiceValue(docEle, "password", language));
 				twilio = new Twilio();
-
-			}else{
+				vxml= new VoiceXML();
+			}else if(language.equals("twilio")){
 				tropo= new Tropo();
+				vxml= new VoiceXML();
 				twilio = new Twilio(getTextVoiceValue(docEle, "voice", language), getTextVoiceValue(docEle, "language", language), getTextVoiceValue(docEle, "number", language), getTextVoiceValue(docEle, "accountSid", language), getTextVoiceValue(docEle, "token", language));
+			}else{
+				tropo=new Tropo();
+				twilio= new Twilio();
+				vxml = new VoiceXML(getTextVoiceValue(docEle, "token", language),getTextVoiceValue(docEle, "language", language), getTextVoiceValue(docEle, "user", language),getTextVoiceValue(docEle, "password", language),getTextVoiceValue(docEle, "botkey", language),getTextVoiceValue(docEle, "number", language));
 			}
 
 			Config conf = new Config(language, scriptlanguage, url, tropo,
-					twilio);
+					twilio, vxml);
 			System.out.println(conf.toString());
 			return conf;
 

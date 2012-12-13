@@ -2,9 +2,9 @@ Application Sound
 
 State start{
 	
-	Play "http://shannon.gsi.dit.upm.es/roberto/lion2.wav";
+	Play "http://yourserver.com/bird.mp3";
 	HangUp;
 	
-}
+} 
 
 

@@ -1,12 +1,12 @@
 <?xml version="1.0" ?> 
 <config>
 	<language>tropo</language>
-	<scriptlanguage>php</scriptlanguage> 
+	<scriptlanguage>tropo</scriptlanguage>
 	<url>http://yourserver.com/</url>
 	<tropo>
 		<voice>susan</voice>
         <user>user</user>
-        <password>telcodev</password>
+        <password>password</password>
         <token>XXXXXXXXXXXXXXXXXXXXX</token>
 	</tropo>
 	<twilio>
@@ -16,5 +16,13 @@
         <accountSid>XXXXXXXXXXXXXXXXXXXXX</accountSid>
         <token>XXXXXXXXXXXXXXXXXXXXX</token>
 	</twilio>
+    <vxml>
+        <language>eu-es</language>
+        <token>XXXXXXXXXXXXXXXXXXXXX</token>
+        <user>user</user>
+        <password>passs</password>
+        <botkey>415678</botkey>
+        <number>655555595</number>
+    </vxml>
+        
 </config>
-

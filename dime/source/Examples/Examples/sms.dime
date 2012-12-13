@@ -2,9 +2,9 @@ Application SMS
 
 State start{
 	Say "SMS application";
-	Sms "Dime is cool" to "+34659422195";
+	Sms "Dime is cool" to "+34655555195";
 	HangUp;
 } 
 
 
-
+   
