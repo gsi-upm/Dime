@@ -17,12 +17,12 @@
         <token>XXXXXXXXXXXXXXXXXXXXX</token>
 	</twilio>
     <vxml>
-        <language>eu-es</language>
+        <language>en-us</language>
         <token>XXXXXXXXXXXXXXXXXXXXX</token>
         <user>user</user>
-        <password>passs</password>
-        <botkey>415678</botkey>
-        <number>655555595</number>
+        <password>pass</password>
+        <botkey>XXXXXX</botkey>
+        <number>XXXXXXXX</number>
     </vxml>
         
 </config>

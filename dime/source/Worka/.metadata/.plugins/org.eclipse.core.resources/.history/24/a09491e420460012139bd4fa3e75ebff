@@ -1,0 +1,9 @@
+Application Wait
+
+
+State start {
+	Say "Wait for 3 seconds";
+	Pause 3;
+	Say "Good bye";
+	HangUp;
+}

@@ -24,6 +24,7 @@ import org.telcodev.dsl.dime.ConcatenationBrackets;
 import org.telcodev.dsl.dime.ConcatenationExpression;
 import org.telcodev.dsl.dime.CondBlock;
 import org.telcodev.dsl.dime.Constant;
+import org.telcodev.dsl.dime.Data;
 import org.telcodev.dsl.dime.Dial;
 import org.telcodev.dsl.dime.Document;
 import org.telcodev.dsl.dime.EVENT;
@@ -58,6 +59,7 @@ import org.telcodev.dsl.dime.StringVariable;
 import org.telcodev.dsl.dime.Transition;
 import org.telcodev.dsl.dime.Vars;
 import org.telcodev.dsl.dime.VoiceTag;
+import org.telcodev.dsl.dime.Wait;
 import org.telcodev.dsl.generator.Config;
 import org.telcodev.dsl.generator.VoiceXML;
 
@@ -1082,6 +1084,87 @@ public class VoiceXML_generator {
     return _xifexpression;
   }
   
+  protected static CharSequence _declareVoiceTag(final Wait elem) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("<block ");
+    {
+      boolean _equals = VoiceXML_generator.cond.equals("");
+      boolean _not = (!_equals);
+      if (_not) {
+        _builder.append("cond=\"");
+        _builder.append(VoiceXML_generator.cond, "");
+        _builder.append("\"");
+      }
+    }
+    _builder.append(">");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("<prompt> <break time=\"");
+    int _seconds = elem.getSeconds();
+    _builder.append(_seconds, "	");
+    _builder.append("s\"/></prompt> ");
+    _builder.newLineIfNotEmpty();
+    _builder.append("</block>");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  protected static CharSequence _declareVoiceTag(final Data elem) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("<!-- Send implementation for HTTP GET with cURL -->");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("<block ");
+    {
+      boolean _equals = VoiceXML_generator.cond.equals("");
+      boolean _not = (!_equals);
+      if (_not) {
+        _builder.append("cond=\"");
+        _builder.append(VoiceXML_generator.cond, "");
+        _builder.append("\"");
+      }
+    }
+    _builder.append(">");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("<var name=\"response_dime\" /> ");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("<data name=\"response_dime\" method=\"get\" srcexpr=\"");
+    ConcatenationExpression _url = elem.getUrl();
+    CharSequence _declareScriptConcatenation = VoiceXML_generator.declareScriptConcatenation(_url);
+    _builder.append(_declareScriptConcatenation, "	");
+    _builder.append("+&quot;?&quot;+");
+    Param _value = elem.getValue();
+    CharSequence _declareParam = VoiceXML_generator.declareParam(_value);
+    _builder.append(_declareParam, "	");
+    {
+      EList<NotPrimaryParam> _stms = elem.getStms();
+      for(final NotPrimaryParam n : _stms) {
+        _builder.append("+&quot;&amp;&quot;+");
+        Param _value_1 = n.getValue();
+        CharSequence _declareParam_1 = VoiceXML_generator.declareParam(_value_1);
+        _builder.append(_declareParam_1, "	");
+        _builder.append(" ");
+      }
+    }
+    _builder.append("\" />");
+    _builder.newLineIfNotEmpty();
+    _builder.append("    ");
+    _builder.append("<assign name=\"");
+    Vars _vari = elem.getVari();
+    CharSequence _declareScriptVars = VoiceXML_generator.declareScriptVars(_vari);
+    _builder.append(_declareScriptVars, "    ");
+    _builder.append("\" expr=\"response_dime\"/> ");
+    _builder.newLineIfNotEmpty();
+    _builder.append("</block>");
+    _builder.newLine();
+    _builder.append(" ");
+    _builder.newLine();
+    _builder.append("<!-- End Send implementation--> ");
+    return _builder;
+  }
+  
   protected static CharSequence _declareVoiceTag(final Send elem) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("<!-- Send implementation for HTTP GET with cURL -->");
@@ -2084,6 +2167,8 @@ public class VoiceXML_generator {
   public static CharSequence declareVoiceTag(final VoiceTag elem) {
     if (elem instanceof Call) {
       return _declareVoiceTag((Call)elem);
+    } else if (elem instanceof Data) {
+      return _declareVoiceTag((Data)elem);
     } else if (elem instanceof Dial) {
       return _declareVoiceTag((Dial)elem);
     } else if (elem instanceof Email) {
@@ -2104,6 +2189,8 @@ public class VoiceXML_generator {
       return _declareVoiceTag((Send)elem);
     } else if (elem instanceof Sms) {
       return _declareVoiceTag((Sms)elem);
+    } else if (elem instanceof Wait) {
+      return _declareVoiceTag((Wait)elem);
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
         Arrays.<Object>asList(elem).toString());

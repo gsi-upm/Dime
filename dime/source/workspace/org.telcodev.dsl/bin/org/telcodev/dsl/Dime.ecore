@@ -22,6 +22,18 @@
   <eClassifiers xsi:type="ecore:EClass" name="VoiceTag" eSuperTypes="#//AbstractElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Wait" eSuperTypes="#//VoiceTag">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="seconds" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//VoiceTag">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vari" eType="#//Vars"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Param"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stms" upperBound="-1" eType="#//NotPrimaryParam"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="url" eType="#//ConcatenationExpression"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Call" eSuperTypes="#//VoiceTag">
     <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//ConcatenationExpression"
         containment="true"/>

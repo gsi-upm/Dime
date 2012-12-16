@@ -1,0 +1,8 @@
+Application GetData
+
+State start {
+	String data;
+	Get data { "Name":"Value" } from "http://www.gsi.dit.upm.es/~rjimenez/json.php";
+	Say data;
+	HangUp;
+}

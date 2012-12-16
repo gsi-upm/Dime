@@ -25,6 +25,15 @@
     <genClasses ecoreClass="Dime.ecore#//VoiceTag">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//VoiceTag/name"/>
     </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Wait">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dime.ecore#//Wait/seconds"/>
+    </genClasses>
+    <genClasses ecoreClass="Dime.ecore#//Data">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Dime.ecore#//Data/vari"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Data/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Data/stms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Data/url"/>
+    </genClasses>
     <genClasses ecoreClass="Dime.ecore#//Call">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dime.ecore#//Call/to"/>
     </genClasses>

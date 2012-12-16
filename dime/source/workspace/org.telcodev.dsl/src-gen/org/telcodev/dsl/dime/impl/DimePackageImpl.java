@@ -22,6 +22,7 @@ import org.telcodev.dsl.dime.ConcatenationBrackets;
 import org.telcodev.dsl.dime.ConcatenationExpression;
 import org.telcodev.dsl.dime.CondBlock;
 import org.telcodev.dsl.dime.Constant;
+import org.telcodev.dsl.dime.Data;
 import org.telcodev.dsl.dime.Dial;
 import org.telcodev.dsl.dime.DimeFactory;
 import org.telcodev.dsl.dime.DimePackage;
@@ -56,6 +57,7 @@ import org.telcodev.dsl.dime.StringVariable;
 import org.telcodev.dsl.dime.Transition;
 import org.telcodev.dsl.dime.Vars;
 import org.telcodev.dsl.dime.VoiceTag;
+import org.telcodev.dsl.dime.Wait;
 
 /**
  * <!-- begin-user-doc -->
@@ -99,6 +101,20 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
    * @generated
    */
   private EClass voiceTagEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass waitEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dataEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -602,6 +618,76 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
   public EAttribute getVoiceTag_Name()
   {
     return (EAttribute)voiceTagEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getWait()
+  {
+    return waitEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWait_Seconds()
+  {
+    return (EAttribute)waitEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getData()
+  {
+    return dataEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getData_Vari()
+  {
+    return (EReference)dataEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getData_Value()
+  {
+    return (EReference)dataEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getData_Stms()
+  {
+    return (EReference)dataEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getData_Url()
+  {
+    return (EReference)dataEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1733,6 +1819,15 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     voiceTagEClass = createEClass(VOICE_TAG);
     createEAttribute(voiceTagEClass, VOICE_TAG__NAME);
 
+    waitEClass = createEClass(WAIT);
+    createEAttribute(waitEClass, WAIT__SECONDS);
+
+    dataEClass = createEClass(DATA);
+    createEReference(dataEClass, DATA__VARI);
+    createEReference(dataEClass, DATA__VALUE);
+    createEReference(dataEClass, DATA__STMS);
+    createEReference(dataEClass, DATA__URL);
+
     callEClass = createEClass(CALL);
     createEReference(callEClass, CALL__TO);
 
@@ -1916,6 +2011,8 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
     // Add supertypes to classes
     statementEClass.getESuperTypes().add(this.getAbstractElement());
     voiceTagEClass.getESuperTypes().add(this.getAbstractElement());
+    waitEClass.getESuperTypes().add(this.getVoiceTag());
+    dataEClass.getESuperTypes().add(this.getVoiceTag());
     callEClass.getESuperTypes().add(this.getVoiceTag());
     dialEClass.getESuperTypes().add(this.getVoiceTag());
     playEClass.getESuperTypes().add(this.getVoiceTag());
@@ -1977,6 +2074,15 @@ public class DimePackageImpl extends EPackageImpl implements DimePackage
 
     initEClass(voiceTagEClass, VoiceTag.class, "VoiceTag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVoiceTag_Name(), ecorePackage.getEString(), "name", null, 0, 1, VoiceTag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(waitEClass, Wait.class, "Wait", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getWait_Seconds(), ecorePackage.getEInt(), "seconds", null, 0, 1, Wait.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dataEClass, Data.class, "Data", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getData_Vari(), this.getVars(), null, "vari", null, 0, 1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getData_Value(), this.getParam(), null, "value", null, 0, 1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getData_Stms(), this.getNotPrimaryParam(), null, "stms", null, 0, -1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getData_Url(), this.getConcatenationExpression(), null, "url", null, 0, 1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(callEClass, Call.class, "Call", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCall_To(), this.getConcatenationExpression(), null, "to", null, 0, 1, Call.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

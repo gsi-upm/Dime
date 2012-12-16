@@ -20,7 +20,25 @@ State:
 	'}';
  
 VoiceTag:
-	Say | Dial | Play | Record | GetDigits | Send | Reject | Hangup | Call | Sms | Email ;
+	Say | Dial | Play | Record | GetDigits | Send | Reject | Hangup | Call | Sms | Email | Wait | Data; // | Continue | Break
+	
+
+Wait:
+	name='Pause' seconds=INT 'seconds'';';
+
+//Continue:
+//	name='Continue;';
+
+//Break:
+//	name='Break;'
+//;
+
+
+Data:
+	name='Get' vari=[Vars] ('{' value=Param
+	stms+=NotPrimaryParam* '}')? 'from' url=ConcatenationExpression ';'
+;
+
 
 Call:
 	name='Call' to=ConcatenationExpression ';';

@@ -68,6 +68,24 @@ public interface DimeFactory extends EFactory
   VoiceTag createVoiceTag();
 
   /**
+   * Returns a new object of class '<em>Wait</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Wait</em>'.
+   * @generated
+   */
+  Wait createWait();
+
+  /**
+   * Returns a new object of class '<em>Data</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Data</em>'.
+   * @generated
+   */
+  Data createData();
+
+  /**
    * Returns a new object of class '<em>Call</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

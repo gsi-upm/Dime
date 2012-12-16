@@ -1,0 +1,31 @@
+Application Wait
+
+
+State start {
+	Say "Wait for 3 seconds";
+	
+	
+	Pause 3 seconds;
+	
+	
+	Get data { "user":"dime_user" } from "http://yourserver.com/json.php";
+	
+	
+	
+	String data;
+	Get data { "user":"dime_user" } from "http://yourserver.com/json.php";
+	
+	
+	
+	
+	
+	Say "Good bye";
+	
+	HangUp; 
+}
+
+
+
+
+
+

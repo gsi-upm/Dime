@@ -69,6 +69,8 @@ public class DimeFactoryImpl extends EFactoryImpl implements DimeFactory
       case DimePackage.ABSTRACT_ELEMENT: return createAbstractElement();
       case DimePackage.STATE: return createState();
       case DimePackage.VOICE_TAG: return createVoiceTag();
+      case DimePackage.WAIT: return createWait();
+      case DimePackage.DATA: return createData();
       case DimePackage.CALL: return createCall();
       case DimePackage.DIAL: return createDial();
       case DimePackage.PLAY: return createPlay();
@@ -170,6 +172,28 @@ public class DimeFactoryImpl extends EFactoryImpl implements DimeFactory
   {
     VoiceTagImpl voiceTag = new VoiceTagImpl();
     return voiceTag;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Wait createWait()
+  {
+    WaitImpl wait = new WaitImpl();
+    return wait;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Data createData()
+  {
+    DataImpl data = new DataImpl();
+    return data;
   }
 
   /**

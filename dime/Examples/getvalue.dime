@@ -1,0 +1,12 @@
+Application GetData
+
+State start {
+	String data;
+	Get data { "user":"dime_user" } from "http://yourserver.com/json.php";
+	Say data;
+	HangUp;
+}
+ 
+
+
+ 

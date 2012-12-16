@@ -26,6 +26,7 @@ import org.telcodev.dsl.dime.ConcatenationBrackets;
 import org.telcodev.dsl.dime.ConcatenationExpression;
 import org.telcodev.dsl.dime.CondBlock;
 import org.telcodev.dsl.dime.Constant;
+import org.telcodev.dsl.dime.Data;
 import org.telcodev.dsl.dime.Dial;
 import org.telcodev.dsl.dime.Document;
 import org.telcodev.dsl.dime.EVENT;
@@ -60,6 +61,7 @@ import org.telcodev.dsl.dime.StringVariable;
 import org.telcodev.dsl.dime.Transition;
 import org.telcodev.dsl.dime.Vars;
 import org.telcodev.dsl.dime.VoiceTag;
+import org.telcodev.dsl.dime.Wait;
 import org.telcodev.dsl.generator.Config;
 import org.telcodev.dsl.generator.CopyFile;
 import org.telcodev.dsl.generator.Tropo;
@@ -156,11 +158,10 @@ public class Tropo_php_generator {
     String _plus_2 = ("Creating " + Tropo_php_generator.appName);
     String _plus_3 = (_plus_2 + ".php file");
     System.out.println(_plus_3);
-    String _plus_4 = (Tropo_php_generator.appName + ".php");
     EList<EObject> _contents_1 = resource.getContents();
     EObject _head_1 = IterableExtensions.<EObject>head(_contents_1);
     CharSequence _tropoPHP = Tropo_php_generator.toTropoPHP(((Document) _head_1), resource);
-    fsa.generateFile(_plus_4, _tropoPHP);
+    fsa.generateFile("index.php", _tropoPHP);
     CharSequence _declareSignal = Tropo_php_generator.declareSignal();
     fsa.generateFile("res/signals.php", _declareSignal);
     CharSequence _kenFile = Tropo_php_generator.tokenFile();
@@ -270,6 +271,39 @@ public class Tropo_php_generator {
     _builder.newLine();
     _builder.newLine();
     _builder.append("require \'res/lib/limonade.php\';");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("//Auxiliar functions");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("function get_data($url) {");
+    _builder.newLine();
+    _builder.append("  ");
+    _builder.append("$ch = curl_init();");
+    _builder.newLine();
+    _builder.append("  ");
+    _builder.append("$timeout = 5;");
+    _builder.newLine();
+    _builder.append("  ");
+    _builder.append("curl_setopt($ch, CURLOPT_URL, $url);");
+    _builder.newLine();
+    _builder.append("  ");
+    _builder.append("curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);");
+    _builder.newLine();
+    _builder.append("  ");
+    _builder.append("curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);");
+    _builder.newLine();
+    _builder.append("  ");
+    _builder.append("$data = curl_exec($ch);");
+    _builder.newLine();
+    _builder.append("  ");
+    _builder.append("curl_close($ch);");
+    _builder.newLine();
+    _builder.append("  ");
+    _builder.append("return $data;");
+    _builder.newLine();
+    _builder.append("}");
     _builder.newLine();
     _builder.newLine();
     _builder.append("// Defining constants");
@@ -1195,6 +1229,60 @@ public class Tropo_php_generator {
     return _xifexpression;
   }
   
+  protected static CharSequence _declareVoiceTag(final Wait elem) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("$tropo->say(\"<break time=\"");
+    _builder.append("s\"/>\"); ");
+    return _builder;
+  }
+  
+  protected static CharSequence _declareVoiceTag(final Data elem) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("// Data implementation");
+    _builder.newLine();
+    _builder.append("$data_dime = get_data(urlencode(");
+    ConcatenationExpression _url = elem.getUrl();
+    CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_url);
+    _builder.append(_declareConcatenation, "");
+    _builder.append(".\"?\".");
+    {
+      Param _value = elem.getValue();
+      boolean _notEquals = (!Objects.equal(_value, Integer.valueOf(0)));
+      if (_notEquals) {
+        Param _value_1 = elem.getValue();
+        CharSequence _declareParam = Tropo_php_generator.declareParam(_value_1);
+        _builder.append(_declareParam, "");
+        {
+          EList<NotPrimaryParam> _stms = elem.getStms();
+          for(final NotPrimaryParam n : _stms) {
+            _builder.append(".\"&\".");
+            Param _value_2 = n.getValue();
+            CharSequence _declareParam_1 = Tropo_php_generator.declareParam(_value_2);
+            _builder.append(_declareParam_1, "");
+            _builder.append(" ");
+          }
+        }
+      }
+    }
+    _builder.append("));");
+    _builder.newLineIfNotEmpty();
+    _builder.append("$data_dime= json_decode($data_dime, true);");
+    _builder.newLine();
+    _builder.append("$");
+    Vars _vari = elem.getVari();
+    CharSequence _declareVars = Tropo_php_generator.declareVars(_vari);
+    _builder.append(_declareVars, "");
+    _builder.append("=$data_dime[\'");
+    Vars _vari_1 = elem.getVari();
+    CharSequence _declareVars_1 = Tropo_php_generator.declareVars(_vari_1);
+    _builder.append(_declareVars_1, "");
+    _builder.append("\'];");
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    _builder.append("// End of Data implementation");
+    return _builder;
+  }
+  
   protected static CharSequence _declareVoiceTag(final Send elem) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("// Send implementation for HTTP GET with cURL.");
@@ -1205,7 +1293,7 @@ public class Tropo_php_generator {
     _builder.append("$curl_handle=curl_init();");
     _builder.newLine();
     _builder.append("\t\t\t");
-    _builder.append("curl_setopt($curl_handle,CURLOPT_URL,");
+    _builder.append("curl_setopt($curl_handle,CURLOPT_URL,urlencode(");
     ConcatenationExpression _url = elem.getUrl();
     CharSequence _declareConcatenation = Tropo_php_generator.declareConcatenation(_url);
     _builder.append(_declareConcatenation, "			");
@@ -1219,7 +1307,7 @@ public class Tropo_php_generator {
         _builder.append(_declareSendBlock, "			");
       }
     }
-    _builder.append(");");
+    _builder.append("));");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t");
     _builder.append("curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);");
@@ -1750,6 +1838,8 @@ public class Tropo_php_generator {
   public static CharSequence declareVoiceTag(final VoiceTag elem) {
     if (elem instanceof Call) {
       return _declareVoiceTag((Call)elem);
+    } else if (elem instanceof Data) {
+      return _declareVoiceTag((Data)elem);
     } else if (elem instanceof Dial) {
       return _declareVoiceTag((Dial)elem);
     } else if (elem instanceof Email) {
@@ -1770,6 +1860,8 @@ public class Tropo_php_generator {
       return _declareVoiceTag((Send)elem);
     } else if (elem instanceof Sms) {
       return _declareVoiceTag((Sms)elem);
+    } else if (elem instanceof Wait) {
+      return _declareVoiceTag((Wait)elem);
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
         Arrays.<Object>asList(elem).toString());

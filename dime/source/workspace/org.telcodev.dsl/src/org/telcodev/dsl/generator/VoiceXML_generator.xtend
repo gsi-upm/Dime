@@ -27,6 +27,7 @@ import org.telcodev.dsl.dime.Record
 import org.telcodev.dsl.dime.Reject
 import org.telcodev.dsl.dime.Say
 import org.telcodev.dsl.dime.Send
+import org.telcodev.dsl.dime.Data
 import org.telcodev.dsl.dime.State
 import org.telcodev.dsl.dime.Statement
 import org.telcodev.dsl.dime.StringLiteral
@@ -44,6 +45,7 @@ import org.telcodev.dsl.dime.SESSION
 import org.telcodev.dsl.dime.CALLSTATUS
 import org.telcodev.dsl.dime.Email
 import org.telcodev.dsl.dime.Sms
+import org.telcodev.dsl.dime.Wait
 
 class VoiceXML_generator {
 	
@@ -140,6 +142,7 @@ class VoiceXML_generator {
 ?>
 		'''
 	}
+	
 	def static declareSMS(){
 		'''<?php	 
  	 	$url = 'http://api.messaging.staging.voxeo.net/1.0/messaging';	 
@@ -566,8 +569,23 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 
 
 //VoiceTags
-	
+	def static dispatch declareVoiceTag(Wait elem){
+		'''<block ÇIF !cond.equals("")Ècond="ÇcondÈ"ÇENDIFÈ>
+	<prompt> <break time="Çelem.secondsÈs"/></prompt> 
+</block>
+'''
+	}
+	def static dispatch declareVoiceTag(Data elem){
+		'''<!-- Send implementation for HTTP GET with cURL -->
 
+<block ÇIF !cond.equals("")Ècond="ÇcondÈ"ÇENDIFÈ>
+	<var name="response_dime" /> 
+	<data name="response_dime" method="get" srcexpr="ÇdeclareScriptConcatenation(elem.url)È+&quot;?&quot;+ÇdeclareParam(elem.value)ÈÇFOR n :elem.stmsÈ+&quot;&amp;&quot;+ÇdeclareParam(n.value)È ÇENDFORÈ" />
+    <assign name="ÇdeclareScriptVars(elem.vari)È" expr="response_dime"/> 
+</block>
+ 
+<!-- End Send implementation--> '''
+	}
 	def static dispatch declareVoiceTag(Send elem){
 	'''<!-- Send implementation for HTTP GET with cURL -->
 

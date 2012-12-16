@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-task-tag-projects-already-scanned=Dime_lang,Dime_tests,Dime_ui,Test,org.telcodev.dsl,org.telcodev.dsl.tests,org.telcodev.dsl.ui,updatesite
+task-tag-projects-already-scanned=Dime_lang,Dime_tests,Dime_ui,org.telcodev.dsl,org.telcodev.dsl.tests,org.telcodev.dsl.ui,dime_updatesite

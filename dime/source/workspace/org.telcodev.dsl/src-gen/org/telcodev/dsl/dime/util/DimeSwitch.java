@@ -109,6 +109,24 @@ public class DimeSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DimePackage.WAIT:
+      {
+        Wait wait = (Wait)theEObject;
+        T result = caseWait(wait);
+        if (result == null) result = caseVoiceTag(wait);
+        if (result == null) result = caseAbstractElement(wait);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DimePackage.DATA:
+      {
+        Data data = (Data)theEObject;
+        T result = caseData(data);
+        if (result == null) result = caseVoiceTag(data);
+        if (result == null) result = caseAbstractElement(data);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DimePackage.CALL:
       {
         Call call = (Call)theEObject;
@@ -558,6 +576,38 @@ public class DimeSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseVoiceTag(VoiceTag object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Wait</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Wait</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseWait(Wait object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Data</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Data</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseData(Data object)
   {
     return null;
   }

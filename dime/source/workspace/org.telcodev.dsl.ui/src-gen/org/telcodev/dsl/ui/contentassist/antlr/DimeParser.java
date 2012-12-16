@@ -60,6 +60,8 @@ public class DimeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStateAccess().getGroup_0_2(), "rule__State__Group_0_2__0");
 					put(grammarAccess.getStateAccess().getGroup_1(), "rule__State__Group_1__0");
 					put(grammarAccess.getStateAccess().getGroup_1_0(), "rule__State__Group_1_0__0");
+					put(grammarAccess.getWaitAccess().getGroup(), "rule__Wait__Group__0");
+					put(grammarAccess.getDataAccess().getGroup(), "rule__Data__Group__0");
 					put(grammarAccess.getCallAccess().getGroup(), "rule__Call__Group__0");
 					put(grammarAccess.getDialAccess().getGroup(), "rule__Dial__Group__0");
 					put(grammarAccess.getPlayAccess().getGroup(), "rule__Play__Group__0");
@@ -107,6 +109,13 @@ public class DimeParser extends AbstractContentAssistParser {
 					put(grammarAccess.getStateAccess().getTimesAssignment_0_2_1(), "rule__State__TimesAssignment_0_2_1");
 					put(grammarAccess.getStateAccess().getTimeoutAssignment_1_0_1(), "rule__State__TimeoutAssignment_1_0_1");
 					put(grammarAccess.getStateAccess().getStmsAssignment_1_2(), "rule__State__StmsAssignment_1_2");
+					put(grammarAccess.getWaitAccess().getNameAssignment_0(), "rule__Wait__NameAssignment_0");
+					put(grammarAccess.getWaitAccess().getSecondsAssignment_1(), "rule__Wait__SecondsAssignment_1");
+					put(grammarAccess.getDataAccess().getNameAssignment_0(), "rule__Data__NameAssignment_0");
+					put(grammarAccess.getDataAccess().getVariAssignment_1(), "rule__Data__VariAssignment_1");
+					put(grammarAccess.getDataAccess().getValueAssignment_3(), "rule__Data__ValueAssignment_3");
+					put(grammarAccess.getDataAccess().getStmsAssignment_4(), "rule__Data__StmsAssignment_4");
+					put(grammarAccess.getDataAccess().getUrlAssignment_7(), "rule__Data__UrlAssignment_7");
 					put(grammarAccess.getCallAccess().getNameAssignment_0(), "rule__Call__NameAssignment_0");
 					put(grammarAccess.getCallAccess().getToAssignment_1(), "rule__Call__ToAssignment_1");
 					put(grammarAccess.getDialAccess().getNameAssignment_0(), "rule__Dial__NameAssignment_0");

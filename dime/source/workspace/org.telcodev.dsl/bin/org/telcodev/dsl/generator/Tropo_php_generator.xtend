@@ -5,19 +5,17 @@ import java.util.Set
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.telcodev.dsl.dime.Block
-
 import org.telcodev.dsl.dime.BoolLiteral 
 import org.telcodev.dsl.dime.BoolVariable
 import org.telcodev.dsl.dime.CompareExpression
 import org.telcodev.dsl.dime.Concatenation
 import org.telcodev.dsl.dime.CondBlock
-
 import org.telcodev.dsl.dime.Dial
 import org.telcodev.dsl.dime.Document
 import org.telcodev.dsl.dime.GetDigits
 import org.telcodev.dsl.dime.Hangup
 import org.telcodev.dsl.dime.IfExp
-
+import org.telcodev.dsl.dime.Data
 import org.telcodev.dsl.dime.Literal
 import org.telcodev.dsl.dime.LiteralAbs
 import org.telcodev.dsl.dime.NegExpression
@@ -37,8 +35,6 @@ import org.telcodev.dsl.dime.StringLiteral
 import org.telcodev.dsl.dime.StringVariable
 import org.telcodev.dsl.dime.Transition
 import org.telcodev.dsl.dime.VoiceTag
-
-
 import static org.telcodev.dsl.generator.Tropo_php_generator.*
 import org.telcodev.dsl.dime.SendBlock
 import org.telcodev.dsl.dime.Param
@@ -53,6 +49,7 @@ import org.telcodev.dsl.dime.SESSION
 import org.telcodev.dsl.dime.CALLSTATUS
 import org.telcodev.dsl.dime.Email
 import org.telcodev.dsl.dime.Sms
+import org.telcodev.dsl.dime.Wait
 
 class Tropo_php_generator {
 	private static String appName
@@ -120,7 +117,7 @@ class Tropo_php_generator {
 		
 		System::out.println("Creating "+appName+".php file");
 		
-		fsa.generateFile(appName+".php", Tropo_php_generator::toTropoPHP(resource.contents.head as Document, resource))
+		fsa.generateFile("index.php", Tropo_php_generator::toTropoPHP(resource.contents.head as Document, resource))
 		fsa.generateFile("res/signals.php", declareSignal)
 		
 		fsa.generateFile("token.php", tokenFile)
@@ -179,6 +176,20 @@ require 'res/tropo.class.php';
 // Limonade files for states simulation. More information in 
 
 require 'res/lib/limonade.php';
+
+
+//Auxiliar functions
+
+function get_data($url) {
+  $ch = curl_init();
+  $timeout = 5;
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+  $data = curl_exec($ch);
+  curl_close($ch);
+  return $data;
+}
 
 // Defining constants
 
@@ -569,13 +580,25 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	 
 
 //VoiceTags
+	
+	def static dispatch declareVoiceTag(Wait elem){
+		'''$tropo->say("<break time="«»s"/>"); '''
+	}
+	def static dispatch declareVoiceTag(Data elem){
+		
+		'''// Data implementation
+$data_dime = get_data(urlencode(«declareConcatenation(elem.url)»."?".«IF elem.value!=0»«declareParam(elem.value)»«FOR n :elem.stms»."&".«declareParam(n.value)» «ENDFOR»«ENDIF»));
+$data_dime= json_decode($data_dime, true);
+$«declareVars(elem.vari)»=$data_dime['«declareVars(elem.vari)»'];
 
+// End of Data implementation'''
+	}
 
 	def static dispatch declareVoiceTag(Send elem){
 	'''// Send implementation for HTTP GET with cURL.
 	
 			$curl_handle=curl_init();
-			curl_setopt($curl_handle,CURLOPT_URL,«declareConcatenation(elem.url)»«IF elem.params!=null»."?".«declareSendBlock(elem.params)»«ENDIF»);
+			curl_setopt($curl_handle,CURLOPT_URL,urlencode(«declareConcatenation(elem.url)»«IF elem.params!=null»."?".«declareSendBlock(elem.params)»«ENDIF»));
 			curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
 			curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 			curl_exec($curl_handle);
@@ -617,7 +640,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	
 	
 	def static dispatch declareVoiceTag( Record elem){
-	//	'''$tropo->record(array('url' => «declareConcatenation(elem.action)»,'terminator' => '#'«IF elem.time!=null»,'timeout' =>«elem.time»)«ENDIF», "allowSignals"=>array("timeExceeded«name»", "attemptsLimit")))'''
+	
 	'''$tropo->record(array(
     'name' => 'recording',
     'say' => 'Please leave a message.',

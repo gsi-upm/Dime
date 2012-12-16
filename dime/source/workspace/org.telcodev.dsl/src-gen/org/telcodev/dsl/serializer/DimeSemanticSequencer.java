@@ -24,6 +24,7 @@ import org.telcodev.dsl.dime.Concatenation;
 import org.telcodev.dsl.dime.ConcatenationBrackets;
 import org.telcodev.dsl.dime.CondBlock;
 import org.telcodev.dsl.dime.Constant;
+import org.telcodev.dsl.dime.Data;
 import org.telcodev.dsl.dime.Dial;
 import org.telcodev.dsl.dime.DimePackage;
 import org.telcodev.dsl.dime.Document;
@@ -54,6 +55,7 @@ import org.telcodev.dsl.dime.Statement;
 import org.telcodev.dsl.dime.StringLiteral;
 import org.telcodev.dsl.dime.StringVariable;
 import org.telcodev.dsl.dime.Transition;
+import org.telcodev.dsl.dime.Wait;
 import org.telcodev.dsl.services.DimeGrammarAccess;
 
 @SuppressWarnings("all")
@@ -155,6 +157,14 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getStatementRule() ||
 				   context == grammarAccess.getVarsRule()) {
 					sequence_Constant(context, (Constant) semanticObject); 
+					return; 
+				}
+				else break;
+			case DimePackage.DATA:
+				if(context == grammarAccess.getAbstractElementRule() ||
+				   context == grammarAccess.getDataRule() ||
+				   context == grammarAccess.getVoiceTagRule()) {
+					sequence_Data(context, (Data) semanticObject); 
 					return; 
 				}
 				else break;
@@ -401,6 +411,14 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case DimePackage.WAIT:
+				if(context == grammarAccess.getAbstractElementRule() ||
+				   context == grammarAccess.getVoiceTagRule() ||
+				   context == grammarAccess.getWaitRule()) {
+					sequence_Wait(context, (Wait) semanticObject); 
+					return; 
+				}
+				else break;
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
@@ -601,6 +619,15 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (name=ID value=Primitive)
 	 */
 	protected void sequence_Constant(EObject context, Constant semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='Get' vari=[Vars|ID] value=Param stms+=NotPrimaryParam* url=ConcatenationExpression)
+	 */
+	protected void sequence_Data(EObject context, Data semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1046,6 +1073,25 @@ public class DimeSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getTransitionAccess().getNameGoToKeyword_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getTransitionAccess().getTargetStateIDTerminalRuleCall_1_0_1(), semanticObject.getTarget());
 		feeder.accept(grammarAccess.getTransitionAccess().getEventEVENTParserRuleCall_3_0(), semanticObject.getEvent());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='Pause' seconds=INT)
+	 */
+	protected void sequence_Wait(EObject context, Wait semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.VOICE_TAG__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.VOICE_TAG__NAME));
+			if(transientValues.isValueTransient(semanticObject, DimePackage.Literals.WAIT__SECONDS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DimePackage.Literals.WAIT__SECONDS));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getWaitAccess().getNamePauseKeyword_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getWaitAccess().getSecondsINTTerminalRuleCall_1_0(), semanticObject.getSeconds());
 		feeder.finish();
 	}
 }

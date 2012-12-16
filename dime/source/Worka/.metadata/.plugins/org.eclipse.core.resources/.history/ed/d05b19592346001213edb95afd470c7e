@@ -1,0 +1,11 @@
+Application GetData
+
+State start {
+	String data;
+	Get data { "user":"dime_user" } from "http://www.gsi.dit.upm.es/~rjimenez/json.php";
+	Say data;
+	HangUp;
+}
+ 
+
+

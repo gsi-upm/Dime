@@ -100,6 +100,16 @@ public class DimeAdapterFactory extends AdapterFactoryImpl
         return createVoiceTagAdapter();
       }
       @Override
+      public Adapter caseWait(Wait object)
+      {
+        return createWaitAdapter();
+      }
+      @Override
+      public Adapter caseData(Data object)
+      {
+        return createDataAdapter();
+      }
+      @Override
       public Adapter caseCall(Call object)
       {
         return createCallAdapter();
@@ -407,6 +417,36 @@ public class DimeAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVoiceTagAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.Wait <em>Wait</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.telcodev.dsl.dime.Wait
+   * @generated
+   */
+  public Adapter createWaitAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.telcodev.dsl.dime.Data <em>Data</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.telcodev.dsl.dime.Data
+   * @generated
+   */
+  public Adapter createDataAdapter()
   {
     return null;
   }

@@ -4,8 +4,6 @@ import java.util.HashSet
 import java.util.Set
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
-//import org.telcodev.dsl.dime.Ask 
-//import org.telcodev.dsl.dime.Assigment
 import org.telcodev.dsl.dime.Block
 import org.telcodev.dsl.dime.BoolLiteral
 import org.telcodev.dsl.dime.BoolVariable
@@ -28,6 +26,7 @@ import org.telcodev.dsl.dime.Brackets
 import org.telcodev.dsl.dime.Play
 import org.telcodev.dsl.dime.Record
 import org.telcodev.dsl.dime.Reject
+import org.telcodev.dsl.dime.Data
 import org.telcodev.dsl.dime.Say
 import org.telcodev.dsl.dime.Send
 import org.telcodev.dsl.dime.State
@@ -36,8 +35,6 @@ import org.telcodev.dsl.dime.StringLiteral
 import org.telcodev.dsl.dime.StringVariable
 import org.telcodev.dsl.dime.Transition
 import org.telcodev.dsl.dime.VoiceTag
-
-
 import org.telcodev.dsl.dime.SendBlock
 import org.telcodev.dsl.dime.Param
 import org.telcodev.dsl.dime.MathBrackets
@@ -50,7 +47,7 @@ import org.telcodev.dsl.dime.CALLSTATUS
 import org.telcodev.dsl.dime.Email
 import org.telcodev.dsl.dime.Sms
 import org.telcodev.dsl.dime.ConcatenationExpression
- 
+import org.telcodev.dsl.dime.Wait
 
 class Twilio_php_generator {
 	private static String appName
@@ -89,14 +86,14 @@ class Twilio_php_generator {
 		token= config.twilio.token
 		
 		
-				System::out.println("")
-	System::out.println("*****************************************************************************************")
-	System::out.println("")
-	System::out.println("Creating Twilio-Php "+ (resource.contents.head as Document).name+" application.");
+		System::out.println("")
+		System::out.println("*****************************************************************************************")
+		System::out.println("")
+		System::out.println("Creating Twilio-Php "+ (resource.contents.head as Document).name+" application.");
 	
-	System::out.println("Generating resources folder.");
+		System::out.println("Generating resources folder.");
 	
-	System::out.println("Generating Twilio folder.");
+		System::out.println("Generating Twilio folder.");
 	
 		//Copy important Twilio files to the new directory
 		
@@ -171,7 +168,10 @@ class Twilio_php_generator {
 				variablesId.add("times_"+state.name+"_dime")
 		}
 		for(state :( resource.contents.head as Document).sta){
-			fsa.generateFile(state.name+".php",declareState(state))
+			
+				fsa.generateFile(state.name+".php",declareState(state))
+		
+			
 			
 		}
 		
@@ -282,6 +282,20 @@ echo "<h1>Twilio token, from a Dime application.</h1>";
 require "res/Services/Twilio.php";
 require "globals_dime.php";
 
+//Auxiliar functions
+
+function get_data($url) {
+  $ch = curl_init();
+  $timeout = 5;
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+  $data = curl_exec($ch);
+  curl_close($ch);
+  return $data;
+}
+
+
 // State «elem.name» implementation
 
 
@@ -377,7 +391,7 @@ require "globals_dime.php";
 			$url=$url."&amp;timesurl_dime=".urlencode($timesurl_dime);
 		}
 		
-		echo "<Redirect>".$url."</Redirect>";
+		echo "<Redirect>".urlencode($url)."</Redirect>";
 		«ENDIF»
 	
 		echo "</Response>";
@@ -633,13 +647,25 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 	
 //VoiceTags
 
+	def static dispatch declareVoiceTag(Wait elem){
+		'''echo "<Pause length="«elem.seconds»"/>;'''
+	}
 
-	
+
+	def static dispatch declareVoiceTag(Data elem){
+		
+		'''// Data implementation
+$data_dime = get_data(urlencode(«declareConcatenation(elem.url)»."?".«IF elem.value!=0»«declareParam(elem.value)»«FOR n :elem.stms»."&".«declareParam(n.value)» «ENDFOR»«ENDIF»));
+$data_dime= json_decode($data_dime, true);
+$«declareVars(elem.vari)»=$data_dime['«declareVars(elem.vari)»'];
+
+// End of Data implementation'''
+	}
 	def static dispatch declareVoiceTag(Send elem){
 	'''// Send implementation for HTTP GET with cURL.
 	
 			$curl_handle=curl_init();
-			curl_setopt($curl_handle,CURLOPT_URL,«declareConcatenation(elem.url)»«IF elem.params!=null»."?".«declareSendBlock(elem.params)»«ENDIF»);
+			curl_setopt($curl_handle,CURLOPT_URL,urlencode(«declareConcatenation(elem.url)»«IF elem.params!=null»."?".«declareSendBlock(elem.params)»«ENDIF»));
 			curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
 			curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 			curl_exec($curl_handle);
@@ -694,7 +720,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		'''if(isset($completedurl_dime)){
 	$url_dime=$completedurl_dime."?laststate_dime=«name»";
 	«saveGlobalVariableXML("url_dime")»
-	echo "<Record action=\"".$url_dime."\" method=\"GET\" maxLength=\"«elem.time»\" finishOnKey=\"*\" /> \n";
+	echo "<Record action=\"".urlencode($url_dime)."\" method=\"GET\" maxLength=\"«elem.time»\" finishOnKey=\"*\" /> \n";
 	echo "</Response>";
 	exit();
 }else{
@@ -717,7 +743,7 @@ def static dispatch declareAbstractElement(VoiceTag elem){
 		'''if(isset($completedurl_dime)){
 	$url_dime=$completedurl_dime."?laststate_dime=«name»";
 	«saveGlobalVariableXML("url_dime")»
-	echo "<Gather action=\"".$url_dime."\"  «IF elem.numDigits!=0»numDigits=\"«elem.numDigits»\" «ENDIF»«IF timeout!=0»timeout=\""."«timeout»"."\"«ENDIF» ></Gather>";
+	echo "<Gather action=\"".urlencode($url_dime)."\"  «IF elem.numDigits!=0»numDigits=\"«elem.numDigits»\" «ENDIF»«IF timeout!=0»timeout=\""."«timeout»"."\"«ENDIF» ></Gather>";
 	echo "</Response>";
 	exit();
 }else{
@@ -739,7 +765,7 @@ if(!isset($_REQUEST['CallStatus'])){
 	$curl_handle=curl_init();
 	$url_dime="«url»call_dime.php?number_dime=".urlencode(«declareConcatenation(elem)»)."&next_dime="."«next»&laststate_dime=«name»";
 	«IF !variablesId.isEmpty()»«saveGlobalVariable("url_dime")»«ENDIF»
-	curl_setopt($curl_handle,CURLOPT_URL, $url_dime);
+	curl_setopt($curl_handle,CURLOPT_URL, urlencode($url_dime));
 	curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,20);
 	curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, TRUE);
 	curl_exec($curl_handle);
@@ -776,7 +802,7 @@ if(!isset($_REQUEST['CallStatus'])){
 		$call = $client->account->calls->create(
 			$phonenumber, // The number of the phone initiating the call
 			$_GET['number_dime'], // The number of the phone receiving call
-			$url // The URL Twilio will request when the call is answered
+			urlencode($url) // The URL Twilio will request when the call is answered
 		);
 		echo 'Started call: ' . $call->sid;
 	} catch (Exception $e) {
