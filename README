@@ -1,3 +1,0 @@
-## Overview
-
-This language is oriented to states, but it is posible to work without them. It has a state object that  is  where the application stays until a transition or a hangup is done. The language provide us of some control structures as if expression to handle the application, and a few amount of voice objects that provides  to make calls, ask question, reject calls, etc. 
