@@ -5,7 +5,7 @@
 Introduction
 ---------------------
 
-Dime is an open source **domain specific language** (DSL) created in order to create voice apps in an easy way. It provides an eclipse plugin that is able to generate code of different voice languages like Tropo, VoiceXML or Twilio, in combination with other script languages such as Php, JavaScript or Python.
+**Dime** is an open source **domain specific language** (DSL) created in order to create voice apps in an easy way. It provides an eclipse plugin that is able to generate code of different voice languages as **Tropo**, **VoiceXML** or **Twilio**, in combination with other script languages such as Php, JavaScript or Python.
 
 It is a state oriented language. Voices apps are modelled as state machines, which is a common practice in this field.
 
