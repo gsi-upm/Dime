@@ -14,9 +14,9 @@ Dime is a part of the TelcoDev project. For more information: [http://innovation
 About this repository
 ------------------------------
 
-This is the root repository of the Dime plugin and it contains his source code, besides the resourse folder and examples 
+This is the root repository of the Dime plugin and it contains his source code, besides the resourse folder and examples. 
 
-In the other hand, it has a extensive wiki with the completed documentation, intallation guide and the links to videotutorials.
+In the other hand, it has a extensive wiki with the completed documentation, installation guide and the links to videotutorials.
 
 
 
