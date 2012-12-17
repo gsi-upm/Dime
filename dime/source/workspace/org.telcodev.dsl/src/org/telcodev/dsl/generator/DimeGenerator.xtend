@@ -6,7 +6,7 @@ package org.telcodev.dsl.generator
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
-import org.telcodev.dsl.validation.TellMeMyWorkingDirectory
+
 
 
 class DimeGenerator implements IGenerator {

@@ -8,8 +8,8 @@
 		<section name="DialogBoundsSettings">
 			<item value="600" key="DIALOG_WIDTH"/>
 			<item value="117" key="DIALOG_Y_ORIGIN"/>
-			<item value="232" key="DIALOG_X_ORIGIN"/>
 			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="232" key="DIALOG_X_ORIGIN"/>
 			<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 		</section>
 	</section>
@@ -27,11 +27,12 @@
 		<item value="false" key="useWorkspaceCompiledClasses"/>
 		<item value="" key="keystore"/>
 		<item value="1" key="exportType"/>
+		<item value="/Users/media/Dime/Dime/dime/plugins" key="destination3"/>
 		<item value="false" key="signJAR"/>
-		<item value="/Users/media/Dime/Dime/dime/plugins" key="destination2"/>
-		<item value="/Users/media/Downloads/eclipse" key="destination1"/>
+		<item value="/Users/media/Downloads/eclipse" key="destination2"/>
+		<item value="/Users/media/Dime/Dime/dime/" key="destination1"/>
 		<item value="/Users/media/Dime/Dime/dime/" key="destination0"/>
-		<item value="201209280118" key="qualifierName"/>
 		<item value="true" key="allowBinaryCycles"/>
+		<item value="201209280118" key="qualifierName"/>
 	</section>
 </section>

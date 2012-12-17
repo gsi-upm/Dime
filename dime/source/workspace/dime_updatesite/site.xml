@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/Dime_lang_1.0.0.jar" id="Dime_lang" version="1.0"/>
-   <feature url="features/Dime_tests_1.0.0.jar" id="Dime_tests" version="1.0"/>
-   <feature url="features/Dime_ui_1.0.0.jar" id="Dime_ui" version="1.0"/>
+   <feature url="features/Dime_lang_1.2.0.jar" id="Dime_lang" version="1.2"/>
+   <feature url="features/Dime_tests_1.2.0.jar" id="Dime_tests" version="1.2"/>
+   <feature url="features/Dime_ui_1.2.0.jar" id="Dime_ui" version="1.2"/>
 </site>

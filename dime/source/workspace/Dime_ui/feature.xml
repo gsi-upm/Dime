@@ -2,7 +2,7 @@
 <feature
       id="Dime_ui"
       label="Dime_ui"
-      version="1.0"
+      version="1.2"
       plugin="org.telcodev.dsl.ui">
 
    <description>

@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.1.0'?>
+<repository name='file:/Users/media/Dime/Dime/dime/source/workspace/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1355729360978'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <units size='10'>
+    <unit id='Dime_lang.feature.group' version='1.2.0' singleton='false'>
+      <update id='Dime_lang.feature.group' range='[0.0.0,1.2.0)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Dime_lang'/>
+        <property name='org.eclipse.equinox.p2.description' value='Dime language feature.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='Dime_lang.feature.group' version='1.2.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.telcodev.dsl' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.telcodev.dsl' range='[1.0.0,1.0.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='Dime_lang.feature.jar' range='[1.2.0,1.2.0]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='http://www.apache.org/licenses/LICENSE-2.0.html' url='http://www.apache.org/licenses/LICENSE-2.0.html'>
+          Apache licence 2.0 version.
+        </license>
+      </licenses>
+      <copyright>
+        Open source
+      </copyright>
+    </unit>
+    <unit id='org.telcodev.dsl.tests' version='1.0.0'>
+      <update id='org.telcodev.dsl.tests' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='org.telcodev.dsl.tests'/>
+        <property name='org.eclipse.equinox.p2.provider' value='My Company'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.telcodev.dsl.tests' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='org.telcodev.dsl.tests' version='1.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='16'>
+        <required namespace='osgi.bundle' name='org.telcodev.dsl' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.telcodev.dsl.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.junit4' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.junit' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.junit4' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.apache.log4j' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.commons.logging' range='0.0.0'/>
+        <required namespace='java.package' name='org.junit.runner' range='4.5.0'/>
+        <required namespace='java.package' name='org.junit.runner.manipulation' range='4.5.0'/>
+        <required namespace='java.package' name='org.junit.runner.notification' range='4.5.0'/>
+        <required namespace='java.package' name='org.junit.runners' range='4.5.0'/>
+        <required namespace='java.package' name='org.junit.runners.model' range='4.5.0'/>
+        <required namespace='java.package' name='org.hamcrest.core' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.telcodev.dsl.tests' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.telcodev.dsl.tests; singleton:=true&#xA;Bundle-Version: 1.0.0
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.telcodev.dsl.ui' version='1.0.0'>
+      <update id='org.telcodev.dsl.ui' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='org.telcodev.dsl.ui'/>
+        <property name='org.eclipse.equinox.p2.provider' value='GSI ETSIT UPM'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.telcodev.dsl.ui' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='org.telcodev.dsl.ui' version='1.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.ui.contentassist' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.ui.contentassist.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.ui.internal' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='13'>
+        <required namespace='osgi.bundle' name='org.telcodev.dsl' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='3.5.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='3.5.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.shared' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.builder' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.antlr.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.common.types.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.codetemplates.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.log4j' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.commons.logging' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.telcodev.dsl.ui' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.telcodev.dsl.ui; singleton:=true&#xA;Bundle-Version: 1.0.0
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='Dime_ui.feature.group' version='1.2.0' singleton='false'>
+      <update id='Dime_ui.feature.group' range='[0.0.0,1.2.0)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Dime_ui'/>
+        <property name='org.eclipse.equinox.p2.description' value='Dime ui feature.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='Dime_ui.feature.group' version='1.2.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.telcodev.dsl.ui' range='[1.0.0,1.0.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='Dime_ui.feature.jar' range='[1.2.0,1.2.0]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='http://www.apache.org/licenses/LICENSE-2.0.html' url='http://www.apache.org/licenses/LICENSE-2.0.html'>
+          Apache license version 2.0.
+        </license>
+      </licenses>
+      <copyright>
+        Open Source project.
+      </copyright>
+    </unit>
+    <unit id='org.telcodev.dsl' version='1.0.0'>
+      <update id='org.telcodev.dsl' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='org.telcodev.dsl'/>
+        <property name='org.eclipse.equinox.p2.provider' value='GSI ETSIT UPM'/>
+      </properties>
+      <provides size='15'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.telcodev.dsl' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='org.telcodev.dsl' version='1.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.services' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.dime' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.dime.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.dime.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.serializer' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.parser.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.parser.antlr.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.scoping' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.generator' version='0.0.0'/>
+        <provided namespace='java.package' name='org.telcodev.dsl.formatting' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='18'>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext' range='2.1.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase' range='2.1.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.apache.log4j' range='1.2.15'/>
+        <required namespace='osgi.bundle' name='org.apache.commons.logging' range='1.0.4' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.generator' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.codegen.ecore' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.mwe.utils' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.mwe2.launch' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.util' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.antlr.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.common.types' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.commons.lang' range='2.6.0'/>
+        <required namespace='java.package' name='org.apache.commons.logging' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.log4j' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.xtend2.lib' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.telcodev.dsl' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.telcodev.dsl; singleton:=true&#xA;Bundle-Version: 1.0.0
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='Dime_lang.feature.jar' version='1.2.0'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Dime_lang'/>
+        <property name='org.eclipse.equinox.p2.description' value='Dime language feature.'/>
+        <property name='org.eclipse.update.feature.plugin' value='org.telcodev.dsl'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='Dime_lang.feature.jar' version='1.2.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='Dime_lang' version='1.2.0'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='Dime_lang' version='1.2.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='http://www.apache.org/licenses/LICENSE-2.0.html' url='http://www.apache.org/licenses/LICENSE-2.0.html'>
+          Apache licence 2.0 version.
+        </license>
+      </licenses>
+      <copyright>
+        Open source
+      </copyright>
+    </unit>
+    <unit id='Default' version='1.0.0.67A-d36h'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Uncategorized'/>
+        <property name='org.eclipse.equinox.p2.description' value='Default category for otherwise uncategorized features'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='Default' version='1.0.0.67A-d36h'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='Dime_lang.feature.group' range='[1.2.0,1.2.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='Dime_ui.feature.group' range='[1.2.0,1.2.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='Dime_tests.feature.group' range='[1.2.0,1.2.0]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='Dime_tests.feature.jar' version='1.2.0'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Dime_tests'/>
+        <property name='org.eclipse.equinox.p2.description' value='Dime tests feature.'/>
+        <property name='org.eclipse.update.feature.plugin' value='org.telcodev.dsl.tests'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='Dime_tests.feature.jar' version='1.2.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='Dime_tests' version='1.2.0'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='Dime_tests' version='1.2.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='http://www.apache.org/licenses/LICENSE-2.0.html' url='http://www.apache.org/licenses/LICENSE-2.0.html'>
+          Apache licence 2.0
+        </license>
+      </licenses>
+      <copyright>
+        Open Source.
+      </copyright>
+    </unit>
+    <unit id='Dime_ui.feature.jar' version='1.2.0'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Dime_ui'/>
+        <property name='org.eclipse.equinox.p2.description' value='Dime ui feature.'/>
+        <property name='org.eclipse.update.feature.plugin' value='org.telcodev.dsl.ui'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='Dime_ui.feature.jar' version='1.2.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='Dime_ui' version='1.2.0'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='Dime_ui' version='1.2.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='http://www.apache.org/licenses/LICENSE-2.0.html' url='http://www.apache.org/licenses/LICENSE-2.0.html'>
+          Apache license version 2.0.
+        </license>
+      </licenses>
+      <copyright>
+        Open Source project.
+      </copyright>
+    </unit>
+    <unit id='Dime_tests.feature.group' version='1.2.0' singleton='false'>
+      <update id='Dime_tests.feature.group' range='[0.0.0,1.2.0)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Dime_tests'/>
+        <property name='org.eclipse.equinox.p2.description' value='Dime tests feature.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='Dime_tests.feature.group' version='1.2.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.telcodev.dsl.tests' range='[1.0.0,1.0.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='Dime_tests.feature.jar' range='[1.2.0,1.2.0]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='http://www.apache.org/licenses/LICENSE-2.0.html' url='http://www.apache.org/licenses/LICENSE-2.0.html'>
+          Apache licence 2.0
+        </license>
+      </licenses>
+      <copyright>
+        Open Source.
+      </copyright>
+    </unit>
+  </units>
+</repository>

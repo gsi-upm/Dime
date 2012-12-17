@@ -2,7 +2,7 @@
 <feature
       id="Dime_lang"
       label="Dime_lang"
-      version="1.0"
+      version="1.2"
       plugin="org.telcodev.dsl">
 
    <description>

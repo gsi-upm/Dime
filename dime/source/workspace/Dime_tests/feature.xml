@@ -2,7 +2,7 @@
 <feature
       id="Dime_tests"
       label="Dime_tests"
-      version="1.0"
+      version="1.2"
       plugin="org.telcodev.dsl.tests">
 
    <description>

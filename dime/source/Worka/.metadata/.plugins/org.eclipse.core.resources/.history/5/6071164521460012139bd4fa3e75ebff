@@ -1,8 +1,0 @@
-Application GetData
-
-State start {
-	String data;
-	Get data { "Name":"Value" } from "http";
-	Say data;
-	HangUp;
-}
