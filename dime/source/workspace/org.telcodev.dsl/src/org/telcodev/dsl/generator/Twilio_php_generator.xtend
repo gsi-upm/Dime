@@ -97,59 +97,67 @@ class Twilio_php_generator {
 	
 		//Copy important Twilio files to the new directory
 		
-		fsa.generateFile('res/Services/Twilio.php', CopyFile::readFile('res/twilio_php/Services/Twilio.php'))
-		fsa.generateFile('res/Services/twilio_ssl_certificate.crt', CopyFile::readFile('res/twilio_php/Services/twilio_ssl_certificate.crt'))
+//		fsa.generateFile('res/Services/Twilio.php', CopyFile::readFile('res/twilio_php/Services/Twilio.php'))
+//		fsa.generateFile('res/Services/cacert.pem', CopyFile::readFile('res/twilio_php/Services/cacert.pem'))
+//		
+//		fsa.generateFile('res/Services/Twilio/AutoPagingIterator.php', CopyFile::readFile('res/twilio_php/Services/Twilio/AutoPagingIterator.php'))
+//		fsa.generateFile('res/Services/Twilio/Capability.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Capability.php'))
+//		fsa.generateFile('res/Services/Twilio/InstanceResource.php', CopyFile::readFile('res/twilio_php/Services/Twilio/InstanceResource.php'))
+//		fsa.generateFile('res/Services/Twilio/ListResource.php', CopyFile::readFile('res/twilio_php/Services/Twilio/ListResource.php'))
+//		fsa.generateFile('res/Services/Twilio/Page.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Page.php'))
+//		fsa.generateFile('res/Services/Twilio/PartialApplicationHelper.php', CopyFile::readFile('res/twilio_php/Services/Twilio/PartialApplicationHelper.php'))
+//		fsa.generateFile('res/Services/Twilio/RequestValidator.php', CopyFile::readFile('res/twilio_php/Services/Twilio/RequestValidator.php'))
+//		fsa.generateFile('res/Services/Twilio/Resource.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Resource.php'))
+//		fsa.generateFile('res/Services/Twilio/RestException.php', CopyFile::readFile('res/twilio_php/Services/Twilio/RestException.php'))
+//		fsa.generateFile('res/Services/Twilio/TimeRangeResource.php', CopyFile::readFile('res/twilio_php/Services/Twilio/TimeRangeResource.php'))
+//		fsa.generateFile('res/Services/Twilio/TinyHttp.php', CopyFile::readFile('res/twilio_php/Services/Twilio/TinyHttp.php'))
+//		fsa.generateFile('res/Services/Twilio/Twiml.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Twiml.php'))
+//		fsa.generateFile('res/Services/Twilio/UsageResource.php', CopyFile::readFile('res/twilio_php/Services/Twilio/UsageResource.php'))
+//		
+//		
+//		fsa.generateFile('res/Services/Twilio/Rest/Account.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Account.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Accounts.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Accounts.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Application.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Application.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Applications.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Applications.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/AuthorizedConnectApp.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/AuthorizedConnectApp.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/AuthorizedConnectApps.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/AuthorizedConnectApps.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/AvailablePhoneNumber.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/AvailablePhoneNumber.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/AvailablePhoneNumbers.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/AvailablePhoneNumbers.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Call.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Call.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Calls.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Calls.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Conference.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Conference.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Conferences.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Conferences.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/ConnectApp.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/ConnectApp.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/ConnectApps.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/ConnectApps.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/IncomingPhoneNumber.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/IncomingPhoneNumber.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/IncomingPhoneNumbers.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/IncomingPhoneNumbers.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Member.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Member.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Members.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Members.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Notification.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Notification.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Notifications.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Notifications.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/OutgoingCallerId.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/OutgoingCallerId.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/OutgoingCallerIds.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/OutgoingCallerIds.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Participant.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Participant.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Participants.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Participants.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Queue.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Queue.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Queues.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Queues.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Recording.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Recording.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Recordings.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Recordings.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Sandbox.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Sandbox.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/ShortCode.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/ShortCode.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/ShortCodes.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/ShortCodes.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/SmsMessage.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/SmsMessage.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/SmsMessages.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/SmsMessages.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Transcription.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Transcription.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/Transcriptions.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Transcriptions.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/UsageRecord.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/UsageRecord.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/UsageRecords.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/UsageRecords.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/UsageTrigger.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/UsageTrigger.php'))
+//		fsa.generateFile('res/Services/Twilio/Rest/UsageTriggers.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/UsageTriggers.php'))
 		
-		fsa.generateFile('res/Services/Twilio/AutoPagingIterator.php', CopyFile::readFile('res/twilio_php/Services/Twilio/AutoPagingIterator.php'))
-		fsa.generateFile('res/Services/Twilio/Capability.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Capability.php'))
-		fsa.generateFile('res/Services/Twilio/InstanceResource.php', CopyFile::readFile('res/twilio_php/Services/Twilio/InstanceResource.php'))
-		fsa.generateFile('res/Services/Twilio/ListResource.php', CopyFile::readFile('res/twilio_php/Services/Twilio/ListResource.php'))
-		fsa.generateFile('res/Services/Twilio/Page.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Page.php'))
-		
-		fsa.generateFile('res/Services/Twilio/PartialApplicationHelper.php', CopyFile::readFile('res/twilio_php/Services/Twilio/PartialApplicationHelper.php'))
-		fsa.generateFile('res/Services/Twilio/RequestValidator.php', CopyFile::readFile('res/twilio_php/Services/Twilio/RequestValidator.php'))
-		fsa.generateFile('res/Services/Twilio/Resource.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Resource.php'))
-		fsa.generateFile('res/Services/Twilio/RestException.php', CopyFile::readFile('res/twilio_php/Services/Twilio/RestException.php'))
-		fsa.generateFile('res/Services/Twilio/TinyHttp.php', CopyFile::readFile('res/twilio_php/Services/Twilio/TinyHttp.php'))
-		fsa.generateFile('res/Services/Twilio/Twiml.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Twiml.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Account.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Account.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Accounts.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Accounts.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Application.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Application.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Applications.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Applications.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/AuthorizedConnectApp.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/AuthorizedConnectApp.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/AuthorizedConnectApps.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/AuthorizedConnectApps.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/AvailablePhoneNumber.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/AvailablePhoneNumber.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/AvailablePhoneNumbers.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/AvailablePhoneNumbers.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Call.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Call.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Calls.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Calls.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Conference.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Conference.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Conferences.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Conferences.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/ConnectApp.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/ConnectApp.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/ConnectApps.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/ConnectApps.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/IncomingPhoneNumber.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/IncomingPhoneNumber.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/IncomingPhoneNumbers.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/IncomingPhoneNumbers.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Member.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Member.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Members.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Members.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Notification.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Notification.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Notifications.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Notifications.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/OutgoingCallerId.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/OutgoingCallerId.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/OutgoingCallerIds.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/OutgoingCallerIds.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Participant.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Participant.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Participants.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Participants.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Queue.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Queue.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Queues.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Queues.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Recording.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Recording.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Recordings.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Recordings.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Sandbox.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Sandbox.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/ShortCode.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/ShortCode.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/ShortCodes.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/ShortCodes.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/SmsMessage.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/SmsMessage.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/SmsMessages.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/SmsMessages.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Transcription.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Transcription.php'))
-		fsa.generateFile('res/Services/Twilio/Rest/Transcriptions.php', CopyFile::readFile('res/twilio_php/Services/Twilio/Rest/Transcriptions.php'))
-		
-		
-		
+
+		fsa.generateFile('README.txt',  'Copy inside the res folder the Twilio Service folder. ')
+		fsa.generateFile('res/COPY-HERE.txt',  'Copy inside this folder the Twilio Service folder. ')
 		appName=className(resource) 
 		variablesId= new HashSet<String>()
 		constantsId= new HashSet<String>()
@@ -382,16 +390,16 @@ function get_data($url) {
 		$url=$completedurl_dime."?"."laststate_dime=«elem.name»";
 		«IF !variablesId.isEmpty()»«saveGlobalVariableXML("url")»«ENDIF»
 		if(isset($hangupurl_dime)){
-			$url=$url."&amp;hangupurl_dime=".urlencode($hangupurl_dime);
+			$url=$url."&amp;hangupurl_dime=".$hangupurl_dime;
 		}
 		if(isset($errorurl_dime)){
-			$url=$url."&amp;errorurl_dime=".urlencode($errorurl_dime);
+			$url=$url."&amp;errorurl_dime=".$errorurl_dime;
 		}
 		if(isset($timesurl_dime)){
-			$url=$url."&amp;timesurl_dime=".urlencode($timesurl_dime);
+			$url=$url."&amp;timesurl_dime=".$timesurl_dime;
 		}
 		
-		echo "<Redirect>".urlencode($url)."</Redirect>";
+		echo "<Redirect>".$url."</Redirect>";
 		«ENDIF»
 	
 		echo "</Response>";
@@ -851,19 +859,19 @@ if(!isset($_REQUEST['CallStatus'])){
 	
 	def static declareTransition(Transition elem){
 		if(elem.event.name.equals("ERROR")){
-			errorRedirect=url+elem.target.name+".php";
+			errorRedirect=elem.target.name+".php";
 				'''$errorurl_dime="«errorRedirect»";'''
 		}else if(elem.event.name.equals("HANGUP")){
-			hangupRedirect=url+elem.target.name+".php";
+			hangupRedirect=elem.target.name+".php";
 				'''$hangupurl_dime="«hangupRedirect»";'''
 		}else if(elem.event.name.equals("COMPLETED")){
-			completedRedirect=url+elem.target.name+".php";
+			completedRedirect=elem.target.name+".php";
 				'''$completedurl_dime="«completedRedirect»";'''
 		}else if(elem.event.name.equals("TIMES")){
-			timesRedirect=url+elem.target.name+".php";
+			timesRedirect=elem.target.name+".php";
 				'''$timesurl_dime="«timesRedirect»";'''
 		}else if(elem.event.name.equals("TIMEOUT")){
-			timeoutRedirect=url+elem.target.name+".php";
+			timeoutRedirect=elem.target.name+".php";
 				'''$timeouturl_dime="«timeoutRedirect»";'''
 		}else {
 				''''''

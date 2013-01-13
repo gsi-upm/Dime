@@ -158,10 +158,11 @@ public class Tropo_php_generator {
     String _plus_2 = ("Creating " + Tropo_php_generator.appName);
     String _plus_3 = (_plus_2 + ".php file");
     System.out.println(_plus_3);
+    String _plus_4 = (Tropo_php_generator.appName + ".php");
     EList<EObject> _contents_1 = resource.getContents();
     EObject _head_1 = IterableExtensions.<EObject>head(_contents_1);
     CharSequence _tropoPHP = Tropo_php_generator.toTropoPHP(((Document) _head_1), resource);
-    fsa.generateFile("index.php", _tropoPHP);
+    fsa.generateFile(_plus_4, _tropoPHP);
     CharSequence _declareSignal = Tropo_php_generator.declareSignal();
     fsa.generateFile("res/signals.php", _declareSignal);
     CharSequence _kenFile = Tropo_php_generator.tokenFile();

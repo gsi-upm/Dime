@@ -117,7 +117,7 @@ class Tropo_php_generator {
 		
 		System::out.println("Creating "+appName+".php file");
 		
-		fsa.generateFile("index.php", Tropo_php_generator::toTropoPHP(resource.contents.head as Document, resource))
+		fsa.generateFile(appName+".php", Tropo_php_generator::toTropoPHP(resource.contents.head as Document, resource))
 		fsa.generateFile("res/signals.php", declareSignal)
 		
 		fsa.generateFile("token.php", tokenFile)

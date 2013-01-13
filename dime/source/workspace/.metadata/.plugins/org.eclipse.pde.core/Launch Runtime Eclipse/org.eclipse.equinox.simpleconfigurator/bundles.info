@@ -308,9 +308,9 @@ org.junit4,4.8.1.v20120523-1257,file:/Applications/eclipse/plugins/org.junit4_4.
 org.objectweb.asm,3.3.1.v201105211655,file:/Applications/eclipse/plugins/org.objectweb.asm_3.3.1.v201105211655.jar,4,false
 org.sat4j.core,2.3.0.v20110329,file:/Applications/eclipse/plugins/org.sat4j.core_2.3.0.v20110329.jar,4,false
 org.sat4j.pb,2.3.0.v20110329,file:/Applications/eclipse/plugins/org.sat4j.pb_2.3.0.v20110329.jar,4,false
-org.telcodev.dsl,1.0.0,file:/Users/media/Dime/Dime/dime/source/workspace/org.telcodev.dsl/,4,false
-org.telcodev.dsl.tests,1.0.0,file:/Users/media/Dime/Dime/dime/source/workspace/org.telcodev.dsl.tests/,4,false
-org.telcodev.dsl.ui,1.0.0,file:/Users/media/Dime/Dime/dime/source/workspace/org.telcodev.dsl.ui/,4,false
+org.telcodev.dsl,1.0.0,file:/Users/media/Dime/Dime-repository/dime/source/workspace/org.telcodev.dsl/,4,false
+org.telcodev.dsl.tests,1.0.0,file:/Users/media/Dime/Dime-repository/dime/source/workspace/org.telcodev.dsl.tests/,4,false
+org.telcodev.dsl.ui,1.0.0,file:/Users/media/Dime/Dime-repository/dime/source/workspace/org.telcodev.dsl.ui/,4,false
 org.w3c.css.sac,1.3.1.v200903091627,file:/Applications/eclipse/plugins/org.w3c.css.sac_1.3.1.v200903091627.jar,4,false
 org.w3c.dom.smil,1.0.0.v200806040011,file:/Applications/eclipse/plugins/org.w3c.dom.smil_1.0.0.v200806040011.jar,4,false
 org.w3c.dom.svg,1.1.0.v201011041433,file:/Applications/eclipse/plugins/org.w3c.dom.svg_1.1.0.v201011041433.jar,4,false

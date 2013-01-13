@@ -3,8 +3,8 @@
 	<section name="DialogBounds_OverrideMethodDialog">
 		<item value="523" key="DIALOG_WIDTH"/>
 		<item value="177" key="DIALOG_Y_ORIGIN"/>
-		<item value="410" key="DIALOG_HEIGHT"/>
 		<item value="184" key="DIALOG_X_ORIGIN"/>
+		<item value="410" key="DIALOG_HEIGHT"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="OptionalMessageDialog.hide.">
@@ -14,8 +14,8 @@
 		<item value="true" key="showtypes"/>
 	</section>
 	<section name="SourceActionDialog.constructors">
-		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="Comments"/>
+		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="SynchronizedModifier"/>
 		<item value="false" key="FinalModifier"/>
 	</section>
@@ -25,8 +25,8 @@
 	<section name="DialogBounds_GenerateToStringDialog">
 		<item value="500" key="DIALOG_WIDTH"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
-		<item value="470" key="DIALOG_X_ORIGIN"/>
 		<item value="631" key="DIALOG_HEIGHT"/>
+		<item value="470" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="quick_assist_proposal_size">
@@ -34,22 +34,22 @@
 	<section name="SourceActionDialog.methods">
 		<item value="false" key="SkipNull"/>
 		<item value="10" key="LimitValue"/>
-		<item value="false" key="Comments"/>
-		<item value="1" key="VisibilityModifier"/>
-		<item value="0" key="StringStyle"/>
 		<item value="0" key="ToStringTemplateSelected"/>
+		<item value="0" key="StringStyle"/>
+		<item value="1" key="VisibilityModifier"/>
+		<item value="false" key="Comments"/>
 		<item value="false" key="LimitElements"/>
 		<item value="false" key="InstanceOf"/>
 		<item value="false" key="SynchronizedModifier"/>
 		<item value="false" key="Blocks"/>
-		<item value="false" key="FinalModifier"/>
 		<item value="true" key="IgnoreDefault"/>
+		<item value="false" key="FinalModifier"/>
 	</section>
 	<section name="DialogBounds_AddUnimplementedConstructorsDialog">
 		<item value="517" key="DIALOG_WIDTH"/>
 		<item value="20" key="DIALOG_Y_ORIGIN"/>
-		<item value="462" key="DIALOG_X_ORIGIN"/>
 		<item value="560" key="DIALOG_HEIGHT"/>
+		<item value="462" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
@@ -69,14 +69,14 @@
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item value="529" key="DIALOG_WIDTH"/>
 		<item value="31" key="DIALOG_Y_ORIGIN"/>
-		<item value="629" key="DIALOG_HEIGHT"/>
 		<item value="456" key="DIALOG_X_ORIGIN"/>
+		<item value="629" key="DIALOG_HEIGHT"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="NewClassWizardPage">
 		<item value="false" key="create_constructor"/>
-		<item value="false" key="create_main"/>
 		<item value="true" key="create_unimplemented"/>
+		<item value="false" key="create_main"/>
 	</section>
 	<section name="AddGetterSetterDialog">
 		<item value="false" key="RemoveFinal"/>
@@ -85,15 +85,15 @@
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
 		<item value="517" key="DIALOG_WIDTH"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
-		<item value="462" key="DIALOG_X_ORIGIN"/>
 		<item value="608" key="DIALOG_HEIGHT"/>
+		<item value="462" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="DialogBounds_GenerateHashCodeEqualsDialog">
 		<item value="499" key="DIALOG_WIDTH"/>
 		<item value="54" key="DIALOG_Y_ORIGIN"/>
-		<item value="471" key="DIALOG_X_ORIGIN"/>
 		<item value="509" key="DIALOG_HEIGHT"/>
+		<item value="471" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
 </section>
