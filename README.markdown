@@ -19,7 +19,7 @@ About this repository
 
 This is the root repository of the Dime plugin and it contains his source code, besides the resource folder and examples. 
 
-On the other hand, it has an extensive wiki with complete documentation, installation guide and links to videotutorials.
+On the other hand, it has an extensive wiki with complete documentation, installation guide and links to videotutorials.[http://github.com/gsi-upm/Dime/wiki]
 
 
 
