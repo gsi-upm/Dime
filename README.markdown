@@ -24,5 +24,5 @@ On the other hand, it has an extensive wiki with complete documentation, install
 
 For further information, contact us through: [http://gsi.dit.upm.es](http://gsi.dit.upm.es)
 
-[Logo Spanish Ministry of Industry, Energy and Tourism](http://www.gsi.dit.upm.es/images/stories/logomin.jpg)
-[Logo Avanza2 R&D Programme](http://www.gsi.dit.upm.es/images/stories/logoavanza2.jpg)
+![Logo Spanish Ministry of Industry, Energy and Tourism](http://www.gsi.dit.upm.es/images/stories/logomin.jpg)
+![Logo Avanza2 R&D Programme](http://www.gsi.dit.upm.es/images/stories/logoavanza2.jpg)
